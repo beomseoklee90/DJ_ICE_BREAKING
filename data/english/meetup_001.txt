@@ -1,13 +1,62 @@
-2026.01.17 (월) 영어 프리토킹
-<h3>오늘의 주제: 여행</h3>
-<p>여행 가서 겪었던 황당한 일을 이야기해 봅시다.</p>
-<hr />
-<h4>Key Expressions</h4>
+2026.02.01 (Sat) English Meetup
+<h3>Topic: The Shift (AI & Developers)</h3>
+
+<h4>Part 1. The Good Old Days (전통적 방식)</h4>
+<p>
+    개발자가 직접 코드를 한 줄 한 줄 짜던 시절.<br>
+    그 시절의 '너드(Nerd)' 감성과 열정을 엿볼 수 있는 미드입니다.
+</p>
+<div style="background: #eee; padding: 10px; margin: 10px 0;">
+    <strong>📺 Silicon Valley (HBO) - "Tabs vs Spaces"</strong><br>
+    <a href="https://www.youtube.com/watch?v=SsoOG6ZeyUI" target="_blank" style="color: blue; text-decoration: underline;">
+        👉 클립 보러 가기 (Click)
+    </a>
+    <br><br>
+    <small>*이어폰을 끼고 3분간 시청해주세요.</small>
+</div>
 <ul>
-  <li><strong>Maji? (really？)</strong> : 진짜?</li>
-  <li><strong>Uso! (no way！)</strong> : 거짓말!</li>
+    <li><strong>Expression:</strong> "It creates a smaller file size." (파일 사이즈가 더 작아.)</li>
+    <li><strong>Thinking:</strong> 사소한 효율성에 목숨 거는 개발자의 고집, 장인정신일까요 아집일까요?</li>
 </ul>
-<div style="background: #eee; padding: 10px; margin-top: 20px;">
-  <p>🎵 추천 BGM: 범석의 Deep House Vol.1</p>
-  <a href="https://youtube.com/..." target="_blank">듣러 가기</a>
+
+<hr />
+
+<h4>Part 2. The Game Changer (AI의 등장)</h4>
+<p>
+    알파고는 옛말이죠. 이제 우리는 '코딩하는 AI'와 함께 삽니다.<br>
+    이 영상은 ChatGPT가 어떻게 코딩을 바꾸는지 보여줍니다.
+</p>
+<div style="background: #eee; padding: 10px; margin: 10px 0;">
+    <strong>📺 How ChatGPT is Changing Coding</strong><br>
+    <a href="https://www.youtube.com/watch?v=9Q1f0x6-J0s" target="_blank" style="color: blue; text-decoration: underline;">
+        👉 클립 보러 가기 (Click)
+    </a>
+    <br><br>
+    <small>*핵심 내용만 빠르게 파악해보세요.</small>
+</div>
+<ul>
+    <li><strong>Vocabulary:</strong> Automation(자동화), Replace(대체하다), Assist(보조하다)</li>
+    <li><strong>Opinion:</strong> AI가 코딩을 다 하면, 개발자는 '설계자'가 될까요, '실업자'가 될까요?</li>
+</ul>
+
+<hr />
+
+<h4>Part 3. Global Perspective (뉴스)</h4>
+<p>BBC/CNN이 바라보는 AI 트렌드입니다.</p>
+<div style="background: #eee; padding: 10px; margin: 10px 0;">
+    <strong>📺 CNN 10 - AI in the Workforce</strong><br>
+    <a href="https://www.youtube.com/watch?v=SomeLinkHere" target="_blank" style="color: blue; text-decoration: underline;">
+        👉 뉴스 보러 가기 (Click)
+    </a>
+</div>
+
+<hr />
+
+<h4>🗣 Discussion Time</h4>
+<div style="background: #f9f9f9; border-left: 5px solid #000; padding: 15px;">
+    <strong>Q. "만약 AI가 내 직업을 90% 대체한다면?"</strong><br><br>
+    1. 나는 남은 10%의 창의성으로 승부하겠다.<br>
+    2. 깔끔하게 다른 직업(몸을 쓰는 일 등)을 찾겠다.<br>
+    <br>
+    <em>*영어가 서툴러도 괜찮습니다. 단어(Keyword) 위주로 의견을 던져보세요.</em>
 </div>
