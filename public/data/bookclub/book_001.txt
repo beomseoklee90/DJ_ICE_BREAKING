@@ -1,13 +1,32 @@
-2026.01.16 (일) 북클럽
-<h3>오늘의 주제: 여행</h3>
-<p>여행 가서 겪었던 황당한 일을 이야기해 봅시다.</p>
+2026.01.23 (금) 심리 독서회
+<h3>이번 주의 주제: 고독 (Solitude)</h3>
+
+<h4>1. Ice Breaking (가볍게)</h4>
+<p>Q. 퇴근 후나 주말, 온전히 혼자일 때 무엇을 하며 스트레스를 푸나요?</p>
+
 <hr />
-<h4>Key Expressions</h4>
-<ul>
-  <li><strong>Maji? (マジ？)</strong> : 진짜?</li>
-  <li><strong>Uso! (うそ！)</strong> : 거짓말!</li>
-</ul>
-<div style="background: #eee; padding: 10px; margin-top: 20px;">
-  <p>🎵 추천 BGM: 범석의 Deep House Vol.1</p>
-  <a href="https://youtube.com/..." target="_blank">듣러 가기</a>
+
+<h4>2. Organizer's Insight (읽을거리)</h4>
+<p><strong>"외로움(Loneliness)은 형벌이고, 고독(Solitude)은 축복이다."</strong></p>
+
+<p>
+우리는 종종 착각합니다. 주위에 사람이 없어서 외로운 것이라고요.<br>
+하지만 진짜 외로움은 타인의 부재가 아니라, <strong>'나 자신과의 단절'</strong>에서 옵니다.<br>
+내 마음을 나조차 이해해주지 못할 때, 우리는 군중 속에서도 고립감을 느낍니다.
+</p>
+<p>
+반면, '고독'은 다릅니다. <br>
+고독은 타인의 이해를 구걸하지 않고, 스스로의 마음을 단단하게 지탱하는 힘입니다.<br>
+<strong>정서적 독립(Emotional Independence)</strong>이 이루어진 사람은 혼자여도 외롭지 않고, 함께여도 휘둘리지 않습니다.
+</p>
+
+<div style="background: #f5f5f5; padding: 15px; border-left: 4px solid #333; margin: 20px 0;">
+    <strong>🗣 토론 주제 (3인 1조)</strong><br><br>
+    1. 당신은 최근 언제 '진짜 외롭다'고 느꼈나요?<br>
+    2. 타인의 이해 없이도 마음이 단단해졌던 경험이 있나요?<br>
+    3. "주위에 사람이 아예 없다면?" -> 이 상황을 상상했을 때 공포스러운가요, 아니면 홀가분한가요?
 </div>
+
+<p style="text-align: center; color: #888; margin-top: 30px;">
+    🎵 BGM과 함께 15분간 침묵하며, 위 질문에 대한 나만의 답을 정리해보세요.
+</p>

@@ -298,13 +298,16 @@ html, body, #root {
     font-size: 0.8rem;
   }
 
-  /* 모바일에서 유튜브 링크는 공간 없으니 숨김 (선택사항) */
-  .youtube-link {
-    display: none; 
-  }
-  
-  /* 플레이어가 가리지 않게 종이 아래 여백 추가 */
   .paper {
-    margin-bottom: 80px; /* 플레이어 높이만큼 띄우기 */
+    padding: 20px;
+    min-height: auto;
+    box-shadow: none;
+    width: 100%;
+    
+    /* 핵심: 재생 바 높이보다 훨씬 더 많은 여백을 아래에 줌 */
+    margin-bottom: 150px !important; 
+    
+    /* 혹시 모르니 패딩도 살짝 줌 */
+    padding-bottom: 50px; 
   }
 }
