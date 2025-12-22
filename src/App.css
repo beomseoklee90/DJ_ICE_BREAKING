@@ -1,0 +1,131 @@
+/* 1. CSS 리셋 (여백 제거) */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 이중 스크롤 방지 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 2. 전체 레이아웃 (좌우 배치) */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5; /* 책상 색깔 */
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* 3. 사이드바 스타일 */
+.sidebar {
+  width: 300px; /* 사이드바 너비 고정 */
+  min-width: 250px;
+  background: #333; /* 검은색 배경 */
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 카테고리 선택 영역 */
+.category-selector {
+  margin-bottom: 30px;
+}
+
+.logo-item {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #888; /* 선택 안 된 건 흐리게 */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: normal; 
+}
+
+.logo-item:hover {
+  color: white;
+}
+
+.logo-item.active {
+  color: #ffeb3b; /* 활성화된 건 노란색 */
+  font-weight: bold;
+  font-size: 1.3rem; 
+  border-left: 3px solid #ffeb3b; 
+  padding-left: 10px;
+}
+
+/* 메뉴 리스트 */
+.menu-list { 
+  list-style: none; 
+  padding: 0; 
+  flex: 1; 
+}
+
+.menu-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #444;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.menu-list li:hover {
+  background: #444;
+  color: white;
+}
+
+.menu-list li.active { 
+  background: #555; 
+  font-weight: bold; 
+  border-left: 4px solid #ffeb3b; 
+  color: white;
+}
+
+/* 사이드바 광고 */
+.ad-box-sidebar { 
+  margin-top: 20px; 
+  background: #444; 
+  padding: 10px; 
+  border-radius: 8px; 
+  text-align: center; 
+}
+
+.ad-box-sidebar button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* 4. 메인 뷰어 (오른쪽 영역) */
+.main-viewer {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto; /* 내용 많으면 여기서 스크롤 */
+  display: flex;
+  justify-content: center; /* 종이 가운데 정렬 */
+}
+
+/* 5. A4 용지 스타일 */
+.paper {
+  background: white;
+  width: 100%;
+  max-width: 210mm; /* A4 너비 */
+  min-height: 297mm; /* A4 높이 */
+  padding: 20mm;     /* 안쪽 여백 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 그림자 */
+  margin-bottom: 50px; /* 하단 여백 */
+}
+
+.paper-title { 
+  border-bottom: 2px solid black; 
+  padding-bottom: 10px; 
+  margin-bottom: 20px; 
+  font-size: 2rem;
+}
+
+.paper-content { 
+  line
