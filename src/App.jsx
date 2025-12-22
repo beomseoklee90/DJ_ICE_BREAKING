@@ -1,69 +1,92 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-// 🛠️ 설정: 여기에 파일명을 관리해 (경로랑 파일명 매칭)
+/* 🛠️ 설정 1: 카테고리 및 파일 목록 관리 
+  - files 배열에 public/data/폴더/ 안에 있는 파일명만 적으면 됨
+*/
 const categoryConfig = {
   english: {
-    path: "english", // 실제 폴더명 (/public/data/english)
+    path: "english",
     label: "ENGLISH MEETING",
-    files: ["meetup_002.txt", "meetup_001.txt"], // 그 폴더 안의 파일들
+    mobileLabel: "ENG", // 모바일용 짧은 이름
+    files: ["meetup_002.txt", "meetup_001.txt"],
   },
   japanese: {
-    path: "japanese", // 실제 폴더명 (/public/data/japanese)
+    path: "japanese",
     label: "日本語集まり",
+    mobileLabel: "JP",
     files: ["meetup_jp_001.txt"],
   },
   bookclub: {
-    path: "bookclub", // 실제 폴더명 (/public/data/bookclub)
+    path: "bookclub",
     label: "독서회",
+    mobileLabel: "BOOK",
     files: ["book_001.txt"],
   },
 };
 
+/* 🎵 설정 2: 배경음악 및 유튜브 홍보 
+  - playlist: public/data/songs/ 폴더 안에 있는 mp3 파일명
+*/
+const musicConfig = {
+  playlist: ["song1.mp3", "song2.mp3"],
+  youtubeLink: "https://www.youtube.com/@DJ_ICE_BREAKING",
+};
+
 function App() {
-  // 현재 선택된 카테고리 (기본값: 영어)
+  // 상태 관리
   const [currentCategory, setCurrentCategory] = useState("english");
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
 
+  // 음악 플레이어 상태
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const audioRef = useRef(null);
+
+  // 1. 데이터 불러오기 (카테고리 변경 시 실행)
   useEffect(() => {
-    // 카테고리가 바뀔 때마다 실행되는 로직
     const loadFiles = async () => {
-      // 1. 현재 카테고리 설정 가져오기
       const config = categoryConfig[currentCategory];
 
-      // 2. 파일 목록이 비어있으면 초기화하고 종료
+      // 파일 목록 없으면 초기화
       if (!config.files || config.files.length === 0) {
         setPosts([]);
         setSelectedPost(null);
         return;
       }
 
-      // 3. 해당 폴더에서 파일 긁어오기
+      // 파일 내용 비동기로 싹 긁어오기
       const loadedPosts = await Promise.all(
         config.files.map(async (filename) => {
-          // 경로가 동적으로 바뀜: /data/english/파일.txt
-          const response = await fetch(`/data/${config.path}/${filename}`);
+          try {
+            // ★ 중요: 배포 환경을 위해 BASE_URL 사용
+            const response = await fetch(
+              `${import.meta.env.BASE_URL}data/${config.path}/${filename}`
+            );
 
-          // 파일이 없거나 에러나면 빈 텍스트 처리 (에러 방지)
-          if (!response.ok)
+            if (!response.ok) throw new Error("File not found");
+
+            const text = await response.text();
+
+            // 첫 줄(제목)과 나머지(HTML) 분리
+            const splitIndex = text.indexOf("\n");
+            const dateTitle =
+              splitIndex !== -1
+                ? text.substring(0, splitIndex).trim()
+                : filename;
+            const contentHtml =
+              splitIndex !== -1 ? text.substring(splitIndex + 1) : text;
+
+            return { id: filename, title: dateTitle, content: contentHtml };
+          } catch (error) {
             return { id: filename, title: "Error", content: "File not found" };
-
-          const text = await response.text();
-
-          const splitIndex = text.indexOf("\n");
-          // 첫 줄이 없으면 파일명으로 대체
-          const dateTitle =
-            splitIndex !== -1 ? text.substring(0, splitIndex).trim() : filename;
-          const contentHtml =
-            splitIndex !== -1 ? text.substring(splitIndex + 1) : text;
-
-          return { id: filename, title: dateTitle, content: contentHtml };
+          }
         })
       );
 
       setPosts(loadedPosts);
-      // 목록이 있으면 첫 번째 글 자동 선택
+      // 데이터가 있으면 첫 번째 글 자동 선택
       if (loadedPosts.length > 0) {
         setSelectedPost(loadedPosts[0]);
       } else {
@@ -72,45 +95,53 @@ function App() {
     };
 
     loadFiles();
-  }, [currentCategory]); // currentCategory가 바뀔 때마다 재실행
+  }, [currentCategory]);
 
-  // 로딩 중이거나 데이터가 없을 때
-  if (!selectedPost && posts.length > 0)
+  // 2. 음악 재생 로직 (곡이 끝나면 다음 곡으로)
+  const handleSongEnd = () => {
+    const nextIndex = (currentSongIndex + 1) % musicConfig.playlist.length;
+    setCurrentSongIndex(nextIndex);
+  };
+
+  // 3. Play/Pause 상태 동기화
+  useEffect(() => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play().catch((e) => {
+          console.log("자동 재생 막힘(사용자 클릭 필요):", e);
+          setIsPlaying(false);
+        });
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [isPlaying, currentSongIndex]);
+
+  // 로딩 화면
+  if (!selectedPost && posts.length > 0 && posts[0].title !== "Error")
     return <div className="loading">Loading...</div>;
 
   return (
     <div className="container">
+      {/* 사이드바 (모바일: 상단 네비게이션) */}
       <nav className="sidebar">
-        {/* 여기가 핵심! 
-           단순 텍스트가 아니라 버튼 역할을 하도록 바꿈 
-        */}
+        {/* 카테고리 3등분 탭 */}
         <div className="category-selector">
-          <h2
-            className={`logo-item ${
-              currentCategory === "english" ? "active" : ""
-            }`}
-            onClick={() => setCurrentCategory("english")}
-          >
-            ENGLISH MEETING
-          </h2>
-          <h2
-            className={`logo-item ${
-              currentCategory === "japanese" ? "active" : ""
-            }`}
-            onClick={() => setCurrentCategory("japanese")}
-          >
-            日本語集まり
-          </h2>
-          <h2
-            className={`logo-item ${
-              currentCategory === "bookclub" ? "active" : ""
-            }`}
-            onClick={() => setCurrentCategory("bookclub")}
-          >
-            독서회
-          </h2>
+          {Object.keys(categoryConfig).map((key) => (
+            <div
+              key={key}
+              className={`logo-item ${currentCategory === key ? "active" : ""}`}
+              onClick={() => setCurrentCategory(key)}
+            >
+              <span className="desktop-text">{categoryConfig[key].label}</span>
+              <span className="mobile-text">
+                {categoryConfig[key].mobileLabel}
+              </span>
+            </div>
+          ))}
         </div>
 
+        {/* 파일 목록 (모바일: 가로 스크롤) */}
         <ul className="menu-list">
           {posts.map((post) => (
             <li
@@ -125,12 +156,43 @@ function App() {
           ))}
         </ul>
 
-        <div className="ad-box-sidebar">
-          <p>📲 Study App</p>
-          <button onClick={() => window.open("형의_앱_링크")}>Download</button>
+        {/* 뮤직 플레이어 (사이드바 하단 고정) */}
+        <div className="music-player-box">
+          <p className="music-title">
+            🎧 BGM (Ballad)
+            <br />
+            <span style={{ fontSize: "0.8rem", color: "#ffeb3b" }}>
+              {musicConfig.playlist[currentSongIndex]}
+            </span>
+          </p>
+
+          <audio
+            ref={audioRef}
+            src={`${import.meta.env.BASE_URL}data/songs/${
+              musicConfig.playlist[currentSongIndex]
+            }`}
+            onEnded={handleSongEnd}
+          />
+
+          <div className="music-controls">
+            <button onClick={() => setIsPlaying(!isPlaying)}>
+              {isPlaying ? "⏸ Pause" : "▶ Play"}
+            </button>
+            <button onClick={handleSongEnd}>⏭ Next</button>
+          </div>
+
+          <a
+            href={musicConfig.youtubeLink}
+            target="_blank"
+            className="youtube-link"
+            rel="noreferrer"
+          >
+            📺 유튜브에서 더 듣기
+          </a>
         </div>
       </nav>
 
+      {/* 메인 뷰어 (A4 용지) */}
       <main className="main-viewer">
         <div className="paper">
           {selectedPost ? (
@@ -142,9 +204,8 @@ function App() {
               />
             </>
           ) : (
-            // 게시글이 없을 때 보여줄 화면
             <div
-              style={{ textAlign: "center", marginTop: "50px", color: "#888" }}
+              style={{ textAlign: "center", marginTop: "100px", color: "#888" }}
             >
               <p>등록된 모임 일정이 없습니다.</p>
               <p>No meeting schedule yet.</p>
