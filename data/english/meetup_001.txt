@@ -104,7 +104,7 @@
             <span class="question">Q1. The Illusion of Stability</span>
             Before AI, many thought coding was a "job for life." Looking back, did we <strong>confuse</strong> a temporary market boom with permanent safety?
             <div class="model-answer">
-                <strong>Organizer's Insight:</strong>
+                <strong>Organizer's opinion:</strong>
 "To be honest, we completely failed to predict the speed of this AI revolution. We valued adaptability, but the velocity of change exceeded our imagination. Now, adaptability is no longer optional; it is the only way to survive."
             </div>
         </div>
@@ -113,17 +113,19 @@
             <span class="question">Q2. Survival of the Fittest</span>
             When big layoffs happened with the rise of ChatGPT, how did your view of "Skill" change? Did you see AI as a danger or a tool to help you?
             <div class="model-answer">
-                <strong>Organizer's Insight:</strong>
+                <strong>Organizer's opinion:</strong>
                 "AI handles the execution and details, allowing me to focus on higher-level abstraction like design and UX. For me, AI is not a threat but a leverage. Running a one-person business, AI gives me unprecedented speed, allowing me to do what used to take a whole team."
             </div>
         </div>
 
         <div class="q-box">
-            <span class="question">Q3. From Coder to Architect</span>
+            <span class="question">Q3. From Coder to Architect/From "Doer" to "Director"</span>
             With AI agents like 'Devin' writing the code, our role is changing to "Architect." Are you ready to stop writing every line of code yourself?
+            /For those who are not developers, how is AI changing the way you work? Are you ready to stop doing the manual tasks and start acting like a 'Director' or 'Architect' in your own field?
             <div class="model-answer">
-                <strong>Organizer's Insight:</strong>
+                <strong>Organizer's opinion:</strong>
                 "Exactly. Although I come from a developer background, I've shifted my focus from 'syntax' to 'value creation.' Now, I concentrate on sharing insights and designing the user experience, leaving the actual coding to the automated agents."
+                /I believe this shift applies to everyone, not just coders. Whether you are a marketer, a designer, or a manager, AI is taking over the 'execution.' Our new job is to provide the vision and final approval. It’s time to move from being a 'Worker' to becoming a 'Decision Maker.'
             </div>
         </div>
 
@@ -131,7 +133,7 @@
             <span class="question">Q4. The Rise of "Micro-Enterprises"</span>
             Do you believe a small team using AI can really beat a slow, big company?
             <div class="model-answer">
-                <strong>Organizer's Insight:</strong>
+                <strong>Organizer's opinion:</strong>
                 "It depends on the culture. Big companies are often slowed down by legacy systems and bureaucratic decision-making. While they spend a week just scheduling a meeting, I can build and deploy software in an instant. Speed is my ultimate weapon."
             </div>
         </div>
@@ -140,7 +142,7 @@
             <span class="question">Q5. Art & Authenticity</span>
             If AI can make music that sounds <strong>exactly the same</strong> as human work, does the "Human Touch" still matter?
             <div class="model-answer">
-                <strong>Organizer's Insight:</strong>
+                <strong>Organizer's opinion:</strong>
                 "AI merely outputs learned patterns and mimicry. However, I believe the subtle nuances and details of a performance belong solely to humans. AI can copy the style, but it can never replicate the soul that creates those details."
             </div>
         </div>
