@@ -1,62 +1,178 @@
-2026.02.01 (Sat) English Meetup
-<h3>Topic: The Shift (AI & Developers)</h3>
+2026.02.01 (Sun) English Meetup: The Paradigm Shift
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap');
 
-<h4>Part 1. The Good Old Days (전통적 방식)</h4>
-<p>
-    개발자가 직접 코드를 한 줄 한 줄 짜던 시절.<br>
-    그 시절의 '너드(Nerd)' 감성과 열정을 엿볼 수 있는 미드입니다.
-</p>
-<div style="background: #eee; padding: 10px; margin: 10px 0;">
-    <strong>📺 Silicon Valley (HBO) - "Tabs vs Spaces"</strong><br>
-    <a href="https://www.youtube.com/watch?v=SsoOG6ZeyUI" target="_blank" style="color: blue; text-decoration: underline;">
-        👉 클립 보러 가기 (Click)
-    </a>
-    <br><br>
-    <small>*이어폰을 끼고 3분간 시청해주세요.</small>
-</div>
-<ul>
-    <li><strong>Expression:</strong> "It creates a smaller file size." (파일 사이즈가 더 작아.)</li>
-    <li><strong>Thinking:</strong> 사소한 효율성에 목숨 거는 개발자의 고집, 장인정신일까요 아집일까요?</li>
-</ul>
+/* 문법 섹션 스타일 추가 */
+    .grammar-box { 
+        margin-top: 25px; 
+        background: #fff8e1; /* 연한 노란색 배경 */
+        border-left: 5px solid #f1c40f; /* 진한 노란색 포인트 */
+        padding: 15px; 
+        border-radius: 4px; 
+        font-size: 0.95em; 
+    }
+    .grammar-title { 
+        font-weight: bold; 
+        color: #d35400; 
+        display: block; 
+        margin-bottom: 8px; 
+        font-size: 1em;
+    }
+    .grammar-desc { margin-bottom: 10px; color: #555; }
+    .grammar-example { 
+        background: rgba(255, 255, 255, 0.6); 
+        padding: 8px; 
+        border-radius: 4px; 
+        margin-top: 5px; 
+        font-style: italic; 
+        color: #2c3e50;
+    }
+    .grammar-example strong { color: #d35400; font-style: normal; }
+    /* 로컬 스타일 */
+    .meetup-content { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
+    .meetup-content h2 { font-family: 'Merriweather', serif; color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 15px; margin-top: 0; }
+    .meetup-content h4 { margin: 25px 0 10px 0; color: #2980b9; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; border-left: 4px solid #2980b9; padding-left: 10px; }
+    .meetup-content p { font-size: 0.95em; margin-bottom: 10px; color: #444; }
+    
+    .video-box { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 12px 15px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9em; }
+    .video-box a { color: #d35400; text-decoration: none; font-weight: 600; }
+    .video-box a:hover { text-decoration: underline; }
 
-<hr />
+    .discussion-section { margin-top: 40px; background: #fff; border: 2px solid #2c3e50; padding: 25px; position: relative; }
+    .discussion-title { background: #2c3e50; color: #fff; padding: 5px 15px; position: absolute; top: -15px; left: 20px; font-family: 'Merriweather', serif; font-size: 1.1em; }
+    
+    .q-box { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 20px; }
+    .q-box:last-child { border-bottom: none; padding-bottom: 0; }
+    .question { font-weight: 700; font-size: 1.05em; color: #000; margin-bottom: 10px; display: block; }
 
-<h4>Part 2. The Game Changer (AI의 등장)</h4>
-<p>
-    알파고는 옛말이죠. 이제 우리는 '코딩하는 AI'와 함께 삽니다.<br>
-    이 영상은 ChatGPT가 어떻게 코딩을 바꾸는지 보여줍니다.
-</p>
-<div style="background: #eee; padding: 10px; margin: 10px 0;">
-    <strong>📺 How ChatGPT is Changing Coding</strong><br>
-    <a href="https://www.youtube.com/watch?v=9Q1f0x6-J0s" target="_blank" style="color: blue; text-decoration: underline;">
-        👉 클립 보러 가기 (Click)
-    </a>
-    <br><br>
-    <small>*핵심 내용만 빠르게 파악해보세요.</small>
-</div>
-<ul>
-    <li><strong>Vocabulary:</strong> Automation(자동화), Replace(대체하다), Assist(보조하다)</li>
-    <li><strong>Opinion:</strong> AI가 코딩을 다 하면, 개발자는 '설계자'가 될까요, '실업자'가 될까요?</li>
-</ul>
+    .model-answer { background-color: #f1f8ff; border-left: 4px solid #3498db; padding: 12px; margin-top: 10px; font-size: 0.9em; color: #2c3e50; font-family: 'Merriweather', serif; font-style: italic; }
+    .model-answer strong { font-style: normal; color: #2980b9; font-size: 0.85em; display: block; margin-bottom: 5px; text-transform: uppercase; }
 
-<hr />
+    .vocab-section { margin-top: 40px; background: #fdfdfd; border-top: 3px double #ddd; padding-top: 20px; }
+    .vocab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9em; }
+    .vocab-item { background: #eee; padding: 8px; border-radius: 4px; }
 
-<h4>Part 3. Global Perspective (뉴스)</h4>
-<p>BBC/CNN이 바라보는 AI 트렌드입니다.</p>
-<div style="background: #eee; padding: 10px; margin: 10px 0;">
-    <strong>📺 CNN 10 - AI in the Workforce</strong><br>
-    <a href="https://www.youtube.com/watch?v=SomeLinkHere" target="_blank" style="color: blue; text-decoration: underline;">
-        👉 뉴스 보러 가기 (Click)
-    </a>
-</div>
+    @media (max-width: 768px) { .vocab-grid { grid-template-columns: 1fr; } }
+</style>
 
-<hr />
+<div class="meetup-content">
+    <h2>Topic: The Paradigm Shift (From Code to Soul)</h2>
 
-<h4>🗣 Discussion Time</h4>
-<div style="background: #f9f9f9; border-left: 5px solid #000; padding: 15px;">
-    <strong>Q. "만약 AI가 내 직업을 90% 대체한다면?"</strong><br><br>
-    1. 나는 남은 10%의 창의성으로 승부하겠다.<br>
-    2. 깔끔하게 다른 직업(몸을 쓰는 일 등)을 찾겠다.<br>
-    <br>
-    <em>*영어가 서툴러도 괜찮습니다. 단어(Keyword) 위주로 의견을 던져보세요.</em>
+    <h4>1. The Golden Age (Pre-AI Era)</h4>
+    <p>
+        Remember when many people rushed to coding bootcamps? We believed becoming a developer was a sure way to get a high salary and a stable life.
+    </p>
+    <div class="video-box">
+        <strong>📺 Silicon Valley (HBO) - "The Obsession"</strong><br>
+        <a href="https://youtu.be/nO3swhpidOI" target="_blank">👉 Watch Clip (Click)</a>
+        <br><small>*Focus: How we defined our value before AI.</small>
+    </div>
+
+    <h4>2. The Reality Check (ChatGPT & Layoffs)</h4>
+    <p>
+        When ChatGPT arrived, big tech companies started firing many employees. This proved that "Average Skills" are no longer enough to survive.
+    </p>
+    <div class="video-box">
+        <strong>📺 OpenAI - The "Survival of the Fittest" Moment</strong><br>
+        <a href="https://youtube.com/shorts/Trtzk2Vdv38?si=KW69pcg-pKiF594_" target="_blank">👉 Watch Keynote (Click)</a>
+    </div>
+
+    <h4>3. The Shift (Devin & 1-Person Biz)</h4>
+    <p>
+        AI Agent 'Devin' is changing everything. We are moving from "Writing Code" to "Designing Logic."
+        Now, a small team using AI can challenge huge companies.
+    </p>
+    <div class="video-box">
+        <strong>📺 Introducing Devin</strong><br>
+        <a href="https://youtu.be/fjHtjT7GO1c?si=gVlZ_pYCmXgJKqIn" target="_blank">👉 Watch Intro (Click)</a>
+    </div>
+
+    <h4>4. The Last Bastion? (AI in Art)</h4>
+    <p>
+        AI is now making music that sounds just like human songs. If creativity is automated, what is left for us?
+    </p>
+    <div class="video-box">
+        <strong>📺 SUNO AI - Generating Music</strong><br>
+        <a href="https://www.youtube.com/watch?v=ZwouiJ3xEIQ" target="_blank">👉 Listen to Sample (Click)</a>
+    </div>
+
+
+    <div class="discussion-section">
+        <div class="discussion-title">🗣 Discussion Questions</div>
+
+        <div class="q-box">
+            <span class="question">Q1. The Illusion of Stability</span>
+            Before AI, many thought coding was a "job for life." Looking back, did we <strong>confuse</strong> a temporary market boom with permanent safety?
+            <div class="model-answer">
+                <strong>Organizer's Insight:</strong>
+"To be honest, we completely failed to predict the speed of this AI revolution. We valued adaptability, but the velocity of change exceeded our imagination. Now, adaptability is no longer optional; it is the only way to survive."
+            </div>
+        </div>
+
+        <div class="q-box">
+            <span class="question">Q2. Survival of the Fittest</span>
+            When big layoffs happened with the rise of ChatGPT, how did your view of "Skill" change? Did you see AI as a danger or a tool to help you?
+            <div class="model-answer">
+                <strong>Organizer's Insight:</strong>
+                "AI handles the execution and details, allowing me to focus on higher-level abstraction like design and UX. For me, AI is not a threat but a leverage. Running a one-person business, AI gives me unprecedented speed, allowing me to do what used to take a whole team."
+            </div>
+        </div>
+
+        <div class="q-box">
+            <span class="question">Q3. From Coder to Architect</span>
+            With AI agents like 'Devin' writing the code, our role is changing to "Architect." Are you ready to stop writing every line of code yourself?
+            <div class="model-answer">
+                <strong>Organizer's Insight:</strong>
+                "Exactly. Although I come from a developer background, I've shifted my focus from 'syntax' to 'value creation.' Now, I concentrate on sharing insights and designing the user experience, leaving the actual coding to the automated agents."
+            </div>
+        </div>
+
+        <div class="q-box">
+            <span class="question">Q4. The Rise of "Micro-Enterprises"</span>
+            Do you believe a small team using AI can really beat a slow, big company?
+            <div class="model-answer">
+                <strong>Organizer's Insight:</strong>
+                "It depends on the culture. Big companies are often slowed down by legacy systems and bureaucratic decision-making. While they spend a week just scheduling a meeting, I can build and deploy software in an instant. Speed is my ultimate weapon."
+            </div>
+        </div>
+
+        <div class="q-box">
+            <span class="question">Q5. Art & Authenticity</span>
+            If AI can make music that sounds <strong>exactly the same</strong> as human work, does the "Human Touch" still matter?
+            <div class="model-answer">
+                <strong>Organizer's Insight:</strong>
+                "AI merely outputs learned patterns and mimicry. However, I believe the subtle nuances and details of a performance belong solely to humans. AI can copy the style, but it can never replicate the soul that creates those details."
+            </div>
+        </div>
+    </div>
+
+<div class="vocab-section">
+        <h4>📚 Useful Vocabulary & Grammar</h4>
+        
+        <div class="vocab-grid">
+            <div class="vocab-item"><strong>Confuse</strong> (혼동하다) - To think one thing is another.</div>
+            <div class="vocab-item"><strong>Illusion</strong> (환상) - Something that looks real but is not.</div>
+            <div class="vocab-item"><strong>Leverage</strong> (활용하다/도구) - To use something to maximum advantage.</div>
+            <div class="vocab-item"><strong>Legacy System</strong> (구형 시스템) - Old software/methods that slow down a company.</div>
+            <div class="vocab-item"><strong>Bureaucracy</strong> (관료주의) - Complicated rules that make big companies slow.</div>
+            <div class="vocab-item"><strong>Nuance</strong> (미묘한 차이) - A very slight difference in meaning or sound.</div>
+            <div class="vocab-item"><strong>Solitude</strong> (고독) - The state of being alone without being lonely.</div>
+            <div class="vocab-item"><strong>Authenticity</strong> (진정성) - The quality of being real and true.</div>
+        </div>
+
+        <div class="grammar-box">
+            <span class="grammar-title">💡 Power Pattern: "Not A, but B"</span>
+            <div class="grammar-desc">
+                Used to correct a misunderstanding or emphasize your true focus. (A가 아니라, B이다)
+            </div>
+            <div class="grammar-example">
+                "AI is <strong>not</strong> a threat, <strong>but</strong> a leverage for my business."<br>
+                (AI는 위협이 아니라, 내 사업의 도구이다.)
+            </div>
+            <div class="grammar-example">
+                "My value comes <strong>not</strong> from writing code, <strong>but</strong> from designing the vision."<br>
+                (내 가치는 코드를 짜는 게 아니라, 비전을 설계하는 데서 온다.)
+            </div>
+        </div>
+    </div>
 </div>
