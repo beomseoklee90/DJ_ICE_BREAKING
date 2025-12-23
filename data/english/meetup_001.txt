@@ -79,7 +79,7 @@
 
     <h4>3. The Shift (Devin & 1-Person Biz)</h4>
     <p>
-        AI Agent 'Devin' is changing everything. We are moving from "Writing Code" to "Designing Logic."
+        Devin is the world's first fully autonomous AI software engineer. We are moving from "Writing Code" to "Designing Logic."
         Now, a small team using AI can challenge huge companies.
     </p>
     <div class="video-box">
