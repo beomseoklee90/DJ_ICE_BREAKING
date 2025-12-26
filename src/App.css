@@ -143,19 +143,26 @@ html, body, #root {
   flex: 1;
   padding: 40px;
   overflow-y: auto; /* 내용 많으면 여기서 스크롤 */
-  display: flex;
-  justify-content: center; /* 종이 가운데 정렬 */
+  
 }
 
-/* 5. A4 용지 스타일 */
+/* 5. A4 용지 스타일 수정 */
 .paper {
   background: white;
   width: 100%;
-  max-width: 210mm; /* A4 너비 */
-  min-height: 297mm; /* A4 높이 */
-  padding: 20mm;     /* 안쪽 여백 */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 그림자 */
-  margin-bottom: 50px; /* 하단 여백 */
+  max-width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  
+  /* [수정 2] Flex를 껐으니, margin으로 가운데 정렬 */
+  margin: 0 auto 50px auto; 
+  
+  /* [수정 3] 높이 강제 자동 설정 (가장 중요) */
+  height: auto !important; 
+  
+  /* 내용이 넘치면 종이도 같이 커지게 설정 */
+  overflow: visible; 
 }
 
 .paper-title { 
@@ -166,6 +173,7 @@ html, body, #root {
 }
 
 .paper-content { 
+  margin-bottom: 10px !important;
   line-height: 1.6; 
   font-size: 1.1rem; 
 }
@@ -299,15 +307,12 @@ html, body, #root {
   }
 
   .paper {
-    padding: 20px;
-    min-height: auto;
-    box-shadow: none;
     width: 100%;
-    
-    /* 핵심: 재생 바 높이보다 훨씬 더 많은 여백을 아래에 줌 */
-    margin-bottom: 150px !important; 
-    
-    /* 혹시 모르니 패딩도 살짝 줌 */
-    padding-bottom: 50px; 
+    margin-bottom: 150px !important;
+    padding-bottom: 50px;
+    padding: 25px;
+    /* 모바일에서도 높이 자동 */
+    height: auto !important; 
+    min-height: auto; 
   }
 }

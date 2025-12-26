@@ -9,7 +9,7 @@ const categoryConfig = {
     path: "english",
     label: "ENGLISH MEETING",
     mobileLabel: "ENG", // 모바일용 짧은 이름
-    files: ["meetup_002.txt", "meetup_001.txt"],
+    files: ["meetup_001.txt"],
   },
   japanese: {
     path: "japanese",
@@ -211,10 +211,6 @@ function App() {
               <p>No meeting schedule yet.</p>
             </div>
           )}
-
-          <div className="ad-box-bottom">
-            <p>🎵 Produced by Beomseok</p>
-          </div>
         </div>
       </main>
     </div>
