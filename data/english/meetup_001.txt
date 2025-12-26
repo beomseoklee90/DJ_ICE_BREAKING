@@ -1,180 +1,301 @@
 2026.02.01
+
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap](https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap)');
 
-/* 문법 섹션 스타일 추가 */
-    .grammar-box { 
-        margin-top: 25px; 
-        background: #fff8e1; /* 연한 노란색 배경 */
-        border-left: 5px solid #f1c40f; /* 진한 노란색 포인트 */
-        padding: 15px; 
-        border-radius: 4px; 
-        font-size: 0.95em; 
-    }
-    .grammar-title { 
-        font-weight: bold; 
-        color: #d35400; 
-        display: block; 
-        margin-bottom: 8px; 
-        font-size: 1em;
-    }
-    .grammar-desc { margin-bottom: 10px; color: #555; }
-    .grammar-example { 
-        background: rgba(255, 255, 255, 0.6); 
-        padding: 8px; 
-        border-radius: 4px; 
-        margin-top: 5px; 
-        font-style: italic; 
-        color: #2c3e50;
-    }
-    .grammar-example strong { color: #d35400; font-style: normal; }
-    /* 로컬 스타일 */
-    .meetup-content { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
-    .meetup-content h2 { font-family: 'Merriweather', serif; color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 15px; margin-top: 0; }
-    .meetup-content h4 { margin: 25px 0 10px 0; color: #2980b9; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; border-left: 4px solid #2980b9; padding-left: 10px; }
-    .meetup-content p { font-size: 0.95em; margin-bottom: 10px; color: #444; }
-    
-    .video-box { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 12px 15px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9em; }
-    .video-box a { color: #d35400; text-decoration: none; font-weight: 600; }
-    .video-box a:hover { text-decoration: underline; }
+/* 로컬 스타일 정의 */
+.meetup-content { font-family: &#39;Roboto&#39;, sans-serif; color: #333; line-height: 1.6; }
+.meetup-content h2 { font-family: &#39;Merriweather&#39;, serif; color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 15px; margin-top: 0; }
+.meetup-content h4 { margin: 30px 0 15px 0; color: #2980b9; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; border-left: 4px solid #2980b9; padding-left: 10px; }
+.meetup-content p { font-size: 0.95em; margin-bottom: 10px; color: #444; }
 
-    .discussion-section { margin-top: 40px; background: #fff; border: 2px solid #2c3e50; padding: 25px; position: relative; }
-    .discussion-title { background: #2c3e50; color: #fff; padding: 5px 15px; position: absolute; top: -15px; left: 20px; font-family: 'Merriweather', serif; font-size: 1.1em; }
-    
-    .q-box { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 20px; }
-    .q-box:last-child { border-bottom: none; padding-bottom: 0; }
-    .question { font-weight: 700; font-size: 1.05em; color: #000; margin-bottom: 10px; display: block; }
+.video-box { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 12px 15px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9em; }
+.video-box a { color: #d35400; text-decoration: none; font-weight: 600; }
+.video-box a:hover { text-decoration: underline; }
 
-    .model-answer { background-color: #f1f8ff; border-left: 4px solid #3498db; padding: 12px; margin-top: 10px; font-size: 0.9em; color: #2c3e50; font-family: 'Merriweather', serif; font-style: italic; }
-    .model-answer strong { font-style: normal; color: #2980b9; font-size: 0.85em; display: block; margin-bottom: 5px; text-transform: uppercase; }
+.discussion-section { margin-top: 40px; background: #fff; border: 2px solid #2c3e50; padding: 25px; position: relative; }
+.discussion-title { background: #2c3e50; color: #fff; padding: 5px 15px; position: absolute; top: -15px; left: 20px; font-family: &#39;Merriweather&#39;, serif; font-size: 1.1em; }
 
-    .vocab-section { margin-top: 40px; background: #fdfdfd; border-top: 3px double #ddd; padding-top: 20px; }
-    .vocab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9em; }
-    .vocab-item { background: #eee; padding: 8px; border-radius: 4px; }
+.q-box { margin-bottom: 30px; border-bottom: 1px dashed #ccc; padding-bottom: 25px; }
+.q-box:last-child { border-bottom: none; padding-bottom: 0; }
+.question { font-weight: 700; font-size: 1.1em; color: #000; margin-bottom: 15px; display: block; }
 
-    @media (max-width: 768px) { .vocab-grid { grid-template-columns: 1fr; } }
+.model-answer { background-color: #f1f8ff; border-left: 4px solid #3498db; padding: 15px; margin-top: 15px; font-size: 0.95em; color: #2c3e50; font-family: &#39;Merriweather&#39;, serif; }
+.model-answer strong { font-style: normal; color: #2980b9; font-size: 0.9em; display: inline-block; margin-top: 10px; text-transform: uppercase; font-weight: 800; }
+.model-answer strong:first-child { margin-top: 0; }
+.model-answer p { margin: 5px 0 15px 0; font-style: italic; }
+
+/* 대규모 단어장 섹션 스타일 */
+.vocab-section { margin-top: 50px; background: #fafafa; border-top: 4px double #ccc; padding-top: 30px; }
+.vocab-movie-title { font-size: 1.2em; font-weight: bold; color: #2c3e50; margin: 30px 0 15px 0; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+.vocab-grid { display: grid; grid-template-columns: 1fr; gap: 10px; font-size: 0.9em; }
+.vocab-item { background: #fff; padding: 10px; border-radius: 4px; border: 1px solid #eee; }
+.vocab-item b { color: #d35400; }
+.vocab-tag { display: inline-block; font-size: 0.75em; padding: 2px 6px; border-radius: 4px; color: #fff; margin-right: 5px; vertical-align: middle; }
+.tag-std { background-color: #27ae60; } /* Standard */
+.tag-slang { background-color: #8e44ad; } /* Slang */
+.tag-aca { background-color: #2980b9; } /* Academic */
+
+/* 문법 박스 스타일 */
+.grammar-box { margin-top: 15px; background: #fff8e1; border-left: 5px solid #f1c40f; padding: 15px; border-radius: 4px; font-size: 0.95em; }
+.grammar-title { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
+.grammar-desc { color: #555; margin-bottom: 5px; }
+.grammar-example { background: rgba(255,255,255,0.7); padding: 5px; font-style: italic; color: #333; }
+
+@media (min-width: 600px) { .vocab-grid { grid-template-columns: 1fr 1fr; } }
+
 </style>
 
 <div class="meetup-content">
-    <h2>Topic: The Paradigm Shift (From Code to Soul)</h2>
+<h2>Topic: Actor Focus - Lee Jung-jae (The Limitless Challenger)</h2>
+<h4>1. The Stylish Villain (Deliver Us from Evil)</h4>
+<p>Lee plays the ruthless chaser 'Ray'. Usually, villains are hated, but his fashion and intense gaze made him a cultural icon.</p>
+<div class="video-box">
+    <strong>📺 Deliver Us from Evil - "Ray's Entrance"</strong><br>
+    <a href="https://youtu.be/pUSpvIG2uxk?si=bsGO4h1HuzgdmuYy" target="_blank">👉 Watch Clip (Click)</a>
+</div>
 
-    <h4>1. The Golden Age (Pre-AI Era)</h4>
-    <p>
-        Remember when many people rushed to coding bootcamps? We believed becoming a developer was a sure way to get a high salary and a stable life.
-    </p>
-    <div class="video-box">
-        <strong>📺 Silicon Valley (HBO) - "The Obsession"</strong><br>
-        <a href="https://youtu.be/nO3swhpidOI" target="_blank">👉 Watch Clip (Click)</a>
-        <br><small>*Focus: How we defined our value before AI.</small>
-    </div>
+<h4>2. Bromance & Noir (New World)</h4>
+<p>The legendary chemistry between Lee and Hwang Jung-min. A story about identity, loyalty, and brotherhood.</p>
+<div class="video-box">
+    <strong>📺 New World - "Elevator Scene"</strong><br>
+    <a href="https://www.youtube.com/watch?v=ZuS_ekxhs1A" target="_blank">👉 Watch Clip (Click)</a>
+</div>
 
-    <h4>2. The Reality Check (ChatGPT & Layoffs)</h4>
-    <p>
-        When ChatGPT arrived, big tech companies started firing many employees. This proved that "Average Skills" are no longer enough to survive.
-    </p>
-    <div class="video-box">
-        <strong>📺 OpenAI - The "Survival of the Fittest" Moment</strong><br>
-        <a href="https://youtube.com/shorts/Trtzk2Vdv38?si=KW69pcg-pKiF594_" target="_blank">👉 Watch Keynote (Click)</a>
-    </div>
+<h4>3. Global Transformation (Squid Game)</h4>
+<p>He abandoned his cool image to portray a desperate, broke gambler. This role made him a global star.</p>
+<div class="video-box">
+    <strong>📺 Squid Game - "The Pink Hair"</strong><br>
+    <a href="https://www.youtube.com/watch?v=qMdkMW810qY" target="_blank">👉 Watch Clip (Click)</a>
+</div>
 
-    <h4>3. The Shift (Devin & 1-Person Biz)</h4>
-    <p>
-        Devin is the world's first fully autonomous AI software engineer. We are moving from "Writing Code" to "Designing Logic."
-        Now, a small team using AI can challenge huge companies.
-    </p>
-    <div class="video-box">
-        <strong>📺 Introducing Devin</strong><br>
-        <a href="https://youtu.be/fjHtjT7GO1c?si=gVlZ_pYCmXgJKqIn" target="_blank">👉 Watch Intro (Click)</a>
-    </div>
+<h4>4. The Challenge at 50 (The Acolyte)</h4>
+<p>Debuting in Star Wars as a Jedi Master at age 50. He memorized lines phonetically to overcome the language barrier.</p>
+<div class="video-box">
+    <strong>📺 The Acolyte - "Master Sol"</strong><br>
+    <a href="https://www.youtube.com/watch?v=4B0aMC-Q-gs" target="_blank">👉 Watch Clip (Click)</a>
+</div>
 
-    <h4>4. The Last Bastion? (AI in Art)</h4>
-    <p>
-        AI is now making music that sounds just like human songs. If creativity is automated, what is left for us?
-    </p>
-    <div class="video-box">
-        <strong>📺 SUNO AI - Generating Music</strong><br>
-        <a href="https://www.youtube.com/watch?v=ZwouiJ3xEIQ" target="_blank">👉 Listen to Sample (Click)</a>
-    </div>
+<h4>5. The Director's Chair (Hunt)</h4>
+<p>Not settling for being a top actor, he wrote and directed his own blockbuster movie.</p>
+<div class="video-box">
+    <strong>📺 Hunt - "Director Lee's Action"</strong><br>
+    <a href="https://www.youtube.com/watch?v=CSOb8gia_mg" target="_blank">👉 Watch Clip (Click)</a>
+</div>
 
 
-    <div class="discussion-section">
-        <div class="discussion-title">🗣 Discussion Questions</div>
+<div class="discussion-section">
+    <div class="discussion-title">🗣 Discussion Questions & Answers</div>
 
-        <div class="q-box">
-            <span class="question">Q1. The Illusion of Stability</span>
-            Before AI, many thought coding was a "job for life." Looking back, did we <strong>confuse</strong> a temporary market boom with permanent safety?
-            <div class="model-answer">
-                <strong>Organizer's opinion:</strong>
-"To be honest, we completely failed to predict the speed of this AI revolution. We valued adaptability, but the velocity of change exceeded our imagination. Now, adaptability is no longer optional; it is the only way to survive."
-            </div>
-        </div>
-
-        <div class="q-box">
-            <span class="question">Q2. Survival of the Fittest</span>
-            When big layoffs happened with the rise of ChatGPT, how did your view of "Skill" change? Did you see AI as a danger or a tool to help you?
-            <div class="model-answer">
-                <strong>Organizer's opinion:</strong>
-                "AI handles the execution and details, allowing me to focus on higher-level abstraction like design and UX. For me, AI is not a threat but a leverage. Running a one-person business, AI gives me unprecedented speed, allowing me to do what used to take a whole team."
-            </div>
-        </div>
-
-        <div class="q-box">
-            <span class="question">Q3. From Coder to Architect/From "Doer" to "Director"</span>
-            With AI agents like 'Devin' writing the code, our role is changing to "Architect." Are you ready to stop writing every line of code yourself?
-            /For those who are not developers, how is AI changing the way you work? Are you ready to stop doing the manual tasks and start acting like a 'Director' or 'Architect' in your own field?
-            <div class="model-answer">
-                <strong>Organizer's opinion:</strong>
-                "Exactly. Although I come from a developer background, I've shifted my focus from 'syntax' to 'value creation.' Now, I concentrate on sharing insights and designing the user experience, leaving the actual coding to the automated agents."
-                /I believe this shift applies to everyone, not just coders. Whether you are a marketer, a designer, or a manager, AI is taking over the 'execution.' Our new job is to provide the vision and final approval. It’s time to move from being a 'Worker' to becoming a 'Decision Maker.'
-            </div>
-        </div>
-
-        <div class="q-box">
-            <span class="question">Q4. The Rise of "Micro-Enterprises"</span>
-            Do you believe a small team using AI can really beat a slow, big company?
-            <div class="model-answer">
-                <strong>Organizer's opinion:</strong>
-                "It depends on the culture. Big companies are often slowed down by legacy systems and bureaucratic decision-making. While they spend a week just scheduling a meeting, I can build and deploy software in an instant. Speed is my ultimate weapon."
-            </div>
-        </div>
-
-        <div class="q-box">
-            <span class="question">Q5. Art & Authenticity</span>
-            If AI can make music that sounds <strong>exactly the same</strong> as human work, does the "Human Touch" still matter?
-            <div class="model-answer">
-                <strong>Organizer's opinion:</strong>
-                "AI merely outputs learned patterns and mimicry. However, I believe the subtle nuances and details of a performance belong solely to humans. AI can copy the style, but it can never replicate the soul that creates those details."
-            </div>
+    <div class="q-box">
+        <span class="question">Q1. Style vs Morality</span>
+        Why do people find brutal villains like 'Ray' attractive? Do you think an actor's "Style" can overshadow the morality of the character?
+        <div class="model-answer">
+            <strong>[🟢 Standard]</strong>
+            <p>"Sometimes, a character's charisma is more <b>captivating</b> than their <b>moral compass</b>. Even though he is a villain, his visual impact makes him <b>stand out</b>."</p>
+            <strong>[🟣 Slang]</strong>
+            <p>"He’s <b>straight-up savage</b>, but his <b>drip</b> is <b>immaculate</b>. Honestly, when a villain has that much <b>swag</b>, you kinda <b>root for</b> him."</p>
+            <strong>[🔵 Academic]</strong>
+            <p>"This phenomenon is the '<b>aestheticization</b> of violence.' When an <b>antagonist</b> is portrayed with such <b>visceral</b> intensity, the audience experiences a <b>suspension of moral judgment</b>."</p>
         </div>
     </div>
+
+    <div class="q-box">
+        <span class="question">Q2. Chemistry: Opposites Attract?</span>
+        Do you get along better with people who are similar to you, or do opposites attract?
+        <div class="model-answer">
+            <strong>[🟢 Standard]</strong>
+            <p>"I think <b>opposites attract</b>. In the movie, Lee is <b>calm</b> while Hwang is <b>energetic</b>, creating a perfect <b>balance</b>."</p>
+            <strong>[🟣 Slang]</strong>
+            <p>"Their <b>bromance</b> is <b>legendary</b>. Hwang is loud, and Lee is the <b>stoic</b> type, but they are literally <b>ride or die</b>."</p>
+            <strong>[🔵 Academic]</strong>
+            <p>"The <b>juxtaposition</b> of their personalities <b>amplifies</b> the dramatic tension. Living a life of <b>duplicity</b> would likely lead to severe <b>cognitive dissonance</b>."</p>
+        </div>
+    </div>
+
+    <div class="q-box">
+        <span class="question">Q3. The Peak of Career</span>
+        Do you consider his role in 'Squid Game' the "Peak" of his acting career?
+        <div class="model-answer">
+            <strong>[🟢 Standard]</strong>
+            <p>"It was definitely his <b>peak</b>. He <b>abandoned</b> his cool image to <b>portray</b> a <b>desperate</b> human being perfectly."</p>
+            <strong>[🟣 Slang]</strong>
+            <p>"He had a major <b>glow down</b> for this role, but his career had a massive <b>glow up</b>. Seeing a top star act like a <b>broke</b> loser was <b>epic</b>."</p>
+            <strong>[🔵 Academic]</strong>
+            <p>"It serves as a <b>testament</b> to his <b>versatility</b>. By <b>shedding</b> his glamorous persona and embodying <b>destitution</b>, he proved his depth."</p>
+        </div>
+    </div>
+
+    <div class="q-box">
+        <span class="question">Q4. Age is Just a Number</span>
+        He challenged Hollywood in his 50s. What message does this send?
+        <div class="model-answer">
+            <strong>[🟢 Standard]</strong>
+            <p>"It proves that age is <b>irrelevant</b> regarding challenges. It <b>motivates</b> me to <b>step out of my comfort zone</b>."</p>
+            <strong>[🟣 Slang]</strong>
+            <p>"He’s <b>living proof</b> that <b>age is just a number</b>. Most people would just <b>coast</b>, but he decided to <b>grind</b> again."</p>
+            <strong>[🔵 Academic]</strong>
+            <p>"His endeavor illustrates <b>lifelong learning</b>. Overcoming <b>linguistic barriers</b> demonstrates immense <b>resilience</b>."</p>
+        </div>
+    </div>
+
+    <div class="q-box">
+        <span class="question">Q5. Specialist vs Polymath</span>
+        Between a 'Specialist' and a 'Polymath' (Director + Actor), which life do you admire more?
+        <div class="model-answer">
+            <strong>[🟢 Standard]</strong>
+            <p>"I <b>admire</b> his ambition to <b>expand his horizons</b>. Managing an entire production shows he is not afraid of <b>failure</b>."</p>
+            <strong>[🟣 Slang]</strong>
+            <p>"That’s a total <b>boss move</b>. Why <b>settle for</b> one thing when you can <b>slay</b> at everything? He's <b>running the show</b>."</p>
+            <strong>[🔵 Academic]</strong>
+            <p>"His transition highlights his <b>auteurism</b>. His ability to <b>orchestrate</b> a complex narrative proves his <b>multifaceted</b> talent."</p>
+        </div>
+    </div>
+</div>
 
 <div class="vocab-section">
-        <h4>📚 Useful Vocabulary & Grammar</h4>
-        
-        <div class="vocab-grid">
-            <div class="vocab-item"><strong>Confuse</strong> (혼동하다) - To think one thing is another.</div>
-            <div class="vocab-item"><strong>Illusion</strong> (환상) - Something that looks real but is not.</div>
-            <div class="vocab-item"><strong>Leverage</strong> (활용하다/도구) - To use something to maximum advantage.</div>
-            <div class="vocab-item"><strong>Legacy System</strong> (구형 시스템) - Old software/methods that slow down a company.</div>
-            <div class="vocab-item"><strong>Bureaucracy</strong> (관료주의) - Complicated rules that make big companies slow.</div>
-            <div class="vocab-item"><strong>Nuance</strong> (미묘한 차이) - A very slight difference in meaning or sound.</div>
-            <div class="vocab-item"><strong>Solitude</strong> (고독) - The state of being alone without being lonely.</div>
-            <div class="vocab-item"><strong>Authenticity</strong> (진정성) - The quality of being real and true.</div>
-        </div>
+    <h4>📚 Deep Dive: Full Vocabulary & Grammar</h4>
 
-        <div class="grammar-box">
-            <span class="grammar-title">💡 Power Pattern: "Not A, but B"</span>
-            <div class="grammar-desc">
-                Used to correct a misunderstanding or emphasize your true focus. (A가 아니라, B이다)
-            </div>
-            <div class="grammar-example">
-                "AI is <strong>not</strong> a threat, <strong>but</strong> a leverage for my business."<br>
-                (AI는 위협이 아니라, 내 사업의 도구이다.)
-            </div>
-            <div class="grammar-example">
-                "My value comes <strong>not</strong> from writing code, <strong>but</strong> from designing the vision."<br>
-                (내 가치는 코드를 짜는 게 아니라, 비전을 설계하는 데서 온다.)
-            </div>
-        </div>
+    <div class="vocab-movie-title">1. Deliver Us from Evil (The Villain)</div>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Visual impact</b>: 시각적 충격</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Intense</b>: 강렬한, 치열한</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Gaze</b>: (뚫어지게 보는) 응시</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Stand out</b>: 두드러지다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Captivating</b>: 매혹적인 (Fascinating)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Moral compass</b>: 도덕적 나침반 (양심)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Straight-up</b>: 진짜로, 솔직히 (Totally)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Savage</b>: 잔인한 / (슬랭) 개쩌는</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Drip</b>: 패션 센스, 스타일</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Immaculate</b>: 티 하나 없이 완벽한</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Swag</b>: 스웨그, 멋, 허세</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Root for</b>: ~를 응원하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Baddie</b>: 악당 / (슬랭) 매력적인 나쁜 사람</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Phenomenon</b>: 현상</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Aestheticization</b>: 미화(폭력 등을 아름답게 만듦)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Antagonist</b>: 적대자, 악역 (Villain의 문어체)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Portray</b>: 묘사하다, 연기하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Visceral</b>: 본능적인, 심장을 때리는</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Sartorial</b>: 의복의 (고급 비평용)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Suspension</b>: 유예 (Suspension of disbelief: 불신 유예)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Solely</b>: 오직, 단지 (Exclusively)</div>
     </div>
+    <div class="grammar-box">
+        <span class="grammar-title">💡 Grammar: Causative Verb (Make)</span>
+        <div class="grammar-desc">Make + 목적어 + 동사원형 (~가 ...하게 만들다)</div>
+        <div class="grammar-example">"His visual impact <b>makes</b> him <b>stand out</b>."</div>
+        <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Participle Clause (분사구문)</span>
+        <div class="grammar-desc">문장 끝에 오는 ', -ing'는 앞 문장의 결과나 동시동작을 설명함.</div>
+        <div class="grammar-example">"...judgment, <b>focusing</b> solely on the performance."</div>
+    </div>
+
+    <div class="vocab-movie-title">2. New World (Bromance)</div>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Opposites attract</b>: 반대끼리 끌린다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Calm</b>: 차분한</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Immense</b>: 어마어마한 (Huge)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Suffer from</b>: ~로 고통받다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Identity crisis</b>: 정체성 혼란</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Bromance</b>: 남자 간의 진한 우정</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Legendary</b>: 전설적인 (개쩌는)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Stoic</b>: 금욕적인, 감정 없는 (상남자)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Ride or die</b>: 끝까지 함께하는 찐친</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Crack under pressure</b>: 압박감에 무너지다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Sketchy</b>: 수상쩍은, 위험한</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Juxtaposition</b>: 병치 (대조를 위해 나란히 둠)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Amplify</b>: 증폭시키다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Turmoil</b>: 큰 혼란, 동요</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Undercover</b>: 위장 잠입한</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Duplicity</b>: 이중성, 표리부동</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Cognitive dissonance</b>: 인지 부조화</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-title">💡 Grammar: Second Conditional (가정법 과거)</span>
+        <div class="grammar-desc">현재 사실과 반대되는 상상. Be동사는 무조건 'were' 사용.</div>
+        <div class="grammar-example">"If I <b>were</b> in his shoes, I <b>would</b> crack..."</div>
+        <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Relative Clause (계속적 용법)</span>
+        <div class="grammar-desc">', which'는 앞 문장 전체 내용을 받음.</div>
+        <div class="grammar-example">"Lee is calm, <b>which</b> creates a perfect balance."</div>
+    </div>
+
+    <div class="vocab-movie-title">3. Squid Game (Transformation)</div>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Peak</b>: 정점 (Pinnacle)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Abandon</b>: 버리다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Desperate</b>: 절박한</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Convincing</b>: 설득력 있는 (연기 잘함)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Glow down</b>: 외모 하락 (역변)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Glow up</b>: 외모 떡상 (정변)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Carry the show</b>: 하드캐리하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Broke</b>: 빈털터리의 (No money)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Epic</b>: 서사적인, 대박인</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Testament</b>: (확실한) 증거</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Versatility</b>: 다재다능함, 가변성</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Shed</b>: (껍질/가면을) 벗다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Embody</b>: 구현하다 (몸으로 표현하다)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Destitution</b>: 극빈, 결핍 (Poverty 상위호환)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Evoke</b>: (감정을) 불러일으키다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Anchor</b>: 중심을 잡다 (닻을 내리다)</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-title">💡 Grammar: Cleft Sentence (강조 구문)</span>
+        <div class="grammar-desc">It... that 구문을 변형하여 주어를 강조함.</div>
+        <div class="grammar-example">"It wasn't just luck; (it was)..."</div>
+        <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Method (By + Gerund)</span>
+        <div class="grammar-desc">수단과 방법을 나타내는 가장 격식 있는 표현.</div>
+        <div class="grammar-example">"<b>By shedding</b> his persona, he proved..."</div>
+    </div>
+
+    <div class="vocab-movie-title">4. The Acolyte (Challenge)</div>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Irrelevant</b>: 무관한</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Dedication</b>: 헌신</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Comfort zone</b>: 안전지대 (익숙한 곳)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Regardless of</b>: ~와 상관없이</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Living proof</b>: 산 증인</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Coast</b>: (노력 없이) 설렁설렁 가다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Grind</b>: 뼈를 깎는 노력을 하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Hustle</b>: 열정적인 노력, 으쌰으쌰</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Endeavor</b>: (장기적인) 노력, 시도</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Illustrate</b>: 예증하다, 보여주다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Lifelong learning</b>: 평생 학습</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Linguistic barrier</b>: 언어 장벽</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Resilience</b>: 회복탄력성, 불굴의 의지</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Preconceived notion</b>: 선입견 (Bias)</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-title">💡 Grammar: 'When it comes to'</span>
+        <div class="grammar-desc">'to'는 전치사이므로 뒤에 명사나 동명사(-ing)가 와야 함. 동사원형 금지!</div>
+        <div class="grammar-example">"When it comes to <b>challenges</b> (O) / challenge (X)"</div>
+        <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Infinitive as Complement</span>
+        <div class="grammar-desc">Motivate + 목적어 + to 부정사 (~가 ...하도록 동기부여하다)</div>
+        <div class="grammar-example">"It motivates me <b>to step</b> out..."</div>
+    </div>
+
+    <div class="vocab-movie-title">5. Hunt (Director)</div>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Admire</b>: 존경하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Ambition</b>: 야망</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Expand horizons</b>: 시야/지평을 넓히다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Specialist</b>: 전문가 (한 우물)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Boss move</b>: 대장 같은 대담한 행동</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Run the show</b>: 주도권을 잡다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Level up</b>: (게임처럼) 성장하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Settle for</b>: (현실에) 안주하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Slay</b>: 찢었다 (완벽하게 해내다)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Auteurism</b>: 작가주의 (감독의 예술성)</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Orchestrate</b>: (복잡한 것을) 조직하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Multifaceted</b>: 다재다능한, 다면적인</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Strive for</b>: ~을 얻으려 분투하다</div>
+        <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Comprehensive</b>: 포괄적인</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-title">💡 Grammar: To-Infinitive as Adjective</span>
+        <div class="grammar-desc">명사 뒤에서 수식 (~하려는)</div>
+        <div class="grammar-example">"...ambition <b>to expand</b> his horizons."</div>
+        <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Rhetorical Question (수사의문문)</span>
+        <div class="grammar-desc">대답을 바라는 게 아니라 주장을 강조하기 위한 질문.</div>
+        <div class="grammar-example">"Why settle for one thing...?" (안주하지 말라는 뜻)</div>
+    </div>
+</div>
 </div>
