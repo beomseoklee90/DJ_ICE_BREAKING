@@ -1,358 +1,610 @@
-2026.02.01
-
+2026-02-08(Sun) English Meeting
 <style>
-@import url('[https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap](https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap)');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap');
 
-/* 로컬 스타일 정의 */
-.meetup-content { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
-.meetup-content h2 { font-family: 'Merriweather', serif; color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 15px; margin-top: 0; }
-.meetup-content h4 { margin: 30px 0 15px 0; color: #2980b9; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; border-left: 4px solid #2980b9; padding-left: 10px; }
-.meetup-content p { font-size: 0.95em; margin-bottom: 10px; color: #444; }
+/* 전체 레이아웃 */
+.meetup-content { font-family: 'Roboto', sans-serif; color: #2c3e50; line-height: 1.6; max-width: 100%; }
+.meetup-content h2 { font-family: 'Merriweather', serif; color: #1a252f; border-bottom: 3px solid #1a252f; padding-bottom: 15px; margin-top: 0; letter-spacing: -0.5px; }
 
-.video-box { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 12px 15px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9em; }
-.video-box a { color: #d35400; text-decoration: none; font-weight: 600; }
-.video-box a:hover { text-decoration: underline; }
+/* 영화 섹션 헤더 */
+.movie-header { margin-top: 60px; border-left: 6px solid #e74c3c; padding-left: 15px; background: #fff5f5; padding-top: 15px; padding-bottom: 15px; border-radius: 0 8px 8px 0; border-bottom: 1px solid #fadbd8; }
+.movie-header h4 { margin: 0; color: #b71c1c; font-size: 1.4em; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; }
+.movie-desc { margin-top: 10px; font-size: 1em; color: #444; padding: 0 5px; }
 
-.discussion-section { margin-top: 40px; background: #fff; border: 2px solid #2c3e50; padding: 25px; position: relative; }
-.discussion-title { background: #2c3e50; color: #fff; padding: 5px 15px; position: absolute; top: -15px; left: 20px; font-family: 'Merriweather', serif; font-size: 1.1em; }
+/* 비디오 박스 */
+.video-box { background: #fff; border: 1px solid #e1e4e8; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: space-between; }
+.video-box strong { color: #2c3e50; font-weight: 700; }
+.video-box a { background: #e74c3c; color: #fff; text-decoration: none; font-weight: 600; padding: 6px 12px; border-radius: 4px; font-size: 0.85em; transition: background 0.2s; }
+.video-box a:hover { background: #c0392b; }
 
-.q-box { margin-bottom: 30px; border-bottom: 1px dashed #ccc; padding-bottom: 25px; }
-.q-box:last-child { border-bottom: none; padding-bottom: 0; }
-.question { font-weight: 700; font-size: 1.1em; color: #000; margin-bottom: 15px; display: block; }
+/* 토론 섹션 (Q&A) */
+.discussion-box { margin-top: 25px; background: #fff; border: 1px solid #bdc3c7; border-top: 3px solid #2980b9; padding: 25px; border-radius: 6px; }
+.question { font-family: 'Merriweather', serif; font-weight: 800; font-size: 1.15em; color: #2980b9; margin-bottom: 15px; display: block; }
 
-.sub-questions { margin-bottom: 15px; background: #f9f9f9; padding: 10px; border-radius: 4px; border-left: 3px solid #ccc; }
+.sub-questions { background: #f0f4f8; padding: 15px; border-radius: 4px; margin-bottom: 20px; font-size: 0.95em; border-left: 4px solid #607d8b; }
 .sub-questions ul { margin: 0; padding-left: 20px; }
-.sub-questions li { font-size: 0.9em; color: #555; margin-bottom: 5px; }
 
-.model-answer { background-color: #f1f8ff; border-left: 4px solid #3498db; padding: 15px; margin-top: 15px; font-size: 0.95em; color: #2c3e50; font-family: 'Merriweather', serif; }
-.model-answer strong { font-style: normal; color: #2980b9; font-size: 0.9em; display: inline-block; margin-top: 10px; text-transform: uppercase; font-weight: 800; }
-.model-answer strong:first-child { margin-top: 0; }
-.model-answer p { margin: 5px 0 15px 0; font-style: italic; }
+/* 답변 모델 (3단) */
+.model-answer { background-color: #f8f9fa; padding: 20px; border-radius: 6px; font-size: 0.95em; color: #34495e; font-family: 'Merriweather', serif; border: 1px solid #e9ecef; }
+.answer-type { font-size: 0.75em; font-weight: 800; text-transform: uppercase; display: inline-block; padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; margin-top: 20px; color: #fff; }
+.type-std { background-color: #27ae60; margin-top: 0; }
+.type-slang { background-color: #8e44ad; }
+.type-aca { background-color: #2980b9; }
+.model-answer p { margin: 5px 0 0 0; font-style: italic; line-height: 1.6; }
 
-/* 대규모 단어장 섹션 스타일 */
-.vocab-section { margin-top: 50px; background: #fafafa; border-top: 4px double #ccc; padding-top: 30px; }
-.vocab-movie-title { font-size: 1.2em; font-weight: bold; color: #2c3e50; margin: 30px 0 15px 0; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+/* 단어장 (Vocab) */
+.vocab-box { margin-top: 25px; background: #fafafa; border: 1px solid #eee; padding: 20px; border-radius: 6px; }
+.vocab-title { font-weight: 800; color: #455a64; border-bottom: 2px solid #cfd8dc; padding-bottom: 8px; margin-bottom: 15px; display: block; font-size: 1.05em; }
 .vocab-grid { display: grid; grid-template-columns: 1fr; gap: 10px; font-size: 0.9em; }
-.vocab-item { background: #fff; padding: 10px; border-radius: 4px; border: 1px solid #eee; }
-.vocab-item b { color: #d35400; }
-.vocab-tag { display: inline-block; font-size: 0.75em; padding: 2px 6px; border-radius: 4px; color: #fff; margin-right: 5px; vertical-align: middle; }
-.tag-std { background-color: #27ae60; } /* Standard */
-.tag-slang { background-color: #8e44ad; } /* Slang */
-.tag-aca { background-color: #2980b9; } /* Academic */
+.vocab-item { background: #fff; padding: 10px 12px; border-radius: 4px; border: 1px solid #e0e0e0; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.vocab-item b { color: #d35400; font-weight: 700; }
+.vocab-tag { display: inline-block; font-size: 0.7em; padding: 2px 6px; border-radius: 3px; color: #fff; margin-right: 6px; vertical-align: text-bottom; text-transform: uppercase; font-weight: bold; }
 
-/* 문법 박스 스타일 */
-.grammar-box { margin-top: 15px; background: #fff8e1; border-left: 5px solid #f1c40f; padding: 15px; border-radius: 4px; font-size: 0.95em; }
-.grammar-title { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
-.grammar-desc { color: #555; margin-bottom: 5px; }
-.grammar-example { background: rgba(255,255,255,0.7); padding: 5px; font-style: italic; color: #333; }
+/* 문법 (Grammar) */
+.grammar-box { margin-top: 20px; background: #fffde7; border-left: 5px solid #fbc02d; padding: 15px; border-radius: 4px; font-size: 0.95em; }
+.grammar-head { font-weight: 800; color: #f57f17; display: block; margin-bottom: 5px; }
+.grammar-ex { color: #37474f; font-style: italic; background: rgba(255,255,255,0.7); padding: 5px; display: block; margin-top: 5px; border-radius: 3px; border: 1px dashed #fbc02d; }
 
 @media (min-width: 600px) { .vocab-grid { grid-template-columns: 1fr 1fr; } }
-
 </style>
 
 <div class="meetup-content">
-<h2>Topic: Actor Focus - Lee Jung-jae (The Limitless Challenger)</h2>
+<h2>Topic: The Complete Filmography of Lee Jung-jae (All 11 Movies)</h2>
 
-<h4>1. The Stylish Villain (Deliver Us from Evil)</h4>
-<p>Lee plays the ruthless chaser 'Ray'. Usually, villains are hated, but his fashion and intense gaze made him a cultural icon.</p>
+<div class="movie-header">
+    <h4>1. The War Hero (Operation Chromite - 인천상륙작전)</h4>
+</div>
+<div class="movie-desc">
+    <p>He played 'Jang Hak-soo', a navy lieutenant who leads a <b>covert</b> operation. This movie depicts the <b>intense</b> psychological warfare before the historic Incheon Landing.</p>
+</div>
 <div class="video-box">
-<strong>📺 Deliver Us from Evil</strong>
-
-
-
-
-<a href="https://youtu.be/pUSpvIG2uxk?si=bsGO4h1HuzgdmuYy" target="_blank">👉 Watch Clip (Click)</a>
+    <strong>📺 Operation Chromite</strong>
+    <a href="https://www.youtube.com/watch?v=YEgNf4AW_Ms" target="_blank">Watch Clip</a>
 </div>
 
-<h4>2. Bromance & Noir (New World)</h4>
-<p>The legendary chemistry between Lee and Hwang Jung-min. A story about identity, loyalty, and brotherhood.</p>
-<div class="video-box">
-<strong>📺 New World</strong>
-
-
-
-
-<a href="https://www.youtube.com/watch?v=ZuS_ekxhs1A" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<h4>3. Global Transformation (Squid Game)</h4>
-<p>He abandoned his cool image to portray a desperate, broke gambler. This role made him a global star.</p>
-<div class="video-box">
-<strong>📺 Squid Game</strong>
-
-
-
-
-<a href="https://www.youtube.com/watch?v=qMdkMW810qY" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<h4>4. The Challenge at 50 (The Acolyte)</h4>
-<p>Debuting in Star Wars as a Jedi Master at age 50. He memorized lines phonetically to overcome the language barrier.</p>
-<div class="video-box">
-<strong>📺 The Acolyte - "Master Sol"</strong>
-
-
-
-
-<a href="https://www.youtube.com/watch?v=4B0aMC-Q-gs" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<h4>5. The Director's Chair (Hunt)</h4>
-<p>Not settling for being a top actor, he wrote and directed his own blockbuster movie.</p>
-<div class="video-box">
-<strong>📺 Hunt - "Director Lee's Action"</strong>
-
-
-
-
-<a href="https://www.youtube.com/watch?v=CSOb8gia_mg" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<div class="discussion-section">
-<div class="discussion-title">🗣 Deep Dive Discussion (Movie Analysis)</div>
-
-<div class="q-box">
-    <span class="question">Q1. Analysis of the Character 'Ray'</span>
+<div class="discussion-box">
+    <span class="question">Q1. Analysis of 'Jang Hak-soo'</span>
     <div class="sub-questions">
         <ul>
-            <li>What was the most memorable scene in this movie for you? (e.g., The first entrance, the hallway fight?)</li>
-            <li>Why do you think the audience loved this villain so much? Was it his fashion style or his ruthless personality?</li>
-            <li>How does this role compare to his other villain roles (like in 'The Face Reader')?</li>
+            <li>How did he express the tension of being a spy?</li>
+            <li>What makes this role different from his villain roles?</li>
         </ul>
     </div>
     <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
-        <p>"The most memorable scene was his first entrance. His white coat and tattoos created a strong <b>visual impact</b>. Unlike other villains, his stylish appearance made him <b>stand out</b>, making the character more <b>captivating</b> than scary."</p>
-        <strong>[🟣 Slang]</strong>
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"He had to keep his identity hidden, so his acting was very <b>subtle</b> but powerful. Unlike his villain roles, he showed <b>selfless</b> <b>patriotism</b>. The scene where he faces the enemy commander was incredibly <b>tense</b>."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"This movie was a total <b>nail-biter</b>. He was basically the MVP of the war. He didn't <b>flinch</b> even when things got <b>hairy</b>. It was refreshing to see him play the good guy who <b>saves the day</b>."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"The film dramatizes a <b>pivotal</b> moment in the Korean War. Lee effectively portrayed the <b>burden</b> of leadership and the <b>moral dilemma</b> of wartime <b>espionage</b>. His performance anchored the film's <b>historical gravity</b>."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: Operation Chromite</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Covert</b>: 비밀의, 은밀한</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Intense</b>: 긴장감 넘치는</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Subtle</b>: 미묘한, 절제된</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Selfless</b>: 이타적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Patriotism</b>: 애국심</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Nail-biter</b>: 조마조마한 상황</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Flinch</b>: 쫄다, 움찔하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hairy</b>: 위험한, 아슬아슬한</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Save the day</b>: (위기에서) 구하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Pivotal</b>: 중추적인, 매우 중요한</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Espionage</b>: 간첩 행위, 스파이 활동</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Gravity</b>: 중대성, 엄숙함</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Participle as Adjective</span>
+        <span class="grammar-ex">"A navy lieutenant <b>leading</b> a covert operation." (능동 수식)</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>2. The Dangerous Desire (The Housemaid - 하녀)</h4>
+</div>
+<div class="movie-desc">
+    <p>He played 'Hoon', a wealthy man who has an <b>affair</b> with his housemaid. It showed his ability to play a supposedly gentlemanly but actually <b>amoral</b> character.</p>
+</div>
+<div class="video-box">
+    <strong>📺 The Housemaid</strong>
+    <a href="https://www.youtube.com/watch?v=6gb6UZQ6_64" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q2. The Class Gap and Morality</span>
+    <div class="sub-questions">
+        <ul>
+            <li>Why was this character so scary even without shouting?</li>
+            <li>What does this movie say about the rich in Korea?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"He was scary because he had no <b>guilt</b>. He treated people like objects. He looked like a gentleman on the outside, but was <b>corrupt</b> on the inside. It showed the dark side of the <b>privileged</b> class."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"He was a major <b>red flag</b>. He was super rich and hot, but total <b>trash</b>. He <b>manipulated</b> everyone and didn't give a damn. It was <b>creepy</b> how calm he was while doing bad things."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"The character embodies the <b>arrogance</b> of the <b>bourgeoisie</b>. His lack of <b>empathy</b> highlights the rigid <b>social hierarchy</b>. The film critiques the <b>commodification</b> of human relationships in a capitalist society."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: The Housemaid</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Affair</b>: 불륜, 정사</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Amoral</b>: 도덕 관념이 없는 (비도덕적)</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Guilt</b>: 죄책감</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Corrupt</b>: 타락한</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Privileged</b>: 특권층의</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Red flag</b>: 위험 신호 (피해야 할 사람)</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Trash</b>: 쓰레기 (인성 파탄자)</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Creepy</b>: 소름 끼치는</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Bourgeoisie</b>: 부르주아 (유산 계급)</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Hierarchy</b>: 계급 구조, 위계</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Commodification</b>: 상품화 (사람을 물건 취급함)</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Contrast (On the outside vs On the inside)</span>
+        <span class="grammar-ex">"Gentleman <b>on the outside</b>, but corrupt <b>on the inside</b>."</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>3. The Youth Icon (City of the Rising Sun - 태양은 없다)</h4>
+</div>
+<div class="movie-desc">
+    <p>The movie that started his legendary friendship with Jung Woo-sung. He played a <b>reckless</b> youth chasing big dreams but constantly failing.</p>
+</div>
+<div class="video-box">
+    <strong>📺 City of the Rising Sun</strong>
+    <a href="https://youtube.com/shorts/XVVCfIkHJdw?si=JoP-d_vmNCY58Fn4" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q3. Struggles of Youth</span>
+    <div class="sub-questions">
+        <ul>
+            <li>How is this different from his current "Boss" roles?</li>
+            <li>Why is this movie considered a classic?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"He was young and full of energy but also very <b>immature</b>. He played a character who always makes <b>mistakes</b>. It perfectly captured the <b>wandering</b> spirit of youth in the late 90s."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"This is the <b>OG</b> bromance movie. He was a total <b>con artist</b> but you couldn't hate him. He was <b>hustling</b> to make money but kept <b>screwing up</b>. It's a total <b>vibe</b> of 90s nostalgia."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"This is a quintessential <b>coming-of-age</b> film. It portrays the <b>disillusionment</b> and <b>alienation</b> of the younger generation during the IMF crisis. Lee's performance symbolized the <b>fragility</b> of youthful dreams."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: City of the Rising Sun</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Reckless</b>: 무모한</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Immature</b>: 미성숙한, 철없는</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Wandering</b>: 방황하는</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>OG</b>: 원조 (Original Gangster)</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Con artist</b>: 사기꾼</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Screw up</b>: 망치다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Coming-of-age</b>: 성장의 (장르)</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Disillusionment</b>: 환멸</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Alienation</b>: 소외</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Fragility</b>: 연약함, 덧없음</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Participle (Chasing)</span>
+        <span class="grammar-ex">"A reckless youth <b>chasing</b> big dreams." (꿈을 쫓는 청춘)</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>4. The Historic Villain (The Face Reader - 관상)</h4>
+</div>
+<div class="movie-desc">
+    <p>He played 'Prince Suyang', the most <b>ambitious</b> man in Joseon history. His entrance scene with the wolf dogs is considered the best entrance in Korean movie history.</p>
+</div>
+<div class="video-box">
+    <strong>📺 The Face Reader</strong>
+    <a href="https://www.youtube.com/watch?v=69f1Q1IrIlk" target="_blank">Watch "Wolf Entrance"</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q4. Analysis of 'Prince Suyang'</span>
+    <div class="sub-questions">
+        <ul>
+            <li>Why is his entrance scene considered a masterpiece?</li>
+            <li>How did his voice tone change to sound more royal?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"His entrance was impressive because of the music and the visual. He looked like a wild animal hunting <b>prey</b>. His heavy voice tone added <b>authority</b>, making everyone else look small. It established his <b>dominance</b> immediately."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"That entrance gave me <b>goosebumps</b>. He walked in like he <b>owned the place</b>. He didn't even speak, but his <b>aura</b> was crazy. He was the definition of a <b>badass</b> king who doesn't take no for an answer."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"The director utilized <b>auditory</b> and visual cues to signify his <b>imminent</b> <b>usurpation</b> of the throne. By associating him with predatory imagery, the film <b>foreshadowed</b> the bloody <b>coup</b> he would later orchestrate."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: The Face Reader</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Ambitious</b>: 야망이 있는</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Prey</b>: 먹잇감</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Authority</b>: 권위</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Dominance</b>: 지배력</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Goosebumps</b>: 소름</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Own the place</b>: 장악하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Aura</b>: 아우라, 기운</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Imminent</b>: 임박한</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Usurpation</b>: 왕위 찬탈</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Foreshadow</b>: 암시하다, 복선을 깔다</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Causative 'Make' (Verb)</span>
+        <span class="grammar-ex">"<b>Making</b> everyone else <b>look</b> small." (작아 보이게 만들다)</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>5. The Traitor (Assassination - 암살)</h4>
+</div>
+<div class="movie-desc">
+    <p>He played 'Yem Sek-jin', a freedom fighter who turns into a <b>traitor</b>. He portrayed the character from his 20s to his 60s, showing incredible aging acting.</p>
+</div>
+<div class="video-box">
+    <strong>📺 Assassination</strong>
+    <a href="https://www.youtube.com/watch?v=l2zbiENbffM" target="_blank">Watch "The Trial Scene"</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q5. Betrayal and Survival</span>
+    <div class="sub-questions">
+        <ul>
+            <li>Why did Yem Sek-jin betray his country? Was it just for survival?</li>
+            <li>What did you feel during the trial scene?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"I think he was an <b>opportunist</b> who cared more about his own life than <b>patriotism</b>. In the trial scene, his acting was shocking because he genuinely believed he was innocent. He <b>justified</b> his actions perfectly."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"He was a total <b>sellout</b>. He threw his friends <b>under the bus</b> to save his own skin. In the trial, he was <b>gaslighting</b> everyone, acting like a victim. It made me so mad, which means his acting was <b>top-tier</b>."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"The character serves as an <b>allegory</b> for historical collaborators. His <b>shameless</b> defense in the courtroom highlights the <b>moral ambiguity</b> of the era. It questions whether survival can ever <b>legitimize</b> treason."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: Assassination</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Traitor</b>: 배신자</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Opportunist</b>: 기회주의자</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Justify</b>: 정당화하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Sellout</b>: 변절자</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Throw under the bus</b>: 배신하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Gaslight</b>: 가스라이팅하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Allegory</b>: 알레고리 (상징)</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Shameless</b>: 파렴치한</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Legitimize</b>: 합법화/정당화하다</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Comparison (More... than)</span>
+        <span class="grammar-ex">"Cared <b>more</b> about his own life <b>than</b> patriotism."</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>6. The Cunning Thief (The Thieves - 도둑들)</h4>
+</div>
+<div class="movie-desc">
+    <p>As 'Popie', he played a <b>cunning</b> and selfish thief. It showed his ability to play a character who is smart but cowardly.</p>
+</div>
+<div class="video-box">
+    <strong>📺 The Thieves</strong>
+    <a href="https://www.youtube.com/watch?v=ZMOSggkW71c" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q6. The Smart Coward</span>
+    <div class="sub-questions">
+        <ul>
+            <li>How was 'Popie' different from his other cool roles?</li>
+            <li>Why was his chemistry with Jun Ji-hyun (Yenicall) so funny?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"Popie was very <b>sly</b> and greedy. Unlike his other cool roles, he was a bit <b>pathetic</b>, which was refreshing. He constantly tried to <b>outsmart</b> others but often failed, adding <b>comic relief</b> to the movie."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"He was a <b>snake</b> in this movie. He kept trying to <b>scam</b> his own team. It was hilarious seeing him get <b>roasted</b> by Jun Ji-hyun. He played the 'greedy loser' role so well, it was a total <b>vibe shift</b>."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"This role demonstrated his ability to play a <b>duplicitous</b> character within an <b>ensemble cast</b>. His <b>portrayal</b> of a petty criminal contrasted sharply with his usual <b>aristocratic</b> image, showcasing his wide acting <b>spectrum</b>."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: The Thieves</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Cunning</b>: 교활한</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Pathetic</b>: 한심한</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Outsmart</b>: 한수 앞서다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Snake</b>: 뱀 같은 놈 (교활한 사람)</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Roast</b>: 디스하다, 꼽주다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Duplicitous</b>: 이중적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Ensemble cast</b>: 앙상블 캐스트</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Aristocratic</b>: 귀족적인</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Preposition 'Unlike'</span>
+        <span class="grammar-ex">"<b>Unlike</b> his other roles, he was pathetic." (~와 달리)</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>7. The Stylish Villain (Deliver Us from Evil)</h4>
+</div>
+<div class="movie-desc">
+    <p>Lee plays the ruthless chaser 'Ray'. Usually, villains are hated, but his fashion and intense gaze made him a cultural icon.</p>
+</div>
+<div class="video-box">
+    <strong>📺 Deliver Us from Evil</strong>
+    <a href="https://youtu.be/pUSpvIG2uxk?si=bsGO4h1HuzgdmuYy" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q7. Analysis of 'Ray'</span>
+    <div class="sub-questions">
+        <ul>
+            <li>What was the most memorable scene in this movie for you?</li>
+            <li>Why do you think the audience loved this villain so much?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"The most memorable scene was his first entrance. His white coat and tattoos created a strong <b>visual impact</b>. Unlike other villains, his stylish <b>appearance</b> made him <b>stand out</b>, making the character more <b>captivating</b> than scary."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
         <p>"His entrance was <b>straight-up savage</b>. Usually, villains look messy, but his <b>drip</b> was <b>immaculate</b>. Fans loved him because he had <b>swag</b>. Even though he's a <b>baddie</b>, you kinda <b>root for</b> him because he looks so cool."</p>
-        <strong>[🔵 Academic]</strong>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
         <p>"The director used the <b>aestheticization</b> of violence effectively. By <b>portraying</b> the <b>antagonist</b> with such <b>visceral</b> intensity and <b>sartorial</b> elegance, the film allows the audience to experience a <b>suspension</b> of moral judgment."</p>
     </div>
 </div>
 
-<div class="q-box">
-    <span class="question">Q2. Chemistry with Co-stars</span>
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: Deliver Us from Evil</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Ruthless</b>: 무자비한</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Captivating</b>: 매혹적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Stand out</b>: 눈에 띄다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Savage</b>: 잔인한 / 쩌는</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Drip</b>: 패션 간지</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Immaculate</b>: 완벽한, 결점 없는</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Aestheticization</b>: 미화</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Visceral</b>: 본능적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Sartorial</b>: 의복의</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Causative 'Make' (Adjective)</span>
+        <span class="grammar-ex">"Made him <b>stand out</b> (v)." / "Making the character <b>captivating</b> (adj)."</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>8. Bromance & Noir (New World - 신세계)</h4>
+</div>
+<div class="movie-desc">
+    <p>The legendary chemistry between Lee and Hwang Jung-min. A story about identity, loyalty, and brotherhood.</p>
+</div>
+<div class="video-box">
+    <strong>📺 New World</strong>
+    <a href="https://www.youtube.com/watch?v=ZuS_ekxhs1A" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q8. Chemistry with Co-stars</span>
     <div class="sub-questions">
         <ul>
-            <li>Who do you think has the best chemistry with Lee Jung-jae? (Hwang Jung-min vs. Jung Woo-sung)</li>
-            <li>In 'New World', his character rarely speaks. How did he express his emotions without lines?</li>
-            <li>Why do you think the "Elevator Scene" became such a legendary moment in Korean cinema?</li>
+            <li>Who do you think has the best chemistry with Lee Jung-jae?</li>
+            <li>How did he express his emotions without many lines?</li>
         </ul>
     </div>
     <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
+        <span class="answer-type type-std">🟢 Standard</span>
         <p>"I think Hwang Jung-min is his best partner because <b>opposites attract</b>. Lee was very <b>calm</b> while Hwang was energetic. He expressed his <b>suffering</b> through his eyes, showing his internal <b>identity crisis</b> perfectly."</p>
-        <strong>[🟣 Slang]</strong>
-        <p>"His <b>bromance</b> with Hwang is <b>legendary</b>. Lee played the <b>stoic</b> type who never cracks. The elevator scene is iconic because he finally snaps. It showed he's <b>ride or die</b>, even when the situation is <b>sketchy</b>."</p>
-        <strong>[🔵 Academic]</strong>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"His <b>bromance</b> with Hwang is <b>legendary</b>. Lee played the <b>stoic</b> type who never cracks. The elevator scene is iconic because he finally <b>snaps</b>. It showed he's <b>ride or die</b>, even when the situation is <b>sketchy</b>."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
         <p>"The <b>juxtaposition</b> of their acting styles <b>amplified</b> the drama. Lee effectively conveyed the <b>cognitive dissonance</b> of a man living a life of <b>duplicity</b>. His silence spoke louder than words, depicting his inner <b>turmoil</b>."</p>
     </div>
 </div>
 
-<div class="q-box">
-    <span class="question">Q3. Acting Transformation</span>
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: New World</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Loyalty</b>: 의리</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Opposites attract</b>: 반대끼리 끌림</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Identity crisis</b>: 정체성 혼란</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Bromance</b>: 남자들의 우정</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Ride or die</b>: 찐친 (죽어도 같이 감)</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Stoic</b>: 금욕적인, 무표정한</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Juxtaposition</b>: 병치 (대조)</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Duplicity</b>: 이중성</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Cognitive dissonance</b>: 인지 부조화</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Conjunction 'While'</span>
+        <span class="grammar-ex">"Lee was calm <b>while</b> Hwang was energetic." (반면에)</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>9. Global Transformation (Squid Game - 오징어 게임)</h4>
+</div>
+<div class="movie-desc">
+    <p>He abandoned his cool image to portray a desperate, broke gambler. This role made him a global star.</p>
+</div>
+<div class="video-box">
+    <strong>📺 Squid Game</strong>
+    <a href="https://www.youtube.com/watch?v=qMdkMW810qY" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q9. Acting Transformation</span>
     <div class="sub-questions">
         <ul>
-            <li>Were you shocked when you first saw him as 'Seong Gi-hun'? How was it different from his usual image?</li>
-            <li>Which scene in 'Squid Game' showed his acting skills the best? (e.g., The Dalgona game, the final episode?)</li>
-            <li>Do you think he fits better as a "Cool Elite" or a "Pathetic Loser"?</li>
+            <li>Were you shocked when you first saw him as 'Seong Gi-hun'?</li>
+            <li>Which scene in 'Squid Game' showed his acting skills the best?</li>
         </ul>
     </div>
     <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
-        <p>"I was shocked because he <b>abandoned</b> his handsome image. The Dalgona scene was the best; his <b>desperate</b> facial expressions were very <b>convincing</b>. It proved he isn't just a star, but an actor with great range."</p>
-        <strong>[🟣 Slang]</strong>
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"I was shocked because he <b>abandoned</b> his handsome image. The Dalgona scene was the best; his <b>desperate</b> facial expressions were very <b>convincing</b>. It proved he isn't just a star, but an actor with great <b>range</b>."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
         <p>"He had a major <b>glow down</b>, looking totally <b>broke</b>. But his acting had a <b>glow up</b>. Seeing a top star licking a candy was <b>epic</b>. He <b>carried the show</b> by making us pity a loser."</p>
-        <strong>[🔵 Academic]</strong>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
         <p>"This role serves as a <b>testament</b> to his <b>versatility</b>. By <b>shedding</b> his elite persona and <b>embodying destitution</b>, he anchored the narrative. He successfully <b>evoked</b> global empathy for a flawed character."</p>
     </div>
 </div>
 
-<div class="q-box">
-    <span class="question">Q4. Global Challenge (Star Wars)</span>
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: Squid Game</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Desperate</b>: 절박한</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Convincing</b>: 설득력 있는</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Glow down</b>: 역변</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Carry the show</b>: 하드캐리하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Broke</b>: 빈털터리의</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Testament</b>: 증거</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Versatility</b>: 다재다능함</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Destitution</b>: 극빈</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Evoke</b>: (감정을) 불러일으키다</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Method (By + -ing)</span>
+        <span class="grammar-ex">"<b>By shedding</b> his persona..." (~함으로써)</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>10. The Challenge at 50 (The Acolyte - 스타워즈)</h4>
+</div>
+<div class="movie-desc">
+    <p>Debuting in Star Wars as a Jedi Master at age 50. He memorized lines phonetically to overcome the language barrier.</p>
+</div>
+<div class="video-box">
+    <strong>📺 The Acolyte</strong>
+    <a href="https://www.youtube.com/watch?v=4B0aMC-Q-gs" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q10. Global Challenge</span>
     <div class="sub-questions">
         <ul>
-            <li>How was his English acting in 'The Acolyte'? Did it feel natural to you?</li>
-            <li>What does his role as a 'Jedi Master' mean for Asian actors in Hollywood?</li>
-            <li>Do you think he should continue working in Hollywood, or focus on Korean movies?</li>
+            <li>How was his English acting in 'The Acolyte'?</li>
+            <li>What does his role as a 'Jedi Master' mean for Asian actors?</li>
         </ul>
     </div>
     <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
+        <span class="answer-type type-std">🟢 Standard</span>
         <p>"His English was good, showing his <b>dedication</b>. It felt natural because he focused on emotions. It motivates other Asian actors to step out of their <b>comfort zone</b> <b>regardless of</b> language barriers."</p>
-        <strong>[🟣 Slang]</strong>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
         <p>"He is <b>living proof</b> that you can make it globally at any age. He didn't <b>coast</b>; he <b>hustled</b> to memorize every line. It's a huge <b>flex</b> for Korean actors to play a Jedi Master."</p>
-        <strong>[🔵 Academic]</strong>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
         <p>"His <b>endeavor</b> illustrates the power of <b>lifelong learning</b>. Overcoming the <b>linguistic barrier</b> demonstrated his <b>resilience</b>. It challenges the <b>preconceived notion</b> that Asian actors are limited to martial arts roles."</p>
     </div>
 </div>
 
-<div class="q-box">
-    <span class="question">Q5. Directing Style (Hunt)</span>
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: The Acolyte</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Dedication</b>: 헌신</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Comfort zone</b>: 안전지대</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Phonetically</b>: 소리 나는 대로</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Living proof</b>: 산 증인</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hustle</b>: 열정적인 노력</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Flex</b>: 자랑</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Endeavor</b>: 노력</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Resilience</b>: 회복탄력성</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Preconceived notion</b>: 선입견</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Gerund as Subject</span>
+        <span class="grammar-ex">"<b>Overcoming</b> the barrier <b>demonstrated</b> his resilience."</span>
+    </div>
+</div>
+
+<div class="movie-header">
+    <h4>11. The Director's Chair (Hunt - 헌트)</h4>
+</div>
+<div class="movie-desc">
+    <p>Not settling for being a top actor, he wrote and directed his own blockbuster movie.</p>
+</div>
+<div class="video-box">
+    <strong>📺 Hunt</strong>
+    <a href="https://www.youtube.com/watch?v=CSOb8gia_mg" target="_blank">Watch Clip</a>
+</div>
+
+<div class="discussion-box">
+    <span class="question">Q11. Directing Style</span>
     <div class="sub-questions">
         <ul>
-            <li>What did you think about the action scenes in 'Hunt'? Were they different from other spy movies?</li>
-            <li>Why do you think he cast his best friend Jung Woo-sung as his rival?</li>
+            <li>What did you think about the action scenes in 'Hunt'?</li>
             <li>Do you prefer Lee Jung-jae as an Actor or as a Director?</li>
         </ul>
     </div>
     <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
+        <span class="answer-type type-std">🟢 Standard</span>
         <p>"I <b>admire</b> his ambition to direct. The action was fast and intense. Casting his best friend showed he wanted to <b>expand his horizons</b> together. It proves he is not afraid of potential <b>failure</b>."</p>
-        <strong>[🟣 Slang]</strong>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
         <p>"Directing his own movie was a <b>boss move</b>. He didn't just act; he <b>ran the show</b>. The action scenes <b>slayed</b>. He proved he can <b>level up</b> from just being a handsome actor."</p>
-        <strong>[🔵 Academic]</strong>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
         <p>"The film highlights his potential for <b>auteurism</b>. His ability to <b>orchestrate</b> complex action sequences proves his <b>multifaceted</b> talent. He successfully <b>strived for</b> a comprehensive artistic expression."</p>
     </div>
 </div>
 
-
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Grammar: Hunt</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Admire</b>: 존경하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Ambition</b>: 야망</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Expand horizons</b>: 시야를 넓히다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Boss move</b>: 대장 같은 행동</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Run the show</b>: 주도하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Slay</b>: 찢었다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Auteurism</b>: 작가주의</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Orchestrate</b>: 조직하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Multifaceted</b>: 다재다능한</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: To-Infinitive as Adjective</span>
+        <span class="grammar-ex">"His ambition <b>to direct</b>." (연출하려는 야망)</span>
+    </div>
 </div>
 
-<div class="vocab-section">
-<h4>📚 Deep Dive: Full Vocabulary & Grammar</h4>
-
-<div class="vocab-movie-title">1. Deliver Us from Evil (The Villain)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Visual impact</b>: 시각적 충격</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Intense</b>: 강렬한, 치열한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Gaze</b>: (뚫어지게 보는) 응시</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Stand out</b>: 두드러지다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Captivating</b>: 매혹적인 (Fascinating)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Moral compass</b>: 도덕적 나침반 (양심)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Straight-up</b>: 진짜로, 솔직히 (Totally)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Savage</b>: 잔인한 / (슬랭) 개쩌는</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Drip</b>: 패션 센스, 스타일</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Immaculate</b>: 티 하나 없이 완벽한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Swag</b>: 스웨그, 멋, 허세</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Root for</b>: ~를 응원하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Baddie</b>: 악당 / (슬랭) 매력적인 나쁜 사람</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Phenomenon</b>: 현상</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Aestheticization</b>: 미화(폭력 등을 아름답게 만듦)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Antagonist</b>: 적대자, 악역 (Villain의 문어체)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Portray</b>: 묘사하다, 연기하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Visceral</b>: 본능적인, 심장을 때리는</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Sartorial</b>: 의복의 (고급 비평용)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Suspension</b>: 유예 (Suspension of disbelief: 불신 유예)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Solely</b>: 오직, 단지 (Exclusively)</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: Causative Verb (Make)</span>
-    <div class="grammar-desc">Make + 목적어 + 동사원형 (~가 ...하게 만들다)</div>
-    <div class="grammar-example">"His visual impact <b>makes</b> him <b>stand out</b>."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Participle Clause (분사구문)</span>
-    <div class="grammar-desc">문장 끝에 오는 ', -ing'는 앞 문장의 결과나 동시동작을 설명함.</div>
-    <div class="grammar-example">"...judgment, <b>focusing</b> solely on the performance."</div>
-</div>
-
-<div class="vocab-movie-title">2. New World (Bromance)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Opposites attract</b>: 반대끼리 끌린다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Calm</b>: 차분한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Immense</b>: 어마어마한 (Huge)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Suffer from</b>: ~로 고통받다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Identity crisis</b>: 정체성 혼란</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Bromance</b>: 남자 간의 진한 우정</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Legendary</b>: 전설적인 (개쩌는)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Stoic</b>: 금욕적인, 감정 없는 (상남자)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Ride or die</b>: 끝까지 함께하는 찐친</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Crack under pressure</b>: 압박감에 무너지다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Sketchy</b>: 수상쩍은, 위험한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Juxtaposition</b>: 병치 (대조를 위해 나란히 둠)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Amplify</b>: 증폭시키다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Turmoil</b>: 큰 혼란, 동요</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Undercover</b>: 위장 잠입한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Duplicity</b>: 이중성, 표리부동</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Cognitive dissonance</b>: 인지 부조화</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: Second Conditional (가정법 과거)</span>
-    <div class="grammar-desc">현재 사실과 반대되는 상상. Be동사는 무조건 'were' 사용.</div>
-    <div class="grammar-example">"If I <b>were</b> in his shoes, I <b>would</b> crack..."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Relative Clause (계속적 용법)</span>
-    <div class="grammar-desc">', which'는 앞 문장 전체 내용을 받음.</div>
-    <div class="grammar-example">"Lee is calm, <b>which</b> creates a perfect balance."</div>
-</div>
-
-<div class="vocab-movie-title">3. Squid Game (Transformation)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Peak</b>: 정점 (Pinnacle)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Abandon</b>: 버리다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Desperate</b>: 절박한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Convincing</b>: 설득력 있는 (연기 잘함)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Glow down</b>: 외모 하락 (역변)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Glow up</b>: 외모 떡상 (정변)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Carry the show</b>: 하드캐리하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Broke</b>: 빈털터리의 (No money)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Epic</b>: 서사적인, 대박인</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Testament</b>: (확실한) 증거</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Versatility</b>: 다재다능함, 가변성</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Shed</b>: (껍질/가면을) 벗다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Embody</b>: 구현하다 (몸으로 표현하다)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Destitution</b>: 극빈, 결핍 (Poverty 상위호환)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Evoke</b>: (감정을) 불러일으키다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Anchor</b>: 중심을 잡다 (닻을 내리다)</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: Cleft Sentence (강조 구문)</span>
-    <div class="grammar-desc">It... that 구문을 변형하여 주어를 강조함.</div>
-    <div class="grammar-example">"It wasn't just luck; (it was)..."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Method (By + Gerund)</span>
-    <div class="grammar-desc">수단과 방법을 나타내는 가장 격식 있는 표현.</div>
-    <div class="grammar-example">"<b>By shedding</b> his persona, he proved..."</div>
-</div>
-
-<div class="vocab-movie-title">4. The Acolyte (Challenge)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Irrelevant</b>: 무관한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Dedication</b>: 헌신</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Comfort zone</b>: 안전지대 (익숙한 곳)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Regardless of</b>: ~와 상관없이</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Living proof</b>: 산 증인</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Coast</b>: (노력 없이) 설렁설렁 가다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Grind</b>: 뼈를 깎는 노력을 하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Hustle</b>: 열정적인 노력, 으쌰으쌰</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Endeavor</b>: (장기적인) 노력, 시도</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Illustrate</b>: 예증하다, 보여주다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Lifelong learning</b>: 평생 학습</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Linguistic barrier</b>: 언어 장벽</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Resilience</b>: 회복탄력성, 불굴의 의지</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Preconceived notion</b>: 선입견 (Bias)</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: 'When it comes to'</span>
-    <div class="grammar-desc">'to'는 전치사이므로 뒤에 명사나 동명사(-ing)가 와야 함. 동사원형 금지!</div>
-    <div class="grammar-example">"When it comes to <b>challenges</b> (O) / challenge (X)"</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Infinitive as Complement</span>
-    <div class="grammar-desc">Motivate + 목적어 + to 부정사 (~가 ...하도록 동기부여하다)</div>
-    <div class="grammar-example">"It motivates me <b>to step</b> out..."</div>
-</div>
-
-<div class="vocab-movie-title">5. Hunt (Director)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Admire</b>: 존경하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Ambition</b>: 야망</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Expand horizons</b>: 시야/지평을 넓히다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Specialist</b>: 전문가 (한 우물)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Boss move</b>: 대장 같은 대담한 행동</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Run the show</b>: 주도권을 잡다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Level up</b>: (게임처럼) 성장하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Settle for</b>: (현실에) 안주하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Slay</b>: 찢었다 (완벽하게 해내다)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Auteurism</b>: 작가주의 (감독의 예술성)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Orchestrate</b>: (복잡한 것을) 조직하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Multifaceted</b>: 다재다능한, 다면적인</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Strive for</b>: ~을 얻으려 분투하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Comprehensive</b>: 포괄적인</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: To-Infinitive as Adjective</span>
-    <div class="grammar-desc">명사 뒤에서 수식 (~하려는)</div>
-    <div class="grammar-example">"...ambition <b>to expand</b> his horizons."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Rhetorical Question (수사의문문)</span>
-    <div class="grammar-desc">대답을 바라는 게 아니라 주장을 강조하기 위한 질문.</div>
-    <div class="grammar-example">"Why settle for one thing...?" (안주하지 말라는 뜻)</div>
-</div>
-
-</div>
 </div>
