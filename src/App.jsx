@@ -8,19 +8,13 @@ const categoryConfig = {
   english: {
     path: "english",
     label: "ENGLISH MEETING",
-    mobileLabel: "ENG", // 모바일용 짧은 이름
+    mobileLabel: "ENGLISH MEETING", // 모바일용 짧은 이름
     files: ["meetup_001.txt"],
-  },
-  japanese: {
-    path: "japanese",
-    label: "日本語集まり",
-    mobileLabel: "JP",
-    files: ["meetup_jp_001.txt"],
   },
   bookclub: {
     path: "bookclub",
     label: "독서회",
-    mobileLabel: "BOOK",
+    mobileLabel: "BOOK CLUB",
     files: ["book_001.txt"],
   },
 };
