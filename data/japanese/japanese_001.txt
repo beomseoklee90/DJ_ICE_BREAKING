@@ -1,0 +1,87 @@
+2026-01-10
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* 이정재 모임 스타일 그대로 적용 */
+.meetup-content { font-family: 'Roboto', 'Noto Sans JP', sans-serif; color: #2c3e50; line-height: 1.6; max-width: 100%; }
+.meetup-content h2 { font-family: 'Merriweather', serif; color: #1a252f; border-bottom: 3px solid #1a252f; padding-bottom: 15px; margin-top: 0; letter-spacing: -0.5px; }
+
+/* 헤더 스타일 */
+.movie-header { margin-top: 60px; border-left: 6px solid #e74c3c; padding-left: 15px; background: #fff5f5; padding-top: 15px; padding-bottom: 15px; border-radius: 0 8px 8px 0; border-bottom: 1px solid #fadbd8; }
+.movie-header h4 { margin: 0; color: #b71c1c; font-size: 1.4em; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; }
+.movie-desc { margin-top: 10px; font-size: 1em; color: #444; padding: 0 5px; }
+
+/* 토론 섹션 */
+.discussion-box { margin-top: 25px; background: #fff; border: 1px solid #bdc3c7; border-top: 3px solid #2980b9; padding: 25px; border-radius: 6px; }
+.question { font-family: 'Merriweather', serif; font-weight: 800; font-size: 1.15em; color: #2980b9; margin-bottom: 15px; display: block; }
+
+.sub-questions { background: #f0f4f8; padding: 15px; border-radius: 4px; margin-bottom: 20px; font-size: 0.95em; border-left: 4px solid #607d8b; }
+.sub-questions ul { margin: 0; padding-left: 20px; }
+.sub-questions li { margin-bottom: 5px; }
+
+/* 답변 모델 (N3/N2/N1) */
+.model-answer { background-color: #f8f9fa; padding: 20px; border-radius: 6px; font-size: 0.95em; color: #34495e; font-family: 'Merriweather', 'Noto Sans JP', serif; border: 1px solid #e9ecef; }
+.answer-type { font-size: 0.75em; font-weight: 800; text-transform: uppercase; display: inline-block; padding: 4px 8px; border-radius: 4px; margin-bottom: 8px; margin-top: 20px; color: #fff; }
+.type-std { background-color: #27ae60; margin-top: 0; } /* N3 녹색 */
+.type-slang { background-color: #8e44ad; } /* N2 보라색 */
+.type-aca { background-color: #2980b9; } /* N1 파란색 */
+.model-answer p { margin: 5px 0 0 0; line-height: 1.6; }
+.kr-trans { display: block; margin-top: 5px; font-size: 0.85em; color: #7f8c8d; font-style: normal; }
+
+/* 단어장 */
+.vocab-box { margin-top: 25px; background: #fafafa; border: 1px solid #eee; padding: 20px; border-radius: 6px; }
+.vocab-title { font-weight: 800; color: #455a64; border-bottom: 2px solid #cfd8dc; padding-bottom: 8px; margin-bottom: 15px; display: block; font-size: 1.05em; }
+.vocab-grid { display: grid; grid-template-columns: 1fr; gap: 10px; font-size: 0.9em; }
+.vocab-item { background: #fff; padding: 10px 12px; border-radius: 4px; border: 1px solid #e0e0e0; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.vocab-item b { color: #d35400; font-weight: 700; margin-right: 5px; }
+.vocab-tag { display: inline-block; font-size: 0.7em; padding: 2px 6px; border-radius: 3px; color: #fff; margin-right: 6px; vertical-align: text-bottom; text-transform: uppercase; font-weight: bold; }
+.vocab-tag.n3 { background-color: #27ae60; }
+.vocab-tag.n2 { background-color: #8e44ad; }
+.vocab-tag.n1 { background-color: #2980b9; }
+
+@media (min-width: 600px) { .vocab-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<div class="meetup-content">
+    <h2>Topic: Real-life Japanese Conversation (Full Ver.)</h2>
+
+    <div class="movie-header">
+        <h4>1. 趣味・休日 (Hobbies & Weekends)</h4>
+    </div>
+    
+    <div class="discussion-box">
+        <span class="question">Q. Discussion Questions</span>
+        <div class="sub-questions">
+            <ul>
+                <li>あなたの趣味について詳しく教えてください。<br>(취미에 대해 자세히 알려주세요.)</li>
+                <li>いつから始めましたか。なぜ好きになりましたか。<br>(언제부터 시작했나요? 계기는?)</li>
+                <li>最近の具体的なエピソードを一つ話してください。<br>(최근의 구체적인 에피소드는?)</li>
+            </ul>
+        </div>
+        <div class="model-answer">
+            <span class="answer-type type-std">🟢 N3 (Basic)</span>
+            <p>私の趣味は音楽を聴くことです。仕事がない週末や、平日の夜によく聴いています。家でゆっくりする時に好きな曲をかけると、すごくリラックスできるんです...</p>
+            <span class="kr-trans">(제 취미는 음악 감상입니다... 집에서 쉴 때 좋아하는 곡을 틀면 정말 편안해집니다...)</span>
+            
+            <span class="answer-type type-slang">🟣 N2 (Intermediate)</span>
+            <p>私の趣味は音楽鑑賞です。大学生の頃からずっと好きで続けています。昔は流行している曲をなんとなく聴いていましたが、今は自分の今の気分に合わせて聴きたい曲を選ぶようになりました...</p>
+            <span class="kr-trans">(제 취미는 음악 감상입니다... 지금은 기분에 맞춰 곡을 고릅니다...)</span>
+            
+            <span class="answer-type type-aca">🔵 N1 (Advanced)</span>
+            <p>私の趣味は音楽鑑賞ですが、単なる娯楽というよりは、生活のリズムを整えるための習慣に近いかもしれません。以前はただ好きで聴いていましたが...</p>
+            <span class="kr-trans">(제 취미는 음악 감상이지만, 단순한 오락이라기보다 생활 리듬을 정돈하는 습관에 가깝습니다...)</span>
+        </div>
+    </div>
+
+    <div class="vocab-box">
+        <span class="vocab-title">📚 Vocabulary Extraction</span>
+        <div class="vocab-grid">
+            <div class="vocab-item"><span class="vocab-tag n3">N3</span><b>リラックス</b>: 릴랙스, 편안함</div>
+            <div class="vocab-item"><span class="vocab-tag n2">N2</span><b>気分転換</b>: 기분 전환</div>
+            <div class="vocab-item"><span class="vocab-tag n2">N2</span><b>贅沢(ぜいたく)</b>: 사치스러운, 호화로운</div>
+            <div class="vocab-item"><span class="vocab-tag n1">N1</span><b>整(ととの)える</b>: 정돈하다</div>
+            <div class="vocab-item"><span class="vocab-tag n1">N1</span><b>精神安定剤</b>: 정신 안정제 (마음의 안식처)</div>
+        </div>
+    </div>
+
+    </div>
