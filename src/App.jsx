@@ -18,10 +18,10 @@ const categoryConfig = {
     files: ["book_001.txt"],
   },
   japanese: {
-    path: "japanese",
-    label: "일본어",
-    mobileLabel: "JP",
-    files: ["japanese_001.txt"],
+    path: "AI",
+    label: "AI",
+    mobileLabel: "AI",
+    files: ["ai_001.txt"],
   },
 };
 
