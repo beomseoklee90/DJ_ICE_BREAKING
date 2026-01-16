@@ -1,4 +1,4 @@
-2026-02-07(Sat) English Meeting
+1회차
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap');
 
