@@ -226,12 +226,12 @@ AI Coding 1회차
   
   <div class="preview-card">
     <div class="preview-header-text">
-      <span>Week 1</span> 인공지능의 페르소나와 판단 논리
+      <span>1강</span> 오리엔테이션 - 이 강의는 개발 경험이 있는 분을 전제로 하며, 인공지능을 어떻게 '생각의 파트너'로 사용하는지를 다룹니다.
     </div>
 
     <a href="./data/images/lecture1.pdf" target="_blank" title="클릭해서 크게 보기">
       <div class="image-container">
-        <img src="./data/images/image.png" alt="1주차 손글씨 메모 미리보기">
+        <img src="./data/images/image.png" alt="1강 자료">
         <div class="zoom-overlay">🔍 클릭하여 확대</div>
       </div>
     </a>
