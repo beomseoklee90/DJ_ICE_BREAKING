@@ -1,4 +1,4 @@
-2026-02-09
+AI Coding 1회차
 <style>
   /* 스타일은 기존과 통일성을 유지하되, 대조를 위해 색상 강조 */
   .comparison-container {
@@ -229,18 +229,17 @@
       <span>Week 1</span> 인공지능의 페르소나와 판단 논리
     </div>
 
-    <a href="./data/images/image.png" target="_blank" title="클릭해서 크게 보기">
+    <a href="./data/images/lecture1.pdf" target="_blank" title="클릭해서 크게 보기">
       <div class="image-container">
         <img src="./data/images/image.png" alt="1주차 손글씨 메모 미리보기">
         <div class="zoom-overlay">🔍 클릭하여 확대</div>
       </div>
     </a>
-<!--
     <div class="action-buttons">
-      <a href="/files/week1_persona.pdf" class="btn-download" download>
-        📄 강의 메모 PDF 다운로드
+      <a href="./data/AI/index.html" target="_blank" class="btn-download">
+        📄 실습 결과
       </a>
-    </div> -->
+    </div> 
 
     <p class="sub-text">※ 이미지를 클릭하면 고화질로 확대해서 볼 수 있습니다.</p>
   </div>
