@@ -17,7 +17,7 @@ const categoryConfig = {
     mobileLabel: "BOOK",
     files: ["book_001.txt"],
   },
-  japanese: {
+  programming: {
     path: "AI",
     label: "AI",
     mobileLabel: "AI",
@@ -62,7 +62,7 @@ function App() {
           try {
             // ★ 중요: 배포 환경을 위해 BASE_URL 사용
             const response = await fetch(
-              `${import.meta.env.BASE_URL}data/${config.path}/${filename}`
+              `${import.meta.env.BASE_URL}data/${config.path}/${filename}`,
             );
 
             if (!response.ok) throw new Error("File not found");
@@ -82,7 +82,7 @@ function App() {
           } catch (error) {
             return { id: filename, title: "Error", content: "File not found" };
           }
-        })
+        }),
       );
 
       setPosts(loadedPosts);
