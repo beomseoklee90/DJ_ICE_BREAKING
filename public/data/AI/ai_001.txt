@@ -1,132 +1,10 @@
 AI Coding 1회차
 <style>
-  /* 스타일은 기존과 통일성을 유지하되, 대조를 위해 색상 강조 */
-  .comparison-container {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-  }
-
-  .logic-header {
-    background: #f8f9fa;
-    border-left: 6px solid #333;
-    padding: 15px;
-    margin-bottom: 40px;
-  }
-
-  .logic-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .logic-header p {
-    color: #666;
-    margin-top: 5px;
-  }
-
-  .case-study {
-    margin-bottom: 60px;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  }
-
-  .case-title {
-    background: #333;
-    color: #fff;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-
-  .comparison-box {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (min-width: 768px) {
-    .comparison-box {
-      flex-direction: row;
-    }
-  }
-
-  .bad-example, .good-example {
-    flex: 1;
-    padding: 25px;
-  }
-
-  .bad-example {
-    background: #fdfdfd;
-    border-bottom: 1px solid #eee;
-  }
-
-  .good-example {
-    background: #f0f7ff; /* 살짝 푸른빛이 도는 전문가 느낌 배경 */
-  }
-
-  @media (min-width: 768px) {
-    .bad-example {
-      border-bottom: none;
-      border-right: 1px solid #eee;
-    }
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .badge-bad { background: #ffebee; color: #c62828; }
-  .badge-good { background: #e3f2fd; color: #1565c0; }
-
-  .prompt-box {
-    background: rgba(0,0,0,0.03);
-    padding: 10px;
-    border-radius: 6px;
-    font-family: monospace;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    color: #444;
-  }
-
-  .response-box {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #333;
-  }
-
-  .response-box h4 {
-    margin: 15px 0 5px 0;
-    color: #1565c0;
-    font-size: 1rem;
-  }
-
-  .response-box ul {
-    padding-left: 20px;
-    margin: 5px 0;
-  }
-  
-  .response-box li {
-    margin-bottom: 5px;
-  }
-
-  .formula-highlight {
-    color: #d81b60;
-    font-weight: bold;
-  }
-  /* 프리뷰 섹션 전용 스타일 */
+  /* 기본 설정 유지 및 세부 디자인 보정 */
   .preview-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     max-width: 800px;
-    margin: 0 auto 30px auto; /* 아래 비교 섹션과 간격 30px */
+    margin: 0 auto 30px auto;
     background: #fff;
     padding: 20px;
     text-align: center;
@@ -135,29 +13,33 @@ AI Coding 1회차
   .preview-card {
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    padding: 15px;
-    background: #fafafa;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    padding: 25px; /* 여백을 조금 더 주어 쾌적하게 */
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06); /* 그림자 부드럽게 */
     transition: transform 0.2s ease;
   }
 
   .preview-header-text {
-    margin: 0 0 15px 0;
-    font-size: 1.1rem;
-    font-weight: 700;
+    margin: 0 0 20px 0;
+    font-size: 1.05rem; /* 살짝 조정 */
+    line-height: 1.6;
+    font-weight: 500;
     color: #333;
     display: flex;
+    flex-direction: column; /* 긴 텍스트 가독성을 위해 세로 배치 */
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
   }
 
   .preview-header-text span {
-    background: #333;
+    background: #111;
     color: #fff;
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    width: fit-content;
   }
 
   .image-container {
@@ -166,75 +48,82 @@ AI Coding 1회차
     overflow: hidden;
     border-radius: 8px;
     border: 1px solid #eee;
-    background: #fff;
+    background: #f9f9f9;
   }
 
   .image-container img {
     width: 100%;
     height: auto;
     display: block;
-    /* 마우스 올렸을 때 확대 가능함을 암시 */
-    cursor: zoom-in; 
+    cursor: zoom-in;
+    transition: opacity 0.2s;
   }
 
-  /* 이미지 위에 뜨는 '확대하기' 힌트 오버레이 */
+  .image-container:hover img {
+    opacity: 0.95;
+  }
+
   .zoom-overlay {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 5px 10px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.75rem;
-    pointer-events: none; /* 클릭은 이미지로 통과되게 */
-    backdrop-filter: blur(2px);
+    font-size: 0.8rem;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
   }
 
   .action-buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .btn-download {
-    background-color: #333;
-    color: #fff;
+    background-color: #111;
+    color: #fff !important; /* 링크 색상 강제 지정 */
     text-decoration: none;
-    padding: 12px 24px;
+    padding: 14px 28px;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 1rem;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    transition: background 0.2s;
+    gap: 8px;
+    transition: all 0.2s;
   }
 
   .btn-download:hover {
-    background-color: #555;
+    background-color: #444;
+    transform: translateY(-1px);
   }
 
   .sub-text {
     font-size: 0.85rem;
-    color: #888;
-    margin-top: 10px;
+    color: #999;
+    margin-top: 15px;
   }
 </style>
+
 <div class="preview-wrapper">
-  
   <div class="preview-card">
     <div class="preview-header-text">
-      <span>Week 1</span> 인공지능의 페르소나와 판단 논리
+      <span>1강</span> 
+      오리엔테이션 - 이 강의는 개발 경험이 있는 분을 전제로 하며, 인공지능을 어떻게 '생각의 파트너'로 사용하는지를 다룹니다.
+      이 예제는 사전에 구조나 구현 방식을 거의 고민하지 않은 상태에서, 주어진 조건을 그대로 인공지능에게 전달하고 명령을 쌓아가며 구현을 진행한 과정을 보여줍니다.
     </div>
 
     <a href="./data/images/lecture1.pdf" target="_blank" title="클릭해서 크게 보기">
       <div class="image-container">
-        <img src="./data/images/image.png" alt="1주차 손글씨 메모 미리보기">
+        <img src="./data/images/image.png" alt="1강 자료">
         <div class="zoom-overlay">🔍 클릭하여 확대</div>
       </div>
     </a>
+
     <div class="action-buttons">
       <a href="./data/AI/index.html" target="_blank" class="btn-download">
         📄 실습 결과
@@ -243,118 +132,4 @@ AI Coding 1회차
 
     <p class="sub-text">※ 이미지를 클릭하면 고화질로 확대해서 볼 수 있습니다.</p>
   </div>
-
-</div>
-<div class="comparison-container">
-
-  <div class="logic-header">
-    <h2>메모의 핵심: "인공지능은 입력에 따라 달라지는 반사판이다"</h2>
-    <p>단순한 심부름꾼이 아닌, <strong>숙련된 협업 파트너</strong>로 활용하는 방법</p>
-  </div>
-
-  <div class="case-study">
-    <div class="case-title">CASE 01. 관점과 기준을 명확히 한다 (브랜딩 전략)</div>
-    
-    <div class="comparison-box">
-      <div class="bad-example">
-        <span class="badge badge-bad">일반적인 질문 (기본 프롬프트)</span>
-        <div class="prompt-box">
-          "새로 오픈하는 프리미엄 위스키 바 마케팅 아이디어 3개만 추천해줘."
-        </div>
-        <div class="response-box">
-          <strong>[AI의 답변]</strong><br>
-          1. 인스타그램 해시태그 이벤트를 하세요.<br>
-          2. 오픈 기념 쿠폰을 제공해 보세요.<br>
-          3. 체험 리뷰를 유도하는 캠페인을 운영해 보세요.<br>
-          <br>
-          <em>(코멘트: 일반적인 아이디어는 나오지만, 브랜드의 방향성과 톤이 충분히 반영되기 어렵습니다.)</em>
-        </div>
-      </div>
-
-      <div class="good-example">
-        <span class="badge badge-good">구체적 요청 (파트너 프롬프트)</span>
-        <div class="prompt-box">
-          <strong>[전제조건]</strong> 너는 10년 차 하이엔드 브랜드 전략가야.<br>
-          <strong>[나의 의견]</strong> 우리 위스키 바는 단순히 '술'이 아니라 '고독과 성공'이라는 정서를 제공하는 공간이야. SNS 홍보나 할인 이벤트는 브랜드 톤과 맞지 않는다고 생각해.<br>
-          <strong>[질문]</strong> 내 의견을 반영해서, 구매력이 높은 40대 임원급 남성들에게 '프라이빗한 아지트'로 포지셔닝할 수 있는 제한된 노출 기반 마케팅 전략 3가지를 제안해.
-        </div>
-        <div class="response-box">
-          <strong>[AI 컨설턴트의 전략 보고서]</strong>
-          <p>제시해주신 '고독과 성공'이라는 키워드는 하이엔드 포지셔닝에서 중요한 자산입니다. 대중 노출을 최소화해 희소성과 프라이버시를 강화하는 방향을 제안합니다.</p>
-          
-          <h4>1. 멤버십 전용 '히든 도어(Hidden Door)' 운영</h4>
-          <ul>
-            <li><strong>전략:</strong> 간판 노출을 최소화하고, 초대 기반으로 입장·예약이 가능한 구조를 설계.</li>
-            <li><strong>효과:</strong> 고객에게 '선별된 경험'을 제공해 만족도와 충성도를 높이는 데 기여.</li>
-          </ul>
-
-          <h4>2. 법인 컨시어지 제휴 (B2B 접근)</h4>
-          <ul>
-            <li><strong>전략:</strong> 대기업 임원 비서실/컨시어지 채널과 연계해 중요한 미팅·접대 목적의 예약 동선을 구축.</li>
-            <li><strong>차별점:</strong> 대중 채널이 아닌 신뢰 기반 채널을 활용해 브랜드 톤을 유지.</li>
-          </ul>
-
-          <h4>3. '위스키 킵(Keep) & 레터' 서비스</h4>
-          <ul>
-            <li><strong>전략:</strong> 보관 위스키에 날짜와 짧은 메모를 남기는 기능을 제공해, 개인의 경험을 기록으로 축적.</li>
-            <li><strong>효과:</strong> 단순 소비가 아닌 '의미 있는 루틴'으로 연결되도록 설계.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="case-study">
-    <div class="case-title">CASE 02. 타겟 관점에서 설계한다 (고객 심리)</div>
-    
-    <div class="comparison-box">
-      <div class="bad-example">
-        <span class="badge badge-bad">일반적인 질문 (기본 프롬프트)</span>
-        <div class="prompt-box">
-          "20대 대학생한테 비싼 업무용 다이어리 파는 방법 좀 알려줘."
-        </div>
-        <div class="response-box">
-          <strong>[AI의 답변]</strong><br>
-          - 디자인을 예쁘게 만드세요.<br>
-          - 스터디 플래너 기능을 넣으세요.<br>
-          - 학생 부담을 고려해 프로모션을 진행해 보세요.<br>
-          <br>
-          <em>(코멘트: 기능 제안은 가능하지만, 구매 동기와 심리적 맥락까지는 다루기 어렵습니다.)</em>
-        </div>
-      </div>
-
-      <div class="good-example">
-        <span class="badge badge-good">구체적 요청 (파트너 프롬프트)</span>
-        <div class="prompt-box">
-          <strong>[전제조건]</strong> 너는 행동경제학자이자 마케터야.<br>
-          <strong>[타겟 페르소나]</strong> 분석 대상은 '갓생'을 꿈꾸지만 늘 계획만 세우다 흐트러지는 명문대 지망생/대학생이야.<br>
-          <strong>[나의 의견]</strong> 이들은 다이어리라는 '종이'를 사는 것이 아니라, 이를 통해 더 나은 루틴과 정체성을 만들 수 있다는 '미래의 나'에 투자한다고 생각해.<br>
-          <strong>[질문]</strong> 이 심리를 반영해, 고가임에도 납득할 수 있는 카피라이팅 논리를 3단계로 구성해줘.
-        </div>
-        <div class="response-box">
-          <strong>[AI 행동경제학자의 분석]</strong>
-          <p>좋은 통찰입니다. 이 타겟층은 기능 설명보다, “왜 이 선택이 내게 의미가 있는가”에 대한 해석을 필요로 합니다. 아래는 그 관점을 반영한 메시지 구조 예시입니다.</p>
-
-          <h4>1단계: 현재의 막힘을 재해석한다 (문제 인식 정리)</h4>
-          <ul>
-            <li><strong>메시지:</strong> "계획이 자주 흐트러지는 건 의지의 문제가 아니라, 나에게 맞는 환경과 도구가 정교하지 않았기 때문일 수 있습니다."</li>
-            <li><strong>의도:</strong> 실패 경험을 자기비난으로만 귀결시키지 않고, 개선 가능한 지점(환경/도구)으로 재정의.</li>
-          </ul>
-
-          <h4>2단계: 기준 집단을 제시한다 (사회적 참고점)</h4>
-          <ul>
-            <li><strong>메시지:</strong> "꾸준히 성장하는 사람들은 ‘기록 방식’부터 다르게 설계합니다."</li>
-            <li><strong>의도:</strong> 구매를 ‘특별함의 과시’가 아니라, ‘좋은 루틴을 가진 집단의 방식’에 대한 참고로 연결.</li>
-          </ul>
-
-          <h4>3단계: 가치를 단위로 환산한다 (프레이밍)</h4>
-          <ul>
-            <li><strong>메시지:</strong> "하루 기준으로 환산하면 작은 비용으로도, 매일의 집중과 정리 시간을 확보할 수 있습니다."</li>
-            <li><strong>의도:</strong> 가격을 단발성 지출이 아니라, 일상 효율을 높이는 ‘지속적 선택’으로 해석되도록 돕기.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>

@@ -21,7 +21,7 @@ const categoryConfig = {
     path: "AI",
     label: "AI",
     mobileLabel: "AI",
-    files: ["ai_001.txt"],
+    files: [],
   },
 };
 
