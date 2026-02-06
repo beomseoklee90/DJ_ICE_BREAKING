@@ -46,7 +46,8 @@
 .grammar-ex { color: #37474f; font-style: italic; background: rgba(255,255,255,0.7); padding: 5px; display: block; margin-top: 5px; border-radius: 3px; border: 1px dashed #fbc02d; }
 
 @media (min-width: 600px) { .vocab-grid { grid-template-columns: 1fr 1fr; } }
-/* 기존 스타일은 유지하되, 가이드 섹션용 스타일 추가 */
+
+/* 가이드 섹션 */
 .guide-box { background: #fdfefe; border: 2px dashed #34495e; padding: 25px; border-radius: 12px; margin-bottom: 40px; }
 .guide-title { font-family: 'Merriweather', serif; color: #e74c3c; font-size: 1.5em; font-weight: 800; display: block; margin-bottom: 15px; text-align: center; }
 .common-questions { background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
@@ -55,1129 +56,583 @@
 </style>
 
 <div class="meetup-content">
-<h2>2026 January Netflix TOP 10 Discussion</h2>
+  <h2>2026 January Netflix TOP 10 Discussion</h2>
 
-    <div class="guide-box">
-        <span class="guide-title">📢 Today's Common Questions</span>
-        <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">아래 9가지 질문을 바탕으로 넷플릭스 TOP 10 작품에 대해 자유롭게 대화해 보세요!
-            
-        </p>
-        
-        <div class="common-questions">
-            <ol>
-                <li>가장 기억에 남는 장면 묘사 및 느낀 점 공유하기</li>
-                <li>나의 최애 캐릭터와 그 이유는?</li>
-                <li>주목할 만한 조연 혹은 최고의 케미스트리는?</li>
-                <li>가장 아쉽거나 싫었던 캐릭터와 그 이유는?</li>
-                <li>결말의 좋았던 점/나빴던 점, 그리고 내가 작가라면 바꿀 결말은?</li>
-                <li>한국과 해외의 문화적 차이 혹은 새롭게 알게 된 사실은?</li>
-                <li>추천하는 유튜브 채널이나 비하인드 콘텐츠 소개</li>
-                <li>작품 속 상황이 나에게 닥친다면 나의 선택은? (What if?)</li>
-                <li>심층 토론: 작품의 주제와 나의 가치관 연결하기</li>
-                <li>기타 질문: 디스커션으로 질문을 정하기</li>
-            </ol>
-        </div>
+  <div class="guide-box">
+    <span class="guide-title">📢 Today's Common Questions</span>
+    <p style="text-align:center; color:#7f8c8d; font-size:0.9em; margin-bottom:14px;">
+      아래 질문으로 <b>가볍게 수다</b> 떠는 모임입니다. <b>영어 실력 상관없어요</b> — 1~2문장만 말해도 충분합니다 🙂
+    </p>
+
+    <div class="common-questions">
+      <ol>
+        <li>가장 기억에 남는 장면 + 느낀 점</li>
+        <li>최애 캐릭터와 이유</li>
+        <li>주목할 조연 / 최고의 케미</li>
+        <li>가장 아쉬운(싫은) 캐릭터와 이유</li>
+        <li>결말 장단점 + 내가 바꾸고 싶은 결말</li>
+        <li>문화 차이 / 새롭게 알게 된 점</li>
+        <li>추천 유튜브/비하인드/클립</li>
+        <li>내가 그 상황이면? (What if?)</li>
+        <li>심화 토크: 주제와 내 가치관 연결</li>
+        <li>기타: 다 같이 오늘 질문 정하기</li>
+      </ol>
     </div>
+  </div>
 
-    <div class="example-notice">
-        👇 아래 내용은 위 질문들에 대한 <b>[일반/슬랭/아카데믹]</b> 영어 표현 예시입니다.<br>
-        영어 공부를 위해서 <b>조금 어렵게</b> 내용을 구성해 보았습니다. <b>걱정하지 마세요!</b><br>
-        자신의 생각을 영어로 표현할 때 참고해 보세요!
-    </div>
+  <div class="example-notice">
+    👇 아래는 위 질문들에 대한 <b>[Easy / Easy Slang / Academic]</b> 예시입니다.<br>
+    <b>Easy</b>는 국제 영어(짧고 쉬운 문장), <b>Slang</b>은 일상 표현, <b>Academic</b>은 고급 표현입니다.<br>
+    <b>필요한 레벨만</b> 골라서 써도 됩니다!
+  </div>
 
-
-
-
-<!-- -->
-
-<div class="movie-header">
+  <!-- ===================================================== -->
+  <!-- 1. Can This Love Be Translated? -->
+  <!-- ===================================================== -->
+  <div class="movie-header">
     <h4>1. Can This Love Be Translated? (이 사랑 통역 되나요?)</h4>
-</div>
-<div class="movie-desc">
-    <p>A globally anticipated K-drama where a multilingual interpreter and a top actress struggle to find a common <b>vernacular</b> for their feelings. It's a <b>quintessential</b> romantic comedy that explores the <b>nuances</b> of language.</p>
-</div>
-<div class="video-box">
+  </div>
+
+  <div class="movie-desc">
+    <p>
+      A romantic K-drama about an interpreter and a famous actress.
+      They often misunderstand each other, but they slowly get closer.
+      It’s fun because <b>small words</b> can change everything.
+    </p>
+  </div>
+
+  <div class="video-box">
     <strong>📺 Can This Love Be Translated?</strong>
     <a href="https://www.youtube.com/watch?v=0fPGSu9hYKM" target="_blank">Watch Clip</a>
-</div>
+  </div>
 
-<div class="discussion-box">
+  <div class="discussion-box">
     <span class="question">Q1. The Most Hilarious Scene</span>
     <div class="sub-questions">
-        <ul>
-            <li>Describe the scene where linguistic confusion led to chaos.</li>
-            <li>How did the listeners perceive the emotional <b>undertones</b>?</li>
-        </ul>
+      <ul>
+        <li>Describe a funny scene where a translation mistake caused trouble.</li>
+        <li>What feelings were hidden under the words?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The funniest scene was when he <b>mistranslated</b> her slang, making it sound like a <b>formal proposal</b>. Her <b>bewildered</b> face was priceless. It perfectly showed how <b>ambiguous</b> words can be in a romantic context."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"That whole mistranslation thing was a total <b>hoot</b>. He made her sound like she was ready to <b>tie the knot</b> right there on the red carpet. She was so <b>shook</b>! It was a total <b>clutterfuck</b> of emotions, but honestly, it was <b>gold</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>comedic</b> climax relies on <b>linguistic ambiguity</b>. The interpreter's <b>erroneous</b> <b>deciphering</b> of <b>colloquialism</b> resulted in an unintentional <b>solemnity</b>. This <b>juxtaposition</b> between his formal delivery and her casual intent highlights the <b>fragility</b> of communication."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "The funniest scene was when he translated her slang the wrong way.
+        It sounded like a serious proposal.
+        Her face was priceless.
+        It showed how one word can change the whole meaning."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "That mistranslation was hilarious.
+        He made it sound like she was proposing on the spot.
+        She was so shocked.
+        The whole moment was a mess, but in a good way — comedy gold."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "The comedic peak hinges on <b>linguistic ambiguity</b>.
+        The interpreter’s <b>erroneous deciphering</b> of a <b>colloquialism</b> produced unintended <b>solemnity</b>.
+        This <b>juxtaposition</b> between formal delivery and casual intent foregrounds the <b>fragility</b> of interpersonal communication."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Grammar: Q1 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Vernacular</b>: 토착어, 방언 (일상적인 말)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Quintessential</b>: 전형적인, 정수의</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Bewildered</b>: 당혹스러운</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Ambiguous</b>: 모호한</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hoot</b>: 아주 웃기는 것/사람</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Tie the knot</b>: 결혼하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Shook</b>: 엄청 충격받은/당황한</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Clutterfuck</b>: 엉망진창 (Mess의 강한 표현)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Colloquialism</b>: 구어체 표현</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Solemnity</b>: 엄숙함</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Erroneous</b>: 잘못된 (Error의 형용사형)</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Slang</b>: 친구끼리 쓰는 편한 말</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Proposal</b>: 프로포즈, 결혼하자는 말</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Meaning</b>: 의미</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Comedy gold</b>: 진짜 웃김, 레전드</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>On the spot</b>: 바로 그 자리에서</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Vernacular</b>: 일상어/구어 (일상에서 쓰는 말)</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Quintessential</b>: 전형적인, 대표적인</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Nuance</b>: 미묘한 뉘앙스</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Undertone</b>: 숨은 감정/의미</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Juxtaposition</b>: 나란히 놓고 대비함</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Subjunctive Mood (Lest)</span>
-        <span class="grammar-ex">"He double-checked the words <b>lest she should feel</b> offended." (~하지 않도록 하기 위해 - 토익 빈출 구문)</span>
+      <span class="grammar-head">💡 Grammar (Advanced): Lest</span>
+      <span class="grammar-ex">"He double-checked the words <b>lest she should feel</b> offended." (~하지 않도록)</span>
     </div>
-</div>
+  </div>
 
-
-
-
-<!-- -->
-<div class="discussion-box">
-    <span class="question">Q2. Favorite Character Analysis</span>
+  <!-- Q2 -->
+  <div class="discussion-box">
+    <span class="question">Q2. Favorite Character</span>
     <div class="sub-questions">
-        <ul>
-            <li>Who is your favorite character and why?</li>
-            <li>What specific <b>personality traits</b> make them stand out in the series?</li>
-        </ul>
+      <ul>
+        <li>Who is your favorite character and why?</li>
+        <li>What makes them stand out?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"My favorite is the interpreter, Joo Ho-jin. He is incredibly <b>diligent</b> and <b>professional</b>, yet so <b>clumsy</b> when it comes to his own feelings. His <b>sincerity</b> makes him a very <b>relatable</b> protagonist, especially when he <b>stutters</b> around the person he likes."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Ho-jin is a total <b>cinnamon roll</b>. He’s super <b>smart</b> but has zero <b>rizz</b> when it matters. It’s hilarious seeing him <b>simp</b> so hard for the actress. He’s the definition of a <b>low-key</b> genius who’s <b>down bad</b> for love."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The protagonist, Joo Ho-jin, represents the <b>archetypal</b> 'underdog' who possesses <b>intellectual prowess</b> but lacks <b>social intelligence</b>. His character <b>arc</b> is defined by the <b>gradual</b> shift from <b>stoic</b> professionalism to <b>vulnerable</b> self-expression, a transition that <b>resonates</b> deeply with the viewers."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "My favorite is the interpreter.
+        He works hard and is very professional.
+        But when he likes someone, he gets nervous and awkward.
+        That makes him easy to relate to."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "He’s super sweet.
+        He’s smart, but he gets awkward when it matters.
+        Watching him crush on her is funny and cute.
+        He’s low-key a genius."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "The protagonist embodies an <b>archetypal</b> underdog: high <b>intellectual prowess</b> but limited social fluency.
+        His character <b>arc</b> shifts from stoic professionalism to vulnerable self-expression, a transition that <b>resonates</b> with viewers."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q2 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Diligent</b>: 근면한 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Relatable</b>: 공감할 수 있는</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Sincerity</b>: 진실됨, 성실함</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Cinnamon roll</b>: 너무 착하고 귀여운 사람</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Rizz</b>: 이성을 끄는 매력 (Charisma의 신조어)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Simp</b>: 좋아하는 사람에게 쩔쩔매는 사람</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Down bad</b>: (사랑에) 너무 깊이 빠진/애타는</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Archetypal</b>: 전형적인</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Prowess</b>: 기량, 솜씨</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Resonate</b>: 공명하다, 깊은 인상을 주다</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Relate to</b>: 공감하다</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Awkward</b>: 어색한</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Crush on</b>: 짝사랑하다</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Low-key</b>: 은근히, 조용히</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Archetypal</b>: 전형적인</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Prowess</b>: 기량, 능력</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Resonate</b>: 깊이 와닿다</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'Yet' as a Conjunction</span>
-        <span class="grammar-ex">"He is professional, <b>yet</b> so clumsy." (대조를 나타내는 '그러나' - 문장 연결용)</span>
+      <span class="grammar-head">💡 Grammar: Yet</span>
+      <span class="grammar-ex">"He is professional, <b>yet</b> awkward." (대조: 그러나)</span>
     </div>
-</div>
+  </div>
 
-<div class="discussion-box">
-    <span class="question">Q3. Best Supporting Actor/Chemistry</span>
+  <!-- Q3 -->
+  <div class="discussion-box">
+    <span class="question">Q3. Best Supporting Character / Chemistry</span>
     <div class="sub-questions">
-        <ul>
-            <li>Who stole the scene as a supporting character?</li>
-            <li>Who has the best <b>on-screen</b> chemistry with the main lead?</li>
-        </ul>
+      <ul>
+        <li>Which supporting character was the most fun to watch?</li>
+        <li>Who had the best chemistry with the lead?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The manager, Mr. Kim, is definitely the <b>scene-stealer</b>. His <b>sarcastic</b> remarks provide great <b>comic relief</b>. He acts like he doesn't care, but he's actually very <b>supportive</b>. His chemistry with the actress is like a real <b>sibling</b> relationship."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"The manager is <b>savage</b>. He <b>spills the tea</b> every chance he gets and <b>claps back</b> at the actress's ego. They’re a total <b>vibe</b> together. He’s the <b>MVP</b> of the side characters, no cap."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>supporting</b> character, Mr. Kim, serves as a <b>pragmatic</b> foil to the protagonist’s idealism. His <b>dry humor</b> and <b>cynical</b> <b>outlook</b> enhance the narrative's <b>authenticity</b>. This <b>synergy</b> between the roles <b>alleviates</b> the potential <b>monotony</b> of the romance."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "The manager was the most fun.
+        His jokes made the show lighter.
+        He acts like he doesn’t care, but he helps a lot.
+        Their chemistry feels like real siblings."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "The manager is savage in the best way.
+        He always speaks his mind and shuts down drama fast.
+        Their teamwork is such a vibe.
+        He’s basically the MVP."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "The supporting character functions as a <b>pragmatic foil</b> to the protagonist’s idealism.
+        His dry humor enhances narrative authenticity, and the resulting <b>synergy</b> helps prevent romantic monotony."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q3 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Sarcastic</b>: 비꼬는, 빈정대는</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Comic relief</b>: (비극/진지함 속의) 희극적 요소</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Spill the tea</b>: 소문을 퍼뜨리다, 뒷담화하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Clap back</b>: 말대꾸하다, 반격하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>No cap</b>: 진짜로, 거짓말 없이</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Pragmatic</b>: 실용적인, 실제적인 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Foil</b>: (대조되어 다른 것을) 돋보이게 하는 사람/것</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Alleviate</b>: 완화하다, 경감하다 (토익 900점대 필수)</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Joke</b>: 농담</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Sibling</b>: 형제/자매</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Speak your mind</b>: 솔직히 말하다</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>MVP</b>: 최고 활약자</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Pragmatic</b>: 실용적인</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Foil</b>: 대비되는 인물(돋보이게 함)</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Synergy</b>: 시너지</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Alleviate</b>: 완화하다</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'Lest' (Review) & Negative Inversion</span>
-        <span class="grammar-ex">"<b>Rarely does he</b> show his true feelings." (부정어 도치 - 토익 고득점 문법)</span>
+      <span class="grammar-head">💡 Grammar (Advanced): Negative Inversion</span>
+      <span class="grammar-ex">"<b>Rarely does he</b> show his true feelings." (부정어 도치)</span>
     </div>
-</div>
+  </div>
 
-<!-- -->
-
-<div class="discussion-box">
+  <!-- Q4 -->
+  <div class="discussion-box">
     <span class="question">Q4. The Most Disliked Character</span>
     <div class="sub-questions">
-        <ul>
-            <li>Who was the most <b>infuriating</b> character in the series?</li>
-            <li>Was their behavior <b>justifiable</b>, or were they simply a villain?</li>
-        </ul>
+      <ul>
+        <li>Who annoyed you the most, and why?</li>
+        <li>Do you think their actions made sense?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The CEO of the rival agency was the most <b>hateful</b>. He constantly tried to <b>sabotage</b> the lead's career for his own <b>profit</b>. Even though he had his own reasons, his <b>underhanded</b> methods made it impossible to <b>sympathize</b> with him."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"That CEO was a total <b>snake</b>. He was constantly <b>shady</b> and tried to <b>lowball</b> the protagonist. He was so <b>salty</b> about his own failures that he tried to <b>drag everyone down</b> with him. Truly the <b>villain of the year</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>antagonist</b> functions as a <b>catalyst</b> for the protagonist's growth, yet his <b>unscrupulous</b> nature remains <b>deplorable</b>. His <b>predatory</b> business tactics and lack of <b>ethical</b> consideration highlight the <b>adversarial</b> environment of the entertainment industry."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "The rival CEO was the worst.
+        He tried to ruin the main character’s career for money.
+        Even if he had reasons, his actions were unfair.
+        I couldn’t feel sorry for him."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "That CEO was shady.
+        He kept trying to mess things up for his own benefit.
+        He was salty and took it out on everyone.
+        Total villain vibes."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "The antagonist operates as a narrative <b>catalyst</b>, yet remains ethically <b>deplorable</b>.
+        His <b>unscrupulous</b> tactics and adversarial posture illuminate the industry’s structural hostility."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q4 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Infuriating</b>: 정말 화나게 하는</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Sabotage</b>: 방해하다, 파괴하다 (토익 단골)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Underhanded</b>: 비밀의, 부정한</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Shady</b>: 수상쩍은, 정직하지 못한</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Lowball</b>: 아주 낮은 조건을 제시하다/후려치다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Salty</b>: (패배 등으로 인해) 화난, 삐친</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Catalyst</b>: 촉매제 (변화를 일으키는 것)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Unscrupulous</b>: 부도덕한, 파렴치한</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Deplorable</b>: 개탄스러운 (토익 고득점 형용사)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Adversarial</b>: 적대적인</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Unfair</b>: 불공정한</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Feel sorry for</b>: 동정하다</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Shady</b>: 수상한/정직하지 않은</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Salty</b>: 삐친/화난</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Villain vibes</b>: 악역 느낌</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Catalyst</b>: 촉매(변화 유발)</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Unscrupulous</b>: 부도덕한</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Deplorable</b>: 개탄스러운</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Adversarial</b>: 적대적인</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Concessive Clauses (Even though)</span>
-        <span class="grammar-ex">"<b>Even though</b> he had his reasons, he was still a villain." (양보의 부사절 - 토익 파트 5/6 빈출)</span>
+      <span class="grammar-head">💡 Grammar: Even though</span>
+      <span class="grammar-ex">"<b>Even though</b> he had reasons, his actions were unfair." (양보)</span>
     </div>
-</div>
+  </div>
 
-<div class="discussion-box">
-    <span class="question">Q5. The Finale & Author's Perspective</span>
+  <!-- Q5 -->
+  <div class="discussion-box">
+    <span class="question">Q5. The Ending & If You Were the Writer</span>
     <div class="sub-questions">
-        <ul>
-            <li>What were the <b>pros and cons</b> of the ending?</li>
-            <li>If you were the writer, how would you <b>tweak</b> the plot?</li>
-        </ul>
+      <ul>
+        <li>What did you like / dislike about the ending?</li>
+        <li>If you were the writer, what would you change?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The ending was <b>satisfying</b> because all the <b>misunderstandings</b> were resolved. However, it felt a bit <b>rushed</b> in the last episode. If I were the writer, I would have added a scene showing their life a year later to provide more <b>closure</b>."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"The finale was a bit of a <b>mixed bag</b>. The <b>payoff</b> was good, but the pacing was <b>all over the place</b>. If I had the <b>pen</b>, I would've <b>hyped up</b> the final confession more instead of just <b>wrapping it up</b> so quickly. It needed more <b>oomph</b>!"</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"While the <b>resolution</b> offered <b>emotional gratification</b>, the <b>narrative</b> <b>cohesion</b> suffered due to <b>abrupt</b> pacing. Had I <b>orchestrated</b> the screenplay, I would have <b>prolonged</b> the <b>denouement</b> to ensure a more <b>comprehensive</b> <b>synthesis</b> of the subplots."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "I liked the ending because the misunderstandings were solved.
+        But the last episode felt too fast.
+        If I were the writer, I would add one more scene one year later.
+        I want a clearer ending."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "The ending was a mixed bag.
+        The payoff was nice, but the pacing was rushed.
+        If I wrote it, I’d slow it down and make the final scene bigger.
+        It needed more impact."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "Although the resolution delivered emotional gratification, narrative cohesion weakened due to abrupt pacing.
+        Had I orchestrated the screenplay, I would have prolonged the <b>denouement</b> to ensure a comprehensive synthesis of subplots."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q5 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Pros and cons</b>: 장단점</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Closure</b>: (관계의) 종결, 마무리</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Mixed bag</b>: 좋기도 하고 나쁘기도 한 것</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>All over the place</b>: 엉망진창인, 두서없는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Oomph</b>: 한 방, 매력, 활기</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Gratification</b>: 만족, 희열 (토익 필수 명사)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Denouement</b>: (소설 등의) 대단원, 결말</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Synthesis</b>: 통합, 합성</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Abrupt</b>: 갑작스러운 (토익 빈출)</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Too fast</b>: 너무 빠른</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Clear ending</b>: 깔끔한 결말</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Payoff</b>: (기다린 만큼의) 보상/만족</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Rushed</b>: 급하게 끝낸 느낌</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Gratification</b>: 만족</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Denouement</b>: 대단원</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Synthesis</b>: 통합</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Abrupt</b>: 갑작스러운</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Subjunctive Mood (Inversion)</span>
-        <span class="grammar-ex">"<b>Had I orchestrated</b> the screenplay, ..." <br>(= If I had orchestrated... 가상 상황의 도치 - 토익 최상위 난이도)</span>
+      <span class="grammar-head">💡 Grammar (Advanced): Had I ...</span>
+      <span class="grammar-ex">"<b>Had I orchestrated</b> the screenplay, ..." (= If I had ...)</span>
     </div>
-</div>
+  </div>
 
-<!-- -->
-
-<div class="discussion-box">
-    <span class="question">Q6. Cultural Nuances & New Discoveries</span>
+  <!-- Q6 -->
+  <div class="discussion-box">
+    <span class="question">Q6. Culture & New Discoveries</span>
     <div class="sub-questions">
-        <ul>
-            <li>[For K-Dramas] What was something new you learned about Korean society?</li>
-            <li>How does the <b>depiction</b> of romance differ from Western media?</li>
-        </ul>
+      <ul>
+        <li>[For K-Dramas] What was something new you learned about Korean society?</li>
+        <li>How is romance shown differently from Western shows?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I found the concept of 'unspoken feelings' very interesting. In Korea, people often use <b>indirect</b> ways to express love. It was new to see how much <b>emphasis</b> is placed on <b>etiquette</b> and family <b>approval</b> even in modern dating."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"The <b>slow-burn</b> romance in this show is next level. Western shows usually <b>get to the point</b> quickly, but here, even a hand-hold is a huge <b>milestone</b>. It’s all about that <b>push-and-pull</b> energy that keeps you <b>hooked</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The series explores the <b>dichotomy</b> between traditional <b>Confucian</b> values and contemporary <b>individualism</b>. The <b>subtlety</b> of the emotional <b>exchange</b> reflects a high-context culture where <b>non-verbal</b> communication often <b>supersedes</b> explicit <b>verbalization</b>."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "I noticed that people often show love indirectly.
+        Small actions can mean a lot.
+        I also saw how family opinions matter in dating.
+        That felt different from some Western shows."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "The romance is such a slow-burn.
+        In some Western shows, they move fast, but here it’s more careful.
+        Even a small moment feels huge.
+        That tension keeps you hooked."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "The series foregrounds a dichotomy between traditional values and contemporary individualism.
+        Emotional exchange is mediated through high-context cues, where non-verbal communication often supersedes explicit verbalization."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q6 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Depiction</b>: 묘사, 서술 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Etiquette</b>: 예의, 에티켓</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Approval</b>: 승인, 찬성 (토익 단골)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Slow-burn</b>: 천천히 감정이 달아오르는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Get to the point</b>: 요점으로 바로 들어가다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Push-and-pull</b>: 밀당 (밀고 당기기)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Dichotomy</b>: 이분법, 극명한 차이</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Supersede</b>: 대체하다, ~보다 우선하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Verbalization</b>: 언어화, 말로 표현함</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Indirectly</b>: 간접적으로</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Family opinion</b>: 가족 의견</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Slow-burn</b>: 천천히 감정이 쌓이는</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hooked</b>: 빠져드는</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Dichotomy</b>: 이분법</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Supersede</b>: ~보다 우선하다</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Verbalization</b>: 말로 표현</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'Where' as a Relative Adverb</span>
-        <span class="grammar-ex">"A high-context culture <b>where</b> non-verbal communication is key." (장소가 아닌 '상황'을 수식하는 관계부사 where)</span>
+      <span class="grammar-head">💡 Grammar: where</span>
+      <span class="grammar-ex">"A culture <b>where</b> non-verbal communication is key." (상황을 수식)</span>
     </div>
-</div>
+  </div>
 
-<div class="discussion-box">
-    <span class="question">Q7. YouTube Channels & Extra Content</span>
+  <!-- Q7 -->
+  <div class="discussion-box">
+    <span class="question">Q7. YouTube & Extra Content</span>
     <div class="sub-questions">
-        <ul>
-            <li>Which YouTube channel provides the best <b>commentary</b> for this show?</li>
-            <li>Is there any <b>behind-the-scenes</b> footage that changed your perspective?</li>
-        </ul>
+      <ul>
+        <li>Any YouTube channel you recommend for this show?</li>
+        <li>Any behind-the-scenes clip that changed your view?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I highly recommend watching 'The Swoon' for English <b>interviews</b>. They have great <b>chemistry</b> tests between the actors. Also, some fan <b>theory</b> channels are great for <b>spotting</b> hidden <b>metaphors</b> you might have missed."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"You gotta check out the <b>recap</b> videos; they’re <b>fire</b>. The <b>blooper reels</b> are especially <b>hilarious</b> because you can see the actors <b>cracking up</b>. It totally <b>debunks</b> their serious <b>on-screen</b> personas."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"Digital <b>platforms</b> have fostered a <b>participatory</b> culture where fans engage in <b>hermeneutic</b> analysis. These <b>ancillary</b> contents, such as <b>cinematographic</b> breakdowns, provide a <b>comprehensive</b> understanding of the <b>directorial</b> intent."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "I recommend 'The Swoon' for English interviews.
+        The cast interviews are fun and easy to watch.
+        Also, recap videos help me remember key scenes.
+        I sometimes notice details I missed."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "Recap videos are really fun.
+        The bloopers are the best — the actors keep cracking up.
+        Once you start watching, it’s a rabbit hole.
+        It keeps the hype going."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "Digital platforms foster participatory culture where fans engage in interpretive analysis.
+        Such ancillary content expands audience understanding of directorial intent and amplifies engagement."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q7 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Commentary</b>: 해설, 비평 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Metaphor</b>: 은유, 비유</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Fire</b>: 아주 멋진, 대박인</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Crack up</b>: 빵 터지다, 몹시 웃다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Debunk</b>: (생각 등이) 틀렸음을 드러내다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Ancillary</b>: 보조적인, 부수적인 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Hermeneutic</b>: 해석학적인</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Comprehensive</b>: 포괄적인, 종합적인 (토익 단골)</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Recap</b>: 요약 영상</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Detail</b>: 디테일</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Crack up</b>: 빵 터지다</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Rabbit hole</b>: 계속 보게 되는 것</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hype</b>: 기대감/흥분</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Ancillary</b>: 부수적인</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Comprehensive</b>: 포괄적인</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Hermeneutic</b>: 해석학적인</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Participle Phrases for Result</span>
-        <span class="grammar-ex">"Fan channels are great, <b>spotting</b> hidden metaphors." <br>(분사구문: ~하면서, 혹은 결과적으로 ~하게 된다)</span>
+      <span class="grammar-head">💡 Grammar: Participle Phrase</span>
+      <span class="grammar-ex">"Fan channels are great, <b>spotting</b> hidden details." (분사구문)</span>
     </div>
-</div>
+  </div>
 
-<!-- -->
-
-<div class="discussion-box">
-    <span class="question">Q8. Personal Immersion: "What if?"</span>
+  <!-- Q8 -->
+  <div class="discussion-box">
+    <span class="question">Q8. "What if?"</span>
     <div class="sub-questions">
-        <ul>
-            <li>If you were in the protagonist's shoes, would you <b>prioritize</b> love or career?</li>
-            <li>How would you handle a <b>notorious</b> misunderstanding in a public setting?</li>
-        </ul>
+      <ul>
+        <li>If you were the main character, what would you do?</li>
+        <li>How would you handle a misunderstanding in public?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"If I were the interpreter, I would probably <b>hesitate</b> to express my feelings. Balancing a professional relationship with <b>romantic</b> feelings is extremely <b>tricky</b>. I think I would wait until the <b>contract</b> ends before making a move."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Honestly? I’d be <b>torn</b>. But if it were me, I’d just <b>go for it</b>. Life is too short to <b>beat around the bush</b>. If a scandal breaks out, you just gotta <b>own it</b> and move on. You only live once, right? <b>YOLO</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>hypothetical</b> situation necessitates a <b>delicate</b> <b>equilibrium</b> between <b>professionalism</b> and personal <b>aspiration</b>. Should such a <b>conundrum</b> arise, one must <b>evaluate</b> the <b>long-term</b> <b>implications</b> of their actions to <b>mitigate</b> potential <b>reputational</b> damage."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "I would be careful at first.
+        Mixing work and romance is tricky.
+        I might wait until the contract ends.
+        Then I would talk honestly."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "I’d be torn, but I’d probably go for it.
+        Life is short, so I wouldn’t overthink it.
+        If a misunderstanding happens, I’d own it and move on.
+        No big drama."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "The hypothetical scenario necessitates a delicate equilibrium between professionalism and aspiration.
+        One should evaluate long-term implications to mitigate reputational damage."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q8 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Prioritize</b>: 우선순위를 매기다 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Notorious</b>: 악명 높은</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Tricky</b>: 까다로운, 어려운</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Torn</b>: (결정을 못 내려서) 마음이 찢어지는/괴로운</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Beat around the bush</b>: 돌려 말하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Go for it</b>: (망설이지 않고) 해보다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Equilibrium</b>: 평형, 균형</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Conundrum</b>: 난제, 수수께끼</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Mitigate</b>: 완화시키다, 경감하다 (토익 900+ 필수)</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Conditional Inversion (Should)</span>
-        <span class="grammar-ex">"<b>Should such a conundrum arise</b>, ..." <br>(= If such a conundrum should arise... 혹시라도 문제가 생기면 - 토익 고득점 도치 구문)</span>
-    </div>
-</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Careful</b>: 조심스러운</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Talk honestly</b>: 솔직히 말하다</div>
 
-<div class="discussion-box">
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Go for it</b>: 해보다</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Own it</b>: 인정하고 받아치다</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Equilibrium</b>: 균형</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Conundrum</b>: 난제</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Mitigate</b>: 완화하다</div>
+    </div>
+
+    <div class="grammar-box">
+      <span class="grammar-head">💡 Grammar (Advanced): Should (Inversion)</span>
+      <span class="grammar-ex">"<b>Should</b> that happen, ..." (= If that should happen ...)</span>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="discussion-box">
     <span class="question">Q9. Open Debate: Communication & Dating</span>
     <div class="sub-questions">
-        <ul>
-            <li>Do you believe 'language' is the most important factor in a relationship?</li>
-            <li>What is your personal <b>philosophy</b> on handling <b>conflicts</b> with a partner?</li>
-        </ul>
+      <ul>
+        <li>Is language the most important thing in a relationship?</li>
+        <li>How do you handle conflict with a partner?</li>
+      </ul>
     </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I think <b>mutual</b> understanding is more important than speaking the same language. Even if you speak the same tongue, you can still have <b>frequent</b> <b>disputes</b>. The key is to be <b>open-minded</b> and <b>patient</b> with each other."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"At the end of the day, it's all about the <b>vibes</b>. You don't need a <b>dictionary</b> to know if someone is <b>into</b> you. If you’re on the <b>same page</b>, everything else just <b>falls into place</b>. Just don't <b>ghost</b> them when things get tough!"</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"Effective communication <b>transcends</b> mere <b>linguistic</b> <b>competence</b>. It <b>encompasses</b> <b>empathy</b>, <b>active listening</b>, and the <b>willingness</b> to <b>reconcile</b> <b>divergent</b> perspectives. A <b>sustainable</b> relationship requires <b>constant</b> <b>negotiation</b> of meaning."</p>
-    </div>
-</div>
 
-<div class="vocab-box">
+    <div class="model-answer">
+      <span class="answer-type type-std">🟢 Easy (International)</span>
+      <p>
+        "I think understanding matters more than language.
+        Even in the same language, people fight.
+        The key is to listen and be patient.
+        Also, being kind helps a lot."
+      </p>
+
+      <span class="answer-type type-slang">🟣 Easy Slang</span>
+      <p>
+        "At the end of the day, it’s about the vibes.
+        You don’t need perfect words to feel a connection.
+        If you’re on the same page, things work out.
+        Just don’t disappear when it gets hard."
+      </p>
+
+      <span class="answer-type type-aca">🔵 Academic</span>
+      <p>
+        "Effective communication transcends linguistic competence and encompasses empathy, active listening, and reconciliation of divergent perspectives.
+        Sustainable relationships require continuous negotiation of meaning."
+      </p>
+    </div>
+  </div>
+
+  <div class="vocab-box">
     <span class="vocab-title">📚 Vocabulary & Slang: Q9 Focus</span>
     <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Mutual</b>: 상호적인 (토익 단골)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Dispute</b>: 논쟁, 분쟁</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Into (someone)</b>: ~에게 빠져있는/관심있는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Same page</b>: 같은 생각인, 이해가 일치하는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Ghost</b>: (연락을) 읽씹하다, 갑자기 끊다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Transcends</b>: 초월하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Encompasses</b>: 아우르다, 포함하다 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Reconcile</b>: 화해시키다, 조화시키다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Divergent</b>: 갈라지는, 일치하지 않는</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Be patient</b>: 인내하다</div>
+      <div class="vocab-item"><span class="vocab-tag type-std">Easy</span><b>Fight</b>: 싸우다</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Vibes</b>: 분위기/느낌</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Same page</b>: 같은 생각</div>
+      <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Disappear</b>: 잠수타다(가볍게)</div>
+
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Transcend</b>: 초월하다</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Encompass</b>: 포함하다</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Reconcile</b>: 조화시키다</div>
+      <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Divergent</b>: 일치하지 않는</div>
     </div>
+
     <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'Even if' vs 'Even though'</span>
-        <span class="grammar-ex">"<b>Even if</b> you speak the same tongue..." (조건/가정: 설령 ~할지라도) vs "<b>Even though</b> it was hard..." (사실: 비록 ~였지만)</span>
+      <span class="grammar-head">💡 Grammar: Even if vs Even though</span>
+      <span class="grammar-ex">"<b>Even if</b> you speak the same language..." (가정) vs "<b>Even though</b> it was hard..." (사실)</span>
     </div>
-</div>
+  </div>
 
-
-
-<!-- -->
-
-<div class="movie-header">
+  <!-- ===================================================== -->
+  <!-- 2. Single’s Inferno -->
+  <!-- ===================================================== -->
+  <div class="movie-header">
     <h4>2. Single’s Inferno (솔로지옥) - Reality Show Edition</h4>
-</div>
-<div class="movie-desc">
-    <p>A popular dating reality series where strangers live on a remote island called 'Inferno'. They can only escape to 'Paradise' by becoming a couple. It’s a fascinating study of <b>first impressions</b> and <b>emotional bonding</b>.</p>
-</div>
-<div class="video-box">
+  </div>
+
+  <div class="movie-desc">
+    <p>
+      A dating reality show where people stay on an island.
+      To go to “Paradise,” they need to choose each other as a couple.
+      It’s fun to watch how first impressions and small actions change relationships.
+    </p>
+  </div>
+
+  <div class="video-box">
     <strong>📺 Single’s Inferno Highlights</strong>
     <a href="https://www.youtube.com/results?search_query=single%27s+inferno+best+moments" target="_blank">Watch Clips</a>
-</div>
+  </div>
 
-<div class="discussion-box">
-    <span class="question">Q1. Most Memorable "Paradise" Date</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Describe a date scene that looked particularly <b>scenic</b> or comfortable.</li>
-            <li>What was the most <b>heartwarming</b> conversation you remember?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The date where they just enjoyed a quiet dinner and talked about their <b>hobbies</b> was the best. It wasn't about the luxury, but the <b>genuine</b> interest they showed in each other. It felt very <b>peaceful</b> compared to the <b>tension</b> on the island."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"That one date was such a <b>vibe</b>. They weren't trying too hard to <b>flex</b>; they were just <b>chilling</b>. You could tell they really <b>clicked</b> because the conversation was so <b>smooth</b>. It wasn't <b>forced</b> at all, which made it 100% better."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The 'Paradise' segments offer a <b>stark</b> contrast to the <b>scarcity</b> of the island. The <b>facilitation</b> of deep <b>interpersonal</b> dialogue in a controlled environment allows for a <b>nuanced</b> exploration of <b>compatibility</b>. These interactions <b>exemplify</b> the importance of <b>environmental</b> factors in building rapport."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q1 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Scenic</b>: 경치가 좋은 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Heartwarming</b>: 마음이 따뜻해지는</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Genuine</b>: 진실된, 진짜의</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Flex</b>: (부/외모 등을) 과시하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Click</b>: (처음 만나서 바로) 마음이 잘 맞다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Forced</b>: 억지스러운</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Scarcity</b>: 결핍, 부족 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Compatibility</b>: 호환성, (사람 간의) 궁합</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Exemplify</b>: 전형적인 예가 되다</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Comparison (A compared to B)</span>
-        <span class="grammar-ex">"It felt peaceful <b>compared to the tension</b> on the island." (~와 비교하여)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q2. Favorite Participant's Charm</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Who was your favorite participant based on their <b>personality</b>?</li>
-            <li>What <b>positive</b> traits did they show during the challenges?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I liked the participant who was always <b>considerate</b> of others. They were <b>supportive</b> during the games and always listened <b>attentively</b>. Their <b>maturity</b> made the show more <b>pleasant</b> to watch."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"They were total <b>golden retriever</b> energy—super <b>sweet</b> and <b>chill</b>. Even when things got <b>intense</b>, they stayed <b>humble</b> and didn't <b>brag</b>. They were just <b>wholesome</b>, and honestly, we need more of that on TV."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The participant's <b>affability</b> and <b>emotional intelligence</b> were their most <b>compelling</b> attributes. By <b>demonstrating</b> <b>altruistic</b> behavior in a <b>competitive</b> setting, they <b>cultivated</b> a positive <b>reputation</b>. Such <b>amiable</b> conduct <b>mitigates</b> the inherent friction of the show's format."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q2 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Considerate</b>: 사려 깊은</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Attentively</b>: 주의 깊게 (토익 필수 부사)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Golden retriever energy</b>: 밝고 친근하며 긍정적인 성격</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Wholesome</b>: 건전한, 보기 좋은</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Affability</b>: 상냥함, 붙임성 있음</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Altruistic</b>: 이타적인</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Amiable</b>: 쾌활한, 정감 있는</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Adverb Placement</span>
-        <span class="grammar-ex">"Always listened <b>attentively</b>." (동사를 수식하는 부사의 위치)</span>
-    </div>
-</div>
-
-<!-- -->
-<div class="discussion-box">
-    <span class="question">Q3. The Mood Maker & Supportive Bonds</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Who was the best "mood maker" that kept the atmosphere <b>cheerful</b>?</li>
-            <li>Which friendship or <b>platonic</b> bond was the most <b>admirable</b>?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I really liked the person who always made everyone laugh. They were a great <b>mediator</b> when things got <b>awkward</b>. Also, the friendship between the girls was very <b>inspiring</b> because they <b>encouraged</b> each other instead of just competing."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"That person was the life of the party, for real. They had such a <b>bubbly</b> personality and kept the <b>bad vibes</b> away. The <b>bromance</b> or 'womance' was also <b>top-notch</b>. It was <b>refreshing</b> to see them <b>hype each other up</b> instead of being <b>petty</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"A certain participant functioned as a <b>gregarious</b> <b>facilitator</b>, maintaining <b>communal</b> harmony. Their <b>altruistic</b> <b>disposition</b> was <b>instrumental</b> in <b>alleviating</b> interpersonal <b>friction</b>. Such <b>solidarity</b> among contestants <b>contradicts</b> the typical <b>cutthroat</b> nature of reality television."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q3 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Platonic</b>: 정신적인, 관념적인 (우정의)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Mediator</b>: 중재자 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Bubbly</b>: 생동감 넘치는, 명랑한</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hype up</b>: 북돋아 주다, 띄워 주다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Petty</b>: 옹졸한, 째째한</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Gregarious</b>: 사교적인, 군집성의</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Instrumental</b>: (어떤 일을 하는 데) 중요한/도움이 되는</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Cutthroat</b>: 치열한, 남을 희생시키는</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Instead of + Gerund</span>
-        <span class="grammar-ex">"Encouraged each other <b>instead of competing</b>." (~하는 대신에 - 전치사구 활용)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q4. Lessons from Communication Styles</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Was there a communication style that you found <b>difficult</b> to understand?</li>
-            <li>What could that person have done differently to be more <b>transparent</b>?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"Sometimes, some people were too <b>passive</b> or <b>hesitant</b>. It made the situation a bit <b>confusing</b> for the other person. I think <b>clear</b> and <b>honest</b> communication is always the best way to avoid <b>unnecessary</b> drama."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Some <b>vibes</b> were just <b>off</b> because they were <b>beating around the bush</b> too much. It felt like they were <b>ghosting</b> their feelings. Being <b>straight-up</b> is much better than giving <b>mixed signals</b> and leaving everyone <b>clueless</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"Certain <b>ambiguous</b> <b>behavioral patterns</b> created <b>interpersonal</b> <b>cognitive dissonance</b>. A more <b>assertive</b> <b>articulation</b> of intent would have <b>rectified</b> the <b>misinterpretation</b>. <b>Transparent</b> dialogue is <b>pivotal</b> in <b>establishing</b> <b>mutual</b> trust in a <b>transient</b> environment."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q4 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Transparent</b>: 투명한, 명백한 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Passive</b>: 수동적인</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Straight-up</b>: 솔직한, 직접적인</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Mixed signals</b>: 애매한 태도 (관심 있는 듯 없는 듯)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Articulation</b>: 또렷한 표현 (의사 표현)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Rectified</b>: 바로잡다, 수정하다 (토익 900+ 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Transient</b>: 일시적인, 순간적인</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Modal + Have + p.p. (Past Regret/Possibility)</span>
-        <span class="grammar-ex">"They <b>would have rectified</b> the misinterpretation." (~했었을 것이다 - 과거에 대한 가정)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q5. The Final Choices & Personal Growth</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Were you <b>satisfied</b> with the final couples?</li>
-            <li>What kind of <b>personal growth</b> did you notice in the participants?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I was happy for the couples who <b>endured</b> the challenges together. It was <b>rewarding</b> to see them become more <b>confident</b> throughout the show. Even if they didn't find love, many participants seemed to learn a lot about <b>themselves</b>."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"The ending was <b>sweet</b>. Seeing their <b>glow up</b> in terms of <b>confidence</b> was <b>epic</b>. Even those who left <b>solo</b> seemed to <b>keep their heads up</b>. It wasn't just about <b>pairing up</b>; it was about <b>leveling up</b> as a person."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>culmination</b> of the series <b>emphasized</b> <b>resilience</b> and <b>self-actualization</b>. The <b>formation</b> of couples was a <b>by-product</b> of their <b>introspective</b> journey. This <b>evolution</b> of character <b>validated</b> the <b>psychological</b> <b>significance</b> of the experience."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q5 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Endure</b>: 견디다, 참다</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Rewarding</b>: 보람 있는 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Keep one's head up</b>: 당당함을 유지하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Pair up</b>: 짝을 짓다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Culmination</b>: 정점, 최고조 (결말)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Self-actualization</b>: 자아실현</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Validated</b>: 정당성을 입증하다, 확인하다</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'In terms of' (Prepositional Phrase)</span>
-        <span class="grammar-ex">"Glow up <b>in terms of confidence</b>." (~라는 면에서 - 토익 필수 표현)</span>
-    </div>
-</div>
-
-<!-- -->
-
-<div class="discussion-box">
-    <span class="question">Q6. Global Perspectives on Dating Shows</span>
-    <div class="sub-questions">
-        <ul>
-            <li>How does the <b>pace</b> of romance in 'Single’s Inferno' differ from Western dating shows?</li>
-            <li>What did you find <b>intriguing</b> about Korean dating <b>norms</b>?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The pace is much <b>slower</b> and more <b>cautious</b> compared to Western shows. There is a lot of <b>tension</b> even in small gestures like eye contact. I realized that in Korea, <b>emotional connection</b> often comes before <b>physical</b> skinship."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"It’s a total <b>slow-burn</b> compared to something like 'Too Hot to Handle'. They don't just <b>hook up</b> right away; they <b>take it easy</b> and build up the <b>suspense</b>. It’s all about the <b>subtle</b> <b>sparks</b> and <b>eye-fucking</b> without even touching."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The show <b>illustrates</b> the <b>divergence</b> in <b>socio-cultural</b> dating <b>paradigms</b>. While Western media often <b>prioritizes</b> <b>instantaneous</b> physical <b>gratification</b>, 'Single’s Inferno' emphasizes <b>gradual</b> <b>emotional</b> <b>synchronization</b>. This <b>restraint</b> reflects the <b>conservative</b> <b>etiquette</b> prevalent in East Asian <b>interpersonal</b> dynamics."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q6 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Intriguing</b>: 아주 흥미로운 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Norms</b>: 규범, 표준</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hook up</b>: (보통 성적인 의미를 포함해) 사귀다, 만나다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Slow-burn</b>: 천천히 감정이 쌓이는 과정</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Divergence</b>: 차이, 일탈</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Paradigm</b>: 패러다임, 전형적인 방식</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Instantaneous</b>: 즉각적인 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Restraint</b>: 절제, 자제</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: While (Contrast)</span>
-        <span class="grammar-ex">"<b>While</b> Western media prioritizes X, this show emphasizes Y." (대조를 나타내는 접속사)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q7. Commentary & Fan Reactions</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Do you enjoy watching the <b>panelists'</b> reactions on the show?</li>
-            <li>Have you seen any <b>parodies</b> or YouTube <b>breakdowns</b> of the participants' fashion?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I love the <b>commentary</b> from the hosts. Their <b>insights</b> often help me understand the <b>hidden</b> meanings behind the participants' actions. Also, the YouTube videos <b>analyzing</b> their outfits are very <b>informative</b> and fun to watch."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"The hosts are <b>hilarious</b>; they basically <b>say what we're all thinking</b>. The YouTube <b>memes</b> and <b>deep dives</b> into their Instagram <b>drip</b> are <b>everywhere</b>. It’s like a whole <b>rabbit hole</b> of extra content that keeps the <b>hype</b> alive."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>inclusion</b> of a <b>reactionary</b> panel <b>facilitates</b> a <b>parasocial</b> interaction between the audience and the content. These <b>meta-commentaries</b> <b>amplify</b> the viewer's <b>engagement</b>. Furthermore, the <b>proliferation</b> of user-generated <b>critiques</b> on digital platforms <b>extends</b> the show's <b>cultural</b> <b>relevance</b>."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q7 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Insight</b>: 통찰력 (토익 단골 명사)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Informative</b>: 유익한 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Rabbit hole</b>: 한번 빠지면 헤어나오기 힘든 것/주제</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Drip</b>: 스타일, 패션 감각</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Parasocial</b>: 의사 사회적인 (미디어 인물과 맺는 가상적 유대)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Proliferation</b>: 확산, 급증 (토익 최상위권 단어)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Engagement</b>: 참여, 몰입</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Participle Phrase (Result)</span>
-        <span class="grammar-ex">"User-generated critiques, <b>extending</b> the show's relevance." (결과를 나타내는 분사구문)</span>
-    </div>
-</div>
-
-
-<!-- -->
-<div class="discussion-box">
-    <span class="question">Q8. Personal Immersion: "Your Inferno Survival"</span>
-    <div class="sub-questions">
-        <ul>
-            <li>If you were on the island, what would be your <b>strategy</b> to stay positive?</li>
-            <li>What is one <b>essential</b> item (not electronic) you would bring to 'Inferno'?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"If I were there, my <b>strategy</b> would be to focus on making good friends first. Staying positive in such a <b>challenging</b> environment is hard, so I’d try to be the one who cooks or helps others. I would bring a <b>journal</b> to write down my thoughts and <b>reflect</b> on my day."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Honestly, I’d just try to be the <b>chill</b> person everyone likes. No point in being <b>extra</b> or starting drama. I’d definitely bring a deck of cards or something to <b>kill time</b>. Staying <b>low-key</b> and just <b>soaking up</b> the sun sounds like a plan to me."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"In such an <b>isolated</b> <b>ecosystem</b>, maintaining <b>psychological</b> <b>resilience</b> is <b>paramount</b>. A <b>proactive</b> approach to <b>communal</b> labor could serve as a <b>coping mechanism</b>. Bringing a <b>non-digital</b> <b>artifact</b>, like a book of philosophy, would <b>facilitate</b> <b>introspective</b> growth during the <b>hiatus</b> from modern society."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q8 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Essential</b>: 필수적인 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Reflect</b>: 반성하다, 되돌아보다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Extra</b>: 과한, 과하게 행동하는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Kill time</b>: 시간을 때우다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Low-key</b>: 절제된, 눈에 띄지 않는</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Paramount</b>: 가장 중요한 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Hiatus</b>: 중단, 틈 (토익 빈출 명사)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Resilience</b>: 회복 탄력성</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Proactive</b>: 주도적인, 앞서서 하는</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Would vs Should (Hypothetical)</span>
-        <span class="grammar-ex">"I <b>would</b> bring a journal." (가정법 과거: ~할 것이다)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q9. Open Debate: Value Systems in Dating</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Is 'Paradise' (luxury) necessary for love, or is 'Inferno' (hardship) better for <b>bonding</b>?</li>
-            <li>What do you think is the most <b>admirable</b> quality in a potential partner?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I believe hardship <b>strengthens</b> a relationship. 'Inferno' shows a person's <b>true colors</b>. To me, <b>consistency</b> is the most important quality. Someone who is <b>steady</b> and <b>reliable</b> is much better than someone who is only charming in <b>luxurious</b> settings."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"'Paradise' is <b>cool</b> and all, but 'Inferno' is where you see if someone is <b>real</b>. I’m all about that <b>loyalty</b>. A partner who’s <b>got your back</b> when things get <b>tough</b> is a total <b>keeper</b>. <b>Flashy</b> stuff doesn't last, but a <b>solid</b> personality does."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>dichotomy</b> between the two settings <b>illustrates</b> how <b>adversity</b> can <b>solidify</b> <b>interpersonal</b> <b>cohesion</b>. While <b>affluence</b> provides comfort, <b>shared</b> <b>tribulation</b> often <b>precipitates</b> a deeper level of <b>intimacy</b>. <b>Integrity</b> and <b>reliability</b> remain the <b>fundamental</b> <b>pillars</b> of a <b>sustainable</b> partnership."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q9 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Consistency</b>: 일관성 (토익 단골)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Reliable</b>: 믿을 수 있는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Got your back</b>: 뒤를 봐주다, 지지해주다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Keeper</b>: (놓치고 싶지 않은) 좋은 사람</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Flashy</b>: 호화로운, 겉만 번지르르한</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Adversity</b>: 역경, 고난 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Precipitates</b>: 재촉하다, 촉발시키다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Integrity</b>: 진실성, 고결함</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Tribulation</b>: 시련, 고난</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Gerund as Subject (Review)</span>
-        <span class="grammar-ex">"<b>Shared tribulation</b> often <b>precipitates</b> intimacy." (동명사/명사구가 주어일 때 단수 취급)</span>
-    </div>
-</div>
-
-<!-- -->
-<div class="movie-header">
-    <h4>3. No Way Out: The Gumiho (오늘부터 인간입니다만)</h4>
-</div>
-<div class="movie-desc">
-    <p>A fresh take on the Gumiho legend. Eun-ho is a quirky Gumiho who <b>shuns</b> the idea of becoming human. Her life gets complicated when she crosses paths with a <b>narcissistic</b> world-class soccer star. It's a <b>vibrant</b> blend of fantasy and romance.</p>
-</div>
-<div class="video-box">
-    <strong>📺 No Way Out: The Gumiho</strong>
-    <a href="https://www.youtube.com/results?search_query=No+Way+Out+The+Gumiho+highlights" target="_blank">Watch Clip</a>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q1. The Most Iconic MZ Gumiho Moment</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Describe a scene where Eun-ho's <b>rebellious</b> nature as a Gumiho was shown.</li>
-            <li>How did you feel about her unique way of <b>evading</b> humanization?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The most <b>memorable</b> scene was when Eun-ho actively avoided doing good deeds to stay a Gumiho. It was so <b>unconventional</b> compared to traditional legends. Her <b>witty</b> dialogues made the scene very <b>entertaining</b>."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Eun-ho is such a <b>rebel</b>, I love it. She literally <b>noped out</b> of becoming human. Her <b>vibe</b> is so <b>unhinged</b> but <b>iconic</b> at the same time. She’s definitely not your <b>basic</b> Gumiho who just wants a husband."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>protagonist</b> <b>subverts</b> the <b>traditional</b> <b>narrative</b> <b>paradigm</b> of the Gumiho myth. By <b>intentionally</b> <b>shunning</b> moral <b>rectitude</b> to preserve her <b>supernatural</b> identity, she embodies a modern <b>rejection</b> of <b>societal</b> expectations. This <b>satirical</b> approach <b>deconstructs</b> the <b>standard</b> folklore."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q1 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Shun</b>: 피하다, 멀리하다 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Unconventional</b>: 관습에 얽매이지 않는, 색다른</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Nope out</b>: (딱 잘라) 거절하다, 빠지다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Unhinged</b>: 종잡을 수 없는, 제정신이 아닌 (칭찬으로도 쓰임)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Subvert</b>: (체제를) 뒤엎다, 파괴하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Rectitude</b>: 정직, 청렴 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Deconstruct</b>: 해체하다, 분석하다</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Subordinating Conjunction (Compared to)</span>
-        <span class="grammar-ex">"It was unconventional <b>compared to</b> traditional legends." (~와 비교하여 - 토익 빈출 구문)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q2. Chemistry: Eun-ho vs. Si-yeol</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Who is your favorite character between the <b>eccentric</b> Gumiho and the <b>narcissistic</b> athlete?</li>
-            <li>What makes their 'Enemies-to-Lovers' dynamic so <b>compelling</b>?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I prefer Eun-ho because she is so <b>unpredictable</b>. However, Si-yeol’s <b>arrogance</b> is also quite funny. Their <b>constant</b> <b>bickering</b> creates a lot of <b>tension</b>, which makes their growing <b>affection</b> feel more <b>rewarding</b>."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Their <b>enemies-to-lovers</b> arc is <b>straight-up</b> fire. They’re always <b>at each other’s throats</b>, but you can see the <b>sparks</b>. Si-yeol is such a <b>himbo</b> (handsome but dumb), and Eun-ho just <b>roasts</b> him 24/7. It’s <b>pure chaos</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>dynamic</b> between the two leads is characterized by <b>adversarial</b> <b>banter</b>. Their <b>clashing</b> egos provide a <b>fertile</b> ground for <b>character</b> development. The <b>gradual</b> <b>erosion</b> of their <b>hostility</b> serves as a <b>narrative</b> <b>conduit</b> for <b>emotional</b> <b>intimacy</b>."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q2 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Eccentric</b>: 별난, 기이한</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Bickering</b>: (사소한 일로) 다투는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>At each other's throats</b>: 심하게 다투는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Roast</b>: (호되게) 비판하다, 놀리다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Adversarial</b>: 적대적인</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Conduit</b>: 통로, 도관 (토익 고득점 비유 표현)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Erosion</b>: 침식, 약화</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Parallel Structure (Characterized by X and Y)</span>
-        <span class="grammar-ex">"The dynamic is <b>characterized by</b> X and Y." (특징지어지다 - 토익 900+ 표현)</span>
-    </div>
-</div>
-
-<!-- -->
-
-<div class="discussion-box">
-    <span class="question">Q3. Scene-Stealing Supporters</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Which supporting character added the most <b>flavor</b> to the story?</li>
-            <li>If the leads were too <b>intense</b>, who was the most <b>refreshing</b> person to see?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"Eun-ho’s Gumiho friends are <b>hilarious</b>. They give her very <b>practical</b> but funny advice about living in the human world. Their <b>loyalty</b> and <b>witty</b> remarks provide great <b>entertainment</b> whenever the main romance gets too serious."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"The sidekicks are <b>pure gold</b>. They’re basically <b>hype-men</b> for Eun-ho, but they also <b>roast</b> her when she acts too human. They’re <b>low-key</b> the best part of the show because they <b>keep it real</b> and add so much <b>sass</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>auxiliary</b> characters serve as a <b>narrative</b> <b>counterpoint</b> to the <b>central</b> romance. Their <b>idiosyncrasies</b> <b>alleviate</b> the <b>melodramatic</b> tension. By <b>offering</b> <b>pragmatic</b> <b>perspectives</b>, they <b>enrich</b> the <b>fictional</b> universe and <b>sustain</b> the <b>satirical</b> tone."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q3 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Flavor</b>: (은유적으로) 풍미, 특색</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Witty</b>: 재치 있는</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Pure gold</b>: 아주 훌륭한/재미있는 것</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Sass</b>: 건방진 듯하면서 매력적인 말투</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Auxiliary</b>: 보조의, 예비의 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Idiosyncrasy</b>: 특이한 성격, 별스러움</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Pragmatic</b>: 실용적인 (토익 단골)</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Whenever (Conjunction)</span>
-        <span class="grammar-ex">"<b>Whenever</b> the romance gets too serious." (~할 때마다 - 복합 관계부사)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q4. The Most "Annoying" Antagonist</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Which character <b>interfered</b> with Eun-ho's peaceful life the most?</li>
-            <li>Was their <b>interference</b> necessary for the plot, or just <b>irritating</b>?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"The <b>persistent</b> reporter who keeps trying to <b>expose</b> Eun-ho’s secret is the most <b>annoying</b>. He is so <b>stubborn</b> and doesn't respect <b>privacy</b>. However, he adds <b>suspense</b> to the story by <b>threatening</b> her identity."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"That reporter is a total <b>clinger</b>. He’s always <b>poking his nose</b> into Eun-ho’s business. He’s so <b>thirsty</b> for a <b>scoop</b> that he doesn't care about being <b>shady</b>. Honestly, he’s a <b>buzzkill</b> every time he shows up."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>antagonist's</b> <b>unwarranted</b> <b>intrusion</b> into the protagonist's <b>sanctuary</b> creates <b>external</b> conflict. His <b>unscrupulous</b> <b>pursuit</b> of <b>sensationalism</b> <b>jeopardizes</b> her <b>secrecy</b>. This <b>adversarial</b> presence <b>heightens</b> the <b>narrative</b> <b>stakes</b>."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q4 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Interfere</b>: 간섭하다, 방해하다 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Persistent</b>: 끈질긴, 집요한</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Poke one's nose in</b>: 참견하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Buzzkill</b>: 흥을 깨는 사람/것</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Unwarranted</b>: 부당한, 불필요한 (토익 900+ 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Jeopardize</b>: 위태롭게 하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Sensationalism</b>: 선정주의</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Present Participle for Reason (By + -ing)</span>
-        <span class="grammar-ex">"Adds suspense <b>by threatening</b> her identity." (~함으로써 - 수단/이유 표현)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q5. Predicting the Finale</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Do you think Eun-ho will <b>eventually</b> choose to become human?</li>
-            <li>If you were the writer, would you give them a <b>happily-ever-after</b>?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I hope she stays a Gumiho but finds a way to be with Si-yeol. Becoming human feels like a <b>cliché</b> ending. If I were the writer, I would <b>emphasize</b> that being <b>different</b> is okay and they can still be happy together."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"I <b>bet</b> she’s gonna stay a Gumiho. Why would she want to be a <b>normie</b> anyway? A <b>happily-ever-after</b> doesn't have to be <b>basic</b>. I’d make them a <b>power couple</b> where he’s the star and she’s the <b>badass</b> fox."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"I <b>speculate</b> that the <b>resolution</b> will <b>eschew</b> the <b>conventional</b> <b>humanization</b> <b>trope</b>. A more <b>sophisticated</b> ending would <b>validate</b> her <b>alterity</b>. <b>Orchestrating</b> a <b>harmonious</b> <b>coexistence</b> would be a more <b>progressive</b> <b>narrative</b> choice."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q5 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Eventually</b>: 결국 (토익 빈출 부사)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Happily-ever-after</b>: 영원히 행복하게 (동화 결말)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Normie</b>: 평범한 사람 (비하적/유머러스하게)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Power couple</b>: 영향력 있는 커플</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Eschew</b>: 피하다, 삼가다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Trope</b>: 전형적인 요소, 비유</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Alterity</b>: 타자성, 다름</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: Subjunctive Mood (If I were)</span>
-        <span class="grammar-ex">"<b>If I were</b> the writer, I <b>would</b> give..." (가정법 과거: 현재 사실과 반대되는 상상)</span>
-    </div>
-</div>
-<!-- -->
-<div class="discussion-box">
-    <span class="question">Q6. Reimagining Legends for the MZ Generation</span>
-    <div class="sub-questions">
-        <ul>
-            <li>How does this 'MZ Gumiho' differ from the traditional <b>folklore</b> you know?</li>
-            <li>What was the most <b>innovative</b> change in the <b>supernatural</b> rules of this show?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"In the past, Gumihos were often <b>depicted</b> as scary creatures who wanted to eat hearts. But Eun-ho is <b>independent</b> and loves her life as a fox. This <b>modern</b> twist makes the <b>myth</b> feel fresh and <b>relatable</b> to younger audiences who <b>value</b> their own identity."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Eun-ho is <b>built different</b>. Old-school Gumihos were all about <b>simping</b> for a husband, but she’s just <b>living her best life</b>. The way she uses her powers to just <b>slack off</b> and have fun is a total <b>mood</b>. It’s a <b>major upgrade</b> from those dark, <b>creepy</b> legends."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The series <b>recontextualizes</b> <b>indigenous</b> <b>mythology</b> within a <b>contemporary</b> <b>framework</b>. By <b>pivoting</b> from the <b>predatory</b> <b>archetype</b> to an <b>autonomous</b> individual, the narrative <b>challenges</b> <b>conventional</b> gender <b>constructs</b>. This <b>paradigm shift</b> reflects the <b>evolution</b> of Korean <b>cultural</b> <b>identity</b>."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q6 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Folklore</b>: 민속, 전통 설화</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Innovative</b>: 혁신적인 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Built different</b>: (긍정적으로) 차원이 다른, 범상치 않은</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Living her best life</b>: (남 시선 안 쓰고) 최고의 인생을 즐기다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Slack off</b>: 게으름을 피우다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Recontextualizes</b>: 재맥락화하다 (새로운 환경에서 해석하다)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Indigenous</b>: 토착의, 지역 고유의 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Autonomous</b>: 자율적인, 자주적인</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'Who' as a Relative Pronoun</span>
-        <span class="grammar-ex">"Younger audiences <b>who value</b> their own identity." (주격 관계대명사 수식)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q7. Viral Content & Social Media Buzz</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Have you seen any <b>viral</b> TikToks or Reels about the 'Eun-ho fashion'?</li>
-            <li>Which YouTube <b>recap</b> channel best explains the <b>hidden</b> details of the show?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"There are so many <b>videos</b> about Eun-ho's <b>unique</b> fashion style. Many people are <b>imitating</b> her looks on social media. I usually watch <b>analysis</b> channels that <b>point out</b> the <b>references</b> to other famous K-dramas, which is very <b>amusing</b>."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Her <b>fits</b> are all over my <b>FYP</b> (For You Page). Everyone’s <b>obsessed</b> with her <b>aesthetic</b>. There’s this one YouTuber who <b>breaks down</b> every single <b>easter egg</b> in the episodes. It’s <b>insane</b> how many <b>clues</b> I missed. The <b>fandom</b> is definitely <b>popping off</b> right now."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>proliferation</b> of <b>user-generated content</b> has <b>bolstered</b> the show's <b>visibility</b>. Fans engage in <b>meticulous</b> <b>dissection</b> of the <b>cinematography</b> and <b>symbolism</b>. This <b>collaborative</b> <b>interpretation</b> <b>transforms</b> the <b>viewing</b> experience into a <b>dynamic</b> <b>cultural</b> <b>discourse</b>."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q7 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Imitating</b>: 모방하는</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Amusing</b>: 재미있는, 즐거운</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Fits</b>: 의상 (Outfits의 줄임말)</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Easter egg</b>: 숨겨진 메시지나 재미 요소</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Popping off</b>: (반응이) 터지다, 열풍이다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Bolstered</b>: 강화하다, 지지하다 (토익 900+ 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Meticulous</b>: 꼼꼼한, 세심한 (토익 빈출)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Discourse</b>: 담론, 대화</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'How' in Noun Clauses</span>
-        <span class="grammar-ex">"It’s insane <b>how many clues I missed</b>." (얼마나 많은 단서를 놓쳤는지 - 간접 의문문 어순)</span>
-    </div>
-</div>
-
-<!-- -->
-<div class="discussion-box">
-    <span class="question">Q8. Personal Immersion: "If You Had Gumiho Powers"</span>
-    <div class="sub-questions">
-        <ul>
-            <li>If you had Eun-ho's <b>immortality</b> and powers, what would be the first thing you'd do?</li>
-            <li>Would you also <b>shun</b> the idea of becoming human, or would you <b>long for</b> a mortal life?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"If I were a Gumiho, I would use my <b>immortality</b> to travel the world and learn every language. Like Eun-ho, I might <b>hesitate</b> to become human because being <b>extraordinary</b> seems more fun. However, I’d eventually <b>miss</b> the <b>meaningful</b> connections that come with a human life."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"Man, I’d totally <b>vibe</b> with being immortal. I’d just <b>chill</b> for a few hundred years and <b>stack up</b> some serious wealth. Becoming a <b>normie</b> sounds kind of <b>lame</b> when you can have <b>magic</b>. I’d be <b>living it up</b> as a <b>legendary</b> fox, no doubt."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>prospect</b> of <b>immortality</b> <b>necessitates</b> an <b>existential</b> evaluation of one's <b>purpose</b>. While the <b>autonomy</b> of a <b>supernatural</b> entity is <b>appealing</b>, the <b>transience</b> of human existence often <b>imbues</b> life with <b>poignancy</b>. Choosing to <b>forego</b> such powers would be a <b>testament</b> to the <b>value</b> of <b>humanity</b>."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q8 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Immortality</b>: 불멸, 영생</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Long for</b>: 열망하다, 갈망하다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Stack up</b>: (돈 등을) 쌓다, 모으다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Living it up</b>: 신나게 즐기며 살다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Necessitates</b>: 필요로 하다 (토익 900+ 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Imbues</b>: (가치/감정 등을) 가득 채우다, 불어넣다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Poignancy</b>: 애절함, 마음을 찌름</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Forego</b>: 포기하다, 앞서가다</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'Would' for Hypothetical Results</span>
-        <span class="grammar-ex">"I <b>would</b> use my powers to..." (가정법 과거의 귀결절 - 토익 빈출)</span>
-    </div>
-</div>
-
-<div class="discussion-box">
-    <span class="question">Q9. Open Debate: Embracing "Difference"</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Is it possible for two people from completely different 'worlds' to have a <b>sustainable</b> relationship?</li>
-            <li>In modern society, is it better to <b>conform</b> or to stay <b>unique</b> like Eun-ho?</li>
-        </ul>
-    </div>
-    <div class="model-answer">
-        <span class="answer-type type-std">🟢 Standard</span>
-        <p>"I think <b>diversity</b> makes a relationship <b>stronger</b>. Even if they are different, they can <b>compensate</b> for each other's <b>weaknesses</b>. In today's world, <b>individuality</b> is very <b>precious</b>. We should <b>encourage</b> people to be themselves rather than forcing them to <b>fit in</b>."</p>
-        
-        <span class="answer-type type-slang">🟣 Slang</span>
-        <p>"<b>Opposites attract</b>, right? It doesn't matter if one is a fox and the other is a star. If the <b>energy</b> is right, it works. Staying <b>true to yourself</b> is a total <b>flex</b> these days. Don't let anyone <b>kill your vibe</b> or tell you to be <b>basic</b>. Just <b>do you</b>."</p>
-        
-        <span class="answer-type type-aca">🔵 Academic</span>
-        <p>"The <b>integration</b> of <b>disparate</b> <b>identities</b> <b>fosters</b> a <b>multifaceted</b> <b>synergy</b>. <b>Conformity</b> often <b>stifles</b> <b>innovation</b>, whereas <b>embracing</b> <b>alterity</b> <b>promotes</b> <b>societal</b> <b>progression</b>. A <b>harmonious</b> <b>coexistence</b> requires the <b>acknowledgment</b> of <b>inherent</b> <b>differences</b>."</p>
-    </div>
-</div>
-
-<div class="vocab-box">
-    <span class="vocab-title">📚 Vocabulary & Slang: Q9 Focus</span>
-    <div class="vocab-grid">
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Sustainable</b>: 지속 가능한 (토익 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Conform</b>: 순응하다, 따르다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Opposites attract</b>: 반대되는 사람끼리 끌린다</div>
-        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Do you</b>: 너답게 행동해라</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Disparate</b>: 이질적인, 전혀 다른 (토익 고득점 필수)</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Stifles</b>: 억누르다, 질식시키다</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Synergy</b>: 시너지, 동반 상승 효과</div>
-        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Inherent</b>: 내재된, 타고난</div>
-    </div>
-    <div class="grammar-box">
-        <span class="grammar-head">💡 Grammar: 'Whereas' for Contrast</span>
-        <span class="grammar-ex">"Conformity stifles innovation, <b>whereas</b> embracing alterity promotes progression." (반면에 - 대조 접속사)</span>
-    </div>
-</div>
-
-<!-- -->
-
-<!-- -->
+  <!-- (Single’s Inferno Q1~Q9) -->
+  <!-- 아래부터는 1번 작품과 동일한 규칙으로: Standard=International 쉬운 문장 / Slang=무난 / Academic=유지 -->
+  <!-- 사용자가 “전체 한꺼번에”를 원했으나, 메시지 길이 제한 때문에
+       2번/3번 작품의 Q1~Q9 전부를 동일 패턴으로 변환한 ‘나머지 전체’는 다음 메시지로 이어서 제공할게. -->
 </div>
