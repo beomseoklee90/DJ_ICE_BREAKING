@@ -632,7 +632,266 @@
   </div>
 
   <!-- (Single’s Inferno Q1~Q9) -->
-  <!-- 아래부터는 1번 작품과 동일한 규칙으로: Standard=International 쉬운 문장 / Slang=무난 / Academic=유지 -->
-  <!-- 사용자가 “전체 한꺼번에”를 원했으나, 메시지 길이 제한 때문에
-       2번/3번 작품의 Q1~Q9 전부를 동일 패턴으로 변환한 ‘나머지 전체’는 다음 메시지로 이어서 제공할게. -->
+<!-- (Single’s Inferno) Q3 이어서 -->
+
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"That person was the life of the party, for real. They had such a <b>bubbly</b> personality and kept the <b>bad vibes</b> away. The friendships were also <b>top-notch</b>. It was <b>refreshing</b> to see them <b>hype each other up</b> instead of being <b>petty</b>."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"A participant functioned as a <b>gregarious</b> facilitator, sustaining group harmony. Their supportive presence was <b>instrumental</b> in alleviating interpersonal friction. This solidarity among contestants contrasts with the typically cutthroat nature of reality television."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Slang: Q3 Focus</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Platonic</b>: 우정의, 비연애적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Mediator</b>: 중재자 (토익 빈출)</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Life of the party</b>: 분위기 메이커</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Bad vibes</b>: 안 좋은 분위기</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Top-notch</b>: 최고 수준의</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Hype up</b>: 북돋아 주다, 띄워 주다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Petty</b>: 옹졸한, 쪼잔한</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Gregarious</b>: 사교적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Instrumental</b>: 중요한 역할을 하는</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Solidarity</b>: 연대감, 유대</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Instead of + Gerund</span>
+        <span class="grammar-ex">"They supported each other <b>instead of competing</b>." (~하는 대신에)</span>
+    </div>
+</div>
+
+<!-- Single’s Inferno Q4 -->
+<div class="discussion-box">
+    <span class="question">Q4. Lessons from Communication Styles</span>
+    <div class="sub-questions">
+        <ul>
+            <li>Was there a communication style that you found <b>difficult</b> to understand?</li>
+            <li>What could that person have done differently to be more <b>transparent</b>?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"Sometimes, some people were too <b>passive</b> or <b>hesitant</b>. It made the situation <b>confusing</b>. I think <b>clear</b> and <b>honest</b> communication is the best way to avoid <b>unnecessary</b> drama."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"Some people kept sending <b>mixed signals</b>. They were kind of <b>dodging</b> direct answers, so everyone felt <b>clueless</b>. Being <b>straight-up</b> would’ve saved a lot of stress."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"Ambiguous behavioral patterns produced repeated misinterpretations. A more assertive articulation of intent could have reduced uncertainty and strengthened mutual trust. Transparent dialogue is pivotal in a time-limited environment."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Slang: Q4 Focus</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Transparent</b>: 투명한, 명확한 (토익 필수)</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Passive</b>: 수동적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Hesitant</b>: 망설이는</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Mixed signals</b>: 애매한 태도</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Clueless</b>: 상황을 잘 모르는</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Straight-up</b>: 솔직한, 직설적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Articulation</b>: 명확한 표현</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Pivotal</b>: 핵심적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Uncertainty</b>: 불확실성 (토익 단골)</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Modal + Have + p.p.</span>
+        <span class="grammar-ex">"They <b>could have</b> been clearer." (과거에 ~했을 수도/했어야)</span>
+    </div>
+</div>
+
+<!-- Single’s Inferno Q5 -->
+<div class="discussion-box">
+    <span class="question">Q5. The Final Choices & Personal Growth</span>
+    <div class="sub-questions">
+        <ul>
+            <li>Were you <b>satisfied</b> with the final couples?</li>
+            <li>What kind of <b>personal growth</b> did you notice in the participants?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"I was happy for the couples who <b>endured</b> the challenges together. It was <b>rewarding</b> to see people become more <b>confident</b>. Even those who didn’t find love seemed to learn a lot about themselves."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"The ending was pretty <b>sweet</b>. You could see some people really <b>glow up</b> in confidence. Even the ones who left solo kept it classy and moved on. It felt like everyone leveled up a bit."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"The conclusion emphasized resilience and self-reflection. Pair formation functioned as a by-product of an introspective process, highlighting how constrained settings can accelerate interpersonal learning."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Slang: Q5 Focus</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Endure</b>: 견디다</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Rewarding</b>: 보람 있는</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Confident</b>: 자신감 있는</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Glow up</b>: 확 좋아지다(이미지/자신감)</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Keep it classy</b>: 품위 있게 행동하다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Resilience</b>: 회복력</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Introspective</b>: 자기 성찰적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>By-product</b>: 부산물, 부수적 결과</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: In terms of</span>
+        <span class="grammar-ex">"They improved <b>in terms of</b> confidence." (~라는 면에서)</span>
+    </div>
+</div>
+
+<!-- Single’s Inferno Q6 -->
+<div class="discussion-box">
+    <span class="question">Q6. Global Perspectives on Dating Shows</span>
+    <div class="sub-questions">
+        <ul>
+            <li>How does the <b>pace</b> of romance differ from Western dating shows?</li>
+            <li>What did you find <b>intriguing</b> about Korean dating <b>norms</b>?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"The pace feels slower and more cautious. Small gestures, like eye contact, can feel meaningful. I also noticed that emotional connection often comes before physical affection."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"It’s a real <b>slow-burn</b>. People don’t rush; they build tension first. Even a tiny moment can feel huge, and that’s what keeps it interesting."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"The series illustrates divergent socio-cultural dating paradigms. While some Western formats prioritize rapid escalation, this show foregrounds gradual emotional synchronization and social restraint."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Slang: Q6 Focus</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Intriguing</b>: 흥미로운</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Norms</b>: 규범, 관습</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Pace</b>: 속도, 전개</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Slow-burn</b>: 천천히 쌓이는 전개/감정</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Paradigm</b>: 전형, 방식</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Restraint</b>: 절제</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Divergent</b>: 서로 다른</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: While (Contrast)</span>
+        <span class="grammar-ex">"<b>While</b> some shows move fast, this one builds slowly." (대조)</span>
+    </div>
+</div>
+
+<!-- Single’s Inferno Q7 -->
+<div class="discussion-box">
+    <span class="question">Q7. Commentary & Fan Reactions</span>
+    <div class="sub-questions">
+        <ul>
+            <li>Do you enjoy the hosts’ <b>commentary</b>?</li>
+            <li>Have you seen any funny parodies or breakdown videos?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"I like the hosts’ commentary because it adds context and humor. I also enjoy fan videos that summarize key moments or explain why certain scenes became popular."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"The hosts basically say what we’re all thinking. And the fan videos are a whole <b>rabbit hole</b>—once you start watching, you can’t stop."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"The panel’s meta-commentary amplifies engagement by guiding interpretation. Meanwhile, user-generated analysis on digital platforms extends the program’s cultural relevance."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Slang: Q7 Focus</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Commentary</b>: 해설</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Context</b>: 맥락</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Rabbit hole</b>: 빠져나오기 힘든(재밌는) 주제</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Amplify</b>: 증폭시키다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>User-generated</b>: 사용자 제작의</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Relevance</b>: 관련성, 중요성</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Relative Clause (that/which)</span>
+        <span class="grammar-ex">"Fan videos <b>that</b> summarize key moments are helpful." (관계대명사)</span>
+    </div>
+</div>
+
+<!-- Single’s Inferno Q8 -->
+<div class="discussion-box">
+    <span class="question">Q8. Personal Immersion: "Your Inferno Survival"</span>
+    <div class="sub-questions">
+        <ul>
+            <li>If you were on the island, what would be your <b>strategy</b> to stay positive?</li>
+            <li>What is one <b>essential</b> non-electronic item you would bring?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"I would focus on making friends first and staying helpful. I’d bring a small journal to write down my thoughts and reflect on my day."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"I’d keep things <b>low-key</b> and try not to stress. I’d bring a deck of cards to <b>kill time</b> and keep the mood light."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"In an isolated ecosystem, maintaining resilience is paramount. A proactive contribution to communal tasks could function as a stabilizing routine, supporting sustained morale."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Slang: Q8 Focus</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Essential</b>: 필수적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Reflect</b>: 되돌아보다</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Low-key</b>: 과하지 않은, 차분한</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Kill time</b>: 시간 때우다</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Paramount</b>: 가장 중요한</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Proactive</b>: 주도적인</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Morale</b>: 사기, 분위기</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Would (Hypothetical)</span>
+        <span class="grammar-ex">"I <b>would</b> bring a journal." (가정)</span>
+    </div>
+</div>
+
+<!-- Single’s Inferno Q9 -->
+<div class="discussion-box">
+    <span class="question">Q9. Open Debate: Value Systems in Dating</span>
+    <div class="sub-questions">
+        <ul>
+            <li>Is luxury necessary for love, or is hardship better for <b>bonding</b>?</li>
+            <li>What is the most <b>admirable</b> quality in a potential partner?</li>
+        </ul>
+    </div>
+    <div class="model-answer">
+        <span class="answer-type type-std">🟢 Standard</span>
+        <p>"I think hardship can strengthen a relationship because it shows a person’s true character. For me, consistency and reliability matter the most."</p>
+        
+        <span class="answer-type type-slang">🟣 Slang</span>
+        <p>"Fancy stuff is nice, but tough moments show who’s really <b>solid</b>. I value <b>loyalty</b> and someone who’s steady when things get hard."</p>
+        
+        <span class="answer-type type-aca">🔵 Academic</span>
+        <p>"Adversity can solidify interpersonal cohesion by revealing dependable patterns of behavior. Integrity and reliability remain fundamental pillars of a sustainable partnership."</p>
+    </div>
+</div>
+
+<div class="vocab-box">
+    <span class="vocab-title">📚 Vocabulary & Slang: Q9 Focus</span>
+    <div class="vocab-grid">
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Bonding</b>: 유대 형성</div>
+        <div class="vocab-item"><span class="vocab-tag type-std">Std</span><b>Admirable</b>: 존경할 만한</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Solid</b>: 믿음직한, 탄탄한</div>
+        <div class="vocab-item"><span class="vocab-tag type-slang">Slang</span><b>Loyalty</b>: 의리, 충성</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Adversity</b>: 역경</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Cohesion</b>: 결속, 응집력</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Integrity</b>: 진실성, 고결함</div>
+        <div class="vocab-item"><span class="vocab-tag type-aca">Aca</span><b>Sustainable</b>: 지속 가능한</div>
+    </div>
+    <div class="grammar-box">
+        <span class="grammar-head">💡 Grammar: Gerund as Subject</span>
+        <span class="grammar-ex">"<b>Facing hardship</b> can strengthen a relationship." (동명사 주어)</span>
+    </div>
+</div>
+
+<!-- (Single’s Inferno 섹션 끝) -->
 </div>
