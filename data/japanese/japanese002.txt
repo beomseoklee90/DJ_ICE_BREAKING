@@ -47,7 +47,7 @@
 <div class="info-box">
   <p>💡 <b>운영 방식:</b> 이 모임은 ‘문법 설명’보다 <b>말하는 훈련(드릴)</b>에 초점을 둡니다. 설명을 길게 늘리지 않고, 패턴을 잡은 뒤 바로 반복 발화로 몸에 붙이는 방식입니다.</p>
 
-  <p>💡 <b>문장 설계 원칙:</b> 실제로는 더 일본어다운(원어민다운) 표현이 많이 있지만, 그걸 그대로 쓰면 <b>개념/문법 설명량이 급격히 늘어</b> 입문 단계에서는 흐름이 끊깁니다. 그래서 이 교재는 일부 표현을 <b>의도적으로 단순화</b>했고, 초급 범위에서 “바로 말할 수 있는 형태”를 우선 채택했습니다.</p>
+  <!-- <p>💡 <b>문장 설계 원칙:</b> 실제로는 더 일본어다운(원어민다운) 표현이 많이 있지만, 그걸 그대로 쓰면 <b>개념/문법 설명량이 급격히 늘어</b> 입문 단계에서는 흐름이 끊깁니다. 그래서 이 교재는 일부 표현을 <b>의도적으로 단순화</b>했고, 초급 범위에서 “바로 말할 수 있는 형태”를 우선 채택했습니다.</p> -->
 
   <p>💡 <b>학습 전략:</b> 드릴 1·2에서는 です(명사) / 형용사 / ます(동사) 같은 뼈대만 잡고, 그 외 문법 포인트(〜て, 〜たら 등)는 <b>이해보다 사용</b> 중심으로 다룹니다. 회차가 쌓이면 드릴 3 프리토킹 패턴에서 자연스럽게 확장됩니다.</p>
 
@@ -649,12 +649,60 @@
   <p class="section-desc">📌 배운 뼈대(문법 패턴)에 아래 단어들을 쏙쏙 끼워 넣고, 나만의 문장으로 옆 사람과 스파링을 해보세요!</p>
 
   <div class="pattern-box">
-    <div class="pattern-syntax">[주어] は/が + [명사] です / ですか / じゃありません(ではありません) / でしょう</div>
-    
-    <p style="margin:15px 0 5px 0;"><b>💡 문법 포인트:</b><br>일본어 회화의 80%는 이 패턴으로 해결됩니다. <b>은/는(は)</b>은 일반적인 주어, <b>이/가(が)</b>는 '내가! 걔가!'라고 강조할 때 씁니다.<br>
-    부정형은 편하게 말할 땐 <b>じゃないです(쟈 나이데스)</b>, 격식을 차릴 땐 <b>ではありません(데와 아리마셍)</b>을 씁니다. 과거형은 <b>でした(데시타)</b>, 과거 부정은 <b>じゃありませんでした(쟈 아리마셍데시타)</b>입니다.</p>
-    
-    <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius: 4px;">🗣️ 예문: <br>・<ruby>私<rt>わたし</rt></ruby>は <ruby>韓国人<rt>かんこくじん</rt></ruby> です。 (저는 한국인입니다.)<br>・ボムさんが <ruby>犯人<rt>はんにん</rt></ruby> じゃありませんでした。 (보무씨가 범인이 아니었습니다.)</p>
+  <div class="pattern-syntax">
+    [주어] は/が + [명사] 
+    です / ですか / じゃありません / ではありません / でした / じゃありませんでした / ではありませんでした / でしょう
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 명사문 (です 문장 완전 정리)</b><br><br>
+
+    <b>① 현재 긍정</b><br>
+    명사 + です → ~입니다<br>
+    例: 私は学生です。<br><br>
+
+    <b>② 의문</b><br>
+    ですか → ~입니까?<br>
+    例: 学生ですか。<br><br>
+
+    <b>③ 현재 부정 (회화형)</b><br>
+    じゃありません → 교재 + 회화 둘 다 사용<br>
+    例: 学生じゃありません。<br><br>
+
+    <b>④ 현재 부정 (정중형)</b><br>
+    ではありません → 가장 정중 / 시험형<br>
+    例: 学生ではありません。<br><br>
+
+    <b>⑤ 과거 긍정</b><br>
+    でした → ~이었습니다<br>
+    例: 学生でした。<br><br>
+
+    <b>⑥ 과거 부정 (회화형)</b><br>
+    じゃありませんでした<br>
+    例: 学生じゃありませんでした。<br><br>
+
+    <b>⑦ 과거 부정 (정중형)</b><br>
+    ではありませんでした<br>
+    例: 学生ではありませんでした。<br><br>
+
+    <b>⑧ 추측 / 확인</b><br>
+    でしょう → ~일 것입니다 / 그렇겠죠<br>
+    例: 学生でしょう。
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ 예문 모음 (패턴별)<br><br>
+
+    ・<ruby>私<rt>わたし</rt></ruby>は <ruby>韓国人<rt>かんこくじん</rt></ruby> です。<br>
+    ・あなたは <ruby>学生<rt>がくせい</rt></ruby> ですか。<br>
+    ・ボムさんは <ruby>先生<rt>せんせい</rt></ruby> じゃありません。<br>
+    ・ボムさんは <ruby>先生<rt>せんせい</rt></ruby> ではありません。<br>
+    ・<ruby>昨日<rt>きのう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>み でした。<br>
+    ・<ruby>犯人<rt>はんにん</rt></ruby> は ボムさん じゃありませんでした。<br>
+    ・<ruby>犯人<rt>はんにん</rt></ruby> は ボムさん ではありませんでした。<br>
+    ・あの<ruby>人<rt>ひと</rt></ruby>は <ruby>日本人<rt>にほんじん</rt></ruby> でしょう。
+  </p>
+
     
     <span class="vocab-label" style="display:inline-block; margin-top:20px; background:#e0e7ff; color:#1e40af; font-size:14px; padding:4px 10px;">넣어볼 단어 (주어 / 명사)</span>
     <div class="word-grid">
@@ -691,14 +739,69 @@
     </div>
   </div>
 
-  <div class="pattern-box">
-    <div class="pattern-syntax">[주어] は + い/な형용사 + です<br>い/な형용사 + [명사]</div>
-    
-    <p style="margin:15px 0 5px 0;"><b>💡 문법 포인트:</b><br>상태를 설명하거나 꾸밀 때 씁니다. <br><b>い형용사</b>는 끝에 い가 붙어있어 그대로 쓰거나 명사를 바로 꾸밉니다 (例: 高いですね / 高い本).<br><b>な형용사</b>는 명사를 꾸밀 때 뒤에 'だ' 대신 'な'를 붙여야 합니다 (例: 有名な人). 어미를 헷갈리지 마세요!</p>
-    
-    <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius: 4px;">🗣️ 예문: <br>・この カフェは <ruby>静<rt>しず</rt></ruby>か です。 (이 카페는 조용합니다.)<br>・<ruby>面白<rt>おもしろ</rt></ruby>い <ruby>映画<rt>えいが</rt></ruby> ですね。 (재미있는 영화네요.)</p>
-    
-    <span class="vocab-label" style="display:inline-block; margin-top:20px; background:#e0e7ff; color:#1e40af; font-size:14px; padding:4px 10px;">넣어볼 단어 (형용사 30개)</span>
+<div class="pattern-box">
+
+  <div class="pattern-syntax">
+    い형용사 / な형용사 활용 전체 정리
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 い형용사 활용</b><br><br>
+
+    ✔ 현재 긍정 → 美味しい(맛있다,<span>(おいしい / 오이시이[い형용사])</span>)<br>
+    ✔ 현재 부정 → 美味しくない<br>
+    ✔ 현재 정중 → 美味しいです<br>
+    ✔ 현재 부정 정중 → 美味しくないです / 美味しくありません<br><br>
+
+    ✔ 과거 긍정 → 美味しかった<br>
+    ✔ 과거 정중 → 美味しかったです<br>
+    ✔ 과거 부정 → 美味しくなかった<br>
+    ✔ 과거 부정 정중 → 美味しくなかったです / 美味しくありませんでした<br><br>
+
+    ✔ 연결 → 美味しくて<br>
+    ✔ 가정 → 美味しければ
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ い형용사 예문<br><br>
+
+    ・このケーキは <ruby>美味<rt>おい</rt></ruby>しいです。<br>
+    ・このケーキは 美味しくないです。<br>
+    ・昨日は 美味しかったです。<br>
+    ・昨日は 美味しくなかったです。<br>
+    ・美味しくて たくさん食べました。<br>
+    ・安ければ 買います。
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 な형용사 활용</b><br><br>
+
+    ✔ 현재 긍정 → 静か(조용하다<span>(しずかだ / 시즈카다 [な형용사])</span>)だ / 静かです<br>
+    ✔ 현재 부정 → 静かじゃない / 静かではない<br>
+    ✔ 현재 부정 정중 → 静かじゃありません / 静かではありません<br><br>
+
+    ✔ 과거 긍정 → 静かだった / 静かでした<br>
+    ✔ 과거 부정 → 静かじゃなかった / 静かではなかった<br>
+    ✔ 과거 부정 정중 → 静かじゃありませんでした / 静かではありませんでした<br><br>
+
+    ✔ 명사 수식 → 静かな 部屋<br>
+    ✔ 연결 → 静かで<br>
+    ✔ 가정 → 静かなら
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ な형용사 예문<br><br>
+
+    ・このカフェは <ruby>静<rt>しず</rt></ruby>かです。<br>
+    ・このカフェは 静かじゃありません。<br>
+    ・昨日は 静かでした。<br>
+    ・昨日は 静かではありませんでした。<br>
+    ・静かな 部屋が 好きです。<br>
+    ・静かなら 勉強できます。
+  </p>
+
     <div class="word-grid">
       <div class="word-item">美味しい (맛있다)<span>おいしい / 오이시이 [い]</span></div>
       <div class="word-item">高い (비싸다/높다)<span>たかい / 타카이 [い]</span></div>
@@ -733,25 +836,110 @@
     </div>
   </div>
 
-  <div class="pattern-box" style="margin-bottom:0;">
-    <div class="pattern-syntax">[주어] は [명사] を + [동사 ます기본형]<br><span style="font-size:14px; color:#ef4444;">※예외: [명사] が + います/あります</span></div>
-    
-    <p style="margin:15px 0 5px 0;"><b>💡 문법 포인트:</b><br>무엇을 하는지 행동을 말할 때 씁니다. 목적어 뒤에는 <b>を(오: ~을/를)</b> 조사를 붙이고 동사 정중형 <b>〜ます(마스: ~합니다)</b>를 씁니다.<br>
-    <span style="color:#ef4444; font-weight:bold;">🚨 주의!</span> '있다'라는 뜻의 <b>います(사람/동물)</b>, <b>あります(사물)</b> 앞에는 '을/를(を)'이 아니라 무조건 <b>이/가(が)</b>가 옵니다. (예: 友達が います / 時間が あります)</p>
-    
-    <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius: 4px;">🗣️ 예문: <br>・<ruby>週末<rt>しゅうまつ</rt></ruby>は <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ます。 (주말에는 영화를 봅니다.)<br>・<ruby>韓国人<rt>かんこくじん</rt></ruby>の <ruby>友達<rt>ともだち</rt></ruby>が います。 (한국인 친구가 있습니다.)</p>
-    
-    <span class="vocab-label" style="display:inline-block; margin-top:20px; background:#e0e7ff; color:#1e40af; font-size:14px; padding:4px 10px;">넣어볼 단어 (동사와 어울리는 목적어 30개)</span>
+  <div class="pattern-box">
+
+  <div class="pattern-syntax">
+    동사 ます형 완전 정리 (1류 / 2류 / 3류 + 구분법)
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 ます형이란?</b><br><br>
+    정중하게 행동을 말할 때 쓰는 기본 형태입니다.<br>
+    일본어 회화와 자기소개 대부분이 ます형으로 시작합니다.
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>📌 동사 구분법</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>① 2류 동사</b><br>
+    「〜<ruby>える<rt>eru</rt></ruby> / 〜<ruby>いる<rt>iru</rt></ruby>」로 끝나는 경우가 많으며<br>
+    <b>る를 제거하고 ます</b>를 붙입니다.<br><br>
+
+    例:<br>
+    <ruby>食<rt>た</rt></ruby>べる / <ruby>見<rt>み</rt></ruby>る / <ruby>起<rt>お</rt></ruby>きる
+  </p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>② 1류 동사</b><br>
+    위 규칙이 아닌 대부분 동사<br>
+    마지막 글자를 <b>い단</b>으로 바꾸고 ます
+  </p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>③ 3류 동사</b><br>
+    <ruby>来<rt>く</rt></ruby>る / する (두 개만 존재)
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>① 1류 동사 변형</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>きます<br>
+    <ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>みます<br>
+    <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby>みます<br>
+    <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby>します<br>
+    <ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>います<br>
+    <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>きます
+  </p>
+
+  <p>
+    부정 → 〜ません<br>
+    과거 → 〜ました<br>
+    과거부정 → 〜ませんでした
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>② 2류 동사 변형</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べます<br>
+    <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby>ます<br>
+    <ruby>起<rt>お</rt></ruby>きる → <ruby>起<rt>お</rt></ruby>きます<br>
+    <ruby>寝<rt>ね</rt></ruby>る → <ruby>寝<rt>ね</rt></ruby>ます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>③ 3류 동사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    する → します<br>
+    <ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>き</rt></ruby>ます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>💡 목적어 조사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ます<br>
+    ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます<br>
+    <ruby>音楽<rt>おんがく</rt></ruby>を <ruby>聞<rt>き</rt></ruby>きます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>🚨 존재 동사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #ef4444;">
+    <ruby>友達<rt>ともだち</rt></ruby>が います<br>
+    <ruby>時間<rt>じかん</rt></ruby>が あります
+  </p>
+
     <div class="word-grid">
       <div class="word-item">見る (보다)<span>みます / 미마스</span></div>
       <div class="word-item">映画 (영화)<span>えいが / 에이가</span></div>
       <div class="word-item">テレビ (TV)<span>テレビ / 테레비</span></div>
       <div class="word-item">食べる (먹다)<span>たべます / 타베마스</span></div>
-      <div class="word-item">ご飯 (밥)<span>ごはん / 고항</span></div>
+      <div class="word-item">ご飯 (meal)<span>ごはん / 고항</span></div>
       <div class="word-item">パン (빵)<span>パン / 판</span></div>
       <div class="word-item">飲む (마시다)<span>のみます / 노미마스</span></div>
       <div class="word-item">水 (물)<span>みず / 미즈</span></div>
-      <div class="word-item">コーヒー (커피)<span>コーヒー / 코-히-</span></div>
+      <div class="word-item">コーヒー (coffee)<span>コーヒー / 코-히-</span></div>
       <div class="word-item">買う (사다)<span>かいます / 카이마스</span></div>
       <div class="word-item">鞄 (가방)<span>かばん / 카반</span></div>
       <div class="word-item">靴 (구두)<span>くつ / 쿠츠</span></div>
@@ -772,7 +960,7 @@
       <div class="word-item">犬 (개)<span>いぬ / 이누</span></div>
       <div class="word-item">あります (있습니다)<span>사물/식물이</span></div>
       <div class="word-item">時間 (시간)<span>じかん / 지칸</span></div>
-      <div class="word-item">お金 (돈)<span>おかね / 오카네</span></div>
+      <div class="word-item">お金 (money)<span>おかね / 오카네</span></div>
     </div>
   </div>
 
