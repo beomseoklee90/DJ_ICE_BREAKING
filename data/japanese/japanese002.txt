@@ -294,7 +294,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> で(~에서), たくさん(많이), できました(생겼습니다), よかったら(괜찮으시다면)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜たら:</b> '~한다면'이라는 가정법입니다. 'よかったら(요캇타라: 괜찮으시다면)'는 무언가를 부드럽게 권유할 때 쓰는 무적의 패턴입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜たら:</b> '~한다면'이라는 가정법입니다. 'よかったら(요캇타라: 괜찮으시다면)'는 무언가를 부드럽게 권유할 때 쓰는 패턴입니다.</div>
     </div>
   </div>
 
@@ -306,7 +306,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 交換(교환)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ませんか:</b> 동사의 부정형(ません)에 의문사(か)를 붙이면 "~하지 않을래요?"라는 최고급 제안/권유 표현이 됩니다. </div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ませんか:</b> 동사의 부정형(ません)에 의문사(か)를 붙이면 "~하지 않을래요?"라는 제안/권유 표현이 됩니다. </div>
     </div>
   </div>
 
@@ -379,7 +379,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> お二人(두 분), 仲がいい(사이가 좋다)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> '仲がいい(나카가 이이)'는 사람 관계를 칭찬할 때 쓰는 만능 관용구입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> '仲がいい(나카가 이이)'는 사람 관계를 칭찬할 때 쓰는 관용구입니다.</div>
     </div>
   </div>
 
@@ -568,7 +568,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> いい(좋다/괜찮다)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>へえ〜:</b> 일본인들이 놀라거나 맞장구 칠 때 내는 1순위 리액션입니다. 감정을 실어보세요!</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>へえ〜:</b> 일본인들이 놀라거나 맞장구 칠 때 내는 리액션입니다. 감정을 실어보세요!</div>
     </div>
   </div>
 
