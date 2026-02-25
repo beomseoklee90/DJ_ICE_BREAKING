@@ -103,7 +103,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 初めまして(처음 뵙겠습니다), 〜と申します(~라고 합니다)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜と申します:</b> '〜です(~입니다)'보다 자신을 낮추어 소개하는 아주 정중한 비즈니스/성인용 표현입니다. "이름+토 모우시마스"로 통째로 외워두세요.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜と申します:</b> '〜です(~입니다)'보다 자신을 낮추어 소개하는 정중한 표현입니다. "이름+토 모우시마스"로 통째로 외워두세요.</div>
     </div>
   </div>
 
@@ -258,7 +258,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 同じ(같음/동일함), 韓国人(한국인)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> "私も同じです(저도 똑같아요)"는 상대방 말에 동의할 때 쓰는 만능 리액션입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> "私も同じです(저도 똑같아요)"는 상대방 말에 동의할 때 쓰는 리액션입니다.</div>
     </div>
   </div>
 
