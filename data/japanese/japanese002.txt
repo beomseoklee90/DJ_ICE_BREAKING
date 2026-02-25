@@ -138,7 +138,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 日韓交流会(한일 교류회), 初めて(처음)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> 한국어의 '최초'라는 뉘앙스는 일본어 회화에서 무조건 '初めて(하지메테)'로 번역됩니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 한국어의 '최초'라는 뉘앙스는 일본어 회화에서 주로 '初めて(하지메테)'로 표현됩니다.</div>
     </div>
   </div>
 
@@ -174,7 +174,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> まだまだ(아직아직), 現在(현재), 趣味(취미), 何(무엇)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>まだまだです:</b> 칭찬을 받았을 때 "아직 멀었습니다"라고 겸손하게 되받아치는 일본인들의 1순위 리액션입니다. 통으로 외우세요.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>まだまだです:</b> 칭찬을 받았을 때 "아직 멀었습니다"라고 겸손하게 되받아치는 리액션입니다. </div>
     </div>
   </div>
 
@@ -186,7 +186,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 好き(좋아함), どんな(어떤), 歌(노래)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>が 好きです:</b> 한국어로는 '〜을/를 좋아하다'지만, 일본어에선 목적격 조사가 아닌 주격 조사 'が(가)'를 씁니다. 무조건 외워야 하는 문법입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>が 好きです:</b> 한국어로는 '〜을/를 좋아하다'지만, 일본어에선 목적격 조사가 아닌 주격 조사 'が(가)'를 씁니다.</div>
     </div>
   </div>
 
@@ -270,7 +270,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> います(있습니다)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜が います:</b> 사람이나 동물이 '있다'고 할 때는 무조건 'が います(가 이마스)'를 씁니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜が います:</b> 사람이나 동물이 '있다'고 할 때는 'が います(가 이마스)'를 씁니다.</div>
     </div>
   </div>
 
@@ -463,7 +463,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 是非(꼭/부디)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>是非(제히):</b> 누군가 제안을 했을 때 "무조건 갈게!"라는 강한 긍정의 리액션입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>是非(제히):</b> 누군가 제안을 했을 때 강한 긍정의 리액션입니다.</div>
     </div>
   </div>
 
@@ -627,7 +627,7 @@
       <p class="ko-text">인스타 교환 할래요?</p>
     </div>
     <div class="detail-area">
-      <div class="grammar-row"><span class="grammar-label">문법</span> 친해진 후 연락처를 물어볼 때 무조건 써야 하는 필수 패턴!</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 친해진 후 연락처를 물어볼 때 써야 하는 패턴!</div>
     </div>
   </div>
 
