@@ -306,7 +306,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 交換(교환)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ませんか:</b> 동사의 부정형(ません)에 의문사(か)를 붙이면 "~하지 않을래요?"라는 최고급 제안/권유 표현이 됩니다. 일본인이 가장 좋아하는 화법입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ませんか:</b> 동사의 부정형(ません)에 의문사(か)를 붙이면 "~하지 않을래요?"라는 최고급 제안/권유 표현이 됩니다. </div>
     </div>
   </div>
 
@@ -318,7 +318,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 一緒に(같이/함께), 話します(대화합니다/말합니다)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> 연락처를 주고받은 직후엔 반드시 "よろしくお願いします"를 외치세요. 여기서도 '話しませんか(~할래요?)' 권유 스킬이 쓰였습니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 여기서도 '話しませんか(~할래요?)' 권유 스킬이 쓰였습니다.</div>
     </div>
   </div>
 
@@ -427,7 +427,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> に(에), 来て(오고/와서), よかったです(다행이었습니다/좋았습니다), 〜のおかげで(~덕분에)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜て よかった:</b> '~해서 다행이다/잘됐다'라는 감정 표현입니다 (통째로 암기!). 명사 뒤에 'のおかげで(노 오카게데)'를 붙이면 '~ 덕분에'가 됩니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜て よかった:</b> '~해서 다행이다/잘됐다'라는 감정 표현입니다. 명사 뒤에 'のおかげで(노 오카게데)'를 붙이면 '~ 덕분에'가 됩니다.</div>
     </div>
   </div>
 
@@ -592,7 +592,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 帰れて(돌아갈 수 있어서), 週末(주말), 休み(휴일)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜て:</b> '帰る(돌아가다)'의 가능형에 'て(~해서)'가 붙은 문법입니다. 머리 아프면 일단 통으로 외우세요!</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜て:</b> '帰る(돌아가다)'의 가능형에 'て(~해서)'가 붙은 문법입니다. 일단 통으로 외우세요!</div>
     </div>
   </div>
 
