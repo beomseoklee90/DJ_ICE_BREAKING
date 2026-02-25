@@ -1,5 +1,36 @@
 1회차
 <style>
+.training-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.training-banner:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.training-banner .finger {
+  font-size: 20px;
+  animation: fingerMove 1.2s infinite ease-in-out;
+}
+
+@keyframes fingerMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
   .jp-drill-wrap { font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif; color: #1e293b; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 10px; }
   
   /* 공지 및 경고 박스 */
@@ -37,7 +68,10 @@
   
   .jp-drill-wrap ruby rt { font-size: 11px; color: #64748b; }
 </style>
-
+<a href="https://www.somoim.co.kr/3e682319-49b4-43af-b071-2b2e9ef3bbf11" target="_blank" class="training-banner">
+  <span class="finger">👈👈</span>
+  오프라인 일본어 트레이닝 참가 정보
+</a>
 <div class="jp-drill-wrap">
 
   <div class="notice-box">
