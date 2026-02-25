@@ -198,7 +198,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 特に(특히), 〜や(〜랑/이나), 〜など(〜등)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> <b>Aや Bなど:</b> 대상을 여러 개 나열할 때 "A랑 B 등"이라고 표현하는 아주 세련된 화법입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>Aや Bなど:</b> 대상을 여러 개 나열할 때 "A랑 B 등"이라는 표현입니다 .</div>
     </div>
   </div>
 
@@ -234,7 +234,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 感じ(느낌/감성), も(~도), かっこいい(멋있다)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> 한국어의 트렌디한 '감성'이라는 단어는 일본어로 '感じ(칸지)'라고 하면 느낌이 딱 삽니다. 'も(모)'는 '~도'라는 첨가 조사입니다.</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 한국어의 '감성'이라는 단어는 일본어로 '感じ(칸지)'라고 표현 합니다. 'も(모)'는 '~도'라는 첨가 조사입니다.</div>
     </div>
   </div>
 
@@ -521,7 +521,7 @@
     </div>
     <div class="detail-area">
       <div class="vocab-row"><span class="vocab-label">단어</span> 不動産(부동산)</div>
-      <div class="grammar-row"><span class="grammar-label">문법</span> "일합니다(働いています)"라는 복잡한 동사를 쓰지 말고, "부동산의 일입니다(不動産の仕事です)"라고 명사로 던지세요!</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> "일합니다(働いています)"라고 표현할 수도 있습니다.</div>
     </div>
   </div>
 
