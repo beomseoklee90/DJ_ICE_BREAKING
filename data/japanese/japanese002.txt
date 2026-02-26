@@ -293,7 +293,7 @@
     <p class="ko-text">교류회에서 친구가 많이 생겼어요. 괜찮으면 또 오지 않을래요?</p>
   </div>
   <div class="detail-area">
-    <div class="vocab-row"><span class="vocab-label">단어</span> たくさん(많이), できました(생겼다/되었다-과거), よかったら(괜찮다면), また(또), 来ませんか(오지 않을래요?)</div>
+    <div class="vocab-row"><span class="vocab-label">단어</span> で(에서) たくさん(많이), できました(생겼다/되었다-과거), よかったら(괜찮다면), また(또), 来ませんか(오지 않을래요?)</div>
     <div class="grammar-row"><span class="grammar-label">문법</span> <b>よかったら</b>: 부드러운 권유 도입. <b>〜ませんか</b>: 제안/권유.</div>
   </div>
 </div>
