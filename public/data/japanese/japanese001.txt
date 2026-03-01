@@ -1,0 +1,1109 @@
+3월 코치용 자료
+<style>
+/* =========================================================
+   3월 강의 내용 [코치용] — scoped styles
+   - 루트/바디/전역 영향 없음 (jp-tchr 내부만)
+   ========================================================= */
+.jp-tchr{
+  --ink:#111;
+  --muted:#666;
+  --line:#e7e7e7;
+  --paper:#ffffff;
+  --paper2:#fbfbfd;
+
+  --c1:#1a73e8;   /* blue */
+  --c2:#9333ea;   /* purple */
+  --c3:#10b981;   /* green */
+  --c4:#f59e0b;   /* amber */
+  --c5:#ef4444;   /* red */
+
+  font-family:"Noto Sans KR","Noto Sans JP",system-ui,-apple-system,"Apple SD Gothic Neo","Hiragino Sans";
+  color:var(--ink);
+  line-height:1.75;
+}
+.jp-tchr *{ box-sizing:border-box; }
+
+.jp-tchr .tchr-wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:22px 16px 52px;
+}
+
+.jp-tchr .tchr-cover{
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:linear-gradient(180deg,var(--paper2),var(--paper));
+  padding:20px 18px;
+}
+.jp-tchr .tchr-kicker{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:10px;
+}
+.jp-tchr .pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  font-size:12px;
+  color:var(--muted);
+}
+.jp-tchr .pill b{ color:var(--ink); font-weight:700; }
+.jp-tchr .pill.blue{ border-color:rgba(26,115,232,.25); }
+.jp-tchr .pill.purple{ border-color:rgba(147,51,234,.25); }
+.jp-tchr .pill.green{ border-color:rgba(16,185,129,.25); }
+.jp-tchr .pill.amber{ border-color:rgba(245,158,11,.25); }
+.jp-tchr .pill.red{ border-color:rgba(239,68,68,.25); }
+
+.jp-tchr h1{
+  font-size:30px;
+  margin:6px 0 6px;
+  letter-spacing:-0.2px;
+}
+.jp-tchr .sub{
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
+}
+
+.jp-tchr .toc{
+  margin-top:14px;
+  border-top:1px dashed var(--line);
+  padding-top:14px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+@media (min-width:860px){
+  .jp-tchr .toc{ grid-template-columns:1fr 1fr; }
+}
+.jp-tchr .toc-card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  padding:14px 14px;
+}
+.jp-tchr .toc-card h3{
+  margin:0 0 8px;
+  font-size:16px;
+}
+.jp-tchr .toc-card ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  font-size:13px;
+}
+.jp-tchr .toc-card li{ margin:4px 0; }
+
+.jp-tchr .section{
+  margin-top:22px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+}
+.jp-tchr .section-h{
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#fff,var(--paper2));
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+}
+.jp-tchr .section-h .title{
+  margin:0;
+  font-size:18px;
+}
+.jp-tchr .section-h .meta{
+  margin:2px 0 0;
+  color:var(--muted);
+  font-size:12px;
+  text-align:right;
+  white-space:nowrap;
+}
+.jp-tchr .section-b{
+  padding:16px;
+}
+
+.jp-tchr .callout{
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--paper2);
+  padding:14px;
+  margin:12px 0;
+}
+.jp-tchr .callout .cap{
+  font-size:12px;
+  color:var(--muted);
+  margin:0 0 6px;
+}
+.jp-tchr .callout p{ margin:8px 0; }
+
+.jp-tchr .grid2{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+@media (min-width:860px){
+  .jp-tchr .grid2{ grid-template-columns:1fr 1fr; }
+}
+
+.jp-tchr .box{
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  padding:14px;
+}
+.jp-tchr .box h4{
+  margin:0 0 10px;
+  font-size:15px;
+}
+.jp-tchr .box ul{
+  margin:0;
+  padding-left:18px;
+  color:var(--muted);
+  font-size:13px;
+}
+.jp-tchr .box li{ margin:5px 0; }
+
+.jp-tchr .tagline{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:800;
+  letter-spacing:-0.2px;
+}
+.jp-tchr .dot{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background:var(--c1);
+  box-shadow:0 0 0 4px rgba(26,115,232,.12);
+}
+
+.jp-tchr .rule{
+  border-top:1px solid var(--line);
+  margin:14px 0;
+}
+
+.jp-tchr .klist{
+  margin:10px 0 0;
+  padding-left:18px;
+}
+.jp-tchr .klist li{ margin:6px 0; }
+
+.jp-tchr ruby{ ruby-position:over; }
+.jp-tchr rt{ font-size:10px; color:var(--muted); }
+
+.jp-tchr .kbd{
+  display:inline-block;
+  padding:2px 7px;
+  border:1px solid var(--line);
+  border-bottom-width:2px;
+  border-radius:8px;
+  background:#fff;
+  font-size:12px;
+  color:#333;
+}
+.jp-tchr .accent{
+  color:var(--c1);
+  font-weight:800;
+}
+.jp-tchr .accent2{
+  color:var(--c2);
+  font-weight:800;
+}
+.jp-tchr .accent3{
+  color:var(--c3);
+  font-weight:800;
+}
+.jp-tchr .accent4{
+  color:var(--c4);
+  font-weight:800;
+}
+.jp-tchr .accent5{
+  color:var(--c5);
+  font-weight:800;
+}
+
+.jp-tchr .legend{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.jp-tchr .legend .pill{ font-size:11px; }
+
+.jp-tchr .note{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.jp-tchr .mono{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size:12px;
+  background:#111;
+  color:#fff;
+  padding:2px 6px;
+  border-radius:7px;
+}
+</style>
+
+<div class="jp-tchr">
+  <div class="tchr-wrap">
+
+    <div class="tchr-cover">
+      <div class="tchr-kicker">
+        <span class="pill blue"><b>3월</b> 1개월차</span>
+        <span class="pill purple"><b>코치용</b> 운영/설명/드릴</span>
+        <span class="pill green"><b>훈련형</b> 말하기 체육관</span>
+        <span class="pill amber"><b>요미가나</b> ruby 기본</span>
+        <span class="pill red"><b>뜻 표기</b> 생략</span>
+      </div>
+
+      <h1>3월 강의 내용 <span class="jp-small">[코치용]</span></h1>
+      <p class="sub">
+        목적: “쉬운 문법”으로 “깊은 대화”를 만들고, 매 회차 <b>콤비네이션 드릴</b>로 자동화를 만든다. (교류회 아님)
+      </p>
+
+      <div class="legend">
+        <span class="pill blue"><span class="dot"></span>핵심 문법</span>
+        <span class="pill purple"><span class="dot" style="background:var(--c2);box-shadow:0 0 0 4px rgba(147,51,234,.12)"></span>운영 지침</span>
+        <span class="pill green"><span class="dot" style="background:var(--c3);box-shadow:0 0 0 4px rgba(16,185,129,.12)"></span>드릴(콤비네이션)</span>
+        <span class="pill amber"><span class="dot" style="background:var(--c4);box-shadow:0 0 0 4px rgba(245,158,11,.14)"></span>대화 확장</span>
+      </div>
+
+      <div class="toc">
+        <div class="toc-card">
+          <h3>전체 커리큘럼 구조</h3>
+          <ul>
+            <li>회차가 뒤로 갈수록 문법 포인트가 추가됨</li>
+            <li>하지만 매 회차 “이전 문법”을 계속 재사용</li>
+            <li>대화는 단원별로: 같은 상황이 점점 길어짐</li>
+          </ul>
+        </div>
+
+        <div class="toc-card">
+          <h3>3월 문법 범위 (1개월차)</h3>
+          <ul>
+            <li><span class="accent">は/が/を</span> (초보용 설명 규칙 적용)</li>
+            <li><span class="accent">です 패밀리</span> 전부 (부정/과거부정 포함)</li>
+            <li><span class="accent2">い/な 형용사</span> (현재/과거/부정/과거부정)</li>
+            <li><span class="accent2">동사</span> (기본형/ます형 중심)</li>
+            <li><span class="accent3">いる/ある</span> + 존재/부재</li>
+            <li><span class="accent4">て형</span> + 활용(요청/허가/진행)</li>
+            <li><span class="accent4">수혜</span> <ruby>〜てあげる</ruby> / <ruby>〜てもらう</ruby> / <ruby>〜てくれる</ruby></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- SECTION: 운영 원칙 (코치용) -->
+    <!-- ===================================================== -->
+    <div class="section" id="tchr-ops">
+      <div class="section-h">
+        <div>
+          <p class="title"><span class="tagline"><span class="dot"></span>운영 원칙 (코치용)</span></p>
+          <p class="note">교재(학습자용)가 아니라, “진행자용”으로 최대 정보 밀도로 정리한다.</p>
+        </div>
+        <p class="meta">3월 1개월차 공통</p>
+      </div>
+
+      <div class="section-b">
+        <div class="grid2">
+          <div class="box">
+            <h4><span class="accent2">형태</span>: “진도는 존재” + “현장은 훈련”</h4>
+            <ul>
+              <li>설명은 최소. (필요 설명은 유튜브로 분리)</li>
+              <li>오프라인은 <b>말하기 횟수</b>가 최대가 되게 설계</li>
+              <li>짝은 기본 고정(교류회 아님). 스파링(프리토킹)에서만 선택적 교체</li>
+              <li>드릴은 타이머 기반: <span class="kbd">40초 질문</span> + <span class="kbd">40초 대답</span> 반복</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h4><span class="accent3">드릴</span>: 콤비네이션(문법 포인트 주고받기)</h4>
+            <ul>
+              <li>한 번에 “1포인트”만 던지지 말고, <b>현재까지 문법</b>을 섞어서 던진다.</li>
+              <li>문장 1개 = 가능한 한 <b>여러 포인트</b> 포함 (교재 차별화 핵심)</li>
+              <li>문장 길이는 길어도 괜찮음. 대신 구조는 단순.</li>
+              <li>뜻(번역)보다 <b>반사</b>가 목표: “맞게 말하기”보다 “멈추지 않기”.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p class="cap">교재 톤 가이드 (코치용)</p>
+          <p>
+            이 자료는 난이도 배려 없이 <b>전체 구조</b>를 담는다. 학습자에게는 필요한 만큼만 잘라서 전달한다.<br/>
+            단어 뜻은 적지 않는다. 대신 모든 한자 표기는 <span class="accent4">요미가나(ruby)</span>로 읽기 장벽만 낮춘다.
+          </p>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="box">
+          <h4><span class="accent">조사 설명 규칙</span> (3월 고정)</h4>
+          <ul>
+            <li><b>は</b> = “주어(은/는)”로만 설명한다. (추상 개념 금지)</li>
+            <li><b>が</b>는 두 가지만:
+              <ul class="klist">
+                <li>(1) <b>강조/특정</b>: <ruby>私<rt>わたし</rt></ruby>が<ruby>先生<rt>せんせい</rt></ruby>です</li>
+                <li>(2) <b>형용사 대상</b>: <ruby>猫<rt>ねこ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです</li>
+              </ul>
+            </li>
+            <li><b>を</b> = 목적어(동사의 대상)로만.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h4><span class="accent">です 패밀리</span> (3월에 반드시 다룸)</h4>
+          <ul>
+            <li><ruby>です</ruby> / <ruby>ですか</ruby></li>
+            <li><ruby>ではありません</ruby> / <ruby>じゃないです</ruby></li>
+            <li><ruby>ではありませんでした</ruby> / <ruby>じゃなかったです</ruby></li>
+          </ul>
+          <p class="note">코치용 코멘트: “정중/회화” 레지스터 차이를 짧게만. 길게 설명 금지.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- SECTION: 3월 전체 회차 설계 (개요) — Part 1에서는 개요까지만 -->
+    <!-- ===================================================== -->
+    <div class="section" id="tchr-monthmap">
+      <div class="section-h">
+        <div>
+          <p class="title"><span class="tagline"><span class="dot" style="background:var(--c4);box-shadow:0 0 0 4px rgba(245,158,11,.14)"></span>3월 회차 설계 (개요)</span></p>
+          <p class="note">각 회차는 “같은 상황”을 유지하면서 문법이 추가되어 대화가 길어진다.</p>
+        </div>
+        <p class="meta">Part 2부터 상세</p>
+      </div>
+
+      <div class="section-b">
+        <div class="callout">
+          <p class="cap">상황(소재) 고정</p>
+          <p>
+            3월 기본 소재는 “<b>처음 만난 사람과의 대화</b>” (소개팅/첫 만남 톤).<br/>
+            무리한 소재는 배제하고, <b>정보량은 깊게</b> 간다. (기간/빈도/경험 어휘로 밀도 확보)
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="box">
+            <h4>회차 1 — 베이스 구축</h4>
+            <ul>
+              <li>조사: は/が/を (규칙 고정)</li>
+              <li>です 패밀리(부정/과거부정 포함)</li>
+              <li>대화: 신상/출신/업계/이유/과거 경험 “짧게 길게”</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h4>회차 2 — 형용사로 밀도 올리기</h4>
+            <ul>
+              <li><ruby>い</ruby>/<ruby>な</ruby> 형용사 (전체 활용)</li>
+              <li>평가/감정/인상으로 대화 확장</li>
+              <li>“좋아하다”류에서 <b>が(형용사 대상)</b> 반복 노출</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h4>회차 3 — ます형 + いる/ある</h4>
+            <ul>
+              <li><ruby>住<rt>す</rt></ruby>んでいます / <ruby>働<rt>はたら</rt></ruby>いています</li>
+              <li>존재/부재: いる/ある</li>
+              <li>같은 첫 만남 대화가 “지금 상태”로 길어짐</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h4>회차 4 — て형 + 활용 + 수혜</h4>
+            <ul>
+              <li>요청/허가/진행: てください / てもいいですか / ています</li>
+              <li>수혜: てあげる / てもらう / てくれる</li>
+              <li>대화 확장: 연락/도움/부탁/다음 약속</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="note">
+          Part 2부터는 각 회차를 “코치용 스크립트 + 드릴 콤보 + 확장 대화(요미가나)”로 풀어쓴다.
+        </p>
+      </div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- PART 1 END -->
+    <!-- 다음 분량(Part 2~)은 아래 줄 "바로 아래"에 계속 붙이면 됨 -->
+    <!-- ===================================================== -->
+    <!-- NEXT_INSERT_HERE -->
+  <!-- ===================================================== -->
+<!-- SECTION: 회차 1 상세 (조사 + です 패밀리) -->
+<!-- ===================================================== -->
+<div class="section" id="tchr-w1">
+
+  <div class="section-h">
+    <div>
+      <p class="title">
+        <span class="tagline">
+          <span class="dot"></span>회차 1 — 베이스 구축
+        </span>
+      </p>
+      <p class="note">조사 규칙 고정 + です 패밀리 전체 노출</p>
+    </div>
+    <p class="meta">조사 / です / 부정 / 과거부정</p>
+  </div>
+
+  <div class="section-b">
+
+    <!-- 코치용 설명 -->
+    <div class="box">
+      <h4 class="accent2">코치용 설명 스크립트</h4>
+
+      <ul class="klist">
+        <li>は = 주어. 그냥 주어라고만 말한다.</li>
+        <li>が = 강조 또는 형용사 대상. 두 가지만 말한다.</li>
+        <li>を = 목적어.</li>
+      </ul>
+
+      <div class="rule"></div>
+
+      <ul class="klist">
+        <li>です → “입니다”</li>
+        <li>ですか → 질문</li>
+        <li>ではありません / じゃないです → 부정</li>
+        <li>ではありませんでした / じゃなかったです → 과거 부정</li>
+      </ul>
+
+      <p class="note">
+        설명 길게 하지 말고 바로 드릴 들어간다.
+      </p>
+    </div>
+
+    <!-- 콤비네이션 드릴 -->
+    <div class="box">
+      <h4 class="accent3">콤비네이션 드릴</h4>
+
+      <ul class="klist">
+        <li>
+          A:
+          <ruby>東京<rt>とうきょう</rt></ruby>
+          <ruby>出身<rt>しゅっしん</rt></ruby>
+          ですか
+        </li>
+
+        <li>
+          B:
+          はい、
+          <ruby>東京<rt>とうきょう</rt></ruby>
+          <ruby>出身<rt>しゅっしん</rt></ruby>
+          です
+        </li>
+
+        <li>
+          A:
+          <ruby>韓国<rt>かんこく</rt></ruby>
+          <ruby>人<rt>じん</rt></ruby>
+          ですか
+        </li>
+
+        <li>
+          B:
+          いいえ、
+          <ruby>韓国<rt>かんこく</rt></ruby>
+          <ruby>人<rt>じん</rt></ruby>
+          ではありません
+        </li>
+
+      </ul>
+
+      <p class="note">속도 유지. 멈추지 않게.</p>
+    </div>
+
+    <!-- 확장 대화 -->
+    <div class="box">
+      <h4 class="accent4">확장 대화</h4>
+
+      <p>
+        <ruby>何年目<rt>なんねんめ</rt></ruby>
+        ですか
+      </p>
+
+      <p>
+        <ruby>日本<rt>にほん</rt></ruby>
+        は
+        <ruby>五年目<rt>ごねんめ</rt></ruby>
+        です
+      </p>
+
+      <p>
+        <ruby>仕事<rt>しごと</rt></ruby>
+        は
+        <ruby>何<rt>なん</rt></ruby>
+        ですか
+      </p>
+
+      <p>
+        <ruby>現在<rt>げんざい</rt></ruby>
+        プログラマー
+        です
+      </p>
+
+    </div>
+
+    <!-- 진행 팁 -->
+    <div class="callout">
+      <p class="cap">진행 팁</p>
+
+      <ul class="klist">
+        <li>문장 완벽성보다 말하는 횟수 우선</li>
+        <li>틀려도 끊지 말고 진행</li>
+        <li>짝 고정 유지</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<!-- ===================================================== -->
+<!-- SECTION: 회차 2 상세 (형용사 전체 활용 + が(형용사 대상) 체화) -->
+<!-- ===================================================== -->
+<div class="section" id="tchr-w2">
+
+  <div class="section-h">
+    <div>
+      <p class="title">
+        <span class="tagline">
+          <span class="dot" style="background:var(--c2);box-shadow:0 0 0 4px rgba(147,51,234,.12)"></span>회차 2 — 형용사로 밀도 올리기
+        </span>
+      </p>
+      <p class="note">い/な 형용사 “전체 활용” + が(형용사 대상) 반복 노출</p>
+    </div>
+    <p class="meta">い形 / な形 / 好き(が)</p>
+  </div>
+
+  <div class="section-b">
+
+    <!-- 코치용 설명 -->
+    <div class="box">
+      <h4 class="accent2">코치용 설명 스크립트</h4>
+
+      <p class="note">
+        오늘 목표는 “대화가 유치하지 않게” 만드는 것.
+        문법은 여전히 쉬운데, 형용사 활용을 넣으면 말이 확 살아난다.
+      </p>
+
+      <div class="callout">
+        <p class="cap">설명 규칙 (짧게만)</p>
+        <ul class="klist">
+          <li><span class="accent2">い형용사</span>: 〜い / 〜くない / 〜かった / 〜くなかった</li>
+          <li><span class="accent2">な형용사</span>: 〜です / 〜じゃないです / 〜でした / 〜じゃなかったです</li>
+          <li><span class="accent">が</span>는 오늘도 딱 두 가지 중 <b>형용사 대상</b>을 계속 반복: <ruby>猫<rt>ねこ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです</li>
+        </ul>
+      </div>
+
+      <p class="note">
+        설명은 2분컷. 바로 드릴로 “입에 붙이기”.
+      </p>
+    </div>
+
+    <!-- 형용사 전체 활용: 코치용 치트시트 -->
+    <div class="box">
+      <h4 class="accent">형용사 활용 치트시트 (코치용)</h4>
+
+      <div class="grid2">
+        <div class="box">
+          <h4><span class="accent2">い形</span> (例: <ruby>高<rt>たか</rt></ruby>い)</h4>
+          <ul class="klist">
+            <li><ruby>高<rt>たか</rt></ruby>い です</li>
+            <li><ruby>高<rt>たか</rt></ruby>くない です</li>
+            <li><ruby>高<rt>たか</rt></ruby>かった です</li>
+            <li><ruby>高<rt>たか</rt></ruby>くなかった です</li>
+          </ul>
+          <p class="note">※ 초보는 형태만 “덩어리”로 말하게. 규칙 설명 길게 금지.</p>
+        </div>
+
+        <div class="box">
+          <h4><span class="accent2">な形</span> (例: <ruby>静<rt>しず</rt></ruby>か)</h4>
+          <ul class="klist">
+            <li><ruby>静<rt>しず</rt></ruby>か です</li>
+            <li><ruby>静<rt>しず</rt></ruby>か じゃないです</li>
+            <li><ruby>静<rt>しず</rt></ruby>か でした</li>
+            <li><ruby>静<rt>しず</rt></ruby>か じゃなかったです</li>
+          </ul>
+          <p class="note">※ “な”를 설명하지 말고, 예문만 반복.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 콤비네이션 드릴: 형용사 -->
+    <div class="box">
+      <h4 class="accent3">콤비네이션 드릴 A — 형용사 4변형</h4>
+
+      <p class="note">타이머 40초/40초. 한 번에 4변형을 “연속 콤보”로 던진다.</p>
+
+      <div class="callout">
+        <p class="cap">콤보 틀 (코치용)</p>
+        <p>
+          A: ＿＿＿ですか。<br/>
+          B: はい、＿＿＿です。 / いいえ、＿＿＿くないです。<br/>
+          A: ＿＿＿でしたか。<br/>
+          B: はい、＿＿＿かったです。 / いいえ、＿＿＿くなかったです。
+        </p>
+      </div>
+
+      <ul class="klist">
+        <li>A: <ruby>日本<rt>にほん</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>は <ruby>楽<rt>たの</rt></ruby>しいですか</li>
+        <li>B: はい、<ruby>楽<rt>たの</rt></ruby>しいです / いいえ、<ruby>楽<rt>たの</rt></ruby>しくないです</li>
+        <li>A: <ruby>昨日<rt>きのう</rt></ruby>は <ruby>楽<rt>たの</rt></ruby>しかったですか</li>
+        <li>B: はい、<ruby>楽<rt>たの</rt></ruby>しかったです / いいえ、<ruby>楽<rt>たの</rt></ruby>しくなかったです</li>
+      </ul>
+    </div>
+
+    <!-- 콤비네이션 드릴: が(형용사 대상) -->
+    <div class="box">
+      <h4 class="accent3">콤비네이션 드릴 B — が(형용사 대상) “반사” 만들기</h4>
+
+      <p class="note">
+        오늘 핵심: 한국어식으로 “목적어” 생각하지 말고, 그냥 <span class="accent">が</span>로 붙여 말하게 한다.
+        설명하지 말고, 예문으로만 반복.
+      </p>
+
+      <div class="callout">
+        <p class="cap">콤보 틀</p>
+        <p>
+          A: 何が好きですか。<br/>
+          B: ＿＿＿が好きです。<br/>
+          A: ＿＿＿も好きですか。<br/>
+          B: はい、好きです / いいえ、好きじゃないです。
+        </p>
+      </div>
+
+      <ul class="klist">
+        <li>A: <ruby>何<rt>なに</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか</li>
+        <li>B: アニメが<ruby>好<rt>す</rt></ruby>きです</li>
+        <li>A: <ruby>映画<rt>えいが</rt></ruby>も<ruby>好<rt>す</rt></ruby>きですか</li>
+        <li>B: はい、<ruby>好<rt>す</rt></ruby>きです / いいえ、<ruby>好<rt>す</rt></ruby>きじゃないです</li>
+      </ul>
+    </div>
+
+    <!-- 확장 대화: 첫 만남(소개팅/첫 만남 톤) + 형용사/과거 -->
+    <div class="box">
+      <h4 class="accent4">확장 대화 — “깊은 내용, 쉬운 문법” (요미가나)</h4>
+
+      <div class="callout">
+        <p class="cap">대화 목표</p>
+        <p>형용사(현재/과거/부정) + が(好き) + です 패밀리로 “정보량 높은” 첫 만남 대화 만들기.</p>
+      </div>
+
+      <ul class="klist">
+        <li>
+          A:
+          <ruby>韓国<rt>かんこく</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>は
+          <ruby>開発者<rt>かいはつしゃ</rt></ruby>が
+          <ruby>多<rt>おお</rt></ruby>いですね
+        </li>
+        <li>
+          B:
+          そうですね。
+          <ruby>理由<rt>りゆう</rt></ruby>は
+          <ruby>色々<rt>いろいろ</rt></ruby>です
+        </li>
+        <li>
+          A:
+          <ruby>日本<rt>にほん</rt></ruby>は
+          <ruby>好<rt>す</rt></ruby>きですか
+        </li>
+        <li>
+          B:
+          はい、
+          <ruby>好<rt>す</rt></ruby>きです。
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>七歳<rt>ななさい</rt></ruby>から
+          アニメが
+          <ruby>好<rt>す</rt></ruby>きでした
+        </li>
+        <li>
+          A:
+          <ruby>今<rt>いま</rt></ruby>も
+          アニメが
+          <ruby>好<rt>す</rt></ruby>きですか
+        </li>
+        <li>
+          B:
+          はい、
+          <ruby>今<rt>いま</rt></ruby>も
+          <ruby>好<rt>す</rt></ruby>きです。
+          でも、
+          <ruby>忙<rt>いそが</rt></ruby>しくて
+          <ruby>毎日<rt>まいにち</rt></ruby>は
+          <ruby>見<rt>み</rt></ruby>ません
+        </li>
+        <li>
+          A:
+          ネットフリックスは
+          <ruby>よく<rt>よく</rt></ruby>
+          <ruby>見<rt>み</rt></ruby>ますか
+        </li>
+        <li>
+          B:
+          はい、
+          <ruby>よく<rt>よく</rt></ruby>
+          <ruby>見<rt>み</rt></ruby>ます。
+          <ruby>最近<rt>さいきん</rt></ruby>は
+          <ruby>静<rt>しず</rt></ruby>かな
+          ドラマが
+          <ruby>好<rt>す</rt></ruby>きです
+        </li>
+      </ul>
+
+      <p class="note">
+        코치용 포인트: 이 대화는 아직 ます형/いる/ある/て형 없이도 “충분히 깊다”.
+        (뒤 회차에서 같은 대화가 자연 확장됨)
+      </p>
+    </div>
+
+    <!-- 프리토킹 스파링 -->
+    <div class="callout">
+      <p class="cap">프리토킹 스파링 (8~12분)</p>
+      <ul class="klist">
+        <li><ruby>好<rt>す</rt></ruby>き / <ruby>好<rt>す</rt></ruby>きじゃない を 반드시 3번 이상 사용</li>
+        <li><ruby>楽<rt>たの</rt></ruby>しい / <ruby>忙<rt>いそが</rt></ruby>しい / <ruby>静<rt>しず</rt></ruby>か の 변형을 최소 2번</li>
+        <li>상대가 말한 형용사를 그대로 “되받아” 질문 만들기 (미러링)</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- NEXT: Part 4 = 회차 3 상세 (ます형 + いる/ある) -->
+<!-- ===================================================== -->
+<!-- ===================================================== -->
+<!-- SECTION: 회차 4 상세 (て형 + 요청 / 허가 / 진행 / 수혜) -->
+<!-- ===================================================== -->
+<div class="section" id="tchr-w4">
+
+  <div class="section-h">
+    <div>
+      <p class="title">
+        <span class="tagline">
+          <span class="dot" style="background:var(--c4);box-shadow:0 0 0 4px rgba(245,158,11,.14)"></span>회차 4 — 연결과 부탁을 말하게 만들기
+        </span>
+      </p>
+      <p class="note">て형 → 요청 / 허가 / 진행 + 수혜(〜てあげる / 〜てもらう / 〜てくれる)</p>
+    </div>
+    <p class="meta">て形 / 〜てください / 〜てもいいですか / 〜ています / 受益</p>
+  </div>
+
+  <div class="section-b">
+
+    <!-- 코치용 설명 -->
+    <div class="box">
+      <h4 class="accent2">코치용 설명 스크립트</h4>
+
+      <ul class="klist">
+        <li>て형은 “문장 연결 / 부탁 / 허가 / 진행”의 핵심 도구라고만 설명</li>
+        <li><ruby>〜てください<rt>〜てください</rt></ruby> = 요청</li>
+        <li><ruby>〜てもいいですか<rt>〜てもいいですか</rt></ruby> = 허가</li>
+        <li><ruby>〜ています<rt>〜ています</rt></ruby> = 진행/상태 (회차 3 복습)</li>
+        <li>수혜 3개는 의미보다 “누가 이득 보는지” 감각만 잡게</li>
+      </ul>
+
+      <p class="note">형태 설명 최소. 드릴로 반사화.</p>
+    </div>
+
+    <!-- て형 변환 핵심 -->
+    <div class="box">
+      <h4 class="accent">て형 핵심 변환 (코치용)</h4>
+
+      <ul class="klist">
+        <li><ruby>食<rt>た</rt></ruby>べます → <ruby>食<rt>た</rt></ruby>べて</li>
+        <li><ruby>見<rt>み</rt></ruby>ます → <ruby>見<rt>み</rt></ruby>て</li>
+        <li><ruby>行<rt>い</rt></ruby>きます → <ruby>行<rt>い</rt></ruby>って</li>
+        <li><ruby>話<rt>はな</rt></ruby>します → <ruby>話<rt>はな</rt></ruby>して</li>
+        <li><ruby>住<rt>す</rt></ruby>みます → <ruby>住<rt>す</rt></ruby>んで</li>
+      </ul>
+
+      <p class="note">완벽 규칙 설명 금지. 자주 쓰는 동사 위주 반복.</p>
+    </div>
+
+    <!-- 콤비네이션 드릴 A: 요청 -->
+    <div class="box">
+      <h4 class="accent3">콤비네이션 드릴 A — 요청</h4>
+
+      <div class="callout">
+        <p class="cap">콤보 틀</p>
+        <p>
+          A: ＿＿てください。<br/>
+          B: はい、わかりました。
+        </p>
+      </div>
+
+      <ul class="klist">
+        <li>A: もう<ruby>一度<rt>いちど</rt></ruby> <ruby>言<rt>い</rt></ruby>ってください</li>
+        <li>A: <ruby>連絡先<rt>れんらくさき</rt></ruby>を <ruby>教<rt>おし</rt></ruby>えてください</li>
+        <li>A: ゆっくり <ruby>話<rt>はな</rt></ruby>してください</li>
+      </ul>
+    </div>
+
+    <!-- 콤비네이션 드릴 B: 허가 -->
+    <div class="box">
+      <h4 class="accent3">콤비네이션 드릴 B — 허가</h4>
+
+      <div class="callout">
+        <p class="cap">콤보 틀</p>
+        <p>
+          A: ＿＿てもいいですか。<br/>
+          B: はい、いいですよ / すみません、ちょっと…
+        </p>
+      </div>
+
+      <ul class="klist">
+        <li>A: <ruby>写真<rt>しゃしん</rt></ruby>を <ruby>撮<rt>と</rt></ruby>ってもいいですか</li>
+        <li>A: <ruby>連絡<rt>れんらく</rt></ruby>してもいいですか</li>
+        <li>A: <ruby>後<rt>あと</rt></ruby>で <ruby>会<rt>あ</rt></ruby>ってもいいですか</li>
+      </ul>
+    </div>
+
+    <!-- 콤비네이션 드릴 C: 수혜 -->
+    <div class="box">
+      <h4 class="accent3">콤비네이션 드릴 C — 수혜 감각</h4>
+
+      <ul class="klist">
+        <li><ruby>友達<rt>ともだち</rt></ruby>が <ruby>手伝<rt>てつだ</rt></ruby>ってくれました</li>
+        <li><ruby>先生<rt>せんせい</rt></ruby>に <ruby>教<rt>おし</rt></ruby>えてもらいました</li>
+        <li><ruby>私<rt>わたし</rt></ruby>が <ruby>手伝<rt>てつだ</rt></ruby>ってあげました</li>
+      </ul>
+
+      <p class="note">누가 도움을 받는지에 집중. 깊은 문법 설명 불필요.</p>
+    </div>
+
+    <!-- 확장 대화 -->
+    <div class="box">
+      <h4 class="accent4">확장 대화 — 관계 형성 단계</h4>
+
+      <ul class="klist">
+        <li>
+          A:
+          <ruby>連絡先<rt>れんらくさき</rt></ruby>
+          を
+          <ruby>教<rt>おし</rt></ruby>えてもいいですか
+        </li>
+
+        <li>
+          B:
+          はい、
+          <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>
+          です
+        </li>
+
+        <li>
+          A:
+          <ruby>今度<rt>こんど</rt></ruby>
+          <ruby>一緒<rt>いっしょ</rt></ruby>
+          に
+          <ruby>食<rt>た</rt></ruby>べに
+          <ruby>行<rt>い</rt></ruby>きませんか
+        </li>
+
+        <li>
+          B:
+          はい、
+          <ruby>行<rt>い</rt></ruby>きたいです
+        </li>
+
+        <li>
+          A:
+          <ruby>場所<rt>ばしょ</rt></ruby>
+          を
+          <ruby>調<rt>しら</rt></ruby>べて
+          くれますか
+        </li>
+
+        <li>
+          B:
+          はい、
+          <ruby>調<rt>しら</rt></ruby>べておきます
+        </li>
+      </ul>
+
+      <p class="note">
+        코치용 포인트: 여기서 “연락 → 약속 → 협력” 흐름이 자연스럽게 완성된다.
+      </p>
+    </div>
+
+    <!-- 프리토킹 -->
+    <div class="callout">
+      <p class="cap">프리토킹 스파링</p>
+
+      <ul class="klist">
+        <li>〜てもいいですか 최소 2회</li>
+        <li>수혜 표현 1회 이상</li>
+        <li>이전 회차 문법 섞기 (형용사 / ています)</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- 3월 커리큘럼 본편 종료 -->
+<!-- 다음: 운영 팁 / 난이도 상승 전략 / 반복 설계 -->
+<!-- ===================================================== -->
+<!-- ===================================================== -->
+<!-- SECTION: 3월 운영 가이드 (코치용) -->
+<!-- ===================================================== -->
+<div class="section" id="tchr-ops-advanced">
+
+  <div class="section-h">
+    <div>
+      <p class="title">
+        <span class="tagline">
+          <span class="dot" style="background:var(--c5);box-shadow:0 0 0 4px rgba(239,68,68,.14)"></span>3월 운영 가이드 — 반복 / 난이도 상승 / 유지 전략
+        </span>
+      </p>
+      <p class="note">커리큘럼보다 중요한 “훈련 설계” 영역</p>
+    </div>
+    <p class="meta">운영 전략</p>
+  </div>
+
+  <div class="section-b">
+
+    <!-- 반복 구조 -->
+    <div class="box">
+      <h4 class="accent3">반복 구조 (핵심)</h4>
+
+      <ul class="klist">
+        <li>매 회차 이전 문법을 반드시 섞는다</li>
+        <li>새 문법은 “추가” 개념이지 “대체”가 아님</li>
+        <li>같은 질문을 다른 문법으로 다시 말하게 한다</li>
+      </ul>
+
+      <div class="callout">
+        <p class="cap">예시</p>
+        <ul class="klist">
+          <li>出身ですか → どこに住んでいますか → いつから住んでいますか</li>
+          <li>好きですか → よく見ますか → 最近も見ていますか</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 난이도 상승 -->
+    <div class="box">
+      <h4 class="accent4">난이도 상승 방법</h4>
+
+      <ul class="klist">
+        <li>문법 추가보다 “문장 길이”를 늘린다</li>
+        <li>질문 1개 → 질문 + 이유 → 질문 + 이유 + 경험</li>
+        <li>답변을 한 문장으로 끝내지 못하게 한다</li>
+      </ul>
+
+      <div class="callout">
+        <p class="cap">예시</p>
+        <p>
+          アニメが好きです → 子供の時から好きです → 今も好きで、週末によく見ています
+        </p>
+      </div>
+    </div>
+
+    <!-- 유지 전략 -->
+    <div class="box">
+      <h4 class="accent2">참가자 유지 전략</h4>
+
+      <ul class="klist">
+        <li>말 많이 했다는 체감이 가장 중요</li>
+        <li>짝 고정 → 심리적 안정 → 발화량 증가</li>
+        <li>설명보다 드릴 시간 확보</li>
+      </ul>
+    </div>
+
+    <!-- 흔한 문제 -->
+    <div class="box">
+      <h4 class="accent">흔한 문제 & 대응</h4>
+
+      <ul class="klist">
+        <li>말이 막힘 → 질문 패턴 다시 제공</li>
+        <li>틀릴까봐 침묵 → 속도 유지 강조</li>
+        <li>번역하려 함 → 문장 그대로 반복시킴</li>
+      </ul>
+    </div>
+
+    <!-- 시즌 반복 -->
+    <div class="callout">
+      <p class="cap">시즌 반복 전략</p>
+
+      <ul class="klist">
+        <li>1개월차 → 2개월차 이어서 진행</li>
+        <li>동시에 신규 1개월차 재오픈</li>
+        <li>대화 소재는 유지, 문장만 교체</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- SECTION: 3월 전체 핵심 요약 (코치용 치트시트) -->
+<!-- ===================================================== -->
+<div class="section" id="tchr-summary">
+
+  <div class="section-h">
+    <div>
+      <p class="title">
+        <span class="tagline">
+          <span class="dot"></span>3월 핵심 요약 치트시트
+        </span>
+      </p>
+      <p class="note">진행 전 빠르게 보는 페이지</p>
+    </div>
+    <p class="meta">치트시트</p>
+  </div>
+
+  <div class="section-b">
+
+    <div class="grid2">
+
+      <div class="box">
+        <h4>문법 핵심</h4>
+        <ul class="klist">
+          <li>は = 주어</li>
+          <li>が = 강조 / 형용사 대상</li>
+          <li>を = 목적어</li>
+          <li>です 패밀리 전체</li>
+          <li>い / な 형용사 전변형</li>
+          <li>ます形 + ています</li>
+          <li>いる / ある</li>
+          <li>て형 + 수혜</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h4>운영 핵심</h4>
+        <ul class="klist">
+          <li>설명 최소</li>
+          <li>짝 고정</li>
+          <li>콤비네이션 드릴 중심</li>
+          <li>프리토킹은 마지막</li>
+          <li>문장 길이로 난이도 상승</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================================================== -->
+<!-- 3월 코치용 커리큘럼 종료 -->
+<!-- ===================================================== -->
+  </div>
+</div>

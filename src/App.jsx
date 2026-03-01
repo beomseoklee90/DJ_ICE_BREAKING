@@ -5,24 +5,27 @@ import "./App.css";
   - files 배열에 public/data/폴더/ 안에 있는 파일명만 적으면 됨
 */
 const categoryConfig = {
-  english: {
-    path: "english",
-    label: "ENGLISH MEETING",
-    mobileLabel: "ENG", // 모바일용 짧은 이름
-    files: ["meetup_001.txt"],
+  // english: {
+  //   path: "english",
+  //   label: "ENGLISH MEETING",
+  //   mobileLabel: "ENG", // 모바일용 짧은 이름
+  //   files: ["meetup_001.txt"],
+  // },
+  japanese: {
+    path: "japanese",
+    label: "일본어",
+    mobileLabel: "japanese",
+    files: [
+      //"japanese001.txt",
+      "japanese002.txt",
+    ],
   },
-  bookclub: {
-    path: "bookclub",
-    label: "독서회",
-    mobileLabel: "BOOK",
-    files: ["book_001.txt"],
-  },
-  programming: {
-    path: "AI",
-    label: "AI",
-    mobileLabel: "AI",
-    files: [],
-  },
+  // programming: {
+  //   path: "AI",
+  //   label: "AI",
+  //   mobileLabel: "AI",
+  //   files: [],
+  // },
 };
 
 /* 🎵 설정 2: 배경음악 및 유튜브 홍보 
@@ -35,7 +38,7 @@ const musicConfig = {
 
 function App() {
   // 상태 관리
-  const [currentCategory, setCurrentCategory] = useState("english");
+  const [currentCategory, setCurrentCategory] = useState("japanese");
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
 

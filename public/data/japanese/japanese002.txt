@@ -1,0 +1,996 @@
+1회차
+<style>
+.training-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.training-banner:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.training-banner .finger {
+  font-size: 20px;
+  animation: fingerMove 1.2s infinite ease-in-out;
+}
+
+@keyframes fingerMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+  .jp-drill-wrap { font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif; color: #1e293b; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 10px; }
+  
+  /* 공지 및 경고 박스 */
+  .jp-drill-wrap .notice-box { background: #fef2f2; border-left: 5px solid #ef4444; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; }
+  .jp-drill-wrap .notice-box p { margin: 0; font-size: 15px; color: #b91c1c; font-weight: 800; }
+  .jp-drill-wrap .info-box { background: #eff6ff; border-left: 5px solid #3b82f6; padding: 15px 20px; border-radius: 8px; margin-bottom: 30px; }
+  .jp-drill-wrap .info-box p { margin: 0; font-size: 15px; color: #1d4ed8; font-weight: 700; line-height: 1.5; }
+
+  .jp-drill-wrap h2 { color: #1d4ed8; border-bottom: 3px solid #bfdbfe; padding-bottom: 10px; margin-top: 40px; font-size: 24px; font-weight: 900;}
+  .jp-drill-wrap .section-desc { color: #475569; font-weight: 600; margin-bottom: 20px; font-size: 15px; }
+
+  /* 대화 래퍼 */
+  .jp-drill-wrap .dialogue-wrapper { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02);}
+  
+  /* 일본어 문장 영역 */
+  .jp-drill-wrap .sentence-area { background: #f8fafc; padding: 15px 20px; border-bottom: 1px dashed #cbd5e1; }
+  .jp-drill-wrap .speaker { font-weight: 900; color: #2563eb; margin-right: 8px; font-size: 17px; }
+  .jp-drill-wrap .jp-text { font-size: 21px; font-weight: 700; color: #0f172a; margin: 0 0 5px 0; }
+  .jp-drill-wrap .pronunciation { font-size: 14px; color: #64748b; font-style: italic; margin: 0 0 5px 0; }
+  .jp-drill-wrap .ko-text { font-size: 15px; color: #334155; margin: 0; font-weight: 600; }
+  
+  /* 단어 및 해설 영역 */
+  .jp-drill-wrap .detail-area { background: #ffffff; padding: 15px 20px; }
+  .jp-drill-wrap .vocab-row { margin-bottom: 12px; font-size: 14.5px; color: #1e293b;}
+  .jp-drill-wrap .vocab-label { font-weight: 800; color: #047857; background: #ccfbf1; padding: 3px 8px; border-radius: 4px; margin-right: 8px; font-size: 12px; }
+  .jp-drill-wrap .grammar-row { font-size: 14.5px; color: #475569; line-height: 1.6;}
+  .jp-drill-wrap .grammar-label { font-weight: 800; color: #b45309; background: #fef3c7; padding: 3px 8px; border-radius: 4px; margin-right: 8px; font-size: 12px; }
+  
+  /* 드릴 3 단어장 박스 */
+  .jp-drill-wrap .pattern-box { background: #f8fafc; border: 2px solid #93c5fd; border-radius: 12px; padding: 25px; margin-bottom: 40px; }
+  .jp-drill-wrap .pattern-syntax { font-size: 19px; font-weight: 900; color: #1e40af; margin: 0 0 15px 0; background: #fff; padding: 15px; border-radius: 8px; text-align: center; border: 2px dashed #3b82f6;}
+  .jp-drill-wrap .word-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 20px; }
+  .jp-drill-wrap .word-item { background: #fff; border: 1px solid #cbd5e1; padding: 10px; border-radius: 8px; text-align: center; font-size: 15px; color: #0f172a; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.02);}
+  .jp-drill-wrap .word-item span { display: block; font-size: 12px; color: #64748b; font-weight: 500; margin-top: 4px;}
+  
+  .jp-drill-wrap ruby rt { font-size: 11px; color: #64748b; }
+</style>
+<a href="https://www.somoim.co.kr/3e682319-49b4-43af-b071-2b2e9ef3bbf11" target="_blank" class="training-banner">
+  <span class="finger">👈👈</span>
+  오프라인 일본어 트레이닝 참가 정보
+</a>
+<div class="jp-drill-wrap">
+
+  <div class="notice-box">
+    <p>🚨 발음 경고: 입문자의 빠른 이해/암기를 위해 한국어 발음을 적었습니다. '데스까', '데쇼우' 등 발음은 반드시 코치를 따라해 주세요. 눈으로 읽지 말고 입술 근육으로 기억해야 합니다!</p>
+  </div>
+  
+<div class="info-box">
+  <p>💡 <b>운영 방식:</b> 이 모임은 ‘문법 설명’보다 <b>말하는 훈련(드릴)</b>에 초점을 둡니다. 설명을 길게 늘리지 않고, 패턴을 잡은 뒤 바로 반복 발화로 몸에 붙이는 방식입니다.</p>
+
+  <!-- <p>💡 <b>문장 설계 원칙:</b> 실제로는 더 일본어다운(원어민다운) 표현이 많이 있지만, 그걸 그대로 쓰면 <b>개념/문법 설명량이 급격히 늘어</b> 입문 단계에서는 흐름이 끊깁니다. 그래서 이 교재는 일부 표현을 <b>의도적으로 단순화</b>했고, 초급 범위에서 “바로 말할 수 있는 형태”를 우선 채택했습니다.</p> -->
+
+  <p>💡 <b>학습 전략:</b> 드릴 1·2에서는 です(명사) / 형용사 / ます(동사) 같은 뼈대만 잡고, 그 외 문법 포인트(〜て, 〜たら 등)는 <b>이해보다 사용</b> 중심으로 다룹니다. 회차가 쌓이면 드릴 3 프리토킹 패턴에서 자연스럽게 확장됩니다.</p>
+
+  <p>💡 <b>한자 노출:</b> 입문자라도 생활에서 자주 마주치는 한자는 일부러 넣었습니다. 반복해서 말하고 읽다 보면 겁이 줄고, 현지 환경(간판/메뉴/앱)에서 익숙해지는 것과 비슷하게 암기가 빨라집니다. 스마트폰/PC로 문장을 직접 입력해보는 것도 추천합니다.</p>
+
+  <p>💡 <b>체육관식 훈련:</b> 우리 모임은 격투기 체육관처럼 운영됩니다. 실력과 상관없이 그날의 드릴을 같이 익히고, 파트너를 바꿔가며 반복합니다. 코치가 일본어를 1:1로 교정하며 “말이 나오는 상태”를 만드는 게 목표입니다.</p>
+
+  <p>💡 <b>진도 없음:</b> 별도의 진도 개념이 없어서 원할 때 언제든 참여 가능합니다. 여행 회화부터 네트워킹까지, <b>즉시 써먹는 문장</b>을 반복 훈련하며 누적합니다.</p>
+</div>
+
+  <h2>드릴 1. [상황1: 한일 교류회 1:1 대화]</h2>
+  <p class="section-desc">처음 만난 사람과 핑퐁을 치며 호감을 쌓는 완벽한 실전 대화입니다.</p>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>初<rt>はじ</rt></ruby>めまして。ボムと<ruby>申<rt>もう</rt></ruby>します。</p>
+      <p class="pronunciation">(하지메마시테. 보무 토 모우시마스)</p>
+      <p class="ko-text">처음 뵙겠습니다. 보무라고 합니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 初めまして(처음 뵙겠습니다), 〜と申します(~라고 합니다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜と申します:</b> '〜です(~입니다)'보다 자신을 낮추어 소개하는 정중한 표현입니다. "이름+토 모우시마스"로 통째로 외워두세요.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>初<rt>はじ</rt></ruby>めまして。ユイと<ruby>申<rt>もう</rt></ruby>します。</p>
+      <p class="pronunciation">(하지메마시테. 유이 토 모우시마스)</p>
+      <p class="ko-text">처음 뵙겠습니다. 유이라고 합니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 상대방이 격식을 갖췄으므로 똑같이 'と申します'로 받아주면 매너가 좋습니다. (ユイです 라고 해도 괜찮습니다.)</div>
+    </div>
+  </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">보무:</span> この<ruby>交流会<rt>こうりゅうかい</rt></ruby>は <ruby>何回目<rt>なんかいめ</rt></ruby>ですか。</p>
+    <p class="pronunciation">(코노 코우류우카이와 난카이메 데스까?)</p>
+    <p class="ko-text">이 교류회는 몇 번째인가요?</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> 交流会(교류회), 何回目(몇 번째)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜目(め)</b>: 숫자/횟수 뒤에 붙어 “~번째”. (例: 1回目=첫 번째)</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>日韓交流会<rt>にっかんこうりゅうかい</rt></ruby>は <ruby>初<rt>はじ</rt></ruby>めてです。</p>
+      <p class="pronunciation">(닛칸 코우류우카이와 하지메테 데스)</p>
+      <p class="ko-text">한일 교류회는 처음(최초)입니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 日韓交流会(한일 교류회), 初めて(처음)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 한국어의 '최초'라는 뉘앙스는 일본어 회화에서 주로 '初めて(하지메테)'로 표현됩니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> ユイさんは <ruby>東京<rt>とうきょう</rt></ruby><ruby>出身<rt>しゅっしん</rt></ruby>ですか。</p>
+      <p class="pronunciation">(유이산와 토우쿄우 슛신 데스까?)</p>
+      <p class="ko-text">유이씨는 도쿄 출신입니까?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 出身(출신)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 명사 뒤에 'ですか(데스까)'를 붙여 질문을 만드는 가장 기초적이고 중요한 패턴입니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> いいえ、<ruby>大阪<rt>おおさか</rt></ruby><ruby>出身<rt>しゅっしん</rt></ruby>です。ボムさんの<ruby>発音<rt>はつおん</rt></ruby>、きれいですね。<ruby>日本<rt>にほん</rt></ruby>は<ruby>何年目<rt>なんねんめ</rt></ruby>ですか。</p>
+      <p class="pronunciation">(이이에, 오오사카 슛신 데스. 보무산노 하츠온, 키레이 데스네. 니혼와 난넨메 데스까?)</p>
+      <p class="ko-text">아니요, 오사카 출신입니다. 보무씨의 발음이 깨끗하네요(예쁘네요). 일본은 몇 년째입니까?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 発音(발음), きれい(깨끗하다/예쁘다), 何年目(몇 년째)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜の(소유격)</b>, <b>〜ですね:</b> 문장 끝의 'ね(네)'는 상대방의 동의를 구하거나 가볍게 감탄할 때 쓰는 마법의 조미료입니다. '발음이 깨끗하다'는 'きれい(키레이)'로 표현합니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>日本語<rt>にほんご</rt></ruby>はまだまだです。ありがとうございます。<ruby>現在<rt>げんざい</rt></ruby>5<ruby>年目<rt>ねんめ</rt></ruby>です。ユイさんの<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</p>
+      <p class="pronunciation">(니혼고와 마다마다 데스. 아리가토우 고자이마스. 겐자이 고넨메 데스. 유이산노 슈미와 난 데스까?)</p>
+      <p class="ko-text">일본어는 아직입니다. 고맙습니다. 현재 5년째입니다. 유이씨의 취미는 무엇입니까?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> まだまだ(아직아직), 現在(현재), 趣味(취미), 何(무엇)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>まだまだです:</b> 칭찬을 받았을 때 "아직 멀었습니다"라고 겸손하게 되받아치는 리액션입니다. </div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>私<rt>わたし</rt></ruby>はK-POP(ケーポップ)が<ruby>好<rt>す</rt></ruby>きです。ボムさんはどんな<ruby>歌<rt>うた</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか。</p>
+      <p class="pronunciation">(와타시와 케-폽푸가 스키 데스. 보무산와 돈나 우타가 스키 데스까?)</p>
+      <p class="ko-text">저는 케이팝을 좋아합니다. 보무씨는 어떤 노래를 좋아합니까?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 好き(좋아함), どんな(어떤), 歌(노래)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>が 好きです:</b> 한국어로는 '〜을/를 좋아하다'지만, 일본어에선 목적격 조사가 아닌 주격 조사 'が(가)'를 씁니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>私<rt>わたし</rt></ruby>はJ-POP(ジェイポップ)が<ruby>好<rt>す</rt></ruby>きです。<ruby>特<rt>とく</rt></ruby>に、ヒゲダンやバックナンバー、Vaundyなどが<ruby>好<rt>す</rt></ruby>きです。</p>
+      <p class="pronunciation">(와타시와 제이폽푸가 스키 데스. 토쿠니, 히게단 야 박쿠남바-, 바운디 나도가 스키 데스)</p>
+      <p class="ko-text">저는 J-POP을 좋아합니다. 특히, 히게단, 백넘버, 바운디 등을 좋아합니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 特に(특히), 〜や(〜랑/이나), 〜など(〜등)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>Aや Bなど:</b> 대상을 여러 개 나열할 때 "A랑 B 등"이라는 표현입니다 .</div>
+    </div>
+  </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">유이:</span> とても<ruby>有名<rt>ゆうめい</rt></ruby>ですね。ほとんどの<ruby>若<rt>わか</rt></ruby>い<ruby>人<rt>ひと</rt></ruby>は<ruby>知<rt>し</rt></ruby>っていますよ。</p>
+    <p class="pronunciation">(토테모 유우메이 데스네. 호톤도노 와카이 히토와 싯테이마스요)</p>
+    <p class="ko-text">엄청 유명하네요. 대부분의 젊은 사람들은 알고 있어요.</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> 有名(유명), ほとんどの(대부분의), 若い(젊다), 知っています(알고 있다)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ています</b>: 상태 지속(“알고 있는 상태”). <b>〜よ</b>: 정보 전달 느낌(“~라구요”).</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> K-POPの<ruby>魅力<rt>みりょく</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</p>
+      <p class="pronunciation">(케-폽푸노 미료쿠와 난 데스까?)</p>
+      <p class="ko-text">케이팝의 매력은 무엇입니까?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 魅力(매력)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> '명사 + の(의) + 명사'로 단어를 연결합니다. </div>
+    </div>
+  </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">유이:</span> クラブみたいな<ruby>感<rt>かん</rt></ruby>じです。アイドルもかっこいいです。</p>
+    <p class="pronunciation">(쿠라부 미타이나 칸지 데스. 아이도루 모 캇코이이 데스)</p>
+    <p class="ko-text">클럽 같은 느낌이에요. 아이돌도 멋있어요.</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> みたいな(~같은), 感じ(느낌), かっこいい(멋있다), も(~도)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜みたいな</b>: “~같은”. <b>も</b>: 추가(“~도”).</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>韓国<rt>かんこく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きな<ruby>日本人<rt>にほんじん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>くて、うれしいです。</p>
+      <p class="pronunciation">(칸코쿠가 스키나 니혼진가 오오쿠테, 우레시이 데스)</p>
+      <p class="ko-text">한국을 좋아하는 일본인이 많아서 기쁩니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 日本人(일본인), 多い(많다), 多くて(많아서), うれしい(기쁘다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜くて:</b> い형용사 '多い(오오이: 많다)'의 끝 'い'를 'くて(쿠테)'로 바꾸면 '~해서(이유/나열)'라는 뜻으로 문장이 연결됩니다. 통째로 기억하세요!</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>私<rt>わたし</rt></ruby>も<ruby>同<rt>おな</rt></ruby>じです。<ruby>日本<rt>にほん</rt></ruby>が<ruby>好<rt>す</rt></ruby>きな<ruby>韓国人<rt>かんこくじん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いですね。</p>
+      <p class="pronunciation">(와타시모 오나지 데스. 니혼가 스키나 칸코쿠진가 오오이 데스네)</p>
+      <p class="ko-text">저도 마찬가지입니다. 일본을 좋아하는 한국인이 많군요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 同じ(같음/동일함), 韓国人(한국인)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> "私も同じです(저도 똑같아요)"는 상대방 말에 동의할 때 쓰는 리액션입니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>韓国人<rt>かんこくじん</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>がいますか。</p>
+      <p class="pronunciation">(칸코쿠진노 토모다치가 이마스까?)</p>
+      <p class="ko-text">한국인 친구가 있나요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> います(있습니다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜が います:</b> 사람이나 동물이 '있다'고 할 때는 'が います(가 이마스)'를 씁니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> いいえ、まだ<ruby>韓国人<rt>かんこくじん</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>がいません。</p>
+      <p class="pronunciation">(이이에, 마다 칸코쿠진노 토모다치가 이마셍)</p>
+      <p class="ko-text">아니요, 아직 한국인 친구가 없습니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> まだ(아직), いません(없습니다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 'います(있습니다)'의 부정형은 'いません(없습니다)'입니다.</div>
+    </div>
+  </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">보무:</span> <ruby>日韓交流会<rt>にっかんこうりゅうかい</rt></ruby>で<ruby>友達<rt>ともだち</rt></ruby>がたくさんできました。よかったら、また<ruby>来<rt>き</rt></ruby>ませんか。</p>
+    <p class="pronunciation">(닛칸 코우류우카이 데 토모다치가 타쿠산 데키마시타. 요캇타라, 마타 키마셍까?)</p>
+    <p class="ko-text">교류회에서 친구가 많이 생겼어요. 괜찮으면 또 오지 않을래요?</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> で(에서) たくさん(많이), できました(생겼다/되었다-과거), よかったら(괜찮다면), また(또), 来ませんか(오지 않을래요?)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> <b>よかったら</b>: 부드러운 권유 도입. <b>〜ませんか</b>: 제안/권유.</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> インスタを<ruby>交換<rt>こうかん</rt></ruby>しませんか。</p>
+      <p class="pronunciation">(인스타 오 코우칸 시마셍까?)</p>
+      <p class="ko-text">인스타 교환할래요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 交換(교환)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ませんか:</b> 동사의 부정형(ません)에 의문사(か)를 붙이면 "~하지 않을래요?"라는 제안/권유 표현이 됩니다. </div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> よろしくお<ruby>願<rt>ねが</rt></ruby>いします。<ruby>今日<rt>きょう</rt></ruby>も<ruby>友達<rt>ともだち</rt></ruby>がいますよ。<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>話<rt>はな</rt></ruby>しませんか。</p>
+      <p class="pronunciation">(요로시쿠 오네가이시마스. 쿄우모 토모다치가 이마스요. 잇쇼니 하나시마셍까?)</p>
+      <p class="ko-text">잘 부탁드립니다. 오늘도 친구가 있네요. 같이 대화할래요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 一緒に(같이/함께), 話します(대화합니다/말합니다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 여기서도 '話しませんか(~할래요?)' 권유 스킬이 쓰였습니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> よろしくお<ruby>願<rt>ねが</rt></ruby>いします。いいですね。<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>話<rt>はな</rt></ruby>しましょう。</p>
+      <p class="pronunciation">(요로시쿠 오네가이시마스. 이이 데스네. 잇쇼니 하나시마쇼우)</p>
+      <p class="ko-text">잘 부탁드립니다. 좋아요. 같이 대화해요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> いいですね(좋네요)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ましょう:</b> 상대의 제안(ませんか)에 수락할 때 "~합시다"라는 뜻의 '〜ましょう(마쇼우)'로 시원하게 받아칩니다.</div>
+    </div>
+  </div>
+
+
+  <h2 style="margin-top:50px;">드릴 2. [상황2: 셋이서 대화]</h2>
+  <p class="section-desc">3명 이상 모였을 때 지인을 소개하고 직업을 묻는 네트워킹 핵심 대화입니다.</p>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">보무:</span> こちらは<ruby>私<rt>わたし</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>のヨンヒです。</p>
+    <p class="pronunciation">(코치라와 와타시노 토모다치노 용히 데스)</p>
+    <p class="ko-text">이쪽은 제 친구 영희예요.</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> こちらは(이쪽은/이분은), 友達(친구)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> 소개는 <b>こちらは〜です</b>가 제일 안정적. “私の友達の〜です”만 단독으로 쓰면 문맥상 소개 느낌이 약해질 수 있음.</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>初<rt>はじ</rt></ruby>めまして。ユイです。</p>
+      <p class="pronunciation">(하지메마시테. 유이 데스)</p>
+      <p class="ko-text">처음 뵙겠습니다. 유이라고 합니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 목례와 함께 가볍게 인사합니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> <ruby>初<rt>はじ</rt></ruby>めまして。ヨンヒです。</p>
+      <p class="pronunciation">(하지메마시테. 용히 데스)</p>
+      <p class="ko-text">처음 뵙겠습니다. 영희라고 합니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 상대방의 인사는 똑같이 받아쳐 줍니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> お<ruby>二人<rt>ふたり</rt></ruby>は<ruby>仲<rt>なか</rt></ruby>がいいですね。</p>
+      <p class="pronunciation">(오후타리와 나카가 이이 데스네)</p>
+      <p class="ko-text">두 분은 사이가 좋아 보이네요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> お二人(두 분), 仲がいい(사이가 좋다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> '仲がいい(나카가 이이)'는 사람 관계를 칭찬할 때 쓰는 관용구입니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> 3<ruby>年前<rt>ねんまえ</rt></ruby>に<ruby>日本語学校<rt>にほんごがっこう</rt></ruby>で<ruby>会<rt>あ</rt></ruby>いました。<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>東京<rt>とうきょう</rt></ruby>へ<ruby>来<rt>き</rt></ruby>ました。</p>
+      <p class="pronunciation">(산넨마에니 니혼고갓코우데 아이마시타. 잇쇼니 토우쿄우에 키마시타)</p>
+      <p class="ko-text">3년 전에 일본어 학원에서 만났어요. 함께 도쿄로 왔습니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 3年前(3년 전), 日本語学校(일본어 학원), で(~에서), 会いました(만났습니다-과거), 一緒に(함께) へ(~로/방향), 来ました(왔습니다-과거)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ました:</b> 동사 ます(현재)의 과거형입니다. 장소를 나타내는 조사 'で(~에서)'와 방향을 나타내는 'へ(~에/~로)'의 쓰임새를 기억하세요.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> そうですね。ただの<ruby>友達<rt>ともだち</rt></ruby>です。とても<ruby>仲<rt>なか</rt></ruby>がいいです。</p>
+      <p class="pronunciation">(소우데스네. 타다노 토모다치 데스. 토테모 나카가 이이 데스)</p>
+      <p class="ko-text">그렇네요. 그냥 친구입니다. 많이 친해요(사이가 좋습니다).</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> そうですね(그렇네요), ただの(그냥/단지)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 남녀가 같이 있을 때 "ただの友達です(그냥 친구예요)"라고 장난스럽게 선을 그어보세요. 분위기가 확 풀립니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> ヨンヒさんは<ruby>東京<rt>とうきょう</rt></ruby>はどうですか。<ruby>面白<rt>おもしろ</rt></ruby>いですか。</p>
+      <p class="pronunciation">(용히산와 토우쿄우와 도우 데스까? 오모시로이 데스까?)</p>
+      <p class="ko-text">영희씨는 도쿄 어때요? 재미있나요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> どうですか(어떻습니까), 面白い(재미있다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜はどうですか:</b> 상대방의 소감이나 감상을 물어보는 가장 기본적인 질문 패턴입니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> はい、<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>来<rt>き</rt></ruby>てよかったです。ボムのおかげで、<ruby>友達<rt>ともだち</rt></ruby>もたくさんできました。</p>
+      <p class="pronunciation">(하이, 토우쿄우니 키테 요캇타데스. 보무 노 오카게데, 토모다치모 타쿠산 데키마시타)</p>
+      <p class="ko-text">네, 도쿄에 와서 다행이네요(잘됐네요). 보무 덕분에 친구도 많이 사귀었어요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> に(에), 来て(오고/와서), よかったです(다행이었습니다/좋았습니다), 〜のおかげで(~덕분에)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜て よかった:</b> '~해서 다행이다/잘됐다'라는 감정 표현입니다. 명사 뒤에 'のおかげで(노 오카게데)'를 붙이면 '~ 덕분에'가 됩니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> そうなんですね。<ruby>私<rt>わたし</rt></ruby>も<ruby>韓国人<rt>かんこくじん</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>が<ruby>欲<rt>ほ</rt></ruby>しいです。</p>
+      <p class="pronunciation">(소우난 데스네. 와타시모 칸코쿠진노 토모다치가 호시이 데스)</p>
+      <p class="ko-text">그렇구나. 저도 한국인 친구를 사귀고(원하고) 싶어요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> そうなんですね(그렇군요), 欲しい(원하다/갖고 싶다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜が 欲しいです:</b> '사귀고 싶다'는 복잡한 동사 대신, 명사 뒤에 '가 호시이데스(~를 원한다)'를 쓰면 일본인들이 찰떡같이 알아듣습니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>私<rt>わたし</rt></ruby>たちの<ruby>周<rt>まわ</rt></ruby>りに<ruby>友達<rt>ともだち</rt></ruby>がたくさんいます。<ruby>今度<rt>こんど</rt></ruby>、ユイさんも<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いませんか。</p>
+      <p class="pronunciation">(와타시타치노 마와리니 토모다치가 타쿠산 이마스. 콘도, 유이산모 잇쇼니 아이마셍까?)</p>
+      <p class="ko-text">저희 사이에(주변에) 친구가 여럿 있어요. 다음에 유이씨도 같이 만나 볼래요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 私たち(우리들), 周り(주변), 今度(다음에/이번에), 会いませんか(만나지 않을래요?)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ませんか:</b> 상대에게 무언가를 제안하는 부드러운 부정 의문문입니다. (드릴 1에 이어 두 번째 등장!)</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> 是非(ぜひ)！よろしくお<ruby>願<rt>ねが</rt></ruby>いします。ありがとうございます。</p>
+      <p class="pronunciation">(제히! 요로시쿠 오네가이시마스. 아리가토우 고자이마스)</p>
+      <p class="ko-text">꼭(부디)! 잘 부탁드립니다. 고마워요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 是非(꼭/부디)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>是非(제히):</b> 누군가 제안을 했을 때 강한 긍정의 리액션입니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> みんな<ruby>優<rt>やさ</rt></ruby>しい<ruby>友達<rt>ともだち</rt></ruby>です。<ruby>今度<rt>こんど</rt></ruby><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いましょう。</p>
+      <p class="pronunciation">(민나 야사시이 토모다치 데스. 콘도 잇쇼니 아이마쇼우)</p>
+      <p class="ko-text">다들 다정한(착한) 친구예요. 다음에 같이 만나요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 優しい(다정하다/상냥하다), 会いましょう(만납시다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜ましょう:</b> '만납시다'라는 권유의 표현입니다. い형용사(優しい)가 형태 변화 없이 바로 명사(友達)를 꾸며줍니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> ユイさんは<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しいですか。</p>
+      <p class="pronunciation">(유이산와 시고토가 이소가시이 데스까?)</p>
+      <p class="ko-text">유이씨는 일이 바쁘나요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 주어(は: 은/는)와 강조 대상(が: 이/가)을 구별하는 정석 문장입니다. '유이씨는(は) 일이(が) 바쁩니까'.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>忙<rt>いそが</rt></ruby>しい<ruby>時期<rt>じき</rt></ruby>もありますが、<ruby>最近<rt>さいきん</rt></ruby>は<ruby>時間<rt>じかん</rt></ruby>があります。</p>
+      <p class="pronunciation">(이소가시이 지키모 아리마스가, 사이킨와 지칸가 아리마스 / 사이킨와 히마 데스)</p>
+      <p class="ko-text">바쁜 시기도 있지만, 최근에는 시간이 많아요(한가해요).</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 時期(시기), 〜が(~지만), 最近(최근), 時間(시간), 暇(한가함)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜が:</b> 문장 중간에 들어가는 'が(가)'는 역접(~지만)을 뜻합니다. 초보자라면 괄호 안의 명사형 문장(최근에는 한가합니다)을 외우는 게 훨씬 편합니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> ユイさんの<ruby>仕事<rt>しごと</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</p>
+      <p class="pronunciation">(유이산노 시고토와 난 데스까?)</p>
+      <p class="ko-text">유이씨의 직업은 무엇인가요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 직업을 물어볼 때 가장 흔하고 직관적인 패턴.</div>
+    </div>
+  </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">유이:</span> <ruby>私<rt>わたし</rt></ruby>は<ruby>不動産<rt>ふどうさん</rt></ruby><ruby>関係<rt>かんけい</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>です。ボムさんとヨンヒさんは？</p>
+    <p class="pronunciation">(와타시와 후도우산 칸케이노 시고토 데스. 보무산토 용히산와?)</p>
+    <p class="ko-text">저는 부동산 쪽 일이에요. 보무 씨와 영희 씨는요?</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> 不動産(부동산), 関係(관련/계통), 不動産関係(부동산 쪽)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜関係の仕事です</b>: “~업계 일이에요”로 깔끔. (더 구체하게는 “不動産会社で働いています”도 가능)</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>私<rt>わたし</rt></ruby>たちは<ruby>二人<rt>ふたり</rt></ruby>とも<ruby>開発者<rt>かいはつしゃ</rt></ruby>です。</p>
+      <p class="pronunciation">(와타시타치와 후타리토모 카이하츠샤 데스)</p>
+      <p class="ko-text">저희 둘 다 개발자에요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 二人とも(둘 다), 開発者(개발자)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜とも:</b> 인원수 뒤에 붙이면 '~모두/다'라는 뜻이 됩니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> リモートワーク(재택근무) ですか。</p>
+      <p class="pronunciation">(리모-토 와-쿠 데스까?)</p>
+      <p class="ko-text">재택 근무 하세요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 재택근무는 일본에서 'リモートワーク(리모트 워크)' 또는 'テレワーク(테레 워크)'라고 합니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> ボムだけリモートワークです。<ruby>私<rt>わたし</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>出勤<rt>しゅっきん</rt></ruby>です。<ruby>羨<rt>うらや</rt></ruby>ましいです。</p>
+      <p class="pronunciation">(보무 다케 리모-토 와-쿠 데스. 와타시와 마이니치 슛킨 데스. 우라야마시이 데스)</p>
+      <p class="ko-text">보무만 재택 근무 하네요. 저는 매일 출근입니다. 부러워요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 〜だけ(~만), 毎日(매일), 出勤(출근), 羨ましい(부럽다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜だけ:</b> 명사 뒤에 붙어 '~만'이라는 한정을 나타냅니다. 감정을 나타내는 い형용사 '羨ましい(부럽다)'도 기억하세요.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> へえ〜、リモートワークはいいですか。</p>
+      <p class="pronunciation">(헤에~, 리모-토 와-쿠 와 이이 데스까?)</p>
+      <p class="ko-text">헤에~ 재택 근무 괜찮아요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> いい(좋다/괜찮다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>へえ〜:</b> 일본인들이 놀라거나 맞장구 칠 때 내는 리액션입니다. 감정을 실어보세요!</div>
+    </div>
+  </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">보무:</span> <ruby>仕事<rt>しごと</rt></ruby>の<ruby>時<rt>とき</rt></ruby>は、YouTube(ユーチューブ)を<ruby>見<rt>み</rt></ruby>ます。だから、<ruby>退屈<rt>たいくつ</rt></ruby>じゃありません。でも、ヨンヒが<ruby>羨<rt>うらや</rt></ruby>ましいです。ヨンヒは<ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>れるからです。</p>
+    <p class="pronunciation">(시고토 노 토키와, 유-츄-부 오 미마스. 다카라, 타이쿠츠 쟈 아리마셍. 데모, 용히가 우라야마시이 데스. 용히와 하야쿠 카에레루카라 데스)</p>
+    <p class="ko-text">일할 때는 유튜브를 봐요. 그래서 안 지루해요. 그래도 영희가 부러워요. 영희는 빨리 퇴근할 수 있으니까요.</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> 〜の時は(~할 때는), だから(그래서) 退屈(지루함), 羨ましい(부럽다), 帰れる(돌아갈 수 있다/퇴근할 수 있다), 〜から(이유)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜の時は</b>: “~할 때는”. <b>〜からです</b>: 이유를 깔끔하게 마무리(“~니까요”). 주어를 <b>ヨンヒは</b>로 박아 두면 “누가 빨리 가는지”가 안 흔들림.</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> <ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>れていいですね。ユイさんは<ruby>週末<rt>しゅうまつ</rt></ruby><ruby>休<rt>やす</rt></ruby>みですか。</p>
+      <p class="pronunciation">(하야쿠 카에레테 이이 데스네. 유이산와 슈우마츠 야스미 데스까?)</p>
+      <p class="ko-text">퇴근이 빨라서(빨리 돌아갈 수 있어서) 좋네요. 유이씨는 주말에 쉬나요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> 帰れて(돌아갈 수 있어서), 週末(주말), 休み(휴일)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> <b>〜て:</b> '帰る(돌아가다)'의 가능형에 'て(~해서)'가 붙은 문법입니다. 일단 통으로 외우세요!</div>
+    </div>
+  </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <p class="jp-text"><span class="speaker">유이:</span> <ruby>毎月<rt>まいつき</rt></ruby>スケジュールが<ruby>違<rt>ちが</rt></ruby>います。たまに<ruby>週末<rt>しゅうまつ</rt></ruby>にも<ruby>仕事<rt>しごと</rt></ruby>をします。</p>
+    <p class="pronunciation">(마이츠키 스케쥬-루가 치가이마스. 타마니 슈우마츠니모 시고토 오 시마스)</p>
+    <p class="ko-text">매달 스케줄이 달라요. 가끔 주말에도 일해요.</p>
+  </div>
+  <div class="detail-area">
+    <div class="vocab-row"><span class="vocab-label">단어</span> 毎月(매달), 違います(다르다), たまに(가끔), 週末(주말), にも(~에도)</div>
+    <div class="grammar-row"><span class="grammar-label">문법</span> <b>にも</b>는 “~에도(포함)” 느낌. 여기서는 “주말에도(평일 말고 주말까지 포함해서)”가 딱 맞음. <b>も</b> 단독은 “~도”이고, 장소/시간이면 보통 <b>に/で + も(にも/でも)</b>로 간다.</div>
+  </div>
+</div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> インスタを<ruby>交換<rt>こうかん</rt></ruby>しませんか。</p>
+      <p class="pronunciation">(인스타 오 코우칸 시마셍까?)</p>
+      <p class="ko-text">인스타 교환 할래요?</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 친해진 후 연락처를 물어볼 때 써야 하는 패턴!</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> いいですね。</p>
+      <p class="pronunciation">(이이 데스네)</p>
+      <p class="ko-text">그래요(좋네요).</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 상대방의 제안을 가장 기분 좋게 수락하는 짧은 멘트입니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">보무:</span> もう<ruby>交流会<rt>こうりゅうかい</rt></ruby>が<ruby>終<rt>お</rt></ruby>わりましたね。これからもよろしくお<ruby>願<rt>ねが</rt></ruby>いします。</p>
+      <p class="pronunciation">(모우 코우류우카이 가 오와리마시타네. 코레카라모 요로시쿠 오네가이시마스)</p>
+      <p class="ko-text">이제(벌써) 한일 교류회가 끝났네요. 앞으로 잘 부탁드립니다.</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> もう(이제/벌써), 終わりましたね(끝났네요), これからも(앞으로도)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 모임이 파할 때 아쉬움을 나타내며 쓰는 멘트입니다. 과거형 '終わりました(끝났습니다)'에 'ね(네)'를 붙여 여운을 줍니다.</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">유이:</span> よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</p>
+      <p class="pronunciation">(요로시쿠 오네가이시마스)</p>
+      <p class="ko-text">잘 부탁드려요.</p>
+    </div>
+    <div class="detail-area">
+      <div class="grammar-row"><span class="grammar-label">문법</span> 인사에는 인사로!</div>
+    </div>
+  </div>
+
+  <div class="dialogue-wrapper">
+    <div class="sentence-area">
+      <p class="jp-text"><span class="speaker">영희:</span> また<ruby>会<rt>あ</rt></ruby>いましょう。</p>
+      <p class="pronunciation">(마타 아이마쇼우)</p>
+      <p class="ko-text">또 뵈요(만납시다).</p>
+    </div>
+    <div class="detail-area">
+      <div class="vocab-row"><span class="vocab-label">단어</span> また(또/다시), 会いましょう(만납시다)</div>
+      <div class="grammar-row"><span class="grammar-label">문법</span> 헤어질 때 던지는 최고의 인삿말입니다. 동갑이나 편한 사이라면 "またね(마타네!)" 라고 해도 좋습니다.</div>
+    </div>
+  </div>
+
+  <br>
+
+  <h2 style="margin-top:50px;">드릴 3. 프리토킹: 무한 핑퐁 스파링</h2>
+  <p class="section-desc">📌 배운 뼈대(문법 패턴)에 아래 단어들을 쏙쏙 끼워 넣고, 나만의 문장으로 옆 사람과 스파링을 해보세요!</p>
+
+  <div class="pattern-box">
+  <div class="pattern-syntax">
+    [주어] は/が + [명사] 
+    です / ですか / じゃありません / ではありません / でした / じゃありませんでした / ではありませんでした / でしょう
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 명사문 (です 문장 완전 정리)</b><br><br>
+
+    <b>① 현재 긍정</b><br>
+    명사 + です → ~입니다<br>
+    例: 私は学生です。<br><br>
+
+    <b>② 의문</b><br>
+    ですか → ~입니까?<br>
+    例: 学生ですか。<br><br>
+
+    <b>③ 현재 부정 (회화형)</b><br>
+    じゃありません → 교재 + 회화 둘 다 사용<br>
+    例: 学生じゃありません。<br><br>
+
+    <b>④ 현재 부정 (정중형)</b><br>
+    ではありません → 가장 정중 / 시험형<br>
+    例: 学生ではありません。<br><br>
+
+    <b>⑤ 과거 긍정</b><br>
+    でした → ~이었습니다<br>
+    例: 学生でした。<br><br>
+
+    <b>⑥ 과거 부정 (회화형)</b><br>
+    じゃありませんでした<br>
+    例: 学生じゃありませんでした。<br><br>
+
+    <b>⑦ 과거 부정 (정중형)</b><br>
+    ではありませんでした<br>
+    例: 学生ではありませんでした。<br><br>
+
+    <b>⑧ 추측 / 확인</b><br>
+    でしょう → ~일 것입니다 / 그렇겠죠<br>
+    例: 学生でしょう。
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ 예문 모음 (패턴별)<br><br>
+
+    ・<ruby>私<rt>わたし</rt></ruby>は <ruby>韓国人<rt>かんこくじん</rt></ruby> です。<br>
+    ・あなたは <ruby>学生<rt>がくせい</rt></ruby> ですか。<br>
+    ・ボムさんは <ruby>先生<rt>せんせい</rt></ruby> じゃありません。<br>
+    ・ボムさんは <ruby>先生<rt>せんせい</rt></ruby> ではありません。<br>
+    ・<ruby>昨日<rt>きのう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>み でした。<br>
+    ・<ruby>犯人<rt>はんにん</rt></ruby> は ボムさん じゃありませんでした。<br>
+    ・<ruby>犯人<rt>はんにん</rt></ruby> は ボムさん ではありませんでした。<br>
+    ・あの<ruby>人<rt>ひと</rt></ruby>は <ruby>日本人<rt>にほんじん</rt></ruby> でしょう。
+  </p>
+
+    
+    <span class="vocab-label" style="display:inline-block; margin-top:20px; background:#e0e7ff; color:#1e40af; font-size:14px; padding:4px 10px;">넣어볼 단어 (주어 / 명사)</span>
+    <div class="word-grid">
+      <div class="word-item">私 (나)<span>わたし / 와타시</span></div>
+      <div class="word-item">あなた (당신)<span>あなた / 아나타</span></div>
+      <div class="word-item">彼 (그)<span>かれ / 카레</span></div>
+      <div class="word-item">彼女 (그녀)<span>かのじょ / 카노죠</span></div>
+      <div class="word-item">先生 (선생님)<span>せんせい / 센세이</span></div>
+      <div class="word-item">学生 (학생)<span>がくせい / 가쿠세이</span></div>
+      <div class="word-item">会社員 (회사원)<span>かいしゃいん / 카이샤인</span></div>
+      <div class="word-item">医者 (의사)<span>いしゃ / 이샤</span></div>
+      <div class="word-item">友達 (친구)<span>ともだち / 토모다치</span></div>
+      <div class="word-item">家族 (가족)<span>かぞく / 카조쿠</span></div>
+      <div class="word-item">日本人 (일본인)<span>にほんじん / 니혼진</span></div>
+      <div class="word-item">韓国人 (한국인)<span>かんこくじん / 칸코쿠진</span></div>
+      <div class="word-item">大人 (어른)<span>おとな / 오토나</span></div>
+      <div class="word-item">子供 (아이)<span>こども / 코도모</span></div>
+      <div class="word-item">男 (남자)<span>おとこ / 오토코</span></div>
+      <div class="word-item">女 (여자)<span>おんな / 온나</span></div>
+      <div class="word-item">先輩 (선배)<span>せんぱい / 센파이</span></div>
+      <div class="word-item">後輩 (후배)<span>こうはい / 코우하이</span></div>
+      <div class="word-item">社長 (사장)<span>しゃちょう / 샤쵸우</span></div>
+      <div class="word-item">専門家 (전문가)<span>せんもんか / 센몬카</span></div>
+      <div class="word-item">趣味 (취미)<span>しゅみ / 슈미</span></div>
+      <div class="word-item">仕事 (일/직업)<span>しごと / 시고토</span></div>
+      <div class="word-item">休み (휴일)<span>やすみ / 야스미</span></div>
+      <div class="word-item">会議 (회의)<span>かいぎ / 카이기</span></div>
+      <div class="word-item">約束 (약속)<span>やくそく / 야쿠소쿠</span></div>
+      <div class="word-item">本当 (진실)<span>ほんとう / 혼토우</span></div>
+      <div class="word-item">嘘 (거짓말)<span>うそ / 우소</span></div>
+      <div class="word-item">正解 (정답)<span>せいかい / 세이카이</span></div>
+      <div class="word-item">無料 (무료)<span>むりょう / 무료우</span></div>
+      <div class="word-item">有料 (유료)<span>ゆうりょう / 유우료우</span></div>
+    </div>
+  </div>
+
+<div class="pattern-box">
+
+  <div class="pattern-syntax">
+    い형용사 / な형용사 활용 전체 정리
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 い형용사 활용</b><br><br>
+
+    ✔ 현재 긍정 → 美味しい(맛있다,<span>(おいしい / 오이시이[い형용사])</span>)<br>
+    ✔ 현재 부정 → 美味しくない<br>
+    ✔ 현재 정중 → 美味しいです<br>
+    ✔ 현재 부정 정중 → 美味しくないです / 美味しくありません<br><br>
+
+    ✔ 과거 긍정 → 美味しかった<br>
+    ✔ 과거 정중 → 美味しかったです<br>
+    ✔ 과거 부정 → 美味しくなかった<br>
+    ✔ 과거 부정 정중 → 美味しくなかったです / 美味しくありませんでした<br><br>
+
+    ✔ 연결 → 美味しくて<br>
+    ✔ 가정 → 美味しければ
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ い형용사 예문<br><br>
+
+    ・このケーキは <ruby>美味<rt>おい</rt></ruby>しいです。<br>
+    ・このケーキは 美味しくないです。<br>
+    ・昨日は 美味しかったです。<br>
+    ・昨日は 美味しくなかったです。<br>
+    ・美味しくて たくさん食べました。<br>
+    ・安ければ 買います。
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 な형용사 활용</b><br><br>
+
+    ✔ 현재 긍정 → 静か(조용하다<span>(しずかだ / 시즈카다 [な형용사])</span>)だ / 静かです<br>
+    ✔ 현재 부정 → 静かじゃない / 静かではない<br>
+    ✔ 현재 부정 정중 → 静かじゃありません / 静かではありません<br><br>
+
+    ✔ 과거 긍정 → 静かだった / 静かでした<br>
+    ✔ 과거 부정 → 静かじゃなかった / 静かではなかった<br>
+    ✔ 과거 부정 정중 → 静かじゃありませんでした / 静かではありませんでした<br><br>
+
+    ✔ 명사 수식 → 静かな 部屋<br>
+    ✔ 연결 → 静かで<br>
+    ✔ 가정 → 静かなら
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ な형용사 예문<br><br>
+
+    ・このカフェは <ruby>静<rt>しず</rt></ruby>かです。<br>
+    ・このカフェは 静かじゃありません。<br>
+    ・昨日は 静かでした。<br>
+    ・昨日は 静かではありませんでした。<br>
+    ・静かな 部屋が 好きです。<br>
+    ・静かなら 勉強できます。
+  </p>
+
+    <div class="word-grid">
+      <div class="word-item">美味しい (맛있다)<span>おいしい / 오이시이 [い]</span></div>
+      <div class="word-item">高い (비싸다/높다)<span>たかい / 타카이 [い]</span></div>
+      <div class="word-item">安い (싸다)<span>やすい / 야스이 [い]</span></div>
+      <div class="word-item">大きい (크다)<span>おおきい / 오오키이 [い]</span></div>
+      <div class="word-item">小さい (작다)<span>ちいさい / 치이사이 [い]</span></div>
+      <div class="word-item">新しい (새롭다)<span>あたらしい / 아타라시이 [い]</span></div>
+      <div class="word-item">古い (낡다)<span>ふるい / 후루이 [い]</span></div>
+      <div class="word-item">良い (좋다)<span>いい / 이이 [い]</span></div>
+      <div class="word-item">悪い (나쁘다)<span>わるい / 와루이 [い]</span></div>
+      <div class="word-item">暑い (덥다)<span>あつい / 아츠이 [い]</span></div>
+      <div class="word-item">寒い (춥다)<span>さむい / 사무이 [い]</span></div>
+      <div class="word-item">忙しい (바쁘다)<span>いそがしい / 이소가시이 [い]</span></div>
+      <div class="word-item">面白い (재밌다)<span>おもしろい / 오모시로이 [い]</span></div>
+      <div class="word-item">痛い (아프다)<span>いたい / 이타이 [い]</span></div>
+      <div class="word-item">怖い (무섭다)<span>こわい / 코와이 [い]</span></div>
+      <div class="word-item">好きだ (좋아하다)<span>すきだ / 스키다 [な]</span></div>
+      <div class="word-item">嫌いだ (싫어하다)<span>きらいだ / 키라이다 [な]</span></div>
+      <div class="word-item">静かだ (조용하다)<span>しずかだ / 시즈카다 [な]</span></div>
+      <div class="word-item">綺麗だ (깨끗/예쁘다)<span>きれいだ / 키레이다 [な]</span></div>
+      <div class="word-item">有名だ (유명하다)<span>ゆうめいだ / 유우메이다 [な]</span></div>
+      <div class="word-item">親切だ (친절하다)<span>しんせつだ / 신세츠다 [な]</span></div>
+      <div class="word-item">便利だ (편리하다)<span>べんりだ / 벤리다 [な]</span></div>
+      <div class="word-item">不便だ (불편하다)<span>ふべんだ / 후벤다 [な]</span></div>
+      <div class="word-item">元気だ (건강하다)<span>げんきだ / 겐키다 [な]</span></div>
+      <div class="word-item">暇だ (한가하다)<span>ひまだ / 히마다 [な]</span></div>
+      <div class="word-item">簡単だ (간단하다)<span>かんたんだ / 칸탄다 [な]</span></div>
+      <div class="word-item">大変だ (힘들다)<span>たいへんだ / 타이헨다 [な]</span></div>
+      <div class="word-item">上手だ (능숙하다)<span>じょうずだ / 죠우즈다 [な]</span></div>
+      <div class="word-item">下手だ (서툴다)<span>へただ / 헤타다 [な]</span></div>
+      <div class="word-item">立派だ (훌륭하다)<span>りっぱだ / 릿파다 [な]</span></div>
+    </div>
+  </div>
+
+  <div class="pattern-box">
+
+  <div class="pattern-syntax">
+    동사 ます형 완전 정리 (1류 / 2류 / 3류 + 구분법)
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 ます형이란?</b><br><br>
+    정중하게 행동을 말할 때 쓰는 기본 형태입니다.<br>
+    일본어 회화와 자기소개 대부분이 ます형으로 시작합니다.
+  </p>
+
+  <p>
+    부정 → 〜ません<br>
+    과거 → 〜ました<br>
+    과거부정 → 〜ませんでした
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>📌 동사 구분법</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>① 2류 동사</b><br>
+    「〜<ruby>える<rt>eru</rt></ruby> / 〜<ruby>いる<rt>iru</rt></ruby>」로 끝나는 경우가 많으며<br>
+    <b>る를 제거하고 ます</b>를 붙입니다.<br><br>
+
+    例:<br>
+    <ruby>食<rt>た</rt></ruby>べる / <ruby>見<rt>み</rt></ruby>る / <ruby>起<rt>お</rt></ruby>きる
+  </p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>② 1류 동사</b><br>
+    위 규칙이 아닌 대부분 동사<br>
+    마지막 글자를 <b>い단</b>으로 바꾸고 ます
+  </p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>③ 3류 동사</b><br>
+    <ruby>来<rt>く</rt></ruby>る / する (두 개만 존재)
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>① 1류 동사 변형</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>きます<br>
+    <ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>みます<br>
+    <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby>みます<br>
+    <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby>します<br>
+    <ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>います<br>
+    <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>きます
+  </p>
+
+  <p>
+    부정 → 〜ません<br>
+    과거 → 〜ました<br>
+    과거부정 → 〜ませんでした
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>② 2류 동사 변형</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べます<br>
+    <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby>ます<br>
+    <ruby>起<rt>お</rt></ruby>きる → <ruby>起<rt>お</rt></ruby>きます<br>
+    <ruby>寝<rt>ね</rt></ruby>る → <ruby>寝<rt>ね</rt></ruby>ます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>③ 3류 동사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    する → します<br>
+    <ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>き</rt></ruby>ます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>💡 목적어 조사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ます<br>
+    ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます<br>
+    <ruby>音楽<rt>おんがく</rt></ruby>を <ruby>聞<rt>き</rt></ruby>きます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>🚨 존재 동사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #ef4444;">
+    <ruby>友達<rt>ともだち</rt></ruby>が います<br>
+    <ruby>時間<rt>じかん</rt></ruby>が あります
+  </p>
+
+    <div class="word-grid">
+      <div class="word-item">見る (보다)<span>みます / 미마스</span></div>
+      <div class="word-item">映画 (영화)<span>えいが / 에이가</span></div>
+      <div class="word-item">テレビ (TV)<span>テレビ / 테레비</span></div>
+      <div class="word-item">食べる (먹다)<span>たべます / 타베마스</span></div>
+      <div class="word-item">ご飯 (meal)<span>ごはん / 고항</span></div>
+      <div class="word-item">パン (빵)<span>パン / 판</span></div>
+      <div class="word-item">飲む (마시다)<span>のみます / 노미마스</span></div>
+      <div class="word-item">水 (물)<span>みず / 미즈</span></div>
+      <div class="word-item">コーヒー (coffee)<span>コーヒー / 코-히-</span></div>
+      <div class="word-item">買う (사다)<span>かいます / 카이마스</span></div>
+      <div class="word-item">鞄 (가방)<span>かばん / 카반</span></div>
+      <div class="word-item">靴 (구두)<span>くつ / 쿠츠</span></div>
+      <div class="word-item">読む (읽다)<span>よみます / 요미마스</span></div>
+      <div class="word-item">本 (책)<span>ほん / 혼</span></div>
+      <div class="word-item">雑誌 (잡지)<span>ざっし / 잣시</span></div>
+      <div class="word-item">書く (쓰다)<span>かきます / 카키마스</span></div>
+      <div class="word-item">手紙 (편지)<span>てがみ / 테가미</span></div>
+      <div class="word-item">聞く (듣다)<span>ききます / 키키마스</span></div>
+      <div class="word-item">音楽 (음악)<span>おんがく / 온가쿠</span></div>
+      <div class="word-item">する (하다)<span>します / 시마스</span></div>
+      <div class="word-item">仕事 (일)<span>しごと / 시고토</span></div>
+      <div class="word-item">勉強 (공부)<span>べんきょう / 벤쿄우</span></div>
+      <div class="word-item">運動 (운동)<span>うんどう / 운도우</span></div>
+      <div class="word-item">掃除 (청소)<span>そうじ / 소우지</span></div>
+      <div class="word-item">います (있습니다)<span>사람/동물이</span></div>
+      <div class="word-item">友達 (친구)<span>ともだち / 토모다치</span></div>
+      <div class="word-item">犬 (개)<span>いぬ / 이누</span></div>
+      <div class="word-item">あります (있습니다)<span>사물/식물이</span></div>
+      <div class="word-item">時間 (시간)<span>じかん / 지칸</span></div>
+      <div class="word-item">お金 (money)<span>おかね / 오카네</span></div>
+    </div>
+  </div>
+
+</div>
