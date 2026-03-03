@@ -100,8 +100,6 @@
 
   <!-- <p>💡 <b>문장 설계 원칙:</b> 실제로는 더 일본어다운(원어민다운) 표현이 많이 있지만, 그걸 그대로 쓰면 <b>개념/문법 설명량이 급격히 늘어</b> 입문 단계에서는 흐름이 끊깁니다. 그래서 이 교재는 일부 표현을 <b>의도적으로 단순화</b>했고, 초급 범위에서 “바로 말할 수 있는 형태”를 우선 채택했습니다.</p> -->
 
-  <p>💡 
-
   <p>💡 <b>한자 노출:</b> 입문자라도 생활에서 자주 마주치는 한자는 일부러 넣었습니다. 반복해서 말하고 읽다 보면 겁이 줄고, 현지 환경(간판/메뉴/앱)에서 익숙해지는 것과 비슷하게 암기가 빨라집니다. 스마트폰/PC로 문장을 직접 입력해보는 것도 추천합니다.</p>
 
   <p>💡 <b>체육관식 훈련:</b> 우리 모임은 격투기 체육관처럼 운영됩니다. 실력과 상관없이 그날의 드릴을 같이 익히고, 파트너를 바꿔가며 반복합니다. 코치가 일본어를 1:1로 교정하며 “말이 나오는 상태”를 만드는 게 목표입니다.</p>
@@ -468,8 +466,8 @@
         <span class="l-badge l-n3">N3</span>
         <span class="l-badge l-polite">원어민(정중)</span>
       </div>
-      <p class="jp-text"><span class="speaker">유이:</span> <ruby>私<rt>わたし</rt></ruby>はK-POP(ケーポップ)が<ruby>好<rt>す</rt></ruby>きです。ボムさんはどんな<ruby>歌<rt>うた</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？</p>
-      <p class="pronunciation">(와타시와 케-폽푸가 스키 데스. 보무산와 돈나 우타가 스키 데스카?)</p>
+      <p class="jp-text"><span class="speaker">보무:</span> ありがとうございます。<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>て3<ruby>年<rt>ねん</rt></ruby>になります。ユイさんの<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？</p>
+      <p class="pronunciation">(아리가토우 고자이마스. 니혼니 키테 산넨니 나리마스. 유이산노 슈미와 난 데스카?)</p>
     </div>
 
     <div>
@@ -477,16 +475,16 @@
         <span class="l-badge l-n2">N2</span>
         <span class="l-badge l-casual">원어민(캐주얼)</span>
       </div>
-      <p class="jp-text"><span class="speaker">유이:</span> <ruby>私<rt>わたし</rt></ruby>、K-POPによくハマってるんです。ボムさんは<ruby>普段<rt>ふだん</rt></ruby>、どんなジャンルを<ruby>聴<rt>き</rt></ruby>くんですか？</p>
-      <p class="pronunciation">(와타시, 케-폽푸니 요쿠 하맛테룬데스. 보무산와 후단, 돈나 쟌루 오 키쿤데스카?)</p>
+      <p class="jp-text"><span class="speaker">보무:</span> ありがとうございます！<ruby>今年<rt>ことし</rt></ruby>でちょうど3<ruby>年<rt>ねん</rt></ruby>になりますね。ちなみに、ユイさんは<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>とか<ruby>何<rt>なに</rt></ruby>されてるんですか？</p>
+      <p class="pronunciation">(아리가토우 고자이마스! 코토시데 쵸우도 산넨니 나리마스네. 치나미니, 유이산와 야스미노 히토카 나니 사레테룬데스카?)</p>
     </div>
 
-    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">저는 케이팝을 좋아합니다. 보무씨는 어떤 노래를 좋아합니까?</p>
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">고맙습니다. 일본에 온 지 3년이 되었습니다. 유이씨의 취미는 무엇입니까? (쉬는 날엔 주로 뭘 하시나요?)</p>
   </div>
 
   <div class="detail-area">
     <div class="vocab-row">
-      <span class="vocab-label">단어</span> 好き(すき/좋아함), どんな(어떤), 歌(うた/노래), 普段(ふだん/평소), 聴く(きく/듣다)
+      <span class="vocab-label">단어</span> ありがとうございます(고맙습니다), 日本(にほん/일본), に(~에), 来(き)て(오고/와서), 3年(さんねん/3년), になります(~이/가 됩니다), 〜の(~의), 趣味(しゅみ/취미), 〜は(~은/는), 何(なん/なに/무엇), ですか(~입니까), 今年(ことし/올해), で(~로/기준), ちょうど(딱/마침), になりますね(~되네요), ちなみに(참고로/그건 그렇고), 休(やす)みの日(ひ/쉬는 날), 〜とか(~라든가/~같은), されてるんですか(하시고 있나요)
     </div>
     
     <div class="grammar-row">
@@ -495,10 +493,68 @@
       <div class="desc-item">
         <span class="desc-label n4-text">● N4 레벨</span>
         <div class="grammar-sub-title">1. 패턴 중심</div>
-        <p style="margin:0 0 5px 0;"><b>[명사] + が 好(す)きです</b> : "~을/를 좋아합니다"라는 뜻입니다. 일본어에서는 감정이나 선호를 나타낼 때 목적어 조사(を) 대신 <b>주격 조사(が)</b>를 주로 사용합니다.<br>
-        <b>どんな + [명사]</b> : 대상의 종류나 구체적인 내용을 물어볼 때 사용하는 의문사입니다.</p>
+        <p style="margin:0 0 5px 0;"><b>[명사/시간] + に なります</b> : 시간의 경과를 나타내는 패턴으로, '~이/가 되었습니다'로 해석됩니다.<br>
+        <b>趣味(しゅみ)は何(なん)ですか</b> : 상대방의 취미나 관심사를 묻는 가장 기초적이고 명확한 의문문입니다.</p>
         <div class="grammar-sub-title">2. 뉘앙스</div>
-        <p style="margin:0;">자신의 기호를 먼저 밝히고 상대방의 의견을 묻는 구조는 상호 공감대를 형성하는 데 효과적입니다.</p>
+        <p style="margin:0;">칭찬에 감사함을 표한 뒤 자신의 정보를 제공하고, 이어서 상대방에게 질문을 던짐으로써 대화의 주도권을 주고받는 기본적인 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">来(き)て</span> : 동사 `来る(오다)`의 `て`형을 사용하여 '일본에 와서 ~년이 지났다'는 시간적 흐름을 객관적으로 서술합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">今年(ことし)で / ちょうど</span> : 기간의 기준점을 나타내는 조사 `で`와 부사 `ちょうど(딱)`를 사용하여 체류 기간에 대한 감각을 덧붙입니다.<br>
+        <span class="grammar-focus">ちなみに (접속사)</span> : 앞의 내용에 이어 부연 설명을 하거나, 화제를 자연스럽게 전환할 때 쓰이는 구어체 접속사입니다.<br>
+        <span class="grammar-focus">休(やす)みの日(ひ)とか何(なに)されている</span> : 취미를 직접 묻는 `趣味は` 대신, '쉬는 날 같은 때(〜とか) 무엇을 하시느냐(されている)'고 에둘러 질문함으로써 대화를 한층 더 부드럽고 사교적으로 풀어냅니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>音楽<rt>おんがく</rt></ruby>です。<ruby>私<rt>わたし</rt></ruby>はK-POP(ケーポップ)が<ruby>好<rt>す</rt></ruby>きです。ボムさんはどんな<ruby>歌<rt>うた</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？</p>
+      <p class="pronunciation">(온가쿠 데스. 와타시와 케-폽푸 가 스키 데스. 보무산와 돈나 우타 가 스키 데스카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> よく<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聴<rt>き</rt></ruby>いてますね。<ruby>私<rt>わたし</rt></ruby>、K-POPによくハマってるんです。ボムさんは<ruby>普段<rt>ふだん</rt></ruby>、どんなジャンルを<ruby>聴<rt>き</rt></ruby>くんですか？</p>
+      <p class="pronunciation">(요쿠 온가쿠 오 키이테마스네. 와타시, 케-폽푸니 요쿠 하맛테룬데스. 보무산와 후단, 돈나 쟌루 오 키쿤데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">음악입니다(음악을 자주 들어요). 저는 케이팝을 좋아합니다. 보무씨는 어떤 노래를(장르를) 좋아합니까?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 音楽(おんがく/음악), です(~입니다), 私(わたし/저,나), は(~은/는), K-POP(ケーポップ/케이팝), が(~이/가), 好き(すき/좋아함), どんな(어떤), 歌(うた/노래), ですか(~입니까), よく(자주/잘), を(~을/를), 聴(き)く(듣다), 聴(き)いてます(듣고 있습니다), 〜に(~에), ハマっている(빠져 있다), 普段(ふだん/평소), ジャンル(장르)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>[명사] + です</b> : 상대방의 질문(취미는 무엇입니까?)에 대해 명사만으로 직관적이고 간결하게 대답하는 기초 패턴입니다.<br>
+        <b>[명사] + が 好(す)きです</b> : "~을/를 좋아합니다"라는 뜻입니다. 일본어에서는 감정이나 선호를 나타낼 때 목적어 조사(を) 대신 <b>주격 조사(が)</b>를 주로 사용합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">질문에 대한 답변을 간결하게 마친 뒤, 자신의 구체적인 기호를 밝히고 상대방의 의견을 묻는 구조는 상호 공감대를 형성하는 데 효과적입니다.</p>
       </div>
 
       <div class="desc-item">
@@ -512,8 +568,8 @@
       <div class="desc-item">
         <span class="desc-label n2-text">● N2 & 원어민 실전</span>
         <div class="grammar-sub-title">1. 문법 구조 해부</div>
-        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜に ハマっている</span> : 현재 무엇인가에 깊이 몰두하고 있거나 푹 빠져 있음을 나타내는 회화체 표현입니다.<br>
-        <span class="grammar-focus">普段(ふだん)</span> : "평소"를 뜻하며, 질문의 범위를 일상으로 좁혀 자연스러움을 더합니다.<br>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">よく〜てますね</span> : 부사 `よく(자주)`와 진행형 축약(`〜ている` -> `〜てる`)을 결합하여 평소의 습관을 자연스럽게 묘사합니다.<br>
+        <span class="grammar-focus">〜に ハマっている</span> : 현재 무엇인가에 깊이 몰두하고 있거나 푹 빠져 있음을 나타내는 회화체 표현입니다.<br>
         <span class="grammar-focus">聴(き)くんですか</span> : 음악 감상처럼 주의 깊게 듣는 행위에는 `聞く`보다 `聴く`라는 한자를 사용하는 것이 맥락상 더 적절합니다.</p>
         <div class="grammar-sub-title">2. 뉘앙스</div>
         <p style="margin:0;">음악 취향을 주제로 대화할 때 'K-POP' 외에도 'EDM', '시티팝(City Pop)' 등 구체적인 장르(ジャンル)를 덧붙여 질문하면, 상대방과 한층 더 깊이 있는 소통을 이어갈 수 있습니다.</p>
@@ -592,7 +648,7 @@
         <span class="l-badge l-n3">N3</span>
         <span class="l-badge l-polite">원어민(정중)</span>
       </div>
-      <p class="jp-text"><span class="speaker">유이:</span> とても<ruby>有名<rt>ゆうめい</rt></ruby>ですね。ほとんど의 <ruby>人<rt>ひと</rt></ruby>은 <ruby>知<rt>し</rt></ruby>っていますよ。</p>
+      <p class="jp-text"><span class="speaker">유이:</span> とても<ruby>有名<rt>ゆうめい</rt></ruby>ですね。ほとんどの<ruby>人<rt>ひと</rt></ruby>は<ruby>知<rt>し</rt></ruby>っていますよ。</p>
       <p class="pronunciation">(토테모 유우메이 데스네. 호톤도노 히토와 싯테이마스요)</p>
     </div>
 
@@ -1579,7 +1635,7 @@
         <span class="l-badge l-n2">N2</span>
         <span class="l-badge l-casual">원어민(캐주얼)</span>
       </div>
-      <p class="jp-text"><span class="speaker">유이:</span> ぜひぜひ！よろしくお願いします。ありがとうございます！</p>
+      <p class="jp-text"><span class="speaker">유이:</span> ぜひぜひ！よろしくお願いします。ありがとうございます。</p>
       <p class="pronunciation">(제히제히! 요로시쿠 오네가이시마스. 아리가토우 고자이마스!)</p>
     </div>
 
