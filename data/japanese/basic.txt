@@ -257,7 +257,7 @@
 
     <div class="practice-item">
       <div class="word-hints">
-        <div class="word-chip"><ruby>韓日交流会<rt>かんにちこうりゅうかい</rt></ruby> <span>(한일 교류회)</span></div>
+        <div class="word-chip"><ruby>日韓交流会<rt>にっかんこうりゅうかい</rt></ruby> <span>(한일 교류회)</span></div>
         <div class="word-chip"><ruby>初<rt>はじ</rt></ruby>めて <span>(처음)</span></div>
       </div>
       <div class="kr-sentence">3. 한일 교류회는 처음입니다.</div>
