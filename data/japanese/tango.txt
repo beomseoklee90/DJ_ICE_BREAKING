@@ -61,7 +61,7 @@
 
 <div class="vocab-panel">
   <div class="panel-header" style="background: #2e7d32;">
-    <h2>일본어 작문 트레이닝 - LEVEL N5</h2>
+    <h2>일본어 말하기 트레이닝 - LEVEL N5</h2>
     <p style="font-size: 0.9rem; opacity: 0.8; margin: 10px 0 0 0;">기초 문장 구성을 위한 필수 단어 세트 (각 20개)</p>
   </div>
 
@@ -198,7 +198,7 @@
 
 <div class="vocab-panel">
   <div class="panel-header">
-    <h2 style="margin:0;">일본어 작문 트레이닝 - LEVEL N4</h2>
+    <h2 style="margin:0;">일본어 말하기 트레이닝 - LEVEL N4</h2>
   </div>
 
   <div class="level-group">
@@ -334,7 +334,7 @@
 
 <div class="vocab-panel">
   <div class="panel-header">
-    <h2 style="margin:0;">일본어 작문 트레이닝 - LEVEL N3</h2>
+    <h2 style="margin:0;">일본어 말하기 트레이닝 - LEVEL N3</h2>
   </div>
 
   <div class="level-group">
@@ -470,7 +470,7 @@
 
 <div class="vocab-panel">
   <div class="panel-header">
-    <h2 style="margin:0;">일본어 작문 트레이닝 - LEVEL N2</h2>
+    <h2 style="margin:0;">일본어 말하기 트레이닝 - LEVEL N2</h2>
   </div>
 
   <div class="level-group">
