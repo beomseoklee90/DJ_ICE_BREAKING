@@ -263,7 +263,7 @@
       <div class="kr-sentence">3. 한일 교류회는 처음입니다.</div>
       <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
       <div class="jp-sentence">
-        <ruby>韓日交流会<rt>かんにちこうりゅうかい</rt></ruby>は <ruby>初<rt>はじ</rt></ruby>めてです。
+        <ruby>日韓交流会<rt>にっかんこうりゅうかい</rt></ruby>は <ruby>初<rt>はじ</rt></ruby>めてです。
       </div>
     </div>
 
