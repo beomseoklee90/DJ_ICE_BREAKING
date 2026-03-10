@@ -1,0 +1,355 @@
+동사의 형태 변화[중급]
+<style>
+  :root {
+    --primary-color: #4f46e5;
+    --primary-light: #e0e7ff;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-card: #ffffff;
+    --bg-page: #f9fafb;
+    --border-color: #e5e7eb;
+    --jp-color: #ea580c;
+  }
+
+  .pattern-section {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    line-height: 1.7;
+  }
+
+  .pattern-header {
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pattern-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+  }
+
+  .pattern-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .grammar-box {
+    background-color: var(--bg-page);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    font-size: 1.05rem;
+  }
+
+  .grammar-box h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    font-size: 1.3rem;
+  }
+
+  .grammar-box p {
+    margin-bottom: 14px;
+    color: var(--text-muted);
+  }
+
+  .grammar-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .nuance-highlight {
+    background-color: #fffbeb;
+    padding: 12px 16px;
+    border-left: 4px solid #f59e0b;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+
+  /* 요미가나(후리가나) 스타일 */
+  ruby {
+    ruby-align: center;
+  }
+  rt {
+    font-size: 0.6em;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .formula-box {
+    text-align: center;
+    background-color: #f3f4f6;
+    padding: 24px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    border: 1px dashed #9ca3af;
+  }
+
+  .practice-container {
+    margin-top: 24px;
+  }
+
+  .practice-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+  }
+
+  .practice-item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .practice-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 문장별 단어 힌트 영역 */
+  .word-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    background-color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .word-chip {
+    background-color: white;
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+  }
+
+  .word-chip span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 6px;
+    font-weight: 400;
+  }
+
+  .kr-sentence {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .toggle-btn {
+    align-self: flex-start;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-btn:hover {
+    background-color: var(--primary-light);
+  }
+
+  .jp-sentence {
+    display: none;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    color: var(--jp-color);
+    font-weight: 600;
+    background-color: #fff7ed;
+    padding: 16px 20px;
+    border-left: 4px solid var(--jp-color);
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease-in-out;
+    line-height: 2;
+  }
+
+  .jp-note {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-weight: normal;
+    margin-top: 8px;
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<div class="pattern-section">
+<div class="pattern-header">
+<h2 class="pattern-title">[동사 활용 01] 수동형의 다양한 얼굴</h2>
+<h3 class="pattern-subtitle">동사 + <ruby>れる<rt>레루</rt></ruby> / <ruby>られる<rt>라레루</rt></ruby></h3>
+</div>
+
+<div class="grammar-box">
+<h4>💡 문법 원리와 뉘앙스</h4>
+<p><strong>1. 수동 (당하다)</strong>
+
+
+가장 기본이 되는 쓰임입니다. 누군가에게 무언가를 당했을 때 사용합니다. 특히 일본어에는 내가 원치 않는 일을 당해 곤란해졌을 때 쓰는 '피해 수동' 뉘앙스가 강합니다.</p>
+
+<p><strong>2. 존경 (하시다)</strong><br>
+앞서 배운 `お〜になる`나 '특수 존경어'보다 조금 더 일상적이고 가벼운 존경 표현입니다. 윗사람의 행동을 높일 때 동사를 수동형으로 바꾸어 표현합니다.</p>
+
+<p><strong>3. 가능 (할 수 있다)</strong><br>
+2그룹 동사(一段)의 경우 수동형과 가능형의 모양이 같습니다. 문맥에 따라 '먹히다'인지 '먹을 수 있다'인지 구분해야 합니다.</p>
+</div>
+
+<div class="formula-box">
+1그룹: う단 → あ단 + <strong>れる</strong> (예: 言う → 言われる)
+<br>
+
+2그룹: ます형 + <strong>られる</strong> (예: 食べる → 食べられる)
+<br>
+
+3그룹: する → <strong>される</strong> / 来る → <strong>来(こ)られる</strong>
+</div>
+
+<div class="practice-container">
+<div class="practice-title">🗣️ 문장 조립 연습</div>
+<p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+문맥에 따라 수동(당함)과 존경(높임)의 의미를 구분하여 활용해 보세요.
+</p>
+
+<div class="practice-item">
+  <div class="word-hints">
+    <div class="word-chip"><ruby>叱<rt>しか</rt></ruby>る <span>(혼내다)</span></div>
+    <div class="word-chip"><ruby>先生<rt>せんせい</rt></ruby> <span>(선생님)</span></div>
+  </div>
+  <div class="kr-sentence">1. 숙제를 잊어버려서 선생님께 혼났습니다.</div>
+  <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+  <div class="jp-sentence">
+    <ruby>宿題<rt>しゅくだい</rt></ruby> を <ruby>忘<rt>わす</rt></ruby>れて、 <ruby>先生<rt>せんせい</rt></ruby> に <ruby>叱<rt>しか</rt></ruby>られました。
+    <span class="jp-note">※ '혼냄을 당했다'는 전형적인 수동형 문장입니다.</span>
+  </div>
+</div>
+
+<div class="practice-item">
+  <div class="word-hints">
+    <div class="word-chip"><ruby>何時<rt>なんじ</rt></ruby> <span>(몇 시)</span></div>
+    <div class="word-chip"><ruby>帰<rt>かえ</rt></ruby>る <span>(귀가하다)</span></div>
+  </div>
+  <div class="kr-sentence">2. 부장님은 몇 시에 퇴근하시나요? (존경의 의미로)</div>
+  <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+  <div class="jp-sentence">
+    <ruby>部長<rt>ぶちょう</rt></ruby> は <ruby>何時<rt>なんじ</rt></ruby> に <ruby>帰<rt>かえ</rt></ruby>られますか。
+    <span class="jp-note">※ 수동형(`れる`)을 사용해 상대를 높이는 대중적인 존경 표현입니다.</span>
+  </div>
+</div>
+
+<div class="practice-item">
+  <div class="word-hints">
+    <div class="word-chip"><ruby>紹介<rt>しょうかい</rt></ruby> <span>(소개)</span></div>
+    <div class="word-chip"><ruby>社長<rt>しゃちょう</rt></ruby> <span>(사장님)</span></div>
+  </div>
+  <div class="kr-sentence">3. 사장님이 직접 (저를) 소개하셨습니다.</div>
+  <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+  <div class="jp-sentence">
+    <ruby>社長<rt>しゃちょう</rt></ruby> が <ruby>直接<rt>ちょくせつ</rt></ruby> <ruby>紹介<rt>しょうかい</rt></ruby> されました。
+    <span class="jp-note">※ `する`의 존경/수동형인 `される`가 쓰인 예시입니다.</span>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="pattern-section">
+<div class="pattern-header">
+<h2 class="pattern-title">[동사 활용 02] 누군가에게 행동을 시키기</h2>
+<h3 class="pattern-subtitle">사역형: <ruby>使役<rt>しえき</rt></ruby> (~하게 하다 / ~시키다)</h3>
+</div>
+
+<div class="grammar-box">
+<h4>💡 문법 원리와 뉘앙스</h4>
+<p><strong>1. 강제와 허락의 두 얼굴</strong>
+
+
+사역형은 문맥에 따라 두 가지 의미로 나뉩니다.
+
+
+• <strong>강제:</strong> 억지로 무언가를 시킬 때 (예: 공부를 시키다)
+
+
+• <strong>허락:</strong> 원하는 것을 하게 해줄 때 (예: 자유롭게 놀게 하다)</p>
+
+<p><strong>2. 감정의 유발</strong><br>
+'놀라게 하다(驚かせる)', '기쁘게 하다(喜ばせる)'처럼 상대방의 감정을 불러일으키는 표현으로도 자주 쓰입니다.</p>
+</div>
+
+<div class="formula-box">
+1그룹: う단 → あ단 + <strong>せる</strong> (예: 行く → 行かせる)
+<br>
+
+2그룹: ます형 + <strong>させる</strong> (예: 食べる → 食べさせる)
+<br>
+
+3그룹: する → <strong>させる</strong> / 来る → <strong>来(こ)させる</strong>
+</div>
+
+<div class="practice-container">
+<div class="practice-title">🗣️ 문장 조립 연습</div>
+<p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+상황에 맞춰 '강제'와 '허락'의 뉘앙스를 담아 문장을 만들어 보세요.
+</p>
+
+<div class="practice-item">
+  <div class="word-hints">
+    <div class="word-chip"><ruby>野菜<rt>やさい</rt></ruby> <span>(야채)</span></div>
+    <div class="word-chip"><ruby>食<rt>た</rt></ruby>べる <span>(먹다)</span></div>
+  </div>
+  <div class="kr-sentence">1. 아이에게 야채를 먹게 합니다. (억지로 먹일 때)</div>
+  <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+  <div class="jp-sentence">
+    <ruby>子供<rt>こども</rt></ruby> に <ruby>野菜<rt>やさい</rt></ruby> を <ruby>食<rt>た</rt></ruby>べさせます。
+    <span class="jp-note">※ 2그룹 동사이므로 'させる'를 붙입니다.</span>
+  </div>
+</div>
+
+<div class="practice-item">
+  <div class="word-hints">
+    <div class="word-chip"><ruby>心配<rt>しんぱい</rt></ruby> <span>(걱정)</span></div>
+    <div class="word-chip"><ruby>親<rt>おや</rt></ruby> <span>(부모)</span></div>
+  </div>
+  <div class="kr-sentence">2. 부모님을 걱정시키고 싶지 않습니다.</div>
+  <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+  <div class="jp-sentence">
+    <ruby>親<rt>おや</rt></ruby> を <ruby>心配<rt>しんぱい</rt></ruby> させたくないです。
+    <span class="jp-note">※ '걱정하다(心配する)'라는 3그룹 동사를 사역형으로 바꾼 형태입니다.</span>
+  </div>
+</div>
+
+<div class="practice-item">
+  <div class="word-hints">
+    <div class="word-chip"><ruby>自由<rt>じゆう</rt></ruby> <span>(자유)</span></div>
+    <div class="word-chip"><ruby>考<rt>かん가</rt></ruby>える <span>(생각하다)</span></div>
+  </div>
+  <div class="kr-sentence">3. 저에게 자유롭게 생각하게 해주세요. (허락)</div>
+  <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+  <div class="jp-sentence">
+    <ruby>私<rt>わたし</rt></ruby> に <ruby>自由<rt>じゆう</rt></ruby> に <ruby>考<rt>かんが</rt></ruby>えさせて ください。
+    <span class="jp-note">※ '사역형 + ください'는 정중하게 허락을 구할 때 쓰는 빈출 패턴입니다.</span>
+  </div>
+</div>
