@@ -189,9 +189,9 @@
       <div class="vocab-card"><span class="jp-word"><ruby>興味<rt>きょうみ</rt></ruby>がある</span><span class="kr-mean">흥미가 있다</span></div>
       <div class="vocab-card"><span class="jp-word"><ruby>用事<rt>ようじ</rt></ruby>がある</span><span class="kr-mean">용건이 있다</span></div>
       <div class="vocab-card"><span class="jp-word"><ruby>時間<rt>じかん</rt></ruby>がかかる</span><span class="kr-mean">시간이 걸리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>掃除<rt>そうじ</rt></ruby>をする</span><span class="kr-mean">청소를 하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>洗濯<rt>せんたく</rt></ruby>をする</span><span class="kr-mean">빨래를 하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>散歩<rt>さんぽ</rt></ruby>をする</span><span class="kr-mean">산책을 하다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>掃除<rt>そうじ</rt></ruby>する</span><span class="kr-mean">청소를 하다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>洗濯<rt>せんたく</rt></ruby>する</span><span class="kr-mean">빨래를 하다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>散歩<rt>さんぽ</rt></ruby>する</span><span class="kr-mean">산책을 하다</span></div>
     </div>
   </div>
 </div>
@@ -319,11 +319,11 @@
       <div class="vocab-card"><span class="jp-word"><ruby>都合<rt>つごう</rt></ruby>がいい</span><span class="kr-mean">형편이 좋다</span></div>
       <div class="vocab-card"><span class="jp-word"><ruby>足<rt>あし</rt></ruby>をはこぶ</span><span class="kr-mean">찾아가다</span></div>
       <div class="vocab-card"><span class="jp-word"><ruby>連絡<rt>れんらく</rt></ruby>をとる</span><span class="kr-mean">연락을 취하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>返事<rt>へんじ</rt></ruby>をする</span><span class="kr-mean">답장을 하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>挨拶<rt>あいさつ</rt></ruby>をする</span><span class="kr-mean">인사하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>無理<rt>む리</rt></ruby>をする</span><span class="kr-mean">무리하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>我慢<rt>がまん</rt></ruby>をする</span><span class="kr-mean">참다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>遅刻<rt>ちこく</rt></ruby>をする</span><span class="kr-mean">지각하다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>返事<rt>へんじ</rt></ruby>する</span><span class="kr-mean">답장을 하다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>挨拶<rt>あいさつ</rt></ruby>する</span><span class="kr-mean">인사하다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>無理<rt>むり</rt></ruby>する</span><span class="kr-mean">무리하다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>我慢<rt>がまん</rt></ruby>する</span><span class="kr-mean">참다</span></div>
+      <div class="vocab-card"><span class="jp-word"><ruby>遅刻<rt>ちこく</rt></ruby>する</span><span class="kr-mean">지각하다</span></div>
       <div class="vocab-card"><span class="jp-word"><ruby>経験<rt>けいけん</rt></ruby>を積む</span><span class="kr-mean">경험을 쌓다</span></div>
       <div class="vocab-card"><span class="jp-word"><ruby>予定<rt>よてい</rt></ruby>をたてる</span><span class="kr-mean">계획을 세우다</span></div>
       <div class="vocab-card"><span class="jp-word"><ruby>約束<rt>やくそく</rt></ruby>をまもる</span><span class="kr-mean">약속을 지키다</span></div>
