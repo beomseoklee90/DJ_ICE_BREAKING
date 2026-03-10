@@ -220,7 +220,7 @@
 </div>
 
 <div class="formula-box">
-1그룹: う단 → あ단 + <strong>れる</strong> (예: 言う → 言われる)
+1그룹: う단 → あ단/わ + <strong>れる</strong> (예: 言う → 言われる)
 <br>
 
 2그룹: ます형 + <strong>られる</strong> (예: 食べる → 食べられる)
@@ -300,7 +300,7 @@
 </div>
 
 <div class="formula-box">
-1그룹: う단 → あ단 + <strong>せる</strong> (예: 行く → 行かせる)
+1그룹: う단 → あ단/わ + <strong>せる</strong> (예: 行く → 行かせる)
 <br>
 
 2그룹: ます형 + <strong>させる</strong> (예: 食べる → 食べさせる)

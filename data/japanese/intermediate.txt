@@ -240,7 +240,7 @@
   <div class="kr-sentence">1. (제가) 짐을 들어 드리겠습니다.</div>
   <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
   <div class="jp-sentence">
-    <ruby>荷物<rt>にもつ</rt></ruby> を お<ruby>持<rt>も</rt></ruby>し します。
+    <ruby>荷物<rt>にもつ</rt></ruby> を お<ruby>持<rt>も</rt></ruby>ち します。
     <span class="jp-note">※ '들다'라는 뜻의 持つ를 공식에 대입한 형태입니다.</span>
   </div>
 </div>
