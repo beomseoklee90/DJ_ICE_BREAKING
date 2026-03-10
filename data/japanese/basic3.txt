@@ -659,7 +659,7 @@
     <div class="practice-item">
       <div class="word-hints">
         <div class="word-chip"><ruby>昨日<rt>きのう</rt></ruby> <span>(어제)</span></div>
-        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>이 <span>(덥다)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>い <span>(덥다)</span></div>
       </div>
       <div class="kr-sentence">1. 어제는 더웠습니다.</div>
       <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
@@ -683,7 +683,7 @@
     <div class="practice-item">
       <div class="word-hints">
         <div class="word-chip"><ruby>映画<rt>えいが</rt></ruby> <span>(영화)</span></div>
-        <div class="word-chip"><ruby>面白<rt>おもしろ</rt></ruby>이 <span>(재밌다)</span></div>
+        <div class="word-chip"><ruby>面白<rt>おもしろ</rt></ruby>い <span>(재밌다)</span></div>
       </div>
       <div class="kr-sentence">3. 영화는 매우 재밌었습니다.</div>
       <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>

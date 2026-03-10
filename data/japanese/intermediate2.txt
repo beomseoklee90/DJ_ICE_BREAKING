@@ -202,7 +202,7 @@
 <div class="pattern-section">
 <div class="pattern-header">
 <h2 class="pattern-title">[동사 활용 01] 수동형의 다양한 얼굴</h2>
-<h3 class="pattern-subtitle">동사 + <ruby>れる<rt>레루</rt></ruby> / <ruby>られる<rt>라레루</rt></ruby></h3>
+<h3 class="pattern-subtitle">동사 + <ruby>れる</ruby> / <ruby>られる</ruby></h3>
 </div>
 
 <div class="grammar-box">
