@@ -1,4 +1,4 @@
-1회차
+참고 자료
 <style>
 /* 레벨 배지 스타일 */
   .level-badge-group { display: flex; gap: 4px; margin-bottom: 8px; flex-wrap: wrap; }

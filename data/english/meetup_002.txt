@@ -1,358 +1,2326 @@
-2026.02.01
-
+1회차
 <style>
-@import url('[https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap](https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300;400;500&display=swap)');
+/* 영어 레벨 배지 배경색 */
+  .l-beginner { background: #10b981; } /* 에메랄드 그린 */
+  .l-international { background: #0ea5e9; } /* 스카이 블루 */
+  .l-casual { background: #f43f5e; } /* 로즈 핑크 */
+  .l-academic { background: #8b5cf6; } /* 퍼플 */
 
-/* 로컬 스타일 정의 */
-.meetup-content { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
-.meetup-content h2 { font-family: 'Merriweather', serif; color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 15px; margin-top: 0; }
-.meetup-content h4 { margin: 30px 0 15px 0; color: #2980b9; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; border-left: 4px solid #2980b9; padding-left: 10px; }
-.meetup-content p { font-size: 0.95em; margin-bottom: 10px; color: #444; }
+  /* 영어 해설 타이틀 색상 (배지 색상과 매칭) */
+  .beginner-text { color: #059669; }
+  .international-text { color: #0284c7; }
+  .casual-text { color: #e11d48; }
+  .academic-text { color: #7c3aed; }
 
-.video-box { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 12px 15px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9em; }
-.video-box a { color: #d35400; text-decoration: none; font-weight: 600; }
-.video-box a:hover { text-decoration: underline; }
+  /* 영어 문장 스타일 (일본어 jp-text에 대응) */
+  .en-text { font-size: 20px; font-weight: 700; color: #0f172a; margin: 0 0 5px 0; }
+/* 레벨 배지 스타일 */
+  .level-badge-group { display: flex; gap: 4px; margin-bottom: 8px; flex-wrap: wrap; }
+  .l-badge { font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 4px; color: #fff; }
+  .l-n4 { background: #10b981; } 
+  .l-n3 { background: #3b82f6; } 
+  .l-n2 { background: #8b5cf6; } 
+  .l-polite { background: #f59e0b; } 
+  .l-casual { background: #ec4899; } 
+  
+  .desc-item { margin-bottom: 20px; border-left: 3px solid #e2e8f0; padding-left: 12px; }
+  .desc-label { font-weight: 800; font-size: 14px; display: block; margin-bottom: 6px; }
+  .n4-text { color: #059669; }
+  .n3-text { color: #2563eb; }
+  .n2-text { color: #7c3aed; }
+  
+  .grammar-sub-title { font-weight: 700; color: #475569; margin-top: 8px; margin-bottom: 4px; font-size: 13px; }
+  .grammar-focus { color: #b45309; font-weight: 700; text-decoration: underline; }
+.training-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
 
-.discussion-section { margin-top: 40px; background: #fff; border: 2px solid #2c3e50; padding: 25px; position: relative; }
-.discussion-title { background: #2c3e50; color: #fff; padding: 5px 15px; position: absolute; top: -15px; left: 20px; font-family: 'Merriweather', serif; font-size: 1.1em; }
+.training-banner:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
 
-.q-box { margin-bottom: 30px; border-bottom: 1px dashed #ccc; padding-bottom: 25px; }
-.q-box:last-child { border-bottom: none; padding-bottom: 0; }
-.question { font-weight: 700; font-size: 1.1em; color: #000; margin-bottom: 15px; display: block; }
+.training-banner .finger {
+  font-size: 20px;
+  animation: fingerMove 1.2s infinite ease-in-out;
+}
 
-.sub-questions { margin-bottom: 15px; background: #f9f9f9; padding: 10px; border-radius: 4px; border-left: 3px solid #ccc; }
-.sub-questions ul { margin: 0; padding-left: 20px; }
-.sub-questions li { font-size: 0.9em; color: #555; margin-bottom: 5px; }
+@keyframes fingerMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+  .jp-drill-wrap { font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif; color: #1e293b; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 10px; }
+  
+  /* 공지 및 경고 박스 */
+  .jp-drill-wrap .notice-box { background: #fef2f2; border-left: 5px solid #ef4444; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; }
+  .jp-drill-wrap .notice-box p { margin: 0; font-size: 15px; color: #b91c1c; font-weight: 800; }
+  .jp-drill-wrap .info-box { background: #eff6ff; border-left: 5px solid #3b82f6; padding: 15px 20px; border-radius: 8px; margin-bottom: 30px; }
+  .jp-drill-wrap .info-box p { margin: 0; font-size: 15px; color: #1d4ed8; font-weight: 700; line-height: 1.5; }
 
-.model-answer { background-color: #f1f8ff; border-left: 4px solid #3498db; padding: 15px; margin-top: 15px; font-size: 0.95em; color: #2c3e50; font-family: 'Merriweather', serif; }
-.model-answer strong { font-style: normal; color: #2980b9; font-size: 0.9em; display: inline-block; margin-top: 10px; text-transform: uppercase; font-weight: 800; }
-.model-answer strong:first-child { margin-top: 0; }
-.model-answer p { margin: 5px 0 15px 0; font-style: italic; }
+  .jp-drill-wrap h2 { color: #1d4ed8; border-bottom: 3px solid #bfdbfe; padding-bottom: 10px; margin-top: 40px; font-size: 24px; font-weight: 900;}
+  .jp-drill-wrap .section-desc { color: #475569; font-weight: 600; margin-bottom: 20px; font-size: 15px; }
 
-/* 대규모 단어장 섹션 스타일 */
-.vocab-section { margin-top: 50px; background: #fafafa; border-top: 4px double #ccc; padding-top: 30px; }
-.vocab-movie-title { font-size: 1.2em; font-weight: bold; color: #2c3e50; margin: 30px 0 15px 0; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
-.vocab-grid { display: grid; grid-template-columns: 1fr; gap: 10px; font-size: 0.9em; }
-.vocab-item { background: #fff; padding: 10px; border-radius: 4px; border: 1px solid #eee; }
-.vocab-item b { color: #d35400; }
-.vocab-tag { display: inline-block; font-size: 0.75em; padding: 2px 6px; border-radius: 4px; color: #fff; margin-right: 5px; vertical-align: middle; }
-.tag-std { background-color: #27ae60; } /* Standard */
-.tag-slang { background-color: #8e44ad; } /* Slang */
-.tag-aca { background-color: #2980b9; } /* Academic */
-
-/* 문법 박스 스타일 */
-.grammar-box { margin-top: 15px; background: #fff8e1; border-left: 5px solid #f1c40f; padding: 15px; border-radius: 4px; font-size: 0.95em; }
-.grammar-title { font-weight: bold; color: #e67e22; display: block; margin-bottom: 5px; }
-.grammar-desc { color: #555; margin-bottom: 5px; }
-.grammar-example { background: rgba(255,255,255,0.7); padding: 5px; font-style: italic; color: #333; }
-
-@media (min-width: 600px) { .vocab-grid { grid-template-columns: 1fr 1fr; } }
-
+  /* 대화 래퍼 */
+  .jp-drill-wrap .dialogue-wrapper { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02);}
+  
+  /* 일본어 문장 영역 */
+  .jp-drill-wrap .sentence-area { background: #f8fafc; padding: 15px 20px; border-bottom: 1px dashed #cbd5e1; }
+  .jp-drill-wrap .speaker { font-weight: 900; color: #2563eb; margin-right: 8px; font-size: 17px; }
+  .jp-drill-wrap .jp-text { font-size: 21px; font-weight: 700; color: #0f172a; margin: 0 0 5px 0; }
+  .jp-drill-wrap .pronunciation { font-size: 14px; color: #64748b; font-style: italic; margin: 0 0 5px 0; }
+  .jp-drill-wrap .ko-text { font-size: 15px; color: #334155; margin: 0; font-weight: 600; }
+  
+  /* 단어 및 해설 영역 */
+  .jp-drill-wrap .detail-area { background: #ffffff; padding: 15px 20px; }
+  .jp-drill-wrap .vocab-row { margin-bottom: 12px; font-size: 14.5px; color: #1e293b;}
+  .jp-drill-wrap .vocab-label { font-weight: 800; color: #047857; background: #ccfbf1; padding: 3px 8px; border-radius: 4px; margin-right: 8px; font-size: 12px; }
+  .jp-drill-wrap .grammar-row { font-size: 14.5px; color: #475569; line-height: 1.6;}
+  .jp-drill-wrap .grammar-label { font-weight: 800; color: #b45309; background: #fef3c7; padding: 3px 8px; border-radius: 4px; margin-right: 8px; font-size: 12px; }
+  
+  /* 드릴 3 단어장 박스 */
+  .jp-drill-wrap .pattern-box { background: #f8fafc; border: 2px solid #93c5fd; border-radius: 12px; padding: 25px; margin-bottom: 40px; }
+  .jp-drill-wrap .pattern-syntax { font-size: 19px; font-weight: 900; color: #1e40af; margin: 0 0 15px 0; background: #fff; padding: 15px; border-radius: 8px; text-align: center; border: 2px dashed #3b82f6;}
+  .jp-drill-wrap .word-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 20px; }
+  .jp-drill-wrap .word-item { background: #fff; border: 1px solid #cbd5e1; padding: 10px; border-radius: 8px; text-align: center; font-size: 15px; color: #0f172a; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.02);}
+  .jp-drill-wrap .word-item span { display: block; font-size: 12px; color: #64748b; font-weight: 500; margin-top: 4px;}
+  
+  .jp-drill-wrap ruby rt { font-size: 11px; color: #64748b; } 
 </style>
+<a href="https://www.somoim.co.kr/3e682319-49b4-43af-b071-2b2e9ef3bbf11" target="_blank" class="training-banner">
+  <span class="finger">👈👈</span>
+  오프라인 일본어 트레이닝 참가 정보
+</a>
+<div class="jp-drill-wrap">
 
-<div class="meetup-content">
-<h2>Topic: Actor Focus - Lee Jung-jae (The Limitless Challenger)</h2>
+  <div class="notice-box">
+    <p>🚨 발음 경고: 입문자의 빠른 이해/암기를 위해 한국어 발음을 적었습니다. '데스까', '데쇼우' 등 발음은 반드시 코치를 따라해 주세요. 눈으로 읽지 말고 입술 근육으로 기억해야 합니다!</p>
+  </div>
+  
+<div class="info-box">
+  <p>💡 <b>운영 방식:</b> 이 모임은 ‘문법 설명’보다 <b>말하는 훈련(드릴)</b>에 초점을 둡니다. 설명을 길게 늘리지 않고, 패턴을 잡은 뒤 바로 반복 발화로 몸에 붙이는 방식입니다.</p>
 
-<h4>1. The Stylish Villain (Deliver Us from Evil)</h4>
-<p>Lee plays the ruthless chaser 'Ray'. Usually, villains are hated, but his fashion and intense gaze made him a cultural icon.</p>
-<div class="video-box">
-<strong>📺 Deliver Us from Evil</strong>
+  <!-- <p>💡 <b>문장 설계 원칙:</b> 실제로는 더 일본어다운(원어민다운) 표현이 많이 있지만, 그걸 그대로 쓰면 <b>개념/문법 설명량이 급격히 늘어</b> 입문 단계에서는 흐름이 끊깁니다. 그래서 이 교재는 일부 표현을 <b>의도적으로 단순화</b>했고, 초급 범위에서 “바로 말할 수 있는 형태”를 우선 채택했습니다.</p> -->
 
+  <p>💡 <b>한자 노출:</b> 입문자라도 생활에서 자주 마주치는 한자는 일부러 넣었습니다. 반복해서 말하고 읽다 보면 겁이 줄고, 현지 환경(간판/메뉴/앱)에서 익숙해지는 것과 비슷하게 암기가 빨라집니다. 스마트폰/PC로 문장을 직접 입력해보는 것도 추천합니다.</p>
 
+  <p>💡 <b>체육관식 훈련:</b> 우리 모임은 격투기 체육관처럼 운영됩니다. 실력과 상관없이 그날의 드릴을 같이 익히고, 파트너를 바꿔가며 반복합니다. 코치가 일본어를 1:1로 교정하며 “말이 나오는 상태”를 만드는 게 목표입니다.</p>
 
-
-<a href="https://youtu.be/pUSpvIG2uxk?si=bsGO4h1HuzgdmuYy" target="_blank">👉 Watch Clip (Click)</a>
+  <p>💡 <b>진도 없음:</b> 별도의 진도 개념이 없어서 원할 때 언제든 참여 가능합니다. 여행 회화부터 네트워킹까지, <b>즉시 써먹는 문장</b>을 반복 훈련하며 누적합니다.</p>
 </div>
 
-<h4>2. Bromance & Noir (New World)</h4>
-<p>The legendary chemistry between Lee and Hwang Jung-min. A story about identity, loyalty, and brotherhood.</p>
-<div class="video-box">
-<strong>📺 New World</strong>
+  <h2>드릴 1. [상황1: 한일 교류회 1:1 대화]</h2>
+  <p class="section-desc">처음 만난 사람과 핑퐁을 치며 호감을 쌓는 완벽한 실전 대화입니다.</p>
 
-
-
-
-<a href="https://www.youtube.com/watch?v=ZuS_ekxhs1A" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<h4>3. Global Transformation (Squid Game)</h4>
-<p>He abandoned his cool image to portray a desperate, broke gambler. This role made him a global star.</p>
-<div class="video-box">
-<strong>📺 Squid Game</strong>
-
-
-
-
-<a href="https://www.youtube.com/watch?v=qMdkMW810qY" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<h4>4. The Challenge at 50 (The Acolyte)</h4>
-<p>Debuting in Star Wars as a Jedi Master at age 50. He memorized lines phonetically to overcome the language barrier.</p>
-<div class="video-box">
-<strong>📺 The Acolyte - "Master Sol"</strong>
-
-
-
-
-<a href="https://www.youtube.com/watch?v=4B0aMC-Q-gs" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<h4>5. The Director's Chair (Hunt)</h4>
-<p>Not settling for being a top actor, he wrote and directed his own blockbuster movie.</p>
-<div class="video-box">
-<strong>📺 Hunt - "Director Lee's Action"</strong>
-
-
-
-
-<a href="https://www.youtube.com/watch?v=CSOb8gia_mg" target="_blank">👉 Watch Clip (Click)</a>
-</div>
-
-<div class="discussion-section">
-<div class="discussion-title">🗣 Deep Dive Discussion (Movie Analysis)</div>
-
-<div class="q-box">
-    <span class="question">Q1. Analysis of the Character 'Ray'</span>
-    <div class="sub-questions">
-        <ul>
-            <li>What was the most memorable scene in this movie for you? (e.g., The first entrance, the hallway fight?)</li>
-            <li>Why do you think the audience loved this villain so much? Was it his fashion style or his ruthless personality?</li>
-            <li>How does this role compare to his other villain roles (like in 'The Face Reader')?</li>
-        </ul>
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-beginner">BEGINNER</span>
+        <span class="l-badge l-international">INTERNATIONAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Minsu:</span> Hello. Nice to meet you. I'm Minsu.</p>
+      <p class="pronunciation">/həˈloʊ. naɪs tu miːt juː. aɪm mɪnsu/</p>
     </div>
-    <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
-        <p>"The most memorable scene was his first entrance. His white coat and tattoos created a strong <b>visual impact</b>. Unlike other villains, his stylish appearance made him <b>stand out</b>, making the character more <b>captivating</b> than scary."</p>
-        <strong>[🟣 Slang]</strong>
-        <p>"His entrance was <b>straight-up savage</b>. Usually, villains look messy, but his <b>drip</b> was <b>immaculate</b>. Fans loved him because he had <b>swag</b>. Even though he's a <b>baddie</b>, you kinda <b>root for</b> him because he looks so cool."</p>
-        <strong>[🔵 Academic]</strong>
-        <p>"The director used the <b>aestheticization</b> of violence effectively. By <b>portraying</b> the <b>antagonist</b> with such <b>visceral</b> intensity and <b>sartorial</b> elegance, the film allows the audience to experience a <b>suspension</b> of moral judgment."</p>
+
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-casual">CASUAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Minsu:</span> Hey. Good to meet you. I'm Minsu.</p>
+      <p class="pronunciation">/heɪ. ɡʊd tu miːt juː. aɪm mɪnsu/</p>
     </div>
-</div>
 
-<div class="q-box">
-    <span class="question">Q2. Chemistry with Co-stars</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Who do you think has the best chemistry with Lee Jung-jae? (Hwang Jung-min vs. Jung Woo-sung)</li>
-            <li>In 'New World', his character rarely speaks. How did he express his emotions without lines?</li>
-            <li>Why do you think the "Elevator Scene" became such a legendary moment in Korean cinema?</li>
-        </ul>
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-academic">ACADEMIC</span>
+      </div>
+      <p class="en-text"><span class="speaker">Minsu:</span> Hello. It's a pleasure to meet you. I'm Minsu.</p>
+      <p class="pronunciation">/həˈloʊ. ɪts ə ˈplɛʒər tu miːt juː. aɪm mɪnsu/</p>
     </div>
-    <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
-        <p>"I think Hwang Jung-min is his best partner because <b>opposites attract</b>. Lee was very <b>calm</b> while Hwang was energetic. He expressed his <b>suffering</b> through his eyes, showing his internal <b>identity crisis</b> perfectly."</p>
-        <strong>[🟣 Slang]</strong>
-        <p>"His <b>bromance</b> with Hwang is <b>legendary</b>. Lee played the <b>stoic</b> type who never cracks. The elevator scene is iconic because he finally snaps. It showed he's <b>ride or die</b>, even when the situation is <b>sketchy</b>."</p>
-        <strong>[🔵 Academic]</strong>
-        <p>"The <b>juxtaposition</b> of their acting styles <b>amplified</b> the drama. Lee effectively conveyed the <b>cognitive dissonance</b> of a man living a life of <b>duplicity</b>. His silence spoke louder than words, depicting his inner <b>turmoil</b>."</p>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">안녕하세요! 반가워요. 전 민수라고 해요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">어휘</span> Hello (안녕하세요), Nice (반가운/좋은), meet (만나다), you (너를), Hey (안녕), Good (좋은), pleasure (기쁨/즐거움)
     </div>
-</div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">문법 설명</span>
+      
+      <div class="desc-item">
+        <span class="desc-label beginner-text">● 초급/국제 (Beginner/Intl)</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>Nice to meet you</b> : "만나서 반갑습니다"라는 의미의 전 세계 공통 인사말입니다. 문법을 따지기보다 하나의 <b>관용구(Set phrase)</b>처럼 통째로 외워서 소리 내는 것이 가장 좋습니다.<br>
+        <b>I'm + 이름</b> : 자신을 소개할 때 쓰는 가장 기본적인 뼈대입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">국적, 나이, 상황을 불문하고 누구에게나 쓸 수 있는 가장 안전하고 담백한 첫인사입니다.</p>
+      </div>
 
-<div class="q-box">
-    <span class="question">Q3. Acting Transformation</span>
-    <div class="sub-questions">
-        <ul>
-            <li>Were you shocked when you first saw him as 'Seong Gi-hun'? How was it different from his usual image?</li>
-            <li>Which scene in 'Squid Game' showed his acting skills the best? (e.g., The Dalgona game, the final episode?)</li>
-            <li>Do you think he fits better as a "Cool Elite" or a "Pathetic Loser"?</li>
-        </ul>
+      <div class="desc-item">
+        <span class="desc-label casual-text">● 슬랭/캐주얼 (Casual)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">Good to meet you</span> : 본래 문장인 <b>"It is good to meet you"</b>에서 대명사 주어(It)와 be동사(is)가 생략된 형태입니다. 구어체에서는 서로 뻔히 아는 상황 정보(지금 만난 것)를 생략하여 발화의 경제성을 높입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;"><b>Hey</b>는 친근함을 확 끌어올리는 활기찬 인사지만, 처음 보는 윗사람이나 격식을 차려야 하는 비즈니스 자리에서는 자칫 예의 없고 가벼워 보일 수 있습니다. 교류회나 모임에서도 상대가 또래이거나 분위기가 충분히 편안할 때 사용하는 것이 좋습니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label academic-text">● 아카데믹 (Academic)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">가주어 It / 진주어 to meet you</span> : 주어 자리에 쓰인 `It`은 뜻이 없는 가짜 주어(형식 주어)입니다. 진짜 주어 역할을 하는 <b>to부정사 명사적 용법(`to meet you`)</b>이 너무 길어 문장 뒤로 보낸 구조입니다.<br>
+        <span class="grammar-focus">a pleasure</span> : 감정을 나타내는 추상명사지만, '기쁜 일/사건'이라는 구체적인 뉘앙스를 주기 위해 부정관사 `a`를 붙여 보어 자리에 두었습니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">대학원 세미나, 연구실은 물론이고 <b>언어/문화 교류회(Meetup)</b>처럼 처음 만난 사람에게 깍듯한 예의와 존중을 표현하고 싶을 때 아주 훌륭하게 쓰이는 화법입니다. `Nice`보다 한층 격식 있는 명사 `pleasure`를 사용하여 지적이고 정중한 첫인상을 남길 수 있습니다.</p>
+      </div>
     </div>
-    <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
-        <p>"I was shocked because he <b>abandoned</b> his handsome image. The Dalgona scene was the best; his <b>desperate</b> facial expressions were very <b>convincing</b>. It proved he isn't just a star, but an actor with great range."</p>
-        <strong>[🟣 Slang]</strong>
-        <p>"He had a major <b>glow down</b>, looking totally <b>broke</b>. But his acting had a <b>glow up</b>. Seeing a top star licking a candy was <b>epic</b>. He <b>carried the show</b> by making us pity a loser."</p>
-        <strong>[🔵 Academic]</strong>
-        <p>"This role serves as a <b>testament</b> to his <b>versatility</b>. By <b>shedding</b> his elite persona and <b>embodying destitution</b>, he anchored the narrative. He successfully <b>evoked</b> global empathy for a flawed character."</p>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-beginner">BEGINNER</span>
+        <span class="l-badge l-international">INTERNATIONAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Younghee:</span> Hello. I'm Younghee. Nice to meet you too.</p>
+      <p class="pronunciation">/həˈloʊ. aɪm ˈjʌŋhi. naɪs tu miːt juː tuː/</p>
     </div>
-</div>
 
-<div class="q-box">
-    <span class="question">Q4. Global Challenge (Star Wars)</span>
-    <div class="sub-questions">
-        <ul>
-            <li>How was his English acting in 'The Acolyte'? Did it feel natural to you?</li>
-            <li>What does his role as a 'Jedi Master' mean for Asian actors in Hollywood?</li>
-            <li>Do you think he should continue working in Hollywood, or focus on Korean movies?</li>
-        </ul>
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-casual">CASUAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Younghee:</span> Hi. I'm Younghee. Good to meet you too.</p>
+      <p class="pronunciation">/haɪ. aɪm ˈjʌŋhi. ɡʊd tu miːt juː tuː/</p>
     </div>
-    <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
-        <p>"His English was good, showing his <b>dedication</b>. It felt natural because he focused on emotions. It motivates other Asian actors to step out of their <b>comfort zone</b> <b>regardless of</b> language barriers."</p>
-        <strong>[🟣 Slang]</strong>
-        <p>"He is <b>living proof</b> that you can make it globally at any age. He didn't <b>coast</b>; he <b>hustled</b> to memorize every line. It's a huge <b>flex</b> for Korean actors to play a Jedi Master."</p>
-        <strong>[🔵 Academic]</strong>
-        <p>"His <b>endeavor</b> illustrates the power of <b>lifelong learning</b>. Overcoming the <b>linguistic barrier</b> demonstrated his <b>resilience</b>. It challenges the <b>preconceived notion</b> that Asian actors are limited to martial arts roles."</p>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-academic">ACADEMIC</span>
+      </div>
+      <p class="en-text"><span class="speaker">Younghee:</span> Hello. I'm Younghee. It's a pleasure to meet you as well.</p>
+      <p class="pronunciation">/həˈloʊ. aɪm ˈjʌŋhi. ɪts ə ˈplɛʒər tu miːt juː æz wɛl/</p>
     </div>
-</div>
 
-<div class="q-box">
-    <span class="question">Q5. Directing Style (Hunt)</span>
-    <div class="sub-questions">
-        <ul>
-            <li>What did you think about the action scenes in 'Hunt'? Were they different from other spy movies?</li>
-            <li>Why do you think he cast his best friend Jung Woo-sung as his rival?</li>
-            <li>Do you prefer Lee Jung-jae as an Actor or as a Director?</li>
-        </ul>
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">안녕하세요, 전 영희예요. 반가워요!</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">어휘</span> too (또한/역시), as well (또한/역시)
     </div>
-    <div class="model-answer">
-        <strong>[🟢 Standard]</strong>
-        <p>"I <b>admire</b> his ambition to direct. The action was fast and intense. Casting his best friend showed he wanted to <b>expand his horizons</b> together. It proves he is not afraid of potential <b>failure</b>."</p>
-        <strong>[🟣 Slang]</strong>
-        <p>"Directing his own movie was a <b>boss move</b>. He didn't just act; he <b>ran the show</b>. The action scenes <b>slayed</b>. He proved he can <b>level up</b> from just being a handsome actor."</p>
-        <strong>[🔵 Academic]</strong>
-        <p>"The film highlights his potential for <b>auteurism</b>. His ability to <b>orchestrate</b> complex action sequences proves his <b>multifaceted</b> talent. He successfully <b>strived for</b> a comprehensive artistic expression."</p>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">문법 설명</span>
+      
+      <div class="desc-item">
+        <span class="desc-label beginner-text">● 초급/국제 (Beginner/Intl)</span>
+        <p style="margin:0;">💡 <b>앞 문장(민수의 인사)과 완벽하게 동일한 구조입니다.</b><br><br>
+        이름을 먼저 말하는 것으로 순서만 바뀌었으며, 문장 맨 끝에 <b>too</b>만 붙여서 상대방의 인사에 "나도 반갑다"라고 화답하는 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label casual-text">● 슬랭/캐주얼 (Casual)</span>
+        <p style="margin:0;">💡 <b>앞 문장과 동일한 생략 원리입니다.</b><br><br>
+        마찬가지로 `It is`가 생략된 구어체 형태에 <b>too</b>만 추가하여, 편안하게 맞장구를 치며 인사하는 형태입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label academic-text">● 아카데믹 (Academic)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">as well (부사구)</span> : `too`와 완벽히 같은 '또한/역시'라는 뜻을 가집니다. 문장 끝에 위치하여 앞선 상대방의 호의(pleasure)에 정중하게 동감을 표합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">기본 구조는 앞 문장과 같지만, 화답할 때 `too` 대신 `as well`을 사용하면 구어체에서도 문장의 격식을 한 단계 높일 수 있습니다.</p>
+      </div>
     </div>
+  </div>
 </div>
 
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-beginner">BEGINNER</span>
+        <span class="l-badge l-international">INTERNATIONAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Alex:</span> Oh, nice to meet you! I'm Alex. This is my first time in Korea.</p>
+      <p class="pronunciation">/oʊ, naɪs tu miːt juː! aɪm ˈælɪks. ðɪs ɪz maɪ fɜːrst taɪm ɪn kəˈriːə/</p>
+    </div>
 
-</div>
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-casual">CASUAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Alex:</span> Oh, good to meet you! I'm Alex. It's my first time in Korea.</p>
+      <p class="pronunciation">/oʊ, ɡʊd tu miːt juː! aɪm ˈælɪks. ɪts maɪ fɜːrst taɪm ɪn kəˈriːə/</p>
+    </div>
 
-<div class="vocab-section">
-<h4>📚 Deep Dive: Full Vocabulary & Grammar</h4>
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-academic">ACADEMIC</span>
+      </div>
+      <p class="en-text"><span class="speaker">Alex:</span> Oh, it's a pleasure to meet you. I am Alex. This is my first visit to Korea.</p>
+      <p class="pronunciation">/oʊ, ɪts ə ˈplɛʒər tu miːt juː. aɪ æm ˈælɪks. ðɪs ɪz maɪ fɜːrst ˈvɪzɪt tu kəˈriːə/</p>
+    </div>
 
-<div class="vocab-movie-title">1. Deliver Us from Evil (The Villain)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Visual impact</b>: 시각적 충격</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Intense</b>: 강렬한, 치열한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Gaze</b>: (뚫어지게 보는) 응시</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Stand out</b>: 두드러지다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Captivating</b>: 매혹적인 (Fascinating)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Moral compass</b>: 도덕적 나침반 (양심)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Straight-up</b>: 진짜로, 솔직히 (Totally)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Savage</b>: 잔인한 / (슬랭) 개쩌는</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Drip</b>: 패션 센스, 스타일</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Immaculate</b>: 티 하나 없이 완벽한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Swag</b>: 스웨그, 멋, 허세</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Root for</b>: ~를 응원하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Baddie</b>: 악당 / (슬랭) 매력적인 나쁜 사람</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Phenomenon</b>: 현상</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Aestheticization</b>: 미화(폭력 등을 아름답게 만듦)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Antagonist</b>: 적대자, 악역 (Villain의 문어체)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Portray</b>: 묘사하다, 연기하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Visceral</b>: 본능적인, 심장을 때리는</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Sartorial</b>: 의복의 (고급 비평용)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Suspension</b>: 유예 (Suspension of disbelief: 불신 유예)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Solely</b>: 오직, 단지 (Exclusively)</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: Causative Verb (Make)</span>
-    <div class="grammar-desc">Make + 목적어 + 동사원형 (~가 ...하게 만들다)</div>
-    <div class="grammar-example">"His visual impact <b>makes</b> him <b>stand out</b>."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Participle Clause (분사구문)</span>
-    <div class="grammar-desc">문장 끝에 오는 ', -ing'는 앞 문장의 결과나 동시동작을 설명함.</div>
-    <div class="grammar-example">"...judgment, <b>focusing</b> solely on the performance."</div>
-</div>
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">어, 반가워요! 전 Alex라고 해요. 한국은 이번이 처음이에요.</p>
+  </div>
 
-<div class="vocab-movie-title">2. New World (Bromance)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Opposites attract</b>: 반대끼리 끌린다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Calm</b>: 차분한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Immense</b>: 어마어마한 (Huge)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Suffer from</b>: ~로 고통받다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Identity crisis</b>: 정체성 혼란</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Bromance</b>: 남자 간의 진한 우정</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Legendary</b>: 전설적인 (개쩌는)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Stoic</b>: 금욕적인, 감정 없는 (상남자)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Ride or die</b>: 끝까지 함께하는 찐친</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Crack under pressure</b>: 압박감에 무너지다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Sketchy</b>: 수상쩍은, 위험한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Juxtaposition</b>: 병치 (대조를 위해 나란히 둠)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Amplify</b>: 증폭시키다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Turmoil</b>: 큰 혼란, 동요</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Undercover</b>: 위장 잠입한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Duplicity</b>: 이중성, 표리부동</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Cognitive dissonance</b>: 인지 부조화</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: Second Conditional (가정법 과거)</span>
-    <div class="grammar-desc">현재 사실과 반대되는 상상. Be동사는 무조건 'were' 사용.</div>
-    <div class="grammar-example">"If I <b>were</b> in his shoes, I <b>would</b> crack..."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Relative Clause (계속적 용법)</span>
-    <div class="grammar-desc">', which'는 앞 문장 전체 내용을 받음.</div>
-    <div class="grammar-example">"Lee is calm, <b>which</b> creates a perfect balance."</div>
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">어휘</span> Oh (오/어), first (첫 번째의), time (번/시간), Korea (한국), visit (방문)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">문법 설명</span>
+      
+      <div class="desc-item">
+        <span class="desc-label beginner-text">● 초급/국제 (Beginner/Intl)</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>This is my first time in + 장소</b> : "이곳(장소)에 온 것은 이번이 처음이다"라는 의미의 필수 관용 패턴입니다. `Korea` 자리에 다른 국가나 도시를 넣어 응용할 수 있습니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">외국인이 현지인에게 자신을 소개할 때 아이스브레이킹으로 가장 많이 사용하는 객관적이고 표준적인 문장입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label casual-text">● 슬랭/캐주얼 (Casual)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">It's my first time</span> : 지시대명사 `This` 대신 비인칭 주어 역할을 할 수 있는 `It`을 사용하여 상황을 가볍게 지칭합니다.<br>
+        <span class="grammar-focus">in Korea (전명구)</span> : 전치사 `in`과 명사 `Korea`가 결합하여 `time(시간/경험)`이 일어나는 공간적 배경을 수식합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label academic-text">● 아카데믹 (Academic)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">visit to Korea</span> : `time in(안에서의 시간)`을 쓰지 않고 명사 `visit(방문)`과 방향/도착점을 나타내는 전치사 `to`를 결합한 명사구입니다.<br>
+        <span class="grammar-focus">I am Alex</span> : 축약형을 쓰지 않아 보다 격식을 차린 발화의 형태를 유지합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">`time`이라는 일상적인 단어 대신 `visit(방문)`이라는 명확한 동작 명사를 사용하여, 자신의 체류 목적과 상황을 정중하게 전달하는 학술/비즈니스 톤입니다.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="vocab-movie-title">3. Squid Game (Transformation)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Peak</b>: 정점 (Pinnacle)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Abandon</b>: 버리다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Desperate</b>: 절박한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Convincing</b>: 설득력 있는 (연기 잘함)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Glow down</b>: 외모 하락 (역변)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Glow up</b>: 외모 떡상 (정변)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Carry the show</b>: 하드캐리하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Broke</b>: 빈털터리의 (No money)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Epic</b>: 서사적인, 대박인</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Testament</b>: (확실한) 증거</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Versatility</b>: 다재다능함, 가변성</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Shed</b>: (껍질/가면을) 벗다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Embody</b>: 구현하다 (몸으로 표현하다)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Destitution</b>: 극빈, 결핍 (Poverty 상위호환)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Evoke</b>: (감정을) 불러일으키다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Anchor</b>: 중심을 잡다 (닻을 내리다)</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: Cleft Sentence (강조 구문)</span>
-    <div class="grammar-desc">It... that 구문을 변형하여 주어를 강조함.</div>
-    <div class="grammar-example">"It wasn't just luck; (it was)..."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Method (By + Gerund)</span>
-    <div class="grammar-desc">수단과 방법을 나타내는 가장 격식 있는 표현.</div>
-    <div class="grammar-example">"<b>By shedding</b> his persona, he proved..."</div>
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-beginner">BEGINNER</span>
+        <span class="l-badge l-international">INTERNATIONAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Minsu:</span> Oh, really? How do you like Korea?</p>
+      <p class="pronunciation">/oʊ, ˈriːəli? haʊ duː juː laɪk kəˈriːə/</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-casual">CASUAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Minsu:</span> Oh, really? How's Korea so far?</p>
+      <p class="pronunciation">/oʊ, ˈriːəli? haʊz kəˈriːə soʊ fɑːr/</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-academic">ACADEMIC</span>
+      </div>
+      <p class="en-text"><span class="speaker">Minsu:</span> Oh, is that so? How are you finding Korea?</p>
+      <p class="pronunciation">/oʊ, ɪz ðæt soʊ? haʊ ɑːr juː ˈfaɪndɪŋ kəˈriːə/</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">아, 정말요? 한국 와보니까 어때요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">어휘</span> really (정말), how (어떻게/어떠한), like (좋아하다/마음에 들다), so far (지금까지), finding (느끼고 있는/경험하는)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">문법 설명</span>
+      
+      <div class="desc-item">
+        <span class="desc-label beginner-text">● 초급/국제 (Beginner/Intl)</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>How do you like + 대상?</b> : 직역하면 "어떻게 좋아하나요?"지만, 실제로는 "대상이 마음에 드나요?" 혹은 "어때요?"라고 소감이나 인상을 묻는 고정 패턴입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">새로운 장소에 방문한 사람이나 새로운 음식을 시도하는 사람에게 가장 흔하고 자연스럽게 의견을 물어볼 수 있는 질문입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label casual-text">● 슬랭/캐주얼 (Casual)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">How's (How is)</span> : be동사를 사용하여 현재의 상태 자체를 묻습니다.<br>
+        <span class="grammar-focus">so far (부사구)</span> : '지금까지는'이라는 뜻의 부사구입니다. 과거부터 현재 시점까지의 경험을 가볍게 물어볼 때 문장 끝에 붙여 사용합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">"지금까지 한국은 어때?"라는 뜻으로, 동사(like)를 쓰지 않고 be동사로 상태를 물어 일상적인 대화의 편안함을 극대화한 형태입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label academic-text">● 아카데믹 (Academic)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">Is that so?</span> : "Really?"를 조금 더 포멀하게 바꾼 표현으로 "그러신가요?"라는 의미입니다.<br>
+        <span class="grammar-focus">How are you finding (현재진행형 의문문)</span> : 동사 `find`는 '찾다'라는 뜻 외에 5형식 구조에서 '경험하여 ~라고 느끼다/생각하다'라는 의미로 쓰입니다. 이를 진행형으로 만들어 "한국을 (경험하면서) 어떻게 느끼고 계신가요?"라는 정중한 질문을 완성했습니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">상대방의 지적, 문화적 경험과 소감을 묻는 질문으로, 교류회나 학회에서 외국인 참가자에게 대화를 건넬 때 매우 세련된 인상을 줍니다.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="vocab-movie-title">4. The Acolyte (Challenge)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Irrelevant</b>: 무관한</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Dedication</b>: 헌신</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Comfort zone</b>: 안전지대 (익숙한 곳)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Regardless of</b>: ~와 상관없이</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Living proof</b>: 산 증인</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Coast</b>: (노력 없이) 설렁설렁 가다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Grind</b>: 뼈를 깎는 노력을 하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Hustle</b>: 열정적인 노력, 으쌰으쌰</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Endeavor</b>: (장기적인) 노력, 시도</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Illustrate</b>: 예증하다, 보여주다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Lifelong learning</b>: 평생 학습</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Linguistic barrier</b>: 언어 장벽</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Resilience</b>: 회복탄력성, 불굴의 의지</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Preconceived notion</b>: 선입견 (Bias)</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: 'When it comes to'</span>
-    <div class="grammar-desc">'to'는 전치사이므로 뒤에 명사나 동명사(-ing)가 와야 함. 동사원형 금지!</div>
-    <div class="grammar-example">"When it comes to <b>challenges</b> (O) / challenge (X)"</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Infinitive as Complement</span>
-    <div class="grammar-desc">Motivate + 목적어 + to 부정사 (~가 ...하도록 동기부여하다)</div>
-    <div class="grammar-example">"It motivates me <b>to step</b> out..."</div>
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-beginner">BEGINNER</span>
+        <span class="l-badge l-international">INTERNATIONAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Alex:</span> Oh, I really like it! But why do you two speak English so well?</p>
+      <p class="pronunciation">/oʊ, aɪ ˈriːəli laɪk ɪt! bʌt waɪ duː juː tuː spiːk ˈɪŋɡlɪʃ soʊ wɛl/</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-casual">CASUAL</span>
+      </div>
+      <p class="en-text"><span class="speaker">Alex:</span> Oh, I love it! But how come you guys speak English so well?</p>
+      <p class="pronunciation">/oʊ, aɪ lʌv ɪt! bʌt haʊ kʌm juː ɡaɪz spiːk ˈɪŋɡlɪʃ soʊ wɛl/</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-academic">ACADEMIC</span>
+      </div>
+      <p class="en-text"><span class="speaker">Alex:</span> Oh, I am really enjoying it. By the way, why do both of you speak English so fluently?</p>
+      <p class="pronunciation">/oʊ, aɪ æm ˈriːəli ɪnˈdʒɔɪɪŋ ɪt. baɪ ðə weɪ, waɪ duː boʊθ əv juː spiːk ˈɪŋɡlɪʃ soʊ ˈfluːəntli/</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">오, 진짜 좋아요! 근데 두 분 다 영어를 왜 이렇게 잘하세요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">어휘</span> really (정말로), like (좋아하다), why (왜), speak (말하다), well (잘), love (아주 좋아하다), how come (어째서), you guys (너희들), enjoying (즐기고 있는), by the way (그나저나/그런데), both (둘 다), fluently (유창하게)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">문법 설명</span>
+      
+      <div class="desc-item">
+        <span class="desc-label beginner-text">● 초급/국제 (Beginner/Intl)</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>why do you + 동사?</b> : 이유를 묻는 가장 기본적인 의문문 어순입니다.<br>
+        <b>you two</b> : 복수의 상대를 가리킬 때 '당신들 두 사람'을 뜻하는 덩어리 표현입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">앞선 질문(How do you like Korea?)에 대해 'really like it'으로 명확히 긍정한 뒤, 화제를 부드럽게 전환하는 표준적인 질문 방식입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label casual-text">● 슬랭/캐주얼 (Casual)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">how come + 주어 + 동사</span> : `why`를 구어체로 바꾼 표현으로, 의문문 어순(do you speak)이 아니라 평서문 어순(you guys speak)을 그대로 따르는 것이 특징입니다.<br>
+        <span class="grammar-focus">you guys (명사구)</span> : 성별에 관계없이 무리 지어 있는 사람들을 지칭할 때 쓰는 아주 대표적인 캐주얼 표현입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">`like` 대신 강도가 더 센 `love`를 사용하여 감정을 풍부하게 표현하고, `how come`을 통해 대화의 격식을 확 낮춘 톤입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label academic-text">● 아카데믹 (Academic)</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">am enjoying it (현재진행형)</span> : 현재 겪고 있는 체류 경험을 생생하고 정중하게 나타내기 위해 진행형을 사용했습니다.<br>
+        <span class="grammar-focus">By the way (접속 부사구)</span> : '근데/그나저나'라는 뜻으로, 앞의 맥락을 끊지 않고 화제를 매끄럽게 전환할 때 쓰이는 부사구입니다.<br>
+        <span class="grammar-focus">both of you</span> : `you two`보다 문법적 구조를 명확히 갖춘 부분사(부분을 나타내는 명사 + of + 대명사) 구조입니다.<br>
+        <span class="grammar-focus">fluently (부사)</span> : 동사 `speak`를 수식하는 부사로, 언어 구사력이 '유창하다'는 점을 정확하게 짚어주는 고급 어휘입니다.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="vocab-movie-title">5. Hunt (Director)</div>
-<div class="vocab-grid">
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Admire</b>: 존경하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Ambition</b>: 야망</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Expand horizons</b>: 시야/지평을 넓히다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-std">Std</span><b>Specialist</b>: 전문가 (한 우물)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Boss move</b>: 대장 같은 대담한 행동</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Run the show</b>: 주도권을 잡다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Level up</b>: (게임처럼) 성장하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Settle for</b>: (현실에) 안주하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-slang">Slang</span><b>Slay</b>: 찢었다 (완벽하게 해내다)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Auteurism</b>: 작가주의 (감독의 예술성)</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Orchestrate</b>: (복잡한 것을) 조직하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Multifaceted</b>: 다재다능한, 다면적인</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Strive for</b>: ~을 얻으려 분투하다</div>
-    <div class="vocab-item"><span class="vocab-tag tag-aca">Aca</span><b>Comprehensive</b>: 포괄적인</div>
-</div>
-<div class="grammar-box">
-    <span class="grammar-title">💡 Grammar: To-Infinitive as Adjective</span>
-    <div class="grammar-desc">명사 뒤에서 수식 (~하려는)</div>
-    <div class="grammar-example">"...ambition <b>to expand</b> his horizons."</div>
-    <span class="grammar-title" style="margin-top:10px;">💡 Grammar: Rhetorical Question (수사의문문)</span>
-    <div class="grammar-desc">대답을 바라는 게 아니라 주장을 강조하기 위한 질문.</div>
-    <div class="grammar-example">"Why settle for one thing...?" (안주하지 말라는 뜻)</div>
+  <h2 style="margin-top:50px;">드릴 2. [상황2: 셋이서 대화]</h2>
+  <p class="section-desc">3명 이상 모였을 때 지인을 소개하고 직업을 묻는 네트워킹 핵심 대화입니다.</p>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> こちらは<ruby>私<rt>わたし</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>のヨンヒです。</p>
+      <p class="pronunciation">(코치라와 와타시노 토모다치노 용히 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> こちら、<ruby>友達<rt>ともだち</rt></ruby>のヨンヒです。</p>
+      <p class="pronunciation">(코치라, 토모다치노 용히 데스)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">이쪽은 제 친구 영희예요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> こちらは(이쪽은/이분은), 友達(ともだち/친구)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>こちらは〜です</b> : "이쪽은 ~입니다"라는 의미로, 제3자를 다른 사람에게 소개할 때 쓰이는 기본적인 패턴입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">"私の友達の〜です"만 단독으로 사용하기보다 "こちらは"를 앞에 덧붙여 주면, 소개하는 대상을 보다 명확하고 예의 바르게 짚어주는 화법이 됩니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">友達(ともだち)のヨンヒ</span> : 명사와 명사 사이를 잇는 조사 `の`가 사용되었습니다. 여기서는 소유의 의미가 아니라 "친구인 영희"라는 <b>동격</b>을 나타내는 용법으로 쓰였습니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">こちら</span> : `こちらは`에서 조사 `は`를 생략하여 회화의 호흡을 간결하게 만든 구어체 표현입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">친밀한 사이나 사적인 자리에서는 조사를 생략하여 딱딱함을 덜어내는 방식이 자주 관찰됩니다.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>初<rt>はじ</rt></ruby>めまして。ユイです。</p>
+      <p class="pronunciation">(하지메마시테. 유이 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>初<rt>はじ</rt></ruby>めまして！ユイって<ruby>言<rt>い</rt></ruby>います。</p>
+      <p class="pronunciation">(하지메마시테! 유잇테 이이마스)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">처음 뵙겠습니다. 유이라고 합니다.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 初(はじ)めまして(처음 뵙겠습니다), 言(い)います(말합니다/합니다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>[이름] + です</b> : 자기소개를 할 때 가장 기본적으로 쓰이는 "~입니다" 패턴입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">가벼운 목례와 함께 사용하면 처음 만나는 상황에서 깔끔하고 정중한 첫인상을 줄 수 있습니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">初(はじ)めまして</span> : 동사 `始(はじ)める(시작하다)`에서 파생되어 만남의 시작을 알리는 관용적인 인사말로 굳어진 표현입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜って言(い)います</span> : `〜と言(い)います(~라고 합니다)`의 인용 조사 `と`를 구어체인 `って`로 바꾼 형태입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">`です`보다 조금 더 친근하게 자신을 소개하고자 할 때 사교 모임 등에서 자주 쓰이는 화법입니다.</p>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> こちらこそ、<ruby>初<rt>はじ</rt></ruby>めまして。ヨンヒです。</p>
+      <p class="pronunciation">(코치라코소, 하지메마시테. 용히 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> こちらこそ！ヨンヒって<ruby>言<rt>い</rt></ruby>います。</p>
+      <p class="pronunciation">(코치라코소! 용힛테 이이마스)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">저야말로 처음 뵙겠습니다. 영희라고 합니다.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> こちらこそ(저야말로)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>こちらこそ</b> : 상대방의 인사나 감사에 화답할 때 "저야말로"라는 의미로 쓰이는 유용한 표현입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">상대방이 먼저 인사를 건넸을 때 단순히 똑같이 반복하기보다 `こちらこそ`를 앞에 붙여주면, 상대를 존중하며 인사를 받아친다는 느낌을 줄 수 있습니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜って言(い)います</span> : 앞서 설명된 것과 동일하게, 일상적인 소개 자리에서 격식을 조금 덜어낸 자연스러운 표현입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> お<ruby>二人<rt>ふたり</rt></ruby>は<ruby>仲<rt>なか</rt></ruby>がいいですね。</p>
+      <p class="pronunciation">(오후타리와 나카가 이이 데스네)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> お<ruby>二人<rt>ふたり</rt></ruby>って、すごく<ruby>仲<rt>なか</rt></ruby>がいいんですね。</p>
+      <p class="pronunciation">(오후타릿테, 스고쿠 나카가 이인데스네)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">두 분은 사이가 좋아 보이네요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> お二人(おふたり/두 분), 仲がいい(なかがいい/사이가 좋다), すごく(굉장히/매우)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>仲(なか)がいい</b> : 직역하면 '사이가 좋다'이며, 사람 간의 친밀한 관계를 표현할 때 쓰이는 대표적인 관용구입니다.<br>
+        <b>〜ですね</b> : 문장 끝에 붙어 상대방의 상황에 공감하거나 가볍게 감탄할 때 사용합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">お二人(ふたり)</span> : `二人(두 사람)`이라는 명사 앞에 존경의 접두어 `お`를 붙여 상대방들을 높이는 정중한 표현입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">초면인 사람들의 관계를 긍정적으로 언급함으로써 대화의 분위기를 화기애애하게 만드는 사교적인 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜って</span> : 주제를 나타내는 조사 `は`를 구어체로 바꾼 형태입니다.<br>
+        <span class="grammar-focus">〜んですね</span> : 단순히 사실을 말하는 것을 넘어, 눈앞의 상황을 보고 납득하거나 감탄하는 뉘앙스를 문장에 부여합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">`すごく(굉장히)`와 같은 부사를 더하고 `〜んですね`로 문장을 맺으면, 상대방의 친밀함에 대해 보다 적극적으로 공감하는 리액션이 됩니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> 3<ruby>年前<rt>ねんまえ</rt></ruby>に<ruby>日本語学校<rt>にほんごがっこう</rt></ruby>で<ruby>会<rt>あ</rt></ruby>いました。<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>東京<rt>とうきょう</rt></ruby>へ<ruby>来<rt>き</rt></ruby>ました。</p>
+      <p class="pronunciation">(산넨마에니 니혼고갓코우데 아이마시타. 잇쇼니 토우쿄우에 키마시타)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> 3<ruby>年前<rt>ねんまえ</rt></ruby>に<ruby>日本語学校<rt>にほんごがっこう</rt></ruby>で<ruby>出<rt>で</rt></ruby><ruby>会<rt>あ</rt></ruby>って、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>来<rt>き</rt></ruby>たんですよ。</p>
+      <p class="pronunciation">(산넨마에니 니혼고갓코우데 데앗테, 잇쇼니 토우쿄우니 키탄데스요)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">3년 전에 일본어 학원에서 만났어요. 함께 도쿄로 왔습니다.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 3年前(さんねんまえ/3년 전), 日本語学校(にほんごがっこう/일본어 학원), 一緒に(いっしょに/함께), 出会う(であう/우연히 만나다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜で (장소)</b> : 동작이 일어나는 장소를 나타내는 조사입니다. (~에서)<br>
+        <b>〜へ (방향)</b> : 이동의 방향을 나타내는 조사입니다. 발음은 `え`로 합니다. (~로)<br>
+        <b>〜ました</b> : 동사 `ます(현재)`의 과거형으로, 과거의 사실을 정중하게 서술합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">会(あ)う vs 出会(であ)う</span> : `会う`는 일반적인 '만남'을 뜻하지만, `出会う`는 몰랐던 사람을 처음 알게 되거나 운명적인 조우를 나타낼 때 더 적합한 표현입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">두 개의 문장을 분리하여 과거의 사실을 차분하고 명확하게 전달하는 기본적인 형태입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">出会(であ)って</span> : 동사 `出会う`의 `て형`을 사용하여 "만나서 ~했다"와 같이 두 문장을 자연스럽게 하나로 연결했습니다.<br>
+        <span class="grammar-focus">〜に (도착점)</span> : 방향을 강조하는 `へ` 대신 도착점을 의미하는 `に`를 사용하는 것이 구어체에서는 조금 더 보편적입니다.<br>
+        <span class="grammar-focus">〜たんですよ</span> : `〜たのです`의 회화체로, 상대방이 모르는 사연이나 배경을 부드럽게 설명해 주는 뉘앙스를 지닙니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> そうですね。ただの<ruby>友達<rt>ともだち</rt></ruby>です。とても<ruby>仲<rt>なか</rt></ruby>がいいです。</p>
+      <p class="pronunciation">(소우데스네. 타다노 토모다치 데스. 토테모 나카가 이이 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> そうですね。ただの<ruby>友達<rt>ともだち</rt></ruby>ですよ。すごく<ruby>仲<rt>なか</rt></ruby>いいんですよ。</p>
+      <p class="pronunciation">(소우데스네. 타다노 토모다치 데스요. 스고쿠 나카 이인데스요)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">그렇네요. 그냥 친구입니다. 아주 사이가 좋습니다.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> そうですね(그렇네요), ただの(그냥/단지), とても(매우), 仲(なか)がいい(사이가 좋다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>ただの + [명사]</b> : '단지 ~일 뿐이다' 혹은 '그냥 ~이다'라는 의미로 대상을 한정할 때 쓰이는 연체사입니다.<br>
+        <b>そうですね</b> : 상대방의 말에 동의하거나 맞장구를 칠 때 가장 기본적으로 쓰이는 표현입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">仲(なか)がいい</span> : 사람 간의 친밀도를 나타내는 대표적인 관용구입니다. 이 문장에서는 `とても(매우)`라는 부사를 덧붙여 그 정도를 강조하고 있습니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">오해를 풀거나 관계의 성격을 명확히 규정할 때 객관적이고 단정하게 사실을 전달하는 표준적인 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜ですよ</span> : 종조사 `よ`를 붙여 상대방이 모르는 사실을 부드럽게 알려주는 뉘앙스를 더합니다.<br>
+        <span class="grammar-focus">すごく仲(なか)いいんですよ</span> : `とても` 대신 구어체인 `すごく`를 쓰고, `が` 조사를 생략하여 회화의 호흡을 간결하게 한 형태입니다. `〜んですよ`로 문장을 맺어 친근한 어조를 취합니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> ヨンヒさんは<ruby>東京<rt>とうきょう</rt></ruby>はどうですか。<ruby>面白<rt>おもしろ</rt></ruby>いですか。</p>
+      <p class="pronunciation">(용히산와 토우쿄우와 도우 데스카? 오모시로이 데스카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> ヨンヒさんって、<ruby>東京<rt>とうきょう</rt></ruby>での<ruby>生活<rt>せいかつ</rt></ruby>はどうですか？<ruby>楽<rt>たの</rt></ruby>しいですか？</p>
+      <p class="pronunciation">(용히산테, 토우쿄우데노 세이카츠와 도우 데스카? 타노시이 데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">영희씨는 도쿄 어때요? 재미있나요(즐겁나요)?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> どうですか(어떻습니까), 面白(おもしろ)い(재미있다), 楽(たの)しい(즐겁다), 生活(せいかつ/생활)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜はどうですか</b> : 대상에 대한 상대방의 소감, 상태, 혹은 기분을 물어볼 때 보편적으로 쓰이는 질문 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">は (조사)</span> : 한 문장 안에서 `は`가 두 번 사용되었습니다. 첫 번째(ヨンヒさんは)는 문장 전체의 '주제(누구에게 묻는지)'를, 두 번째(東京は)는 질문의 '대상'을 나타냅니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">거주지나 여행지에 대한 인상을 물음으로써 상대방의 경험을 이끌어내는 정중한 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">東京(とうきょう)での生活(せいかつ)</span> : 단순히 '도쿄'라고 묻기보다 '도쿄에서의 생활'로 구체화하여 질문의 의도를 명확히 했습니다.<br>
+        <span class="grammar-focus">楽(たの)しい</span> : '재미'를 뜻하는 `面白い`도 좋지만, 거주 경험이나 일상의 긍정적인 감정을 물을 때는 `楽しい(즐겁다)`를 사용하는 것이 일상 회화에서 자주 관찰됩니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> はい、<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>来<rt>き</rt></ruby>てよかったです。ボムのおかげで、<ruby>友達<rt>ともだち</rt></ruby>もたくさんできました。</p>
+      <p class="pronunciation">(하이, 토우쿄우니 키테 요캇타데스. 보무 노 오카게데, 토모다치모 타쿠산 데키마시타)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> ええ、<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>来<rt>き</rt></ruby>て<ruby>本当<rt>ほんとう</rt></ruby>によかったです。ボムのおかげで、<ruby>友達<rt>ともだち</rt></ruby>もいっぱいできましたし。</p>
+      <p class="pronunciation">(에에, 토우쿄우니 키테 혼토우니 요캇타데스. 보무 노 오카게데, 토모다치모 잇파이 데키마시타시)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">네, 도쿄에 와서 다행입니다(잘됐습니다). 보무 덕분에 친구도 많이 생겼어요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 来(き)て(오고/와서), よかった(다행이다/좋았다), 〜のおかげで(~덕분에), たくさん(많이), できる(생기다/만들어지다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜て よかったです</b> : 동작의 결과나 현재의 상황에 대해 만족하거나 '~해서 다행이다'라는 감정을 나타내는 유용한 표현입니다.<br>
+        <b>[명사] + のおかげで</b> : '~의 은혜로' 또는 '~덕분에'라는 긍정적인 원인을 나타낼 때 사용합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">できました</span> : 동사 `できる(할 수 있다)`는 문맥에 따라 '새롭게 생기다', '형성되다'라는 의미를 지닙니다. 여기서는 교우 관계가 새로 만들어졌음을 뜻합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">주변의 도움을 인정하고 긍정적인 현재 상황을 예의 바르게 전달하는 모범적인 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">ええ</span> : `はい`와 마찬가지로 긍정을 나타내지만, 회화에서 조금 더 부드러운 뉘앙스를 줍니다.<br>
+        <span class="grammar-focus">本当(ほんとう)に / いっぱい</span> : 부사를 추가하여 만족감과 수량을 자연스럽게 강조했습니다.<br>
+        <span class="grammar-focus">〜し (접속조사)</span> : 문장 끝에 붙어 이유를 나열하거나 여운을 남기며 대화를 이어가기 좋게 만드는 구어체적 장치입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> そうなんですね。<ruby>私<rt>わたし</rt></ruby>も<ruby>韓国人<rt>かんこくじん</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>が<ruby>欲<rt>ほ</rt></ruby>しいです。</p>
+      <p class="pronunciation">(소우난 데스네. 와타시모 칸코쿠진노 토모다치가 호시이 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> そうなんですね。<ruby>私<rt>わたし</rt></ruby>も<ruby>韓国人<rt>かんこくじん</rt></ruby>のお<ruby>友達<rt>ともだち</rt></ruby>、<ruby>欲<rt>ほ</rt></ruby>しいなって<ruby>思<rt>おも</rt></ruby>ってます。</p>
+      <p class="pronunciation">(소우난 데스네. 와타시모 칸코쿠진노 오토모다치, 호시이낫테 오못테마스)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">그렇군요. 저도 한국인 친구를 사귀고(원하고) 싶어요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> そうなんですね(그렇군요), 欲(ほ)しい(원하다/갖고 싶다), 思(おも)う(생각하다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜が 欲(ほ)しいです</b> : 명사 뒤에 붙어 그 대상을 '원하다' 혹은 '갖고 싶다'라는 소망을 나타내는 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">欲(ほ)しい (い형용사)</span> : 한국어로는 동사(사귀고 싶다)로 번역되더라도, 일본어 문법상 형용사이므로 목적격 조사 `を` 대신 주격 조사 `が`를 수반하는 점에 유의해야 합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">친구를 사귀고 싶다는 뜻을 복잡한 동사 구문(友達を作りたい 등) 대신, `〜が欲しい`를 사용하여 직관적이고 자연스럽게 전달하는 표준 표현입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">お友達(ともだち)</span> : 접두어 `お`를 붙여 정중함을 높였습니다.<br>
+        <span class="grammar-focus">〜な</span> : 문장 중간이나 끝에 가벼운 감탄이나 희망의 독백처럼 쓰이는 조사입니다.<br>
+        <span class="grammar-focus">〜って思(おも)ってます</span> : `〜と思っています(고 생각하고 있습니다)`의 회화체입니다. 소망을 직접적으로 말하기보다 '그렇게 생각 중이다'라고 완곡하게 표현합니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>私<rt>わたし</rt></ruby>たちの<ruby>周<rt>まわ</rt></ruby>りに<ruby>友達<rt>ともだち</rt></ruby>がたくさんいます。<ruby>今度<rt>こんど</rt></ruby>、ユイさんも<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いませんか。</p>
+      <p class="pronunciation">(와타시타치노 마와리니 토모다치가 타쿠산 이마스. 콘도, 유이산모 잇쇼니 아이마셍카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>私<rt>わたし</rt></ruby>たちの<ruby>周<rt>まわ</rt></ruby>りにも<ruby>友達<rt>ともだち</rt></ruby>がいっぱいいるんで、<ruby>今度<rt>こんど</rt></ruby>、ユイさんも<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いませんか？</p>
+      <p class="pronunciation">(와타시타치노 마와리니모 토모다치가 잇파이 이룬데, 콘도, 유이산모 잇쇼니 아이마셍카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">저희 주변에 친구가 여럿 있어요. 다음에 유이씨도 같이 만나 보지 않을래요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 私(わたし)たち(우리들), 周(まわ)り(주변), 今度(こんど/다음에 혹은 이번에), 会(あ)う(만나다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜ませんか</b> : 동사의 부정형에 의문 조사를 결합하여, 상대방에게 어떤 행동을 정중하게 제안하거나 권유하는 필수 의문문 형태입니다.<br>
+        <b>周(まわ)りに 〜が います</b> : 장소나 위치를 나타내는 조사 `に`와 존재 동사 `います`를 결합하여 상태를 서술합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">今度(こんど)</span> : 문맥에 따라 '이번' 혹은 '다음 번'으로 해석됩니다. 여기서는 미래의 가까운 기회를 제안하는 의미로 쓰였습니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">`会いましょう(만납시다)`보다 `会いませんか(만나지 않을래요?)`를 사용하면 상대방이 거절할 수 있는 여지를 열어두어 한층 더 정중하고 배려 깊은 화법이 됩니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">いっぱいいるんで</span> : `たくさんいますから(많이 있으니까)`의 회화체 변형입니다. 부사 `いっぱい`에 보통체 동사 `いる`, 그리고 원인/이유를 나타내는 구어체 접속사 `〜んで`를 결합하여 앞뒤 문장을 매끄럽게 이었습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> 是非(ぜひ)！よろしくお<ruby>願<rt>ねが</rt></ruby>いします。ありがとうございます。</p>
+      <p class="pronunciation">(제히! 요로시쿠 오네가이시마스. 아리가토우 고자이마스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> ぜひぜひ！よろしくお願いします。ありがとうございます。</p>
+      <p class="pronunciation">(제히제히! 요로시쿠 오네가이시마스. 아리가토우 고자이마스!)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">꼭(부디)이요! 잘 부탁드립니다. 고마워요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 是非(ぜひ/꼭/부디)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>是非(ぜひ)</b> : 누군가의 제안이나 초대에 긍정적으로 화답할 때 사용하는 대표적인 부사입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">よろしくお願(ねが)いします</span> : 앞서 제안에 동의한 후, 앞으로의 관계에 대한 예의를 표하는 표준적인 인사말입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">ぜひぜひ</span> : `ぜひ`를 두 번 반복하여 제안에 대한 기쁨이나 동의의 강도를 높인 회화체입니다.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> みんな<ruby>優<rt>やさ</rt></ruby>しい<ruby>友達<rt>ともだち</rt></ruby>です。<ruby>今度<rt>こんど</rt></ruby><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いましょう。</p>
+      <p class="pronunciation">(민나 야사시이 토모다치 데스. 콘도 잇쇼니 아이마쇼우)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> みんなすごくいい<ruby>人<rt>ひと</rt></ruby>たちなんで、<ruby>今度<rt>こんど</rt></ruby>みんなで<ruby>集<rt>あつ</rt></ruby>まりましょうよ。</p>
+      <p class="pronunciation">(민나 스고쿠 이이 히토타치 난데, 콘도 민나데 아츠마리마쇼우요)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">다들 다정한(착한) 친구들이에요. 다음에 같이 만나요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 優(やさ)しい(다정하다/상냥하다), 会(あ)いましょう(만납시다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜ましょう</b> : 동사의 `ます`형 어간에 결합하여 상대방에게 어떤 행동을 제안하거나 권유할 때 쓰입니다. ('만납시다')<br>
+        <b>[い형용사] + [명사]</b> : `い형용사`인 `優しい`가 형태 변화 없이 명사 `友達`를 직접 수식하는 구조입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">みんな (대명사)</span> : '모두' 또는 '다들'을 의미하며, 복수의 대상을 지칭할 때 사용됩니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">자신의 주변 지인들을 긍정적으로 소개하며, 향후의 모임을 명확하게 제안하는 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">いい人(ひと)たち</span> : `優しい友達` 대신 일상 회화에서 자주 쓰이는 '좋은 사람들'이라는 표현을 사용했습니다.<br>
+        <span class="grammar-focus">〜なんで</span> : `〜なので(~이기 때문에)`의 구어체로, 뒤에 오는 권유 문장의 이유를 부드럽게 설명합니다.<br>
+        <span class="grammar-focus">集(あつ)まりましょうよ</span> : 단순히 '만나다(会う)'보다 다수가 모이는 상황에 어울리는 동사 `集まる(모이다)`를 사용하였고, 종조사 `よ`를 붙여 권유의 뜻을 가볍게 강조했습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> ユイさんは<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しいですか。</p>
+      <p class="pronunciation">(유이산와 시고토가 이소가시이 데스카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> ユイさんって、お<ruby>仕事<rt>しごと</rt></ruby><ruby>忙<rt>いそが</rt></ruby>しいですか？</p>
+      <p class="pronunciation">(유이산테, 오시고토 이소가시이 데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">유이씨는 일이 바쁘신가요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 仕事(しごと/일), 忙(いそが)しい(바쁘다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>[A] は [B] が [형용사] です</b> : 대주어(A은/는)와 소주어(B이/가)를 구별하여 서술하는 구조입니다. (예: 유이씨는(は) 일이(が) 바쁩니까)</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">は (주제 표시) vs が (주격 조사)</span> : 문장의 대전제가 되는 화제를 `は`로 제시하고, 형용사(`忙しい`)가 구체적으로 묘사하는 대상을 `が`로 명시하는 표준적인 문장입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜って</span> : 주제 조사 `は`를 부드러운 화제 전환용 구어체로 바꾼 형태입니다.<br>
+        <span class="grammar-focus">お仕事(しごと)</span> : 상대방의 직업이나 업무를 묻는 것이므로, 명사 앞에 존경의 `お`를 붙여 예우를 갖추었습니다.<br>
+        <span class="grammar-focus">조사 생략</span> : 회화에서는 `が` 조사를 생략하여 호흡을 간결하게 하는 경향이 관찰됩니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>忙<rt>いそが</rt></ruby>しい<ruby>時期<rt>じき</rt></ruby>もありますが、<ruby>最近<rt>さいきん</rt></ruby>は<ruby>時間<rt>じかん</rt></ruby>があります。</p>
+      <p class="pronunciation">(이소가시이 지키모 아리마스가, 사이킨와 지칸가 아리마스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>忙<rt>いそが</rt></ruby>しい<ruby>時期<rt>じき</rt></ruby>もあるんですけど、<ruby>最近<rt>さいきん</rt></ruby>はわりと<ruby>暇<rt>ひま</rt></ruby>ですね。</p>
+      <p class="pronunciation">(이소가시이 지키모 아룬데스케도, 사이킨와 와리토 히마 데스네)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">바쁜 시기도 있지만, 최근에는 시간이 있습니다(비교적 한가합니다).</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 時期(じき/시기), 〜が(~지만), 最近(さいきん/최근), 時間(じかん/시간), 暇(ひま/한가함), わりと(비교적)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜が (접속조사)</b> : 두 개의 절을 연결할 때 문장 중간에 위치하여 역접(~지만) 혹은 단순 접속(~한데)의 역할을 합니다.<br>
+        <b>[명사] + が あります</b> : 사물이나 시간적 여유의 존재를 나타내는 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">忙(いそが)しい時期(じき)も</span> : 주격 조사 `が` 대신 `も(~도)`를 사용하여 '바쁜 시기도 (존재한다)'라는 의미를 담았습니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">자신의 상황을 객관적이고 명확한 대비를 통해 서술하는 정중한 표현입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜あるんですけど</span> : `あります`를 구어체인 `ある`로 바꾸고, 설명과 역접의 의미를 동시에 갖는 `〜んですが/〜んですけど`로 연결했습니다.<br>
+        <span class="grammar-focus">わりと暇(ひま)ですね</span> : "시간이 있다"는 서술적 표현보다, `わりと(비교적)`라는 부사에 명사 `暇(한가함)`를 결합하여 일상적인 어조로 현재의 여유로움을 묘사했습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> ユイさんの<ruby>仕事<rt>しごと</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。</p>
+      <p class="pronunciation">(유이산노 시고토와 난 데스카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> ユイさんって、お<ruby>仕事<rt>しごと</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をされてるんですか？</p>
+      <p class="pronunciation">(유이산테, 오시고토와 나니오 사레테룬데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">유이씨의 직업(일)은 무엇인가요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 仕事(しごと/직업/일)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜は 何(なん)ですか</b> : 사물의 정체나 직업을 물어볼 때 사용되는 기초적인 의문문 형태입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">何(なん)</span> : 뒤에 오는 `です`의 영향을 받아 `なに`가 아닌 `なん`으로 발음되는 규칙이 적용되었습니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">상대방의 배경을 묻는 가장 직관적이고 표준적인 표현입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">お仕事(しごと)</span> : 타인의 직업을 물을 때는 명사 앞에 `お`를 붙이는 것이 예의에 맞습니다.<br>
+        <span class="grammar-focus">何(なに)をされている</span> : `する(하다)`의 존경어인 `される`와 진행형 `〜ている`를 결합하여 "어떤 일을 하고 계신가요?"라는 의미를 갖는 정중한 형태입니다.<br>
+        <span class="grammar-focus">〜んですか</span> : 질문에 부드러운 관심과 호기심을 더하는 회화체 조동사입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>私<rt>わたし</rt></ruby>は<ruby>不動産<rt>ふどうさん</rt></ruby><ruby>関係<rt>かんけい</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>です。ボムさんとヨンヒさんは？</p>
+      <p class="pronunciation">(와타시와 후도우산 칸케이노 시고토 데스. 보무산토 용히산와?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>私<rt>わたし</rt></ruby>は<ruby>不動産<rt>ふどうさん</rt></ruby><ruby>関係<rt>かんけい</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いてます。ボムさんたちはどうですか？</p>
+      <p class="pronunciation">(와타시와 후도우산 칸케이데 하타라이테마스. 보무산타치와 도우 데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">저는 부동산 쪽 일입니다(일하고 있습니다). 보무씨와 영희씨는요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 不動産(ふどうさん/부동산), 関係(かんけい/관련/계통), 働(はたら)く(일하다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>[명사 A] + の + [명사 B] です</b> : 명사 A에 소속되거나 관련된 명사 B를 서술하는 패턴입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">자신의 직업을 밝힌 후, 생략형 의문문("~는요?")을 사용하여 동일한 질문을 상대에게 자연스럽게 넘기는 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜関係(かんけい)の仕事(しごと)</span> : 특정 회사명을 언급하기보다 업계의 범주(계통)를 나타내는 `関係`를 사용하여 직종을 포괄적으로 설명하는 방식입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜で働(はたら)いてます</span> : "부동산 쪽 일입니다"라는 명사문 대신, 장소나 범위를 나타내는 `で`에 동사 `働く(일하다)`의 진행형(`〜ている`)을 결합하여, 현재 그 업계에서 종사하고 있음을 능동적으로 서술합니다.<br>
+        <span class="grammar-focus">ボムさんたち</span> : 일일이 이름을 나열하기보다 복수 접미사 `たち`를 사용하여 묶어서 질문하는 것이 효율적입니다.<br>
+        <span class="grammar-focus">どうですか</span> : 반말투가 될 수 있는 "〜は？" 생략형보다, `どうですか`를 온전히 붙여 질문의 형태를 명확히 갖추는 것이 다수의 사람에게 묻는 상황에서 정중함을 유지하는 데 도움이 됩니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>私<rt>わたし</rt></ruby>たちは<ruby>二人<rt>ふたり</rt></ruby>とも<ruby>開発者<rt>かいはつしゃ</rt></ruby>です。</p>
+      <p class="pronunciation">(와타시타치와 후타리토모 카이하츠샤 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> うちら、<ruby>二人<rt>ふたり</rt></ruby>ともエンジニアやってるんですよ。</p>
+      <p class="pronunciation">(우치라, 후타리토모 엔지니아 얏테룬데스요)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">저희 둘 다 개발자예요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 私(わたし)たち(우리들), 二人(ふたり)とも(둘 다), 開発者(かいはつしゃ/개발자), エンジニア(엔지니어)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>[수량사] + とも</b> : 인원수나 수량을 나타내는 명사 뒤에 붙어 그 대상이 '모두/다' 포함됨을 나타내는 조사입니다.<br>
+        <b>開発者(かいはつしゃ)</b> : 직업으로서의 개발자를 뜻하는 한자어입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">私たち</span> : '우리'를 뜻하는 대명사로, 자신과 상대를 함께 지칭하여 소속이나 공통점을 서술할 때 사용합니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">자신과 동행인의 직업적 공통점을 정중하고 간결하게 소개하는 표준적인 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">うちら</span> : `私たち`의 친근한 구어체 표현입니다.<br>
+        <span class="grammar-focus">エンジニア</span> : 일본의 IT 업계에서는 직업을 소개할 때 한자어인 `開発者`보다 가타카나인 `エンジニア(엔지니어)`를 사용하는 경향이 있습니다.<br>
+        <span class="grammar-focus">やってるんですよ</span> : `やっているのです`의 회화체입니다. 단순히 명사(`です`)로 끝내기보다 `やる(하다/종사하다)`를 진행형으로 사용하여 현재 그 직무를 수행하고 있음을 자연스럽게 나타냅니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> リモートワークですか。</p>
+      <p class="pronunciation">(리모-토 와-쿠 데스카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> リモートワークされてるんですか？</p>
+      <p class="pronunciation">(리모-토 와-쿠 사레테룬데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">재택근무 하세요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> リモートワーク(재택근무/원격근무)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>リモートワーク</b> : 재택근무를 뜻하는 외래어입니다. 일본 비즈니스 환경에서는 `テレワーク(테레워크)`라는 단어도 동일한 빈도로 쓰입니다.<br>
+        <b>[명사] + ですか</b> : 화제를 명사로 좁혀 간결하게 질문하는 기초 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 뉘앙스</div>
+        <p style="margin:0;">주어를 생략하고 핵심 단어만으로 의문을 제기하여 대화의 속도감을 유지하는 객관적인 질문 방식입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">されている</span> : 동사 `する(하다)`의 존경어인 `される`와 상태의 계속을 나타내는 `〜ている`를 결합한 형태입니다.<br>
+        <span class="grammar-focus">〜んですか</span> : 단순한 의문형(`ですか`)에 비해 상대방의 상황에 대한 호기심이나 부드러운 관심을 나타내는 조동사입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">상대방의 현재 근무 형태를 높여서 물어봄으로써, 예의를 갖추면서도 자연스럽게 대화의 깊이를 더하는 화법입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> ボムだけリモートワークです。<ruby>私<rt>わたし</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>出勤<rt>しゅっきん</rt></ruby>です。<ruby>羨<rt>うらや</rt></ruby>ましいです。</p>
+      <p class="pronunciation">(보무 다케 리모-토 와-쿠 데스. 와타시와 마이니치 슛킨 데스. 우라야마시이 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> ボムだけリモートなんですよ。<ruby>私<rt>わたし</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>出勤<rt>しゅっきん</rt></ruby>なんで、うらやましいですよ。</p>
+      <p class="pronunciation">(보무 다케 리모-토 난데스요. 와타시와 마이니치 슛킨 난데, 우라야마시이 데스요)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">보무만 재택근무입니다. 저는 매일 출근입니다. 부럽네요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 〜だけ(~만), 毎日(まいにち/매일), 出勤(しゅっきん/출근), 羨(うらや)ましい(부럽다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜だけ</b> : 명사 뒤에 붙어 대상을 '~만'으로 한정하는 조사입니다.<br>
+        <b>羨(うらや)ましい</b> : 타인의 긍정적인 상황이나 혜택을 보고 자신도 그렇게 되기를 바라는 감정을 서술하는 い형용사입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 뉘앙스</div>
+        <p style="margin:0;">세 개의 짧은 문장을 나열하여 각자의 근무 상황의 차이를 명확히 대조하고, 이에 대한 주관적 감정을 담백하게 전달하는 구조입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">リモート</span> : 일상 대화에서는 `リモートワーク`를 축약하여 `リモート`로 칭하는 경우가 많습니다.<br>
+        <span class="grammar-focus">〜なんで</span> : `〜なので(~이기 때문에)`의 구어체입니다. 자신의 출근 상황을 이유로 삼아 뒷문장의 감정(부러움)과 자연스럽게 연결합니다.<br>
+        <span class="grammar-focus">〜ですよ</span> : 종조사 `よ`를 활용하여 자신의 부러운 감정을 상대방에게 가볍게 어필하는 화법입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> へえ〜、リモートワークはいいですか。</p>
+      <p class="pronunciation">(헤에~, 리모-토 와-쿠 와 이이 데스카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> へえ〜、リモートってやっぱりいいですか？</p>
+      <p class="pronunciation">(헤에~, 리모-톳테 얏파리 이이 데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">헤에~ 재택근무는 괜찮나요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> へえ(감탄사), いい(좋다/괜찮다), やっぱり(역시)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>へえ〜</b> : 상대방의 말에 가볍게 놀라거나 흥미를 보일 때 문두에 사용하는 감탄사입니다.<br>
+        <b>〜はいいですか</b> : 특정 상황이나 대상에 대한 긍정적인 평가 및 만족도를 묻는 기초 질문 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 뉘앙스</div>
+        <p style="margin:0;">감탄사를 통해 상대의 상황에 공감하고 있음을 나타내며, 대화의 주제를 확장하는 역할을 합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">〜って</span> : 주제 조사 `〜は`를 대체하는 회화체로, 화제를 한층 부드럽게 제시합니다.<br>
+        <span class="grammar-focus">やっぱり</span> : `やはり(역시)`의 구어체 부사입니다. 일반적인 예상이나 기대(재택근무는 편할 것이다)가 실제로도 그러한지 확인할 때 사용하여 문장의 뉘앙스를 풍부하게 만듭니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>仕事<rt>しごと</rt></ruby>の<ruby>時<rt>とき</rt></ruby>は、YouTube(ユーチューブ)を<ruby>見<rt>み</rt></ruby>ます。だから、<ruby>退屈<rt>たいくつ</rt></ruby>じゃありません。でも、ヨンヒが<ruby>羨<rt>うらや</rt></ruby>ましいです。ヨンヒは<ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>れるからです。</p>
+      <p class="pronunciation">(시고토 노 토키와, 유-츄-부 오 미마스. 다카라, 타이쿠츠 쟈 아리마셍. 데모, 용히가 우라야마시이 데스. 용히와 하야쿠 카에레루카라 데스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> <ruby>仕事中<rt>しごとちゅう</rt></ruby>はYouTube<ruby>見<rt>み</rt></ruby>ながらやってるんで、<ruby>退屈<rt>たいくつ</rt></ruby>はしないですね。でも、<ruby>早<rt>はや</rt></ruby>く<ruby>上<rt>あ</rt></ruby>がれるヨンヒのほうがうらやましいですよ。</p>
+      <p class="pronunciation">(시고토츄우와 유-츄-부 미나가라 얏테룬데, 타이쿠츠와 시나이데스네. 데모, 하야쿠 아가레루 용히 노 호우가 우라야마시이 데스요)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">일할 때는 유튜브를 봅니다. 그래서 지루하지 않습니다. 그래도 영희가 부럽습니다. 영희는 일찍 퇴근할 수 있기 때문입니다.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 〜の時(とき)は(~할 때는), だから(그래서), 退屈(たいくつ/지루함), 帰(かえ)れる(돌아갈 수 있다), 仕事中(しごとちゅう/근무 중), 上(あ)がる(마치다/퇴근하다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>[명사] + の時(とき)は</b> : 명사 형태의 동작이나 상태에 접속하여 '~할 때는'이라는 시간적 배경을 설정합니다.<br>
+        <b>だから</b> : 앞의 내용이 뒤의 결과에 대한 원인이 됨을 나타내는 접속사입니다.<br>
+        <b>〜からです</b> : 문장 끝에 위치하여 앞선 감정이나 상태의 이유를 명확하게 설명하는 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">帰(かえ)れる</span> : 동사 `帰る(돌아가다)`의 가능형으로 '돌아갈 수 있다(퇴근할 수 있다)'는 능력을 나타냅니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">마지막 문장에서 주어를 `ヨンヒは`로 명시하여, 앞 문장과 혼동되지 않도록 객관적인 논리 구조를 취하고 있습니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">見(み)ながらやってるんで</span> : 동사의 ます형 어간에 결합하는 `〜ながら(~하면서)`와 업무를 수행함을 뜻하는 `やっている`를 결합하여 두 가지 행동이 동시에 진행됨을 묘사합니다.<br>
+        <span class="grammar-focus">早(はや)く上(あ)がれる</span> : 일본 직장인의 일상 회화에서는 퇴근을 의미할 때 `帰る`보다 `上がる(업무를 마치다)`라는 동사를 사용하는 경향이 관찰됩니다.<br>
+        <span class="grammar-focus">〜のほうが</span> : 두 가지 상황을 비교할 때 '~쪽이'라는 의미를 더하여, 부러움의 대상을 한층 더 돋보이게 하는 화법입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> <ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>れていいですね。ユイさんは<ruby>週末<rt>しゅうまつ</rt></ruby><ruby>休<rt>やす</rt></ruby>みですか。</p>
+      <p class="pronunciation">(하야쿠 카에레테 이이 데스네. 유이산와 슈우마츠 야스미 데스카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> <ruby>早<rt>はや</rt></ruby>く<ruby>上<rt>あ</rt></ruby>がれていいですね。ユイさんって<ruby>週末<rt>しゅうまつ</rt></ruby>はお<ruby>休<rt>やす</rt></ruby>みなんですか？</p>
+      <p class="pronunciation">(하야쿠 아가레테 이이 데스네. 유이산테 슈우마츠와 오야스미 난데스카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">일찍 퇴근할 수 있어서 좋네요. 유이씨는 주말에 쉬나요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 帰(かえ)れる(돌아갈 수 있다), 週末(しゅうまつ/주말), 休(やす)み(휴일/쉬는 날)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜て いいですね</b> : 동사의 `て`형을 사용하여 앞부분에 원인이나 이유를 나타내고, 그로 인해 '좋네요'라는 감상을 서술하는 형태입니다.<br>
+        <b>[명사] + ですか</b> : 휴일 여부를 명사 의문문으로 간결하게 묻는 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">帰(かえ)れて</span> : 동사 `帰る(돌아가다)`의 가능형인 `帰れる`에 접속 조사 `て`가 결합하여 '돌아갈 수 있어서'라는 의미를 구성합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">上(あ)がれて</span> : 퇴근을 뜻할 때 `帰る` 대신 `上がる`의 가능형(`上がれる`)을 사용하는 것이 현지 직장인 회화에서 자주 관찰됩니다.<br>
+        <span class="grammar-focus">お休(やす)み</span> : 명사 앞에 `お`를 붙여 상대방의 휴일을 정중하게 지칭합니다.<br>
+        <span class="grammar-focus">〜なんですか</span> : 단순 의문문에 호기심과 부드러운 관심을 더해주는 조동사입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>毎月<rt>まいつき</rt></ruby>スケジュールが<ruby>違<rt>ちが</rt></ruby>います。たまに<ruby>週末<rt>しゅうまつ</rt></ruby>にも<ruby>仕事<rt>しごと</rt></ruby>をします。</p>
+      <p class="pronunciation">(마이츠키 스케쥬-루가 치가이마스. 타마니 슈우마츠니모 시고토 오 시마스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> <ruby>月<rt>つき</rt></ruby>によってスケジュールが<ruby>違<rt>ちが</rt></ruby>うんですよ。たまに<ruby>週末<rt>しゅうまつ</rt></ruby>も<ruby>仕事<rt>しごと</rt></ruby>だったりします。</p>
+      <p class="pronunciation">(츠키니 욧테 스케쥬-루가 치가운데스요. 타마니 슈우마츠모 시고토 닷타리 시마스)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">매달 스케줄이 달라요. 가끔 주말에도 일해요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> 毎月(まいつき/매달), 違(ちが)う(다르다), たまに(가끔), 週末(しゅうまつ/주말)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>[명사] + が 違(ちが)います</b> : 비교 대상이 다르거나 상태가 일정하지 않음을 나타내는 서술어입니다.<br>
+        <b>[시간/장소 명사] + にも</b> : '~에'를 나타내는 조사 `に`와 '~도'를 뜻하는 `も`가 결합하여 평일 외에 주말까지 포함됨을 나타냅니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 뉘앙스</div>
+        <p style="margin:0;">자신의 근무 형태가 불규칙함을 객관적이고 담백한 문장으로 분리하여 설명하는 표준적인 화법입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">月(つき)によって</span> : `毎月(매달)` 대신 '~에 따라'라는 뜻의 `〜によって`를 활용하여 유동적인 상황을 서술합니다.<br>
+        <span class="grammar-focus">週末(しゅうまつ)も</span> : 회화에서는 `にも`에서 `に`를 생략하고 `も`만 사용하여 호흡을 간결하게 하는 경향이 있습니다.<br>
+        <span class="grammar-focus">〜だったりします</span> : `仕事をします(일합니다)`라고 단정 짓기보다, `〜たりする(~하기도 하다)`를 명사에 접속하여 "주말이 일하는 날이 되기도 한다"며 완곡하고 부드럽게 표현했습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> インスタを<ruby>交換<rt>こうかん</rt></ruby>しませんか。</p>
+      <p class="pronunciation">(인스타 오 코우칸 시마셍카?)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> もしよかったら、インスタ<ruby>繋<rt>つな</rt></ruby>がりませんか？</p>
+      <p class="pronunciation">(모시 요캇타라, 인스타 츠나가리마셍카?)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">인스타 교환 할래요?</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> インスタ(인스타), 交換(こうかん/교환), もし(만약), 繋(つな)がる(연결되다/이어지다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>〜しませんか</b> : 동사 부정형에 의문사를 결합하여 상대방에게 행동을 부드럽게 제안하는 기초 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 뉘앙스</div>
+        <p style="margin:0;">대화가 마무리되는 시점에 서로의 연락처나 SNS를 정중하게 묻고자 할 때 활용하기 적절한 표현입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">もしよかったら</span> : '만약 괜찮으시다면'이라는 뜻으로, 상대가 거절에 대한 부담을 느끼지 않도록 배려하는 완곡어법입니다.<br>
+        <span class="grammar-focus">繋(つな)がる</span> : 최근 일본 회화에서는 SNS 계정을 공유하는 행위를 '교환하다'보다 '연결되다(繋がる)'라는 동사로 표현하여 한층 사교적인 느낌을 주는 경우가 많습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> いいですね。</p>
+      <p class="pronunciation">(이이 데스네)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> いいですね！ぜひぜひ。</p>
+      <p class="pronunciation">(이이 데스네! 제히제히)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">좋네요(그래요).</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> いい(좋다/괜찮다), ぜひ(꼭/부디)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <p style="margin:0 0 5px 0;"><b>いいですね</b> : 상대방의 제안이나 의견에 동의할 때 쓰이는 표준적인 긍정 표현입니다.</p>
+      </div>
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">ぜひぜひ</span> : 수락의 의미를 담은 `いいですね` 뒤에 `ぜひ`를 반복하여 덧붙이면, 제안을 흔쾌히 받아들인다는 호의가 더욱 명확히 전달됩니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> もう<ruby>交流会<rt>こうりゅうかい</rt></ruby>が<ruby>終<rt>お</rt></ruby>わりましたね。これからもよろしくお<ruby>願<rt>ねが</rt></ruby>いします。</p>
+      <p class="pronunciation">(모우 코우류우카이 가 오와리마시타네. 코레카라모 요로시쿠 오네가이시마스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">보무:</span> あっという<ruby>間<rt>ま</rt></ruby>に<ruby>交流会<rt>こうりゅうかい</rt></ruby><ruby>終<rt>お</rt></ruby>わっちゃいましたね。これからもよろしくお願いします。</p>
+      <p class="pronunciation">(앗토이우마니 코우류우카이 오왓챠이마시타네. 코레카라모 요로시쿠 오네가이시마스)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">벌써 교류회가 끝났네요. 앞으로도 잘 부탁드립니다.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> もう(벌써/이미), 終(お)わる(끝나다), これからも(앞으로도), あっという間(ま)に(순식간에)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>もう + [과거형]</b> : '벌써 ~했다'라는 의미로 상황이 완료되었음을 나타냅니다.<br>
+        <b>これからも</b> : '이제부터도' 또는 '앞으로도'를 의미하며 관계의 지속을 희망할 때 쓰입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n3-text">● N3 레벨</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">終(お)わりましたね</span> : 과거형 `ました`에 종조사 `ね`를 붙여, 끝났다는 사실에 대해 상대방과 감정을 공유하고 공감을 유도합니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">あっという間(ま)に</span> : '벌써(もう)'를 강조하여 시간이 '순식간에/눈 깜짝할 사이에' 지나갔음을 아쉬워하는 관용구입니다.<br>
+        <span class="grammar-focus">終(お)わっちゃいましたね</span> : `終わってしまいました(~해 버렸습니다)`의 구어체 축약형입니다. 일이 끝난 것에 대한 아쉬운 감정을 문법적으로 녹여낸 표현입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</p>
+      <p class="pronunciation">(요로시쿠 오네가이시마스)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">유이:</span> こちらこそ、よろしくお願いします！</p>
+      <p class="pronunciation">(코치라코소, 요로시쿠 오네가이시마스!)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">잘 부탁드려요.</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> こちらこそ(저야말로)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <p style="margin:0 0 5px 0;"><b>よろしくお願(ねが)いします</b> : 상대방의 호의나 인사에 화답하여 앞으로의 관계를 부탁하는 기본 인사입니다.</p>
+      </div>
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">こちらこそ</span> : 단순히 똑같이 인사를 반복하기보다, 문두에 '저야말로'를 덧붙임으로써 상호 존중의 의미를 더 명확하게 표현할 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dialogue-wrapper">
+  <div class="sentence-area">
+    <div style="margin-bottom: 25px;">
+      <div class="level-badge-group">
+        <span class="l-badge l-n4">N4</span>
+        <span class="l-badge l-n3">N3</span>
+        <span class="l-badge l-polite">원어민(정중)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> また<ruby>会<rt>あ</rt></ruby>いましょう。</p>
+      <p class="pronunciation">(마타 아이마쇼우)</p>
+    </div>
+
+    <div>
+      <div class="level-badge-group">
+        <span class="l-badge l-n2">N2</span>
+        <span class="l-badge l-casual">원어민(캐주얼)</span>
+      </div>
+      <p class="jp-text"><span class="speaker">영희:</span> ええ、またぜひお<ruby>会<rt>あ</rt></ruby>いましょう！</p>
+      <p class="pronunciation">(에에, 마타 제히 오아이마쇼우!)</p>
+    </div>
+
+    <p class="ko-text" style="margin-top:15px; border-top:1px dashed #cbd5e1; padding-top:10px;">또 만나요(만납시다).</p>
+  </div>
+
+  <div class="detail-area">
+    <div class="vocab-row">
+      <span class="vocab-label">단어</span> また(또/다시), 会(あ)う(만나다)
+    </div>
+    
+    <div class="grammar-row">
+      <span class="grammar-label">레벨별 문법 해부</span>
+      
+      <div class="desc-item">
+        <span class="desc-label n4-text">● N4 레벨</span>
+        <div class="grammar-sub-title">1. 패턴 중심</div>
+        <p style="margin:0 0 5px 0;"><b>また + [동사]ましょう</b> : '다시 ~합시다'라는 의미로, 헤어질 때 다음을 기약하는 보편적이고 정중한 인사말 패턴입니다.</p>
+      </div>
+
+      <div class="desc-item">
+        <span class="desc-label n2-text">● N2 & 원어민 실전</span>
+        <div class="grammar-sub-title">1. 문법 구조 해부</div>
+        <p style="margin:0 0 5px 0;"><span class="grammar-focus">ええ、またぜひ</span> : 긍정의 `ええ`와 '꼭'을 뜻하는 `ぜひ`를 추가하여, 다음 만남에 대한 적극적인 의지를 표현합니다.<br>
+        <span class="grammar-focus">お会(あ)いましょう</span> : 동사 `会う`의 `ます`형 앞에 `お`를 붙여 겸양과 존경의 의미를 담은 한층 더 정중한 작별 인사입니다.</p>
+        <div class="grammar-sub-title">2. 뉘앙스</div>
+        <p style="margin:0;">만약 상대방과 동갑이거나 매우 친밀한 사이로 발전했다면, 이러한 격식을 덜어내고 <b>"またね！(또 봐!)"</b> 혹은 <b>"また遊(あそ)ぼうね(또 놀자)"</b>와 같은 캐주얼한 표현으로 변형하여 사용할 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <br>
+
+  <h2 style="margin-top:50px;">드릴 3. 프리토킹: 무한 핑퐁 스파링</h2>
+  <p class="section-desc">📌 배운 뼈대(문법 패턴)에 아래 단어들을 쏙쏙 끼워 넣고, 나만의 문장으로 옆 사람과 스파링을 해보세요!</p>
+
+  <div class="pattern-box">
+  <div class="pattern-syntax">
+    [주어] は/が + [명사] 
+    です / ですか / じゃありません / ではありません / でした / じゃありませんでした / ではありませんでした / でしょう
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 명사문 (です 문장 완전 정리)</b><br><br>
+
+    <b>① 현재 긍정</b><br>
+    명사 + です → ~입니다<br>
+    例: 私は学生です。<br><br>
+
+    <b>② 의문</b><br>
+    ですか → ~입니까?<br>
+    例: 学生ですか。<br><br>
+
+    <b>③ 현재 부정 (회화형)</b><br>
+    じゃありません → 교재 + 회화 둘 다 사용<br>
+    例: 学生じゃありません。<br><br>
+
+    <b>④ 현재 부정 (정중형)</b><br>
+    ではありません → 가장 정중 / 시험형<br>
+    例: 学生ではありません。<br><br>
+
+    <b>⑤ 과거 긍정</b><br>
+    でした → ~이었습니다<br>
+    例: 学生でした。<br><br>
+
+    <b>⑥ 과거 부정 (회화형)</b><br>
+    じゃありませんでした<br>
+    例: 学生じゃありませんでした。<br><br>
+
+    <b>⑦ 과거 부정 (정중형)</b><br>
+    ではありませんでした<br>
+    例: 学生ではありませんでした。<br><br>
+
+    <b>⑧ 추측 / 확인</b><br>
+    でしょう → ~일 것입니다 / 그렇겠죠<br>
+    例: 学生でしょう。
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ 예문 모음 (패턴별)<br><br>
+
+    ・<ruby>私<rt>わたし</rt></ruby>は <ruby>韓国人<rt>かんこくじん</rt></ruby> です。<br>
+    ・あなたは <ruby>学生<rt>がくせい</rt></ruby> ですか。<br>
+    ・ボムさんは <ruby>先生<rt>せんせい</rt></ruby> じゃありません。<br>
+    ・ボムさんは <ruby>先生<rt>せんせい</rt></ruby> ではありません。<br>
+    ・<ruby>昨日<rt>きのう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>み でした。<br>
+    ・<ruby>犯人<rt>はんにん</rt></ruby> は ボムさん じゃありませんでした。<br>
+    ・<ruby>犯人<rt>はんにん</rt></ruby> は ボムさん ではありませんでした。<br>
+    ・あの<ruby>人<rt>ひと</rt></ruby>は <ruby>日本人<rt>にほんじん</rt></ruby> でしょう。
+  </p>
+
+    
+    <span class="vocab-label" style="display:inline-block; margin-top:20px; background:#e0e7ff; color:#1e40af; font-size:14px; padding:4px 10px;">넣어볼 단어 (주어 / 명사)</span>
+    <div class="word-grid">
+      <div class="word-item">私 (나)<span>わたし / 와타시</span></div>
+      <div class="word-item">あなた (당신)<span>あなた / 아나타</span></div>
+      <div class="word-item">彼 (그)<span>かれ / 카레</span></div>
+      <div class="word-item">彼女 (그녀)<span>かのじょ / 카노죠</span></div>
+      <div class="word-item">先生 (선생님)<span>せんせい / 센세이</span></div>
+      <div class="word-item">学生 (학생)<span>がくせい / 가쿠세이</span></div>
+      <div class="word-item">会社員 (회사원)<span>かいしゃいん / 카이샤인</span></div>
+      <div class="word-item">医者 (의사)<span>いしゃ / 이샤</span></div>
+      <div class="word-item">友達 (친구)<span>ともだち / 토모다치</span></div>
+      <div class="word-item">家族 (가족)<span>かぞく / 카조쿠</span></div>
+      <div class="word-item">日本人 (일본인)<span>にほんじん / 니혼진</span></div>
+      <div class="word-item">韓国人 (한국인)<span>かんこくじん / 칸코쿠진</span></div>
+      <div class="word-item">大人 (어른)<span>おとな / 오토나</span></div>
+      <div class="word-item">子供 (아이)<span>こども / 코도모</span></div>
+      <div class="word-item">男 (남자)<span>おとこ / 오토코</span></div>
+      <div class="word-item">女 (여자)<span>おんな / 온나</span></div>
+      <div class="word-item">先輩 (선배)<span>せんぱい / 센파이</span></div>
+      <div class="word-item">後輩 (후배)<span>こうはい / 코우하이</span></div>
+      <div class="word-item">社長 (사장)<span>しゃちょう / 샤쵸우</span></div>
+      <div class="word-item">専門家 (전문가)<span>せんもんか / 센몬카</span></div>
+      <div class="word-item">趣味 (취미)<span>しゅみ / 슈미</span></div>
+      <div class="word-item">仕事 (일/직업)<span>しごと / 시고토</span></div>
+      <div class="word-item">休み (휴일)<span>やすみ / 야스미</span></div>
+      <div class="word-item">会議 (회의)<span>かいぎ / 카이기</span></div>
+      <div class="word-item">約束 (약속)<span>やくそく / 야쿠소쿠</span></div>
+      <div class="word-item">本当 (진실)<span>ほんとう / 혼토우</span></div>
+      <div class="word-item">嘘 (거짓말)<span>うそ / 우소</span></div>
+      <div class="word-item">正解 (정답)<span>せいかい / 세이카이</span></div>
+      <div class="word-item">無料 (무료)<span>むりょう / 무료우</span></div>
+      <div class="word-item">有料 (유료)<span>ゆうりょう / 유우료우</span></div>
+    </div>
+  </div>
+
+<div class="pattern-box">
+
+  <div class="pattern-syntax">
+    い형용사 / な형용사 활용 전체 정리
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 い형용사 활용</b><br><br>
+
+    ✔ 현재 긍정 → 美味しい(맛있다,<span>(おいしい / 오이시이[い형용사])</span>)<br>
+    ✔ 현재 부정 → 美味しくない<br>
+    ✔ 현재 정중 → 美味しいです<br>
+    ✔ 현재 부정 정중 → 美味しくないです / 美味しくありません<br><br>
+
+    ✔ 과거 긍정 → 美味しかった<br>
+    ✔ 과거 정중 → 美味しかったです<br>
+    ✔ 과거 부정 → 美味しくなかった<br>
+    ✔ 과거 부정 정중 → 美味しくなかったです / 美味しくありませんでした<br><br>
+
+    ✔ 연결 → 美味しくて<br>
+    ✔ 가정 → 美味しければ
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ い형용사 예문<br><br>
+
+    ・このケーキは <ruby>美味<rt>おい</rt></ruby>しいです。<br>
+    ・このケーキは 美味しくないです。<br>
+    ・昨日は 美味しかったです。<br>
+    ・昨日は 美味しくなかったです。<br>
+    ・美味しくて たくさん食べました。<br>
+    ・安ければ 買います。
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 な형용사 활용</b><br><br>
+
+    ✔ 현재 긍정 → 静か(조용하다<span>(しずかだ / 시즈카다 [な형용사])</span>)だ / 静かです<br>
+    ✔ 현재 부정 → 静かじゃない / 静かではない<br>
+    ✔ 현재 부정 정중 → 静かじゃありません / 静かではありません<br><br>
+
+    ✔ 과거 긍정 → 静かだった / 静かでした<br>
+    ✔ 과거 부정 → 静かじゃなかった / 静かではなかった<br>
+    ✔ 과거 부정 정중 → 静かじゃありませんでした / 静かではありませんでした<br><br>
+
+    ✔ 명사 수식 → 静かな 部屋<br>
+    ✔ 연결 → 静かで<br>
+    ✔ 가정 → 静かなら
+  </p>
+
+  <p style="background:#fff; padding:15px; border-left:4px solid #1e40af; font-weight:700; border-radius:4px;">
+    🗣️ な형용사 예문<br><br>
+
+    ・このカフェは <ruby>静<rt>しず</rt></ruby>かです。<br>
+    ・このカフェは 静かじゃありません。<br>
+    ・昨日は 静かでした。<br>
+    ・昨日は 静かではありませんでした。<br>
+    ・静かな 部屋が 好きです。<br>
+    ・静かなら 勉強できます。
+  </p>
+
+    <div class="word-grid">
+      <div class="word-item">美味しい (맛있다)<span>おいしい / 오이시이 [い]</span></div>
+      <div class="word-item">高い (비싸다/높다)<span>たかい / 타카이 [い]</span></div>
+      <div class="word-item">安い (싸다)<span>やすい / 야스이 [い]</span></div>
+      <div class="word-item">大きい (크다)<span>おおきい / 오오키이 [い]</span></div>
+      <div class="word-item">小さい (작다)<span>ちいさい / 치이사이 [い]</span></div>
+      <div class="word-item">新しい (새롭다)<span>あたらしい / 아타라시이 [い]</span></div>
+      <div class="word-item">古い (낡다)<span>ふるい / 후루이 [い]</span></div>
+      <div class="word-item">良い (좋다)<span>いい / 이이 [い]</span></div>
+      <div class="word-item">悪い (나쁘다)<span>わるい / 와루이 [い]</span></div>
+      <div class="word-item">暑い (덥다)<span>あつい / 아츠이 [い]</span></div>
+      <div class="word-item">寒い (춥다)<span>さむい / 사무이 [い]</span></div>
+      <div class="word-item">忙しい (바쁘다)<span>いそがしい / 이소가시이 [い]</span></div>
+      <div class="word-item">面白い (재밌다)<span>おもしろい / 오모시로이 [い]</span></div>
+      <div class="word-item">痛い (아프다)<span>いたい / 이타이 [い]</span></div>
+      <div class="word-item">怖い (무섭다)<span>こわい / 코와이 [い]</span></div>
+      <div class="word-item">好きだ (좋아하다)<span>すきだ / 스키다 [な]</span></div>
+      <div class="word-item">嫌いだ (싫어하다)<span>きらいだ / 키라이다 [な]</span></div>
+      <div class="word-item">静かだ (조용하다)<span>しずかだ / 시즈카다 [な]</span></div>
+      <div class="word-item">綺麗だ (깨끗/예쁘다)<span>きれいだ / 키레이다 [な]</span></div>
+      <div class="word-item">有名だ (유명하다)<span>ゆうめいだ / 유우메이다 [な]</span></div>
+      <div class="word-item">親切だ (친절하다)<span>しんせつだ / 신세츠다 [な]</span></div>
+      <div class="word-item">便利だ (편리하다)<span>べんりだ / 벤리다 [な]</span></div>
+      <div class="word-item">不便だ (불편하다)<span>ふべんだ / 후벤다 [な]</span></div>
+      <div class="word-item">元気だ (건강하다)<span>げんきだ / 겐키다 [な]</span></div>
+      <div class="word-item">暇だ (한가하다)<span>ひまだ / 히마다 [な]</span></div>
+      <div class="word-item">簡単だ (간단하다)<span>かんたんだ / 칸탄다 [な]</span></div>
+      <div class="word-item">大変だ (힘들다)<span>たいへんだ / 타이헨다 [な]</span></div>
+      <div class="word-item">上手だ (능숙하다)<span>じょうずだ / 죠우즈다 [な]</span></div>
+      <div class="word-item">下手だ (서툴다)<span>へただ / 헤타다 [な]</span></div>
+      <div class="word-item">立派だ (훌륭하다)<span>りっぱだ / 릿파다 [な]</span></div>
+    </div>
+  </div>
+
+  <div class="pattern-box">
+
+  <div class="pattern-syntax">
+    동사 ます형 완전 정리 (1류 / 2류 / 3류 + 구분법)
+  </div>
+
+  <p style="margin:15px 0 5px 0;">
+    <b>💡 ます형이란?</b><br><br>
+    정중하게 행동을 말할 때 쓰는 기본 형태입니다.<br>
+    일본어 회화와 자기소개 대부분이 ます형으로 시작합니다.
+  </p>
+
+  <p>
+    부정 → 〜ません<br>
+    과거 → 〜ました<br>
+    과거부정 → 〜ませんでした
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>📌 동사 구분법</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>① 2류 동사</b><br>
+    「〜<ruby>える<rt>eru</rt></ruby> / 〜<ruby>いる<rt>iru</rt></ruby>」로 끝나는 경우가 많으며<br>
+    <b>る를 제거하고 ます</b>를 붙입니다.<br><br>
+
+    例:<br>
+    <ruby>食<rt>た</rt></ruby>べる / <ruby>見<rt>み</rt></ruby>る / <ruby>起<rt>お</rt></ruby>きる
+  </p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>② 1류 동사</b><br>
+    위 규칙이 아닌 대부분 동사<br>
+    마지막 글자를 <b>い단</b>으로 바꾸고 ます
+  </p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <b>③ 3류 동사</b><br>
+    <ruby>来<rt>く</rt></ruby>る / する (두 개만 존재)
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>① 1류 동사 변형</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>きます<br>
+    <ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>みます<br>
+    <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby>みます<br>
+    <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby>します<br>
+    <ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>います<br>
+    <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby>きます
+  </p>
+
+  <p>
+    부정 → 〜ません<br>
+    과거 → 〜ました<br>
+    과거부정 → 〜ませんでした
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>② 2류 동사 변형</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べます<br>
+    <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby>ます<br>
+    <ruby>起<rt>お</rt></ruby>きる → <ruby>起<rt>お</rt></ruby>きます<br>
+    <ruby>寝<rt>ね</rt></ruby>る → <ruby>寝<rt>ね</rt></ruby>ます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>③ 3류 동사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    する → します<br>
+    <ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>き</rt></ruby>ます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>💡 목적어 조사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #1e40af;">
+    <ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ます<br>
+    ご<ruby>飯<rt>はん</rt></ruby>を <ruby>食<rt>た</rt></ruby>べます<br>
+    <ruby>音楽<rt>おんがく</rt></ruby>を <ruby>聞<rt>き</rt></ruby>きます
+  </p>
+
+  <hr style="margin:25px 0;">
+
+  <p><b>🚨 존재 동사</b></p>
+
+  <p style="background:#fff; padding:12px; border-left:4px solid #ef4444;">
+    <ruby>友達<rt>ともだち</rt></ruby>が います<br>
+    <ruby>時間<rt>じかん</rt></ruby>が あります
+  </p>
+
+    <div class="word-grid">
+      <div class="word-item">見る (보다)<span>みます / 미마스</span></div>
+      <div class="word-item">映画 (영화)<span>えいが / 에이가</span></div>
+      <div class="word-item">テレビ (TV)<span>テレビ / 테레비</span></div>
+      <div class="word-item">食べる (먹다)<span>たべます / 타베마스</span></div>
+      <div class="word-item">ご飯 (meal)<span>ごはん / 고항</span></div>
+      <div class="word-item">パン (빵)<span>パン / 판</span></div>
+      <div class="word-item">飲む (마시다)<span>のみます / 노미마스</span></div>
+      <div class="word-item">水 (물)<span>みず / 미즈</span></div>
+      <div class="word-item">コーヒー (coffee)<span>コーヒー / 코-히-</span></div>
+      <div class="word-item">買う (사다)<span>かいます / 카이마스</span></div>
+      <div class="word-item">鞄 (가방)<span>かばん / 카반</span></div>
+      <div class="word-item">靴 (구두)<span>くつ / 쿠츠</span></div>
+      <div class="word-item">読む (읽다)<span>よみます / 요미마스</span></div>
+      <div class="word-item">本 (책)<span>ほん / 혼</span></div>
+      <div class="word-item">雑誌 (잡지)<span>ざっし / 잣시</span></div>
+      <div class="word-item">書く (쓰다)<span>かきます / 카키마스</span></div>
+      <div class="word-item">手紙 (편지)<span>てがみ / 테가미</span></div>
+      <div class="word-item">聞く (듣다)<span>ききます / 키키마스</span></div>
+      <div class="word-item">音楽 (음악)<span>おんがく / 온가쿠</span></div>
+      <div class="word-item">する (하다)<span>します / 시마스</span></div>
+      <div class="word-item">仕事 (일)<span>しごと / 시고토</span></div>
+      <div class="word-item">勉強 (공부)<span>べんきょう / 벤쿄우</span></div>
+      <div class="word-item">運動 (운동)<span>うんどう / 운도우</span></div>
+      <div class="word-item">掃除 (청소)<span>そうじ / 소우지</span></div>
+      <div class="word-item">います (있습니다)<span>사람/동물이</span></div>
+      <div class="word-item">友達 (친구)<span>ともだち / 토모다치</span></div>
+      <div class="word-item">犬 (개)<span>いぬ / 이누</span></div>
+      <div class="word-item">あります (있습니다)<span>사물/식물이</span></div>
+      <div class="word-item">時間 (시간)<span>じかん / 지칸</span></div>
+      <div class="word-item">お金 (money)<span>おかね / 오카네</span></div>
+    </div>
+  </div>
+
 </div>

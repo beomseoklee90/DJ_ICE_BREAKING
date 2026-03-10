@@ -1,0 +1,1283 @@
+です[초급]
+<style>
+  :root {
+    --primary-color: #4f46e5;
+    --primary-light: #e0e7ff;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-card: #ffffff;
+    --bg-page: #f9fafb;
+    --border-color: #e5e7eb;
+    --jp-color: #ea580c;
+  }
+
+  .pattern-section {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    line-height: 1.7;
+  }
+
+  .pattern-header {
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pattern-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+  }
+
+  .pattern-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .grammar-box {
+    background-color: var(--bg-page);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    font-size: 1.05rem;
+  }
+
+  .grammar-box h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    font-size: 1.3rem;
+  }
+
+  .grammar-box p {
+    margin-bottom: 14px;
+    color: var(--text-muted);
+  }
+
+  .grammar-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .nuance-highlight {
+    background-color: #fffbeb;
+    padding: 12px 16px;
+    border-left: 4px solid #f59e0b;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+
+  /* 요미가나(후리가나) 스타일 */
+  ruby {
+    ruby-align: center;
+  }
+  rt {
+    font-size: 0.6em;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .formula-box {
+    text-align: center;
+    background-color: #f3f4f6;
+    padding: 24px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    border: 1px dashed #9ca3af;
+  }
+
+  .practice-container {
+    margin-top: 24px;
+  }
+
+  .practice-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+  }
+
+  .practice-item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .practice-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 문장별 단어 힌트 영역 */
+  .word-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    background-color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .word-chip {
+    background-color: white;
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+  }
+
+  .word-chip span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 6px;
+    font-weight: 400;
+  }
+
+  .kr-sentence {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .toggle-btn {
+    align-self: flex-start;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-btn:hover {
+    background-color: var(--primary-light);
+  }
+
+  .jp-sentence {
+    display: none;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    color: var(--jp-color);
+    font-weight: 600;
+    background-color: #fff7ed;
+    padding: 16px 20px;
+    border-left: 4px solid var(--jp-color);
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease-in-out;
+    line-height: 2;
+  }
+
+  .jp-note {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-weight: normal;
+    margin-top: 8px;
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 1] 나를 소개하는 기본 뼈대</h2>
+    <h3 class="pattern-subtitle">사실과 정보를 정중하게 전달하기</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~です (~입니다)</strong><br>
+    상대방에게 정중하게 정보를 전달하는 기본적인 표현입니다. 명사 뒤에 붙어서 문장을 예의 바르게 마무리합니다. 처음 만나는 자리에서 나를 소개할 때 주로 쓰입니다.</p>
+    
+    <p><strong>2. ~は (~은/는)</strong><br>
+    문장의 '주제'를 나타냅니다. 히라가나로는 'は(ha)'라고 적지만, 조사로 쓰일 때는 'wa'로 발음합니다.</p>
+
+    <div class="nuance-highlight">
+      <strong>🗣️ 실전 회화 팁 (주어 생략하기)</strong><br>
+      내 이야기를 하고 있다는 것이 명확하다면 대화 시작 시 "私は(저는)"을 생략해 보세요. 한국어에서도 "저는 회사원입니다"보다 "회사원이에요"가 편안하게 들리듯, 주어를 생략하면 교과서적인 딱딱함이 줄어들고 자연스러운 대화가 됩니다.
+    </div>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は +) [명사] + です
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      제공된 단어 블록을 활용하여 한국어 문장을 일본어로 조립해 보세요. 
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(저)</span></div>
+        <div class="word-chip"><ruby>会社員<rt>かいしゃいん</rt></ruby> <span>(회사원)</span></div>
+      </div>
+      <div class="kr-sentence">1. (저는) 회사원입니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        (<ruby>私<rt>わたし</rt></ruby>は) <ruby>会社員<rt>かいしゃいん</rt></ruby>です。
+        <span class="jp-note">*괄호 친 부분은 자연스럽게 생략할 수 있습니다.</span>
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(저)</span></div>
+        <div class="word-chip">ソウル <span>(서울)</span></div>
+        <div class="word-chip"><ruby>出身<rt>しゅっしん</rt></ruby> <span>(출신)</span></div>
+      </div>
+      <div class="kr-sentence">2. (저는) 서울 출신입니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        (<ruby>私<rt>わたし</rt></ruby>は) ソウル<ruby>出身<rt>しゅっしん</rt></ruby>です。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>韓日交流会<rt>かんにちこうりゅうかい</rt></ruby> <span>(한일 교류회)</span></div>
+        <div class="word-chip"><ruby>初<rt>はじ</rt></ruby>めて <span>(처음)</span></div>
+      </div>
+      <div class="kr-sentence">3. 한일 교류회는 처음입니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>韓日交流会<rt>かんにちこうりゅうかい</rt></ruby>は <ruby>初<rt>はじ</rt></ruby>めてです。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby>の <span>(저의)</span></div>
+        <div class="word-chip"><ruby>趣味<rt>しゅみ</rt></ruby> <span>(취미)</span></div>
+        <div class="word-chip"><ruby>映画<rt>えいが</rt></ruby> <span>(영화)</span></div>
+      </div>
+      <div class="kr-sentence">4. 제 취미는 영화입니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>の <ruby>趣味<rt>しゅみ</rt></ruby>は <ruby>映画<rt>えいが</rt></ruby>です。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>日本語<rt>にほんご</rt></ruby> <span>(일본어)</span></div>
+        <div class="word-chip"><ruby>勉強方法<rt>べんきょうほうほう</rt></ruby> <span>(공부 방법)</span></div>
+        <div class="word-chip"><ruby>独学<rt>どくがく</rt></ruby> <span>(독학)</span></div>
+      </div>
+      <div class="kr-sentence">5. 일본어 공부 방법은 독학입니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>日本語<rt>にほんご</rt></ruby>の <ruby>勉強方法<rt>べんきょうほうほう</rt></ruby>は <ruby>独学<rt>どくがく</rt></ruby>です。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>彼<rt>かれ</rt></ruby> <span>(그)</span></div>
+        <div class="word-chip"><ruby>職場<rt>しょくば</rt></ruby> <span>(직장)</span></div>
+        <div class="word-chip"><ruby>同僚<rt>どうりょう</rt></ruby> <span>(동료)</span></div>
+      </div>
+      <div class="kr-sentence">6. 그는 제 직장 동료입니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>彼<rt>かれ</rt></ruby>は <ruby>職場<rt>しょくば</rt></ruby>の <ruby>同僚<rt>どうりょう</rt></ruby>です。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 2] 상대방에 대해 질문하기</h2>
+    <h3 class="pattern-subtitle">자연스럽고 예의 바르게 관심 표현하기</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~ですか (~입니까?)</strong><br>
+    문장 끝에 'か(ka)'를 붙여 질문을 만듭니다. </p>
+    
+    <p><strong>2. 何 (무엇) / どこ (어디)</strong><br>
+    가장 기본이 되는 의문사입니다. '何'은 '何ですか' 앞에서는 'なん(nan)'으로 발음합니다.</p>
+
+    <div class="nuance-highlight">
+      <strong>🗣️ 실전 회화 팁 ('당신' 대신 이름 부르기)</strong><br>
+      일본어에서는 "당신은 학생입니까?"라고 물을 때 'あなた(당신)'라는 단어를 쓰지 않는 것이 좋습니다. 대신 상대방의 이름을 알아낸 후, <strong>"유이 씨는 회사원입니까? (ユイさんは 会社員ですか)"</strong>처럼 상대의 이름을 직접 부르며 질문하는 것이 자연스럽고 정중한 회화의 매너입니다.
+    </div>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は +) [의문사/명사] + ですか
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      제공된 단어 블록을 활용하여 질문을 조립해 보세요. 
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">お<ruby>名前<rt>なまえ</rt></ruby> <span>(성함)</span></div>
+        <div class="word-chip"><ruby>何<rt>なん</rt></ruby> <span>(무엇)</span></div>
+      </div>
+      <div class="kr-sentence">1. 성함은 무엇입니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        お<ruby>名前<rt>なまえ</rt></ruby>は <ruby>何<rt>なん</rt></ruby>ですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">ご<ruby>出身<rt>しゅっしん</rt></ruby> <span>(출신)</span></div>
+        <div class="word-chip">どこ <span>(어디)</span></div>
+      </div>
+      <div class="kr-sentence">2. 출신은 어디입니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        ご<ruby>出身<rt>しゅっしん</rt></ruby>は どこですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">ユイさん <span>(유이 씨)</span></div>
+        <div class="word-chip"><ruby>会社員<rt>かいしゃいん</rt></ruby> <span>(회사원)</span></div>
+      </div>
+      <div class="kr-sentence">3. 유이 씨는 회사원입니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        ユイさんは <ruby>会社員<rt>かいしゃいん</rt></ruby>ですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>学生<rt>がくせい</rt></ruby> <span>(학생)</span></div>
+      </div>
+      <div class="kr-sentence">4. 학생입니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>学生<rt>がくせい</rt></ruby>ですか。
+        <span class="jp-note">*대화 중이라면 주어를 빼고 이렇게 간결하게 묻는 것이 자연스럽습니다.</span>
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>趣味<rt>しゅみ</rt></ruby> <span>(취미)</span></div>
+        <div class="word-chip"><ruby>何<rt>なん</rt></ruby> <span>(무엇)</span></div>
+      </div>
+      <div class="kr-sentence">5. 취미는 무엇입니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>趣味<rt>しゅみ</rt></ruby>は <ruby>何<rt>なん</rt></ruby>ですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+        <div class="word-chip"><ruby>初<rt>はじ</rt></ruby>めて <span>(처음)</span></div>
+      </div>
+      <div class="kr-sentence">6. 오늘은 처음입니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>今日<rt>きょう</rt></ruby>は <ruby>初<rt>はじ</rt></ruby>めてですか。
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  :root {
+    --primary-color: #4f46e5;
+    --primary-light: #e0e7ff;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-card: #ffffff;
+    --bg-page: #f9fafb;
+    --border-color: #e5e7eb;
+    --jp-color: #ea580c;
+  }
+
+  .pattern-section {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    line-height: 1.7;
+  }
+
+  .pattern-header {
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pattern-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+  }
+
+  .pattern-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .grammar-box {
+    background-color: var(--bg-page);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    font-size: 1.05rem;
+  }
+
+  .grammar-box h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    font-size: 1.3rem;
+  }
+
+  .grammar-box p {
+    margin-bottom: 14px;
+    color: var(--text-muted);
+  }
+
+  .grammar-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .nuance-highlight {
+    background-color: #fffbeb;
+    padding: 12px 16px;
+    border-left: 4px solid #f59e0b;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+
+  /* 요미가나(후리가나) 스타일 */
+  ruby {
+    ruby-align: center;
+  }
+  rt {
+    font-size: 0.6em;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .formula-box {
+    text-align: center;
+    background-color: #f3f4f6;
+    padding: 24px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    border: 1px dashed #9ca3af;
+  }
+
+  .practice-container {
+    margin-top: 24px;
+  }
+
+  .practice-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+  }
+
+  .practice-item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .practice-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 문장별 단어 힌트 영역 */
+  .word-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    background-color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .word-chip {
+    background-color: white;
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+  }
+
+  .word-chip span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 6px;
+    font-weight: 400;
+  }
+
+  .kr-sentence {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .toggle-btn {
+    align-self: flex-start;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-btn:hover {
+    background-color: var(--primary-light);
+  }
+
+  .jp-sentence {
+    display: none;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    color: var(--jp-color);
+    font-weight: 600;
+    background-color: #fff7ed;
+    padding: 16px 20px;
+    border-left: 4px solid var(--jp-color);
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease-in-out;
+    line-height: 2;
+  }
+
+  .jp-note {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-weight: normal;
+    margin-top: 8px;
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 3] 사실을 단호하게 부정하기</h2>
+    <h3 class="pattern-subtitle">일기, 메모, 혼잣말에 쓰이는 문장체 표현</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~ではない (~이/가 아니다)</strong><br>
+    명사 뒤에 붙어서 어떠한 사실이 아님을 객관적으로 나타냅니다. 조사 'は'는 여기서도 'wa'로 발음합니다.</p>
+    
+    <div class="nuance-highlight">
+      <strong>🗣️ 실전 회화 팁 (상황에 따른 사용 주의점)</strong><br>
+      이 표현은 주로 <strong>일기, 노트 필기, 혹은 혼잣말(독백)</strong>을 할 때 쓰이는 '기본형(반말)'입니다. 교류회에서 상대방과 대화할 때는 다음 패턴에서 배울 정중한 부정형("ではありません"이나 "じゃありません")을 사용하는 것이 자연스럽습니다.
+    </div>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は +) [명사] + ではない
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습 (독백/메모 상황)</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      스스로 사실을 되짚어보거나 일기를 쓴다고 가정하고 문장을 조립해 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(나)</span></div>
+        <div class="word-chip"><ruby>日本人<rt>にほんじん</rt></ruby> <span>(일본인)</span></div>
+      </div>
+      <div class="kr-sentence">1. 나는 일본인이 아니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>は <ruby>日本人<rt>にほんじん</rt></ruby>ではない。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby>の<ruby>専攻<rt>せんこう</rt></ruby> <span>(내 전공)</span></div>
+        <div class="word-chip"><ruby>英語<rt>えいご</rt></ruby> <span>(영어)</span></div>
+      </div>
+      <div class="kr-sentence">2. 내 전공은 영어가 아니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>の<ruby>専攻<rt>せんこう</rt></ruby>は <ruby>英語<rt>えいご</rt></ruby>ではない。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>彼<rt>かれ</rt></ruby> <span>(그)</span></div>
+        <div class="word-chip"><ruby>会社員<rt>かいしゃいん</rt></ruby> <span>(회사원)</span></div>
+      </div>
+      <div class="kr-sentence">3. 그는 회사원이 아니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>彼<rt>かれ</rt></ruby>は <ruby>会社員<rt>かいしゃいん</rt></ruby>ではない。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+        <div class="word-chip"><ruby>休<rt>やす</rt></ruby>み <span>(휴일/쉬는 날)</span></div>
+      </div>
+      <div class="kr-sentence">4. 오늘은 쉬는 날이 아니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>今日<rt>きょう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>みではない。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby>たち <span>(우리)</span></div>
+        <div class="word-chip"><ruby>他人<rt>たにん</rt></ruby> <span>(남/타인)</span></div>
+      </div>
+      <div class="kr-sentence">5. 우리는 남이 아니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>たちは <ruby>他人<rt>たにん</rt></ruby>ではない。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(나)</span></div>
+        <div class="word-chip">もう <span>(이제)</span></div>
+        <div class="word-chip"><ruby>学生<rt>がくせい</rt></ruby> <span>(학생)</span></div>
+      </div>
+      <div class="kr-sentence">6. 나는 이제 학생이 아니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>は もう <ruby>学生<rt>がくせい</rt></ruby>ではない。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 4] 정중하게 부정하기</h2>
+    <h3 class="pattern-subtitle">오해를 풀거나 사실을 격식 있게 바로잡기</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~ではありません (~이/가 아닙니다)</strong><br>
+    앞서 배운 'ではない(아니다)'의 정중한 표현입니다. 상대방의 짐작이 틀렸을 때 예의를 갖추어 아니라고 대답할 수 있습니다.</p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は +) [명사] + ではありません
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      상대방의 오해를 정중하게 바로잡는다고 상상하며 문장을 조립해 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(저)</span></div>
+        <div class="word-chip"><ruby>先生<rt>せんせい</rt></ruby> <span>(선생님)</span></div>
+      </div>
+      <div class="kr-sentence">1. (저는) 선생님이 아닙니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        (<ruby>私<rt>わたし</rt></ruby>は) <ruby>先生<rt>せんせい</rt></ruby>ではありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>日本人<rt>にほんじん</rt></ruby> <span>(일본인)</span></div>
+      </div>
+      <div class="kr-sentence">2. (저는) 일본인이 아닙니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        (<ruby>私<rt>わたし</rt></ruby>は) <ruby>日本人<rt>にほんじん</rt></ruby>ではありません。
+        <span class="jp-note">*한국어 모임에 참석한 일본인으로 오해받았을 때 쓰기 좋습니다.</span>
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>専攻<rt>せんこう</rt></ruby> <span>(전공)</span></div>
+        <div class="word-chip"><ruby>日本語<rt>にほんご</rt></ruby> <span>(일본어)</span></div>
+      </div>
+      <div class="kr-sentence">3. (제) 전공은 일본어가 아닙니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>専攻<rt>せんこう</rt></ruby>は <ruby>日本語<rt>にほんご</rt></ruby>ではありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+        <div class="word-chip"><ruby>一人<rt>ひとり</rt></ruby> <span>(혼자)</span></div>
+      </div>
+      <div class="kr-sentence">4. 오늘은 혼자가 아닙니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>今日<rt>きょう</rt></ruby>は <ruby>一人<rt>ひとり</rt></ruby>ではありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>交流会<rt>こうりゅうかい</rt></ruby> <span>(교류회)</span></div>
+        <div class="word-chip"><ruby>初<rt>はじ</rt></ruby>めて <span>(처음)</span></div>
+      </div>
+      <div class="kr-sentence">5. 교류회는 처음이 아닙니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>交流会<rt>こうりゅうかい</rt></ruby>は <ruby>初<rt>はじ</rt></ruby>めてではありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>彼<rt>かれ</rt></ruby> <span>(그)</span></div>
+        <div class="word-chip"><ruby>友達<rt>ともだち</rt></ruby> <span>(친구)</span></div>
+      </div>
+      <div class="kr-sentence">6. 그는 친구가 아닙니다. (직장 동료입니다 등)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>彼<rt>かれ</rt></ruby>は <ruby>友達<rt>ともだち</rt></ruby>ではありません。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 5] 편안하고 부드럽게 부정하기</h2>
+    <h3 class="pattern-subtitle">일상 대화에서 쓰이는 회화체 표현</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~じゃありません (~이/가 아니에요)</strong><br>
+    앞서 배운 격식체 'ではありません'에서 발음하기 편하도록 'では(dewa)'가 'じゃ(ja)'로 축약된 형태입니다. 뜻은 완전히 같습니다.</p>
+    
+    <div class="nuance-highlight">
+      <strong>🗣️ 실전 회화 팁 (자연스러운 거리감)</strong><br>
+      'じゃありません'은 교류회처럼 딱딱한 비즈니스 자리가 아닌 친목 모임에서는 이 표현을 쓰면 훨씬 부드럽고 친근한 인상을 줍니다. 
+    </div>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は +) [명사] + じゃありません
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      교류회 대화 중 자연스럽게 오해를 풀거나 상황을 정정해 봅니다.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(저)</span></div>
+        <div class="word-chip"><ruby>学生<rt>がくせい</rt></ruby> <span>(학생)</span></div>
+      </div>
+      <div class="kr-sentence">1. (저는) 학생이 아니에요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        (<ruby>私<rt>わたし</rt></ruby>は) <ruby>学生<rt>がくせい</rt></ruby>じゃありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>日本語<rt>にほんご</rt></ruby> <span>(일본어)</span></div>
+        <div class="word-chip"><ruby>初心者<rt>しょしんしゃ</rt></ruby> <span>(초보자)</span></div>
+      </div>
+      <div class="kr-sentence">2. (저는) 일본어 초보자가 아니에요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        (<ruby>私<rt>わたし</rt></ruby>は) <ruby>日本語<rt>にほんご</rt></ruby>の <ruby>初心者<rt>しょしんしゃ</rt></ruby>じゃありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">それ <span>(그것)</span></div>
+        <div class="word-chip"><ruby>冗談<rt>じょうだん</rt></ruby> <span>(농담)</span></div>
+      </div>
+      <div class="kr-sentence">3. 그건 농담이 아니에요. (진심이에요)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        それは <ruby>冗談<rt>じょうだん</rt></ruby>じゃありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby>の<ruby>専門<rt>せんもん</rt></ruby> <span>(제 전문/전공)</span></div>
+        <div class="word-chip">デザイン <span>(디자인)</span></div>
+      </div>
+      <div class="kr-sentence">4. 제 전문은 디자인이 아니에요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>の<ruby>専門<rt>せんもん</rt></ruby>は デザインじゃありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+        <div class="word-chip"><ruby>休<rt>やす</rt></ruby>み <span>(쉬는 날/휴일)</span></div>
+      </div>
+      <div class="kr-sentence">5. 오늘은 쉬는 날이 아니에요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>今日<rt>きょう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>みじゃありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby>たち <span>(우리)</span></div>
+        <div class="word-chip"><ruby>兄弟<rt>きょうだい</rt></ruby> <span>(형제)</span></div>
+      </div>
+      <div class="kr-sentence">6. 우리는 형제가 아니에요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>たちは <ruby>兄弟<rt>きょうだい</rt></ruby>じゃありません。
+        <span class="jp-note">*닮은 친구와 함께 갔을 때 자주 쓸 수 있는 유용한 표현입니다.</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 6] 과거의 사실 부정하기</h2>
+    <h3 class="pattern-subtitle">일기, 메모 등에 쓰이는 과거형 문장체</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~ではなかった (~이/가 아니었다)</strong><br>
+    현재 부정형인 'ではない(아니다)'의 과거 형태입니다. 명사 뒤에 붙어 과거 시점에 어떠한 사실이 아니었음을 나타냅니다.</p>
+    
+    <div class="nuance-highlight">
+      <strong>🗣️ 사용 상황</strong><br>
+      이 표현은 주로 일기, 노트 필기처럼 글을 쓰거나 혼자 과거를 회상할 때 쓰이는 기본형(문장체)입니다. 다른 사람과 대화를 나눌 때는 다음 패턴에서 다룰 정중한 형태를 사용하는 것이 일반적입니다.
+    </div>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は +) [명사] + ではなかった
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      과거의 사실을 일기장이나 메모에 적는다고 가정하고 문장을 조립해 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(나)</span></div>
+        <div class="word-chip"><ruby>昔<rt>むかし</rt></ruby> <span>(예전/옛날)</span></div>
+        <div class="word-chip"><ruby>学生<rt>がくせい</rt></ruby> <span>(학생)</span></div>
+      </div>
+      <div class="kr-sentence">1. 나는 예전에 학생이 아니었다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>は <ruby>昔<rt>むかし</rt></ruby> <ruby>学生<rt>がくせい</rt></ruby>ではなかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>元々<rt>もともと</rt></ruby>の<ruby>専攻<rt>せんこう</rt></ruby> <span>(원래 전공)</span></div>
+        <div class="word-chip"><ruby>日本語<rt>にほんご</rt></ruby> <span>(일본어)</span></div>
+      </div>
+      <div class="kr-sentence">2. 원래 전공은 일본어가 아니었다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>元々<rt>もともと</rt></ruby>の<ruby>専攻<rt>せんこう</rt></ruby>は <ruby>日本語<rt>にほんご</rt></ruby>ではなかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby>たち <span>(우리)</span></div>
+        <div class="word-chip"><ruby>知<rt>し</rt></ruby>り<ruby>合<rt>あ</rt></ruby>い <span>(아는 사이/지인)</span></div>
+      </div>
+      <div class="kr-sentence">3. 우리는 예전에 아는 사이가 아니었다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>たちは <ruby>昔<rt>むかし</rt></ruby> <ruby>知<rt>し</rt></ruby>り<ruby>合<rt>あ</rt></ruby>いではなかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>最初<rt>さいしょ</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby> <span>(처음 목적)</span></div>
+        <div class="word-chip">これ <span>(이것)</span></div>
+      </div>
+      <div class="kr-sentence">4. 처음 목적은 이것이 아니었다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>最初<rt>さいしょ</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby>は これではなかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">そこ <span>(그곳)</span></div>
+        <div class="word-chip"><ruby>職場<rt>しょくば</rt></ruby> <span>(직장)</span></div>
+      </div>
+      <div class="kr-sentence">5. 그곳은 직장이 아니었다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        そこは <ruby>職場<rt>しょくば</rt></ruby>ではなかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>昨日<rt>きのう</rt></ruby>の<ruby>約束<rt>やくそく</rt></ruby> <span>(어제 약속)</span></div>
+        <div class="word-chip">カフェ <span>(카페)</span></div>
+      </div>
+      <div class="kr-sentence">6. 어제 약속 (장소)는 카페가 아니었다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby>の<ruby>約束<rt>やくそく</rt></ruby>は カフェではなかった。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 7, 8] 과거의 사실 정중하게 부정하기</h2>
+    <h3 class="pattern-subtitle">~ではありませんでした / ~じゃありませんでした</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리</h4>
+    <p><strong>1. ~ではありませんでした (~이/가 아니었습니다)</strong><br>
+    정중한 부정형인 'ではありません'에 과거를 나타내는 'でした'가 붙은 형태입니다. 과거 시점에 어떠한 사실이 아니었음을 정중하게 말할 때 사용합니다.</p>
+    
+    <p><strong>2. ~じゃありませんでした (~이/가 아니었어요)</strong><br>
+    'ではありませんでした'를 발음하기 편하게 'じゃ'로 바꾼 형태입니다. 의미는 같으며, 일상 회화에서 자주 쓰입니다.</p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は +) [명사] + ではありませんでした / じゃありませんでした
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby> <span>(저)</span></div>
+        <div class="word-chip"><ruby>日本人<rt>にほんじん</rt></ruby> <span>(일본인)</span></div>
+      </div>
+      <div class="kr-sentence">1. (저는) 일본인이 아니었습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        (<ruby>私<rt>わたし</rt></ruby>は) <ruby>日本人<rt>にほんじん</rt></ruby>ではありませんでした。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>昨日<rt>きのう</rt></ruby> <span>(어제)</span></div>
+        <div class="word-chip"><ruby>休<rt>やす</rt></ruby>み <span>(쉬는 날)</span></div>
+      </div>
+      <div class="kr-sentence">2. 어제는 쉬는 날이 아니었어요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>みじゃありませんでした。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>前<rt>まえ</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby> <span>(이전 직업/일)</span></div>
+        <div class="word-chip"><ruby>会社員<rt>かいしゃいん</rt></ruby> <span>(회사원)</span></div>
+      </div>
+      <div class="kr-sentence">3. 이전 직업은 회사원이 아니었습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>前<rt>まえ</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は <ruby>会社員<rt>かいしゃいん</rt></ruby>ではありませんでした。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>大学時代<rt>だいがくじだい</rt></ruby> <span>(대학 시절)</span></div>
+        <div class="word-chip"><ruby>専攻<rt>せんこう</rt></ruby> <span>(전공)</span></div>
+        <div class="word-chip"><ruby>日本語<rt>にほんご</rt></ruby> <span>(일본어)</span></div>
+      </div>
+      <div class="kr-sentence">4. 대학 시절, 전공은 일본어가 아니었어요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>大学時代<rt>だいがくじだい</rt></ruby>、<ruby>専攻<rt>せんこう</rt></ruby>は <ruby>日本語<rt>にほんご</rt></ruby>じゃありませんでした。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>私<rt>わたし</rt></ruby>たち <span>(우리)</span></div>
+        <div class="word-chip"><ruby>以前<rt>いぜん</rt></ruby> <span>(이전/예전)</span></div>
+        <div class="word-chip"><ruby>知<rt>し</rt></ruby>り<ruby>合<rt>あ</rt></ruby>い <span>(아는 사이/지인)</span></div>
+      </div>
+      <div class="kr-sentence">5. 우리는 예전에 아는 사이가 아니었습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>私<rt>わたし</rt></ruby>たちは <ruby>以前<rt>いぜん</rt></ruby>、<ruby>知<rt>し</rt></ruby>り<ruby>合<rt>あ</rt></ruby>いではありませんでした。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 9] 과거의 사실 확인 및 질문하기</h2>
+    <h3 class="pattern-subtitle">~でした / ~でしたか</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리</h4>
+    <p><strong>1. ~でした (~이었습니다)</strong><br>
+    '입니다(です)'의 정중한 과거 형태입니다. 명사 뒤에 붙어 과거의 사실이나 상태를 나타냅니다.</p>
+    
+    <p><strong>2. ~でしたか (~이었습니까?)</strong><br>
+    과거의 사실을 확인하거나 질문할 때 사용합니다.</p>
+  </div>
+
+  <div class="formula-box">
+    [명사] + は + [명사] + でした (か)
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>昨日<rt>きのう</rt></ruby> <span>(어제)</span></div>
+        <div class="word-chip"><ruby>雨<rt>あめ</rt></ruby> <span>(비)</span></div>
+      </div>
+      <div class="kr-sentence">1. 어제는 비였습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>でした。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>前<rt>まえ</rt></ruby> <span>(전/이전)</span></div>
+        <div class="word-chip"><ruby>先生<rt>せんせい</rt></ruby> <span>(선생님)</span></div>
+      </div>
+      <div class="kr-sentence">2. 전에는 선생님이었습니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>前<rt>まえ</rt></ruby>は <ruby>先生<rt>せんせい</rt></ruby>でしたか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>高校時代<rt>こうこうじだい</rt></ruby> <span>(고교 시절)</span></div>
+        <div class="word-chip"><ruby>友達<rt>ともだち</rt></ruby> <span>(친구)</span></div>
+      </div>
+      <div class="kr-sentence">3. 고등학교 시절 친구였습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>高校時代<rt>こうこうじだい</rt></ruby>の <ruby>友達<rt>ともだち</rt></ruby>でした。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>試験<rt>しけん</rt></ruby> <span>(시험)</span></div>
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+      </div>
+      <div class="kr-sentence">4. 시험은 오늘이었습니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>試験<rt>しけん</rt></ruby>は <ruby>今日<rt>きょう</rt></ruby>でしたか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>最初<rt>さいしょ</rt></ruby> <span>(처음)</span></div>
+        <div class="word-chip"><ruby>英語<rt>えいご</rt></ruby> <span>(영어)</span></div>
+      </div>
+      <div class="kr-sentence">5. 처음은 영어였습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>最初<rt>さいしょ</rt></ruby>は <ruby>英語<rt>えいご</rt></ruby>でした。
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 10] 부드러운 추측과 확인</h2>
+    <h3 class="pattern-subtitle">~でしょう (~이겠죠 / ~일 것입니다)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~でしょう (~이겠죠 / ~일 것입니다)</strong><br>
+    명사 뒤에 붙어 불확실한 사실을 추측하거나, 상대방도 동의할 것이라고 생각되는 내용을 부드럽게 확인할 때 사용하는 표현입니다.</p>
+    
+    <p><strong>2. 🗣️ 상황별 뉘앙스 주의점</strong><br>
+    이 표현은 날씨 같은 객관적인 상황이나 제3자에 대해 추측할 때, 혹은 서로 이미 알고 있는 사실을 공감하듯 확인할 때 쓰면 아주 자연스럽습니다. </p>
+  </div>
+
+  <div class="formula-box">
+    [명사] + でしょう
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      객관적인 상황이나 제3자에 대해 추측하는 문장을 만들어 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>明日<rt>あした</rt></ruby> <span>(내일)</span></div>
+        <div class="word-chip"><ruby>雨<rt>あめ</rt></ruby> <span>(비)</span></div>
+      </div>
+      <div class="kr-sentence">1. 내일은 비가 오겠죠. (비겠죠)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>でしょう。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">たぶん <span>(아마)</span></div>
+        <div class="word-chip"><ruby>学生<rt>がくせい</rt></ruby> <span>(학생)</span></div>
+      </div>
+      <div class="kr-sentence">2. (그 사람은) 아마 학생일 것입니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        たぶん <ruby>学生<rt>がくせい</rt></ruby>でしょう。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">それ <span>(그것)</span></div>
+        <div class="word-chip"><ruby>冗談<rt>じょうだん</rt></ruby> <span>(농담)</span></div>
+      </div>
+      <div class="kr-sentence">3. 그것은 농담이겠죠.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        それは <ruby>冗談<rt>じょうだん</rt></ruby>でしょう。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>次<rt>つぎ</rt></ruby> <span>(다음)</span></div>
+        <div class="word-chip"><ruby>日本語<rt>にほんご</rt></ruby> <span>(일본어)</span></div>
+      </div>
+      <div class="kr-sentence">4. 다음은 일본어(시간/순서)겠죠?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>次<rt>つぎ</rt></ruby>は <ruby>日本語<rt>にほんご</rt></ruby>でしょう。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>彼<rt>かれ</rt></ruby> <span>(그)</span></div>
+        <div class="word-chip"><ruby>日本人<rt>にほんじん</rt></ruby> <span>(일본인)</span></div>
+      </div>
+      <div class="kr-sentence">5. (제3자를 보며) 그는 일본인이겠죠.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>彼<rt>かれ</rt></ruby>は <ruby>日本人<rt>にほんじん</rt></ruby>でしょう。
+      </div>
+    </div>
+
+  </div>
+</div>

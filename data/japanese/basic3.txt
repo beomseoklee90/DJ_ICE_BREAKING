@@ -1,0 +1,887 @@
+い형용사[초급]
+<style>
+  :root {
+    --primary-color: #4f46e5;
+    --primary-light: #e0e7ff;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-card: #ffffff;
+    --bg-page: #f9fafb;
+    --border-color: #e5e7eb;
+    --jp-color: #ea580c;
+  }
+
+  .pattern-section {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    line-height: 1.7;
+  }
+
+  .pattern-header {
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pattern-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+  }
+
+  .pattern-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .grammar-box {
+    background-color: var(--bg-page);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    font-size: 1.05rem;
+  }
+
+  .grammar-box h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    font-size: 1.3rem;
+  }
+
+  .grammar-box p {
+    margin-bottom: 14px;
+    color: var(--text-muted);
+  }
+
+  .grammar-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .nuance-highlight {
+    background-color: #fffbeb;
+    padding: 12px 16px;
+    border-left: 4px solid #f59e0b;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+
+  /* 요미가나(후리가나) 스타일 */
+  ruby {
+    ruby-align: center;
+  }
+  rt {
+    font-size: 0.6em;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .formula-box {
+    text-align: center;
+    background-color: #f3f4f6;
+    padding: 24px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    border: 1px dashed #9ca3af;
+  }
+
+  .practice-container {
+    margin-top: 24px;
+  }
+
+  .practice-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+  }
+
+  .practice-item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .practice-item:last-child {
+    border-bottom: none;
+  }
+
+  /* 문장별 단어 힌트 영역 */
+  .word-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    background-color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .word-chip {
+    background-color: white;
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+  }
+
+  .word-chip span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 6px;
+    font-weight: 400;
+  }
+
+  .kr-sentence {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .toggle-btn {
+    align-self: flex-start;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-btn:hover {
+    background-color: var(--primary-light);
+  }
+
+  .jp-sentence {
+    display: none;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    color: var(--jp-color);
+    font-weight: 600;
+    background-color: #fff7ed;
+    padding: 16px 20px;
+    border-left: 4px solid var(--jp-color);
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease-in-out;
+    line-height: 2;
+  }
+
+  .jp-note {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-weight: normal;
+    margin-top: 8px;
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+
+<div class="pattern-section" style="background-color: #fff9f0; border: 2px solid #ffcc80;">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[기본 정의] い형용사의 한결같은 모습</h2>
+    <h3 class="pattern-subtitle">끝낼 때도, 꾸밀 때도 언제나 '~い'</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 핵심 포인트</h4>
+    <p><strong>1. 조사 は와 が의 활용</strong><br>
+    어떠한 대상의 상태를 말할 때, 문맥에 따라 <strong>'~은/는(は)'</strong>이나 <strong>'~이/가(가)'</strong>를 자유롭게 사용합니다. <br>
+    - <strong>物価(ぶっか)は 高(たか)い</strong> : 물가는 비싸다 (주제/대조)<br>
+    - <strong>物価(ぶっか)が 高(たか)い</strong> : 물가가 비싸다 (현상/강조)</p>
+    
+    <p><strong>2. 변화 없는 활용</strong><br>
+    い형용사는 な형용사와 달리 명사를 꾸밀 때나 문장을 끝낼 때 모양이 바뀌지 않습니다.<br>
+    - <strong>美味しい</strong>: 맛있다 (문장 종결)<br>
+    - <strong>美味しい 料理</strong>: 맛있는 요리 (명사 수식)</p>
+  </div>
+
+  <div class="formula-box">
+    [대상] + は/が + [い형용사 기본형]
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 기본 형태 익히기</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      모양이 변하지 않는 い형용사의 특징을 생각하며 익혀보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>天気<rt>てんき</rt></ruby> <span>(날씨)</span></div>
+        <div class="word-chip">いい <span>(좋다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 날씨가 좋다. (문장 끝내기)</div>
+      <div class="jp-sentence" style="display: block; color: #e65100; font-weight: bold; margin-top: 10px;">
+        <ruby>天気<rt>てんき</rt></ruby> が いい。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>美味<rt>おい</rt></ruby>しい <span>(맛있다)</span></div>
+        <div class="word-chip"><ruby>料理<rt>りょうり</rt></ruby> <span>(요리)</span></div>
+      </div>
+      <div class="kr-sentence">2. 맛있는 요리. (명사 꾸미기)</div>
+      <div class="jp-sentence" style="display: block; color: #e65100; font-weight: bold; margin-top: 10px;">
+        <ruby>美味<rt>おい</rt></ruby>しい <ruby>料理<rt>りょうり</rt></ruby>。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>物価<rt>ぶっか</rt></ruby> <span>(물가)</span></div>
+        <div class="word-chip"><ruby>高<rt>たか</rt></ruby>い <span>(비싸다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 물가는 비싸다. (주제 설명)</div>
+      <div class="jp-sentence" style="display: block; color: #e65100; font-weight: bold; margin-top: 10px;">
+        <ruby>物価<rt>ぶっか</rt></ruby> は <ruby>高<rt>たか</rt></ruby>い。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 1] 상태나 성질 정중하게 말하기</h2>
+    <h3 class="pattern-subtitle">い형용사 기본형 + です (~합니다)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. 기본형 + です</strong><br>
+    사전에 나오는 형태 그대로(예: 暑い, 高い) 뒤에 'です'만 붙이면 정중한 표현이 됩니다. な형용사처럼 'だ'를 떼는 과정이 없어서 긍정형은 매우 간단합니다.</p>
+    
+    <p><strong>2. 주의할 점</strong><br>
+    '입니다'를 뜻하는 'だ'는 い형용사 뒤에 직접 붙을 수 없습니다. (예: 暑いだ (X) -> 暑い (O) 또는 暑いです (O))</p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は/が +) [い형용사 기본형] + です
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      단어 블록을 활용하여 현재의 상태를 정중하게 표현해 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>い <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 오늘은 덥습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>今日<rt>きょう</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>い です。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">この <ruby>本<rt>ほん</rt></ruby> <span>(이 책)</span></div>
+        <div class="word-chip"><ruby>面白<rt>おもしろ</rt></ruby>い <span>(재밌다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 이 책은 재밌습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        この <ruby>本<rt>ほん</rt></ruby> は <ruby>面白<rt>おもしろ</rt></ruby>い です。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>日本語<rt>にほんご</rt></ruby> <span>(일본어)</span></div>
+        <div class="word-chip"><ruby>難<rt>むずか</rt></ruby>しい <span>(어렵다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 일본어는 어렵습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>日本語<rt>にほんご</rt></ruby> は <ruby>難<rt>むずか</rt></ruby>しい です。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>物価<rt>ぶっか</rt></ruby> <span>(물가)</span></div>
+        <div class="word-chip"><ruby>高<rt>たか</rt></ruby>い <span>(비싸다/높다)</span></div>
+      </div>
+      <div class="kr-sentence">4. 물가가 비쌉니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>物価<rt>ぶっか</rt></ruby> が <ruby>高<rt>たか</rt></ruby>い です。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 2] 상태나 성질에 대해 질문하기</h2>
+    <h3 class="pattern-subtitle">い형용사 기본형 + ですか (~합니까? / ~인가요?)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. 기본형 + ですか</strong><br>
+    い형용사의 끝인 'い'를 바꾸지 않고 그대로 둔 채 'ですか'를 붙입니다. (예: 暑いですか。)</p>
+    
+    <p><strong>2. 자연스러운 질문</strong><br>
+    일본어에서는 "맛있나요?"처럼 상태를 묻는 표현을 매우 자주 씁니다. 이때는 '美味しい(おいしい)'와 같은 단어를 활용해 정중하게 물어보세요.</p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は/が +) [い형용사 기본형] + ですか
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      상대방의 상태나 특징을 묻는다고 생각하며 문장을 만들어 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>料理<rt>りょうり</rt></ruby> <span>(요리)</span></div>
+        <div class="word-chip"><ruby>美味<rt>おい</rt></ruby>しい <span>(맛있다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 요리는 맛있습니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>料理<rt>りょうり</rt></ruby> は <ruby>美味<rt>おい</rt></ruby>しい ですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>試験<rt>しけん</rt></ruby> <span>(시험)</span></div>
+        <div class="word-chip"><ruby>難<rt>むずか</rt></ruby>しい <span>(어렵다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 시험은 어렵습니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기*</button>
+      <div class="jp-sentence">
+        <ruby>試験<rt>しけん</rt></ruby> は <ruby>難<rt>むずか</rt></ruby>しい ですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">その <ruby>鞄<rt>かばん</rt></ruby> <span>(그 가방)</span></div>
+        <div class="word-chip"><ruby>重<rt>おも</rt></ruby>い <span>(무겁다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 그 가방은 무겁습니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        その <ruby>鞄<rt>かばん</rt></ruby> は <ruby>重<rt>おも</rt></ruby>い ですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>明日<rt>あした</rt></ruby> <span>(내일)</span></div>
+        <div class="word-chip"><ruby>忙<rt>いそが</rt></ruby>しい <span>(바쁘다)</span></div>
+      </div>
+      <div class="kr-sentence">4. 내일은 바쁩니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>明日<rt>あした</rt></ruby> は <ruby>忙<rt>いそが</rt></ruby>しい ですか。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 3] 상태나 성질 부정하기 (보통체)</h2>
+    <h3 class="pattern-subtitle">い형용사 어간 + くない (~하지 않다)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. い를 く로 바꾸고 + ない</strong><br>
+    い형용사의 끝 글자인 'い'를 반드시 <strong>'く'</strong>로 고친 뒤에 'ない'를 붙입니다. <br>
+    (예: 暑い → 暑<strong>く</strong>ない / 高い → 高<strong>く</strong>ない)</p>
+    
+    <p><strong>2. 'いい(좋다)'의 특별 변신</strong><br>
+    '좋다'라는 뜻의 'いい'는 부정형이 될 때 'いくない'가 아니라 <strong>'よくない'</strong>가 됩니다. </p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は/が +) [い형용사 어간] + くない
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      끝 글자 'い'를 'く'로 바꾸는 것에 집중하여 문장을 완성해 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>い <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 오늘은 덥지 않다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>今日<rt>きょう</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>くない。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>物価<rt>ぶっか</rt></ruby> <span>(물가)</span></div>
+        <div class="word-chip"><ruby>高<rt>たか</rt></ruby>い <span>(비싸다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 물가는 비싸지 않다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>物価<rt>ぶっか</rt></ruby> は <ruby>高<rt>たか</rt></ruby>くない。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip">この <ruby>本<rt>ほん</rt></ruby> <span>(이 책)</span></div>
+        <div class="word-chip"><ruby>面白<rt>おもしろ</rt></ruby>い <span>(재밌다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 이 책은 재밌지 않다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        この <ruby>本<rt>ほん</rt></ruby> は <ruby>面白<rt>おもしろ</rt></ruby>くない।
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>気分<rt>きぶん</rt></ruby> <span>(기분)</span></div>
+        <div class="word-chip">いい <span>(좋다)</span></div>
+      </div>
+      <div class="kr-sentence">4. 기분이 좋지 않다. (예외 주의!)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>気分<rt>きぶん</rt></ruby> が <ruby>良<rt>よ</rt></ruby>くない。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 4] 정중하게 상태 부정하기</h2>
+    <h3 class="pattern-subtitle">~くない입니다 (표준) / ~くありません (격식)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. 두 가지 정중형</strong><br>
+    - <strong>くない + です:</strong> 방금 배운 보통체 부정(くない) 뒤에 '입니다(です)'만 붙인 형태로, 가장 현대적이고 일반적인 표현입니다.<br>
+    - <strong>く + ありません:</strong> 조금 더 딱딱하고 정중한 격식체입니다. 비즈니스나 공식적인 자리에서 선호됩니다.</p>
+    
+    <p><strong>2. '좋지 않습니다'의 특별 변신</strong><br>
+    패턴 3과 마찬가지로 '좋다(いい)'는 <strong>'よくないです'</strong> 또는 <strong>'よくありません'</strong>으로 변합니다.</p>
+  </div>
+
+  <div class="formula-box">
+    [い형용사 어간] + くないです (또는 くありません)
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      두 가지 정중형을 모두 익힐 수 있도록 예문을 구성했습니다. (조사 뒤 띄어쓰기 엄수)
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>今日<rt>きょう</rt></ruby> <span>(오늘)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>い <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 오늘은 덥지 않습니다. (표준)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>今日<rt>きょう</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>くないです。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>物価<rt>ぶっか</rt></ruby> <span>(물가)</span></div>
+        <div class="word-chip"><ruby>高<rt>たか</rt></ruby>い <span>(비싸다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 물가는 비싸지 않습니다. (격식)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>物価<rt>ぶっか</rt></ruby> は <ruby>高<rt>たか</rt></ruby>くありません。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>日本語<rt>에혼고</rt></ruby> <span>(일본어)</span></div>
+        <div class="word-chip"><ruby>難<rt>むずか</rt></ruby>しい <span>(어렵다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 일본어는 어렵지 않습니다. (표준)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>日本語<rt>にほんご</rt></ruby> は <ruby>難<rt>むずか</rt></ruby>しくない입니다.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 5] 과거의 상태 긍정하기 (보통체)</h2>
+    <h3 class="pattern-subtitle">い형용사 어간 + かった (~했다)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. い를 떼고 + かった</strong><br>
+    반드시 끝의 'い'를 탈락시킨 후에 'かった'를 붙입니다. <br>
+    (예: 暑い → 暑<strong>かった</strong> / 高い → 高<strong>かった</strong>)</p>
+    
+    <p><strong>2. '좋았다(よかった)'의 변신</strong><br>
+    부정형과 마찬가지로 '좋다(いい)'는 <strong>'よかった'</strong>가 됩니다. '이이캇타(X)'라고 하지 않도록 주의해야 합니다.</p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は/が +) [い형용사 어간] + かった
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      과거의 경험을 떠올리며 문장을 완성해 보세요. (조사 혼용 방지 검수 완료)
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>昨日<rt>きのう</rt></ruby> <span>(어제)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>이 <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 어제는 더웠다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>かった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>映画<rt>えいが</rt></ruby> <span>(영화)</span></div>
+        <div class="word-chip"><ruby>面白<rt>おもしろ</rt></ruby>い <span>(재밌다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 영화는 재밌었다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>映画<rt>えいが</rt></ruby> は <ruby>面白<rt>おもしろ</rt></ruby>かった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>先週<rt>せんしゅう</rt></ruby> <span>(지난주)</span></div>
+        <div class="word-chip"><ruby>忙<rt>いそが</rt></ruby>しい <span>(바쁘다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 지난주는 바빴다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>先週<rt>せんしゅう</rt></ruby> は <ruby>忙<rt>いそが</rt></ruby>しかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>天気<rt>てんき</rt></ruby> <span>(날씨)</span></div>
+        <div class="word-chip">いい <span>(좋다)</span></div>
+      </div>
+      <div class="kr-sentence">4. 날씨가 좋았다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>天気<rt>てんき</rt></ruby> が <ruby>良<rt>よ</rt></ruby>かった。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 6] 과거의 상태 정중하게 긍정하기</h2>
+    <h3 class="pattern-subtitle">い형용사 어간 + かった + です (~했습니다)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. かった + です (가장 중요!)</strong><br>
+    い형용사의 과거 정중형은 과거형(〜かった) 뒤에 '입니다(です)'를 붙입니다. <br>
+    초급자가 가장 많이 하는 실수가 <strong>'暑いでした(X)'</strong>라고 말하는 것인데, 이는 <strong>틀린 표현</strong>입니다. 반드시 <strong>'暑かったです(O)'</strong>라고 해야 합니다.</p>
+    
+    <p><strong>2. 질문하기</strong><br>
+    끝에 'か'를 붙여 '〜かったです か'라고 하면 "재밌었습니까?" 같은 정중한 질문이 됩니다.</p>
+  </div>
+
+  <div class="formula-box">
+    [い형용사 어간] + かった + です (か)
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      '이(い)'를 '캇타(かった)'로 먼저 바꾼 뒤 '데스(です)'를 붙이는 연습을 해보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>昨日<rt>きのう</rt></ruby> <span>(어제)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>이 <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 어제는 더웠습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>かったです。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>料理<rt>りょうり</rt></ruby> <span>(요리)</span></div>
+        <div class="word-chip"><ruby>美味<rt>おい</rt></ruby>しい <span>(맛있다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 요리는 맛있었습니까?</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>料理<rt>りょうり</rt></ruby> は <ruby>美味<rt>おい</rt></ruby>しかったですか。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>映画<rt>えいが</rt></ruby> <span>(영화)</span></div>
+        <div class="word-chip"><ruby>面白<rt>おもしろ</rt></ruby>이 <span>(재밌다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 영화는 매우 재밌었습니다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>映画<rt>えいが</rt></ruby> は とても <ruby>面白<rt>おもしろ</rt></ruby>かったです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 7] 과거의 상태 부정하기 (보통체)</h2>
+    <h3 class="pattern-subtitle">い형용사 어간 + くなかった (~하지 않았다)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. い를 떼고 + くなかった</strong><br>
+    현재 부정형인 '〜くない'의 'い'를 다시 'かった'로 바꾼 형태입니다. <br>
+    (예: 暑い → 暑くない → 暑<strong>くなかった</strong>)</p>
+    
+    <p><strong>2. '좋지 않았다(よくなかった)'</strong><br>
+    역시 'いい'는 끝까지 주의해야 합니다. '이쿠나캇타(X)'가 아니라 <strong>'よくなかった'</strong>가 정답입니다.</p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は/が +) [い형용사 어간] + くなかった
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      '쿠나캇타'라는 긴 어미를 자연스럽게 연결하는 연습을 해보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>昨日<rt>きの우</rt></ruby> <span>(어제)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>い <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 어제는 덥지 않았다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>くなかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>試験<rt>しけん</rt></ruby> <span>(시험)</span></div>
+        <div class="word-chip"><ruby>難<rt>むずか</rt></ruby>しい <span>(어렵다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 시험은 어렵지 않았다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>試験<rt>しけん</rt></ruby> は <ruby>難<rt>むずか</rt></ruby>しくなかった。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>以前<rt>いぜん</rt></ruby> <span>(이전)</span></div>
+        <div class="word-chip"><ruby>忙<rt>いそが</rt></ruby>しい <span>(바쁘다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 이전에는 바쁘지 않았다.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>以前<rt>いぜん</rt></ruby> は <ruby>忙<rt>いそが</rt></ruby>しくなかった。
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 8, 9] 과거의 상태 정중하게 부정하기</h2>
+    <h3 class="pattern-subtitle">~くなかったです / ~くありませんでした</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. ~くなかった + です (패턴 8)</strong><br>
+    보통체 과거 부정(~くなかった) 뒤에 '입니다(です)'를 붙인 형태입니다. 현대 일본어 회화에서 가장 흔하게 쓰이는 정중한 과거 부정입니다.</p>
+    
+    <p><strong>2. ~く + ありませんでした (패턴 9)</strong><br>
+    가장 격식이 느껴지는 과거 부정입니다. 비즈니스 미팅이나 공식적인 자리에서 "지난 분기의 매출이 좋지 않았습니다" 같은 말을 할 때 사용합니다.</p>
+  </div>
+
+  <div class="formula-box">
+    [い형용사 어간] + くなかったです / くありませんでした
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      길어진 문장의 어미를 끝까지 정확하게 맺는 연습을 해보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>以前<rt>いぜん</rt></ruby> <span>(이전)</span></div>
+        <div class="word-chip"><ruby>忙<rt>いそが</rt></ruby>しい <span>(바쁘다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 이전에는 바쁘지 않았습니다. (표준)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>以前<rt>いぜん</rt></ruby> は <ruby>忙<rt>いそが</rt></ruby>しくなかったです。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>試験<rt>しけん</rt></ruby> <span>(시험)</span></div>
+        <div class="word-chip"><ruby>難<rt>むずか</rt></ruby>しい <span>(어렵다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 시험은 어렵지 않았습니다. (격식)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>試験<rt>しけん</rt></ruby> は <ruby>難<rt>むずか</rt></ruby>しくありませんでした。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>昨日<rt>きのう</rt></ruby> <span>(어제)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>い <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 어제는 덥지 않았습니다. (표준)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>くなかったです。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pattern-section">
+  <div class="pattern-header">
+    <h2 class="pattern-title">[패턴 10] 정중하게 상태 추측하기</h2>
+    <h3 class="pattern-subtitle">い형용사 기본형 + でしょう (~하겠죠 / ~일 것입니다)</h3>
+  </div>
+
+  <div class="grammar-box">
+    <h4>💡 문법 원리와 뉘앙스</h4>
+    <p><strong>1. 기본형 + でしょう</strong><br>
+    い형용사는 'い'를 유지한 채 'でしょう'를 붙입니다. (예: 暑いでしょう / 忙しいでしょう)<br>
+    ※ 주의: な형용사처럼 어간만 쓰지 않도록 주의하세요. (暑でしょう - X)</p>
+    
+    <p><strong>2. 뉘앙스 차이</strong><br>
+    '입니다(です)'는 단정적인 느낌을 주지만, 'でしょう'를 쓰면 말하는 사람의 확신이 조금 낮아지면서 훨씬 부드럽고 예의 바른 느낌을 줍니다.</p>
+  </div>
+
+  <div class="formula-box">
+    ([명사] + は/が +) [い형용사 기본형] + でしょう
+  </div>
+
+  <div class="practice-container">
+    <div class="practice-title">🗣️ 문장 조립 연습</div>
+    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+      상대방의 상황이나 미래의 날씨를 추측해 보세요.
+    </p>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>明日<rt>あした</rt></ruby> <span>(내일)</span></div>
+        <div class="word-chip"><ruby>暑<rt>あつ</rt></ruby>이 <span>(덥다)</span></div>
+      </div>
+      <div class="kr-sentence">1. 내일은 덥겠지요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>明日<rt>あした</rt></ruby> は <ruby>暑<rt>あつ</rt></ruby>い でしょう。
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>仕事<rt>しごと</rt></ruby> <span>(일)</span></div>
+        <div class="word-chip"><ruby>忙<rt>いそ가</rt></ruby>しい <span>(바쁘다)</span></div>
+      </div>
+      <div class="kr-sentence">2. 일은 바쁘겠지요.</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>仕事<rt>しごと</rt></ruby> は <ruby>忙<rt>いそが</rt></ruby>しい でしょう
+      </div>
+    </div>
+
+    <div class="practice-item">
+      <div class="word-hints">
+        <div class="word-chip"><ruby>料理<rt>りょうり</rt></ruby> <span>(요리)</span></div>
+        <div class="word-chip"><ruby>美味<rt>おい</rt></ruby>しい <span>(맛있다)</span></div>
+      </div>
+      <div class="kr-sentence">3. 요리는 맛있겠지요? (동의 구하기)</div>
+      <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
+      <div class="jp-sentence">
+        <ruby>料理<rt>りょうり</rt></ruby> は <ruby>美味<rt>おい</rt></ruby>しい でしょう?
+      </div>
+    </div>
+  </div>
+</div>
