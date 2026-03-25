@@ -603,3 +603,297 @@
     </div>
   </div>
 </div>
+
+<div class="gym-section gym-font-kr">
+  <h2 class="gym-section-title">Phase 3-1. 본능적 섀도우 복싱 🥊</h2>
+  <p class="gym-sub-title">어디선가 들어본 익숙한 소리들입니다. 글자만 보고 소리를 유추해 본 뒤, 마우스를 올려 정답을 확인하세요.</p>
+
+  <div class="gym-shadow-grid gym-font-jp">
+    
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ありがとうございます</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">아리가토-고자이마스</div>
+        <div class="gym-reveal-meaning">감사합니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">すみません</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">스미마센</div>
+        <div class="gym-reveal-meaning">죄송합니다 / 저기요</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ごめんなさい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">고멘나사이</div>
+        <div class="gym-reveal-meaning">미안해요</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">よろしくおねがいします</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">요로시쿠 오네가이시마스</div>
+        <div class="gym-reveal-meaning">잘 부탁드립니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いらっしゃいませ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이랏샤이마세</div>
+        <div class="gym-reveal-meaning">어서 오세요</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いただきます</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이타다키마스</div>
+        <div class="gym-reveal-meaning">잘 먹겠습니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ごちそうさまでした</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">고치소-사마데시타</div>
+        <div class="gym-reveal-meaning">잘 먹었습니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おひさしぶり</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오히사시부리</div>
+        <div class="gym-reveal-meaning">오랜만이야</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おつかれさま</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오츠카레사마</div>
+        <div class="gym-reveal-meaning">수고하셨습니다</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ほんとう？</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">혼토-?</div>
+        <div class="gym-reveal-meaning">정말?</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">まじで？</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">마지데?</div>
+        <div class="gym-reveal-meaning">진짜로? (격투/애니 단골)</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">うそ！</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">우소!</div>
+        <div class="gym-reveal-meaning">거짓말! / 말도 안 돼!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">やばい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">야바이</div>
+        <div class="gym-reveal-meaning">대박 / 헐 / 큰일 났다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">なるほど</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">나루호도</div>
+        <div class="gym-reveal-meaning">과연 / 그렇구나</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">もちろん</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">모치론</div>
+        <div class="gym-reveal-meaning">물론이지</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">なに？</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">나니?</div>
+        <div class="gym-reveal-meaning">뭐야? / 뭣이?</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">びっくりした</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">빗쿠리시타</div>
+        <div class="gym-reveal-meaning">깜짝이야</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ちょっと まって</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">춋토 맛테</div>
+        <div class="gym-reveal-meaning">잠깐 기다려</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">やめて</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">야메테</div>
+        <div class="gym-reveal-meaning">그만해!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">にげろ！</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">니게로!</div>
+        <div class="gym-reveal-meaning">도망쳐!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">たすけて</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">타스케테</div>
+        <div class="gym-reveal-meaning">살려줘 / 도와줘</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">はやく！</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">하야쿠!</div>
+        <div class="gym-reveal-meaning">빨리!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">がんばれ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">간바레</div>
+        <div class="gym-reveal-meaning">힘내!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いくぞ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이쿠조</div>
+        <div class="gym-reveal-meaning">가자!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">だめ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">다메</div>
+        <div class="gym-reveal-meaning">안 돼</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いやだ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이야다</div>
+        <div class="gym-reveal-meaning">싫어</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おいしい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오이시이</div>
+        <div class="gym-reveal-meaning">맛있다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">うまい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">우마이</div>
+        <div class="gym-reveal-meaning">맛있어 / 끝내줘</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">きもちいい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">키모치이이</div>
+        <div class="gym-reveal-meaning">기분 좋아</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">かわいい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">카와이이</div>
+        <div class="gym-reveal-meaning">귀여워</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">すごい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">스고이</div>
+        <div class="gym-reveal-meaning">대단해 / 쩔어</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いたい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이타이</div>
+        <div class="gym-reveal-meaning">아파</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">こわい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">코와이</div>
+        <div class="gym-reveal-meaning">무서워</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">つかれた</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">츠카레타</div>
+        <div class="gym-reveal-meaning">피곤해 / 지쳤어</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">うるさい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">우루사이</div>
+        <div class="gym-reveal-meaning">시끄러워</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">せんせい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">센세-</div>
+        <div class="gym-reveal-meaning">선생님</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">せんぱい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">센파이</div>
+        <div class="gym-reveal-meaning">선배</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おまえ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오마에</div>
+        <div class="gym-reveal-meaning">너 / 네 녀석</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おいしくなれ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오이시쿠나레</div>
+        <div class="gym-reveal-meaning">맛있어져라 (밈)</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">もえもえきゅん</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">모에모에큔</div>
+        <div class="gym-reveal-meaning">모에모에뀽 (밈)</div>
+      </div>
+    </div>
+
+  </div>
+</div>

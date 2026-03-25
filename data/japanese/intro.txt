@@ -1,0 +1,2143 @@
+히라가나, 카타카나 입문
+<style>
+  /* Step 2. 50음도 전체 훈련장 전용 스타일 (Step 1에 이어서 추가) */
+  .gym-row-group {
+    background: #fdfdfd;
+    border-radius: 12px;
+    padding: 25px 20px;
+    margin-bottom: 40px;
+    border: 1px solid #eeeeee;
+  }
+
+  .gym-row-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #424242;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #ffb74d; /* 오렌지 점선 포인트 */
+    display: flex;
+    align-items: center;
+  }
+
+  .gym-row-title span {
+    background: #e65100;
+    color: white;
+    font-size: 0.9rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-right: 10px;
+  }
+
+  .gym-training-grid {
+    display: grid;
+    /* 카드가 많으므로 조금 더 촘촘하게 배치 */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+  }
+
+  .gym-word-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 15px;
+    text-align: center;
+    border-top: 4px solid #ff9800;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .gym-word-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(230, 81, 0, 0.15);
+  }
+
+  .gym-target-badge {
+    display: inline-block;
+    background: #ffe0b2;
+    color: #e65100;
+    font-size: 0.9rem;
+    font-weight: 900;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  .gym-jp-text {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* 타겟 글자 하이라이트 효과 극대화 */
+  .gym-char-focus {
+    color: #e65100;
+    font-size: 2.2rem;
+    display: inline-block;
+    transform: scale(1.15);
+    text-shadow: 1px 1px 0px rgba(255, 152, 0, 0.3);
+  }
+
+  .gym-kr-pronun {
+    font-size: 1rem;
+    color: #1976d2;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .gym-kr-meaning {
+    font-size: 0.9rem;
+    color: #757575;
+  }
+</style>
+
+<div class="gym-section gym-font-kr">
+  <h2 class="gym-section-title">Phase 1-1. 히라가나 50음도 전신 운동 🏋️‍♂️</h2>
+  <p class="gym-sub-title">
+    모든 글자를 여러분이 이미 수백 번 들어본 일본어 단어 속에서 찾아냅니다.
+    붉은색 타겟 글자에 집중하세요!
+  </p>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>1</span> あ행 (아, 이, 우, 에, 오)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">あ (아)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">あ</span>りがとう
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"아"리가토-</div>
+        <div class="gym-kr-meaning gym-font-kr">고마워</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">い (이)</div>
+        <div class="gym-jp-text">
+          お<span class="gym-char-focus">い</span>しい
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">오"이"시이</div>
+        <div class="gym-kr-meaning gym-font-kr">맛있다</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">う (우)</div>
+        <div class="gym-jp-text">
+          おはよ<span class="gym-char-focus">う</span>
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">오하요-"우"</div>
+        <div class="gym-kr-meaning gym-font-kr">안녕 (아침 인사)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">え (에)</div>
+        <div class="gym-jp-text">
+          おま<span class="gym-char-focus">え</span>
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">오마"에"</div>
+        <div class="gym-kr-meaning gym-font-kr">너 (반말)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">お (오)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">お</span>ねがい
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"오"네가이</div>
+        <div class="gym-kr-meaning gym-font-kr">부탁해</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>2</span> か행 (카, 키, 쿠, 케, 코)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">か (카)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">か</span>わいい
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"카"와이-</div>
+        <div class="gym-kr-meaning gym-font-kr">귀여워</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">き (키)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">き</span>もち
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"키"모치</div>
+        <div class="gym-kr-meaning gym-font-kr">기분</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">く (쿠)</div>
+        <div class="gym-jp-text">
+          い<span class="gym-char-focus">く</span>ら
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">이"쿠"라</div>
+        <div class="gym-kr-meaning gym-font-kr">얼마예요?</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">け (케)</div>
+        <div class="gym-jp-text">
+          たす<span class="gym-char-focus">け</span>て
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">타스"케"테</div>
+        <div class="gym-kr-meaning gym-font-kr">도와줘!</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">こ (코)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">こ</span>んにちは
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"콘"니치와</div>
+        <div class="gym-kr-meaning gym-font-kr">안녕하세요</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>3</span> さ행 (사, 시, 스, 세, 소)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">さ (사)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">さ</span>くら
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"사"쿠라</div>
+        <div class="gym-kr-meaning gym-font-kr">벚꽃</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">し (시)</div>
+        <div class="gym-jp-text">
+          も<span class="gym-char-focus">し</span>もし
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">모"시"모시</div>
+        <div class="gym-kr-meaning gym-font-kr">여보세요</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">す (스)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">す</span>みません
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"스"미마센</div>
+        <div class="gym-kr-meaning gym-font-kr">죄송합니다</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">せ (세)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">せ</span>んせい
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"센"세이</div>
+        <div class="gym-kr-meaning gym-font-kr">선생님</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">そ (소)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">そ</span>うですね
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"소-"데스네</div>
+        <div class="gym-kr-meaning gym-font-kr">그렇네요</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>4</span> た행 (타, 치, 츠, 테, 토)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">た (타)</div>
+        <div class="gym-jp-text">
+          い<span class="gym-char-focus">た</span>だきます
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">이"타"다키마스</div>
+        <div class="gym-kr-meaning gym-font-kr">잘 먹겠습니다</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ち (치)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ち</span>がう
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"치"가우</div>
+        <div class="gym-kr-meaning gym-font-kr">달라 / 아니야</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">つ (츠)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">つ</span>かれた
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"츠"카레타</div>
+        <div class="gym-kr-meaning gym-font-kr">피곤해</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">て (테)</div>
+        <div class="gym-jp-text">
+          まっ<span class="gym-char-focus">て</span>
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">맛"테"</div>
+        <div class="gym-kr-meaning gym-font-kr">기다려!</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">と (토)</div>
+        <div class="gym-jp-text">
+          ほん<span class="gym-char-focus">と</span>う
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">혼"토-"</div>
+        <div class="gym-kr-meaning gym-font-kr">정말?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>5</span> な행 (나, 니, 누, 네, 노)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">な (나)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">な</span>まえ
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"나"마에</div>
+        <div class="gym-kr-meaning gym-font-kr">이름</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">に (니)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">に</span>ほんご
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"니"혼고</div>
+        <div class="gym-kr-meaning gym-font-kr">일본어</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ぬ (누)</div>
+        <div class="gym-jp-text">い<span class="gym-char-focus">ぬ</span></div>
+        <div class="gym-kr-pronun gym-font-kr">이"누"</div>
+        <div class="gym-kr-meaning gym-font-kr">강아지</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ね (네)</div>
+        <div class="gym-jp-text"><span class="gym-char-focus">ね</span>こ</div>
+        <div class="gym-kr-pronun gym-font-kr">"네"코</div>
+        <div class="gym-kr-meaning gym-font-kr">고양이</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">の (노)</div>
+        <div class="gym-jp-text">
+          た<span class="gym-char-focus">の</span>しい
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">타"노"시이</div>
+        <div class="gym-kr-meaning gym-font-kr">즐거워</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>6</span> は행 (하, 히, 후, 헤, 호)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">は (하)</div>
+        <div class="gym-jp-text"><span class="gym-char-focus">は</span>い</div>
+        <div class="gym-kr-pronun gym-font-kr">"하"이</div>
+        <div class="gym-kr-meaning gym-font-kr">네</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ひ (히)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ひ</span>さしぶり
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"히"사시부리</div>
+        <div class="gym-kr-meaning gym-font-kr">오랜만이야</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ふ (후)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ふ</span>ざけるな
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"후"자케루나</div>
+        <div class="gym-kr-meaning gym-font-kr">웃기지 마!</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">へ (헤)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">へ</span>えー！
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"헤"에-!</div>
+        <div class="gym-kr-meaning gym-font-kr">헤에! (리액션)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ほ (호)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ほ</span>んとう
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"혼"토-</div>
+        <div class="gym-kr-meaning gym-font-kr">정말</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>7</span> ま행 (마, 미, 무, 메, 모)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ま (마)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ま</span>って
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"맛"테</div>
+        <div class="gym-kr-meaning gym-font-kr">기다려</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">み (미)</div>
+        <div class="gym-jp-text">
+          す<span class="gym-char-focus">み</span>ません
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">스"미"마센</div>
+        <div class="gym-kr-meaning gym-font-kr">저기요 / 죄송합니다</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">む (무)</div>
+        <div class="gym-jp-text"><span class="gym-char-focus">む</span>り</div>
+        <div class="gym-kr-pronun gym-font-kr">"무"리</div>
+        <div class="gym-kr-meaning gym-font-kr">무리야</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">め (메)</div>
+        <div class="gym-jp-text">
+          ご<span class="gym-char-focus">め</span>ん
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">고"멘"</div>
+        <div class="gym-kr-meaning gym-font-kr">미안</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">も (모)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">も</span>しもし
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"모"시모시</div>
+        <div class="gym-kr-meaning gym-font-kr">여보세요</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>8</span> や행 (야, 유, 요)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">や (야)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">や</span>ばい
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"야"바이</div>
+        <div class="gym-kr-meaning gym-font-kr">대박 / 헐</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ゆ (유)</div>
+        <div class="gym-jp-text"><span class="gym-char-focus">ゆ</span>め</div>
+        <div class="gym-kr-pronun gym-font-kr">"유"메</div>
+        <div class="gym-kr-meaning gym-font-kr">꿈</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">よ (요)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">よ</span>ろしく
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"요"로시쿠</div>
+        <div class="gym-kr-meaning gym-font-kr">잘 부탁해</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>9</span> ら행 (라, 리, 루, 레, 로)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ら (라)</div>
+        <div class="gym-jp-text">
+          さよな<span class="gym-char-focus">ら</span>
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">사요나"라"</div>
+        <div class="gym-kr-meaning gym-font-kr">안녕 (작별)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">り (리)</div>
+        <div class="gym-jp-text">
+          あ<span class="gym-char-focus">り</span>がとう
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">아"리"가토-</div>
+        <div class="gym-kr-meaning gym-font-kr">고마워</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">る (루)</div>
+        <div class="gym-jp-text">
+          な<span class="gym-char-focus">る</span>ほど
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">나"루"호도</div>
+        <div class="gym-kr-meaning gym-font-kr">그렇구나 (납득)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">れ (레)</div>
+        <div class="gym-jp-text">
+          う<span class="gym-char-focus">れ</span>しい
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">우"레"시이</div>
+        <div class="gym-kr-meaning gym-font-kr">기뻐!</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ろ (로)</div>
+        <div class="gym-jp-text">
+          よ<span class="gym-char-focus">ろ</span>しく
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">요"로"시쿠</div>
+        <div class="gym-kr-meaning gym-font-kr">잘 부탁해</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>10</span> わ행 (와, 오) & 받침 (응)</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">わ (와)</div>
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">わ</span>かった
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">"와"캇타</div>
+        <div class="gym-kr-meaning gym-font-kr">알았어</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">を (오/워)</div>
+        <div class="gym-jp-text">
+          ごはん<span class="gym-char-focus">を</span>
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">고항"오"</div>
+        <div class="gym-kr-meaning gym-font-kr">밥을 (조사)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">ん (응/받침)</div>
+        <div class="gym-jp-text">
+          ごめ<span class="gym-char-focus">ん</span>
+        </div>
+        <div class="gym-kr-pronun gym-font-kr">고멘 ("메+ㄴ")</div>
+        <div class="gym-kr-meaning gym-font-kr">미안</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="gym-section-title">Phase 1-2. 카타카나 50음도 전신 운동 🏋️‍♂️</h2>
+   
+  <p class="gym-sub-title">
+    우리에게 이미 익숙한 외래어와 단어들 속에서 카타카나를 찾아보세요. 붉은색
+    타겟 글자에 집중하세요!
+  </p>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>1</span> ア행 (아, 이, 우, 에, 오)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ア (아)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ア</span>パート
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"아"파-토</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">아파트</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">イ (이)</div>
+               
+        <div class="gym-jp-text">
+          ト<span class="gym-char-focus">イ</span>レ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">토"이"레</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">화장실</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ウ (우)</div>
+               
+        <div class="gym-jp-text">
+          マ<span class="gym-char-focus">ウ</span>ス
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">마"우"스</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">마우스 (쥐)</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">エ (에)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">エ</span>アコン
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"에"아콘</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">에어컨</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">オ (오)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">オ</span>アシス
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"오"아시스</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">오아시스</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>2</span> カ행 (카, 키, 쿠, 케, 코)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">カ (카)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">カ</span>メラ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"카"메라</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">카메라</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">キ (키)</div>
+               
+        <div class="gym-jp-text">
+          ケー<span class="gym-char-focus">キ</span>
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">케-"키"</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">케이크</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ク (쿠)</div>
+               
+        <div class="gym-jp-text">
+          マス<span class="gym-char-focus">ク</span>
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">마스"쿠"</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">마스크</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ケ (케)</div>
+               
+        <div class="gym-jp-text">
+          チッ<span class="gym-char-focus">ケ</span>ト
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">치켓"토" (티켓)</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">티켓 / 표</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">コ (코)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">コ</span>ーヒー
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"코"-히-</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">커피</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>3</span> サ행 (사, 시, 스, 세, 소)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">サ (사)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">サ</span>イン
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"사"인</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">사인 / 서명</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">シ (시)</div>
+               
+        <div class="gym-jp-text">
+          タク<span class="gym-char-focus">シ</span>ー
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">타쿠"시"-</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">택시</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ス (스)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ス</span>マホ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"스"마호</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">스마트폰</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">セ (세)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">セ</span>ンター
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"센"타-</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">센터</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ソ (소)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ソ</span>ース
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"소"-스</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">소스</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>4</span> タ행 (타, 치, 츠, 테, 토)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">タ (타)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">タ</span>オル
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"타"오루</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">수건</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">チ (치)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">チ</span>ーズ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"치"-즈</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">치즈</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ツ (츠)</div>
+               
+        <div class="gym-jp-text">
+          シャ<span class="gym-char-focus">ツ</span>
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">샤"츠"</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">셔츠</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">テ (테)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">テ</span>レビ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"테"레비</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">TV</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ト (토)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ト</span>マト
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"토"마토</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">토마토</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>5</span> ナ행 (나, 니, 누, 네, 노)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ナ (나)</div>
+               
+        <div class="gym-jp-text">
+          バ<span class="gym-char-focus">ナ</span>ナ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">바"나"나</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">바나나</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ニ (니)</div>
+               
+        <div class="gym-jp-text">
+          テ<span class="gym-char-focus">ニ</span>ス
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">테"니"스</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">테니스</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ヌ (누)</div>
+               
+        <div class="gym-jp-text">
+          カ<span class="gym-char-focus">ヌ</span>ー
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">카"누"-</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">카누 (배)</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ネ (네)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ネ</span>ット
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"넷"토</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">인터넷 / 네트</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ノ (노)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ノ</span>ート
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"노"-토</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">노트 / 공책</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>6</span> ハ행 (하, 히, 후, 헤, 호)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ハ (하)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ハ</span>ワイ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"하"와이</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">하와이</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ヒ (히)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ヒ</span>ント
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"힌"토</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">힌트</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">フ (후)</div>
+               
+        <div class="gym-jp-text">
+          ゴル<span class="gym-char-focus">フ</span>
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">고루"후"</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">골프</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ヘ (헤)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ヘ</span>ルメット
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"헤"루멧토</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">헬멧</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ホ (호)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ホ</span>テル
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"호"테루</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">호텔</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>7</span> マ행 (마, 미, 무, 메, 모)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">マ (마)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">マ</span>イク
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"마"이쿠</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">마이크</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ミ (미)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ミ</span>ルク
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"미"루쿠</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">밀크 / 우유</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ム (무)</div>
+               
+        <div class="gym-jp-text">
+          ゲー<span class="gym-char-focus">ム</span>
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">게-"무"</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">게임</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">メ (메)</div>
+               
+        <div class="gym-jp-text"><span class="gym-char-focus">メ</span>モ</div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"메"모</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">메모</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">モ (모)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">モ</span>ニター
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"모"니타-</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">모니터</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>8</span> ヤ행 (야, 유, 요)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ヤ (야)</div>
+               
+        <div class="gym-jp-text">
+          タイ<span class="gym-char-focus">ヤ</span>
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">타이"야"</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">타이어</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ユ (유)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ユ</span>ーチューブ
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"유"-츄-부</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">유튜브</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ヨ (요)</div>
+               
+        <div class="gym-jp-text"><span class="gym-char-focus">ヨ</span>ガ</div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"요"가</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">요가</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>9</span> ラ행 (라, 리, 루, 레, 로)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ラ (라)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ラ</span>ーメン
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"라"-멘</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">라면</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">リ (리)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">リ</span>モコン
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"리"모콘</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">리모컨</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ル (루)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ル</span>ール
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"루"-루</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">룰 / 규칙</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">レ (레)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">レ</span>モン
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"레"몬</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">레몬</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ロ (로)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ロ</span>ボット
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"로"봇토</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">로봇</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+
+   
+  <div class="gym-row-group">
+       
+    <div class="gym-row-title"><span>10</span> ワ행 (와, 오) & 받침 (응)</div>
+       
+    <div class="gym-training-grid gym-font-jp">
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ワ (와)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ワ</span>イン
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"와"인</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">와인</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ヲ (오/워)</div>
+               
+        <div class="gym-jp-text">
+          <span class="gym-char-focus">ヲ</span>タク
+        </div>
+               
+        <div class="gym-kr-pronun gym-font-kr">"오"타쿠</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">오타쿠 (마니아)</div>
+             
+      </div>
+           
+      <div class="gym-word-card">
+               
+        <div class="gym-target-badge gym-font-kr">ン (응/받침)</div>
+               
+        <div class="gym-jp-text">パ<span class="gym-char-focus">ン</span></div>
+               
+        <div class="gym-kr-pronun gym-font-kr">판 ("파+ㄴ")</div>
+               
+        <div class="gym-kr-meaning gym-font-kr">빵</div>
+             
+      </div>
+         
+    </div>
+     
+  </div>
+</div>
+
+<style>
+  /* Step 3. 가타카나 플립 카드 전용 스타일 */
+  .gym-flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    perspective: 1000px; /* 3D 효과를 위한 원근감 세팅 */
+  }
+
+  .gym-flip-card {
+    background-color: transparent;
+    width: 100%;
+    aspect-ratio: 1 / 1.1; /* 살짝 세로로 긴 카드 형태 */
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+  .gym-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+
+  /* 마우스 오버 시 카드 뒤집기 */
+  .gym-flip-card:hover .gym-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .gym-flip-front,
+  .gym-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  /* 앞면: 한글 이름 (친숙함 유도) */
+  .gym-flip-front {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    border: 2px solid #e0e0e0;
+  }
+
+  .gym-front-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #212121;
+  }
+
+  .gym-front-sub {
+    font-size: 0.85rem;
+    color: #9e9e9e;
+    margin-top: 8px;
+    background: #eeeeee;
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+
+  /* 뒷면: 가타카나 (정답 및 학습) */
+  .gym-flip-back {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: 2px solid #64b5f6;
+    transform: rotateY(180deg);
+    color: #0d47a1;
+  }
+
+  .gym-back-jp {
+    font-size: 2.2rem;
+    font-weight: 900;
+    font-family: "Noto Sans JP", sans-serif;
+    letter-spacing: 2px;
+  }
+
+  .gym-back-point {
+    font-size: 0.9rem;
+    color: #1565c0;
+    margin-top: 12px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 5px 12px;
+    border-radius: 8px;
+  }
+</style>
+
+<div class="gym-section gym-font-kr">
+  <h2 class="gym-section-title">Phase 2. 가타카나 덕력 테스트 🎴</h2>
+  <p class="gym-sub-title">
+    외래어나 이름에 쓰이는 '가타카나'는 억지로 외우지 마세요. 카드를 뒤집어
+    여러분이 사랑하는 캐릭터의 진짜 이름을 확인해 보세요!
+  </p>
+
+  <div class="gym-flip-grid">
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">루피</div>
+          <div class="gym-front-sub">원피스</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">ルフィ</div>
+          <div class="gym-back-point">기본 타격 (ル)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">나미</div>
+          <div class="gym-front-sub">원피스</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">ナミ</div>
+          <div class="gym-back-point">기본 타격 (ナ, ミ)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">조로</div>
+          <div class="gym-front-sub">원피스</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">ゾロ</div>
+          <div class="gym-back-point">탁음(") 노출</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">상디</div>
+          <div class="gym-front-sub">원피스</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">サンジ</div>
+          <div class="gym-back-point">받침(ン) 노출</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">쵸파</div>
+          <div class="gym-front-sub">원피스</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">チョッパー</div>
+          <div class="gym-back-point">작은글자(ッ) / 장음(ー)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">사스케</div>
+          <div class="gym-front-sub">나루토</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">サスケ</div>
+          <div class="gym-back-point">기본 타격 (サ, ケ)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-flip-grid" style="margin-top: 20px">
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">피카츄</div>
+          <div class="gym-front-sub">포켓몬스터</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">ピカチュウ</div>
+          <div class="gym-back-point">반탁음(°) / 요음(ュ)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gym-flip-card">
+      <div class="gym-flip-inner">
+        <div class="gym-flip-front">
+          <div class="gym-front-title">아스카</div>
+          <div class="gym-front-sub">에반게리온</div>
+        </div>
+        <div class="gym-flip-back">
+          <div class="gym-back-jp">アスカ</div>
+          <div class="gym-back-point">기본 타격 (ア, ス, カ)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Step 4-1. 섀도우 복싱(일상어) 전용 스타일 */
+  .gym-shadow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .gym-shadow-card {
+    background: #ffffff;
+    border: 2px solid #eeeeee;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .gym-shadow-card:hover {
+    transform: translateY(-3px);
+    border-color: #ff9800;
+  }
+
+  .gym-shadow-jp {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #212121;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Hover 시 나타나는 오버레이 (발음 & 뜻) */
+  .gym-shadow-reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e65100; /* 체육관 메인 오렌지 */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 평소엔 숨김 */
+    transition: opacity 0.3s ease;
+  }
+
+  .gym-shadow-card:hover .gym-shadow-reveal {
+    opacity: 1; /* Hover 시 보임 */
+  }
+
+  .gym-reveal-pronun {
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .gym-reveal-meaning {
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+</style>
+
+<div class="gym-section gym-font-kr">
+  <h2 class="gym-section-title">Phase 3-1. 본능적 섀도우 복싱 🥊</h2>
+  <p class="gym-sub-title">
+    어디선가 들어본 익숙한 소리들입니다. 글자만 보고 소리를 유추해 본 뒤,
+    마우스를 올려 정답을 확인하세요.
+  </p>
+
+  <div class="gym-shadow-grid gym-font-jp">
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ありがとうございます</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">아리가토-고자이마스</div>
+        <div class="gym-reveal-meaning">감사합니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">すみません</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">스미마센</div>
+        <div class="gym-reveal-meaning">죄송합니다 / 저기요</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ごめんなさい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">고멘나사이</div>
+        <div class="gym-reveal-meaning">미안해요</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">よろしくおねがいします</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">요로시쿠 오네가이시마스</div>
+        <div class="gym-reveal-meaning">잘 부탁드립니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いらっしゃいませ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이랏샤이마세</div>
+        <div class="gym-reveal-meaning">어서 오세요</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いただきます</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이타다키마스</div>
+        <div class="gym-reveal-meaning">잘 먹겠습니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ごちそうさまでした</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">고치소-사마데시타</div>
+        <div class="gym-reveal-meaning">잘 먹었습니다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おひさしぶり</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오히사시부리</div>
+        <div class="gym-reveal-meaning">오랜만이야</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おつかれさま</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오츠카레사마</div>
+        <div class="gym-reveal-meaning">수고하셨습니다</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ほんとう？</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">혼토-?</div>
+        <div class="gym-reveal-meaning">정말?</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">まじで？</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">마지데?</div>
+        <div class="gym-reveal-meaning">진짜로? (격투/애니 단골)</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">うそ！</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">우소!</div>
+        <div class="gym-reveal-meaning">거짓말! / 말도 안 돼!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">やばい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">야바이</div>
+        <div class="gym-reveal-meaning">대박 / 헐 / 큰일 났다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">なるほど</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">나루호도</div>
+        <div class="gym-reveal-meaning">과연 / 그렇구나</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">もちろん</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">모치론</div>
+        <div class="gym-reveal-meaning">물론이지</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">なに？</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">나니?</div>
+        <div class="gym-reveal-meaning">뭐야? / 뭣이?</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">びっくりした</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">빗쿠리시타</div>
+        <div class="gym-reveal-meaning">깜짝이야</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">ちょっと まって</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">춋토 맛테</div>
+        <div class="gym-reveal-meaning">잠깐 기다려</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">やめて</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">야메테</div>
+        <div class="gym-reveal-meaning">그만해!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">にげろ！</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">니게로!</div>
+        <div class="gym-reveal-meaning">도망쳐!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">たすけて</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">타스케테</div>
+        <div class="gym-reveal-meaning">살려줘 / 도와줘</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">はやく！</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">하야쿠!</div>
+        <div class="gym-reveal-meaning">빨리!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">がんばれ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">간바레</div>
+        <div class="gym-reveal-meaning">힘내!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いくぞ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이쿠조</div>
+        <div class="gym-reveal-meaning">가자!</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">だめ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">다메</div>
+        <div class="gym-reveal-meaning">안 돼</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いやだ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이야다</div>
+        <div class="gym-reveal-meaning">싫어</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おいしい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오이시이</div>
+        <div class="gym-reveal-meaning">맛있다</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">うまい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">우마이</div>
+        <div class="gym-reveal-meaning">맛있어 / 끝내줘</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">きもちいい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">키모치이이</div>
+        <div class="gym-reveal-meaning">기분 좋아</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">かわいい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">카와이이</div>
+        <div class="gym-reveal-meaning">귀여워</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">すごい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">스고이</div>
+        <div class="gym-reveal-meaning">대단해 / 쩔어</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">いたい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">이타이</div>
+        <div class="gym-reveal-meaning">아파</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">こわい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">코와이</div>
+        <div class="gym-reveal-meaning">무서워</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">つかれた</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">츠카레타</div>
+        <div class="gym-reveal-meaning">피곤해 / 지쳤어</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">うるさい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">우루사이</div>
+        <div class="gym-reveal-meaning">시끄러워</div>
+      </div>
+    </div>
+
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">せんせい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">센세-</div>
+        <div class="gym-reveal-meaning">선생님</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">せんぱい</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">센파이</div>
+        <div class="gym-reveal-meaning">선배</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おまえ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오마에</div>
+        <div class="gym-reveal-meaning">너 / 네 녀석</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">おいしくなれ</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">오이시쿠나레</div>
+        <div class="gym-reveal-meaning">맛있어져라 (밈)</div>
+      </div>
+    </div>
+    <div class="gym-shadow-card">
+      <div class="gym-shadow-jp">もえもえきゅん</div>
+      <div class="gym-shadow-reveal gym-font-kr">
+        <div class="gym-reveal-pronun">모에모에큔</div>
+        <div class="gym-reveal-meaning">모에모에뀽 (밈)</div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 class="gym-section-title">Phase 2. 애니메이션 명대사 지옥 훈련 🎬</h2>
+  <p class="gym-sub-title">레전드 명장면 속에서 히라가나와 기초 문법을 마스터합니다. 캐릭터의 감정을 실어 읽어보세요!</p>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>1</span> 원피스: 동료를 향한 외침</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">너</div>
+        <div class="gym-jp-text">おまえ</div>
+        <div class="gym-kr-pronun gym-font-kr">오마에</div>
+        <div class="gym-kr-meaning gym-font-kr">너 (강한 호칭)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">나의</div>
+        <div class="gym-jp-text">おれの</div>
+        <div class="gym-kr-pronun gym-font-kr">오레노</div>
+        <div class="gym-kr-meaning gym-font-kr">나의</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">동료가</div>
+        <div class="gym-jp-text">なかまに</div>
+        <div class="gym-kr-pronun gym-font-kr">나카마니</div>
+        <div class="gym-kr-meaning gym-font-kr">동료가</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명령</div>
+        <div class="gym-jp-text">なれ</div>
+        <div class="gym-kr-pronun gym-font-kr">나레</div>
+        <div class="gym-kr-meaning gym-font-kr">돼라!</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">효과음</div>
+        <div class="gym-jp-text">どん！</div>
+        <div class="gym-kr-pronun gym-font-kr">동!</div>
+        <div class="gym-kr-meaning gym-font-kr">두둥! (원피스 시그니처)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>2</span> 슬램덩크: 안 선생님의 가르침</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">가정</div>
+        <div class="gym-jp-text">あきらめたら</div>
+        <div class="gym-kr-pronun gym-font-kr">아키라메타라</div>
+        <div class="gym-kr-meaning gym-font-kr">포기하면</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">장소</div>
+        <div class="gym-jp-text">そこで</div>
+        <div class="gym-kr-pronun gym-font-kr">소코데</div>
+        <div class="gym-kr-meaning gym-font-kr">거기서</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">しあい</div>
+        <div class="gym-kr-pronun gym-font-kr">시아이</div>
+        <div class="gym-kr-meaning gym-font-kr">시합</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">しゅうりょう</div>
+        <div class="gym-kr-pronun gym-font-kr">슈-료-</div>
+        <div class="gym-kr-meaning gym-font-kr">종료</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">존댓말</div>
+        <div class="gym-jp-text">ですよ</div>
+        <div class="gym-kr-pronun gym-font-kr">데스요</div>
+        <div class="gym-kr-meaning gym-font-kr">예요</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>3</span> 슬램덩크: 강백호의 깨달음</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">신체</div>
+        <div class="gym-jp-text">ひだりては</div>
+        <div class="gym-kr-pronun gym-font-kr">히다리테와</div>
+        <div class="gym-kr-meaning gym-font-kr">왼손은</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">동사</div>
+        <div class="gym-jp-text">そえる</div>
+        <div class="gym-kr-pronun gym-font-kr">소에루</div>
+        <div class="gym-kr-meaning gym-font-kr">거들</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">한정</div>
+        <div class="gym-jp-text">だけ</div>
+        <div class="gym-kr-pronun gym-font-kr">다케</div>
+        <div class="gym-kr-meaning gym-font-kr">뿐</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">질문</div>
+        <div class="gym-jp-text">すきですか？</div>
+        <div class="gym-kr-pronun gym-font-kr">스키데스카?</div>
+        <div class="gym-kr-meaning gym-font-kr">좋아하나요? (소연)</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">대답</div>
+        <div class="gym-jp-text">だいすきです</div>
+        <div class="gym-kr-pronun gym-font-kr">다이스키데스</div>
+        <div class="gym-kr-meaning gym-font-kr">정말 좋아합니다</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>4</span> 귀멸의 칼날: 렌고쿠의 의지</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">こころを</div>
+        <div class="gym-kr-pronun gym-font-kr">코코로오</div>
+        <div class="gym-kr-meaning gym-font-kr">마음을</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명령</div>
+        <div class="gym-jp-text">もやせ</div>
+        <div class="gym-kr-pronun gym-font-kr">모야세</div>
+        <div class="gym-kr-meaning gym-font-kr">불태워라</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">기술명</div>
+        <div class="gym-jp-text">ぜんしゅうちゅう</div>
+        <div class="gym-kr-pronun gym-font-kr">젠슈-츄-</div>
+        <div class="gym-kr-meaning gym-font-kr">전집중</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">연결</div>
+        <div class="gym-jp-text">の</div>
+        <div class="gym-kr-pronun gym-font-kr">노</div>
+        <div class="gym-kr-meaning gym-font-kr">~의</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">こきゅう</div>
+        <div class="gym-kr-pronun gym-font-kr">코큐-</div>
+        <div class="gym-kr-meaning gym-font-kr">호흡</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>5</span> 진격의 거인 & 명탐정 코난</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">しんぞうを</div>
+        <div class="gym-kr-pronun gym-font-kr">신조-오</div>
+        <div class="gym-kr-meaning gym-font-kr">심장을</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명령</div>
+        <div class="gym-jp-text">ささげよ</div>
+        <div class="gym-kr-pronun gym-font-kr">사사게요</div>
+        <div class="gym-kr-meaning gym-font-kr">바쳐라!</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">しんじつは</div>
+        <div class="gym-kr-pronun gym-font-kr">신지츠와</div>
+        <div class="gym-kr-meaning gym-font-kr">진실은</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">부사</div>
+        <div class="gym-jp-text">いつも</div>
+        <div class="gym-kr-pronun gym-font-kr">이츠모</div>
+        <div class="gym-kr-meaning gym-font-kr">언제나</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">숫자</div>
+        <div class="gym-jp-text">ひとつ</div>
+        <div class="gym-kr-pronun gym-font-kr">히토츠</div>
+        <div class="gym-kr-meaning gym-font-kr">하나!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>6</span> 지브리 스튜디오: 센과 모노노케</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">なまえを</div>
+        <div class="gym-kr-pronun gym-font-kr">나마에오</div>
+        <div class="gym-kr-meaning gym-font-kr">이름을</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">수동태</div>
+        <div class="gym-jp-text">うばわれると</div>
+        <div class="gym-kr-pronun gym-font-kr">우바와레루토</div>
+        <div class="gym-kr-meaning gym-font-kr">빼앗기면</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명령</div>
+        <div class="gym-jp-text">いきろ</div>
+        <div class="gym-kr-pronun gym-font-kr">이키로</div>
+        <div class="gym-kr-meaning gym-font-kr">살아라</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">대명사</div>
+        <div class="gym-jp-text">そなたは</div>
+        <div class="gym-kr-pronun gym-font-kr">소나타와</div>
+        <div class="gym-kr-meaning gym-font-kr">그대는</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">형용사</div>
+        <div class="gym-jp-text">うつくしい</div>
+        <div class="gym-kr-pronun gym-font-kr">우츠쿠시이</div>
+        <div class="gym-kr-meaning gym-font-kr">아름답다</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>7</span> 에반게리온 & 주술회전</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">가정</div>
+        <div class="gym-jp-text">にげちゃ</div>
+        <div class="gym-kr-pronun gym-font-kr">니게챠</div>
+        <div class="gym-kr-meaning gym-font-kr">도망치면</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">금지</div>
+        <div class="gym-jp-text">だめだ</div>
+        <div class="gym-kr-pronun gym-font-kr">다메다</div>
+        <div class="gym-kr-meaning gym-font-kr">안 돼</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">기술명</div>
+        <div class="gym-jp-text">りょういき</div>
+        <div class="gym-kr-pronun gym-font-kr">료-이키</div>
+        <div class="gym-kr-meaning gym-font-kr">영역</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">てんかい</div>
+        <div class="gym-kr-pronun gym-font-kr">텐카이</div>
+        <div class="gym-kr-meaning gym-font-kr">전개</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">확신</div>
+        <div class="gym-jp-text">だいじょうぶ</div>
+        <div class="gym-kr-pronun gym-font-kr">다이죠-부</div>
+        <div class="gym-kr-meaning gym-font-kr">괜찮아 (고죠 사토루)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gym-row-group">
+    <div class="gym-row-title"><span>8</span> 원피스: 닥터 히루루크 벚꽃</div>
+    <div class="gym-training-grid gym-font-jp">
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">명사</div>
+        <div class="gym-jp-text">ひとは</div>
+        <div class="gym-kr-pronun gym-font-kr">히토와</div>
+        <div class="gym-kr-meaning gym-font-kr">사람은</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">의문사</div>
+        <div class="gym-jp-text">いつ</div>
+        <div class="gym-kr-pronun gym-font-kr">이츠</div>
+        <div class="gym-kr-meaning gym-font-kr">언제</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">동사</div>
+        <div class="gym-jp-text">しぬと</div>
+        <div class="gym-kr-pronun gym-font-kr">시누토</div>
+        <div class="gym-kr-meaning gym-font-kr">죽는다고</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">동사</div>
+        <div class="gym-jp-text">おもう？</div>
+        <div class="gym-kr-pronun gym-font-kr">오모우?</div>
+        <div class="gym-kr-meaning gym-font-kr">생각하나?</div>
+      </div>
+      <div class="gym-word-card">
+        <div class="gym-target-badge gym-font-kr">수동과거</div>
+        <div class="gym-jp-text">わすれられた</div>
+        <div class="gym-kr-pronun gym-font-kr">와스레라레타</div>
+        <div class="gym-kr-meaning gym-font-kr">잊혀졌을 (때다)</div>
+      </div>
+    </div>
+  </div>
+
+  
