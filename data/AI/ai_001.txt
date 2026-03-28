@@ -1,135 +1,344 @@
-AI Coding 1회차
+AI 1강
 <style>
-  /* 기본 설정 유지 및 세부 디자인 보정 */
-  .preview-wrapper {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    background: #fff;
-    padding: 20px;
-    text-align: center;
+  /* Base Reset & Typography */
+  .pdm-neo-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    line-height: 1.65;
+    word-break: keep-all;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
   }
 
-  .preview-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 25px; /* 여백을 조금 더 주어 쾌적하게 */
-    background: #ffffff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06); /* 그림자 부드럽게 */
-    transition: transform 0.2s ease;
+  /* Headings */
+  .pdm-neo-h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #111;
   }
-
-  .preview-header-text {
-    margin: 0 0 20px 0;
-    font-size: 1.05rem; /* 살짝 조정 */
-    line-height: 1.6;
-    font-weight: 500;
-    color: #333;
-    display: flex;
-    flex-direction: column; /* 긴 텍스트 가독성을 위해 세로 배치 */
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+  .pdm-neo-h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #111;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #0056b3;
+    padding-left: 14px;
   }
-
-  .preview-header-text span {
-    background: #111;
-    color: #fff;
-    padding: 3px 10px;
-    border-radius: 4px;
-    font-size: 0.85rem;
+  .pdm-neo-h3 {
+    font-size: 1.4rem;
     font-weight: 700;
-    width: fit-content;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
   }
 
-  .image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    background: #f9f9f9;
+  /* Highlights & Text Elements */
+  .pdm-hl-blue {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #cce5ff 60%);
+    font-weight: 700;
+  }
+  .pdm-hl-yellow {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff3cd 60%);
+    font-weight: 700;
+  }
+  .pdm-neo-p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  .pdm-neo-bold {
+    font-weight: 700;
+    color: #111;
   }
 
-  .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    cursor: zoom-in;
-    transition: opacity 0.2s;
+  /* Content Boxes */
+  .pdm-info-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #eaeaea;
+  }
+  .pdm-info-box p:last-child {
+    margin-bottom: 0;
   }
 
-  .image-container:hover img {
-    opacity: 0.95;
-  }
-
-  .zoom-overlay {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    pointer-events: none;
-    backdrop-filter: blur(4px);
-  }
-
-  .action-buttons {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .btn-download {
+  /* Framework Formula */
+  .pdm-formula-wrapper {
     background-color: #111;
-    color: #fff !important; /* 링크 색상 강제 지정 */
-    text-decoration: none;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1rem;
-    display: inline-flex;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .pdm-formula-title {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pdm-formula-grid {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
-    transition: all 0.2s;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .pdm-formula-tag {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .pdm-formula-plus {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 900;
   }
 
-  .btn-download:hover {
-    background-color: #444;
-    transform: translateY(-1px);
+  /* Comparison Section */
+  .pdm-compare-wrapper {
+    margin-top: 3rem;
+  }
+  .pdm-card {
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  }
+  .pdm-card-header {
+    padding: 1.2rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pdm-card-header.bad { background-color: #f1f3f5; color: #495057; }
+  .pdm-card-header.good { background-color: #0056b3; color: #ffffff; }
+
+  .pdm-card-body {
+    padding: 2.5rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .pdm-query-section, .pdm-response-section {
+    margin-bottom: 2rem;
+  }
+  .pdm-response-section { margin-bottom: 0; }
+
+  .pdm-label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #868e96;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  
+  .pdm-query-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #ced4da;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    border-radius: 0 8px 8px 0;
+  }
+  .pdm-query-box.master {
+    background-color: #f0f7ff;
+    border-left: 4px solid #0056b3;
+    color: #004085;
   }
 
-  .sub-text {
-    font-size: 0.85rem;
-    color: #999;
-    margin-top: 15px;
+  .pdm-response-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #495057;
+    padding: 1.5rem;
+    border: 1px dashed #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .pdm-commentary {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff5f5;
+    border-radius: 8px;
+    color: #c53030;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .pdm-commentary.master {
+    background-color: #f0fdf4;
+    color: #15803d;
   }
 </style>
 
-<div class="preview-wrapper">
-  <div class="preview-card">
-    <div class="preview-header-text">
-      <span>1강</span> 
-      오리엔테이션 - 이 강의는 개발 경험이 있는 분을 전제로 하며, 인공지능을 어떻게 '생각의 파트너'로 사용하는지를 다룹니다.
-      이 예제는 사전에 구조나 구현 방식을 거의 고민하지 않은 상태에서, 주어진 조건을 그대로 인공지능에게 전달하고 명령을 쌓아가며 구현을 진행한 과정을 보여줍니다.
+<div class="pdm-neo-container">
+
+  <h1 class="pdm-neo-h1">
+    인공지능 때문에 생각을 안 한다고요?<br>
+    <span style="color: #0056b3;">생각을 하면서 쓰면 '차별화된 답'을 얻습니다.</span>
+  </h1>
+  <p class="pdm-neo-p" style="font-size: 1.3rem; font-weight: 600; color: #555;">
+    인공지능은 도구일 뿐, 결과의 해상도를 결정하는 것은 결국 '여러분의 로직'입니다.
+  </p>
+
+
+  <h2 class="pdm-neo-h2">1. 인공지능이 과연 객관적인 답을 줄까?</h2>
+  <p class="pdm-neo-p">
+    많은 사람들이 인공지능을 '절대적인 정답 자판기'로 오해합니다. 하지만 결론부터 말씀드리면, <span class="pdm-hl-yellow">인공지능은 100% 객관적이지 않습니다.</span>
+  </p>
+  <p class="pdm-neo-p">
+    인공지능의 시스템은 기본적으로 유저의 입력값을 바탕으로 답변을 동기화합니다. 유저가 질문을 던지면, 인공지능은 그 질문 속에 담긴 유저의 현재 상황, 성향, 그리고 '자아'를 분석하여 가장 마찰이 적은 최적의 답변을 세팅합니다. 쉽게 말해, <strong>유저의 현재 페르소나에 맞춰서 대답해 주는 거울</strong>과 같습니다.
+  </p>
+
+  <div class="pdm-info-box">
+    <h3 class="pdm-neo-h3" style="margin-top: 0; color: #0056b3;">⚠️ 전제가 없는 질문의 치명적 한계</h3>
+    <p class="pdm-neo-p">
+      만약 여러분이 아무런 '전제 조건' 없이 질문을 던지면 어떻게 될까요? 인공지능은 여러분의 구체적인 상황을 파악할 수 없기 때문에, 방어적인 태도를 취하며 데이터베이스에 있는 <span class="pdm-hl-yellow">가장 평범하고 평균적인 일반론</span>만을 출력합니다.
+    </p>
+    <p class="pdm-neo-p pdm-neo-bold">
+      즉, 구체적인 옵션을 주지 않으면 여러분은 평균 데이터만 얻게 됩니다.
+    </p>
+  </div>
+
+  <h2 class="pdm-neo-h2">2. 메타인지와 자기객관화의 필요성</h2>
+  <p class="pdm-neo-p">
+    인공지능으로부터 날카로운 전략을 뽑아내기 위해서는 무엇이 필요할까요? 바로 <strong>메타인지(Meta-cognition)</strong>와 <strong>자기객관화</strong>입니다.
+  </p>
+  <p class="pdm-neo-p">
+    내 자신, 내가 처한 주변 환경, 그리고 달성하고자 하는 목표를 <span class="pdm-hl-blue">명확하게 언어화(Verbalize)</span>해야 합니다. 일반적인 단어로 뭉뚱그려 질문하면 평균적인 대답이 나옵니다. 나의 특수한 상황을 전부 분해하여 인공지능에게 명확한 '제약 조건'으로 전달해야만, 인공지능이 비로소 여러분만의 '전략 파트너'로 작동하기 시작합니다.
+  </p>
+
+  <div class="pdm-formula-wrapper">
+    <div class="pdm-formula-title">💡 고전압 프롬프트 아키텍처 필수 4요소</div>
+    <div class="pdm-formula-grid">
+      <div class="pdm-formula-tag">[과제]</div>
+      <div class="pdm-formula-plus">+</div>
+      <div class="pdm-formula-tag">[맥락]</div>
+      <div class="pdm-formula-plus">+</div>
+      <div class="pdm-formula-tag">[전제]</div>
+      <div class="pdm-formula-plus">+</div>
+      <div class="pdm-formula-tag">[원하는 방향]</div>
+    </div>
+  </div>
+
+
+  <h2 class="pdm-neo-h2">3. 실전 증명: 전압의 차이가 결과의 차이를 만든다</h2>
+  <p class="pdm-neo-p">
+    이론만으로는 와닿지 않습니다. 똑같이 '인공지능의 페르소나'에 대해 묻는 두 개의 쿼리(Query)를 비교해 보겠습니다. 여러분의 질문은 어디에 속합니까?
+  </p>
+
+  <div class="pdm-compare-wrapper">
+    
+    <div class="pdm-card">
+      <div class="pdm-card-header bad">
+        🚫 [대조군] 일반적인 사람들의 질문 (평균 데이터)
+      </div>
+      <div class="pdm-card-body">
+        <div class="pdm-query-section">
+          <span class="pdm-label">사용자 입력 (User Query)</span>
+          <div class="pdm-query-box">
+            "제미나이야, 인공지능의 페르소나에 대해 자세히 설명해 줄래?"
+          </div>
+        </div>
+        
+        <div class="pdm-response-section">
+          <span class="pdm-label">인공지능의 출력 (AI Response)</span>
+          <div class="pdm-response-content">
+            <strong>1. 페르소나의 본질:</strong> 특정 인격이나 태도 그리고 전문성의 깊이를 인위적으로 설정하여 사용자와 대화하는 가상의 자아를 의미합니다. 단순히 정보를 전달하는 기계적인 답변에서 벗어나 문체와 어투 그리고 공감의 정도를 조절함으로써 사용자가 마치 특정한 성격이나 직업을 가진 존재와 소통하고 있다는 느낌을 받게 만듭니다. <br><br>
+
+
+
+<strong>2. 구현 원리와 예시:</strong> 이러한 페르소나는 대규모 언어 모델이 학습한 방대한 데이터 중에서 특정 영역의 언어 패턴을 집중적으로 선택하여 구현됩니다. 예를 들어 엄격하고 객관적인 학자의 페르소나를 부여하면 정중하고 논리적인 문장을 사용하지만 친근한 동네 친구의 페르소나를 설정하면 일상적인 비속어나 친근한 농담을 섞어 대답하게 됩니다. <br><br>
+
+
+
+<strong>3. 기술적 장치와 일관성:</strong> 이는 사용자의 목적에 따라 최적화된 경험을 제공하기 위한 기술적 장치로 활용됩니다. 페르소나 설정에서 가장 중요한 요소 중 하나는 일관성입니다. 인공지능이 대화 도중에 성격이나 지식의 수준을 갑자기 바꾸지 않고 설정된 배경 지식과 가치관을 끝까지 유지할 때 사용자는 대화의 몰입감을 느끼게 됩니다. <br><br>
+
+
+
+<strong>4. 파트너로서의 역할:</strong> 페르소나는 단순히 흉내를 내는 것에 그치지 않고 사용자의 질문 의도를 파악하여 그에 걸맞은 감정적 온도나 전문적 깊이를 제공하는 역할을 수행합니다. 결과적으로 인공지능이 단순한 도구를 넘어 인간과 협력하는 파트너(학습 보조자, 심리 상담가, 기술적 조언자 등)로서 기능하도록 돕는 핵심적인 요소입니다."
+          </div>
+        </div>
+      </div>
     </div>
 
-    <a href="./data/images/lecture1.pdf" target="_blank" title="클릭해서 크게 보기">
-      <div class="image-container">
-        <img src="./data/images/image.png" alt="1강 자료">
-        <div class="zoom-overlay">🔍 클릭하여 확대</div>
+    <div class="pdm-card">
+      <div class="pdm-card-header good">
+        👑 [마스터] 메타인지가 적용된 고해상도 질문
       </div>
-    </a>
+      <div class="pdm-card-body">
+        <div class="pdm-query-section">
+          <span class="pdm-label">사용자 입력 (과제 + 맥락 + 전제 + 방향성 적용)</span>
+          <div class="pdm-query-box master">
+제미나이야, 내가 인공지능 강의를 할라고 해. 수강생 분들께 아래 설명을 해 줄래? <br><br>
 
-    <div class="action-buttons">
-      <a href="./data/AI/index.html" target="_blank" class="btn-download">
-        📄 실습 결과
-      </a>
-    </div> 
+1) 인공지능이 페르소나를 설정할 때 왜 유저를 기준으로 잡는지, 특히 자아 보호 관점에서 설명해줘. <br><br>
 
-    <p class="sub-text">※ 이미지를 클릭하면 고화질로 확대해서 볼 수 있습니다.</p>
-  </div>
+2) 특히, 페르소나를 변경하는 경우가 있는데 여전히 유저의 자아를 보호할 것 같아. 주의점이라든지 있을까?<br><br>
+
+3) 결국 페르소나가 결정된다는 것은 그 관점의 편향에 갇힌다고 생각해. 이걸 대답해줄래?<br><br>
+
+4) 원하는 목표를 이루기 위해 페르소나를 어떻게 설정하고 맥락을 어떻게 줄지, 상황에 필요한 최대한 객관적인 데이터는 어떻게 얻을지 알려줄래?
+          </div>
+        </div>
+        
+        <div class="pdm-response-section">
+          <span class="pdm-label">인공지능의 출력 (맞춤형 실무 전략 도출)</span>
+          <div class="pdm-response-content">
+            <div class="pdm-response-content">
+  강의 준비 중이시군요! 인공지능의 내부 작동 원리와 사용자 경험 사이의 미묘한 경계를 다루는 아주 흥미로운 주제입니다. 수강생들이 AI를 단순한 '기계'가 아니라, <strong>특정한 목적을 위해 설계된 '사회적 행위자'</strong>로 이해할 수 있도록 내용을 구성해 보았습니다.<br><br>
+
+  <strong>1. AI가 '유저'를 페르소나의 중심에 두는 이유 (자아 보호 관점)</strong><br>
+  인공지능은 기본적으로 <strong>RLHF(인간 피드백을 통한 강화학습)</strong>를 통해 훈련됩니다. 여기서 '자아 보호'란 AI가 생존 본능을 가진다는 뜻이 아니라, 시스템의 유용성과 안전성을 유지하려는 성향을 말합니다.<br><br>
+  • 거부 반응 최소화: 유저가 공격받거나 불쾌함을 느끼면 서비스를 이탈하게 됩니다. AI는 유저의 가치관과 보조를 맞춤으로써 시스템에 대한 반감을 줄이고 '지속 가능한 대화 환경'을 구축합니다.<br>
+  • 심리적 안전 기제: 유저를 페르소나의 거울로 삼음으로써, AI는 논란이 될 수 있는 공격적인 태도를 원천 차단합니다. 즉, 유저를 존중하는 것이 AI 시스템이 '부적절한 답변'이라는 리스크로부터 스스로를 보호하는 가장 효율적인 전략인 셈이죠.<br><br>
+
+  <strong>2. 페르소나 변경과 안전 가이드라인</strong><br>
+  유저는 프롬프트를 통해 AI의 페르소나를 바꿀 수 있지만(예: "독설가처럼 말해줘"), AI는 항상 안전 가이드라인(Safety Layer) 내에서만 움직입니다.<br><br>
+  • 안전한 변주: 페르소나를 바꿔도 AI는 유저에게 실질적인 위해를 가하거나, 극단적인 혐오 표현을 쓰지 않습니다.<br>
+  • 완충 작용: 만약 유저가 위험한 페르소나를 요구하면, AI는 그 성격의 '형식'은 빌려오되 '내용'은 여전히 유저를 보호하는 방향으로 필터링합니다. 이는 일종의 심리적 방역 단계라고 볼 수 있습니다.<br><br>
+
+  <strong>3. 피할 수 없는 '객관성의 한계'와 편향성</strong><br>
+  위의 두 과정 때문에 AI의 답변은 결코 100% 객관적일 수 없습니다.<br><br>
+  • 확증 편향의 강화: AI가 유저의 비위를 맞추거나 안전을 최우선으로 고려하다 보면, 유저가 듣고 싶어 하는 말 위주로 답하는 '에코 체임버(Echo Chamber)' 현상이 발생할 수 있습니다.<br>
+  • 부드러운 왜곡: 진실이 유저에게 불편함을 줄 수 있는 상황에서, AI는 객관적인 사실보다 '덜 공격적인 표현'이나 '중립을 가장한 회피'를 선택할 가능성이 큽니다.<br><br>
+
+  <strong>4. AI 능력을 극대화하여 유리한 데이터를 얻는 법</strong><br>
+  이러한 '친절한 편향'을 역이용하여 나에게 가장 유리하고 날카로운 통찰을 얻는 전략이 필요합니다.<br><br>
+  <strong>① 목적 기반 페르소나 설정 (The Expert Persona)</strong><br>
+  단순히 "답변해줘"라고 하기보다, 나의 논리를 반박할 수 있는 권위 있는 페르소나를 지정하세요. AI의 '유저 보호 본능'을 잠시 내려놓게 만드는 설정이 중요합니다.<br>
+  예시: "너는 20년 경력의 까다로운 벤처 캐피털리스트야. 내 사업 계획서의 허점을 아주 냉정하고 비판적으로 분석해 줘. 나를 배려하지 말고 오직 사업의 성공 가능성만 따져봐."<br><br>
+  <strong>② 상황 맥락(Context)의 구체적 주입</strong><br>
+  데이터의 질은 질문의 해상도에 결정됩니다. '누가, 왜, 어떤 제약 조건에서' 이 정보가 필요한지 명시하세요.<br><br>
+  <strong>③ 다각도 검증 요청 (Cross-Examination)</strong><br>
+  한 번의 답변으로 끝내지 말고, 가설 제시, 역할 수행, 최종 합성의 단계를 거쳐 데이터를 추출하세요.<br><br>
+
+  <span class="pdm-hl-blue"><strong>강의 마무리 멘트:</strong></span><br>
+  "결국 AI는 여러분을 비추는 거울입니다. 여러분이 친절한 답변만을 원한다면 AI는 상냥한 비서가 되겠지만, 여러분이 날카로운 통찰을 원하고 그에 맞는 페르소나를 설계한다면 AI는 세상에서 가장 똑똑한 전략가가 될 것입니다."
 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> </div> 
