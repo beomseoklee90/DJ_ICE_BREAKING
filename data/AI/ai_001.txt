@@ -233,11 +233,13 @@ AI 1강
     <div class="pdm-formula-grid">
       <div class="pdm-formula-tag">[과제]</div>
       <div class="pdm-formula-plus">+</div>
-      <div class="pdm-formula-tag">[맥락]</div>
-      <div class="pdm-formula-plus">+</div>
       <div class="pdm-formula-tag">[전제]</div>
       <div class="pdm-formula-plus">+</div>
-      <div class="pdm-formula-tag">[원하는 방향]</div>
+      <div class="pdm-formula-tag">[맥락]</div>
+      <div class="pdm-formula-plus">+</div>
+      <div class="pdm-formula-tag">[나의 생각]</div>
+      <div class="pdm-formula-plus">+</div>
+            <div class="pdm-formula-tag">[검증받고 싶은 것]</div>
     </div>
   </div>
 
@@ -262,7 +264,7 @@ AI 1강
       
       <div class="pdm-response-section">
         <span class="pdm-label">인공지능의 출력 (AI Response)</span>
-        <div class="pdm-response-content">
+        
           <div class="pdm-response-content">
   인공지능(AI)의 <strong>페르소나(Persona)</strong>는 단순히 '말투'를 정하는 수준을 넘어, 사용자와의 상호작용 방식, 가치관, 전문성, 그리고 해결 방안의 도출 경로를 결정하는 심리적·전략적 설계도입니다.<br><br>
   강의에서 활용하실 수 있도록 페르소나의 정의부터 설계 요소, 그리고 이것이 비즈니스와 사용자 경험에 미치는 영향을 체계적으로 정리해 드립니다.<br><br>
@@ -320,7 +322,7 @@ AI 1강
         </div>
       </div>
     </div>
-  </div>
+  
 
   <div class="pdm-card">
       <div class="pdm-card-header good">
@@ -340,7 +342,7 @@ AI 1강
         
         <div class="pdm-response-section">
           <span class="pdm-label">인공지능의 출력 (맞춤형 실무 전략 도출)</span>
-          <div class="pdm-response-content">
+          
             <div class="pdm-response-content">
   안녕하세요! 인공지능 강의를 준비 중이시군요. 수강생분들에게 전문적이면서도 흥미롭게 전달하실 수 있도록, 요청하신 내용을 심리학적 관점과 기술적 통찰을 담아 정리해 보았습니다.<br>
   강의에서 바로 활용하실 수 있는 답변입니다.<br><br>
@@ -381,6 +383,6 @@ AI 1강
           </div>
         </div>
       </div>
-    </div>
+   
 
   </div> </div> 
