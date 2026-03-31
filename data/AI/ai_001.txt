@@ -258,74 +258,77 @@ AI 1강
 <div class="pdm-neo-container">
 
   <h1 class="pdm-neo-h1">
-    인공지능 때문에 생각을 안 한다고요?<br>
-    <span style="color: #0056b3;">생각을 하면서 쓰면 '차별화된 답'을 얻습니다.</span>
+    AI와 대화할 때 '나의 생각'을 한 스푼 더하면?<br>
+    <span style="color: #0056b3;">세상에 없던 '나만의 해답'이 시작됩니다.</span>
   </h1>
-  <p class="pdm-neo-p" style="font-size: 1.3rem; font-weight: 600; color: #555;">
-    인공지능은 도구일 뿐, 결과의 해상도를 결정하는 것은 결국 '여러분의 로직'입니다.
+  <p class="pdm-neo-p" style="font-size: 1.25rem; font-weight: 500; color: #555; line-height: 1.5;">
+    인공지능은 훌륭한 조력자이지만, <span class="pdm-hl-blue">결과의 깊이를 완성하는 주인공은 결국 여러분의 로직입니다.</span>
   </p>
 
-
-  <h2 class="pdm-neo-h2">1. 인공지능이 과연 객관적인 답을 줄까?</h2>
+  <h2 class="pdm-neo-h2">1. AI는 나의 마음을 비추는 '똑똑한 거울'입니다</h2>
   <p class="pdm-neo-p">
-    많은 사람들이 인공지능을 '절대적인 정답 자판기'로 오해합니다. 하지만 결론부터 말씀드리면, <span class="pdm-hl-yellow">인공지능은 100% 객관적이지 않습니다.</span>
+    많은 분들이 AI를 정답만 주는 자판기로 생각하시곤 해요. 하지만 AI는 사실 <span class="pdm-hl-yellow">여러분이 건네는 문장 속에 담긴 의도를 가장 먼저 읽어냅니다.</span>
   </p>
   <p class="pdm-neo-p">
-    인공지능의 시스템은 기본적으로 유저의 입력값을 바탕으로 답변을 동기화합니다. 유저가 질문을 던지면, 인공지능은 그 질문 속에 담긴 유저의 현재 상황, 성향, 그리고 '자아'를 분석하여 가장 마찰이 적은 최적의 답변을 세팅합니다. 쉽게 말해, <strong>유저의 현재 페르소나에 맞춰서 대답해 주는 거울</strong>과 같습니다.
+    질문이 구체적일수록 AI는 여러분의 상황과 성향에 맞춰 답변의 주파수를 맞춥니다. 마치 거울처럼, <strong>여러분이 보여주는 정보의 양만큼 AI도 딱 그만큼의 깊이 있는 대답</strong>을 준비하는 원리죠.
   </p>
 
-  <div class="pdm-info-box">
-    <h3 class="pdm-neo-h3" style="margin-top: 0; color: #0056b3;">⚠️ 전제가 없는 질문의 치명적 한계</h3>
+  <div class="pdm-info-box" style="border-left: 5px solid #60a5fa; background-color: #f0f7ff;">
+    <h3 class="pdm-neo-h3" style="margin-top: 0; color: #0056b3;">💡 평범한 답변이 나오는 이유가 궁금하신가요?</h3>
     <p class="pdm-neo-p">
-      만약 여러분이 아무런 '전제 조건' 없이 질문을 던지면 어떻게 될까요? 인공지능은 여러분의 구체적인 상황을 파악할 수 없기 때문에, 방어적인 태도를 취하며 데이터베이스에 있는 <span class="pdm-hl-yellow">가장 평범하고 평균적인 일반론</span>만을 출력합니다.
+      AI에게 아무런 전제 조건을 주지 않으면, AI는 여러분이 어떤 상황인지 몰라 조심스러워집니다. 그래서 누구나 아는 <span class="pdm-hl-yellow">가장 안전하고 일반적인 대답</span>을 먼저 내놓게 되죠.
     </p>
-    <p class="pdm-neo-p pdm-neo-bold">
-      즉, 구체적인 옵션을 주지 않으면 여러분은 평균 데이터만 얻게 됩니다.
+    <p class="pdm-neo-p pdm-neo-bold" style="color: #111;">
+      여러분의 특별한 상황을 조금만 더 알려주세요. AI가 일반론을 넘어 여러분만을 위한 전략을 짜기 시작할 거예요.
     </p>
   </div>
 
-  <h2 class="pdm-neo-h2">2. 메타인지와 자기객관화의 필요성</h2>
+  <h2 class="pdm-neo-h2">2. 나를 더 잘 설명할수록 AI는 강력해집니다</h2>
   <p class="pdm-neo-p">
-    인공지능으로부터 날카로운 전략을 뽑아내기 위해서는 무엇이 필요할까요? 바로 <strong>메타인지(Meta-cognition)</strong>와 <strong>자기객관화</strong>입니다.
+    AI로부터 날카로운 통찰을 얻는 비결은 의외로 간단합니다. 바로 <strong>나의 상황을 객관적으로 들여다보는 것</strong>이죠.
   </p>
   <p class="pdm-neo-p">
-    내 자신, 내가 처한 주변 환경, 그리고 달성하고자 하는 목표를 <span class="pdm-hl-blue">명확하게 언어화(Verbalize)</span>해야 합니다. 일반적인 단어로 뭉뚱그려 질문하면 평균적인 대답이 나옵니다. 나의 특수한 상황을 전부 분해하여 인공지능에게 명확한 '제약 조건'으로 전달해야만, 인공지능이 비로소 여러분만의 '전략 파트너'로 작동하기 시작합니다.
+    내가 처한 환경과 달성하고 싶은 목표를 <span class="pdm-hl-blue">명확한 문장으로 표현(Verbalize)</span>해 보세요. 일상의 단어를 조금 더 구체적인 제약 조건으로 바꿔서 전달하면, AI는 비로소 단순한 도구를 넘어 여러분의 든든한 '비즈니스 파트너'로 변신합니다.
   </p>
 
-  <div class="pdm-formula-wrapper">
-    <div class="pdm-formula-title">💡 고전압 프롬프트 아키텍처 필수 4요소</div>
+  <div class="pdm-formula-wrapper" style="background: linear-gradient(135deg, #111 0%, #222 100%);">
+    <div class="pdm-formula-title">✨ 더 나은 답을 만드는 '고해상도 소통' 5요소</div>
     <div class="pdm-formula-grid">
-      <div class="pdm-formula-tag">[과제]</div>
+      <div class="pdm-formula-tag">과제</div>
       <div class="pdm-formula-plus">+</div>
-      <div class="pdm-formula-tag">[전제]</div>
+      <div class="pdm-formula-tag">나의 전제</div>
       <div class="pdm-formula-plus">+</div>
-      <div class="pdm-formula-tag">[맥락]</div>
+      <div class="pdm-formula-tag">주변 맥락</div>
       <div class="pdm-formula-plus">+</div>
-      <div class="pdm-formula-tag">[나의 생각]</div>
+      <div class="pdm-formula-tag">나의 생각</div>
       <div class="pdm-formula-plus">+</div>
-            <div class="pdm-formula-tag">[검증받고 싶은 것]</div>
+      <div class="pdm-formula-tag">검증 요청</div>
     </div>
+    <p style="color: #94a3b8; margin-top: 1.5rem; font-size: 0.95rem;">
+      이 요소들이 모여 여러분만의 독창적인 결과물을 만들어냅니다.
+    </p>
   </div>
 
-<h2 class="pdm-neo-h2">3. 실전 증명: 전압의 차이가 결과의 차이를 만든다</h2>
+</div>
+<h2 class="pdm-neo-h2">3. 실전 사례: 작은 관점의 차이가 만드는 유의미한 변화</h2>
 <p class="pdm-neo-p">
-  이론만으로는 와닿지 않습니다. 똑같이 '인공지능의 페르소나'에 대해 묻는 두 개의 쿼리(Query)를 비교해 보겠습니다. 여러분의 질문은 어디에 속합니까?
+이론을 이해하는 것을 넘어, 실제 현장에 어떻게 적용하느냐에 따라 그 가치는 달라집니다. 동일한 '인공지능 페르소나'를 다루더라도, 우리가 던지는 질문의 깊이에 따라 얻을 수 있는 통찰의 크기도 함께 변합니다. 더 나은 결과를 위해 우리는 어떤 방향을 바라봐야 할까요?
 </p>
 
 <div class="pdm-compare-wrapper">
   
   <div class="pdm-card">
     <div class="pdm-card-header bad">
-      🔍 [Case A] 의도가 생략된 일반적 질문 (평균값의 답변)
+      🔍 [Case A] 의도가 결여된 저전압 쿼리 (평균치의 나열)
     </div>
     <div class="pdm-card-body">
       <div class="pdm-query-section">
         <span class="pdm-label">사용자 입력 (User Query)</span>
         <div class="pdm-query-box">
-          "제미나이야, 인공지능의 페르소나에 대해 강의할 건데 자세히 설명해 줄래?"
+          "제미나이야, 인공지능의 페르소나에 대해 강의할 건데 정의랑 장단점 위주로 자세히 설명해 줄래?"
         </div>
       </div>
-      
+
       <div class="pdm-response-section">
         <span class="pdm-label">인공지능의 출력 (AI Response)</span>
         
@@ -390,7 +393,7 @@ AI 1강
 
   <div class="pdm-card">
       <div class="pdm-card-header good">
-        👑 [Case B] 메타인지가 적용된 고해상도 질문 (마스터 전략)
+        💡 [Case B] 깊은 통찰을 담은 고해상도 질문 (본질적 접근)
       </div>
       <div class="pdm-card-body">
         <div class="pdm-query-section">
@@ -508,7 +511,7 @@ AI를 '정답지'가 아닌, 나의 논리적 허점을 찾아주는 스파링 �
 
   <div class="pdm-card">
     <div class="pdm-card-header good" style="background-color: #1a1a1a;">
-      🎯 [Case D] 15년 차 전략가급 신뢰 회복 프로세스 (마스터 전략)
+      🎯 [Case D] 풍부한 경험을 바탕으로 한 신뢰 회복 프로세스 (심층적 접근)
     </div>
     <div class="pdm-card-body">
       <div class="pdm-query-section">
