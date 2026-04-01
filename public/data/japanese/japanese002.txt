@@ -1,4 +1,4 @@
-1회차
+중급 회화
 <style>
 /* 레벨 배지 스타일 */
   .level-badge-group { display: flex; gap: 4px; margin-bottom: 8px; flex-wrap: wrap; }
@@ -2595,6 +2595,9 @@
     </div>
   </div>
 </div>
+
+
+<!--
   <br>
 
   <h2 style="margin-top:50px;">드릴 3. 프리토킹: 무한 핑퐁 스파링</h2>
@@ -2921,5 +2924,5 @@
       <div class="word-item">お金 (money)<span>おかね / 오카네</span></div>
     </div>
   </div>
-
+-->
 </div>

@@ -9,36 +9,43 @@ const categoryConfig = {
   //   path: "english",
   //   label: "ENGLISH MEETING",
   //   mobileLabel: "ENG", // 모바일용 짧은 이름
-  //   files: ["meetup_001.txt"],
+  // files: ["meetup_002.txt"],
   // },
+  ai: {
+    path: "AI",
+    label: "AI",
+    mobileLabel: "AI",
+    files: ["ai_001.txt", "ai_002.txt"],
+  },
   japanese: {
     path: "japanese",
-    label: "일본어",
+    label: "일본어 회화",
     mobileLabel: "japanese",
     files: [
       //"japanese001.txt",
+      "intro.txt",
+      "basic.txt",
+      "basic2.txt",
+      "basic3.txt",
+      "intermediate2.txt",
       "japanese002.txt",
+      "tango.txt",
+      "intermediate.txt",
     ],
   },
-  // programming: {
-  //   path: "AI",
-  //   label: "AI",
-  //   mobileLabel: "AI",
-  //   files: [],
-  // },
 };
 
 /* 🎵 설정 2: 배경음악 및 유튜브 홍보 
   - playlist: public/data/songs/ 폴더 안에 있는 mp3 파일명
 */
 const musicConfig = {
-  playlist: ["song1.mp3", "song2.mp3"],
+  playlist: ["track2.mp3", "track1.mp3", "track3.mp3", "track4.mp3"],
   youtubeLink: "https://www.youtube.com/@DJ_ICE_BREAKING",
 };
 
 function App() {
   // 상태 관리
-  const [currentCategory, setCurrentCategory] = useState("japanese");
+  const [currentCategory, setCurrentCategory] = useState("ai");
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
 
