@@ -1,4 +1,4 @@
-1회차
+2회차
 <style>
 /* 영어 레벨 배지 배경색 */
   .l-beginner { background: #10b981; } /* 에메랄드 그린 */
