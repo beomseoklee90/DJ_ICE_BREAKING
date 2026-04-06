@@ -15,12 +15,12 @@ const categoryConfig = {
     path: "AI",
     label: "AI",
     mobileLabel: "AI",
-    files: ["ai_001.txt", "ai_002.txt"],
+    files: ["ai_003.txt", "ai_001.txt", "ai_002.txt"],
   },
-  japanese: {
-    path: "japanese",
+  Japanese: {
+    path: "Japanese",
     label: "일본어 회화",
-    mobileLabel: "japanese",
+    mobileLabel: "Japanese",
     files: [
       //"japanese001.txt",
       "intro.txt",
