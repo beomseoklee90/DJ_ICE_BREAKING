@@ -1,0 +1,352 @@
+AI 1강 요약
+<style>
+  /* Base Reset & Typography */
+  .pdm-neo-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    line-height: 1.65;
+    word-break: keep-all;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Headings */
+  .pdm-neo-h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #111;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #0056b3;
+    padding-left: 14px;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Highlights & Text Elements */
+  .pdm-hl-blue {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #cce5ff 60%);
+    font-weight: 700;
+  }
+  .pdm-hl-yellow {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff3cd 60%);
+    font-weight: 700;
+  }
+  .pdm-neo-p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  .pdm-neo-bold {
+    font-weight: 700;
+    color: #111;
+  }
+
+  /* Content Boxes */
+  .pdm-info-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #eaeaea;
+  }
+  .pdm-info-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Framework Formula */
+  .pdm-formula-wrapper {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .pdm-formula-title {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pdm-formula-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .pdm-formula-tag {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .pdm-formula-plus {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  /* Comparison Section */
+  .pdm-compare-wrapper {
+    margin-top: 3rem;
+  }
+  .pdm-card {
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  }
+  .pdm-card-header {
+    padding: 1.2rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pdm-card-header.bad { background-color: #f1f3f5; color: #495057; }
+  .pdm-card-header.good { background-color: #0056b3; color: #ffffff; }
+
+  .pdm-card-body {
+    padding: 2.5rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .pdm-query-section, .pdm-response-section {
+    margin-bottom: 2rem;
+  }
+  .pdm-response-section { margin-bottom: 0; }
+
+  .pdm-label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #868e96;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  
+  .pdm-query-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #ced4da;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    border-radius: 0 8px 8px 0;
+  }
+  .pdm-query-box.master {
+    background-color: #f0f7ff;
+    border-left: 4px solid #0056b3;
+    color: #004085;
+  }
+
+  .pdm-response-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #495057;
+    padding: 1.5rem;
+    border: 1px dashed #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .pdm-commentary {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff5f5;
+    border-radius: 8px;
+    color: #c53030;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .pdm-commentary.master {
+    background-color: #f0fdf4;
+    color: #15803d;
+  }
+  /* Mobile Responsive Strategy */
+@media screen and (max-width: 768px) {
+  .pdm-neo-container {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Typography Scale Down */
+  .pdm-neo-h1 {
+    font-size: 1.8rem; /* 2.5rem -> 1.8rem */
+    margin-bottom: 1.2rem;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.4rem; /* 1.8rem -> 1.4rem */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.2rem; /* 1.4rem -> 1.2rem */
+  }
+  .pdm-neo-p {
+    font-size: 1.05rem; /* 1.15rem -> 1.05rem */
+    line-height: 1.6;
+  }
+
+  /* Padding & Margin Adjustments */
+  .pdm-info-box, 
+  .pdm-card-body,
+  .pdm-formula-wrapper {
+    padding: 1.5rem 1.2rem;
+  }
+
+  /* Formula Grid Wrap */
+  .pdm-formula-grid {
+    gap: 8px;
+  }
+  .pdm-formula-tag {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  .pdm-formula-plus {
+    font-size: 1.2rem;
+  }
+
+  /* Comparison Section Layout */
+  .pdm-card-header {
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  .pdm-query-box {
+    font-size: 1.05rem;
+    padding: 1.2rem;
+  }
+  .pdm-response-content {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+  
+  /* Table (Case A에 포함된 표 대응) */
+  table {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+
+<div class="pdm-neo-container">
+<div style="text-align: center; margin-bottom: 5rem;">
+<p style="letter-spacing: 0.3em; color: #8e1a1a; font-weight: 800; font-size: 0.9rem; margin-bottom: 1rem;">STEP 01. THE MIRRORING</p>
+<h1 class="pdm-neo-h1">AI 제1강: 인공지능의 주인을 결정하는 '맥락의 전압'</h1>
+<div style="width: 60px; height: 3px; background-color: #111; margin: 2rem auto;"></div>
+<p class="pdm-neo-p" style="font-size: 1.3rem; color: #111; font-weight: 500;">
+"인공지능은 훌륭한 조력자이지만,
+
+
+결과의 깊이를 완성하는 주인공은 결국 <span style="border-bottom: 2px solid #111;">여러분의 로직</span>입니다."
+</p>
+</div>
+
+<div style="display: flex; gap: 40px; margin-bottom: 5rem; align-items: flex-start; flex-wrap: wrap;">
+<div style="flex: 1; min-width: 300px;">
+<h2 class="pdm-neo-h2" style="margin-top: 0;">AI는 나의 마음을 비추는 '똑똑한 거울'입니다</h2>
+<p class="pdm-neo-p">질문이 구체적일수록 AI는 여러분의 상황과 성향에 맞춰 답변의 주파수를 맞춥니다. 거울처럼, 여러분이 보여주는 <b>정보의 양만큼</b> AI도 딱 그만큼의 깊이 있는 대답을 준비합니다.</p>
+</div>
+<div style="flex: 1; min-width: 300px; background-color: #f8f9fa; padding: 2.5rem; border-radius: 4px; border-top: 4px solid #111;">
+<p style="font-size: 0.85rem; font-weight: 800; color: #8e1a1a; margin-bottom: 1rem; letter-spacing: 0.1em;">INSIGHT</p>
+<p class="pdm-neo-p" style="margin-bottom: 0;">AI에게 전제 조건을 주지 않으면 모델은 조심스러워집니다. 결국 누구나 아는 <span class="pdm-hl-yellow">가장 안전하고 일반적인 대답</span>을 내놓으며, 이것이 전략의 '저전압 상태'를 만듭니다.</p>
+</div>
+</div>
+
+<div style="text-align: center; margin-bottom: 6rem;">
+<p style="letter-spacing: 0.3em; color: #8e1a1a; font-weight: 800; font-size: 0.9rem; margin-bottom: 2rem;">STEP 02. THE FORMULA</p>
+<div style="font-size: 8rem; font-weight: 900; line-height: 1; color: #111; margin-bottom: 1rem;">5<span style="font-size: 3rem; color: #8e1a1a;">P</span></div>
+<p class="pdm-neo-bold" style="font-size: 1.5rem; margin-bottom: 4rem;">전략적 공진을 위한 5대 프롬프트 파라미터</p>
+
+<div class="pdm-formula-wrapper" style="background-color: transparent; box-shadow: none; border: 1px solid #e2e8f0; border-radius: 0;">
+  <div class="pdm-formula-grid" style="gap: 15px;">
+    <div style="padding: 15px 25px; border: 1px solid #111; font-weight: 800;">과제</div>
+    <div style="font-size: 1.5rem; font-weight: 300;">+</div>
+    <div style="padding: 15px 25px; border: 1px solid #111; font-weight: 800;">전제</div>
+    <div style="font-size: 1.5rem; font-weight: 300;">+</div>
+    <div style="padding: 15px 25px; border: 1px solid #111; font-weight: 800;">맥락</div>
+    <div style="font-size: 1.5rem; font-weight: 300;">+</div>
+    <div style="padding: 15px 25px; border: 1px solid #111; font-weight: 800;">내 생각</div>
+    <div style="font-size: 1.5rem; font-weight: 300;">+</div>
+    <div style="padding: 15px 25px; border: 1px solid #111; font-weight: 800;">검증 사항</div>
+  </div>
+</div>
+</div>
+
+<p style="text-align: center; letter-spacing: 0.3em; color: #8e1a1a; font-weight: 800; font-size: 0.9rem; margin-bottom: 3rem;">STEP 03. LOGIC GAP</p>
+<div class="pdm-compare-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+<div class="pdm-card" style="border-radius: 0;">
+<div class="pdm-card-header bad" style="background-color: #f1f3f5; border-bottom: 1px solid #e2e8f0;">[Case A] 저전압 쿼리</div>
+<div class="pdm-card-body">
+<span class="pdm-label">User Query</span>
+<div class="pdm-query-box" style="font-size: 1rem; border-left-color: #adb5bd;">"AI 페르소나의 정의와 장단점을 설명해 줘."</div>
+<div style="margin-top: 1.5rem;">
+<span class="pdm-label">Result</span>
+<p style="font-size: 0.95rem; color: #666;">교과서적인 나열. 누구나 검색으로 알 수 있는 '범용적 지식'에 그침. 전략적 가치 희박.</p>
+</div>
+</div>
+</div>
+<div class="pdm-card" style="border-radius: 0; border: 1px solid #111;">
+<div class="pdm-card-header good" style="background-color: #111; color: #fff;">[Case B] 고해상도 쿼리</div>
+<div class="pdm-card-body">
+<span class="pdm-label">User Query (5P 적용)</span>
+<div class="pdm-query-box master" style="font-size: 1rem; background-color: #fff; border-left-color: #8e1a1a;">"페르소나 설정 시 유저의 자아 보호 관점과 편향 역공학 전략을 도출해."</div>
+<div style="margin-top: 1.5rem;">
+<span class="pdm-label" style="color: #8e1a1a;">Impact</span>
+<p style="font-size: 0.95rem; color: #111; font-weight: 600;">AI를 사고의 스파링 파트너로 활용. 리더의 가설을 검증하고 '실행 가능한 해자'를 구축함.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 6rem;">
+<p style="text-align: center; letter-spacing: 0.3em; color: #8e1a1a; font-weight: 800; font-size: 0.9rem; margin-bottom: 3rem;">STEP 04. BUSINESS IMPACT</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+<div style="padding: 2.5rem; border: 1px solid #e2e8f0; background: #fff;">
+<h3 class="pdm-neo-h3" style="margin-top: 0;">Top-Down 전략 자동화</h3>
+<p style="font-size: 0.95rem; color: #666;">리더의 직관과 가설을 AI가 즉시 전략 구조로 변환합니다. 데이터가 전략을 뒤따르는 고해상도 업무 체계를 구축합니다.</p>
+</div>
+<div style="padding: 2.5rem; border: 1px solid #e2e8f0; background: #fff;">
+<h3 class="pdm-neo-h3" style="margin-top: 0;">의사결정 품질의 향상</h3>
+<p style="font-size: 0.95rem; color: #666;">인간이 놓치기 쉬운 변수를 AI의 다중 페르소나로 검증하여, 조직 전체의 판단력을 상향 평준화합니다.</p>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 6rem; padding: 4rem 2rem; background-color: #111; color: #fff; text-align: center;">
+<p style="letter-spacing: 0.2em; color: #8e1a1a; font-weight: 800; font-size: 0.8rem; margin-bottom: 1rem;">ASSIGNMENT</p>
+<h2 style="color: #fff; border: none; padding: 0; font-size: 2rem; margin-bottom: 2rem;">실습 과제: 비즈니스 아키텍처 분석</h2>
+<p style="color: #aaa; margin-bottom: 3rem;">무인 스터디카페 데이터를 기반으로 <b>[냉철한 시장 분석가]</b> 페르소나를 설정하여
+
+
+경쟁 우위 방어 전략을 도출하십시오. (다음 차시 제출)</p>
+<div style="font-size: 0.8rem; color: #444;">© 2026 YOU DIARY | LEGAL-ARCH SYSTEM V1.0</div>
+</div>
+</div>
