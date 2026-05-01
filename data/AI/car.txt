@@ -1,0 +1,372 @@
+자동차 업계 시사점
+<style>
+  /* Base Reset & Typography */
+  .pdm-neo-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    line-height: 1.65;
+    word-break: keep-all;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Headings */
+  .pdm-neo-h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #111;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #0056b3;
+    padding-left: 14px;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Highlights & Text Elements */
+  .pdm-hl-blue {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #cce5ff 60%);
+    font-weight: 700;
+  }
+  .pdm-hl-yellow {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff3cd 60%);
+    font-weight: 700;
+  }
+  .pdm-neo-p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  .pdm-neo-bold {
+    font-weight: 700;
+    color: #111;
+  }
+
+  /* Content Boxes */
+  .pdm-info-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #eaeaea;
+  }
+  .pdm-info-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Framework Formula */
+  .pdm-formula-wrapper {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .pdm-formula-title {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pdm-formula-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .pdm-formula-tag {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .pdm-formula-plus {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  /* Comparison Section */
+  .pdm-compare-wrapper {
+    margin-top: 3rem;
+  }
+  .pdm-card {
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  }
+  .pdm-card-header {
+    padding: 1.2rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pdm-card-header.bad { background-color: #f1f3f5; color: #495057; }
+  .pdm-card-header.good { background-color: #0056b3; color: #ffffff; }
+
+  .pdm-card-body {
+    padding: 2.5rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .pdm-query-section, .pdm-response-section {
+    margin-bottom: 2rem;
+  }
+  .pdm-response-section { margin-bottom: 0; }
+
+  .pdm-label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #868e96;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  
+  .pdm-query-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #ced4da;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    border-radius: 0 8px 8px 0;
+  }
+  .pdm-query-box.master {
+    background-color: #f0f7ff;
+    border-left: 4px solid #0056b3;
+    color: #004085;
+  }
+
+  .pdm-response-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #495057;
+    padding: 1.5rem;
+    border: 1px dashed #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .pdm-commentary {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff5f5;
+    border-radius: 8px;
+    color: #c53030;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .pdm-commentary.master {
+    background-color: #f0fdf4;
+    color: #15803d;
+  }
+  /* Mobile Responsive Strategy */
+@media screen and (max-width: 768px) {
+  .pdm-neo-container {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Typography Scale Down */
+  .pdm-neo-h1 {
+    font-size: 1.8rem; /* 2.5rem -> 1.8rem */
+    margin-bottom: 1.2rem;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.4rem; /* 1.8rem -> 1.4rem */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.2rem; /* 1.4rem -> 1.2rem */
+  }
+  .pdm-neo-p {
+    font-size: 1.05rem; /* 1.15rem -> 1.05rem */
+    line-height: 1.6;
+  }
+
+  /* Padding & Margin Adjustments */
+  .pdm-info-box, 
+  .pdm-card-body,
+  .pdm-formula-wrapper {
+    padding: 1.5rem 1.2rem;
+  }
+
+  /* Formula Grid Wrap */
+  .pdm-formula-grid {
+    gap: 8px;
+  }
+  .pdm-formula-tag {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  .pdm-formula-plus {
+    font-size: 1.2rem;
+  }
+
+  /* Comparison Section Layout */
+  .pdm-card-header {
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  .pdm-query-box {
+    font-size: 1.05rem;
+    padding: 1.2rem;
+  }
+  .pdm-response-content {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+  
+  /* Table (Case A에 포함된 표 대응) */
+  table {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+
+<div class="pdm-neo-container">
+
+  <!-- Section 1: Intro (00s ~ 30s) -->
+  <section>
+    <h1 class="pdm-neo-h1">자동차 산업의 패러다임 임계점</h1>
+    <div class="pdm-info-box">
+      <p class="pdm-neo-p">
+        단순한 엔진의 교체를 넘어, 지금 자동차 업계는 <br>
+        <span class="pdm-hl-blue">산업의 근간이 재편되는</span> 결정적 순간을 지나고 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2: Current Strength (30s ~ 1m 00s) -->
+  <section>
+    <h2 class="pdm-neo-h2">1. 제조의 정점: 하드웨어 규격화</h2>
+    <p class="pdm-neo-p">글로벌 업계가 현재 가장 압도적으로 잘하는 것은 <span class="pdm-neo-bold">복잡한 기계 장치의 모듈화</span>입니다.</p>
+    
+    <div class="pdm-formula-wrapper">
+      <div class="pdm-formula-title">글로벌 표준 플랫폼의 구성</div>
+      <div class="pdm-formula-grid">
+        <div class="pdm-formula-tag">전용 아키텍처<br>(E-GMP 등)</div>
+        <div class="pdm-formula-plus">+</div>
+        <div class="pdm-formula-tag">공급망 최적화<br>(글로벌 소싱)</div>
+        <div class="pdm-formula-plus">+</div>
+        <div class="pdm-formula-tag">고도의 조립 기술<br>(품질 상향 평준화)</div>
+      </div>
+    </div>
+    
+    <div class="pdm-commentary master">
+      수만 개의 부품을 하나의 유닛으로 묶어 전 세계에 동시다발적으로 공급하는 <span class="pdm-neo-bold">제조 로직</span>은 이미 완성 단계입니다.
+    </div>
+  </section>
+
+  <!-- 시각 자료를 위한 이미지 컨테이너 (자동차 플랫폼 이미지 등) -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/car.png" alt="자동차 플랫폼 시각 자료" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+</div>
+
+
+<div class="pdm-neo-container">
+
+  <!-- Section 3: Hidden Strength (1m 00s ~ 2m 00s) -->
+  <section>
+    <h2 class="pdm-neo-h2">2. 숨겨진 저력: 초정밀 에너지 매니지먼트</h2>
+    <div class="pdm-card">
+      <div class="pdm-card-header good">보이지 않는 곳에서 완성된 기술</div>
+      <div class="pdm-card-body">
+        <div class="pdm-query-section">
+          <span class="pdm-label">핵심 역량</span>
+          <div class="pdm-query-box master">
+            "물리적 구동력을 <span class="pdm-hl-blue">1ms(밀리초) 단위</span>로 제어하여 에너지 손실을 극단적으로 줄이는 로직입니다."
+          </div>
+        </div>
+
+        <div class="pdm-response-section">
+          <span class="pdm-label">전략적 시사점</span>
+          <div class="pdm-response-content">
+            내연기관과 모터를 유기적으로 조율하는 <span class="pdm-neo-bold">하이브리드 로직</span>과 <br>
+            회생 제동 시스템은 이미 인간의 감각을 넘어선 <span class="pdm-hl-yellow">'엣지 컴퓨팅'</span>의 영역에 도달해 있습니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 시작 (에너지 흐름 및 제어 로직 이미지 등) -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/energy.png" alt="에너지 제어 로직 시각 자료" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Section 4: The Core Challenge (2m 00s ~ 2m 45s) -->
+  <section>
+    <h2 class="pdm-neo-h2">3. 냉혹한 과제: 분산에서 통합으로</h2>
+    <div class="pdm-info-box">
+      <h3 class="pdm-neo-h3" style="margin-top: 0;">SDV(소프트웨어 중심 자동차)로의 강제 이주</h3>
+      <p class="pdm-neo-p">수백 개의 파편화된 두뇌를 <span class="pdm-neo-bold">하나의 중앙 컴퓨터</span>로 통합해야 합니다.</p>
+      <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; color: #444;">
+        <li>• <span class="pdm-hl-blue">파편화된 ECU</span>: 브레이크, 창문, 엔진이 각자 따로 노는 구조</li>
+        <li>• <span class="pdm-neo-bold">중앙 집중형 통합</span>: 모든 기능을 하나의 아키텍처로 제어하는 난제</li>
+        <li>• <span class="pdm-hl-yellow">코드의 충돌</span>: 수천만 줄의 소프트웨어를 무결점으로 통합하는 역량</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 시작 (중앙 집중형 아키텍처 비교 도표 등) -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/integrated.png" alt="아키텍처 전환 시각 자료" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Section 5: Closing (2m 45s ~ 3m 00s) -->
+  <section>
+    <h2 class="pdm-neo-h2">임계점: 조립의 시대에서 통합의 시대로</h2>
+    <div class="pdm-card">
+      <div class="pdm-card-body" style="background-color: #fcfcfc;">
+        <p class="pdm-neo-p" style="font-size: 1.3rem; text-align: center; margin-bottom: 2rem;">
+          <span class="pdm-neo-bold">"기계를 만드는 근육과 소프트웨어를 짜는 근육은 다릅니다"</span>
+        </p>
+        <div class="pdm-commentary master" style="text-align: center;">
+          이 거대한 통합의 과제를 해결하는 곳이 다음 산업의 주도권을 쥐게 될 것입니다.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
