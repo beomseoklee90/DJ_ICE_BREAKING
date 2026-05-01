@@ -298,21 +298,35 @@
 </div>
 <!-- 이미지 컨테이너 끝 -->
   <!-- Section 3: The Shift (50s ~ 85s) -->
-  <section>
-    <h2 class="pdm-neo-h2">빅테크의 전략 변화: 두뇌의 독립</h2>
-    <div class="pdm-card">
-      <div class="pdm-card-header good">최근 글로벌 시장의 흐름</div>
-      <div class="pdm-card-body">
-        <div class="pdm-query-section">
-          <span class="pdm-label">빅테크의 움직임</span>
-          <div class="pdm-query-box">"자체 서비스 최적화를 위해 머리(컨트롤러)는 우리가 직접 설계하겠다."</div>
-        </div>
-        <div class="pdm-commentary">
-          <span class="pdm-neo-bold">결과:</span> 완제품이 아닌 <span class="pdm-hl-yellow">메모리 소자(NAND)</span>만을 요구하기 시작
+  <!-- Section 3: 영역의 재편 (50s ~ 115s) -->
+<section>
+  <h2 class="pdm-neo-h2">2. 부가가치의 이동: 솔루션에서 소자로</h2>
+  <div class="pdm-card">
+    <div class="pdm-card-header good">진행 중인 산업 구조의 변화</div>
+    <div class="pdm-card-body">
+      <!-- 팩트 기반 현상 -->
+      <div class="pdm-query-section">
+        <span class="pdm-label">현재의 흐름</span>
+        <div class="pdm-query-box master">
+          "빅테크가 스토리지 최적화를 위해 <span class="pdm-hl-blue">자체 컨트롤러와 펌웨어 역량</span>을 강화하고 있습니다."
         </div>
       </div>
+
+      <!-- 사용자님의 핵심 통찰 -->
+      <div class="pdm-response-section">
+        <span class="pdm-label">전략적 시사점</span>
+        <div class="pdm-response-content">
+          과거 한국 기업이 <span class="pdm-neo-bold">컨트롤러부터 SW까지 통제하던 완제품 주도권</span>이,<br>
+          이제는 빅테크가 정의한 규격에 맞추는 <span class="pdm-hl-yellow">'메모리 제조'</span> 중심으로 영역이 좁혀지고 있습니다.
+        </div>
+      </div>
+
+      <div class="pdm-commentary master">
+        이는 기술력이 부족해서가 아니라, 시장의 <span class="pdm-neo-bold">'설계 언어(인터페이스)'</span> 주도권이 사용자(빅테크)에게 넘어가고 있기 때문입니다.
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 <!-- 이미지 컨테이너 시작 -->
@@ -353,7 +367,7 @@
     <div class="pdm-card">
       <div class="pdm-card-body" style="background-color: #fcfcfc;">
         <p class="pdm-neo-p" style="font-size: 1.3rem; text-align: center; margin-bottom: 2rem;">
-          <span class="pdm-neo-bold">"메모리 그 이상의 무엇을 보여줄 것인가"</span>
+          <span class="pdm-neo-bold">"메모리 그 이상을 앞으로도 유지할 수 있을 것인가"</span>
         </p>
         <div class="pdm-commentary master" style="text-align: center;">
           산업의 뿌리가 흐르는 방향을 지켜보는 혜안이 필요한 시점입니다.
