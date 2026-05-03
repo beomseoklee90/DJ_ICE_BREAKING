@@ -266,7 +266,7 @@
         하지만 비메모리는 칩이 조금 커지더라도 <span class="pdm-neo-bold">혁신적인 알고리즘</span>만 있다면 충분히 승산이 있는 전장입니다.
       </p>
       <p class="pdm-neo-p">
-        제조 노하우가 부족해도 <span class="pdm-hl-yellow">설계의 지능</span>만으로 구글과 아마존을 사로잡을 수 있는 시대, 판도를 뒤집을 기회는 바로 여기에 있습니다.
+        이제는 <span class="pdm-hl-yellow">설계의 지능</span>만으로 구글과 아마존을 사로잡을 수 있는 시대, 판도를 뒤집을 기회는 바로 여기에 있습니다.
       </p>
     </div>
   </section>
