@@ -1,0 +1,346 @@
+비메모리 반도체, 빅테크 공략법
+<style>
+  /* Base Reset & Typography */
+  .pdm-neo-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    line-height: 1.65;
+    word-break: keep-all;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Headings */
+  .pdm-neo-h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #111;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #0056b3;
+    padding-left: 14px;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Highlights & Text Elements */
+  .pdm-hl-blue {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #cce5ff 60%);
+    font-weight: 700;
+  }
+  .pdm-hl-yellow {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff3cd 60%);
+    font-weight: 700;
+  }
+  .pdm-neo-p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  .pdm-neo-bold {
+    font-weight: 700;
+    color: #111;
+  }
+
+  /* Content Boxes */
+  .pdm-info-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #eaeaea;
+  }
+  .pdm-info-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Framework Formula */
+  .pdm-formula-wrapper {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .pdm-formula-title {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pdm-formula-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .pdm-formula-tag {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .pdm-formula-plus {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  /* Comparison Section */
+  .pdm-compare-wrapper {
+    margin-top: 3rem;
+  }
+  .pdm-card {
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  }
+  .pdm-card-header {
+    padding: 1.2rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pdm-card-header.bad { background-color: #f1f3f5; color: #495057; }
+  .pdm-card-header.good { background-color: #0056b3; color: #ffffff; }
+
+  .pdm-card-body {
+    padding: 2.5rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .pdm-query-section, .pdm-response-section {
+    margin-bottom: 2rem;
+  }
+  .pdm-response-section { margin-bottom: 0; }
+
+  .pdm-label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #868e96;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  
+  .pdm-query-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #ced4da;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    border-radius: 0 8px 8px 0;
+  }
+  .pdm-query-box.master {
+    background-color: #f0f7ff;
+    border-left: 4px solid #0056b3;
+    color: #004085;
+  }
+
+  .pdm-response-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #495057;
+    padding: 1.5rem;
+    border: 1px dashed #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .pdm-commentary {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff5f5;
+    border-radius: 8px;
+    color: #c53030;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .pdm-commentary.master {
+    background-color: #f0fdf4;
+    color: #15803d;
+  }
+  /* Mobile Responsive Strategy */
+@media screen and (max-width: 768px) {
+  .pdm-neo-container {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Typography Scale Down */
+  .pdm-neo-h1 {
+    font-size: 1.8rem; /* 2.5rem -> 1.8rem */
+    margin-bottom: 1.2rem;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.4rem; /* 1.8rem -> 1.4rem */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.2rem; /* 1.4rem -> 1.2rem */
+  }
+  .pdm-neo-p {
+    font-size: 1.05rem; /* 1.15rem -> 1.05rem */
+    line-height: 1.6;
+  }
+
+  /* Padding & Margin Adjustments */
+  .pdm-info-box, 
+  .pdm-card-body,
+  .pdm-formula-wrapper {
+    padding: 1.5rem 1.2rem;
+  }
+
+  /* Formula Grid Wrap */
+  .pdm-formula-grid {
+    gap: 8px;
+  }
+  .pdm-formula-tag {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  .pdm-formula-plus {
+    font-size: 1.2rem;
+  }
+
+  /* Comparison Section Layout */
+  .pdm-card-header {
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  .pdm-query-box {
+    font-size: 1.05rem;
+    padding: 1.2rem;
+  }
+  .pdm-response-content {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+  
+  /* Table (Case A에 포함된 표 대응) */
+  table {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+<div class="pdm-neo-container">
+
+  <!-- Section 1: AI 가속기의 심장 (00:00 ~ 01:00) -->
+  <section>
+    <h1 class="pdm-neo-h1">AI 가속기의 심장,<br>칩 속에 구현된 인공 신경망</h1>
+    <div class="pdm-info-box">
+      <p class="pdm-neo-p">
+        이제 칩은 단순히 데이터를 옮기지 않고 <span class="pdm-hl-blue">인간의 뇌처럼 직접 사고</span>합니다. <br>
+        수만 개의 데이터를 동시에 처리하는 <span class="pdm-neo-bold">병렬 처리 유닛(PE)</span>과 불필요한 연산을 제거하는 <span class="pdm-hl-yellow">희소성 제어 로직</span>이 AI의 응답 속도를 결정짓는 핵심입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 1: 뉴럴 네트워크와 병렬 연산 구조 -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/rnn_chip.png" alt="AI 가속기 내부의 신경망 구조" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Section 2: 공급망의 혁명 (01:00 ~ 02:10) -->
+  <section>
+    <h2 class="pdm-neo-h2">빅테크의 설계보다 강력한 '직판'의 힘</h2>
+    <p class="pdm-neo-p">설계도만 주고받는 긴 공급망보다 <span class="pdm-neo-bold">설계와 제조의 결합</span>이 더 빠르고 강력합니다.</p>
+    
+    <div class="pdm-formula-wrapper">
+      <div class="pdm-formula-title">커스텀 IDM 모델의 가격·성능 경쟁력</div>
+      <div class="pdm-formula-grid">
+        <div class="pdm-formula-tag">누적된 설계 노하우</div>
+        <div class="pdm-formula-plus">+</div>
+        <div class="pdm-formula-tag">하이엔드 공정 최적화</div>
+        <div class="pdm-formula-plus">→</div>
+        <div class="pdm-formula-tag">압도적 가격 및 성능</div>
+      </div>
+    </div>
+
+    <div class="pdm-card">
+      <div class="pdm-card-header good">공급망 프로세스 혁신</div>
+      <div class="pdm-card-body">
+        <div class="pdm-response-content">
+          물리적 배치의 한계를 가장 잘 아는 우리가 직접 커스텀 칩을 제작할 때, 칩 면적은 줄어들고 전력 효율은 극대화되어 <span class="pdm-neo-bold">빅테크의 자체 설계 칩보다 높은 경쟁력</span>을 갖게 됩니다.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 2: 최적화된 반도체 공급망과 직판 구조 -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/manufacter.png" alt="효율적인 커스텀 반도체 생산 프로세스" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Section 3: 고객사별 전략 (02:10 ~ 03:20) -->
+  <section>
+    <h2 class="pdm-neo-h2">시장을 장악할 뾰족한 알고리즘 제안</h2>
+    <div class="pdm-info-box">
+      <h3 class="pdm-neo-h3" style="margin-top: 0;">고객사의 비즈니스에 맞춘 타겟 로직</h3>
+      <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; color: #444;">
+        <li>• <span class="pdm-hl-blue">서버용(구글/NVIDIA):</span> 연산 병목을 제거하는 <span class="pdm-neo-bold">데이터 패브릭</span> 최적화 로직</li>
+        <li>• <span class="pdm-hl-blue">모빌리티(테슬라/현대차):</span> <span class="pdm-neo-bold">신뢰성 제어</span> 및 저지연 비전 로직</li>
+        <li>• <span class="pdm-hl-blue">온디바이스(애플/삼성):</span> 배터리 효율을 위한 <span class="pdm-neo-bold">초절전 동적 전압 관리(DVFS)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 3: 산업별 맞춤형 AI 반도체 밸류체인 -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/market_strategy.png" alt="분야별 커스텀 알고리즘 적용 사례" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Final Section: 결론 -->
+  <section>
+    <h2 class="pdm-neo-h2">핵심 알고리즘 파트너로서의 진격</h2>
+    <div class="pdm-card">
+      <div class="pdm-card-body" style="background-color: #fcfcfc;">
+        <p class="pdm-neo-p" style="font-size: 1.3rem; text-align: center; margin-bottom: 2rem;">
+          <span class="pdm-neo-bold">"우리가 칩에 박아 넣은 지능이<br>AI 생태계의 새로운 표준이 됩니다."</span>
+        </p>
+        <div class="pdm-commentary master" style="text-align: center;">
+          단순 제조사를 넘어 전략적 파트너로 거듭날 때,<br>한국 반도체의 진정한 기업 가치가 재평가될 것입니다.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
