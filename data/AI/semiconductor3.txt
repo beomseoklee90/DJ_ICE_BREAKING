@@ -1,0 +1,353 @@
+비메모리 반도체, 위기 극복법
+<style>
+  /* Base Reset & Typography */
+  .pdm-neo-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    line-height: 1.65;
+    word-break: keep-all;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Headings */
+  .pdm-neo-h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #111;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #0056b3;
+    padding-left: 14px;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Highlights & Text Elements */
+  .pdm-hl-blue {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #cce5ff 60%);
+    font-weight: 700;
+  }
+  .pdm-hl-yellow {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff3cd 60%);
+    font-weight: 700;
+  }
+  .pdm-neo-p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  .pdm-neo-bold {
+    font-weight: 700;
+    color: #111;
+  }
+
+  /* Content Boxes */
+  .pdm-info-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #eaeaea;
+  }
+  .pdm-info-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Framework Formula */
+  .pdm-formula-wrapper {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .pdm-formula-title {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pdm-formula-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .pdm-formula-tag {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .pdm-formula-plus {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  /* Comparison Section */
+  .pdm-compare-wrapper {
+    margin-top: 3rem;
+  }
+  .pdm-card {
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  }
+  .pdm-card-header {
+    padding: 1.2rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pdm-card-header.bad { background-color: #f1f3f5; color: #495057; }
+  .pdm-card-header.good { background-color: #0056b3; color: #ffffff; }
+
+  .pdm-card-body {
+    padding: 2.5rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .pdm-query-section, .pdm-response-section {
+    margin-bottom: 2rem;
+  }
+  .pdm-response-section { margin-bottom: 0; }
+
+  .pdm-label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #868e96;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  
+  .pdm-query-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #ced4da;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    border-radius: 0 8px 8px 0;
+  }
+  .pdm-query-box.master {
+    background-color: #f0f7ff;
+    border-left: 4px solid #0056b3;
+    color: #004085;
+  }
+
+  .pdm-response-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #495057;
+    padding: 1.5rem;
+    border: 1px dashed #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .pdm-commentary {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff5f5;
+    border-radius: 8px;
+    color: #c53030;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .pdm-commentary.master {
+    background-color: #f0fdf4;
+    color: #15803d;
+  }
+  /* Mobile Responsive Strategy */
+@media screen and (max-width: 768px) {
+  .pdm-neo-container {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Typography Scale Down */
+  .pdm-neo-h1 {
+    font-size: 1.8rem; /* 2.5rem -> 1.8rem */
+    margin-bottom: 1.2rem;
+  }
+  .pdm-neo-h2 {
+    font-size: 1.4rem; /* 1.8rem -> 1.4rem */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .pdm-neo-h3 {
+    font-size: 1.2rem; /* 1.4rem -> 1.2rem */
+  }
+  .pdm-neo-p {
+    font-size: 1.05rem; /* 1.15rem -> 1.05rem */
+    line-height: 1.6;
+  }
+
+  /* Padding & Margin Adjustments */
+  .pdm-info-box, 
+  .pdm-card-body,
+  .pdm-formula-wrapper {
+    padding: 1.5rem 1.2rem;
+  }
+
+  /* Formula Grid Wrap */
+  .pdm-formula-grid {
+    gap: 8px;
+  }
+  .pdm-formula-tag {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  .pdm-formula-plus {
+    font-size: 1.2rem;
+  }
+
+  /* Comparison Section Layout */
+  .pdm-card-header {
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  .pdm-query-box {
+    font-size: 1.05rem;
+    padding: 1.2rem;
+  }
+  .pdm-response-content {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+  
+  /* Table (Case A에 포함된 표 대응) */
+  table {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+<div class="pdm-neo-container">
+
+  <!-- Section 1: 위기를 기회로 (00:00 ~ 01:00) -->
+  <section>
+    <h1 class="pdm-neo-h1">비메모리 역전,<br>불가능이 아닌 이유</h1>
+    <div class="pdm-info-box">
+      <p class="pdm-neo-p">
+        메모리는 좁은 땅에 수십억 개의 방을 짓는 <span class="pdm-hl-blue">집적도의 한계</span>에 도전해야 합니다.<br>
+        하지만 비메모리는 칩이 조금 커지더라도 <span class="pdm-neo-bold">혁신적인 알고리즘</span>만 있다면 충분히 승산이 있는 전장입니다.
+      </p>
+      <p class="pdm-neo-p">
+        제조 노하우가 부족해도 <span class="pdm-hl-yellow">설계의 지능</span>만으로 구글과 아마존을 사로잡을 수 있는 시대, 판도를 뒤집을 기회는 바로 여기에 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 1: 제조 난이도 vs 설계 지능의 대비 -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/semiconductor.png" alt="메모리와 비메모리의 설계적 차이" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Section 2: 현상과 원인 (01:00 ~ 02:10) -->
+  <section>
+    <h2 class="pdm-neo-h2">생태계의 성벽: 왜 우리는 고전하는가?</h2>
+    <p class="pdm-neo-p">글로벌 기업들은 이미 <span class="pdm-neo-bold">하드웨어와 소프트웨어의 수직 계열화</span>를 마쳤습니다.</p>
+    
+    <div class="pdm-formula-wrapper">
+      <div class="pdm-formula-title">글로벌 반도체 Lock-in 전략</div>
+      <div class="pdm-formula-grid">
+        <div class="pdm-formula-tag">자체 소프트웨어<br>(OS/서비스)</div>
+        <div class="pdm-formula-plus">+</div>
+        <div class="pdm-formula-tag">전용 하드웨어<br>(커스텀 칩)</div>
+        <div class="pdm-formula-plus">→</div>
+        <div class="pdm-formula-tag">범용 반도체<br>(진입 불가)</div>
+      </div>
+    </div>
+
+    <div class="pdm-card">
+      <div class="pdm-card-header good">한국 반도체의 고립</div>
+      <div class="pdm-card-body">
+        <div class="pdm-response-content">
+          우리가 메모리에 집중하는 동안, 글로벌 기업들은 <span class="pdm-neo-bold">스마트폰 프로세서, 이미지 센서</span> 등 핵심 비메모리 영역에 자신들만의 성벽을 쌓아 올렸습니다.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 2: 글로벌 기업의 수직 계열화 및 성벽 -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/korea_semiconductor.png" alt="글로벌 반도체 생태계 고립 현황" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Section 3: 해결책과 통찰 (02:10 ~ 03:00) -->
+  <section>
+    <h2 class="pdm-neo-h2">반격의 카드: '온디맨드' 솔루션 서비스</h2>
+    <div class="pdm-info-box">
+      <h3 class="pdm-neo-h3" style="margin-top: 0;">니치 마켓과 커스텀 전략</h3>
+      <p class="pdm-neo-p">이제 반도체는 만들어놓고 파는 부품이 아닌, <span class="pdm-neo-bold">고객의 페인포인트를 해결하는 서비스</span>입니다.</p>
+      <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; color: #444;">
+        <li>• <span class="pdm-hl-blue">차량용 전력 반도체</span> 등 신뢰성 기반의 니치 마켓 공략</li>
+        <li>• 빅테크의 기획 단계부터 참여하는 <span class="pdm-neo-bold">커스텀 비메모리(ASIC)</span></li>
+        <li>• 고객의 소프트웨어 알고리즘을 하드웨어로 구현하는 <span class="pdm-neo-bold">인터페이스 장악</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 이미지 컨테이너 3: 니치 마켓 공략 및 고객 맞춤형 반도체 -->
+  <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
+    <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/semiconductor_future.png" alt="차세대 커스텀 반도체 비전" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- Final Section: 결론 -->
+  <section>
+    <h2 class="pdm-neo-h2">시대를 앞서가는 인터페이스 전략</h2>
+    <div class="pdm-card">
+      <div class="pdm-card-body" style="background-color: #fcfcfc;">
+        <p class="pdm-neo-p" style="font-size: 1.3rem; text-align: center; margin-bottom: 2rem;">
+          <span class="pdm-neo-bold">"우리는 단순 부품 공급자가 아닌,<br>시스템 설계의 파트너가 될 준비가 되었습니까?"</span>
+        </p>
+        <div class="pdm-commentary master" style="text-align: center;">
+          제조의 장벽보다 높은 것은 설계의 지능입니다.<br>고객 맞춤형 비메모리 구현이 한국 반도체의 진짜 미래가 될 것입니다.
+        </div>
+      </div>
+    </div>
+    <p class="pdm-neo-p" style="text-align: center; margin-top: 2rem; color: #888;">
+      시장의 흐름을 읽는 혜안으로, 주도권 탈환의 첫걸음을 떼어야 할 때입니다.
+    </p>
+  </section>
+
+</div>
