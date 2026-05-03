@@ -11,6 +11,7 @@ const categoryConfig = {
     mobileLabel: "AI",
     files: [
       //      "car.txt",
+      "semiconductor4.txt",
       "semiconductor3.txt",
       "semiconductor2.txt",
       "semiconductor.txt",

@@ -1,4 +1,4 @@
-비메모리 반도체, 위기 극복법
+비메모리 반도체, 빅테크 공략법
 <style>
   /* Base Reset & Typography */
   .pdm-neo-container {
@@ -257,97 +257,90 @@
 
 <div class="pdm-neo-container">
 
-  <!-- Section 1: 위기를 기회로 (00:00 ~ 01:00) -->
+  <!-- Section 1: AI 가속기의 심장 (00:00 ~ 01:00) -->
   <section>
-    <h1 class="pdm-neo-h1">비메모리 역전,<br>불가능이 아닌 이유</h1>
+    <h1 class="pdm-neo-h1">AI 가속기의 심장,<br>칩 속에 구현된 인공 신경망</h1>
     <div class="pdm-info-box">
       <p class="pdm-neo-p">
-        메모리는 좁은 땅에 수십억 개의 방을 짓는 <span class="pdm-hl-blue">집적도의 한계</span>에 도전해야 합니다.<br>
-        하지만 비메모리는 칩이 조금 커지더라도 <span class="pdm-neo-bold">혁신적인 알고리즘</span>만 있다면 충분히 승산이 있는 전장입니다.
-      </p>
-      <p class="pdm-neo-p">
-        이제는 <span class="pdm-hl-yellow">설계의 지능</span>만으로 구글과 아마존을 사로잡을 수 있는 시대, 판도를 뒤집을 기회는 바로 여기에 있습니다.
+        이제 칩은 단순히 데이터를 옮기지 않고 <span class="pdm-hl-blue">인간의 뇌처럼 직접 사고</span>합니다. <br>
+        수만 개의 데이터를 동시에 처리하는 <span class="pdm-neo-bold">병렬 처리 유닛(PE)</span>과 불필요한 연산을 제거하는 <span class="pdm-hl-yellow">희소성 제어 로직</span>이 AI의 응답 속도를 결정짓는 핵심입니다.
       </p>
     </div>
   </section>
 
-  <!-- 이미지 컨테이너 1: 제조 난이도 vs 설계 지능의 대비 -->
+  <!-- 이미지 컨테이너 1: 뉴럴 네트워크와 병렬 연산 구조 -->
   <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
     <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/semiconductor.png" alt="메모리와 비메모리의 설계적 차이" style="width: 100%; height: 100%; object-fit: cover;">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/rnn_chip.png" alt="AI 가속기 내부의 신경망 구조" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
   </div>
 
-  <!-- Section 2: 현상과 원인 (01:00 ~ 02:10) -->
+  <!-- Section 2: 공급망의 혁명 (01:00 ~ 02:10) -->
   <section>
-    <h2 class="pdm-neo-h2">생태계의 성벽: 왜 우리는 고전하는가?</h2>
-    <p class="pdm-neo-p">글로벌 기업들은 이미 <span class="pdm-neo-bold">하드웨어와 소프트웨어의 수직 계열화</span>를 마쳤습니다.</p>
+    <h2 class="pdm-neo-h2">빅테크의 설계보다 강력한 '직판'의 힘</h2>
+    <p class="pdm-neo-p">설계도만 주고받는 긴 공급망보다 <span class="pdm-neo-bold">설계와 제조의 결합</span>이 더 빠르고 강력합니다.</p>
     
     <div class="pdm-formula-wrapper">
-      <div class="pdm-formula-title">글로벌 반도체 Lock-in 전략</div>
+      <div class="pdm-formula-title">커스텀 IDM 모델의 가격·성능 경쟁력</div>
       <div class="pdm-formula-grid">
-        <div class="pdm-formula-tag">자체 소프트웨어<br>(OS/서비스)</div>
+        <div class="pdm-formula-tag">누적된 설계 노하우</div>
         <div class="pdm-formula-plus">+</div>
-        <div class="pdm-formula-tag">전용 하드웨어<br>(커스텀 칩)</div>
+        <div class="pdm-formula-tag">하이엔드 공정 최적화</div>
         <div class="pdm-formula-plus">→</div>
-        <div class="pdm-formula-tag">범용 반도체<br>(진입 불가)</div>
+        <div class="pdm-formula-tag">압도적 가격 및 성능</div>
       </div>
     </div>
 
     <div class="pdm-card">
-      <div class="pdm-card-header good">한국 반도체의 고립</div>
+      <div class="pdm-card-header good">공급망 프로세스 혁신</div>
       <div class="pdm-card-body">
         <div class="pdm-response-content">
-          우리가 메모리에 집중하는 동안, 글로벌 기업들은 <span class="pdm-neo-bold">스마트폰 프로세서, 이미지 센서</span> 등 핵심 비메모리 영역에 자신들만의 성벽을 쌓아 올렸습니다.
+          물리적 배치의 한계를 가장 잘 아는 우리가 직접 커스텀 칩을 제작할 때, 칩 면적은 줄어들고 전력 효율은 극대화되어 <span class="pdm-neo-bold">빅테크의 자체 설계 칩보다 높은 경쟁력</span>을 갖게 됩니다.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 이미지 컨테이너 2: 글로벌 기업의 수직 계열화 및 성벽 -->
+  <!-- 이미지 컨테이너 2: 최적화된 반도체 공급망과 직판 구조 -->
   <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
     <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/korea_semiconductor.png" alt="글로벌 반도체 생태계 고립 현황" style="width: 100%; height: 100%; object-fit: cover;">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/manufacter.png" alt="효율적인 커스텀 반도체 생산 프로세스" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
   </div>
 
-  <!-- Section 3: 해결책과 통찰 (02:10 ~ 03:00) -->
+  <!-- Section 3: 고객사별 전략 (02:10 ~ 03:20) -->
   <section>
-    <h2 class="pdm-neo-h2">반격의 카드: '온디맨드' 솔루션 서비스</h2>
+    <h2 class="pdm-neo-h2">시장을 장악할 뾰족한 알고리즘 제안</h2>
     <div class="pdm-info-box">
-      <h3 class="pdm-neo-h3" style="margin-top: 0;">니치 마켓과 커스텀 전략</h3>
-      <p class="pdm-neo-p">이제 반도체는 만들어놓고 파는 부품이 아닌, <span class="pdm-neo-bold">고객의 페인포인트를 해결하는 서비스</span>입니다.</p>
+      <h3 class="pdm-neo-h3" style="margin-top: 0;">고객사의 비즈니스에 맞춘 타겟 로직</h3>
       <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; color: #444;">
-        <li>• <span class="pdm-hl-blue">차량용 전력 반도체</span> 등 신뢰성 기반의 니치 마켓 공략</li>
-        <li>• 빅테크의 기획 단계부터 참여하는 <span class="pdm-neo-bold">커스텀 비메모리(ASIC)</span></li>
-        <li>• 고객의 소프트웨어 알고리즘을 하드웨어로 구현하는 <span class="pdm-neo-bold">인터페이스 장악</span></li>
+        <li>• <span class="pdm-hl-blue">서버용(구글/NVIDIA):</span> 연산 병목을 제거하는 <span class="pdm-neo-bold">데이터 패브릭</span> 최적화 로직</li>
+        <li>• <span class="pdm-hl-blue">모빌리티(테슬라/현대차):</span> <span class="pdm-neo-bold">신뢰성 제어</span> 및 저지연 비전 로직</li>
+        <li>• <span class="pdm-hl-blue">온디바이스(애플/삼성):</span> 배터리 효율을 위한 <span class="pdm-neo-bold">초절전 동적 전압 관리(DVFS)</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- 이미지 컨테이너 3: 니치 마켓 공략 및 고객 맞춤형 반도체 -->
+  <!-- 이미지 컨테이너 3: 산업별 맞춤형 AI 반도체 밸류체인 -->
   <div style="width: 100%; margin: 2.5rem 0; text-align: center;">
     <div style="width: 100%; aspect-ratio: 16 / 9; background-color: #f8f9fa; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/semiconductor_future.png" alt="차세대 커스텀 반도체 비전" style="width: 100%; height: 100%; object-fit: cover;">
+      <img src="https://dj-ice-breaking-images.s3.us-east-1.amazonaws.com/market_strategy.png" alt="분야별 커스텀 알고리즘 적용 사례" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
   </div>
 
   <!-- Final Section: 결론 -->
   <section>
-    <h2 class="pdm-neo-h2">시대를 앞서가는 인터페이스 전략</h2>
+    <h2 class="pdm-neo-h2">핵심 알고리즘 파트너로서의 진격</h2>
     <div class="pdm-card">
       <div class="pdm-card-body" style="background-color: #fcfcfc;">
         <p class="pdm-neo-p" style="font-size: 1.3rem; text-align: center; margin-bottom: 2rem;">
-          <span class="pdm-neo-bold">"우리는 단순 부품 공급자가 아닌,<br>시스템 설계의 파트너가 될 준비가 되었습니까?"</span>
+          <span class="pdm-neo-bold">"우리가 칩에 박아 넣은 지능이<br>AI 생태계의 새로운 표준이 됩니다."</span>
         </p>
         <div class="pdm-commentary master" style="text-align: center;">
-          제조의 장벽보다 높은 것은 설계의 지능입니다.<br>고객 맞춤형 비메모리 구현이 한국 반도체의 진짜 미래가 될 것입니다.
+          단순 제조사를 넘어 전략적 파트너로 거듭날 때,<br>한국 반도체의 진정한 기업 가치가 재평가될 것입니다.
         </div>
       </div>
     </div>
-    <p class="pdm-neo-p" style="text-align: center; margin-top: 2rem; color: #888;">
-      시장의 흐름을 읽는 혜안으로, 주도권 탈환의 첫걸음을 떼어야 할 때입니다.
-    </p>
   </section>
 
 </div>
