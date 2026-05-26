@@ -1,0 +1,1728 @@
+중급 1강
+<style>
+.mid-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  color: #1f2933;
+  line-height: 1.7;
+}
+
+.mid-hero {
+  background: linear-gradient(135deg, #f7f4ee, #eef5f8);
+  border: 1px solid #ded7c9;
+  border-radius: 30px;
+  padding: 36px 32px;
+  margin-bottom: 28px;
+}
+
+.mid-label {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: #234f68;
+  margin-bottom: 12px;
+}
+
+.mid-title {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.mid-sub {
+  font-size: 18px;
+  color: #536171;
+}
+
+.compare-card {
+  background: #ffffff;
+  border: 1px solid #e3ddd2;
+  border-radius: 28px;
+  padding: 30px 26px;
+  margin-bottom: 26px;
+  box-shadow: 0 14px 34px rgba(31, 41, 51, 0.05);
+}
+
+.compare-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.compare-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #234f68;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.compare-topic {
+  font-size: 23px;
+  font-weight: 900;
+  color: #234f68;
+  letter-spacing: -0.03em;
+}
+
+.korean-box {
+  background: #f7f4ee;
+  border-radius: 24px;
+  padding: 22px 22px;
+  margin-bottom: 24px;
+}
+
+.korean-label {
+  display: inline-block;
+  background: #eadfcd;
+  color: #7c5316;
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.korean-text {
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+
+.class-grid {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.class-box {
+  border-radius: 24px;
+  padding: 22px 22px;
+}
+
+.class-international {
+  background: #eef5f8;
+  border: 1px solid #d8e6ec;
+}
+
+.class-slang {
+  background: #fff5f7;
+  border: 1px solid #f3d7de;
+}
+
+.class-issue {
+  background: #f4f2ff;
+  border: 1px solid #ddd8ff;
+}
+
+.class-title {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.class-international .class-title {
+  color: #24566f;
+}
+
+.class-slang .class-title {
+  color: #a13f5c;
+}
+
+.class-issue .class-title {
+  color: #5d4ab8;
+}
+
+.class-sentence {
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.55;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+
+.class-desc {
+  font-size: 16px;
+  color: #536171;
+}
+
+.section-title {
+  display: inline-block;
+  background: #f3eadb;
+  color: #8a5a16;
+  font-size: 13px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 5px 11px;
+  margin-bottom: 12px;
+}
+
+.word-box {
+  background: #ffffff;
+  border: 1px solid #ebe4d8;
+  border-radius: 22px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.word-item {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: #3f4a56;
+}
+
+.word-item:last-child {
+  margin-bottom: 0;
+}
+
+.word-item strong {
+  color: #1f2933;
+}
+
+.context-box {
+  background: #fff8ea;
+  border: 1px solid #f0d7a7;
+  border-radius: 22px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.context-text {
+  font-size: 17px;
+  color: #5d4420;
+}
+
+.grammar-box {
+  background: #234f68;
+  border-radius: 24px;
+  padding: 22px;
+  color: white;
+}
+
+.grammar-title {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  color: #ffd68f;
+}
+
+.grammar-text {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.grammar-text span {
+  color: #ffd68f;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .mid-wrap {
+    padding: 24px 14px;
+  }
+
+  .mid-title {
+    font-size: 28px;
+  }
+
+  .korean-text {
+    font-size: 22px;
+  }
+
+  .class-sentence {
+    font-size: 20px;
+  }
+
+  .compare-card {
+    padding: 24px 18px;
+  }
+}
+</style>
+
+<div class="mid-wrap">
+  <section class="mid-hero">
+    <div class="mid-label">ENGLISH ICE BREAKING · INTERMEDIATE</div>
+
+    <div class="mid-title">
+      같은 의미라도 영어 표현의 분위기는 달라집니다
+    </div>
+
+    <div class="mid-sub">
+      이 페이지는 국제 영어, 슬랭 영어, 시사/포멀 영어의 차이를 비교하며  
+      상황에 따라 어떤 표현이 자연스러운지 이해하는 것을 목표로 합니다.
+    </div>
+  </section>
+  
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">01</div>
+    <div class="compare-topic">드라마 분위기에 대한 감상 말하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      처음에는 그냥 가벼운 로맨스 드라마인 줄 알았는데,<br>
+      뒤로 갈수록 분위기가 많이 무거워졌어.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        At first, I thought it was just a light romance drama,<br>
+        but it became much heavier later.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 자연스럽고 무난하게 사용할 수 있는 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        At first, I thought it was gonna be a chill romance show,<br>
+        but it got super dark later on.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Initially, the drama appeared to be a light romantic series,<br>
+        but the tone became significantly darker as the story progressed.
+      </div>
+
+      <div class="class-desc">
+        뉴스, 리뷰, 인터뷰, 시사 프로그램 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>light romance drama</strong><br>
+      가벼운 분위기의 로맨스 드라마
+    </div>
+
+    <div class="word-item">
+      <strong>chill</strong><br>
+      편안한, 가볍게 보기 좋은 느낌
+    </div>
+
+    <div class="word-item">
+      <strong>super dark</strong><br>
+      분위기가 매우 어두운 느낌
+    </div>
+
+    <div class="word-item">
+      <strong>tone</strong><br>
+      작품의 분위기, 톤
+    </div>
+
+    <div class="word-item">
+      <strong>as the story progressed</strong><br>
+      이야기가 진행될수록
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>chill</strong>은 미국식 캐주얼 회화에서 자주 사용되는 표현입니다.<br>
+      편안하고 부담 없는 분위기를 말할 때 자주 사용합니다.<br><br>
+
+      하지만 영어권 국가나 세대에 따라 사용 빈도가 다를 수 있습니다.<br>
+      국제 환경에서는 “relaxed” 또는 “light” 같은 표현이 더 무난하게 들릴 수 있습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>tone</strong>은 영화, 드라마, 뉴스, 시사 토론 등에서 정말 자주 사용되는 표현입니다.<br>
+      작품 전체의 분위기나 감정 방향을 설명할 때 사용합니다.<br><br>
+
+      CNN 인터뷰나 리뷰 영상에서도 자주 등장하는 표현입니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      한국인 학습자는 <span>“become + 형용사”</span> 구조를 자주 어색하게 사용하는 경우가 있습니다.<br><br>
+
+      예를 들어:<br>
+      ❌ It became darkness.<br>
+      ⭕ It became dark.<br><br>
+
+      영어에서는 분위기 변화 표현에 형용사를 정말 자주 사용합니다.<br>
+      <span>became heavier / became darker</span> 같은 흐름을 익숙하게 기억해두면 자연스러운 영어에 도움이 됩니다.
+    </div>
+
+  </div>
+</section>
+  
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">02</div>
+    <div class="compare-topic">주인공 감정선 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      맞아.<br>
+      특히 후반부에서 주인공 감정선이 진짜 좋았어.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Yeah, I agree.<br>
+        The main character’s emotions were really well written in the second half.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 자연스럽고 전달력이 높은 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Yeah, for real.<br>
+        The character development in the second half was so good.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I agree.<br>
+        The emotional development of the protagonist became particularly compelling in the latter half of the series.
+      </div>
+
+      <div class="class-desc">
+        뉴스 리뷰, 인터뷰, 분석 콘텐츠 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>well written</strong><br>
+      잘 쓰여진, 구성된
+    </div>
+
+    <div class="word-item">
+      <strong>character development</strong><br>
+      캐릭터 성장, 인물 변화 과정
+    </div>
+
+    <div class="word-item">
+      <strong>for real</strong><br>
+      진짜로, 진심으로
+    </div>
+
+    <div class="word-item">
+      <strong>emotional development</strong><br>
+      감정 변화 과정, 감정선
+    </div>
+
+    <div class="word-item">
+      <strong>compelling</strong><br>
+      강하게 몰입되는, 설득력 있는
+    </div>
+
+    <div class="word-item">
+      <strong>latter half</strong><br>
+      후반부
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>for real</strong>은 미국식 캐주얼 회화에서 자주 사용되는 표현입니다.<br>
+      “진짜”, “진심으로” 같은 강한 공감 느낌을 전달할 때 사용합니다.<br><br>
+
+      하지만 공식적인 자리에서는 다소 가볍게 들릴 수 있습니다.<br>
+      국제 업무 환경에서는 “I agree”가 훨씬 안정적으로 들리는 경우가 많습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>character development</strong>는 영화, 드라마, 게임 리뷰에서 정말 자주 사용되는 표현입니다.<br>
+      단순히 캐릭터가 등장하는 것이 아니라, 시간이 지나며 변화하고 성장하는 과정을 의미합니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>compelling</strong>은 시사 인터뷰, 리뷰, 기사 등에서 자주 등장하는 표현입니다.<br>
+      “강하게 몰입되는”, “계속 보게 만드는” 느낌을 전달할 때 사용합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      한국인 학습자는 영어에서 <span>감정 주체</span>를 어색하게 표현하는 경우가 많습니다.<br><br>
+
+      예를 들어:<br>
+      ❌ The emotion line was good.<br>
+      ⭕ The character’s emotions were well written.<br><br>
+
+      영어에서는 “감정선”을 직역하기보다,<br>
+      <span>emotions / emotional development / character development</span>
+      같은 표현으로 자연스럽게 바꾸는 경우가 많습니다.
+    </div>
+
+  </div>
+</section>
+  
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">03</div>
+    <div class="compare-topic">처음에는 이해되지 않았던 캐릭터 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      나는 처음에는 남자 주인공이 좀 답답했거든?<br>
+      근데 마지막에는 이해가 되더라.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        At first, I thought the main character was frustrating,<br>
+        but I understood him by the end.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 자연스럽고 안정적으로 사용할 수 있는 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        At first, the guy was honestly kinda annoying,<br>
+        but he made sense later on.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Initially, the protagonist appeared somewhat frustrating,<br>
+        but his behavior became more understandable toward the conclusion.
+      </div>
+
+      <div class="class-desc">
+        리뷰, 인터뷰, 분석 기사 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>frustrating</strong><br>
+      답답한, 답답하게 만드는
+    </div>
+
+    <div class="word-item">
+      <strong>by the end</strong><br>
+      마지막에는, 끝날 즈음에는
+    </div>
+
+    <div class="word-item">
+      <strong>kinda</strong><br>
+      kind of의 구어체 표현, 약간
+    </div>
+
+    <div class="word-item">
+      <strong>annoying</strong><br>
+      짜증나는, 거슬리는
+    </div>
+
+    <div class="word-item">
+      <strong>made sense</strong><br>
+      이해가 됐다, 납득이 됐다
+    </div>
+
+    <div class="word-item">
+      <strong>protagonist</strong><br>
+      주인공
+    </div>
+
+    <div class="word-item">
+      <strong>toward the conclusion</strong><br>
+      결말로 갈수록, 마지막 부분에서
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>kinda</strong>는 “kind of”를 빠르게 줄여 말하는 미국식 구어 표현입니다.<br>
+      친구끼리의 대화나 유튜브, 팟캐스트에서 정말 자주 등장합니다.<br><br>
+
+      하지만 공식적인 자리나 국제 업무 환경에서는 사용하지 않는 경우가 많습니다.<br>
+      국제 환경에서는 “a little” 또는 “somewhat”가 더 안정적으로 들립니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>made sense</strong>는 영어권에서 정말 자주 사용하는 표현입니다.<br>
+      단순히 “이해했다”보다,<br>
+      “나중에 보니 납득이 갔다”는 느낌이 강합니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>protagonist</strong>는 리뷰, 기사, 인터뷰, 영화 분석 콘텐츠에서 자주 등장하는 표현입니다.<br>
+      단순 회화에서는 “main character”가 더 많이 사용됩니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>감정 형용사</span>를 자주 혼동합니다.<br><br>
+
+      예를 들어:<br>
+      ❌ I was frustrating.<br>
+      ⭕ The character was frustrating.<br>
+      ⭕ I was frustrated.<br><br>
+
+      영어에서는:<br>
+      <span>-ing</span> = 감정을 주는 대상<br>
+      <span>-ed</span> = 감정을 느끼는 사람<br><br>
+
+      이 차이를 익숙하게 기억해두면 훨씬 자연스러운 영어에 도움이 됩니다.
+    </div>
+
+  </div>
+</section>
+  
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">04</div>
+    <div class="compare-topic">인상 깊었던 장면 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      그 장면 나도 기억나.<br>
+      아무 말 안 하고 혼자 앉아 있는 장면이 인상 깊었어.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I remember that scene too.<br>
+        The scene where he was sitting alone quietly was really memorable.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 자연스럽고 안정적으로 사용할 수 있는 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Yeah, I remember that part.<br>
+        Him just sitting there silently hit hard.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화와 인터넷 리뷰 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I remember that scene as well.<br>
+        The moment in which the character sat alone in silence was particularly impactful.
+      </div>
+
+      <div class="class-desc">
+        영화 리뷰, 인터뷰, 분석 기사 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>scene</strong><br>
+      장면
+    </div>
+
+    <div class="word-item">
+      <strong>quietly</strong><br>
+      조용하게
+    </div>
+
+    <div class="word-item">
+      <strong>memorable</strong><br>
+      기억에 남는
+    </div>
+
+    <div class="word-item">
+      <strong>hit hard</strong><br>
+      강하게 와닿다, 감정적으로 크게 느껴지다
+    </div>
+
+    <div class="word-item">
+      <strong>in silence</strong><br>
+      침묵 속에서, 조용히
+    </div>
+
+    <div class="word-item">
+      <strong>impactful</strong><br>
+      강한 인상을 주는
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>hit hard</strong>는 미국식 캐주얼 회화와 인터넷 리뷰에서 정말 자주 사용하는 표현입니다.<br>
+      단순히 “슬펐다”보다,<br>
+      감정적으로 강하게 와닿았다는 느낌을 전달합니다.<br><br>
+
+      하지만 국제 업무 환경이나 공식적인 자리에서는 다소 감정적으로 들릴 수 있습니다.<br>
+      국제 환경에서는 “memorable” 또는 “impactful” 같은 표현이 더 안정적으로 들리는 경우가 많습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>impactful</strong>은 리뷰, 인터뷰, 시사 프로그램, 프레젠테이션에서도 자주 등장하는 표현입니다.<br>
+      사람에게 강한 인상을 남기거나 영향을 준다는 의미로 사용됩니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>in silence</strong>는 영화 리뷰나 문학적인 설명에서 자주 사용되는 표현입니다.<br>
+      단순히 “조용히”보다 조금 더 분위기 있고 묘사적인 느낌을 전달합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>분사 형태를 활용한 장면 묘사</span>를 자주 어려워합니다.<br><br>
+
+      예를 들어:<br>
+      ❌ The scene he sat alone was memorable.<br>
+      ⭕ The scene where he was sitting alone was memorable.<br><br>
+
+      영어에서는 장면이나 상황을 설명할 때:<br>
+      <span>where + 주어 + be동사 + ing</span><br>
+      구조가 정말 자주 사용됩니다.<br><br>
+
+      특히 영화, 드라마 감상 영어에서 자주 등장하는 흐름입니다.
+    </div>
+
+  </div>
+</section>
+  
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">05</div>
+    <div class="compare-topic">분위기로 감정을 전달하는 연출 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      맞아.<br>
+      대사가 많지 않았는데 분위기로 감정을 보여준 느낌이었어.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Yeah, I agree.<br>
+        There were not many lines, but the emotions were expressed through the atmosphere.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 안정적으로 전달되는 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Yeah, totally.<br>
+        There wasn’t much dialogue, but the vibe said everything.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화와 인터넷 리뷰 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I agree.<br>
+        Although the dialogue was limited, the emotional tone was conveyed effectively through the atmosphere.
+      </div>
+
+      <div class="class-desc">
+        영화 리뷰, 인터뷰, 시사 분석 콘텐츠 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>line</strong><br>
+      대사
+    </div>
+
+    <div class="word-item">
+      <strong>expressed</strong><br>
+      표현된
+    </div>
+
+    <div class="word-item">
+      <strong>atmosphere</strong><br>
+      분위기
+    </div>
+
+    <div class="word-item">
+      <strong>dialogue</strong><br>
+      대화, 대사
+    </div>
+
+    <div class="word-item">
+      <strong>vibe</strong><br>
+      분위기, 느낌
+    </div>
+
+    <div class="word-item">
+      <strong>emotional tone</strong><br>
+      감정적 분위기, 감정 톤
+    </div>
+
+    <div class="word-item">
+      <strong>conveyed</strong><br>
+      전달된
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>vibe</strong>는 미국식 회화와 SNS, 유튜브 리뷰에서 정말 자주 사용되는 표현입니다.<br>
+      단순히 “분위기”뿐 아니라,<br>
+      사람이나 공간에서 느껴지는 감정적 느낌까지 포함하는 경우가 많습니다.<br><br>
+
+      하지만 영어권 국가나 세대에 따라 사용 빈도가 다를 수 있습니다.<br>
+      국제 환경에서는 “atmosphere”가 조금 더 안정적이고 무난하게 들릴 수 있습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>dialogue</strong>는 영화 리뷰, 인터뷰, 기사, 분석 콘텐츠에서 정말 자주 사용되는 표현입니다.<br>
+      일상 회화에서는 “lines”라고 더 가볍게 표현하는 경우도 많습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>convey</strong>는 단순히 “말하다”보다,<br>
+      감정이나 메시지를 전달한다는 느낌이 강한 표현입니다.<br>
+      시사 영어, 프레젠테이션, 뉴스 인터뷰에서도 자주 등장합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>수동태 표현</span>을 자주 어색하게 사용하는 경우가 있습니다.<br><br>
+
+      예를 들어:<br>
+      ❌ The emotion conveyed atmosphere.<br>
+      ⭕ The emotions were conveyed through the atmosphere.<br><br>
+
+      영어에서는 영화, 드라마 리뷰에서:<br>
+      <span>be동사 + conveyed / expressed</span><br>
+      형태를 정말 자주 사용합니다.<br><br>
+
+      특히 “감정이 전달되었다” 같은 표현은 수동태가 훨씬 자연스럽게 들리는 경우가 많습니다.
+    </div>
+
+  </div>
+</section>
+  
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">06</div>
+    <div class="compare-topic">OST와 감정 몰입 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      그리고 OST도 진짜 좋지 않았어?<br>
+      드라마 끝나고도 계속 듣게 되더라.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        And the soundtrack was really good too.<br>
+        I kept listening to it even after the drama ended.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 자연스럽고 안정적으로 사용할 수 있는 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        And the OST was so good, honestly.<br>
+        I couldn’t stop listening to it after finishing the show.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화와 콘텐츠 리뷰 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        The soundtrack was particularly impressive.<br>
+        I found myself continuing to listen to it even after the series had concluded.
+      </div>
+
+      <div class="class-desc">
+        영화 리뷰, 인터뷰, 시사 분석 콘텐츠 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>soundtrack</strong><br>
+      영화·드라마 음악, OST
+    </div>
+
+    <div class="word-item">
+      <strong>keep ~ing</strong><br>
+      계속 ~하다
+    </div>
+
+    <div class="word-item">
+      <strong>couldn’t stop ~ing</strong><br>
+      계속 ~하게 되다, 멈출 수 없었다
+    </div>
+
+    <div class="word-item">
+      <strong>finish the show</strong><br>
+      드라마를 다 보다
+    </div>
+
+    <div class="word-item">
+      <strong>particularly</strong><br>
+      특히
+    </div>
+
+    <div class="word-item">
+      <strong>impressive</strong><br>
+      인상적인
+    </div>
+
+    <div class="word-item">
+      <strong>concluded</strong><br>
+      끝났다, 마무리되었다
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>OST</strong>라는 표현은 한국과 일본에서는 매우 익숙하지만,<br>
+      영어권에서는 “soundtrack”이라는 표현이 더 일반적입니다.<br><br>
+
+      미국에서도 OST를 알아듣는 경우는 많지만,<br>
+      국제 환경에서는 “soundtrack”가 훨씬 자연스럽게 들릴 수 있습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>couldn’t stop ~ing</strong>는 미국식 회화에서 정말 자주 사용하는 표현입니다.<br>
+      어떤 행동을 계속 반복하게 될 정도로 강한 몰입감을 표현할 때 사용합니다.<br><br>
+
+      유튜브 리뷰나 SNS 후기에서도 자주 등장하는 표현입니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>particularly impressive</strong>는 뉴스, 리뷰, 인터뷰 등에서 자주 사용되는 표현입니다.<br>
+      단순히 “좋았다”보다 조금 더 객관적이고 분석적인 느낌을 전달합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>동명사(~ing)</span> 사용을 자주 어려워합니다.<br><br>
+
+      예를 들어:<br>
+      ❌ I kept to listen to it.<br>
+      ⭕ I kept listening to it.<br><br>
+
+      영어에서는:<br>
+      <span>keep + ~ing</span><br>
+      <span>stop + ~ing</span><br>
+      구조가 정말 자주 사용됩니다.<br><br>
+
+      특히 취미, 음악, 드라마 감상 표현에서 자주 등장하는 패턴입니다.
+    </div>
+
+  </div>
+</section>
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">07</div>
+    <div class="compare-topic">드라마 장면이 다시 떠오르는 경험 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      나도.<br>
+      특히 밤에 들으면 드라마 장면이 다시 생각나.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Me too.<br>
+        Especially at night, the scenes come back to my mind when I listen to it.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 자연스럽고 전달력이 높은 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Same here.<br>
+        Listening to it at night brings back all the scenes for me.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화와 감상 리뷰 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I feel the same way.<br>
+        Listening to the soundtrack at night often brings back vivid memories of the series.
+      </div>
+
+      <div class="class-desc">
+        인터뷰, 리뷰, 분석 콘텐츠 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>come back to my mind</strong><br>
+      다시 떠오르다
+    </div>
+
+    <div class="word-item">
+      <strong>Same here</strong><br>
+      나도 그래, 나도 마찬가지야
+    </div>
+
+    <div class="word-item">
+      <strong>bring back memories</strong><br>
+      기억을 다시 떠오르게 하다
+    </div>
+
+    <div class="word-item">
+      <strong>vivid</strong><br>
+      생생한
+    </div>
+
+    <div class="word-item">
+      <strong>soundtrack</strong><br>
+      OST, 배경 음악
+    </div>
+
+    <div class="word-item">
+      <strong>series</strong><br>
+      드라마 시리즈, 연속물
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>Same here</strong>는 미국식 캐주얼 회화에서 정말 자주 사용하는 표현입니다.<br>
+      “Me too”보다 조금 더 자연스럽고 회화적인 느낌을 줄 때 사용합니다.<br><br>
+
+      하지만 공식적인 환경에서는 “I feel the same way”가 더 안정적으로 들리는 경우가 많습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>bring back memories</strong>는 영어권에서 정말 자주 사용하는 표현입니다.<br>
+      음악, 냄새, 장소처럼 어떤 것이 과거 기억을 떠오르게 할 때 사용합니다.<br><br>
+
+      드라마, 영화, 음악 감상 영어에서 자주 등장하는 표현입니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>vivid memories</strong>는 뉴스 인터뷰, 에세이, 리뷰에서도 자주 사용되는 표현입니다.<br>
+      단순히 “기억난다”보다 훨씬 생생하게 떠오르는 느낌을 전달합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>동명사를 주어처럼 사용하는 구조</span>를 자주 어려워합니다.<br><br>
+
+      예를 들어:<br>
+      ❌ Listen to it at night brings memories.<br>
+      ⭕ Listening to it at night brings back memories.<br><br>
+
+      영어에서는 행동 자체를 하나의 주제로 말할 때:<br>
+      <span>Listening / Watching / Studying + 동사</span><br>
+      구조를 정말 자주 사용합니다.<br><br>
+
+      특히 감상이나 경험을 이야기할 때 매우 자주 등장하는 패턴입니다.
+    </div>
+
+  </div>
+</section>
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">08</div>
+    <div class="compare-topic">열린 결말에 대한 생각 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      근데 결말은 사람마다 반응이 좀 갈릴 것 같아.<br>
+      나는 개인적으로 열린 결말이라 좋았거든.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I think people may have different opinions about the ending.<br>
+        Personally, I liked it because it had an open ending.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 안정적이고 전달력이 높은 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I feel like people are gonna be pretty divided on the ending.<br>
+        Personally, I liked that it left things open.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화와 콘텐츠 리뷰 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        The ending will likely generate mixed reactions among viewers.<br>
+        Personally, I appreciated the open-ended conclusion.
+      </div>
+
+      <div class="class-desc">
+        리뷰 기사, 인터뷰, 시사 분석 콘텐츠 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>different opinions</strong><br>
+      서로 다른 의견
+    </div>
+
+    <div class="word-item">
+      <strong>open ending</strong><br>
+      열린 결말
+    </div>
+
+    <div class="word-item">
+      <strong>divided</strong><br>
+      의견이 갈리는
+    </div>
+
+    <div class="word-item">
+      <strong>leave things open</strong><br>
+      결론을 명확히 닫지 않다
+    </div>
+
+    <div class="word-item">
+      <strong>mixed reactions</strong><br>
+      엇갈린 반응
+    </div>
+
+    <div class="word-item">
+      <strong>open-ended conclusion</strong><br>
+      열린 결말
+    </div>
+
+    <div class="word-item">
+      <strong>appreciated</strong><br>
+      긍정적으로 평가했다, 높게 평가했다
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>gonna</strong>는 “going to”를 빠르게 줄여 말하는 미국식 구어 표현입니다.<br>
+      친구끼리의 회화, 유튜브, 팟캐스트에서 정말 자주 등장합니다.<br><br>
+
+      하지만 공식적인 자리나 국제 업무 환경에서는 사용하지 않는 경우가 많습니다.<br>
+      국제 환경에서는 “going to” 또는 “likely to”가 더 안정적으로 들립니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>mixed reactions</strong>는 뉴스 기사, 리뷰, 인터뷰에서 정말 자주 사용하는 표현입니다.<br>
+      사람들의 반응이 하나로 모이지 않고 다양하게 나뉘는 상황을 설명할 때 사용합니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>open-ended conclusion</strong>은 영화, 드라마, 문학 리뷰에서 자주 등장하는 표현입니다.<br>
+      결말을 명확하게 설명하지 않고 해석의 여지를 남기는 작품을 설명할 때 사용합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>because 절</span>과 <span>that 절</span>을 자주 혼동합니다.<br><br>
+
+      예를 들어:<br>
+      ❌ I liked that because it was open ending.<br>
+      ⭕ I liked it because it had an open ending.<br><br>
+
+      영어에서는 이유를 설명할 때:<br>
+      <span>because + 문장</span><br>
+      구조를 정말 자주 사용합니다.<br><br>
+
+      또한 영어에서는:<br>
+      ❌ open ending only<br>
+      보다<br>
+      <span>an open ending</span><br>
+      처럼 관사를 함께 사용하는 경우가 훨씬 자연스럽습니다.
+    </div>
+
+  </div>
+</section>
+  
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">09</div>
+    <div class="compare-topic">결말에 대한 아쉬움 이야기하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      나는 반대로 조금 아쉬웠어.<br>
+      조금 더 명확하게 끝났으면 좋겠다고 생각했어.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        I felt a little disappointed, actually.<br>
+        I wish the ending had been clearer.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 안정적이고 자연스럽게 사용할 수 있는 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Honestly, I was kinda disappointed.<br>
+        I wanted a more clear ending.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화와 리뷰 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        In contrast, I found the conclusion somewhat unsatisfying.<br>
+        I believe a more definitive ending would have strengthened the overall impact of the series.
+      </div>
+
+      <div class="class-desc">
+        리뷰 기사, 인터뷰, 분석 콘텐츠 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>disappointed</strong><br>
+      아쉬운, 실망한
+    </div>
+
+    <div class="word-item">
+      <strong>clearer</strong><br>
+      더 명확한
+    </div>
+
+    <div class="word-item">
+      <strong>kinda</strong><br>
+      약간, kind of의 구어체 표현
+    </div>
+
+    <div class="word-item">
+      <strong>unsatisfying</strong><br>
+      만족스럽지 않은
+    </div>
+
+    <div class="word-item">
+      <strong>definitive</strong><br>
+      명확한, 확실한
+    </div>
+
+    <div class="word-item">
+      <strong>strengthened</strong><br>
+      강화했다, 더 강하게 만들었다
+    </div>
+
+    <div class="word-item">
+      <strong>overall impact</strong><br>
+      전체적인 인상, 전체적인 영향력
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>kinda</strong>는 미국식 구어 표현으로,<br>
+      “조금”, “약간” 같은 부드러운 느낌을 줄 때 자주 사용합니다.<br><br>
+
+      하지만 공식적인 자리에서는 다소 가볍게 들릴 수 있습니다.<br>
+      국제 환경에서는 “a little” 또는 “somewhat”가 더 안정적으로 들리는 경우가 많습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>definitive</strong>는 뉴스 기사, 인터뷰, 시사 분석 콘텐츠에서 자주 등장하는 표현입니다.<br>
+      단순히 “clear”보다 더 강하게 “명확하고 확정적인” 느낌을 전달합니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>overall impact</strong>는 영화 리뷰, 프레젠테이션, 시사 콘텐츠에서도 자주 사용되는 표현입니다.<br>
+      작품 전체가 사람에게 남기는 인상이나 영향력을 설명할 때 사용합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>I wish + 과거완료</span> 구조를 자주 어려워합니다.<br><br>
+
+      예를 들어:<br>
+      ❌ I wish the ending is clearer.<br>
+      ⭕ I wish the ending had been clearer.<br><br>
+
+      영어에서는 이미 끝난 상황에 대한 아쉬움을 표현할 때:<br>
+      <span>I wish + had + p.p.</span><br>
+      구조를 정말 자주 사용합니다.<br><br>
+
+      영화, 드라마, 과거 경험에 대한 감상을 말할 때 매우 자주 등장하는 패턴입니다.
+    </div>
+
+  </div>
+</section>
+  <section class="compare-card">
+  <div class="compare-top">
+    <div class="compare-number">10</div>
+    <div class="compare-topic">드라마 전체 감상 마무리하기</div>
+  </div>
+
+  <div class="korean-box">
+    <div class="korean-label">한국어 문장</div>
+
+    <div class="korean-text">
+      그래도 오랜만에 몰입해서 본 드라마였어.<br>
+      다음에 또 재밌는 드라마 있으면 추천해줘.
+    </div>
+  </div>
+
+  <div class="class-grid">
+
+    <div class="class-box class-international">
+      <div class="class-title">INTERNATIONAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Still, it was the first drama in a long time that I really got into.<br>
+        Let me know if you find another good drama.
+      </div>
+
+      <div class="class-desc">
+        국제 환경에서 비교적 자연스럽고 전달력이 높은 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-slang">
+      <div class="class-title">SLANG / CASUAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Still, I was totally hooked on that drama.<br>
+        Hit me up if you find another good one.
+      </div>
+
+      <div class="class-desc">
+        미국식 캐주얼 회화와 SNS 느낌이 강한 표현입니다.
+      </div>
+    </div>
+
+    <div class="class-box class-issue">
+      <div class="class-title">CURRENT AFFAIRS / FORMAL ENGLISH</div>
+
+      <div class="class-sentence">
+        Nevertheless, it was one of the most engaging dramas I have watched in quite some time.<br>
+        Please feel free to recommend similar series in the future.
+      </div>
+
+      <div class="class-desc">
+        리뷰 기사, 인터뷰, 포멀한 콘텐츠 느낌의 표현입니다.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">단어 및 표현</div>
+
+  <div class="word-box">
+
+    <div class="word-item">
+      <strong>get into</strong><br>
+      몰입하다, 빠져들다
+    </div>
+
+    <div class="word-item">
+      <strong>in a long time</strong><br>
+      오랜만에
+    </div>
+
+    <div class="word-item">
+      <strong>hooked on</strong><br>
+      푹 빠진, 중독될 정도로 좋아하는
+    </div>
+
+    <div class="word-item">
+      <strong>hit me up</strong><br>
+      연락해줘, 알려줘
+    </div>
+
+    <div class="word-item">
+      <strong>engaging</strong><br>
+      몰입감 있는
+    </div>
+
+    <div class="word-item">
+      <strong>quite some time</strong><br>
+      꽤 오랜 시간
+    </div>
+
+    <div class="word-item">
+      <strong>recommend</strong><br>
+      추천하다
+    </div>
+
+  </div>
+
+  <div class="section-title">표현 맥락 설명</div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>hooked on</strong>은 미국식 회화에서 정말 자주 사용하는 표현입니다.<br>
+      드라마, 게임, 음악 등에 강하게 빠져 있는 상태를 표현할 때 사용합니다.<br><br>
+
+      하지만 공식적인 자리에서는 다소 캐주얼하게 들릴 수 있습니다.<br>
+      국제 환경에서는 “really got into”가 조금 더 안정적으로 들리는 경우가 많습니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>hit me up</strong>은 친구끼리 정말 자주 사용하는 미국식 표현입니다.<br>
+      “연락해줘”, “메시지 보내줘” 같은 느낌으로 사용합니다.<br><br>
+
+      하지만 영어권 국가나 세대에 따라 느낌 차이가 있을 수 있으며,<br>
+      업무 환경에서는 다소 가볍게 들릴 수 있습니다.<br>
+      국제 환경에서는 “Let me know”가 훨씬 안정적입니다.
+    </div>
+  </div>
+
+  <div class="context-box">
+    <div class="context-text">
+      <strong>engaging</strong>는 뉴스 기사, 인터뷰, 영화 리뷰에서도 정말 자주 등장하는 표현입니다.<br>
+      단순히 “재밌다”보다,<br>
+      사람을 계속 집중하게 만들 정도로 몰입감 있다는 느낌을 전달합니다.
+    </div>
+  </div>
+
+  <div class="grammar-box">
+
+    <div class="grammar-title">
+      GRAMMAR POINT
+    </div>
+
+    <div class="grammar-text">
+      오픽 IM 레벨 학습자들은 영어에서 <span>관계대명사 생략 구조</span>를 자주 어려워합니다.<br><br>
+
+      예를 들어:<br>
+      ❌ It was the first drama I really got into it.<br>
+      ⭕ It was the first drama I really got into.<br><br>
+
+      영어에서는 목적어가 이미 포함된 경우,<br>
+      뒤에 <span>it</span>을 다시 넣지 않는 경우가 많습니다.<br><br>
+
+      또한 영어에서는:<br>
+      <span>the first drama I watched</span><br>
+      처럼 관계대명사(that)를 생략하는 구조가 정말 자주 사용됩니다.
+    </div>
+
+  </div>
+</section>
+
+</div>
