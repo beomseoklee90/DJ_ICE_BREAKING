@@ -5,39 +5,45 @@ import "./App.css";
   - files 배열에 public/data/폴더/ 안에 있는 파일명만 적으면 됨
 */
 const categoryConfig = {
-  ai: {
-    path: "AI",
-    label: "AI",
-    mobileLabel: "AI",
-    files: [
-      //      "car.txt",
-      "semiconductor4.txt",
-      "semiconductor3.txt",
-      "semiconductor2.txt",
-      "semiconductor.txt",
+  // ai: {
+  //   path: "AI",
+  //   label: "AI",
+  //   mobileLabel: "AI",
+  //   files: [
+  //     //      "car.txt",
+  //     //  "semiconductor4.txt",
+  //     "semiconductor3.txt",
+  //     "semiconductor2.txt",
+  //     "semiconductor.txt",
 
-      "ai_004.txt",
-      "ai_003.txt",
-      "ai_001.txt",
-      "ai_002.txt",
+  //     "ai_004.txt",
+  //     "ai_003.txt",
+  //     "ai_001.txt",
+  //     "ai_002.txt",
 
-      //"ai_001_digest.txt",
-    ],
-  },
-  Japanese: {
-    path: "Japanese",
-    label: "Japanese",
-    mobileLabel: "Japanese",
-    files: [
-      "intro.txt",
-      "basic.txt",
-      "basic2.txt",
-      "basic3.txt",
-      "intermediate2.txt",
-      "japanese002.txt",
-      "tango.txt",
-      "intermediate.txt",
-    ],
+  //     //"ai_001_digest.txt",
+  //   ],
+  // },
+  // Japanese: {
+  //   path: "Japanese",
+  //   label: "Japanese",
+  //   mobileLabel: "Japanese",
+  //   files: [
+  //     "intro.txt",
+  //     "basic.txt",
+  //     "basic2.txt",
+  //     "basic3.txt",
+  //     "intermediate2.txt",
+  //     "japanese002.txt",
+  //     "tango.txt",
+  //     "intermediate.txt",
+  //   ],
+  // },
+  ENGLISH: {
+    path: "ENGLISH",
+    label: "ENGLISH",
+    mobileLabel: "ENGLISH",
+    files: ["intro.txt", "lecture1.txt", "intermediate_lecture1.txt"],
   },
 };
 
@@ -51,7 +57,7 @@ const musicConfig = {
 
 function App() {
   // 상태 관리
-  const [currentCategory, setCurrentCategory] = useState("ai");
+  const [currentCategory, setCurrentCategory] = useState("ENGLISH");
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
 

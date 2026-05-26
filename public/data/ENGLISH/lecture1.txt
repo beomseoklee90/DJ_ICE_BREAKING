@@ -1,0 +1,1626 @@
+초급 1강
+<style>
+.lesson-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+  color: #1f2933;
+  line-height: 1.65;
+}
+
+.lesson-hero {
+  background: linear-gradient(135deg, #f7f4ee, #eef5f8);
+  border: 1px solid #ded7c9;
+  border-radius: 28px;
+  padding: 34px 30px;
+  margin-bottom: 24px;
+}
+
+.lesson-label {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #234f68;
+  margin-bottom: 10px;
+}
+
+.lesson-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.lesson-sub {
+  font-size: 18px;
+  color: #536171;
+}
+
+.turn-card {
+  background: #ffffff;
+  border: 1px solid #e3ddd2;
+  border-radius: 26px;
+  padding: 28px 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 14px 34px rgba(31, 41, 51, 0.05);
+}
+
+.turn-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.turn-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: #234f68;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.turn-topic {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #234f68;
+}
+
+.main-sentence {
+  background: #f7f4ee;
+  border-radius: 22px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+}
+
+.info-block {
+  border-top: 1px solid #eee7dc;
+  padding-top: 18px;
+  margin-top: 18px;
+}
+
+.info-title {
+  display: inline-block;
+  background: #f3eadb;
+  color: #8a5a16;
+  font-size: 13px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+}
+
+.info-text {
+  font-size: 17px;
+  color: #3f4a56;
+  margin: 0;
+}
+
+.chunk-box {
+  background: #eef5f8;
+  border: 1px solid #d7e5eb;
+  border-radius: 20px;
+  padding: 18px 18px;
+  font-size: 18px;
+  color: #1f2933;
+}
+
+.chunk-line {
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.chunk-meaning {
+  color: #536171;
+}
+
+.word-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 17px;
+  color: #3f4a56;
+}
+
+.word-list li {
+  margin-bottom: 6px;
+}
+
+.soft-note {
+  background: #234f68;
+  color: #ffffff;
+  border-radius: 22px;
+  padding: 20px 18px;
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.soft-note span {
+  color: #ffd68f;
+}
+
+.practice-tip {
+  background: #fff8ea;
+  border: 1px solid #f0d7a7;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 18px;
+  font-size: 17px;
+  color: #5d4420;
+}
+
+.korean-pron {
+  color: #536171;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .lesson-wrap {
+    padding: 24px 14px;
+  }
+
+  .lesson-title {
+    font-size: 27px;
+  }
+
+  .lesson-sub {
+    font-size: 16px;
+  }
+
+  .turn-card {
+    padding: 23px 18px;
+  }
+
+  .main-sentence {
+    font-size: 21px;
+  }
+
+  .turn-topic {
+    font-size: 19px;
+  }
+}
+</style>
+
+<div class="lesson-wrap">
+  <section class="lesson-hero">
+    <div class="lesson-label">ENGLISH ICE BREAKING · LESSON 01</div>
+    <div class="lesson-title">우리도 영어로 대화할 수 있습니다</div>
+    <div class="lesson-sub">
+      처음에는 어려운 문법보다, 실제 대화에서 바로 쓸 수 있는 짧은 표현에 익숙해지는 것이 목표입니다.
+    </div>
+  </section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">01</div>
+    <div class="turn-topic">처음 인사하기</div>
+  </div>
+
+  <div class="main-sentence">
+    Hi, nice to meet you.<br>
+    I’m Alex from Canada.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      하이, 나이스 투 미츄.<br>
+      아임 알렉스 프럼 캐나다.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      안녕하세요, 만나서 반가워요.<br>
+      저는 캐나다에서 온 알렉스예요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        Hi / nice to meet you
+      </div>
+
+      <div class="chunk-meaning">
+        안녕하세요 / 만나서 반가워요
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        I’m Alex / from Canada
+      </div>
+
+      <div class="chunk-meaning">
+        저는 알렉스예요 / 캐나다에서 온
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>Hi</strong> = 안녕하세요</li>
+      <li><strong>meet</strong> = 만나다</li>
+      <li><strong>from</strong> = ~에서 온</li>
+      <li><strong>Canada</strong> = 캐나다</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    처음에는 긴 문장을 만들려고 하지 않아도 괜찮습니다.<br>
+    “Hi + nice to meet you + I’m 이름” 흐름만 익숙해져도 충분합니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 문법보다, <span>영어로 먼저 말을 꺼내는 경험</span>에 익숙해지는 것이 중요합니다.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">02</div>
+    <div class="turn-topic">자기소개 이어가기</div>
+  </div>
+
+  <div class="main-sentence">
+    Nice to meet you too.<br>
+    I’m Minho from Korea.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      나이스 투 미츄 투.<br>
+      아임 민호 프럼 코리아.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      저도 만나서 반가워요.<br>
+      저는 한국에서 온 민호예요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        Nice to meet you / too
+      </div>
+
+      <div class="chunk-meaning">
+        만나서 반가워요 / 저도요
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        I’m Minho / from Korea
+      </div>
+
+      <div class="chunk-meaning">
+        저는 민호예요 / 한국에서 온
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>too</strong> = 저도, 또한</li>
+      <li><strong>Korea</strong> = 한국</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    영어 회화에서는 “저도요” 느낌의 표현을 자주 사용합니다.<br>
+    “too”는 짧지만 정말 자주 나오는 표현입니다.
+  </div>
+
+  <div class="soft-note">
+    완벽한 발음보다, <span>편하게 한 문장을 끝까지 말하는 것</span>이 더 중요합니다.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">03</div>
+    <div class="turn-topic">상대 상태 물어보기</div>
+  </div>
+
+  <div class="main-sentence">
+    How are you today?<br>
+    You look energetic.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      하우 아 유 투데이?<br>
+      유 룩 에너제틱.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      오늘 기분 어때요?<br>
+      활기차 보여요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        How are you / today
+      </div>
+
+      <div class="chunk-meaning">
+        어떠세요 / 오늘
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        You look / energetic
+      </div>
+
+      <div class="chunk-meaning">
+        당신은 보여요 / 활기차게
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>today</strong> = 오늘</li>
+      <li><strong>look</strong> = ~처럼 보이다</li>
+      <li><strong>energetic</strong> = 활기찬</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “You look ~” 표현은 외모뿐 아니라 분위기와 상태를 이야기할 때도 자주 사용합니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 단어를 완벽하게 외우지 않아도 괜찮습니다.<br>
+    <span>“영어 느낌”에 익숙해지는 것</span>이 가장 중요합니다.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">04</div>
+    <div class="turn-topic">일상 이야기 시작하기</div>
+  </div>
+
+  <div class="main-sentence">
+    I’m good.<br>
+    I went to the gym this morning.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      아임 굿.<br>
+      아이 웬트 투 더 짐 디스 모닝.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      저는 좋아요.<br>
+      오늘 아침에 헬스장에 갔어요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I’m good
+      </div>
+
+      <div class="chunk-meaning">
+        저는 괜찮아요
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        I went / to the gym / this morning
+      </div>
+
+      <div class="chunk-meaning">
+        저는 갔어요 / 헬스장에 / 오늘 아침에
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>went</strong> = 갔다</li>
+      <li><strong>gym</strong> = 헬스장</li>
+      <li><strong>this morning</strong> = 오늘 아침</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    영어 회화에서는 “오늘 뭐 했는지”처럼 가벼운 일상 이야기를 정말 자주 합니다.
+  </div>
+
+  <div class="soft-note">
+    문법을 분석하려고 하기보다,<br>
+    <span>“I went to ~” 흐름 자체를 익숙하게 읽어보세요.</span>
+  </div>
+</section>
+  
+  <section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">05</div>
+    <div class="turn-topic">공감하며 대화 이어가기</div>
+  </div>
+
+  <div class="main-sentence">
+    Oh really?<br>
+    I want to work out too, but I’m tired after work.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      오 릴리?<br>
+      아이 원트 투 워크 아웃 투, 벋 아임 타이어드 애프터 워크.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      아 정말요?<br>
+      저도 운동하고 싶은데, 퇴근하면 피곤해요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        Oh really
+      </div>
+
+      <div class="chunk-meaning">
+        아 정말요
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        I want to work out / too
+      </div>
+
+      <div class="chunk-meaning">
+        저는 운동하고 싶어요 / 저도
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        I’m tired / after work
+      </div>
+
+      <div class="chunk-meaning">
+        저는 피곤해요 / 퇴근 후에
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>work out</strong> = 운동하다</li>
+      <li><strong>tired</strong> = 피곤한</li>
+      <li><strong>after work</strong> = 퇴근 후에</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “Oh really?”는 영어 회화에서 정말 자주 사용하는 리액션 표현입니다.<br>
+    짧지만 대화를 자연스럽게 이어주는 역할을 합니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 모든 문장을 분석하려 하지 않아도 괜찮습니다.<br>
+    <span>“I want to ~” 흐름에 익숙해지는 것</span>이 중요합니다.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">06</div>
+    <div class="turn-topic">상대방에게 공감하기</div>
+  </div>
+
+  <div class="main-sentence">
+    Yeah, I understand.<br>
+    I was like that before too.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      예, 아이 언더스탠드.<br>
+      아이 워즈 라이크 댓 비포 투.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      네, 이해해요.<br>
+      저도 예전에는 그랬어요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I understand
+      </div>
+
+      <div class="chunk-meaning">
+        저는 이해해요
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        I was like that / before too
+      </div>
+
+      <div class="chunk-meaning">
+        저는 그랬어요 / 예전에도
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>understand</strong> = 이해하다</li>
+      <li><strong>before</strong> = 이전에, 예전에</li>
+      <li><strong>like that</strong> = 그런 느낌으로</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    영어 회화에서는 상대 이야기에 공감해주는 표현을 자주 사용합니다.<br>
+    “I understand”만 자연스럽게 말해도 대화 분위기가 부드러워집니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 영어를 완벽하게 번역하려 하기보다,<br>
+    <span>상황 속에서 표현의 느낌을 익숙하게 느껴보세요.</span>
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">07</div>
+    <div class="turn-topic">취미 물어보기</div>
+  </div>
+
+  <div class="main-sentence">
+    What do you do after work?<br>
+    Do you have hobbies?
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      왓 두 유 두 애프터 워크?<br>
+      두 유 해브 하비스?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      퇴근 후에 뭐 하세요?<br>
+      취미 있으세요?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        What do you do / after work
+      </div>
+
+      <div class="chunk-meaning">
+        무엇을 하세요 / 퇴근 후에
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        Do you have / hobbies
+      </div>
+
+      <div class="chunk-meaning">
+        가지고 있나요 / 취미를
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>after work</strong> = 퇴근 후에</li>
+      <li><strong>have</strong> = 가지다</li>
+      <li><strong>hobby</strong> = 취미</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    취미 질문은 언어교환에서 정말 자주 나오는 주제입니다.<br>
+    영화, 음악, 운동처럼 편한 이야기로 대화를 이어갈 수 있습니다.
+  </div>
+
+  <div class="soft-note">
+    모든 단어를 외우려고 하지 않아도 괜찮습니다.<br>
+    <span>질문 흐름 자체를 익숙하게 읽어보세요.</span>
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">08</div>
+    <div class="turn-topic">취미 이야기하기</div>
+  </div>
+
+  <div class="main-sentence">
+    I like movies and dramas.<br>
+    How about you?
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      아이 라이크 무비스 앤 드라마스.<br>
+      하우 어바웃 유?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      저는 영화와 드라마를 좋아해요.<br>
+      당신은요?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I like / movies and dramas
+      </div>
+
+      <div class="chunk-meaning">
+        저는 좋아해요 / 영화와 드라마를
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        How about you
+      </div>
+
+      <div class="chunk-meaning">
+        당신은 어떤가요
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>movie</strong> = 영화</li>
+      <li><strong>drama</strong> = 드라마</li>
+      <li><strong>How about you?</strong> = 당신은요?</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “How about you?”는 상대에게 자연스럽게 질문을 넘길 때 정말 자주 사용하는 표현입니다.
+  </div>
+
+  <div class="soft-note">
+    영어 회화는 긴 문장보다,<br>
+    <span>짧은 표현을 자연스럽게 이어가는 것</span>이 더 중요합니다.
+  </div>
+</section>
+  <section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">09</div>
+    <div class="turn-topic">새로운 취미 이야기하기</div>
+  </div>
+
+  <div class="main-sentence">
+    I like YouTube and music.<br>
+    I started learning Japanese last week too.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      아이 라이크 유튜브 앤 뮤직.<br>
+      아이 스타티드 러닝 재패니즈 라스트 위크 투.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      저는 유튜브와 음악을 좋아해요.<br>
+      저도 지난주에 일본어 공부를 시작했어요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I like / YouTube and music
+      </div>
+
+      <div class="chunk-meaning">
+        저는 좋아해요 / 유튜브와 음악을
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        I started learning / Japanese / last week too
+      </div>
+
+      <div class="chunk-meaning">
+        저는 배우기 시작했어요 / 일본어를 / 지난주에도
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>music</strong> = 음악</li>
+      <li><strong>started</strong> = 시작했다</li>
+      <li><strong>learning</strong> = 배우는 것</li>
+      <li><strong>last week</strong> = 지난주</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    영어에서는 “I started ~” 표현을 자주 사용합니다.<br>
+    새로운 취미나 공부 이야기를 할 때 자연스럽게 사용할 수 있습니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 문법을 완벽하게 이해하려 하지 않아도 괜찮습니다.<br>
+    <span>“I started learning ~” 흐름 자체를 익숙하게 읽어보세요.</span>
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">10</div>
+    <div class="turn-topic">상대 취향 물어보기</div>
+  </div>
+
+  <div class="main-sentence">
+    That sounds fun.<br>
+    Which genre do you like?
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      댓 사운즈 펀.<br>
+      위치 장르 두 유 라이크?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      재밌을 것 같네요.<br>
+      어떤 장르를 좋아하세요?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        That sounds / fun
+      </div>
+
+      <div class="chunk-meaning">
+        그것은 들려요 / 재미있게
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        Which genre / do you like
+      </div>
+
+      <div class="chunk-meaning">
+        어떤 장르를 / 좋아하세요
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>sound</strong> = 들리다, 느껴지다</li>
+      <li><strong>fun</strong> = 재미있는</li>
+      <li><strong>genre</strong> = 장르</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “That sounds ~” 표현은 상대 이야기에 반응할 때 정말 자주 사용합니다.<br>
+    회화를 부드럽게 이어주는 표현입니다.
+  </div>
+
+  <div class="soft-note">
+    모든 문장을 직역하려 하지 않아도 괜찮습니다.<br>
+    <span>자연스럽게 반응하는 흐름</span>에 익숙해져보세요.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">11</div>
+    <div class="turn-topic">좋아하는 음악 이야기하기</div>
+  </div>
+
+  <div class="main-sentence">
+    I like house music.<br>
+    Sometimes I listen to Japanese songs.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      아이 라이크 하우스 뮤직.<br>
+      섬타임즈 아이 리슨 투 재패니즈 송즈.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      저는 하우스 음악을 좋아해요.<br>
+      가끔 일본 노래도 들어요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I like / house music
+      </div>
+
+      <div class="chunk-meaning">
+        저는 좋아해요 / 하우스 음악을
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        Sometimes / I listen to / Japanese songs
+      </div>
+
+      <div class="chunk-meaning">
+        가끔 / 저는 들어요 / 일본 노래를
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>sometimes</strong> = 가끔</li>
+      <li><strong>listen to</strong> = 듣다</li>
+      <li><strong>song</strong> = 노래</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “I listen to ~” 표현은 음악뿐 아니라 팟캐스트나 라디오 이야기에도 사용할 수 있습니다.
+  </div>
+
+  <div class="soft-note">
+    처음에는 긴 문장을 만들지 않아도 괜찮습니다.<br>
+    <span>짧은 문장 두 개를 이어서 말하는 연습</span>만으로도 충분합니다.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">12</div>
+    <div class="turn-topic">좋아하는 가수 물어보기</div>
+  </div>
+
+  <div class="main-sentence">
+    Oh nice.<br>
+    Which singer do you like?
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      오 나이스.<br>
+      위치 싱어 두 유 라이크?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      오 좋네요.<br>
+      어떤 가수를 좋아하세요?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        Oh nice
+      </div>
+
+      <div class="chunk-meaning">
+        오 좋네요
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        Which singer / do you like
+      </div>
+
+      <div class="chunk-meaning">
+        어떤 가수를 / 좋아하세요
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>which</strong> = 어떤</li>
+      <li><strong>singer</strong> = 가수</li>
+      <li><strong>like</strong> = 좋아하다</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    취향을 물어보는 질문은 영어 회화에서 정말 자주 나옵니다.<br>
+    영화, 음악, 음식 등 다양한 주제로 확장할 수 있습니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 문장을 빠르게 해석하려 하기보다,<br>
+    <span>질문과 대답 흐름 자체를 익숙하게 느껴보세요.</span>
+  </div>
+</section>
+  
+  <section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">13</div>
+    <div class="turn-topic">좋아하는 가수 이야기하기</div>
+  </div>
+
+  <div class="main-sentence">
+    Yes, I really like Kenshi Yonezu.<br>
+    His songs are great.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      예스, 아이 릴리 라이크 켄시 요네즈.<br>
+      히즈 송즈 아 그레잇.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      네, 저는 켄시 요네즈를 정말 좋아해요.<br>
+      그 사람 노래는 정말 좋아요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I really like / Kenshi Yonezu
+      </div>
+
+      <div class="chunk-meaning">
+        저는 정말 좋아해요 / 켄시 요네즈를
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        His songs / are great
+      </div>
+
+      <div class="chunk-meaning">
+        그의 노래들은 / 좋아요
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>really</strong> = 정말</li>
+      <li><strong>song</strong> = 노래</li>
+      <li><strong>great</strong> = 좋은, 멋진</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “I really like ~”는 좋아하는 것을 이야기할 때 정말 자주 사용하는 표현입니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 문법보다,<br>
+    <span>“좋아하는 것을 자연스럽게 말하는 느낌”</span>에 익숙해져보세요.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">14</div>
+    <div class="turn-topic">공감하며 반응하기</div>
+  </div>
+
+  <div class="main-sentence">
+    I know him!<br>
+    Yeah, me too.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      아이 노우 힘!<br>
+      예, 미 투.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      저 그 사람 알아요!<br>
+      네, 저도요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I know / him
+      </div>
+
+      <div class="chunk-meaning">
+        저는 알아요 / 그를
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        me too
+      </div>
+
+      <div class="chunk-meaning">
+        저도요
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>know</strong> = 알다</li>
+      <li><strong>him</strong> = 그를, 그 사람을</li>
+      <li><strong>me too</strong> = 저도요</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “Me too”는 공감할 때 정말 많이 사용하는 표현입니다.<br>
+    짧지만 회화를 자연스럽게 이어주는 역할을 합니다.
+  </div>
+
+  <div class="soft-note">
+    모든 문장을 길게 말하지 않아도 괜찮습니다.<br>
+    <span>짧은 리액션만으로도 충분히 대화를 이어갈 수 있습니다.</span>
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">15</div>
+    <div class="turn-topic">영화 제목 물어보기</div>
+  </div>
+
+  <div class="main-sentence">
+    Really?<br>
+    What was the name of the movie?
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      릴리?<br>
+      왓 워즈 더 네임 오브 더 무비?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      정말요?<br>
+      영화 제목이 뭐였어요?
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        What was / the name / of the movie
+      </div>
+
+      <div class="chunk-meaning">
+        무엇이었나요 / 이름은 / 그 영화의
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>name</strong> = 이름</li>
+      <li><strong>movie</strong> = 영화</li>
+      <li><strong>really</strong> = 정말로</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    영어 회화에서는 “What was the name ~?” 표현을 자주 사용합니다.<br>
+    제목이나 사람 이름을 물어볼 때 사용할 수 있습니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 문장을 완벽하게 분석하려 하지 않아도 괜찮습니다.<br>
+    <span>질문하는 흐름</span>에 익숙해져보세요.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">16</div>
+    <div class="turn-topic">잠시 생각하기</div>
+  </div>
+
+  <div class="main-sentence">
+    I forgot the title.<br>
+    Let me search it for a second.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      아이 포갓 더 타이틀.<br>
+      렛 미 서치 잇 포 어 세컨드.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      제목을 까먹었어요.<br>
+      잠깐 검색해볼게요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I forgot / the title
+      </div>
+
+      <div class="chunk-meaning">
+        저는 까먹었어요 / 제목을
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        Let me search / it / for a second
+      </div>
+
+      <div class="chunk-meaning">
+        제가 검색해볼게요 / 그것을 / 잠깐
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>forgot</strong> = 까먹었다</li>
+      <li><strong>title</strong> = 제목</li>
+      <li><strong>search</strong> = 검색하다</li>
+      <li><strong>for a second</strong> = 잠깐</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    실제 회화에서는 바로 답이 안 나올 때도 많습니다.<br>
+    “잠깐만요” 느낌의 표현도 자연스럽게 자주 사용합니다.
+  </div>
+
+  <div class="soft-note">
+    영어 회화는 완벽하게 준비된 문장만 사용하는 것이 아닙니다.<br>
+    <span>생각하면서 이어가는 흐름</span>도 정말 중요합니다.
+  </div>
+</section>
+  <section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">17</div>
+    <div class="turn-topic">찾은 정보 말하기</div>
+  </div>
+
+  <div class="main-sentence">
+    Oh, I found it.<br>
+    The movie was “Spirited Away.”
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      오, 아이 파운드 잇.<br>
+      더 무비 워즈 스피리티드 어웨이.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      오, 찾았어요.<br>
+      영화 제목은 “센과 치히로의 행방불명”이었어요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I found / it
+      </div>
+
+      <div class="chunk-meaning">
+        저는 찾았어요 / 그것을
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        The movie / was / “Spirited Away”
+      </div>
+
+      <div class="chunk-meaning">
+        그 영화는 / ~이었어요 / “센과 치히로의 행방불명”
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>found</strong> = 찾았다</li>
+      <li><strong>movie</strong> = 영화</li>
+      <li><strong>was</strong> = ~이었다</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “I found it”은 검색하거나 찾았을 때 정말 자주 사용하는 표현입니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 문장을 빠르게 이해하려 하기보다,<br>
+    <span>짧은 문장을 자연스럽게 이어가는 흐름</span>에 익숙해져보세요.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">18</div>
+    <div class="turn-topic">영화 감상 이야기하기</div>
+  </div>
+
+  <div class="main-sentence">
+    Ah, I know that movie.<br>
+    The animation was beautiful.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      아, 아이 노우 댓 무비.<br>
+      디 애니메이션 워즈 뷰티풀.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      아, 저 그 영화 알아요.<br>
+      애니메이션이 아름다웠어요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I know / that movie
+      </div>
+
+      <div class="chunk-meaning">
+        저는 알아요 / 그 영화를
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        The animation / was beautiful
+      </div>
+
+      <div class="chunk-meaning">
+        애니메이션은 / 아름다웠어요
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>animation</strong> = 애니메이션</li>
+      <li><strong>beautiful</strong> = 아름다운</li>
+      <li><strong>movie</strong> = 영화</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    영화나 음악 감상을 이야기할 때는 “beautiful”, “good”, “fun” 같은 짧은 표현도 자주 사용합니다.
+  </div>
+
+  <div class="soft-note">
+    영어 회화는 어려운 표현보다,<br>
+    <span>짧고 편한 감상 표현</span>을 자연스럽게 사용하는 것이 더 중요합니다.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">19</div>
+    <div class="turn-topic">다음 대화 약속하기</div>
+  </div>
+
+  <div class="main-sentence">
+    Yeah, I enjoyed it a lot.<br>
+    We should talk about movies again next time.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      예, 아이 인조이드 잇 어 랏.<br>
+      위 슈드 톡 어바웃 무비스 어게인 넥스트 타임.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      네, 정말 재밌게 봤어요.<br>
+      다음에 영화 이야기 또 해요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        I enjoyed / it / a lot
+      </div>
+
+      <div class="chunk-meaning">
+        저는 즐겼어요 / 그것을 / 많이
+      </div>
+
+      <br>
+
+      <div class="chunk-line">
+        We should talk about / movies / again next time
+      </div>
+
+      <div class="chunk-meaning">
+        우리 이야기해야 해요 / 영화에 대해 / 다음에도
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>enjoyed</strong> = 즐겼다</li>
+      <li><strong>a lot</strong> = 많이</li>
+      <li><strong>again</strong> = 다시</li>
+      <li><strong>next time</strong> = 다음에</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    “next time” 표현은 다음 약속이나 다음 대화를 이야기할 때 정말 자주 사용합니다.
+  </div>
+
+  <div class="soft-note">
+    지금은 긴 문장을 완벽하게 만들기보다,<br>
+    <span>“다음에도 이야기하고 싶다”는 느낌</span>을 전달하는 것이 중요합니다.
+  </div>
+</section>
+
+<section class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">20</div>
+    <div class="turn-topic">대화 마무리하기</div>
+  </div>
+
+  <div class="main-sentence">
+    Sure!<br>
+    It was really nice talking with you today.
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">발음</div>
+    <p class="info-text korean-pron">
+      슈어!<br>
+      잇 워즈 릴리 나이스 토킹 위드 유 투데이.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">자연 해석</div>
+    <p class="info-text">
+      좋아요!<br>
+      오늘 이야기해서 정말 즐거웠어요.
+    </p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">의미 덩어리</div>
+
+    <div class="chunk-box">
+      <div class="chunk-line">
+        It was / really nice / talking with you / today
+      </div>
+
+      <div class="chunk-meaning">
+        정말 좋았어요 / 정말로 / 당신과 이야기하는 것이 / 오늘
+      </div>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">단어</div>
+
+    <ul class="word-list">
+      <li><strong>really</strong> = 정말</li>
+      <li><strong>nice</strong> = 좋은</li>
+      <li><strong>talking with</strong> = ~와 이야기하는 것</li>
+      <li><strong>today</strong> = 오늘</li>
+    </ul>
+  </div>
+
+  <div class="practice-tip">
+    대화를 마무리할 때는 긴 표현보다,<br>
+    짧고 부드러운 표현이 더 자연스럽게 들리는 경우가 많습니다.
+  </div>
+
+  <div class="soft-note">
+    이번 레슨의 목표는 완벽한 영어보다,<br>
+    <span>영어로 사람과 편하게 대화하는 경험</span>에 익숙해지는 것입니다.
+  </div>
+</section>
