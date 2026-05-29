@@ -85,10 +85,6 @@
   
   .jp-drill-wrap ruby rt { font-size: 11px; color: #64748b; }
 </style>
-<a href="https://www.somoim.co.kr/3e682319-49b4-43af-b071-2b2e9ef3bbf11" target="_blank" class="training-banner">
-  <span class="finger">👈👈</span>
-  오프라인 일본어 트레이닝 참가 정보
-</a>
 <div class="jp-drill-wrap">
 
   <div class="notice-box">
