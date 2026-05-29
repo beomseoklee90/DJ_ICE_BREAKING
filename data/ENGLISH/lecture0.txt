@@ -1,0 +1,309 @@
+초중급 1강
+<style>
+.lesson-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+  color: #1f2933;
+  line-height: 1.65;
+}
+
+.lesson-hero {
+  background: linear-gradient(135deg, #f7f4ee, #eef5f8);
+  border: 1px solid #ded7c9;
+  border-radius: 28px;
+  padding: 34px 30px;
+  margin-bottom: 24px;
+}
+
+.lesson-label {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #234f68;
+  margin-bottom: 10px;
+}
+
+.lesson-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.lesson-sub {
+  font-size: 18px;
+  color: #536171;
+}
+
+.turn-card {
+  background: #ffffff;
+  border: 1px solid #e3ddd2;
+  border-radius: 26px;
+  padding: 28px 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 14px 34px rgba(31, 41, 51, 0.05);
+}
+
+.turn-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.turn-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: #234f68;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.turn-topic {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #234f68;
+}
+
+.main-sentence {
+  background: #f7f4ee;
+  border-radius: 22px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+}
+
+.info-block {
+  border-top: 1px solid #eee7dc;
+  padding-top: 18px;
+  margin-top: 18px;
+}
+
+.info-title {
+  display: inline-block;
+  background: #f3eadb;
+  color: #8a5a16;
+  font-size: 13px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+}
+
+.info-text {
+  font-size: 17px;
+  color: #3f4a56;
+  margin: 0;
+}
+
+.chunk-box {
+  background: #eef5f8;
+  border: 1px solid #d7e5eb;
+  border-radius: 20px;
+  padding: 18px 18px;
+  font-size: 18px;
+  color: #1f2933;
+}
+
+.chunk-line {
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.chunk-meaning {
+  color: #536171;
+}
+
+.word-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 17px;
+  color: #3f4a56;
+}
+
+.word-list li {
+  margin-bottom: 6px;
+}
+
+.soft-note {
+  background: #234f68;
+  color: #ffffff;
+  border-radius: 22px;
+  padding: 20px 18px;
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.soft-note span {
+  color: #ffd68f;
+}
+
+.practice-tip {
+  background: #fff8ea;
+  border: 1px solid #f0d7a7;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 18px;
+  font-size: 17px;
+  color: #5d4420;
+}
+
+.korean-pron {
+  color: #536171;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .lesson-wrap {
+    padding: 24px 14px;
+  }
+
+  .lesson-title {
+    font-size: 27px;
+  }
+
+  .lesson-sub {
+    font-size: 16px;
+  }
+
+  .turn-card {
+    padding: 23px 18px;
+  }
+
+  .main-sentence {
+    font-size: 21px;
+  }
+
+  .turn-topic {
+    font-size: 19px;
+  }
+}
+</style>
+
+<div class="lesson-hero">
+  <div class="lesson-label">ENGLISH ICE BREAKING · PRE-INTERMEDIATE</div>
+  <h1 class="lesson-title">이번 강의의 포인트: 세련된 밑밥 깔기와 공감</h1>
+  <p class="lesson-sub">언어교환 모임에서 어색하게 "I can't speak English"라고 방어하는 대신, 원어민들이 매일 쓰는 "getting used to(~에 적응 중이다)"와 "sounds(~하게 들린다)" 패턴을 활용해 훨씬 자연스럽고 성숙하게 대화를 시작해 봅니다.</p>
+</div>
+
+<!-- 1차 핑퐁 - Sentence 1 -->
+<div class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">01</div>
+    <div class="turn-topic">나의 긴장된 상태 솔직하게 말하기</div>
+  </div>
+  <div class="main-sentence">To be honest, I'm still getting used to speaking in English.</div>
+  
+  <div class="info-block">
+    <div class="info-title">1. 자연 해석</div>
+    <p class="info-text">솔직히 말해서, 저 아직 영어로 말하는 게 익숙하지 않아요. (적응하는 중이에요)</p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">2. 의미 덩어리</div>
+    <div class="chunk-box">
+      <strong>To be honest / I'm still getting used to / speaking in English</strong><br>
+      <span class="chunk-meaning">솔직히 말해서 / 전 아직 ~에 적응하는 중이에요 / 영어로 말하는 것에</span>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">3. 모든 표현 단어 정리</div>
+    <ul class="word-list">
+      <li><strong>to be honest</strong> = 솔직히 말해서 (숙어)</li>
+      <li><strong>still</strong> = 아직, 여전히 (부사)</li>
+      <li><strong>getting used to</strong> = ~에 적응하는 중이다, 익숙해지고 있다 (진행형 숙어)</li>
+      <li><strong>speaking</strong> = 말하는 것 (동명사)</li>
+      <li><strong>in English</strong> = 영어로 (전치사구)</li>
+    </ul>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">4. 문법 포인트</div>
+    <ul class="word-list">
+      <li><strong>get used to + 동명사(-ing) :</strong> 한국인들이 가장 많이 틀리는 초중급의 핵심 문법입니다. 여기서 'to'는 부정사가 아니라 전치사이므로 뒤에 반드시 명사나 동명사(speaking)가 와야 합니다.</li>
+      <li><strong>현재진행형 (be + -ing) :</strong> 'I'm getting'을 사용하여, 완벽하진 않지만 현재 열심히 적응해 나가고 있는 능동적인 과정임을 나타냅니다.</li>
+    </ul>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">5. 해석상 뉘앙스 설명</div>
+    <p class="info-text">
+      "I am not good at English(저 영어 못해요)"라고 말하면 대화의 흐름이 뚝 끊기고 분위기가 처집니다. 반면 <strong>"getting used to(적응하는 중이다)"</strong>를 쓰면, "완벽하진 않지만 노력하고 있으니 조금 이해해 달라"는 긍정적이고 세련된 뉘앙스를 파트너에게 전달할 수 있습니다. 
+    </p>
+  </div>
+
+  <div class="practice-tip">
+    <strong>💡 영어 공부법 가이드라인</strong><br>
+    문법적으로 'to 뒤에 ing가 오냐'를 연산하려다 입이 멈춥니다. <strong>"아임 스틸 게팅 유즈드 투"</strong> 자체를 하나의 긴 단어처럼 입에 붙여두고, 그 뒤에 원하는 행동(speaking, listening, working)을 갈아 끼우는 훈련을 하세요.
+  </div>
+</div>
+
+<!-- 1차 핑퐁 - Sentence 2 -->
+<div class="turn-card">
+  <div class="turn-top">
+    <div class="turn-number">02</div>
+    <div class="turn-topic">상대방 안심시키며 칭찬하기</div>
+  </div>
+  <div class="main-sentence">Don't worry. Your pronunciation sounds perfectly natural to me.</div>
+  
+  <div class="info-block">
+    <div class="info-title">1. 자연 해석</div>
+    <p class="info-text">걱정 마세요. 제 귀에는 발음이 완벽하게 자연스럽게 들리는데요.</p>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">2. 의미 덩어리</div>
+    <div class="chunk-box">
+      <strong>Don't worry. Your pronunciation sounds / perfectly natural / to me</strong><br>
+      <span class="chunk-meaning">걱정 마세요. 당신의 발음은 ~하게 들려요 / 완벽하게 자연스러운 / 나에게는</span>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">3. 모든 표현 단어 정리</div>
+    <ul class="word-list">
+      <li><strong>don't worry</strong> = 걱정하지 마세요 (명령문)</li>
+      <li><strong>your</strong> = 당신의 (소유격 대명사)</li>
+      <li><strong>pronunciation</strong> = 발음 (명사)</li>
+      <li><strong>sounds</strong> = ~하게 들린다 (감각동사 3인칭 단수)</li>
+      <li><strong>perfectly</strong> = 완벽하게 (부사)</li>
+      <li><strong>natural</strong> = 자연스러운 (형용사)</li>
+      <li><strong>to me</strong> = 나에게는, 제 기준으로는 (전치사구)</li>
+    </ul>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">4. 문법 포인트</div>
+    <ul class="word-list">
+      <li><strong>감각동사 + 형용사 (sounds natural) :</strong> 영어는 상태를 표현할 때 'is' 대신 감각동사(look, sound, feel)를 매우 자주 씁니다. "발음이 좋다"를 "sounds natural"로 표현하는 것이 원어민 특유의 감각입니다.</li>
+      <li><strong>부사의 형용사 수식 :</strong> natural 앞에 perfectly를 붙여 칭찬의 강도를 최대로 끌어올렸습니다.</li>
+    </ul>
+  </div>
+
+  <div class="info-block">
+    <div class="info-title">5. 해석상 뉘앙스 설명</div>
+    <p class="info-text">
+      단순히 "You are good"이라고 하는 것보다, 구체적으로 'pronunciation(발음)'을 짚어주고 <strong>"to me(내 귀에는)"</strong>를 붙이면 훨씬 다정하고 배려심 넘치는 리액션이 됩니다. 상대방의 긴장을 단번에 풀어줄 수 있는 가장 좋은 언어교환 리액션입니다.
+    </p>
+  </div>
+
+  <div class="soft-note">
+    <strong>💡 영어 공부법 가이드라인</strong><br>
+    "~인 것 같다"를 말할 때 한국인들은 자꾸 'I think~'만 남발합니다. 앞으로는 'I think it is good' 대신 <strong>"It sounds good"</strong>처럼 감각동사를 활용해 곧바로 반응하는 회로를 열어두세요.
+  </div>
+</div>
