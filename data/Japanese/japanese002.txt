@@ -2586,7 +2586,7 @@
         <p style="margin:0 0 5px 0;"><span class="grammar-focus">ええ、またぜひ</span> : 긍정의 `ええ`와 '꼭'을 뜻하는 `ぜひ`를 추가하여, 다음 만남에 대한 적극적인 의지를 표현합니다.<br>
         <span class="grammar-focus">お会(あ)いましょう</span> : 동사 `会う`의 `ます`형 앞에 `お`를 붙여 겸양과 존경의 의미를 담은 한층 더 정중한 작별 인사입니다.</p>
         <div class="grammar-sub-title">2. 뉘앙스</div>
-        <p style="margin:0;">만약 상대방과 동갑이거나 매우 친밀한 사이로 발전했다면, 이러한 격식을 덜어내고 <b>"またね！(또 봐!)"</b> 혹은 <b>"また遊(あそ)ぼうね(또 놀자)"</b>와 같은 캐주얼한 표현으로 변형하여 사용할 수 있습니다.</p>
+        <p style="margin:0;"><a href="asdfasdfasdfasfdsadf.html">만약</a> 상대방과 동갑이거나 매우 친밀한 사이로 발전했다면, 이러한 격식을 덜어내고 <b>"またね！(또 봐!)"</b> 혹은 <b>"また遊(あそ)ぼうね(또 놀자)"</b>와 같은 캐주얼한 표현으로 변형하여 사용할 수 있습니다.</p>
       </div>
     </div>
   </div>
@@ -2917,7 +2917,7 @@
       <div class="word-item">犬 (개)<span>いぬ / 이누</span></div>
       <div class="word-item">あります (있습니다)<span>사물/식물이</span></div>
       <div class="word-item">時間 (시간)<span>じかん / 지칸</span></div>
-      <div class="word-item">お金 (money)<span>おかね / 오카네</span></div>
+      <div class="word-item">お金 (money)<span>おかね / <a href="./asdfasdfasdfasfdsadf.html">오카네</a></span></div>
     </div>
   </div>
 -->
