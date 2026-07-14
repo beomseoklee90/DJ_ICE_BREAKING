@@ -1,4 +1,4 @@
-존경어・겸양어[중급]
+ビジネス日本語
 <style>
   :root {
     --primary-color: #4f46e5;

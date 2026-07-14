@@ -1,0 +1,535 @@
+MBTI
+<style>
+  /* MBTI 교재 컨테이너 공통 스타일 (React 스코핑용) */
+  .mbti-container {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: #2c3e50;
+    line-height: 1.7;
+  }
+
+  .mbti-container * {
+    box-sizing: border-box;
+  }
+
+  /* 타이틀 및 가이드라인 */
+  .mbti-header {
+    text-align: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  .mbti-header h1 {
+    font-size: 28px;
+    color: #1a365d;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+  }
+
+  .mbti-header p {
+    font-size: 15px;
+    color: #4a5568;
+    margin: 0;
+  }
+
+  /* 질문 카드 루프 */
+  .mbti-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mbti-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+  }
+
+  .mbti-q-number {
+    display: inline-block;
+    background: #3182ce;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .mbti-question {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 10px 0;
+  }
+
+  .mbti-situation {
+    font-size: 15px;
+    color: #4a5568;
+    background: #ebf8ff;
+    padding: 15px;
+    border-left: 4px solid #3182ce;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  /* 선택지 스타일 */
+  .mbti-options {
+    margin-bottom: 25px;
+  }
+
+  .mbti-option-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-option-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #edf2f7;
+    color: #4a5568;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  /* 선택지별 해설 */
+  .mbti-analysis {
+    background: #fffaf0;
+    border: 1px solid #feebc8;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 25px;
+  }
+
+  .mbti-analysis-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #dd6b20;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-analysis-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13.5px;
+    color: #7b341e;
+  }
+
+  .mbti-analysis-list li {
+    margin-bottom: 6px;
+  }
+
+  /* 추가 질문 3개 */
+  .mbti-extra-qs {
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 20px;
+  }
+
+  .mbti-extra-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 10px;
+  }
+
+  .mbti-extra-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #718096;
+  }
+
+  .mbti-extra-list li {
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+</style>
+<div class="mbti-container">
+  <div class="mbti-header">
+    <h1>ネイティブと楽しむ！日韓MBTI大激突</h1>
+    <p>究極のシチュエーションで自分の行動を選び、お互いの価値観の違いにツッコミを入れながら本音で語り合いましょう！</p>
+  </div>
+
+  <!-- LOOP 1 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q1. T vs F 感情の代理戦</span>
+    <h3 class="mbti-question">大親友のお店が潰れてしまったとき</h3>
+    <div class="mbti-situation">
+      大親友が満を持してオープンしたカフェが、わずか半年で閉店することになってしまいました。友人に「一杯付き合ってくれ」と呼び出されて行ってみると、友人は涙を流しながら「本当に死ぬ気で頑張ったのに…なんで自分ばっかりこんな目に遭うんだ。世の中が恨めしいよ」と嘆いています。このとき、あなたならどうする？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「本当に辛かったよね…本当に本当によく頑張ったよ。話を聞いてるだけでこっちまで涙が出てきちゃうよ」 ➡️ ひたすら共感し、相手の感情に寄り添う
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「でも正直、立地があまり良くなかったよね。保証金や居抜き料（権利金）はちゃんと回収できた？ 廃業届はすぐ出したの？」 ➡️ 冷静に理性を保ち、具体的な解決策を提示する
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「この悲しみを吹き飛ばすために、明日今すぐ台湾にでも旅に出よう！ 向こうに行って全部忘れちゃおう！」 ➡️ 気分転換を促し、無理やり話題を変える
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 感情チャージが最優先の「共感のプロ」。うわべだけの励ましに見えるかもしれませんが、傷ついた友人にとっては一番温かい心の拠り所になります。</li>
+        <li><strong>Bを選択（T傾向）：</strong> 現実世界の救世主。感情は感情として、未払いの税金や法的な手続きの方が重要だと考えます。友人に実質的な抜け道を作ってあげようとするツンデレタイプです。</li>
+        <li><strong>Cを選択（P傾向）：</strong> 行き当たりばったりの「刺激の妖精」。厄介な現実から逃避させることで、一時的に痛みを消し去ろうとする独特な処方箋を出します。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>皆さんは自分が辛いとき、一緒に悲しんでくれる友達（A）と、現実的なアドバイスをくれる友達（B）のどちらを頼りにしますか？</li>
+        <li>Bを選んだ人は、本当に友達を思って悪役を買って出ているのでしょうか？ それとも、泣いている姿を見るのが気まずくて早く話を終わらせたいだけでしょうか？</li>
+        <li>日本の友達は悩みを相談するとき、本音（ホンネ）を隠しがちですか？ それとも、正直に打ち明けてアドバイスを求めますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 2 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q2. J vs P 計画大惨事</span>
+    <h3 class="mbti-question">旅行当日の朝、インフルエンザ宣言</h3>
+    <div class="mbti-situation">
+      一ヶ月前から最高級の旅館を予約し、航空券まで手配して準備万端だった日韓温泉旅行の当日の朝！ 駅に向かおうとしたその瞬間、一緒に行く予定だった友達から電話が来て、「急に高熱が出て病院に行ったら、インフルエンザって診断されちゃった…どうしても行けそうにない、本当にごめんね泣」と言われました。このとき、あなたの本能的な行動は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「えっ、大丈夫！？ お見舞い行こうか？ とりあえず他のことは気にせず、ゆっくり休んで！」と、まずは友達の体調を最優先に心配する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「キャンセル料の規定を確認しよう。それから、私一人だけで予定通り行くかどうかの代替案を立てなきゃ」と、スマホで即座にキャンセル料計算機を叩く。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「おっ、ラッキー！ 一人旅じゃん。旅館に一人で行って、シングルルームにアップグレードしてもらえるか聞いてみよう！」と、自由を満喫する準備を始める。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 人間関係を重視するお人好し。お金や旅行も、友達の健康より先に来ることはありません。涙ぐましい同情心に溢れています。</li>
+        <li><strong>Bを選択（J傾向）：</strong> コントロール不可能な状況を激しく嫌う計画魔。悲劇的な感情に浸っている暇があったら、1円でも損失（埋没費用）を減らすために理性を研ぎ澄まします。</li>
+        <li><strong>Cを選択（P傾向）：</strong> ピンチをチャンスに変える柔軟性の達人。人生におけるすべての狂った計画は、新しい冒険の始まりにすぎないと考えています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>実際に旅行に行くとき、エクセルで分刻みの計画を立てますか？ それとも、空港に向かう途中で宿を予約しますか？</li>
+        <li>当日の朝にドタキャンした友達に対して、キャンセル料をきっちり請求するのが正解でしょうか？ それとも、相手が病気なのだから自分が全部被ってあげるべきでしょうか？</li>
+        <li>日本では、急な約束のキャンセル（当日ドタキャン）に対して、韓国よりも大きな迷惑（メイワク）だと感じる傾向がありますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 3 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q3. E vs I バッテリー放電器</span>
+    <h3 class="mbti-question">恋人の親友たちの集まりに強制参加</h3>
+    <div class="mbti-situation">
+      恋人が、自分の高校時代の親友5人が集まる賑やかな飲み会にあなたを連れていきました。全員があなたを「おー！ 話はたくさん聞いてるよ！」と大歓迎してくれ、ひっきりなしに個人的な質問を投げかけながらお酒を注いでくれる雰囲気です。このとき、あなたの心の状態は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「せっかく来たんだから、この場を自分が一番盛り上げてやる！」 ➡️ 中心になってテンションを上げ、全員友達にしてしまう。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 愛想笑いは浮かべ続けているものの、頭の中では「ここはどこ、私は誰…早く帰りたい」とエネルギーがどんどん削られている。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 恋人に目配せをしながら「ちょっとしんどいんだけど、一時間くらいしたら空気を読んで抜け出さない？」と正直に伝える。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（E傾向）：</strong> 社交性マックスの陽キャ。見知らぬ人たちからの過度な関心は、彼らにとってストレスではなく、ドーパミンの起爆剤になります。</li>
+        <li><strong>Bを選択（I傾向）：</strong> 気配り上手な愛想笑いロボ。恋人の顔を立てるために、静かにエネルギーを削りながら死にそうになっています。</li>
+        <li><strong>Cを選択（現実妥協派）：</strong> 線引きをはっきりさせる個人主義者。恋人のメンツよりも、自分の内面の平和と疲労限界値の方がはるかに重要だと判断します。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>自分の友達の集まりに頻繁に恋人を連れていきたがる人と、恋人と友達の関係を徹底的に分ける人、付き合うならどちらが良いですか？</li>
+        <li>Iタイプの人が飲み会でボーッとして喋らないでいるとき、「もっと楽しんで！ テンション上げていこう！」と引っ張ってくれるEタイプはありがたいですか？ それともエネルギーを吸い取られますか？</li>
+        <li>日本の飲み会文化では、知らない外部の人が来たとき、どのような歓迎の仕方をしますか？ あるいは、どのような距離感を保ちますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 4 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q4. S vs N 妄想の限界値</span>
+    <h3 class="mbti-question">大親友から「もし私がゾンビになったら殺してくれる？」と聞かれたら</h3>
+    <div class="mbti-situation">
+      深夜にビールを飲みながらNetflixのゾンビ映画を見ていた大親友が、急に真剣な表情になってあなたを見つめ、「なぁ、もしゾンビウイルスが流行って私がゾンビになったら、あんた私のこと殺してくれる？ それとも最後まで縛り付けてでも守ってくれる？」と聞いてきました。あなたの反応は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「何言ってんの、くだらないこと言ってないで早く寝なよ」 ➡️ 質問自体を却下し、現実的なツッコミで返す。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「当然すぐにヘッドショット（脳天撃ち抜き）でしょ。でも、ゾンビになっても私のことを覚えている状態だったらどうしよう？ ゾンビウイルスの脳への感染経路は…」 ➡️ すでにゾンビ世界のサバイバルルールを本気で構築し始める。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「もちろん縛ってでも治療法が見つかるまで隠してあげるよ！ 殺すなんて絶対無理泣」 ➡️ 友人の「自分を大切に思う気持ち」を試すサインとして受け止め、感情的に対応する。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（S傾向）：</strong> 地に足ががっつりついたリアリスト。起きるはずのないゾンビ話をすること自体、彼らにとっては究極の時間ロスです。</li>
+        <li><strong>Bを選択（N傾向）：</strong> 想像力の無限ループを回す空想家。とりとめもない空想が生きる原動力であり、世界の終末シナリオを時々本気で脳内でシミュレーションしています。</li>
+        <li><strong>Cを選択（F傾向）：</strong> 愛らしいロマンチスト。ゾンビという事実よりも、「二人の涙ぐましい友情や愛」という感情的な価値を証明することに深いロマンを抱きます。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>普段から「もし世界が滅亡したら？」「もし10億円が手に入ったら？」といった、あり得ない妄想をよく楽しむタイプですか？</li>
+        <li>Sタイプの人にとって、突飛な妄想を常に投げかけてくるNタイプとの会話は退屈ですか？ それとも斬新な刺激になりますか？</li>
+        <li>このような一風変わったバランスゲーム（究極の選択）は、日本でもよく流行ったり楽しまれたりしていますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 5 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q5. T vs F 消耗的な葛藤法</span>
+    <h3 class="mbti-question">大親友が徹夜で書いた小説を見せてくれたけど、正直面白くないとき</h3>
+    <div class="mbti-situation">
+      親しい友達が作家を夢見て、徹夜で書き上げた短編小説（あるいは一生懸命デザインしたロゴデザイン）をフィードバックしてほしいと持ってきました。照れくさそうにしている友達の前で読んでみましたが、正直構成がめちゃくちゃで、全く大衆受けしそうにありません。このとき、あなたの行動は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「わあ、文体がすごく独特で文章力がすごいね！ 徹夜して書いたんだって？本当にお疲れ様！」 ➡️ プロセスとやる気を育てる爆風の褒めちぎり。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「正直、2章の部分はちょっと退屈だから読者が離れちゃうと思う。この葛藤の構造を変えて、トレンディな言い回しに全面修正してみたらどう？」 ➡️ グサグサ突き刺さる実質的な添削。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「すごーい！ これもし上手くいってドラマ化されたら、主演は誰がいいかな？ 山崎賢人？ それとも韓国の俳優？」 ➡️ 現実的なフィードバックはスルーして、ハッピーセットな妄想を膨らませる。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 自己肯定感の絶対的ディフェンダー。この小説が外でどれだけ酷評されるかは重要ではありません。ひとまず自分の前では、その友達が最も温かい承認を受ける作家であってほしいと願います。</li>
+        <li><strong>Bを選択（T傾向）：</strong> 異常なまでの使命感を背負った「鬼のファクト突きつけ魔」。友達の成功を「心から」願う気持ちを、残酷なほど精巧で容赦のない批判という形でプレゼントします。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>もし自分が一生懸命作った作品を持っていくとしたら、お世辞のような褒め言葉（A）と、残酷だけど的確な辛口フィードバック（B）のどちらが欲しいですか？</li>
+        <li>Bをする人は、本当に友達のために毒舌を振るっているのでしょうか？ それとも、遠回しに評論家ぶることで優越感を感じているだけでしょうか？</li>
+        <li>日本の「建前（タテマエ）」文化では、このような状況において、一般的にどのようなオブラートに包んだ表現をしますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 6 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q6. J vs P 衝動買い</span>
+    <h3 class="mbti-question">新しいパソコン（または高い電子機器）を買うとき</h3>
+    <div class="mbti-situation">
+      思い切って数十万円クラスのノートPC（または高級ブランドバッグ）を新調しようとしています。お店で商品を選んで、レジで会計する直前までのあなたの消費アルゴリズムはどのような感じですか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> スペックの分析は基本中の基本。海外のYouTubeレビュー動画や最安値の推移グラフまで二週間徹底的に分析してから決済する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「うわ、デザイン最高じゃん。限定カラーだって？ 店員さん、これ今すぐお会計で！」 ➡️ 直感とファーストインプレッションが響けば、5分で即決する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> とりあえず店舗で購入し、帰りの電車の中で最安値を検索してみて、もっと安く売っているところを見つけると、急激にブルーになる。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（J/S傾向）：</strong> 合理的データ狂。購入前の苦しい情報収集のプロセス自体を楽しみ、最もコスパが良く完璧な買い物をした瞬間に、脳内が知的な快感で満たされます。</li>
+        <li><strong>Bを選択（P/F傾向）：</strong> ロマンチック浪費家。所有することによる感性的な満足感や、「衝動的に手に入れたときの高揚感」が、数値化されたスペックよりもはるかに価値があると考えます。</li>
+        <li><strong>Cを選択（後悔しがちな現実派）：</strong> 喉元過ぎれば熱さを忘れる、感情オーバーフロー型。購入前の計画性は乏しいのに、コスパへの執着だけは強いため、買ってから苦痛を味わうスタイルです。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>最近してしまった一番高額な衝動買いは何ですか？ また、その満足度は100点満点中何点ですか？</li>
+        <li>Aタイプの人が購入決定までに何十もの条件を吟味しているとき、隣で「早く決めなよ」と急かしてくるPタイプを見ると、正直どのような気持ちになりますか？</li>
+        <li>日本人は一般的に、物を買うときにより慎重で、長く使える耐久性を気にする傾向が強いというのは本当ですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 7 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q7. E vs I 週末の過ごし方</span>
+    <h3 class="mbti-question">待ちに待った金曜日の仕事帰り！</h3>
+    <div class="mbti-situation">
+      一週間、上司の小言や溜まりに溜まった仕事（学業）のストレスでボロボロになりながら、金曜日の帰りの電車に乗りました。週末を控えたあなたにとって、最も美しく完璧な「癒やし」は次のうちどれ？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「こんな日は飲むしかない！」 仲の良い人たちを召集して、繁華街に突撃。おしゃべりとお酒で今週の疲れを一気に吹き飛ばす。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 玄関の鍵を閉めた瞬間スマホをマナーモードにし、デリバリーアプリでお気に入りのフードを注文。ベッドの中でNetflixを朝方まで一気見する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 土曜日の昼過ぎまで泥のように眠り、土曜日の夜遅くに一人だけ呼び出して、静かな近所の居酒屋でしっぽりと深い話を交わす。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（E傾向）：</strong> 外部刺激充電式バッテリー。外に出て他人と関わり、声を出し、言葉を吐き出すことで、自分の中の溜まった疲れがデトックスされると感じます。</li>
+        <li><strong>Bを選択（I傾向）：</strong> 徹底的な孤独充電式バッテリー。人と会って気配りをすること自体が彼らにとっての放電経路であり、完全に「自分一人」になったときに傷ついた精神が自然回復します。</li>
+        <li><strong>Cを選択（I+F傾向）：</strong> 感情チャージの少数精鋭派。浅く広い付き合いよりも、信頼できる人たった一人との精神的な深いつながりを最も効率の良いエネルギー源としています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>週末の間、一度も外に出ずに家に引きこもっていると、鬱っぽくなりますか？ それとも幸せすぎて死にそうになりますか？</li>
+        <li>一人で家で過ごしたいIタイプを見て、「なんで若さを部屋の中で腐らせるの？ 週末なんだから外で思い出を作ろうよ」と連れ出そうとするEタイプの親切心は、善意ですか？ それとも暴力ですか？</li>
+        <li>日本の大学生や会社員の、一般的な金曜日の夜（飲み会文化など）の風景はどのような感じですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 8 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q8. T vs F 感情の対面</span>
+    <h3 class="mbti-question">口論したあとの音信不通事態</h3>
+    <div class="mbti-situation">
+      友達や恋人と些細な誤解からキつい言葉を浴びせ合い、大喧嘩をした末に連絡をぷっつり絶ちました。家に帰って怒りのあまり布団を蹴っ飛ばしながら、あなたの脳内対応はどのように進みますか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「話が通じないな…」 とりあえず自分の感情と相手の怒りが静まるまで、数日間は絶対にスマホを見ず、一人でクールダウンする時間を設ける。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> もやもやして胸が張り裂けそうだ。すぐに電話をかけ、「あんたさっきどういうつもりでああ言ったわけ？ はっきりさせて解決しよう」と誤解の因果関係を徹底的に問い詰める。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「もしかして私と縁を切りたいのかな？ 昔はこんなじゃなかったのに、もう私のこと面倒くさくなったのかな…」 色々と悪いシナリオを描き、夜中にBGMやプロフを病みソングに変える。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（洞窟引きこもり派 / I/T傾向）：</strong> 安全領域の確保が最優先の「洞窟の住人」。怒っている状態の、整理されていない言葉で他人とコミュニケーションをとること自体が危険であると考えます。</li>
+        <li><strong>Bを選択（直球ぶつけ派 / E/T傾向）：</strong> もやもやの消滅に命をかけるロジカル刑事。彼らにとって「未解決の状態の葛藤」は、脳の容量を削り取る深刻なバグなので、今すぐパッチ（修正）を当てないと眠れません。</li>
+        <li><strong>Cを選択（悲観的ファンタジー作家 / I/F/N傾向）：</strong> 脳内妄想の演出家。他人の反応を自分の存在価値と直結させ、傷を自傷するように広げていく、豊かな感受性のアーティストです。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>喧嘩をしたとき、「少し考えさせてくれ」と口を閉ざしてしまう「貝殻（サイレント）タイプ」と、「今すぐ白黒はっきりつけよう」という「対話タイプ」、どちらと戦う方がイライラしますか？</li>
+        <li>喧嘩のあと、先に手を差し伸べる（連絡する）側は、一般的に怒りが少なかった人でしょうか？ それとも、関係が壊れるのをより恐れている人でしょうか？</li>
+        <li>日本の人たちは、喧嘩のあと一般的にどのように仲直りを試みますか？ それとも、音を立てずに静かに関係をフェードアウト（いわゆる「シャットアウト」）させていくのでしょうか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 9 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q9. J vs P 整理整頓</span>
+    <h3 class="mbti-question">スマホのホーム画面とメッセージアプリの管理</h3>
+    <div class="mbti-situation">
+      スマホのホーム画面や、メッセージアプリ（LINEなど）を開いたとき、あなたの通知バッジの数字やアプリの配置状態はだいたいどのようになっていますか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 赤い通知バッジ（未読メッセージ999+）は見るだけで息が詰まる。すべての通知は既読にして常に「0」を維持し、アプリはユーティリティごとにフォルダ分けされて完璧に並んでいる。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 赤い数字が10,000個溜まっていようが、日常生活に一切支障はない。どうせよく使う4つのアプリは指の記憶で押せばいいし、ホーム画面はスクリーンショットやウィジェットでカオス状態。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> フォルダを作るのは面倒だから、とりあえず使わないアプリを最後のページに全部隠し、「見た目だけ」は綺麗にするその場しのぎの整理法を使っている。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（J傾向）：</strong> 統制と秩序の支配者。身の回りのデジタル環境の状態こそが、自分の精神の秩序とイコールです。小さな未読バッジ一つさえ、彼らにとっては狩るべきモンスターです。</li>
+        <li><strong>Bを選択（P傾向）：</strong> 混沌の中の自由な知性。視覚的なカオスさは、彼らの創造性や行動力に微塵のダメージも与えません。脳の効率をそんな細かい管理には使わないのです。</li>
+        <li><strong>Cを選択（F/P傾向）：</strong> 外見を取り繕う世渡り上手。中身はぐちゃぐちゃでも、他人の目線や表面的な平穏のために適切な妥協点を見出す、人間味溢れる面倒くさがり屋です。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>LINEなどのグループチャットで、メッセージを読んだあとあえて返事をせず未読・既読スルーするタイプですか？ それとも相手が寂しがらないように光の速さで返信を返しますか？</li>
+        <li>自分の部屋のインテリアや収納の奥を、他人に自信を持って見せられる整理状態は何％くらいですか？</li>
+        <li>日本人は、細かな雑貨やデジタルの整理整頓において、高い計画性と細やかさを発揮する人が本当に多いのでしょうか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 10 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q10. S vs N 現実代替主義</span>
+    <h3 class="mbti-question">恋人が「私、最近太ったと思わない？」と聞いてくる</h3>
+    <div class="mbti-situation">
+      美味しく夜食を食べていた恋人が、急にスプーンを置いて浮かない顔で顎を触りながら、「ねぇ、私、最近本当に太ったと思わない？ 正直に言って…」と、丸腰状態のあなたに一撃を投げ込んできました。このときの、あなたのとっさの切り抜け方は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「えー！ 太ってるところなんてどこにあんの！ 今がちょうど良くてほっぺが可愛いのに、何言ってんの！」 ➡️ 恋人に再びスプーンを握らせるための、愛に満ちた全力否定。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「うーん、フェイスラインが先週よりちょっと丸くなったかも。明日から一緒に仕事帰りに3km走ろうか？ 食事管理アプリ入れてあげるよ」 ➡️ 事実を直視し、即座に解決ルートを開拓する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「お、確かにちょっと太ったかもね！笑 もう豚さんじゃん、ブーブー！」 ➡️ 地獄から這い上がってきたデスター級の煽りをかます。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 鳥肌注意！MBTI別の心理解説</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 恋愛安全装置の優秀なガーディアン。恋人の質問は、本気で太ったかどうかの分析依頼ではなく、「今も自分のことを愛らしく見てくれているか」という不安の裏返しであることを本能的に見抜いています。</li>
+        <li><strong>Bを選択（T傾向）：</strong> 超効率解決マシーン。愛する恋人の停滞したブルーを根本から取り除くためには、「健康的な運動習慣と食生活のカイゼン」という実践こそが至高のプレゼントだと信じて疑いません。</li>
+        <li><strong>Cを選択（煽り型ヴィラン / T/P傾向）：</strong> ライフ（残機）が9個くらいある宇宙戦士。ユーモアで過酷な難局を乗り越えようとする危険なギャンブラーであり、からかいやじゃれ合いこそが愛情の証拠だと考えています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>「愛しているからこそ、容赦なくファクト（現実）を突きつける（B/C）」と「愛しているからこそ、無条件に都合の良いお世辞を言う（A）」、どちらが成熟した関係だと思いますか？</li>
+        <li>もし自分の恋人が、あのおちゃらけたCの回答を冗談半分で返してきたら、本当に怒りますか？ それとも笑って流せますか？</li>
+        <li>日本のカップル間では、お互いの外見や体型の変化について、どの程度ストレートに指摘し合う雰囲気ですか？</li>
+      </ul>
+    </div>
+  </div>
+</div>
