@@ -1,0 +1,530 @@
+[文化交流会]MBTI_N3
+<style>
+  /* MBTI 교재 컨테이너 공통 스타일 (React 스코핑용) */
+  .mbti-container {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: #2c3e50;
+    line-height: 1.7;
+  }
+
+  .mbti-container * {
+    box-sizing: border-box;
+  }
+
+  /* 타이틀 및 가이드라인 */
+  .mbti-header {
+    text-align: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  .mbti-header h1 {
+    font-size: 28px;
+    color: #1a365d;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+  }
+
+  .mbti-header p {
+    font-size: 15px;
+    color: #4a5568;
+    margin: 0;
+  }
+
+  /* 질문 카드 루프 */
+  .mbti-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mbti-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+  }
+
+  .mbti-q-number {
+    display: inline-block;
+    background: #3182ce;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .mbti-question {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 10px 0;
+  }
+
+  .mbti-situation {
+    font-size: 15px;
+    color: #4a5568;
+    background: #ebf8ff;
+    padding: 15px;
+    border-left: 4px solid #3182ce;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  /* 선택지 스타일 */
+  .mbti-options {
+    margin-bottom: 25px;
+  }
+
+  .mbti-option-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-option-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #edf2f7;
+    color: #4a5568;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  /* 선택지별 해설 */
+  .mbti-analysis {
+    background: #fffaf0;
+    border: 1px solid #feebc8;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 25px;
+  }
+
+  .mbti-analysis-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #dd6b20;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-analysis-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13.5px;
+    color: #7b341e;
+  }
+
+  .mbti-analysis-list li {
+    margin-bottom: 6px;
+  }
+
+  /* 추가 질문 3개 */
+  .mbti-extra-qs {
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 20px;
+  }
+
+  .mbti-extra-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 10px;
+  }
+
+  .mbti-extra-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #718096;
+  }
+
+  .mbti-extra-list li {
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+</style>
+<div class="mbti-container">
+  <div class="mbti-header">
+    <h1>日韓MBTIトーク：みんなで話そう！【N3】</h1>
+    <p>かんたんな日本語を使って、いろいろな場面（シチュエーション）での自分の行動を選び、楽しくおしゃべりしましょう！</p>
+  </div>
+
+  <!-- LOOP 1 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q1. T vs F 友達のなぐさめ方</span>
+    <h3 class="mbti-question">大親友（しんゆう）のお店が潰れた（閉まった）とき</h3>
+    <div class="mbti-situation">
+      大親友ががんばってオープンしたカフェが、半年で閉まることになりました。友達は泣きながら「本当に一生懸命がんばったのに…どうして私だけこんなことになるの…」と悲しんでいます。あなたならどうしますか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「本当に辛かったよね…本当によくがんばったよ。話を聞いているだけで、私も涙が出そうだよ」 ➡️ 友達と一緒に悲しんで、心に寄り添う。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「でも正直、場所があまり良くなかったよね。お金はちゃんと戻ってきた？ 手続きはもう全部やった？」 ➡️ 冷静に考えて、現実的なアドバイス（解決策）を言う。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「この悲しいことを忘れるために、明日からすぐ旅行に行こう！ 向こうに行って全部忘れちゃおう！」 ➡️ 気分転換をさせて、無理やり話題を変える。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Fの人）：</strong> 優しくて「共感が得意な人」。話を聞いてくれるだけで、傷ついた友達はとても安心します。</li>
+        <li><strong>Bを選んだ人（Tの人）：</strong> 現実的な「お助けヒーロー」。悲しむよりも、次のお金の手続きなど、大切なことを先に考えます。友達を本気で助けたいと思っています。</li>
+        <li><strong>Cを選んだ人（Pの人）：</strong> 行き当たりばったりの「元気をくれる妖精」。つらい現実から逃げさせて、一時的に痛みを忘れさせようとします。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>皆さんは自分がつらいとき、一緒に泣いてくれる友達（A）と、アドバイスをくれる友達（B）、どちらがすきですか？</li>
+        <li>Bを選んだ人は、友達のためにわざと厳しいことを言っているのでしょうか？</li>
+        <li>日本の友達は悩みを相談するとき、本当の気持ち（本音）を隠すことが多いですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 2 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q2. J vs P 計画（けいかく）の大失敗</span>
+    <h3 class="mbti-question">旅行の当日の朝、友達がインフルエンザになったとき</h3>
+    <div class="mbti-situation">
+      一ヶ月前から一番いい旅館を予約して、飛行機のチケットも準備していた日韓温泉旅行の当日の朝！ 駅に行こうとしたとき、友達から電話が来ました。「急に高い熱が出て、インフルエンザって言われちゃった…どうしても行けない、本当にごめんね泣」と言われました。あなたならどうしますか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「えっ、大丈夫！？ お見舞いに行こうか？ 旅行のことは気にしないで、ゆっくり休んで！」と、まずは友達の体を一番に心配する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「キャンセル料がいくらか確認しよう。それから、私一人で予定通り行くか、どうするか考えなきゃ」と、スマホで計算を始める。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「おっ、ラッキー！ 一人旅じゃん。旅館に一人で行って、いい部屋に変えてもらえるか聞いてみよう！」と、自由を楽しむ準備をする。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Fの人）：</strong> 人間関係を大切にする優しい人。お金や旅行よりも、友達の健康が一番大切だと思っています。</li>
+        <li><strong>Bを選んだ人（Jの人）：</strong> 計画が壊れるのが大嫌いな人。悲しんでいる時間があったら、1円でも損を減らすために頭をフル回転させます。</li>
+        <li><strong>Cを選んだ人（Pの人）：</strong> ピン치をチャンスに変える自由な人。人生のすべてのトラブルは、新しい冒険の始まりだと思っています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>皆さんは旅行に行くとき、細かい計画を立てますか？ それとも、あまり計画を立てませんか？</li>
+        <li>当日の朝にドタキャンした友達に、キャンセル料をきっちり請求（請求）しますか？</li>
+        <li>日本では、急な約束のキャンセル（当日ドタキャン）は、韓国よりも大きな迷惑（めいわく）だと思いますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 3 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q3. E vs I エネルギーの使い場所</span>
+    <h3 class="mbti-question">恋人の親友たちの集まりに一緒に行くとき</h3>
+    <div class="mbti-situation">
+      恋人が、自分の高校時代の親友5人が集まるにぎやかな飲み会にあなたを連れていきました。全員があなたを「おー！ 話はたくさん聞いてるよ！」と大歓迎してくれ、色々な質問をしてお酒をたくさん注いでくれる雰囲気です。このとき、あなたの心の状態は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「せっかく来たんだから、この場を自分が一番盛り上げてやる！」とテンションを上げて、全員とすぐ友達になる。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 笑顔はずっと作っているけれど、頭の中では「ここはどこ、私は誰…早く帰りたい」とエネルギーがどんどんなくなっている。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 恋人を見て、「ちょっとしんどいから、一時間くらいしたら空気を読んで一緒に帰ろう」と正直に言う。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Eの人）：</strong> 社交性マックスの陽キャ。知らない人たちからたくさん注目されると、元気になるタイプです。</li>
+        <li><strong>Bを選んだ人（Iの人）：</strong> 気配り上手な愛想笑い（あいそわらい）ロボ。恋人のために、静かに我慢しながら疲れています。</li>
+        <li><strong>Cを選んだ人（現実派）：</strong> 自分の限界をよく知っている人。恋人のメンツよりも、自分の体調や心の平和が大切だと判断します。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>自分の友達の集まりに恋人をよく連れていきたい人と、恋人と友達を完全に分ける人、付き合うならどちらが良いですか？</li>
+        <li>内向型（I）の人が飲み会で静かにしているとき、「もっと楽しんで！ テンション上げて！」と言うEタイプはありがたいですか？</li>
+        <li>日本の飲み会では、知らない新しい人が来たとき、どんなふうに歓迎しますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 4 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q4. S vs N 妄想（もうそう）の限界</span>
+    <h3 class="mbti-question">大親友から「もし私がゾンビになったら殺してくれる？」と聞かれたら</h3>
+    <div class="mbti-situation">
+      夜遅くにビールを飲みながらゾンビ映画を見ていた大親友が、急に真面目な顔になってあなたを見つめ、「なぁ、もしゾンビウイルスが流行って私がゾンビになったら、あんた私のこと殺せる？ それとも隠して守ってくれる？」と聞いてきました。あなたの反応は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「何言ってんの、バカバカしいこと言ってないで早く寝なよ」と、質問を無視して現実に戻す。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「当然すぐ攻撃して倒すよ。でも、ゾンビになっても私のことを覚えていたらどうしよう？ ウイルスの原因は…」と、本気でゾンビの世界の設定を考え始める。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「もちろん治療法（ちりょうほう）が見つかるまで隠して守ってあげるよ！ 殺すなんて絶対無理！」と、友達を大切にする気持ちを伝える。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Sの人）：</strong> 地に足がついたリアリスト（現実的な人）。起きるはずのないゾンビの話をすることは、時間の無駄だと思っています。</li>
+        <li><strong>Bを選んだ人（Nの人）：</strong> 想像力が大好きな空想家。あり得ない妄想が生きる楽しみで、世界の終わりについて本気でシミュレーションしたことがあります。</li>
+        <li><strong>Cを選んだ人（Fの人）：</strong> 優しいロマンチスト。ゾンビという事実よりも、「二人の強い友情や愛」を証明することが大切だと思っています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>普段から「もし世界が滅亡したら？」「もし10億円が手に入ったら？」といった妄想をよくするタイプですか？</li>
+        <li>現実的なSの人にとって、おもしろい妄想をいつも言ってくるNの人との会話は楽しいですか？</li>
+        <li>このような一風変わったバランスゲーム（究極の選択）は、日本でもよく流行っていますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 5 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q5. T vs F 優しい嘘と厳しい本当</span>
+    <h3 class="mbti-question">親友ががんばって書いた小説が、正直おもしろくないとき</h3>
+    <div class="mbti-situation">
+      親しい友達が作家を夢見て、徹夜（てつや）で書き上げた小説（または一生懸命作ったデザイン）を「意見を聞かせてほしい」と持ってきました。恥ずかしそうにしている友達の前で読んでみましたが、正直めちゃくちゃで、あまり上手ではありません。このとき、あなたの行動は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「わあ、文章がすごくユニークで素敵だね！ 徹夜して書いたんだって？本当にお疲れ様！」と、がんばったプロセスをたくさん褒める。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「正直、2章の部分はちょっとつまらないから読者が離れちゃうと思う。このストーリーを変えて、もっと新しく修正してみたら？」と、厳しいけれど役に立つアドバイスをする。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「すごーい！ これもし上手くいってドラマ化されたら、主演は誰がいいかな？ 有名な俳優？」と、現実の評価は言わずに未来の楽しい妄想をする。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Fの人）：</strong> 自尊心を守ってくれる優しい人。小説が上手か下手かよりも、今自分の前で友達が嬉しそうにしていることが一番大切だと思っています。</li>
+        <li><strong>Bを選んだ人（Tの人）：</strong> 責任感がある「厳しいアドバイザー」。友達の成功を「心から」願っているからこそ、残酷なほどはっきりと悪いところを教えます。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>もし自分が一生懸命作った作品を持っていくだとしたら、お世辞（A）と、厳しいけれど的確なアドバイス（B）のどちらが欲しいですか？</li>
+        <li>Bをする人は、本当に友達のために言っているのでしょうか？ それとも評論家ぶって威張りたいだけでしょうか？</li>
+        <li>日本の「建前（タテマエ）」文化では、このような時、一般的にどんなオブラートに包んだ（優しい）表現をしますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 6 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q6. J vs P 買い物スタイル</span>
+    <h3 class="mbti-question">新しいパソコン（または高いもの）を買うとき</h3>
+    <div class="mbti-situation">
+      思い切って数十万円のノートPC（または高級ブランドバッグ）を買おうとしています。お店で商品を選んで、レジでお金を払う直前までのあなたの買い物の仕方は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> スペック（性能）の分析は絶対にやる。いろいろなYouTubeのレビュー動画や最安値のグラフまで二週間徹底的に調べてから買う。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「うわ、デザイン最高じゃん。限定カラー？ 店員さん、これ今すぐ買います！」と、直感で気に入ったら5分で即決する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> とりあえずお店で購入し、帰りの電車の中で最安値を検索。もっと安く売っているところを見つけて、急にブルーになる。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（J/Sの人）：</strong> 合理的なデータ大好き人間。買う前に調べるプロセス自体を楽しみ、一番安くて完璧な買い物をした瞬間に最高の幸せを感じます。</li>
+        <li><strong>Bを選んだ人（P/Fの人）：</strong> ロマンチックな買い物大好き人間。細かい性能よりも、「今すぐ手に入れたときのワクワク感」の方がはるかに価値があると考えます。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>最近してしまった一番高い「衝動買い（計画しないで買うこと）」は何ですか？満足度は何点ですか？</li>
+        <li>Aの人が買うまでに何日も悩んでいるとき、隣で「早く決めなよ」と急かすPの人を見ると、どう思いますか？</li>
+        <li>日本人は一般的に、物を買うときにより慎重で、長く使えるものを気にする傾向が強いというのは本当ですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 7 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q7. E vs I 週末の過ごし方</span>
+    <h3 class="mbti-question">待ちに待った金曜日の仕事帰り！</h3>
+    <div class="mbti-situation">
+      一週間、上司の小言やたくさんの仕事（勉強）のストレスでボロボロになりながら、金曜日の帰りの電車に乗りました。週末を控えたあなたにとって、一番最高の「癒やし（ストレス解消）」は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「こんな日は飲むしかない！」 仲の良い人たちを呼んで、繁華街（はんがいがい）へ。おしゃべりとお酒で今週の疲れを一気に吹き飛ばす。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 家の鍵を閉めた瞬間スマホをマナーモードにし、デリバリーでお気に入りのフードを注文。ベッドの中でNetflixを朝まで一気見する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 土曜日の昼過ぎまで泥のように眠り、土曜日の夜遅くに一人だけ呼び出して、静かな近所の居酒屋で深い話をじっくり交わす。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Eの人）：</strong> 外で充電するバッテリー。外に出て他人と関わり、声を出し、おしゃべりすることで、ストレスが消えていくと感じます。</li>
+        <li><strong>Bを選んだ人（Iの人）：</strong> 一人で充電するバッテリー。人と会うこと自体が疲れる原因で、完全に「自分一人」になったときに心が回復します。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>週末の間、一度も外に出ずに家に引きこもっていると、寂しくなりますか？ それとも幸せですか？</li>
+        <li>一人で過ごしたいIの人を見て、「なんで部屋にいるの？ 週末だから外で思い出を作ろうよ」と連れ出そうとするEの人の親切は、善意ですか？迷惑ですか？</li>
+        <li>日本の大学生や会社員の、一般的な金曜日の夜の過ごし方はどのような感じですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 8 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q8. T vs F 喧嘩したあと</span>
+    <h3 class="mbti-question">大喧嘩をしたあとの音信不通（連絡がない）状態</h3>
+    <div class="mbti-situation">
+      友達や恋人と些細な誤解からひどい言葉を言い合い、大喧嘩をした末に連絡を完全に絶ちました。家に帰って怒りながら、あなたの頭の中の対応はどう進みますか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「話が通じないな…」 とりあえず自分の気持ちと相手の怒りが静まるまで、数日間は絶対に連絡せず、一人で静かに過ごす。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> もやもやして胸が苦しい。すぐ電話をかけて、「さっきどういうつもりでああ言ったの？ はっきりさせて解決しよう」と理由を徹底的に話し合う。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「もしかしてもう縁を切るのかな…私のこと面倒くさくなったのかな…」 色々と悪いことばかり考え、夜中にSNSのBGMを悲しい曲に変える。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（洞窟タイプ / I/Tの人）：</strong> 安全な場所が一番大切な人。怒っている状態の、悪い言葉で話すことは危ないと考えます。感情を落ち着かせる時間を必ず作ります。</li>
+        <li><strong>Bを選んだ人（直球タイプ / E/Tの人）：</strong> もやもやをすぐ消したい人。彼らにとって「解決していない喧嘩」は一番のストレスなので、今すぐ白黒はっきりさせないと眠れません。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>喧嘩をしたとき、「少し考えさせて」と黙ってしまう「サイレントタイプ」と、「今すぐ話し合おう」という「対話タイプ」、どちらと戦う方がイライラしますか？</li>
+        <li>喧嘩のあと、先に連絡する側は、一般的に怒りが少なかった人でしょうか？ それとも、関係が壊れるのをより怖がっている人でしょうか？</li>
+        <li>日本の人たちは、喧嘩のあと一般的にどのように仲直りをしますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 9 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q9. J vs P 部屋とスマホの片付け</span>
+    <h3 class="mbti-question">スマホの画面とメッセージアプリの管理</h3>
+    <div class="mbti-situation">
+      スマホのホーム画面や、LINEなどのアプリを開いたとき、あなたの通知の数字やアプリの配置はだいたいどうなっていますか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 赤い通知マーク（未読999+）は見たくない。すべての通知はすぐチェックして常に「0」にし、アプリはフォルダに完璧に分けて並んでいる。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 赤い数字が10,000個溜まっていても気にしない。どうせよく使う4つのアプリは指が覚えているから問題ないし、画面はカオス状態。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> フォルダを作るのは面倒だから、とりあえず使わないアプリを最後のページに全部隠し、「見た目だけ」綺麗にする方法を使っている。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Jの人）：</strong> 秩序の支配者。スマホの中が綺麗であることが、心の安定と同じです。小さな通知マーク一つさえ、すぐ消したいモンスターです。</li>
+        <li><strong>Bを選んだ人（Pの人）：</strong> 混沌の中の自由な天才。画面がぐちゃぐちゃでも、自分の仕事や行動には全く問題ありません。そんな細かい管理に頭を使いません.</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>LINEなどのグループで、メッセージを読んだあとあえて返事をせず既読スルーするタイプですか？ それとも光の速さで返信しますか？</li>
+        <li>自分の部屋の中を、他人に自信を持って見せられる綺麗な状態は何％くらいですか？</li>
+        <li>日本人は、細かな雑貨やデジタルの整理整頓（かたづけ）が本当に上手な人が多いのでしょうか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 10 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q10. S vs N 恋人との会話の罠</span>
+    <h3 class="mbti-question">恋人が「私、最近太ったと思わない？」と聞いてくるとき</h3>
+    <div class="mbti-situation">
+      楽しく夜食を食べていた恋人が、急にスプーンを置いて悲しい顔で顎を触りながら、「ねぇ、私、最近本当に太ったと思わない？ 正直に言って…」と、急に質問を投げ込んできました。このとき、あなたはどう切り抜けますか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「えー！ 太ってるところなんてどこにあるの！ 今がちょうど良くてほっぺが可愛いのに、何言ってんの！」と、愛を込めて全力で否定する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「うーん、顔のラインが先週よりちょっと丸くなったかも。明日から一緒に仕事帰りに3km走ろうか？ カロリー管理アプリを入れてあげるよ」と、事実を認めて解決方法を教える。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「お、確かにちょっと太ったかもね！笑 もうブタさんじゃん、ブーブー！」と、あえて冗談でからかう。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 かんたん解説：MBTI別のきもち</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選んだ人（Fの人）：</strong> 恋愛の安全を守る天才。恋人の質問は、本当の体重を知りたいのではなく、「今も私のことを愛してくれているか」という不安の裏返しだと本能的にわかっています。</li>
+        <li><strong>Bを選んだ人（Tの人）：</strong> 超効率的な解決マシーン。恋人の悩みを根本から消すためには、「健康的な運動と食生活のカイゼン」という行動こそが一番のプレゼントだと信じています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 質問（となりの人と話しましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>「愛しているからこそ、正直に本当のことを言う（B/C）」と「愛しているからこそ、優しい嘘を言う（A）」、どちらが素敵な関係だと思いますか？</li>
+        <li>もし自分の恋人が、冗談半分でCの回答を言ってきたら、本当に怒りますか？ それとも笑って流せますか？</li>
+        <li>日本のカップルの間では、お互いの見た目や体型の変化について、どのくらいストレートに言いますか？</li>
+      </ul>
+    </div>
+  </div>
+</div>

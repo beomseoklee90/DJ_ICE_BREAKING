@@ -1,0 +1,526 @@
+[アニメ会]チェインソーマン_N2
+<style>
+  /* MBTI 교재 컨테이너 공통 스타일 (React 스코핑용) */
+  .mbti-container {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: #2c3e50;
+    line-height: 1.7;
+  }
+
+  .mbti-container * {
+    box-sizing: border-box;
+  }
+
+  /* 타이틀 및 가이드라인 */
+  .mbti-header {
+    text-align: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  .mbti-header h1 {
+    font-size: 28px;
+    color: #1a365d;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+  }
+
+  .mbti-header p {
+    font-size: 15px;
+    color: #4a5568;
+    margin: 0;
+  }
+
+  /* 질문 카드 루프 */
+  .mbti-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mbti-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+  }
+
+  .mbti-q-number {
+    display: inline-block;
+    background: #3182ce;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .mbti-question {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 10px 0;
+  }
+
+  .mbti-situation {
+    font-size: 15px;
+    color: #4a5568;
+    background: #ebf8ff;
+    padding: 15px;
+    border-left: 4px solid #3182ce;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  /* 선택지 스타일 */
+  .mbti-options {
+    margin-bottom: 25px;
+  }
+
+  .mbti-option-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-option-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #edf2f7;
+    color: #4a5568;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  /* 선택지별 해설 */
+  .mbti-analysis {
+    background: #fffaf0;
+    border: 1px solid #feebc8;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 25px;
+  }
+
+  .mbti-analysis-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #dd6b20;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-analysis-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13.5px;
+    color: #7b341e;
+  }
+
+  .mbti-analysis-list li {
+    margin-bottom: 6px;
+  }
+
+  /* 추가 질문 3개 */
+  .mbti-extra-qs {
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 20px;
+  }
+
+  .mbti-extra-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 10px;
+  }
+
+  .mbti-extra-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #718096;
+  }
+
+  .mbti-extra-list li {
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+</style>
+<div class="mbti-container">
+  <div class="mbti-header">
+    <h1>チェンソーマン語り場：あの名シーンに入り込もう！</h1>
+    <p>キャラクターの気持ちになって、鳥肌が立ったあの名シーンについて日本語で熱く語り合いましょう！</p>
+  </div>
+
+  <!-- LOOP 1 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 1. ポチタの心臓</span>
+    <h3 class="mbti-question">デンジとポチタが一つになる瞬間</h3>
+    <div class="mbti-situation">
+      ゴミ箱の中で死にかけていたデンジに、ポチタが「デンジの夢を見せておくれ。私の心臓をあげるよ」と話しかけ、デンジの体と一つになってチェンソーマンとして復活する第1話の一番大切なシーンです。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>デンジの立場：</strong> 家族もお金もなく、ただ死ぬのを待つだけだった自分の人生で、唯一そばにいてくれたポチタが心臓をくれた時の、言葉にできない切なさと心からの感謝。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>ポチタの立場：</strong> 自分を抱きしめ、血を分けてくれたデンジの「普通の暮らしをしたい」という小さな夢をどうしても叶えてあげたいという、純粋な愛。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>視聴者の立場：</strong> 「感動的な話」というよりは、心臓がエンジンに変わり、頭からチェンソーが飛び出すというグロテスクで不気味な見た目のカッコよさに驚いた。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>デンジにとってポチタは「ペット」ではなく、たった一人の家族でした。皆さんは、自分の命をかけてでも守りたい存在や、人生を救ってくれた「人やペット、趣味」はありますか？</li>
+        <li>もし皆さんがポチタなら、大好きな人のために自分の命（心臓）をあげることができますか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>第1話のラストで、チェンソーマンがゾンビたちをバラバラにするシーンを初めて見たときの感想は？</li>
+        <li>ポチタの可愛い姿（犬の姿）と、チェンソーマンの怖い姿のギャップについてどう思いますか？</li>
+        <li>皆さんが人生で「これさえあれば何もいらない」と思える、一番大切なものは何ですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 2 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 2. マキマとの出会い</span>
+    <h3 class="mbti-question">デンジがマキマに初めて抱きしめられたとき</h3>
+    <div class="mbti-situation">
+      血まみれで意識を失いかけていたデンジの前にマキマが現れ、優しく抱きしめながら「私に飼われない？ 朝食はパンにバターとジャムを塗って、デザートもあるよ」とデンジを助けるシーンです。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>デンジの立場：</strong> 「うわあ、可愛い女の子が僕を抱きしめてくれた！ 美味しいご飯も食べられるなんて、ここが天国か！」と、一瞬で周りが見えなくなるほど幸せな気持ち。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>怪しむ立場：</strong> 優しそうに見えるけれど、どこか目が笑っていなくて、「犬として飼う」という言葉に、冷たくて怪しい雰囲気を感じるゾクゾク感。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>直感的な立場：</strong> 「あんなに綺麗で謎めいたマキマさんに頼まれたら、犬になれと言われても喜んで言うことを聞いてしまうのも仕方がない！」というデンジへの共感。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>マキマの「ハグ」は救いだったのでしょうか、それとも地獄への始まりだったのでしょうか？</li>
+        <li>もし皆さんがこの時のデンジなら、マキマの怪しい雰囲気に気づいて逃げ出しますか？ それとも目の前の甘い誘惑（ご飯とハグ）を選びますか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>マキマというキャラクターの第一印象はどうでしたか？ 好きでしたか、それとも最初からどこか怖かったですか？</li>
+        <li>身近にマキマのように「断れない魅力」で人をコントロールするのが上手い人はいますか？</li>
+        <li>皆さんが「犬になってもいい」と思えるほどの最高の条件や環境とは？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 3 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 3. 夢の終わり</span>
+    <h3 class="mbti-question">念願の胸を揉んだあとの、不思議な虚しさ</h3>
+    <div class="mbti-situation">
+      デンジは命がけでパワーを助け出し、そのご褒美として、ついにあきらめかけていた「胸を揉む」という目標を達成します。しかし、実際に揉んでみると想像していたような感動はなく、心に突き刺さるような激しい虚しさを感じます。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>デンジの立場：</strong> 「僕はこんなことのために命をかけて戦っていたのか…」と、目標を達成した瞬間にやってくる、がっかりするような寂しい気持ち。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>マキマの言葉への共感：</strong> 「ただ触るという行為よりも、相手のことをどれだけ深く知っているかの方が大切だよ」というマキマの言葉に納得し、体だけの関係よりも心と心の繋がりの大切さに気づく瞬間。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>ツッコミを入れる立場：</strong> 「こんな下らないことのために命をかけて、その上こんなに大真面目に落ち込んで悩んでるなんて、本当におバカだけど可愛い」と笑ってしまう感覚。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>皆さんも「ずっと憧れていて、やっと手に入れたのに、いざ手に入ったら全然嬉しくなかった」という虚しい経験はありますか？</li>
+        <li>マキマの言う「心と心の繋がりがあってこその楽しさ」という考え方に共感しますか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>デンジのように「他の人から見ればバカバカしいけれど、自分にとっては本気な夢」を持っていますか？</li>
+        <li>パワーがデンジに嘘のパッド入りの胸を触らせたときの、二人の面白いやり取りをどう思いますか？</li>
+        <li>目標に向かって走っているときと、それを達成したあと、どちらが人生において幸せだと思いますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 4 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 4. 早川アキの決断</span>
+    <h3 class="mbti-question">アキが復讐をやめ「ただ生きたい」と願うシーン</h3>
+    <div class="mbti-situation">
+      家族の復讐（銃の悪魔を倒すこと）だけを生きる目的としてきたアキが、デンジやパワーという「新しい居場所（家族のような存在）」と過ごすうちに心が変わり、最終的に「銃の悪魔を倒しに行くこと」を辞退して、ただ三人で穏やかに生きたいと涙を流します。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>アキの葛藤：</strong> 人生のすべてだった「復讐」をあきらめることへの罪悪感や申し訳なさと、それでも目の前にいる大切な弟・妹のような二人（デンジ、パワー）を失いたくないという強い愛の衝突。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>デンジとパワーの立場：</strong> いつも口うるさかったお兄ちゃん役（アキ）が、実は自分たちを守るために命がけの復讐すらやめようとしてくれていたことを知った時の、言いようのない温かさと切なさ。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>運命の残酷さ：</strong> こうしてアキがようやく穏やかな日常を選んだ瞬間に、物語が一番最悪な悲劇（銃の魔人になること）へと進んでいくことへの理不尽さと、原作者（タツキ先生）の恐ろしいストーリー展開への絶望。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>もし皆さんがアキなら、自分のこれまでの人生のすべてだった「復讐」を、新しくできた大切な人のためにあきらめることができますか？</li>
+        <li>血の繋がっていない三人が、一緒に暮らす中で本当の「家族」のようになっていく様子を、どう見ていましたか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>早川アキというキャラクターの魅力について語ってください。なぜ彼はこれほどファンに愛されているのでしょうか？</li>
+        <li>皆さんが「これを失うくらいなら、自分のプライドや目標を捨ててもいい」と思える大切な人は誰ですか？</li>
+        <li>アキ、デンジ、パワーの三人暮らしの中で、一番好きだった日常エピソードはどれですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 5 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 5. 悲しき雪合戦</span>
+    <h3 class="mbti-question">銃の魔人となったアキとデンジの戦闘</h3>
+    <div class="mbti-situation">
+      早川アキは悪魔に体を乗っ取られ「銃の魔人」としてデンジを襲いますが、アキの頭の中では子供の頃に弟と無邪気に「雪合戦」をしている幸せな夢を見ています。現実のデンジは、血の涙を流しながらアキを攻撃します。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>アキの立場（夢の中）：</strong> 「デンジ、雪合戦しよう！」と、ようやくつらい現実から逃げて、子供のように何の悩みもなく純粋に遊ぶことができている、悲しくも美しい救い。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>デンジ의 입장（현실세계）：</strong> 自分を家族のように迎えてくれたアキ兄を、自分の手で殺さなければ街を守れないという、人生で最も残酷で逃げられない絶望。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>視聴者の立場：</strong> 残酷な殺し合いの現実と、美しく無邪気な雪合戦のシーンを交互に見せる演出に、あまりにも胸が締め付けられて感情がぐちゃぐちゃになった。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>アキが見ていた「雪合戦の夢」は、彼にとって最悪の呪いだったのでしょうか、それとも最後の最後に見られた「幸せな夢」だったのでしょうか？</li>
+        <li>デンジが泣き叫びながらアキにチェンソーを向けるシーンで、皆さんはどのような気持ちになりましたか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>このシーンは漫画の中で「最も切ない戦闘シーン」の一つと言われますが、皆さんは読んでいて（観ていて）涙が出ましたか？</li>
+        <li>アキを銃の魔人にしたマキマの残酷さについて、どう思いますか？</li>
+        <li>もしこの状況で、アキを殺さずに救う方法があったとしたら、どんな結末が良かったですか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 6 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 6. パワーの契約</span>
+    <h3 class="mbti-question">ゴミ箱の中でパワーがデンジに血を託すシーン</h3>
+    <div class="mbti-situation">
+      マキマの支配に負けてデンジを裏切りそうになったパワーが、最後の最後で裏切るのをやめて、デンジを抱きしめてゴミ箱の中に隠れます。そして、自分の残りの「血（命）」をデンジにあげて、「デンジ、ワシを見つけに来てくれ」と約束をします。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>パワーの立場：</strong> わがままで臆病だった血の魔人が、生まれて初めてできた「友達（デンジ）」のために自分を犠牲にする恐怖と、それを上回る友情の尊さ。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>デンジの立場：</strong> アキを失ったばかりなのに、さらにパワーまで目の前で自分を庇って消えていく悲しさと、それでも彼女の気持ちを受け継いで立ち上がろうとする決意。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>バディへの感動：</strong> 普段はケンカばかりして、恋愛関係でもなかった二人が、魂のレベルで完璧な「相棒（バディ）」になった瞬間への深い感動。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>パワーという本来は悪い悪魔が、これほど人間らしくなり、自分を犠牲にできるようになった変化をどう思いますか？</li>
+        <li>「ワシの血をやる。代わりに…血の悪魔を見つけに来てくれ」という約束は、デンジにとって新しい生きる希望になったでしょうか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>デンジとパワーの、恋愛でもなく、ただの友達でもない「あの不思議な関係性」をどう表現すればいいでしょうか？</li>
+        <li>ゴミ箱の中の狭くて暗い空間での会話は、第1話のデンジとポチタの会話と似ています。この演出についてどう感じましたか？</li>
+        <li>パワーが今後、第2部などでデンジと再会できると思いますか？ 皆さんの予想は？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 7 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 7. レゼと真夜中のプール</span>
+    <h3 class="mbti-question">雨の降る夜、小学校のプールで泳ぐ二人</h3>
+    <div class="mbti-situation">
+      自分を殺しに来た暗殺者（スパイ）だとは全く知らずに、レゼを好きになっていくデンジ。夜の小学校のプールに忍び込み、裸で泳ぎながら、レゼから「ここじゃないどこかへ、私と一緒に逃げない？」と言われるロマンチックなシーンです。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>デンジの立場：</strong> いつも戦ってばかりの血生臭い日常から逃れて、自分を一人の男の子として優しく見つめてくれる女の子と二人きりで泳ぐ、心臓が破裂しそうな初恋のドキドキ。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>レゼの立場：</strong> 子供の頃から国のために戦う兵器として育てられ、感情をなくしていたのに、バカみたいに真っ直ぐなデンジの隣で、本当に短い間だけ「普通の女の子」に戻れたような甘くて切ない気持ち。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>演出への見惚れ：</strong> 暗い水面に反射する光と二人のささやき声が、青春映画のワンシーンのようにとても美しく寂しげで、消えてしまいそうな儚い美しさに感動する感覚。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>レゼは最初から最後までデンジを騙していたのでしょうか？ それとも、このプールの瞬間だけは「本物の恋心」があったのでしょうか？</li>
+        <li>皆さんが選ぶ、チェンソーマンの中で一番ロマンチックだと思うシーンはどこですか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>レゼが最後にデンジとの約束の喫茶店に向かおうとした時、マキマに邪魔されてしまいます。あのラストシーンについてどう感じましたか？</li>
+        <li>デンジがレゼに教わった「田舎のネズミと都会のネズミ」の話。皆さんなら、どちらの生き方を選びますか？</li>
+        <li>もしレゼとデンジが本当に一緒に逃げていたら、どんな生活を送っていたと思いますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 8 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 8. コベニのしぶとさ</span>
+    <h3 class="mbti-question">どんな地獄も生き残り、ファミリーバーガーで踊るコベニ</h3>
+    <div class="mbti-situation">
+      周りの優秀でかっこいいデビルハンターたちが次々とひどい死に方をしていく中、臆病でヘタレなコベニはなぜか最後まで生き残ります。挙句の果てにハンバーガーショップでバイトをし、チェンソーマンに脅されながら泣きながらダンスゲームをするという不思議なシーンです。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>コベニの立場：</strong> 「なんで私はいつも怪物たちに囲まれて死にかけなきゃいけないの？ 怖くてたまらないし、ハンバーガー一つまともに運べないのに、なんで私は死なせてももらえないの泣」という理不尽すぎる絶望。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>デンジの立場：</strong> みんな僕のことをヒーローか悪魔として崇めるか怖がるかするのに、自分の隣でガタガタ震えながら「普通に不幸」でいてくれるコベニに、妙に落ち着く親近感を感じる。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>ブラックコメディへの脱力：</strong> シリアスで暗いストーリーが、急に「ファミリーボーイ！」と叫びながらコメディに変わるシュールな面白さと、コベニの実はものすごい運動神経への驚き。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>強くて勇敢なキャラクターが死に、臆病で普通のコベニが生き残るというリアルさについて、どう思いますか？</li>
+        <li>チェンソーマンがダンスゲームをしているコベニを黙って見守っているシュールな空気感をどう感じましたか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>コベニのダンスシーンは、不穏な世界観の中で唯一クスッと笑えるシーンですが、皆さんは笑いましたか？ それとも彼女がかわいそうでしたか？</li>
+        <li>コベニの契約している悪魔は最後まで秘密のままですが、皆さんは何の悪魔だと思いますか？</li>
+        <li>もし皆さんがこの狂った世界でデビルハンターになったら、コベニのように必死にしがみついて生き残れる自信はありますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 9 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 9. 生が味を損なう</span>
+    <h3 class="mbti-question">マキマを「美味しく料理して食べる」結末</h3>
+    <div class="mbti-situation">
+      デンジはマキマの不死身の支配を解くために、普通に攻撃をするのではなく、彼女の肉体をステーキや生姜焼きなどの「料理」にして、一切れ残さず美味しく食べ切るという、少年漫画の歴史の中で一番変わった解決方法を選びます。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>デンジの悲しき純愛：</strong> 「マキマさんを攻撃したんじゃない。彼女の罪ごと僕が全部食べて、一つになるんだ」という、自分を地獄に突き落とした女性をどうしても憎みきれず、自分の中で愛し続けようとする、少し変わった純愛。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>マキマの悲劇：</strong> 一生「自分と同じくらい強い存在」を強く望み、チェンソーマンに食べられることを願っていたのに、結局自分が名前すら覚えていなかった「デンジ」というちっぽけな人間に調理されて食べられる皮肉な終わり方。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>読者の驚き：</strong> 普通の少年漫画の「正義の勝利」のルールを完全に無視した、「ヒロイン肉食エンド」というブッ飛んだラストの衝撃。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>この「マキマを食べることで乗り越える」という結末は、デンジにとってのハッピーエンドだったと思いますか？</li>
+        <li>「攻撃（悪意）」ではなく「食事（愛）」だからこそマキマの能力をすり抜けられた、というロジックについてどう思いますか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>この衝撃的な最終回の食事シーンを最初に読んだ時、どんな気持ちになりましたか？（驚き、ドン引き、あるいは感動？）</li>
+        <li>マキマが望んでいた「チェンソーマンとの対等な関係」は、このような形でしか満たされなかったのでしょうか？</li>
+        <li>この結末を経て、デンジは人間として成長したと思いますか？</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 10 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Scene 10. 闇の悪魔降臨</span>
+    <h3 class="mbti-question">地獄の底で、宇宙飛行士たちが祈りを捧げる登場シーン</h3>
+    <div class="mbti-situation">
+      デビルハンターたちが地獄へと落とされた際、最古の恐怖である「闇의 악마」が降臨します。そこには、上半身と下半身が切断された宇宙飛行士たちが並んで手を合わせ、祈るように並んでいる不気味で圧倒的なシーンが描かれています。
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">1</span> <strong>デビルハンターの恐怖：</strong> 「これには絶対に勝てない。次元が違う」と本能的に気づき、指一本動かすことすらできずに冷や汗を流し、死の恐怖を全身で感じる絶対的な絶望感。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">2</span> <strong>宇宙飛行士が意味するもの：</strong> 未知の領域（宇宙）を開拓する賢い存在である人間すら、根源的な恐怖（暗闇）の前では真っ二つにされ、ただ神に祈ることしかできないという無力さに対するゾッとする恐怖。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">3</span> <strong>美術的センスへの感嘆：</strong> セリフによる説明を一切なくし、絵画のような不気味で冷たいビジュアルだけで心臓をつかむ、原作者の圧倒的な天才さに震える気持ち。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 トークを深めるポイント</div>
+      <ul class="mbti-analysis-list">
+        <li>「宇宙飛行士の死体が祈る」というビジュアルアイデアが持つ不気味な美しさを、皆さんはどう感じましたか？</li>
+        <li>皆さんが人生の中で、この「闇の悪魔」の降臨シーンのように、「言葉を失うほどの圧倒的な恐怖や無力感」を感じた経験はありますか？</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 掘り下げ質問（お互いに聞いてみましょう！）</div>
+      <ul class="mbti-extra-list">
+        <li>チェンソーマンに出てくる悪魔の中で、見た目や演出が一番「怖い」と思った悪魔はどれですか？</li>
+        <li>この地獄のシーンの、白と黒のコントラストによる静かな表現についてどう思いますか？</li>
+        <li>もし皆さんが地獄に落とされたら、何秒間正気を保っていられると思いますか？</li>
+      </ul>
+    </div>
+  </div>
+</div>

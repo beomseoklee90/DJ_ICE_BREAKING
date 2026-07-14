@@ -1,4 +1,4 @@
-チェインソーマン
+[アニメ会]チェインソーマン_N1
 <style>
   /* MBTI 교재 컨테이너 공통 스타일 (React 스코핑용) */
   .mbti-container {

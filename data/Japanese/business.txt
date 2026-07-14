@@ -1,0 +1,692 @@
+[ビジネス日本語会]練習
+<style>
+  /* 비즈니스 롤플레잉 교재 컨테이너 공통 스타일 */
+  .biz-container {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: #2c3e50;
+    line-height: 1.8;
+  }
+
+  .biz-container * {
+    box-sizing: border-box;
+  }
+
+  /* 타이틀 및 가이드라인 */
+  .biz-header {
+    text-align: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  .biz-header h1 {
+    font-size: 28px;
+    color: #1a365d;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+  }
+
+  .biz-header p {
+    font-size: 15px;
+    color: #4a5568;
+    margin: 0;
+  }
+
+  /* 상황 카드 루프 */
+  .biz-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+  }
+
+  .biz-q-number {
+    display: inline-block;
+    background: #2b6cb0;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .biz-question {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 10px 0;
+  }
+
+  .biz-situation {
+    font-size: 14.5px;
+    color: #4a5568;
+    background: #ebf8ff;
+    padding: 15px;
+    border-left: 4px solid #2b6cb0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  /* 비즈니스 포인트 강의 */
+  .biz-point-box {
+    background: #fffaf0;
+    border: 1px solid #feebc8;
+    border-radius: 8px;
+    padding: 15px 18px;
+    margin-bottom: 20px;
+  }
+
+  .biz-point-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #dd6b20;
+    margin-bottom: 8px;
+  }
+
+  .biz-point-content {
+    font-size: 13.5px;
+    color: #7b341e;
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .biz-point-content li {
+    margin-bottom: 4px;
+  }
+
+  /* 대상별 5단계 매칭 */
+  .biz-targets {
+    margin-bottom: 25px;
+  }
+
+  .biz-target-row {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .biz-target-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    color: white;
+  }
+
+  .badge-client { background-color: #e53e3e; }
+  .badge-partner { background-color: #dd6b20; }
+  .badge-dept { background-color: #3182ce; }
+  .badge-boss { background-color: #319795; }
+  .badge-peer { background-color: #718096; }
+
+  .biz-target-jp {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 4px;
+    line-height: 1.6;
+  }
+
+  .biz-target-kr {
+    font-size: 13px;
+    color: #718096;
+    margin: 0;
+  }
+
+  /* 추가 롤플레잉 미션 */
+  .biz-mission-box {
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 20px;
+  }
+
+  .biz-mission-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 10px;
+  }
+
+  .biz-mission-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13.5px;
+    color: #718096;
+  }
+
+  .biz-mission-list li {
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+</style>
+
+<div class="biz-container">
+  <div class="biz-header">
+    <h1>実践ビジネス日本語：相手との「距離感」をコントロールする</h1>
+    <p>同じ状況でも、伝える相手によって敬語の深さは全く異なります。5つの関係性に応じた表現をマスターしましょう！</p>
+  </div>
+
+  <!-- LOOP 1 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 1. 謝罪（お詫び）</span>
+    <h3 class="biz-question">メールの添付ファイルを送り間違えたとき</h3>
+    <div class="biz-situation">
+      送信したメールに、全く異なる別のファイルを添付してしまいました。すぐに気づき、正しいファイルを再送するとともに、相手に謝罪の連絡を入れます。
+    </div>
+    
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 謝罪のグラデーション（お詫びのレベル）</div>
+      <ul class="biz-point-content">
+        <li>ごめんなさい（同僚・友人） ➡️ すみません（社内） ➡️ 申し訳ありません（上司・他部署） ➡️ 申し訳ございません（社外） ➡️ 深くお詫び申し上げます（公式文書・重大トラブル）</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客）</span>
+        <div class="biz-target-jp">「先ほどお送りしたメールにおきまして、誤ったファイルを添付しておりました。大変なご迷惑をおかけし、深くお詫び申し上げます。こちらが正しいファイルでございます。」</div>
+        <p class="biz-target-kr">"방금 보내드린 메일에 잘못된 파일이 첨부되어 있었습니다. 큰 불편을 끼쳐드려 깊이 사과드립니다. 이쪽이 올바른 파일입니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「先ほどのメールですが、添付ファイルに誤りがございました。お手数をおかけしてしまい大変恐縮ですが、こちらの正しいファイルをご査収いただけますでしょうか。申し訳ございません。」</div>
+        <p class="biz-target-kr">"방금 메일입니다만, 첨부파일에 오류가 있었습니다. 번거롭게 해 드려 정말 송구합니다만, 이쪽의 올바른 파일을 확인해 주실 수 있으실까요? 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「先ほど共有したメールの添付ファイルが間違っておりました。お手数ですが、こちらに差し替えをお願いできますでしょうか。申し訳ありません。」</div>
+        <p class="biz-target-kr">"방금 공유해 드린 메일의 첨부파일이 잘못되어 있었습니다. 번거로우시겠지만 이쪽으로 교체를 부탁드려도 될까요? 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（報告）</span>
+        <div class="biz-target-jp">「課長、先ほどお送りした報告書のファイルに誤りがありました。すぐに修正いたしましたので、こちらを再度ご確認いただけますでしょうか。お忙しいところ大変申し訳ありません。」</div>
+        <p class="biz-target-kr">"과장님, 방금 보내드린 보고서 파일에 오류가 있었습니다. 즉시 수정했으니 이쪽을 다시 한번 확인해 주실 수 있으실까요? 바쁘신 와중에 정말 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「ごめん！さっき送ったメール、添付ファイル間違えてた。こっちが本物だから、差し替えお願い！」</div>
+        <p class="biz-target-kr">"미안! 방금 보낸 메일 첨부파일 잘못됐어. 이쪽이 진짜니까 교체 부탁해!"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>「クライアント役」と「担当者役」に分かれ、電話がかかってきて間違いを指摘されたシーンを再現してみましょう。</li>
+        <li>間違えたファイルが「競合他社向けの極秘データ」だった場合の、最も重い謝죄 대본을 짜보세요.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 2 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 2. 日程調整（延期）</span>
+    <h3 class="biz-question">会議の時間を急遽変更したいとき</h3>
+    <div class="biz-situation">
+      本日15時からの打ち合わせですが、突発的なシステムトラブルが発生し、すぐに対応しなければならなくなりました。大変申し訳ないのですが、打ち合わせを「明日」に延期してほしいと依頼します。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 依頼のグラデーション（時間の調整）</div>
+      <ul class="biz-point-content">
+        <li>明日でもいい？（同僚） ➡️ 明日に変更していただけますか（上司・他部署） ➡️ 日程をご調整いただくことは可能でしょうか（社外）</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客）</span>
+        <div class="biz-target-jp">「誠に勝手なお願いで大変恐縮ですが、本日15時の会議を明日にご変更いただくことは可能でしょうか。こちらの不手際でお騒がせし、大変申し訳ございません。」</div>
+        <p class="biz-target-kr">"정말 이기적인 부탁이라 대단히 송구합니다만, 오늘 15시 회의를 내일로 변경해 주시는 것이 가능할까요? 저희 쪽 미숙함으로 소란을 피워 정말 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「急なお願いとなり大変恐れ入ります。社内事情により本日15時の打ち合わせを明日に変更していただけないでしょうか。ご迷惑をおかけしますが、ご検討をお願いいたします。」</div>
+        <p class="biz-target-kr">"갑작스러운 부탁이라 대단히 죄송합니다. 사내 사정으로 인해 오늘 15시 미팅을 내일로 변경해 주실 수 있으실까요? 불편을 끼쳐드려 죄송합니다만, 검토 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「開発部の皆さん、お疲れ様です。本日の定例会ですが、緊急対応が入ってしまったため、明日に延期していただくことは可能でしょうか。何卒よろしくお願いいたします。」</div>
+        <p class="biz-target-kr">"개발부 여러분, 수고 많으십니다. 오늘 정례회입니다만, 긴급 대응이 들어와 내일로 연기해 주실 수 있으실까요? 아무쪼록 잘 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（報告）</span>
+        <div class="biz-target-jp">「部長、大変申し訳ありません。現在、緊急トラブルへの対応を行っておりまして、本日15時の1on1ミーティングを明日に変更していただけますでしょうか。」</div>
+        <p class="biz-target-kr">"부장님, 대단히 죄송합니다. 현재 긴급 트러블 대응을 진행하고 있어서, 오늘 15시 1on1 미팅을 내일로 변경해 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「ごめん！ちょっとトラブル対応が入っちゃって、今日の15時のミーティング、明日にずらしてもいい？」</div>
+        <p class="biz-target-kr">"미안! 지금 트러블 대응이 들어와서, 오늘 15시 미팅 내일로 미뤄도 될까?"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>「クライアント」に電話で日程変更を打診し、相手が「明日は終日外出している」と言ってきた場合の切り返し（再提案）を練習しましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 3 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 3. 辞退・断り（拒絶）</span>
+    <h3 class="biz-question">相手からの提案・見積もりを断るとき</h3>
+    <div class="biz-situation">
+      相手から提案や見積もりをもらいましたが、今回は予算やスケジュールの都合により、どうしても断らなければならなくなりました。今後の関係を壊さずに、丁寧に断ります。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 クッション言葉の使い方</div>
+      <ul class="biz-point-content">
+        <li>「あいにくですが（안타깝게도）」、「せっかくですが（안타깝게도/모처럼이지만）」、「大変心苦しいのですが（대단히 마음이 아픕니다만）」などのクッション言葉を必ず文頭に挟みます。</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客：例えば顧客からの無理な値下げ交渉を断る場合）</span>
+        <div class="biz-target-jp">「大変心苦しい限りですが、現在の品質を維持するためにはこれ以上の価格調整は極めて困難な状況でございます。ご要望に沿えず誠に申し訳ございません。」</div>
+        <p class="biz-target-kr">"정말 마음이 아픕니다만, 현재 품질을 유지하기 위해서는 이 이상의 가격 조율은 극히 곤란한 상황입니다. 요구에 부응하지 못해 대단히 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社：提案を断る場合）</span>
+        <div class="biz-target-jp">「魅力的なご提案をいただき大変感謝しておりますが、検討の結果、今回は見送らせていただくこととなりました。ご期待に添えず恐縮ですが、何卒ご容赦ください。」</div>
+        <p class="biz-target-kr">"매력적인 제안을 주셔서 대단히 감사드립니다만, 검토 결과 이번에는 넘어가기로 결정되었습니다. 기대에 부응하지 못해 송구합니다만, 아무쪼록 양해 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署：業務依頼を断る場合）</span>
+        <div class="biz-target-jp">「お声がけいただきありがとうございます。あいにくですが、現在は他プロジェクトの締め切りが重なっており、今回のご依頼をお受けするのは難しい状況です。申し訳ありません。」</div>
+        <p class="biz-target-kr">"제안해 주셔서 감사합니다. 안타깝게도 현재는 다른 프로젝트의 마감일이 겹쳐 있어, 이번 의뢰를 수락하기는 어려운 상황입니다. 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（残業や急な仕事を断る場合）</span>
+        <div class="biz-target-jp">「本日中に対応したいのは山々なのですが、先ほど指示されたAタスクを優先するため、こちらの業務は明日対応させていただいてもよろしいでしょうか。」</div>
+        <p class="biz-target-kr">"오늘 중으로 대응하고 싶은 마음은 굴뚝같습니다만, 방금 지시하신 A 태스크를 우선하기 위해, 이 업무는 내일 대응해도 괜찮을까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（飲み会の誘いを断る場合）</span>
+        <div class="biz-target-jp">「誘ってくれてありがとう！すごく行きたかったんだけど、今日はちょっと先約があって行けないんだ。また次回絶対に誘って！」</div>
+        <p class="biz-target-kr">"불러줘서 고마워! 정말 가고 싶었는데, 오늘은 선약이 있어서 못 가겠다. 다음번에 꼭 다시 불러줘!"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>パートナー企業の提案を断る際に、「次のプロジェクトではぜひ協力してほしい」というポジティブなニュアンスを残して断るトークを考えてみましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 4 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 4. 催促（プッシュ）</span>
+    <h3 class="biz-question">期日を過ぎても連絡が来ないとき</h3>
+    <div class="biz-situation">
+      昨日までにもらうはずだった資料（または連絡）がまだ届いていません。相手を不快にさせずに、状況を確認し、なるべく早く資料を送ってもらうように促します。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 「確認」の丁寧な言い回し</div>
+      <ul class="biz-point-content">
+        <li>「どうなっていますか（어떻게 되었습니까?）」は攻撃的に聞こえます。代わりに「いかがでしょうか（어떠신가요?）」や「進捗状況をお伺いできますか（진척 상황을 여쭤볼 수 있을까요?）」を使いましょう。</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客）</span>
+        <div class="biz-target-jp">「先般お願いいたしました資料の件ですが、その後の進捗状況はいかがでしょうか。行き違いでお送りいただいておりましたら大変失礼いたします。」</div>
+        <p class="biz-target-kr">"지난번에 부탁드린 자료 건입니다만, 그 후의 진척 상황은 어떠신가요? 혹시 이미 보내셨는데 제 메일과 엇갈린 것이라면 대단히 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「お忙しいところ恐縮ですが、昨日が期限となっておりました資料について、現在の進捗をお伺いできますでしょうか。本日中に受領できますと大変助かります。」</div>
+        <p class="biz-target-kr">"바쁘신 와중에 죄송합니다만, 어제가 기한이었던 자료에 대해 현재 진척 상황을 여쭤볼 수 있을까요? 오늘 중으로 받을 수 있다면 대단히 감사하겠습니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「お疲れ様です。先日依頼させていただいたアンケートですが、回収期限が過ぎております。お手数ですが、現在の進捗を教えていただけますでしょうか。」</div>
+        <p class="biz-target-kr">"수고 많으십니다. 요전에 의뢰해 드린 설문조사입니다만, 회수 기한이 지났습니다. 번거로우시겠지만 현재 진척 상황을 가르쳐 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（承認の催促）</span>
+        <div class="biz-target-jp">「部長、昨日ご相談いたしました企画書の決裁の件ですが、進めてもよろしいでしょうか。お忙しいところ恐れ入りますが、ご確認のほどよろしくお願いいたします。」</div>
+        <p class="biz-target-kr">"부장님, 어제 상담해 드린 기획서 결재 건입니다만, 진행해도 괜찮을까요? 바쁘신 와중에 죄송합니다만, 확인 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「お疲れ！さっきお願いしたデータの件、今どんな感じ？今日中に欲しいんだけど、何時ごろになりそうかな？」</div>
+        <p class="biz-target-kr">"수고했어! 아까 부탁한 데이터 건 지금 어떤 느낌이야? 오늘 중으로 받고 싶은데 몇 시쯤 될까?"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>「クライアント相手に失礼にならないよう催促する」という、一番難易度の高い電話トークを全員でローテーションしながら練習しましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 5 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 5. 指摘・クレーム対応</span>
+    <h3 class="biz-question">相手に不手際や間違いを指摘するとき</h3>
+    <div class="biz-situation">
+      取引先から送られてきた請求書（または社内データ）の金額が、事前に合意した金額と異なっています。相手のプライドを傷つけずに、間違いがあることを指摘して再送を求めます。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 「～のようです」による責任の緩和</div>
+      <ul class="biz-point-content">
+        <li>「間違っています（틀렸습니다）」と言い切るのではなく、「〜のように見受けられます（~인 것처럼 보입니다）」や「こちらの勘違いでしたら恐縮ですが（제 착각이라면 죄송합니다만）」を使うと上品に指摘できます。</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客：顧客側の認識が間違っている場合）</span>
+        <div class="biz-target-jp">「こちらの確認不足でしたら誠に申し訳ございませんが、今回の件は先日の会議にてご提示いただいた単価が適用される認識でした。今一度ご確認いただけますでしょうか。」</div>
+        <p class="biz-target-kr">"저희 확인 부족이었다면 대단히 죄송합니다만, 이번 건은 지난 회의 때 제시해 주신 단가가 적용되는 것으로 알고 있었습니다. 다시 한번 확인해 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「お送りいただいた請求書ですが、一部金額に相違があるように見受けられます。大変お手数ですが、事前に合意したお見積もり内容と突き合わせてご確認いただけますでしょうか。」</div>
+        <p class="biz-target-kr">"보내주신 청구서 말입니다만, 일부 금액에 차이가 있는 것처럼 보입니다. 대단히 번거로우시겠지만 사전에 합의한 견적서 내용과 대조하여 확인해 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「いつもお世話になっております。共有いただいたシートですが、数字が一部ずれている箇所があるようです。お手数ですが、ご確認をお願いいたします。」</div>
+        <p class="biz-target-kr">"항상 신세 지고 있습니다. 공유해 주신 시트입니다만, 숫자가 일부 어긋나 있는 부분이 있는 것 같습니다. 번거로우시겠지만 확인 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（上司のミスを指摘する場合）</span>
+        <div class="biz-target-jp">「部長、こちらのスケジュール表ですが、来週の日程が一部重複しているように見受けられます。私の勘違いでしたら申し訳ありませんが、ご確認いただけますでしょうか。」</div>
+        <p class="biz-target-kr">"부장님, 이 일정표입니다만 내주 일정이 일부 중복되어 있는 것처럼 보입니다. 제 착각이라면 죄송합니다만, 확인해 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「お疲れ！これ、スプレッドシートの関数が壊れてるみたいで数字がおかしくなってたよ。時間あるときにちょっと見ておいて！」</div>
+        <p class="biz-target-kr">"수고했어! 이거 스프레드시트 함수가 깨진 것 같아서 숫자가 이상하게 나와 있었어. 시간 있을 때 잠깐 봐줘!"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>「上司に意見やミスの指摘を伝える」という、非常に気まずい状況での丁寧かつ明確なアプローチ方法を練習してみましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 6 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 6. 感謝・お礼</span>
+    <h3 class="biz-question">難しい要望に応えてくれたお礼を言うとき</h3>
+    <div class="biz-situation">
+      急な納期短縮や難しいトラブル対応など、こちらの無理な要望に対して、相手が夜遅くまで対応して無事に解決してくれました。最大限の感謝を伝えます。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 感謝を伝える丁寧な語彙</div>
+      <ul class="biz-point-content">
+        <li>ありがとう（同僚） ➡️ 心より感謝申し上げます / 深謝いたします（社外公式） / 身に余る光栄でございます（過分な評価に対して）</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客：素晴らしいお取引をいただいた場合）</span>
+        <div class="biz-target-jp">「この度は、弊社の無理なスケジュール要望に対しまして、多大なるご協力をいただき誠にありがとうございました。貴社のご尽力に、心より深謝申し上げます。」</div>
+        <p class="biz-target-kr">"이번에 저희의 무리한 일정 요청에 대해 많은 협조를 해 주셔서 대단히 감사드립니다. 귀사의 노고에 마음 깊이 감사드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「急な仕様変更にもかかわらず、迅速かつ丁寧にご対応いただき、本当に助かりました。皆様のお力添えに、深く感謝いたします。今後とも何卒よろしくお願い申し上げます。」</div>
+        <p class="biz-target-kr">"갑작스러운 사양 변경임에도 불구하고 신속하고 꼼꼼하게 대응해 주셔서 정말 큰 도움이 되었습니다. 여러분의 도움에 깊이 감사드립니다. 앞으로도 아무쪼록 잘 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「インフラチームの皆さん、先ほどのサーバー障害の復旧対応、本当にありがとうございました。迅速に対応していただいたおかげで、被害を最小限に抑えられました。」</div>
+        <p class="biz-target-kr">"인프라 팀 여러분, 조금 전 서버 장애 복구 대응 정말 감사했습니다. 신속하게 대응해 주신 덕분에 피해를 최소한으로 억제할 수 있었습니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（指導や承認をもらったとき）</span>
+        <div class="biz-target-jp">「部長、本日はお忙しい中、私の企画書をご指導いただきありがとうございました。ご指摘いただいた点を反映し、明日までに必ず修正いたします。」</div>
+        <p class="biz-target-kr">"부장님, 오늘 바쁘신 와중에 제 기획서를 지도해 주셔서 감사했습니다. 지적해 주신 점을 반영하여 내일까지 반드시 수정하겠습니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「本当にありがとう！さっき手伝ってくれたおかげで、今日のタスク全部終わったよ。今度何かあったら、いつでも声かけてね！」</div>
+        <p class="biz-target-kr">"진짜 고마워! 아까 도와준 덕분에 오늘 일 다 끝났다. 다음에 무슨 일 있으면 언제든지 불러!"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>言葉だけでなく、「具体的な何が助かったのか（行動）」を付け加えることで、相手の努力をきちんと承認する感謝の伝え方をマスターしましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 7 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 7. 報告（悪い知らせ）</span>
+    <h3 class="biz-question">締め切りに間に合わない可能性があるとき</h3>
+    <div class="biz-situation">
+      本日中に提出する予定だったシステムテストのレポートですが、エラーが多発し、今日中に間に合いそうにありません。遅れる見込みであることを、事前に報告します。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 バッドニュースの報告手順（PREP法）</div>
+      <ul class="biz-point-content">
+        <li>結論（遅れる） ➡️ 理由（トラブル発生） ➡️ 現在の対策と「完了見込み（いつできるか）」 ➡️ 謝罪 の順番で報告します。これができないとビジネスでは信頼を失います。</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客）</span>
+        <div class="biz-target-jp">「本日予定しておりましたレポートのご提出ですが、現在システム不具合が発生しており、明日午前中のご送付に延期させていただきたく存じます。ご期待を裏切る形となり、深くお詫び申し上げます。」</div>
+        <p class="biz-target-kr">"오늘 예정이었던 리포트 제출입니다만, 현재 시스템 장애가 발생하여 내일 오전 중 발송으로 연기하고자 합니다. 기대를 저버리게 되어 깊이 사과드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「大変申し訳ありません。本日予定の納品ですが、一部データの確認作業に遅れが生じております。本日18時までには必ずお送りいたしますので、今しばらくお待ちいただけますでしょうか。」</div>
+        <p class="biz-target-kr">"정말 죄송합니다. 오늘 예정된 납품입니다만, 일부 데이터 확인 작업에 지연이 발생하고 있습니다. 오늘 18시까지는 반드시 보내드릴 테니 조금만 더 기다려 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「マーケティング部の皆さん、お疲れ様です。本日中の素材データ共有ですが、進行がやや遅れております。遅くとも明日朝9時までには必ず連携いたします。申し訳ありません。」</div>
+        <p class="biz-target-kr">"마케팅부 여러분, 수고 많으십니다. 오늘 중 소재 데이터 공유 건입니다만, 진행이 조금 지연되고 있습니다. 늦어도 내일 아침 9시까지는 반드시 공유하겠습니다. 죄송합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（報告）</span>
+        <div class="biz-target-jp">「課長、大変申し訳ありません。本日提出予定の報告書ですが、データ検証に時間を要しており、明日の10時までにご提出させていただいてもよろしいでしょうか。私の管理不足を痛感しております。」</div>
+        <p class="biz-target-kr">"과장님, 대단히 죄송합니다. 오늘 제출 예정인 보고서입니다만, 데이터 검증에 시간이 걸려 내일 10시까지 제출해도 괜찮을까요? 제 관리 부족을 뼈저리게 느끼고 있습니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「ごめん！今日中って言ってた作業、トラブル対応でまだ終わってなくて。明日のお昼までに終わらせて共有するね、待たせて申し訳ない！」</div>
+        <p class="biz-target-kr">"미안! 오늘 중으로 끝낸다던 작업, 트러블 대응 때문에 아직 못 끝냈어. 내일 점심때까지 끝내서 공유할게, 기다리게 해서 정말 미안!"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>怒っている上司にバッドニュースを報告する際の、言い訳に聞こえない「誠実な態度と話し方」をロールプレイングしてみましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 8 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 8. 質問・尋ねる</span>
+    <h3 class="biz-question">相手の言ったことがよく理解できなかったとき</h3>
+    <div class="biz-situation">
+      会議中、相手の指示や意見の重要な部分（仕様や方向性）が聞き取れなかったり、理解できなかったりしました。失礼にならず、確実にもう一度説明を求めます。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 「聞き直す」ときの言い訳（クッション）</div>
+      <ul class="biz-point-content">
+        <li>「あなたが言ったことがわからない」のではなく、「こちらの聞き取り不足/理解不足で（내가 잘 알아듣지 못해서）」という自分の非を認めながら聞き直すのが大人のマナーです。</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客）</span>
+        <div class="biz-target-jp">「私の理解不足で誠に恐縮でございますが、先ほどの仕様変更の要件につきまして、今一度詳しくお伺いしてもよろしいでしょうか。」</div>
+        <p class="biz-target-kr">"제 이해 부족이라 대단히 송구합니다만, 방금 말씀하신 사양 변경 요건에 대해 다시 한번 자세히 들을 수 있을까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「お電話が一部途切れてしまったようで大変恐縮ですが、先ほどの件についてもう一度お聞かせいただけますでしょうか。」</div>
+        <p class="biz-target-kr">"전화가 일부 끊긴 것 같아 대단히 죄송합니다만, 방금 말씀하신 건에 대해 다시 한번 말씀해 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「企画部の佐藤さん、お疲れ様です。先ほどのご指示について1点確認させていただきたいのですが、こちらのスケジュールは今月末目処ということでお間違いないでしょうか。」</div>
+        <p class="biz-target-kr">"기획부의 사토 씨, 수고 많으십니다. 방금 지시하신 건에 대해 한 가지 확인하고 싶은데요, 이 일정은 이번 달 말 목표가 맞을까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（質問）</span>
+        <div class="biz-target-jp">「部長、今の開発のフローについて勉強不足で申し訳ありません。この部分の具体的な手順をもう一度教えていただけますでしょうか。」</div>
+        <p class="biz-target-kr">"부장님, 지금 개발 흐름에 대해 제 공부가 부족해 죄송합니다. 이 부분의 구체적인 절차를 다시 한번 가르쳐 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「ごめん！さっき言ってたやつ、もう一回教えて。今日中にやらなきゃいけない作業って何だっけ？」</div>
+        <p class="biz-target-kr">"미안! 아까 말했던 거 한 번만 더 가르쳐줘. 오늘 중으로 해야 하는 작업이 뭐였지?"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>わからないまま放置して後で重大なエラーになるのを防ぐために、「その場ですぐに、かつスマートに質問する」習慣を身につけましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 9 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 9. 提案・意見出し</span>
+    <h3 class="biz-question">自分のアイデアや異なる意見を提案するとき</h3>
+    <div class="biz-situation">
+      進行中の企画に対して、よりコストを削減できる、あるいはより効果の高い別のアイデアを思いつきました。既存の意見を否定せずに、新しい案を提案します。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 提案の導入（「差し支えなければ」等）</div>
+      <ul class="biz-point-content">
+        <li>「この方がいいです（이게 더 좋습니다）」と自分の意見を押し付けるのではなく、「一つの可能性として（하나의 가능성으로서）」や「差し支えなければ（괜찮으시다면）」という控えめなアプローチを使います。</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客）</span>
+        <div class="biz-target-jp">「もし差し支えなければ、コスト面をさらに最適化できるプランといたしまして、こちらの別案も合わせてご検討いただけますでしょうか。」</div>
+        <p class="biz-target-kr">"혹시 괜찮으시다면 비용 면을 한층 더 최적화할 수 있는 플랜으로서, 이쪽의 대안도 함께 검토해 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「皆様の素晴らしいアイデアを踏まえた上で、開発効率を高める観点から、このようなスケジュール調整案を考えてみました。いかがでしょうか。」</div>
+        <p class="biz-target-kr">"여러분들의 훌륭한 아이디어를 전제로 두고, 개발 효율을 높이는 관점에서 이러한 일정 조율안을 한번 생각해 보았습니다. 어떠실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「営業部の皆様、いつもお世話になっております。今回のキャンペーンについて、ユーザー体験の向上の観点から、デザインを一部変更することを提案させてください。」</div>
+        <p class="biz-target-kr">"영업부 여러분, 항상 신세 지고 있습니다. 이번 캠페인에 대해, 유저 경험 향상 관점에서 디자인을 일부 변경하는 것을 제안해 드리고자 합니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（提案）</span>
+        <div class="biz-target-jp">「部長、今期の売上目標達成に向けまして、新しいテストマーケティングの実施案を作ってみました。お手隙の際にご意見をいただけますでしょうか。」</div>
+        <p class="biz-target-kr">"부장님, 이번 분기 매출 목표 달성을 위해 새로운 테스트 마케팅 실시안을 만들어 보았습니다. 시간 나실 때 의견을 주실 수 있으실까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「これ、もうちょっと簡単にやる方法があるんだけど、こうやってみない？こっちの方が時間もかからないと思うんだよね。」</div>
+        <p class="biz-target-kr">"이거 좀 더 쉽게 하는 방법이 있는데 이렇게 한번 해볼래? 이쪽이 시간도 덜 걸릴 것 같아."</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>上司やクライアントがすでに決めた方針に対し、「反対意見ではなく、より建設的なオルタナティブ（代替案）」として上手に割り込んで提案するロールプレイングをしてみましょう。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 10 -->
+  <div class="biz-card">
+    <span class="biz-q-number">Situation 10. 退勤時の挨拶</span>
+    <h3 class="biz-question">先に退社（帰宅）するとき</h3>
+    <div class="biz-situation">
+      自分の仕事がすべて終わり、退社します。周りの他のメンバーや上司はまだ仕事を続けている状態で、気まずくならずに、一言挨拶をして気持ちよく退社します。
+    </div>
+
+    <div class="biz-point-box">
+      <div class="biz-point-title">💡 「お疲れ様」の正しいルール</div>
+      <ul class="biz-point-content">
+        <li>「ご苦労様（고생했어）」は絶対に上司に使ってはいけません。また、「先に帰ることへの気遣い（お先に失礼します）」を一言添えるのが大人のビジネスコミュニケーションです。</li>
+      </ul>
+    </div>
+
+    <div class="biz-targets">
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-client">1. クライアント（顧客：退社するのではなく、顧客先への訪問を終えて帰社・帰宅する場合）</span>
+        <div class="biz-target-jp">「本日はお忙しいお時間をいただき誠にありがとうございました。それでは、これにて失礼いたします。今後とも何卒よろしくお願い申し上げます。」</div>
+        <p class="biz-target-kr">"오늘 바쁘신 와중에 시간을 내어 주셔서 대단히 감사했습니다. 그럼 이만 물러가겠습니다. 앞으로도 아무쪼록 잘 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-partner">2. パートナー企業（協力会社）</span>
+        <div class="biz-target-jp">「本日のミーティングもお疲れ様でした。こちらで決定いたしましたタスクにつきましては、明日朝一で進めさせていただきます。それでは、お先に失礼いたします。」</div>
+        <p class="biz-target-kr">"오늘 미팅도 수고 많으셨습니다. 오늘 결정된 태스크는 내일 아침 일찍 진행하도록 하겠습니다. 그럼 먼저 들어가 보겠습니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-dept">3. 他部署（社内他部署）</span>
+        <div class="biz-target-jp">「開発部の皆さん、本日の検証作業もお疲れ様でした。私の方はこれで失礼いたします。また明日よろしくお願いいたします。」</div>
+        <p class="biz-target-kr">"개발부 여러분, 오늘 검증 작업도 수고 많으셨습니다. 저는 이만 들어가 보겠습니다. 내일 또 잘 부탁드립니다."</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-boss">4. 上司（退勤）</span>
+        <div class="biz-target-jp">「お先に失礼いたします。本日のタスクはすべて完了いたしました。何か突発的な緊急件がなければ、これで退社させていただいてもよろしいでしょうか。」</div>
+        <p class="biz-target-kr">"먼저 퇴근하겠습니다. 오늘 태스크는 모두 완료했습니다. 혹시 갑작스러운 긴급 건이 없다면 이만 퇴근해도 괜찮을까요?"</p>
+      </div>
+      <div class="biz-target-row">
+        <span class="biz-target-badge badge-peer">5. 同僚（チームメンバー）</span>
+        <div class="biz-target-jp">「みんなお疲れ！お先に失礼するね。何かあったらSlackでメンション投げておいて！」</div>
+        <p class="biz-target-kr">"다들 수고해! 나 먼저 퇴근할게. 무슨 일 있으면 슬랙으로 멘션 남겨줘!"</p>
+      </div>
+    </div>
+
+    <div class="biz-mission-box">
+      <div class="biz-mission-title">🎯 ロールプレイング・ミッション</div>
+      <ul class="biz-mission-list">
+        <li>「周りが残業してピリピリしている空気」の中でも、罪悪感を感じず、しかし相手を気遣いながらスマートにオフィスを去る挨拶を練習しましょう。</li>
+      </ul>
+    </div>
+  </div>
+</div>

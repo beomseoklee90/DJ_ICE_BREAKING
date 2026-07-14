@@ -1,4 +1,4 @@
-ビジネス日本語
+[ビジネス日本語会]_文法
 <style>
   :root {
     --primary-color: #4f46e5;

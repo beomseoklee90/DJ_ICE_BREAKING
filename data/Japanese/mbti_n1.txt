@@ -1,0 +1,522 @@
+[文化交流会]MBTI_N1
+<style>
+  /* MBTI 교재 컨테이너 공통 스타일 (React 스코핑용) */
+  .mbti-container {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: #2c3e50;
+    line-height: 1.7;
+  }
+
+  .mbti-container * {
+    box-sizing: border-box;
+  }
+
+  /* 타이틀 및 가이드라인 */
+  .mbti-header {
+    text-align: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  .mbti-header h1 {
+    font-size: 28px;
+    color: #1a365d;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+  }
+
+  .mbti-header p {
+    font-size: 15px;
+    color: #4a5568;
+    margin: 0;
+  }
+
+  /* 질문 카드 루프 */
+  .mbti-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mbti-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+  }
+
+  .mbti-q-number {
+    display: inline-block;
+    background: #3182ce;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .mbti-question {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 10px 0;
+  }
+
+  .mbti-situation {
+    font-size: 15px;
+    color: #4a5568;
+    background: #ebf8ff;
+    padding: 15px;
+    border-left: 4px solid #3182ce;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  /* 선택지 스타일 */
+  .mbti-options {
+    margin-bottom: 25px;
+  }
+
+  .mbti-option-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-option-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #edf2f7;
+    color: #4a5568;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  /* 선택지별 해설 */
+  .mbti-analysis {
+    background: #fffaf0;
+    border: 1px solid #feebc8;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 25px;
+  }
+
+  .mbti-analysis-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #dd6b20;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mbti-analysis-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13.5px;
+    color: #7b341e;
+  }
+
+  .mbti-analysis-list li {
+    margin-bottom: 6px;
+  }
+
+  /* 추가 질문 3개 */
+  .mbti-extra-qs {
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 20px;
+  }
+
+  .mbti-extra-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 10px;
+  }
+
+  .mbti-extra-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #718096;
+  }
+
+  .mbti-extra-list li {
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+</style>
+<div class="mbti-container">
+  <div class="mbti-header">
+    <h1>ネイティブと探求する：日韓MBTI心理分析大博覧会</h1>
+    <p>極限のシチュエーションにおける行動選択から相互の価値観の乖離を浮き彫りにし、深層心理に迫る本音のディスカッションを展開しましょう。</p>
+  </div>
+
+  <!-- LOOP 1 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q1. T vs F 情緒的同調と認知的アプローチの対立</span>
+    <h3 class="mbti-question">親友の経営する店舗が破綻に追い込まれた局面</h3>
+    <div class="mbti-situation">
+      大親友が満を持して開業したカフェが、わずか半年で閉店の憂き目に遭ってしまいました。友人に「一杯付き合ってくれ」と呼び出されて赴くと、友人は落涙しながら「文字通り不惜身命の思いで尽力したのに…なぜ自分ばかりがこのような不条理に直面しなければならないのか。世の理が恨めしい」と嘆唱しています。この刹那、あなたならいかに処するか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「本当に辛い局面に耐えてきたよね…真摯に全力を尽くした事実は揺るがないよ。話を聞いているだけで、私まで胸が締め付けられる思いだよ」 ➡️ 徹底的な共感を示し、相手の内面的な苦痛に無条件で寄り添う
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「しかし客観的に見て、立地選定における戦略的瑕疵は否めないよね。保証金や居抜き料の回収状況は？ 廃業届などの法的手続きは遅滞なく履行したの？」 ➡️ 冷静沈着に理性を堅持し、現状打破のための実効的な解決策を提示する
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「この精神的重圧を払拭するために、明日未明にでも台湾へ渡航しよう！ 日常のしがらみから隔絶された環境で、一切の憂いを忘却するんだ！」 ➡️ 物理的な環境転換を促し、一時的な認知の回避によって精神的負荷を軽減する
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 定理的な情緒共感を最優先する「傾聴のスペシャリスト」。客観的には一時的な慰撫に見えるかもしれませんが、心理的危機にある自我にとっては最強の安全基地（セキュアベース）として機能します。</li>
+        <li><strong>Bを選択（T傾向）：</strong> 現実原則に立脚する救世主。感情の表出に埋没せず、滞納リスクの回避や法的枠組みの整備など、実務的ソリューションを重んじます。過酷な現実を打開せんとする、合理的かつ逆説的な慈愛の形です。</li>
+        <li><strong>Cを選択（P傾向）：</strong> 不確実性を好む「刺激順応型」。直面する脅威から一時的に注意を逸らす（アテンション・シフト）ことで、トラウマ化を未然に防ごうとする独特の防衛機動を試みます。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理的思考で考察せよ）</div>
+      <ul class="mbti-extra-list">
+        <li>自己の精神が逼迫している際、「無条件の情緒的同調（A）」と「客観的かつ厳格な是正勧告（B）」のどちらが自我の崩壊を防ぐ上でより有益でしょうか。</li>
+        <li>Bのアプローチを執る者は、利他主義的な信念に基づき悪役を演じているのか、あるいは他者の過度な情動に対峙することに対する回避行動（防衛）にすぎないのか。</li>
+        <li>日本社会特有の「建前」という文化的規範は、心理カウンセリングの文脈において、クライエントの自己開示（ホンネの吐露）を阻害する要因となり得るでしょうか。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 2 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q2. J vs P 予測不能な事態における脆弱性と柔軟性</span>
+    <h3 class="mbti-question">渡航当日の朝に告げられた、不測の疾病による契約不履行</h3>
+    <div class="mbti-situation">
+      一ヶ月前から最高級の宿泊施設を包含する旅程を確定し、航空券の手配も含め完全なる統制下にあった日韓温泉旅行の当日の朝。出発を目前に控えた刹那、同行者から連絡が入り、「突発的な高熱により緊急搬送された結果、インフルエンザ罹患が確定した。不可抗力ゆえに同行は到底不可能である。陳謝する」と告げられました。この極限状態における、あなたの初動（本能的防衛反応）は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「何ということだ、体調は大丈夫か！？ 看病の手配は必要？ とりあえず旅行のことは忘れて、加療と静養に専念して！」と、他者の生命の危機および健康状態を最優先事項として認知する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「キャンセルポリシーおよび規約の厳密な確認が先決だ。その上で、単独行を強行する場合の代替旅程（ contingency plan ）を策定しなければ」と、損失の最小化を目指し、即座に経済的合理性を計算する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「僥倖にも単独行という自由を手に入れたわけだ。現地でシングル利用への変更に伴う部屋のアップグレード交渉が可能か打診しよう！」と、現状の制約を逆手に取り、予期せぬ変数を新しい体験として享受する。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 関係性保守を絶対視するエゴの所有者。金銭的価値や計画の完全性は、他者への向社会的な懸念よりも下位に位置づけられます。</li>
+        <li><strong>Bを選択（J傾向）：</strong> 不確実性および予定の破綻（カオス）に対して極めて高い嫌悪感を示す規律型人間。感傷に耽る時間を排除し、埋没費用（サンクコスト）の最小化のために理性を先鋭化させます。</li>
+        <li><strong>Cを選択（P傾向）：</strong> 危機的状況（クライシス）を即座にリフレーミングする環境適応の達人。人生におけるすべての予測不能な変数は、新たな探求の起点になり得ると確信しています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理的思考で考察せよ）</div>
+      <ul class="mbti-extra-list">
+        <li>旅行のような非日常的な意思決定において、構造化された綿密な時間割（エクセル等）を好む性質と、現地の確率論的変数に身を任せる性質、どちらがより「持続可能な幸福感」を得られるでしょうか。</li>
+        <li>直前のキャンセル（ドタキャン）という契約不履行に対し、相手の疾病という不可抗力を鑑みても、キャンセル料の厳密な求償を行うことは道徳的に正当化されるか。</li>
+        <li>日本の文化的土壌における「迷惑（メイワク）」の概念は、韓国における関係性の親密さ（ウリ意識）と比較して、突発的な制約が生じた際により強い社会的抑圧として機能しますか。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 3 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q3. E vs I 社会的文脈におけるエネルギー代謝</span>
+    <h3 class="mbti-question">配偶者または恋人の内集団（イングループ）への強制的包摂</h3>
+    <div class="mbti-situation">
+      パートナーの先導により、彼（彼女）の高校時代からの強固なイングループである5人のコミュニティによる喧騒に満ちた宴席へ同席させられました。構成員全員があなたを熱烈に歓待し、次々とプライベートな領域に踏み込む質問（精神的探針）を投げかけながら、絶え間なくアルコールを注ぎ催促する環境です。この局面における、あなたの内面的状態は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「この集団的熱狂のモメンタムを利用し、自分がこの場における絶対的なファシリテーター（中心）として機能して見せる！」 ➡️ 外向的本能を全開にし、集団を包摂・圧倒する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> ペルソナ（社会的仮面）としての微笑は維持しつつも、内面的には「自己充足的空間の欠絶による深刻なエネルギー枯渇」を感じ、早期の離脱を渇望している。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> パートナーに対して非言語的シグナル（目配せ）を送り、「私の防衛限界を超えている。一定時間経過後に合理的な大義名分のもと戦線離脱したい」と明確に要求する。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（E傾向）：</strong> 外部の社会的刺激を直接エネルギーに変換する「高反応性外向型」。未知の集団からの過度なアプローチは脅威ではなく、自我の拡大をもたらすブースターとなります。</li>
+        <li><strong>Bを選択（I傾向）：</strong> 卓越した社会順応的ペルソナを持つ一方で、内面は急速に摩耗していく「適応型内向性」。他者のメンツを優先する代償として、自らの精神的生命維持装置を削り続けています。</li>
+        <li><strong>Cを選択（現実妥協派）：</strong> 自他境界（バウンダリー）の確立を重視する個人主義者。パートナーのメンツという社会的評価よりも、自身の精神的ホメオスタシス（恒常性）の維持を優先する論理的自己防衛能力に長けています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理적 사고로 고찰하라）</div>
+      <ul class="mbti-extra-list">
+        <li>長期的なパートナーシップにおいて、自己の交友関係へ相手を頻繁に巻き込もうとする「集団的包摂」を好む者と、二者関係と外部関係を厳格に切り離す「境界分離型」、どちらがより破綻リスクが低いか。</li>
+        <li>内向型の人間が社会的文脈において沈黙を守っている際、外向型の人間が「主体的参加やテンションの融和」を強要することは、向社会的な配慮（善意）と強権的な支配（暴力）のどちらの本質を含んでいますか。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 4 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q4. S vs N 現実感覚と仮定的推論の閾値</span>
+    <h3 class="mbti-question">「もし自分がゾンビ（理性を喪失した捕食者）化した場合の倫理的選択」への回答要請</h3>
+    <div class="mbti-situation">
+      深夜、アルコールを摂取しつつ終末SF映画を鑑賞していた親友が、突如として厳粛な形相であなたを凝視し、「仮に未知のウイルスが蔓延し、私が理性を完全に喪失したゾンビと化したならば、あなたは私の生存権を剥奪（尊厳死）してくれるか？ あるいは、物理的に拘束してでも治療法が確立されるまで私を存続させてくれるか？」と不条理な思考実験を投げかけてきました。あなたの応答は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「そのような不条理かつ発生確率の計算できない仮定に基づく問答は無意味だ。無駄な妄想を排して速やかに睡眠をとりなさい」 ➡️ 問いそのものを棄却し、現実世界への回帰を促す。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「当然、即座に脳幹を破壊（安楽死）させる。しかし待てよ、もしウイルス感染後も自我の残滓が一時的に機能しているならば…その場合のウイルスの神経系への作用機序は…」 ➡️ 仮定の世界観を真摯に内面化し、その設定のルール構築（思考実験）に没頭する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「たとえあなたが怪物化しようとも、拘束してでも世界の崩壊からあなたを隔離し隠匿する。あなたを排除することなど私には到底不可能だ」 ➡️ ゾンビという設定を「現在の心理的親密度および忠誠心」を測るメタファーとして受理し、情動的に応答する。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（S傾向）：</strong> 経験則と即物的な現実感覚に立脚する徹底したリアリスト。蓋然性の極めて低いフィクションに対して精神的リソースを配分することを「非合理的」とみなす堅実な思考様式です。</li>
+        <li><strong>Bを選択（N傾向）：</strong> 概念の抽象化および極限状態のシミュレーションを好む「概念駆動型」。起き得ない仮定の構築こそが知的好奇心の源泉であり、思考空間の拡大そのものを楽しみます。</li>
+        <li><strong>Cを選択（F傾向）：</strong> ロマンチシズム的アプローチを執る感性派。論理的帰結や物理的リスクよりも、「他者との情緒的絆の永続性」という象徴的価値を肯定することにコミットします。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理的思考で考察せよ）</div>
+      <ul class="mbti-extra-list">
+        <li>「世界滅亡」や「天文学的な資産の獲得」といった非現実的な思考実験を日常的に展開する認知様式は、現実逃避としての機能を持つのか、それとも創造的思考の訓練として機能しているのか。</li>
+        <li>感覚型（S）にとって、直観型（N）の投げる抽象的・仮定的なコミュニケーションは知的刺激として受容されるか、あるいは単なる認知的ノイズとして処理されるか。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 5 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q5. T vs F 批評的誠実さと情緒的配慮の葛藤</span>
+    <h3 class="mbti-question">親友が全力を傾注した創作物のクオリティが、著しく水準に達していない局面</h3>
+    <div class="mbti-situation">
+      作家志望の友人が、幾夜もの徹夜を経て完成させた短編小説（あるいは心血を注いだデザイン案）を持参し、率直な批評（フィードバック）を求めてきました。羞恥と期待が入り混じった友人の前で精読したところ、プロットの構造は破綻しており、市場における大衆的な需要（コマーシャリズム）は皆無であると判断せざるを得ません。このとき、あなたの選択は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「この文体および色調には、極めて稀有な独自性が内包されているね！ 徹夜の努力が作品の細部に結実しているよ。素晴らしい挑戦だ」 ➡️ 成果物の客観的評価ではなく、努力のプロセスと相手のアイデンティティを擁護する賛辞を優先する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「率直に言って、第2幕の展開は冗長であり、読者の離脱を招く。この葛藤の二項対立を再構築し、現代の市場トレンドに即してリライトすべきだ」 ➡️ 相手の長期的成長を期して、骨肉を削るような客観的・構造的批判（クリティーク）を冷徹に提示する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「驚異的な仕上がりだね！ これがメディアミックスされ、映像化された際のキャスティングは誰が良いだろう？ 国際的な展開の可能性は…」 ➡️ 現実のクオリティ評価から認知を逸らし、未来の極大化した成功の可能性へ議論を飛躍させる。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 自己肯定感（セルフ・エスティーム）の絶対的防衛者。作品の市場価値よりも、眼前の他者の「創作意欲という脆い精神状態」を守ることが、関係性における最優先の正義であると確信しています。</li>
+        <li><strong>Bを選択（T傾向）：</strong> 知的誠実さと客観的真理を最上位の価値とする「機能的批評家」。甘言による一時的な気休めは相手への欺瞞であり、残酷な真実の提示（ラジカル・キャンダー）こそが最大の貢献であるという信念に基づいています。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理적 사고로 고찰하라）</div>
+      <ul class="mbti-extra-list">
+        <li>自らが心血を注いだ成果物を他者に評価させる際、自己の心理的擁護（A）と、成長のための破壊的批判（B）、機能的に見てどちらがより個人のエンパワーメントに寄与するか。</li>
+        <li>日本社会における「建前」およびオブラートに包んだ表現の技術は、真理への到達を阻害する非効率なコミュニケーションコストか、それとも集団の社会秩序を維持するための必須のインフラか。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 6 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q6. J vs P 購買行動における認知的最適化アルゴリズム</span>
+    <h3 class="mbti-question">高額な精密機器または資産的価値のある物品の獲得プロセス</h3>
+    <div class="mbti-situation">
+      数十万円相当のハイエンドノートPC（またはプレミアムブランドの資産価値あるバッグ）を購入することを決意しました。店頭での最終意思決定から決済に至るまでの、あなたの「消費の認知アルゴリズム」はいかなる軌跡を辿るか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 諸元の徹底的な精査は当然として、世界中のレビュー動画および最安値の時系列推移データを最低二週間ベンチマークし、最適解であることを理論的に担保した上で決済する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「この意匠と一回性のカラーリングは代替不可能だ。店員さん、即座に決済手続きを」 ➡️ 直感的な美学的インスピレーションが発現したならば、時間的躊躇なく即決・所有する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 店頭での衝動的決済を完了した直後、帰路の途上で最安値プラットフォームを検索し、自己の決済額を下回るデータを発見した瞬間に激しい不協和（買い手の後悔）を起こす。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（J/S傾向）：</strong> 予測可能性を最大化しようとする「合理的データアナリスト」。購入前の情報収集に伴うコストを「快感」として処理し、完璧な費用対効果（ROI）を達成した瞬間に認知的カタルシスを得ます。</li>
+        <li><strong>Bを選択（P/F傾向）：</strong> 体験の非日常性と直感を重んじる「感性的消費者」。数理的なスペックではなく、所有の瞬間における「情動的な充足度」こそが最も尊い価値であるというエピクロス主義的アプローチです。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理的思考で考察せよ）</div>
+      <ul class="mbti-extra-list">
+        <li>購買行動における「徹底的な比較調査（A）」は、真の最適解をもたらすのか、それとも選択のパラドックス（認知的過負荷）による精神的疲弊を招くだけの非効率的なプロセスか。</li>
+        <li>消費行動において、日本人は構造的に「持続可能性・耐久性」という機能的価値を誇張し、韓国人は「象徴性・即時的アイデンティティ」という情緒的価値を重視する傾向があるという仮説は成立するか。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 7 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q7. E vs I 精神的ホメオスタシス回復のための環境的要件</span>
+    <h3 class="mbti-question">過度な社会的ストレスに曝露された後の「週末」の定義</h3>
+    <div class="mbti-situation">
+      組織内の不条理な抑圧や過度なタスクの連続により、精神的に完全な「満身創痍」の状態で金曜日の帰路につきました。心身のホメオスタシス（恒常性）を回復するための、あなたにとっての「最高効率の精神回復プロトコル」は次のうちどれ？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「このような危機的状態こそ、社会的相互作用によってデトックスすべきだ」と判断し、即座に信頼できる複数人のコミュニティを招集。喧騒に満ちた外部空間で言語的表出を行う。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 自宅の結界（居住空間）に入った瞬間に全通信機器を遮断。最小限の生命維持のための食事を確保した上で、完全に孤立した環境でオンデマンドのコンテンツを深夜まで消費し続ける。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 土曜日の日没まで睡眠による肉体的リカバリーを強行し、深夜に至って「自己の深層を共有できる極めて限られた客体（1人）」のみを召集、静謐な空間でディープトークを交わす。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（E傾向）：</strong> 回復のために外部の刺戟と社会的接続を要する「外向的エネルギー代謝系」。他者との情動的な摩擦と発話によるカタルシスこそが、体内のネガティブなストレスホルモンを代謝する必須要件です。</li>
+        <li><strong>Bを選択（I傾向）：</strong> 他者との接続そのものを「エネルギーの漏出」と定義する「閉鎖型自己充電器」。社会的刺激（ノイズ）の完全な遮단（センサリー・デプリベーション）によってのみ、傷ついた自我が自己治癒を開始します。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理적 사고로 고찰하라）</div>
+      <ul class="mbti-extra-list">
+        <li>週末全体の社会的孤立（B）は、現代社会における健全な精神維持のための「必須の自衛権の行使」か、それとも鬱的状態を悪化させる「社会的ひきこもり」への端緒か。</li>
+        <li>日本の会社組織における金曜日の「飲み会文化」は、外向型主導の全体主義的抑圧であるという批判に対し、組織の有機的結合（インフォーマルな連携）においていかなる客観的機能を有しているか。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 8 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q8. T vs F 葛藤発生時におけるコミュニケーションの断絶と修復のタイムライン</span>
+    <h3 class="mbti-question">重大な認知の乖離に伴う、一時的な関係のフリーズ（連絡断絶）事態</h3>
+    <div class="mbti-situation">
+      重要な客体（友人または恋人）と、些細な誤解から感情的かつ痛烈な言語的暴力を応酬し合う大喧嘩を展開した末、一切の連絡を遮断する膠着状態（デッドロック）に陥りました。帰宅後、激しい認知の不協和と憤怒に苛まれる中、自己の防衛システムはいかなる認知的処理を開始するか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「情動が乱れた状態での対話は合理的ではない」と判断し、相互の情動の閾値が下がるまで数日間、意図的に沈黙（サイレント・トリートメント）を維持し、内省のための時間を確保する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 未解決の状態（ハザード）がもたらす精神的コストに耐えかね、即座に直接的な通信を試みる。「さきほどの発言の論理的意図を明確にしなさい。この不確定要素を即座に解消させよう」と、因과関係の解明を要求する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「このまま関係性が永遠に瓦解するのではないか」という予期不安に圧倒され、最悪のシナリオを無限ループで想起。夜中に自己のSNSのステータスやプロファイルを悲劇的なニュアンスへ改変し、受動攻撃的なシグナルを発信する。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（洞窟引きこもり派 / I/T傾向）：</strong> 不安定な感情の衝突を論理的に忌避する「認知的隔離の信奉者」。感情の波を完全に排した純粋なロジックでのみ対話が成立すると確信しているため、時間的冷却を必須とみなします。</li>
+        <li><strong>Bを選択（直球ぶつけ派 / E/T傾向）：</strong> 未完了の葛藤（オープン・ループ）を脳内バグと定義する「論理的デバッガー」。曖昧さに対する耐性が著しく低いため、自己の精神的負担を抑える目的で即時的な白黒の判定を求めます。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理的思考で考察せよ）</div>
+      <ul class="mbti-extra-list">
+        <li>葛藤発生時における「時間的隔離を求める沈黙派（A）」と「即時的解明を求める対話派（B）」の衝突は、どちらのコミュニケーションスタイルがより関係性の長期的維持において破壊的か。</li>
+        <li>喧嘩の後に自発的に謝罪や連絡を行う主導権の所在は、自己の非（過失割合）を認めた証拠か、それとも「関係性の喪失」に対する恐怖の非対称性（より執着している側）の証明か。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 9 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q9. J vs P デジタル環境の構造化とエントロピー管理</span>
+    <h3 class="mbti-question">インフォメーション・アーキテクチャの管理手法</h3>
+    <div class="mbti-situation">
+      スマートフォンのインターフェース（ホーム画面）や各種メッセンジャーアプリケーションを開いた際、あなたの未読バッジ（通知数）の集積およびアプリケーションの階層構造（フォルダ分け）はいかなる状態を維持しているか？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 未読数を示す赤いバッジ（未読999+）は精神的無秩序の象徴であり、認知的苦痛を伴う。すべての通知は即座に既読（ゼロクリア）され、各アプリは機能ごとに論理的にフォルダ分類されている。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 未読の集積数が万単位に達しようとも、自己の日常のタスク処理能力には何ら支障をきたさない。主要なアプリは指の空間的記憶によってアクセス可能であり、画面全体のエントロピー（カオス）を完全に許容している。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 体系的なフォルダ構築は放棄しているが、視覚的ノイズを避けるために、非アクティブなアプリを視界から隔離された最終ページへ「不可視化」させるという、表面的な秩序維持（対症療法）を行っている。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（J傾向）：</strong> 外部環境の構造化を絶対条件とする「秩序の支配者」。デジタル空間の秩序がそのまま内面的な精神の安定と直結しており、未読バッジという「未処理のタスク」の存在そのものがエゴへの脅威となります。</li>
+        <li><strong>Bを選択（P傾向）：</strong> カオスの中に独自の効率性を見出す「超並列処理型知性」。形式的な管理に精神的リソースを割くことこそが非効率的であると考え、動的な適応能力によって無秩序を制圧します。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理적 사고로 고찰하라）</div>
+      <ul class="mbti-extra-list">
+        <li>デジタル上の「既読スルー／未読スルー」という非同期コミュニケーションにおける沈黙の行使は、現代社会における個人の権利か、それとも他者への礼儀を欠いた非礼な行為か。</li>
+        <li>日本人の多くが追求する「徹底した細部の整理整頓および計画性」は、強迫的な社会規範による抑圧の産物か、それとも空間的合理性を極限まで高めた美学の極致か。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOOP 10 -->
+  <div class="mbti-card">
+    <span class="mbti-q-number">Q10. S vs N 関係性の維持におけるファクト重視と情緒的適応のディレンマ</span>
+    <h3 class="mbti-question">「自己の容姿・体型のネガティブな変化」に関する踏み絵的問いへの即答要求</h3>
+    <div class="mbti-situation">
+      夜食を共に楽しんでいたパートナーが、突如として器具を置き、陰鬱な表情で自己の輪郭を触りながら、「ねぇ、客観的に見て、私（僕）最近明らかに増量した（太った）と思わない？ 欺瞞を排して率直に答えなさい…」と、防御姿勢をとっていないあなたに認知的奇襲を仕掛けてきました。この致命的局面における、あなたの即時的機動は？
+    </div>
+    <div class="mbti-options">
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">A</span> 「そのような兆候は微塵も存在しない！ 現在の質量が最も調和が取れており、審美的に極めて愛らしいよ。なぜそのような杞憂を抱くの？」 ➡️ パートナーの摂食行動を再開させるための、情動的防衛を目的とした全面的なファクトの否定。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">B</span> 「確かにフェイスラインの諸元が先週のデータと比較してやや膨張しているね。明日から合同で日常の走行距離を3kmに設定し、食事管理アプリのアルゴリズムに基づきカイゼンしよう」 ➡️ 現実の数値を直視し、即座に機能的なソリューションを構築・提供する。
+      </div>
+      <div class="mbti-option-item">
+        <span class="mbti-option-badge">C</span> 「明確に肥大化しているね！笑 もはや完全に家畜（ブタ）の領域に到達しつつあるよ、ブーブー！」 ➡️ 致命的なリスクを敢えて冒し、過激なユーモア（煽り）によって深刻な空気を解体しようと試みる。
+      </div>
+    </div>
+    <div class="mbti-analysis">
+      <div class="mbti-analysis-title">🔍 深層心理分析：精神力学的解釈</div>
+      <ul class="mbti-analysis-list">
+        <li><strong>Aを選択（F傾向）：</strong> 関係性安定装置の優秀な保守要員。相手の質問の本質が「ファクトの検証」ではなく、「現在の自己の愛着価値（アタッチメント）の再確認」であることを見抜く、高度な情緒的メタ認知を有しています。</li>
+        <li><strong>Bを選択（T傾向）：</strong> 純粋な合理的解決を最上位の愛と定義する「最適化マシーン」。言葉の慰めという対症療法を排し、本質的な健康状態の向上という根本療法を提供することこそが誠実さであるという機能主義の体現です。</li>
+      </ul>
+    </div>
+    <div class="mbti-extra-qs">
+      <div class="mbti-extra-title">💬 ディスカッション・テーマ（論理적 사고로 고찰하라）</div>
+      <ul class="mbti-extra-list">
+        <li>親密な関係性において、「残酷な真実を突きつけること（B）」と「優しい嘘によって相手の自己肯定感を保守すること（A）」、長期的観点から見てどちらがより成熟した関係へと寄与するか。</li>
+        <li>日本社会における「パートナーに対する公の場での身内下げ（謙遜）」の文化的風習と、韓国における「過剰なまでの公的愛情表現・絶対的擁護」の差異は、それぞれの社会構造にいかなる心理的影響を与えているか。</li>
+      </ul>
+    </div>
+  </div>
+</div>

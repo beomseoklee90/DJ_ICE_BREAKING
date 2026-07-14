@@ -1,4 +1,4 @@
-MBTI
+[文化交流会]MBTI_N2
 <style>
   /* MBTI 교재 컨테이너 공통 스타일 (React 스코핑용) */
   .mbti-container {
