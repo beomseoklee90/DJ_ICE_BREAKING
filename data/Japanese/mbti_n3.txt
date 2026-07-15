@@ -170,7 +170,7 @@
 </style>
 <div class="mbti-container">
   <div class="mbti-header">
-    <h1>日韓MBTIトーク：みんなで話そう！【N3】</h1>
+    <h1>日韓MBTIトーク：みんなで話そう！</h1>
     <p>かんたんな日本語を使って、いろいろな場面（シチュエーション）での自分の行動を選び、楽しくおしゃべりしましょう！</p>
   </div>
 
