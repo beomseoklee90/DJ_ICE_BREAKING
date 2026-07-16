@@ -1,0 +1,6735 @@
+[アニメ会]チェインソーマン
+<style>
+  :root {
+    --bg: #f4f6fb;
+    --surface: #ffffff;
+    --surface-soft: #f8f9fd;
+    --surface-accent: #f0f3ff;
+
+    --text-main: #202536;
+    --text-sub: #60697d;
+    --text-muted: #8b93a6;
+
+    --primary: #5367d9;
+    --primary-dark: #3d4fb6;
+    --primary-soft: #e9edff;
+
+    --n3: #2e8b75;
+    --n3-soft: #e8f7f2;
+
+    --n2: #9b63c7;
+    --n2-soft: #f3eafb;
+
+    --border: #dfe3ec;
+    --border-strong: #cbd1df;
+
+    --danger-soft: #fff1f1;
+    --warning-soft: #fff8e6;
+
+    --shadow-sm: 0 4px 14px rgba(31, 40, 76, 0.07);
+    --shadow-md: 0 12px 32px rgba(31, 40, 76, 0.1);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    --content-width: 920px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-main);
+    font-family:
+      "Noto Sans JP",
+      "Noto Sans KR",
+      "Apple SD Gothic Neo",
+      "Yu Gothic",
+      "Hiragino Kaku Gothic ProN",
+      sans-serif;
+    line-height: 1.75;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .question-card {
+    width: min(calc(100% - 32px), var(--content-width));
+    margin: 36px auto;
+    padding: 36px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .question-header {
+    position: relative;
+    margin-bottom: 28px;
+    padding: 0 0 24px;
+    border-bottom: 2px solid var(--primary-soft);
+  }
+
+  .question-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    margin-bottom: 10px;
+    padding: 4px 12px;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .question-title {
+    margin: 0;
+    color: var(--text-main);
+    font-size: clamp(1.55rem, 3.5vw, 2.15rem);
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+  }
+
+  .section-block {
+    margin-top: 28px;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 14px;
+    color: var(--text-main);
+    font-size: 1.16rem;
+    line-height: 1.4;
+  }
+
+  .section-title::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 6px;
+    height: 22px;
+    background: var(--primary);
+    border-radius: 999px;
+  }
+
+  .section-description {
+    margin: -4px 0 16px;
+    color: var(--text-sub);
+    font-size: 0.94rem;
+  }
+
+  .situation {
+    margin-top: 22px;
+    padding: 24px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--primary);
+    border-radius: var(--radius-md);
+  }
+
+  .situation p {
+    margin: 0 0 12px;
+  }
+
+  .situation p:last-child {
+    margin-bottom: 0;
+  }
+
+  .message-box {
+    margin: 18px 0;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-main);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .choices {
+    display: grid;
+    gap: 14px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: choice;
+  }
+
+  .choice-item {
+    position: relative;
+    padding: 18px 18px 18px 58px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition:
+      transform 0.18s ease,
+      border-color 0.18s ease,
+      box-shadow 0.18s ease;
+    counter-increment: choice;
+  }
+
+  .choice-item::before {
+    content: counter(choice);
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    border-radius: 50%;
+    font-size: 0.86rem;
+    font-weight: 800;
+  }
+
+  .choice-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .choice-title {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-main);
+    font-weight: 800;
+  }
+
+  .choice-description {
+    margin: 0;
+    color: var(--text-sub);
+    font-size: 0.94rem;
+  }
+
+  .speaking-guide {
+    margin-top: 26px;
+  }
+
+  .level-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 16px;
+  }
+
+  .level-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+  }
+
+  .level-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    font-weight: 800;
+  }
+
+  .level-card-body {
+    padding: 18px;
+  }
+
+  .level-card-body p {
+    margin: 0 0 10px;
+  }
+
+  .level-card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .level-card--n3 .level-card-header {
+    background: var(--n3-soft);
+    color: var(--n3);
+  }
+
+  .level-card--n2 .level-card-header {
+    background: var(--n2-soft);
+    color: var(--n2);
+  }
+
+  .level-label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+
+  .level-label--n3 {
+    background: var(--n3-soft);
+    color: var(--n3);
+  }
+
+  .level-label--n2 {
+    background: var(--n2-soft);
+    color: var(--n2);
+  }
+
+  .follow-up-list {
+    display: grid;
+    gap: 10px;
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .follow-up-item {
+    position: relative;
+    padding: 14px 16px 14px 44px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+
+  .follow-up-item::before {
+    content: "Q";
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: var(--primary);
+    font-weight: 900;
+  }
+
+  .mbti-analysis {
+    margin-top: 28px;
+  }
+
+  .mbti-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .mbti-card {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .mbti-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px;
+    font-size: 1rem;
+  }
+
+  .mbti-choice-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .mbti-card p {
+    margin: 0 0 10px;
+    color: var(--text-sub);
+  }
+
+  .mbti-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .mbti-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .mbti-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 3px 10px;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .discussion-prompt {
+    margin-top: 14px;
+    padding: 14px 16px;
+    background: var(--warning-soft);
+    border-radius: var(--radius-sm);
+    color: var(--text-main);
+    font-weight: 700;
+  }
+
+  .language-notes {
+    margin-top: 30px;
+    padding-top: 26px;
+    border-top: 2px dashed var(--border-strong);
+  }
+
+  .language-note-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 16px;
+  }
+
+  .language-note-card {
+    padding: 20px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+  }
+
+  .language-note-card h3 {
+    margin: 0 0 14px;
+    font-size: 1rem;
+  }
+
+  .grammar-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .grammar-item:first-child {
+    padding-top: 0;
+  }
+
+  .grammar-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .grammar-expression {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-main);
+    font-weight: 850;
+  }
+
+  .grammar-explanation {
+    margin: 0 0 8px;
+    color: var(--text-sub);
+    font-size: 0.92rem;
+  }
+
+  .example-sentence {
+    margin: 0;
+    padding: 10px 12px;
+    background: var(--surface);
+    border-left: 4px solid var(--primary);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 0.92rem;
+  }
+
+  .notice-box {
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: var(--danger-soft);
+    border-radius: var(--radius-sm);
+    color: var(--text-sub);
+    font-size: 0.88rem;
+  }
+
+  ruby {
+    ruby-position: over;
+  }
+
+  rt {
+    color: var(--text-muted);
+    font-size: 0.58em;
+  }
+
+  strong {
+    color: var(--text-main);
+  }
+
+  @media (max-width: 760px) {
+    .question-card {
+      width: min(calc(100% - 20px), var(--content-width));
+      margin: 18px auto;
+      padding: 22px 18px;
+      border-radius: 18px;
+    }
+
+    .question-header {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+    }
+
+    .situation {
+      padding: 18px;
+    }
+
+    .level-grid,
+    .language-note-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .choice-item {
+      padding: 16px 14px 16px 52px;
+    }
+
+    .choice-item::before {
+      top: 15px;
+      left: 14px;
+    }
+
+    .section-title {
+      font-size: 1.06rem;
+    }
+  }
+
+  @media print {
+    body {
+      background: #ffffff;
+    }
+
+    .question-card {
+      width: 100%;
+      margin: 0 0 24px;
+      box-shadow: none;
+      break-inside: avoid;
+    }
+
+    .choice-item:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+</style>
+
+<section class="question-card" id="anime-question-1">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN 01</span>
+    <h2 class="question-title">
+      ポチタがデンジに心臓を与えた場面を、どう受け止めますか。
+    </h2>
+  </header>
+
+  <div class="section-block">
+    <h3 class="section-title">1．場面紹介</h3>
+
+    <div class="situation">
+      <p>
+        『チェンソーマン』第1話で、
+        デンジはゾンビの悪魔と契約したヤクザたちに裏切られ、
+        ポチタとともに殺されてしまいます。
+      </p>
+
+      <p>
+        二人は、ばらばらになった状態で
+        ごみ箱の中に捨てられます。
+      </p>
+
+      <p>
+        そのとき、デンジの血がポチタの口に入り、
+        ポチタはデンジと過ごした時間を思い出します。
+      </p>
+
+      <p>
+        ポチタは、デンジがこれまで話していた
+        「普通の生活」や「ささやかな夢」を覚えていました。
+      </p>
+
+      <div class="message-box">
+        <p>
+          ポチタはデンジの心臓となり、二人は一つになります。
+        </p>
+
+        <p>
+          そしてポチタは、
+          デンジがこれからも自分の夢を追い続けることを望みます。
+        </p>
+      </div>
+
+      <p>
+        デンジはチェンソーマンとしてよみがえり、
+        自分を殺した悪魔とゾンビたちに立ち向かいます。
+      </p>
+
+      <p>
+        <strong>
+          この場面で、ポチタはなぜ自分の心臓を
+          デンジに与えたのでしょうか。
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">2．鑑賞ポイント</h3>
+
+    <p class="section-description">
+      作品の正しい解釈を探すのではなく、
+      デンジとポチタがどのような気持ちだったのかを想像してみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          デンジの立場
+        </h4>
+
+        <p>
+          デンジは長い間、
+          借金を返すために危険な仕事を続けていました。
+        </p>
+
+        <p>
+          彼が望んでいたのは、
+          豪華な生活や大きな成功ではなく、
+          普通に食事をして誰かと一緒に暮らすことでした。
+        </p>
+
+        <p>
+          その夢をかなえる前に命を失ったデンジは、
+          どのような気持ちだったのでしょうか。
+        </p>
+
+        <div class="discussion-prompt">
+          デンジは、自分が不幸な人生を送っていることを
+          どの程度理解していたと思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          ポチタの立場
+        </h4>
+
+        <p>
+          ポチタはデンジを生かすために、
+          自分の体を失い、デンジの心臓になります。
+        </p>
+
+        <p>
+          しかし、ポチタはただ消えてしまったのではなく、
+          デンジの中で生き続ける存在になったとも考えられます。
+        </p>
+
+        <p>
+          ポチタにとって、
+          デンジの夢を見ることは
+          自分自身の夢でもあったのでしょうか。
+        </p>
+
+        <div class="discussion-prompt">
+          ポチタの選択は一方的な自己犠牲でしょうか。
+          それとも、ポチタ自身が望んだ生き方でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          二人の関係
+        </h4>
+
+        <p>
+          デンジは傷ついたポチタに自分の血を与え、
+          以前から一緒に生活してきました。
+        </p>
+
+        <p>
+          そして今度は、
+          ポチタが自分の心臓を与えてデンジを救います。
+        </p>
+
+        <p>
+          二人の関係は、
+          飼い主とペットという言葉だけでは
+          十分に説明できないように見えます。
+        </p>
+
+        <div class="discussion-prompt">
+          デンジとポチタは友達でしょうか。
+          家族でしょうか。
+          それとも、お互いの命を支え合う別の関係でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          夢を託すということ
+        </h4>
+
+        <p>
+          ポチタは、自分が直接夢をかなえるのではなく、
+          デンジが夢を追う姿を見ようとします。
+        </p>
+
+        <p>
+          誰かの夢を応援することは、
+          その人の人生を信じることでもあります。
+        </p>
+
+        <p>
+          一方で、夢を託された人は、
+          期待や責任を感じる可能性もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          誰かから夢や希望を託されることは、
+          力になりますか。
+          それとも負担になることもありますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          日常生活とのつながり
+        </h4>
+
+        <p>
+          現実では、
+          自分の心臓を与えるようなことはできません。
+        </p>
+
+        <p>
+          しかし、自分の時間、努力、機会を使って
+          家族や友達を支えることはあります。
+        </p>
+
+        <p>
+          その支えが相手を助ける場合もあれば、
+          支える側が疲れてしまう場合もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          大切な人を助けることと、
+          自分を犠牲にしすぎることの境界はどこにあると思いますか。
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h3 class="section-title">3．主要な質問</h3>
+
+    <p class="section-description">
+      一つの質問に短く答えるだけではなく、
+      他の参加者の意見を聞きながら、
+      自分の経験や価値観まで話を広げてみましょう。
+    </p>
+
+    <ul class="follow-up-list">
+      <li class="follow-up-item">
+        この場面では、
+        デンジとポチタのどちらにより強く共感しましたか。
+        その理由は何ですか。
+      </li>
+
+      <li class="follow-up-item">
+        ポチタはなぜ、
+        自分が生き残ることよりも
+        デンジを生かすことを選んだのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        ポチタの行動は「犠牲」だと思いますか。
+        それとも、デンジと一緒に生き続けるための
+        新しい選択だったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジにとって、
+        ポチタから命をもらったことは
+        希望だけだったと思いますか。
+        責任や負担も生まれたと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジとポチタの関係を一つの言葉で表すなら、
+        どのような言葉を選びますか。
+        その言葉を選んだ理由も説明してください。
+      </li>
+
+      <li class="follow-up-item">
+        ポチタはデンジ本人を愛していたのでしょうか。
+        それとも、デンジが話す夢に引かれていたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジの夢は非常に小さく日常的なものです。
+        大きな夢よりも、
+        普通の生活を望むことに共感できますか。
+      </li>
+
+      <li class="follow-up-item">
+        苦しい環境で生活している人にとって、
+        他の人には普通に見えることが
+        大きな夢になる場合があります。
+        あなたにも似た経験がありますか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたがポチタの立場だったら、
+        大切な人を助けるために
+        どこまで自分のものを与えられますか。
+      </li>
+
+      <li class="follow-up-item">
+        反対に、誰かがあなたのために
+        大きな犠牲を払おうとしたら、
+        素直に受け入れますか。
+        それとも止めようとしますか。
+      </li>
+
+      <li class="follow-up-item">
+        大切な人を助けるとき、
+        相手の意思よりも
+        「自分が助けたい」という気持ちを優先してもよいでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かを救うための行動が、
+        結果的にその人へ大きな責任を与えてしまうことを
+        どう考えますか。
+      </li>
+
+      <li class="follow-up-item">
+        家族や友達から
+        「私の代わりに夢をかなえてほしい」と言われたら、
+        どのように感じますか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かがいなくなった後でも、
+        その人から受け取った考えや希望が残っているなら、
+        関係は続いていると言えるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたは過去に、
+        誰かの応援によってもう一度立ち上がれた経験がありますか。
+        その人は、どのような方法で支えてくれましたか。
+      </li>
+
+      <li class="follow-up-item">
+        反対に、
+        あなたが誰かの夢や挑戦を支えた経験はありますか。
+        どこまで関わりましたか。
+      </li>
+
+      <li class="follow-up-item">
+        他の参加者の意見を聞いて、
+        デンジ、ポチタ、二人の関係に対する見方が変わりましたか。
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-block speaking-guide">
+    <h3 class="section-title">4．自分の考えを話してみましょう</h3>
+
+    <p class="section-description">
+      正しい答えを探す必要はありません。
+      登場人物の気持ちを想像しながら、
+      自分が共感した部分と疑問に感じた部分を説明してください。
+    </p>
+
+    <div class="level-grid">
+      <div class="level-card level-card--n3">
+        <div class="level-card-header">
+          <span>N3レベルの答え方</span>
+          <span class="level-label level-label--n3">N3</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私はポチタに一番共感しました。
+          </p>
+
+          <p>
+            ポチタはデンジと一緒に生活して、
+            デンジの夢をずっと聞いていました。
+          </p>
+
+          <p>
+            だから、デンジが夢をかなえる前に死ぬことを
+            受け入れられなかったのだと思います。
+          </p>
+
+          <p>
+            自分の体を失うのは悲しいですが、
+            デンジの心臓になれば、
+            これからも一緒にいられます。
+          </p>
+
+          <p>
+            私はこの場面を、
+            ポチタが一方的に犠牲になった場面ではなく、
+            二人が新しい形で一緒に生き始めた場面だと思いました。
+          </p>
+        </div>
+      </div>
+
+      <div class="level-card level-card--n2">
+        <div class="level-card-header">
+          <span>N2レベルの答え方</span>
+          <span class="level-label level-label--n2">N2</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、ポチタの行動を
+            単純な自己犠牲だとは考えていません。
+          </p>
+
+          <p>
+            確かにポチタは、
+            デンジを生かす代わりに
+            自分の独立した体を失いました。
+          </p>
+
+          <p>
+            その一方で、
+            デンジの心臓になることによって、
+            デンジとともに生きながら
+            彼の夢を見続ける道を選んだとも考えられます。
+          </p>
+
+          <p>
+            また、デンジは命を救われただけではなく、
+            ポチタの願いまで受け取ることになりました。
+          </p>
+
+          <p>
+            それはデンジにとって希望になった一方で、
+            「夢をかなえなければならない」という
+            責任にもなり得ると思います。
+          </p>
+
+          <p>
+            この場面が印象的なのは、
+            一人がもう一人を救ったというより、
+            二人の夢と人生が一つになったように見えるからです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">5．現実の関係へ広げて考える</h3>
+
+    <p class="section-description">
+      作品の中だけで考えず、
+      友達、家族、仲間との関係にもつなげて話してみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          助けることと犠牲になること
+        </h4>
+
+        <p>
+          誰かを助けるために、
+          自分の時間やお金を使うことはあります。
+        </p>
+
+        <p>
+          しかし、助ける側が生活できなくなるほど
+          無理をすることが本当に良いとは限りません。
+        </p>
+
+        <div class="discussion-prompt">
+          相手を助けながら、
+          自分自身も守るためには
+          どのような基準が必要でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          応援と期待
+        </h4>
+
+        <p>
+          誰かに期待されることは、
+          行動する力になる場合があります。
+        </p>
+
+        <p>
+          一方で、相手の期待が大きすぎると、
+          自分のためではなく相手のために
+          生きているように感じることもあります。
+        </p>
+
+        <div class="discussion-prompt">
+          応援がプレッシャーに変わるのは、
+          どのようなときだと思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          小さな夢の価値
+        </h4>
+
+        <p>
+          デンジが望んでいたのは、
+          安定した食事や安心して眠れる生活など、
+          多くの人には普通に見えるものでした。
+        </p>
+
+        <p>
+          しかし、その普通の生活を経験できなかった人にとっては、
+          非常に大切な夢になることがあります。
+        </p>
+
+        <div class="discussion-prompt">
+          夢は大きくなければ価値がないのでしょうか。
+          あなたが大切にしている小さな夢はありますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          受け取ったものへの責任
+        </h4>
+
+        <p>
+          誰かから助けを受けたとき、
+          感謝とともに
+          「期待に応えなければならない」と感じる人もいます。
+        </p>
+
+        <p>
+          しかし、助けた人が本当に望んでいるのは、
+          借りを返すことではなく、
+          相手が自分らしく生きることかもしれません。
+        </p>
+
+        <div class="discussion-prompt">
+          大きな助けを受けた人には、
+          その期待に応える責任があると思いますか。
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      이 토론의 목적은 포치타의 행동이 옳았는지 하나의 정답을 정하는 것이 아닙니다.
+      덴지와 포치타의 감정과 관계를 서로 다른 관점에서 보고,
+      참가자 자신의 우정·가족·도움·희생에 관한 경험으로 대화를 확장하는 것이 핵심입니다.
+    </div>
+  </div>
+
+  <div class="language-notes">
+    <h3 class="section-title">6．文法・語彙解説</h3>
+
+    <div class="language-note-grid">
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～ために</span>
+
+          <p class="grammar-explanation">
+            어떤 목적을 이루기 위한 행동을 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタはデンジを助けるために、心臓を与えました。<br>
+            포치타는 덴지를 돕기 위해 심장을 주었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～ようになります</span>
+
+          <p class="grammar-explanation">
+            이전과 달리 새로운 상태나 능력이 생기는 변화를 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジはチェンソーマンに変身できるようになります。<br>
+            덴지는 체인소맨으로 변신할 수 있게 됩니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～のではないでしょうか</span>
+
+          <p class="grammar-explanation">
+            자신의 해석이나 추측을 너무 단정하지 않고 부드럽게 제시할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタはデンジと一緒に生きたかったのではないでしょうか。<br>
+            포치타는 덴지와 함께 살고 싶었던 것이 아닐까요?
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～かもしれません</span>
+
+          <p class="grammar-explanation">
+            확실하지 않은 가능성이나 인물의 감정을 추측할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジはうれしい一方で、責任も感じたかもしれません。<br>
+            덴지는 기쁜 한편 책임감도 느꼈을지 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～だけではありません</span>
+
+          <p class="grammar-explanation">
+            하나의 의미에 그치지 않고 다른 의미도 포함된다고 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタはデンジを助けただけではありません。<br>
+            포치타는 덴지를 돕기만 한 것이 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．支える（ささえる）</span>
+
+          <p class="grammar-explanation">
+            상대가 어려움을 이겨 내거나 목표를 이어 갈 수 있도록 돕는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタはデンジの心と生活を支えていました。<br>
+            포치타는 덴지의 마음과 생활을 지탱하고 있었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．託す（たくす）</span>
+
+          <p class="grammar-explanation">
+            자신에게 중요한 일, 희망, 책임 등을 다른 사람에게 맡긴다는 의미입니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタは自分の希望をデンジに託しました。<br>
+            포치타는 자신의 희망을 덴지에게 맡겼습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．共感する（きょうかんする）</span>
+
+          <p class="grammar-explanation">
+            다른 사람이나 등장인물의 감정과 생각을 이해하고 비슷하게 느끼는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            私はポチタの気持ちに共感しました。<br>
+            저는 포치타의 마음에 공감했습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n2">N2</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～というより</span>
+
+          <p class="grammar-explanation">
+            앞의 표현보다 뒤의 표현이 자신의 생각에 더 정확하다고 수정할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            犠牲になったというより、
+            新しい形で一緒に生きることを選んだのだと思います。<br>
+            희생되었다기보다 새로운 형태로 함께 사는 것을 선택했다고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～一方で</span>
+
+          <p class="grammar-explanation">
+            한 대상이 가진 서로 다른 두 가지 측면을 비교할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            命を救われた一方で、大きな責任も背負うことになりました。<br>
+            목숨을 구한 한편 큰 책임도 짊어지게 되었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～にとって</span>
+
+          <p class="grammar-explanation">
+            특정 인물이나 입장에서 어떤 대상이 갖는 의미를 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタにとって、デンジの夢は自分の夢でもありました。<br>
+            포치타에게 덴지의 꿈은 자신의 꿈이기도 했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～とは言い切れません</span>
+
+          <p class="grammar-explanation">
+            하나의 해석이나 판단만이 반드시 맞다고 단정하기 어렵다는 표현입니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタだけが一方的に犠牲になったとは言い切れません。<br>
+            포치타만 일방적으로 희생되었다고 단정할 수는 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～にほかなりません</span>
+
+          <p class="grammar-explanation">
+            어떤 사실의 본질이 바로 그것이라고 강하게 설명할 때 사용하는 N2 표현입니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタの選択は、
+            デンジの人生を信じていたからにほかなりません。<br>
+            포치타의 선택은 덴지의 인생을 믿었기 때문임에 틀림없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．～ことになりかねません</span>
+
+          <p class="grammar-explanation">
+            바람직하지 않은 결과가 생길 가능성이 있음을 조심스럽게 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            強すぎる期待は、
+            相手に大きな負担を与えることになりかねません。<br>
+            지나치게 강한 기대는 상대에게 큰 부담을 줄 수 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．自己犠牲（じこぎせい）</span>
+
+          <p class="grammar-explanation">
+            다른 사람이나 목적을 위해 자신의 이익·안전·행복을 포기하는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            ポチタの行動を自己犠牲と考える人もいます。<br>
+            포치타의 행동을 자기희생이라고 생각하는 사람도 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．受け継ぐ（うけつぐ）</span>
+
+          <p class="grammar-explanation">
+            다른 사람의 생각, 역할, 기술, 희망 등을 이어받는다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジはポチタの希望を受け継いだとも考えられます。<br>
+            덴지는 포치타의 희망을 이어받았다고도 생각할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">9．背負う（せおう）</span>
+
+          <p class="grammar-explanation">
+            실제 짐을 등에 지는 의미뿐 아니라 책임이나 부담을 맡는다는 의미로도 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジはポチタの願いまで背負うことになりました。<br>
+            덴지는 포치타의 바람까지 짊어지게 되었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">10．自然な会話表現</span>
+
+          <p class="grammar-explanation">
+            등장인물의 감정에 공감하거나 다른 참가자의 해석에 부분적으로 반대할 때 사용할 수 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            私はポチタの立場により共感しました。<br>
+            その見方も分かりますが、私は少し違うように感じました。<br>
+            単なる犠牲ではなく、二人の選択だったのではないでしょうか。<br>
+            自分が同じ立場なら、その助けを受け入れるか迷うと思います。<br>
+            今の意見を聞いて、この場面の見方が少し変わりました。
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="question-card" id="anime-question-2">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN 02</span>
+    <h2 class="question-title">
+      パワーに裏切られたデンジは、なぜ戦ったのでしょうか。
+    </h2>
+  </header>
+
+  <div class="section-block">
+    <h3 class="section-title">1．場面紹介</h3>
+
+    <div class="situation">
+      <p>
+        パワーは、大切にしていた猫のニャーコを
+        コウモリの悪魔に奪われていました。
+      </p>
+
+      <p>
+        パワーはニャーコを取り戻すため、
+        デンジに協力を求めます。
+      </p>
+
+      <p>
+        しかし、二人がコウモリの悪魔のいる建物に着くと、
+        パワーは突然デンジを攻撃します。
+      </p>
+
+      <p>
+        パワーは最初から、
+        デンジをコウモリの悪魔に渡す代わりに、
+        ニャーコを返してもらうつもりでした。
+      </p>
+
+      <div class="message-box">
+        <p>
+          パワーはデンジを裏切り、
+          コウモリの悪魔に差し出します。
+        </p>
+
+        <p>
+          しかし、コウモリの悪魔は約束を守らず、
+          ニャーコを飲み込んでしまいます。
+        </p>
+      </div>
+
+      <p>
+        パワーはその瞬間、
+        大切な存在を失う苦しみを理解します。
+      </p>
+
+      <p>
+        そして、ポチタを失ったデンジの気持ちが
+        初めて分かったように見えます。
+      </p>
+
+      <p>
+        その後、コウモリの悪魔は
+        パワーまで飲み込んでしまいます。
+      </p>
+
+      <p>
+        デンジは自分を裏切ったパワーを見捨てず、
+        チェンソーマンに変身して
+        コウモリの悪魔と戦います。
+      </p>
+
+      <p>
+        <strong>
+          デンジはなぜ、自分を裏切ったパワーのためにも
+          戦ったのでしょうか。
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">2．鑑賞ポイント</h3>
+
+    <p class="section-description">
+      デンジを単純な英雄、パワーを単純な裏切り者として見るのではなく、
+      それぞれの事情、感情、目的を分けて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          パワーがデンジを裏切った理由
+        </h4>
+
+        <p>
+          パワーはデンジを嫌っていたから
+          裏切っただけではありません。
+        </p>
+
+        <p>
+          ニャーコを取り戻すためなら、
+          ほかの誰かを犠牲にしても構わないと
+          判断していました。
+        </p>
+
+        <p>
+          パワーにとってニャーコは、
+          ほかの命と交換してでも救いたいほど
+          大切な存在になっていました。
+        </p>
+
+        <div class="discussion-prompt">
+          大切な存在を救うためだったとしても、
+          パワーの裏切りを理解したり許したりできますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          ニャーコと出会ったパワーの変化
+        </h4>
+
+        <p>
+          以前のパワーは、
+          動物を食料のように見ていた部分がありました。
+        </p>
+
+        <p>
+          しかし、ニャーコに食べ物を与え、
+          一緒に過ごすうちに、
+          ニャーコを大切に思うようになります。
+        </p>
+
+        <p>
+          最初から優しい気持ちを持っていたのではなく、
+          関係を続ける中で感情が変化したとも考えられます。
+        </p>
+
+        <div class="discussion-prompt">
+          誰かを大切にする気持ちは、
+          最初から存在するのでしょうか。
+          それとも、一緒に過ごす中で生まれるのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          デンジとパワーに共通する経験
+        </h4>
+
+        <p>
+          デンジにとってポチタは、
+          単なるペットではなく、
+         家族や唯一の仲間に近い存在でした。
+        </p>
+
+        <p>
+          パワーもニャーコを失いそうになって、
+          初めてデンジの喪失感を理解します。
+        </p>
+
+        <p>
+          二人は性格も行動も大きく異なりますが、
+          大切な存在を失う苦しみを通じて
+          共通点を持つようになります。
+        </p>
+
+        <div class="discussion-prompt">
+          同じような苦しみを経験すると、
+          それまで理解できなかった相手を
+          理解できるようになると思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          デンジが戦った本当の理由
+        </h4>
+
+        <p>
+          デンジの行動を、
+          パワーを純粋に助けるための
+          英雄的な行動とだけ見ることはできません。
+        </p>
+
+        <p>
+          デンジには自分自身の欲望や約束があり、
+          コウモリの悪魔に自分の夢を邪魔されたことへの
+          怒りもありました。
+        </p>
+
+        <p>
+          しかし、理由が完全に純粋ではなくても、
+          結果としてパワーとニャーコを救っています。
+        </p>
+
+        <div class="discussion-prompt">
+          人を助けた動機が自分の欲望だった場合でも、
+          その行動を善い行動だと言えるでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          裏切られた後の関係
+        </h4>
+
+        <p>
+          一度裏切られた相手を再び信頼することは
+          簡単ではありません。
+        </p>
+
+        <p>
+          しかし、裏切った理由やその後の行動を知ることで、
+          関係を続けられる場合もあります。
+        </p>
+
+        <p>
+          大切なのは、
+          裏切りがあったという事実だけなのか、
+          それとも相手の事情と変化まで含めて見ることなのか、
+          意見が分かれるでしょう。
+        </p>
+
+        <div class="discussion-prompt">
+          一度裏切った人にも、
+          関係をやり直す機会を与えるべきだと思いますか。
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h3 class="section-title">3．主要な質問</h3>
+
+    <p class="section-description">
+      パワーの裏切り、デンジの動機、二人の関係を分けて考えながら、
+      自分の経験や価値観へ話を広げてみましょう。
+    </p>
+
+    <ul class="follow-up-list">
+      <li class="follow-up-item">
+        あなたはこの場面で、
+        デンジとパワーのどちらにより共感しましたか。
+        その理由は何ですか。
+      </li>
+
+      <li class="follow-up-item">
+        パワーがデンジを裏切った行動を、
+        ニャーコを救うためなら仕方がなかったと
+        理解できますか。
+      </li>
+
+      <li class="follow-up-item">
+        パワーには、
+        デンジ以外の方法を探す余裕があったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        大切な存在を救うためなら、
+        関係のない別の人を危険にさらしてもよいでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        パワーは最初からニャーコを愛していたのでしょうか。
+        それとも、一緒に暮らす中で愛情が生まれたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        パワーがニャーコを失った瞬間に
+        デンジの気持ちを理解したことを、
+        どのように受け止めましたか。
+      </li>
+
+      <li class="follow-up-item">
+        人は自分も同じ経験をしなければ、
+        他人の苦しみを本当には理解できないと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジが戦った最大の理由は、
+        パワーを助けること、自分の夢、怒り、
+        コウモリの悪魔への反発のうち
+        どれだったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジの動機が自分勝手だったとしても、
+        パワーとニャーコを救った結果は評価できますか。
+      </li>
+
+      <li class="follow-up-item">
+        善い行動かどうかを判断するとき、
+        動機と結果のどちらをより重視しますか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かが自分の利益のために行動した結果、
+        あなたも助かった場合、
+        その人に感謝できますか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたがデンジの立場だったら、
+        自分を裏切ったパワーを助けますか。
+        それとも、そのまま立ち去りますか。
+      </li>
+
+      <li class="follow-up-item">
+        相手の裏切りに事情があったと分かったら、
+        信頼を回復できる可能性はありますか。
+      </li>
+
+      <li class="follow-up-item">
+        謝罪の言葉がなくても、
+        相手の態度や行動が変われば許すことができますか。
+      </li>
+
+      <li class="follow-up-item">
+        裏切った人を許すことと、
+        もう一度信頼することは同じでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたには、最初は理解できなかった人を
+        共通の経験によって理解できるようになった経験がありますか。
+      </li>
+
+      <li class="follow-up-item">
+        ペットや動物との生活によって、
+        사람이나 생명에 대한 생각이 바뀐 경험이 있습니까。
+      </li>
+
+      <li class="follow-up-item">
+        他の参加者の意見を聞いて、
+        パワーの裏切りやデンジの行動に対する
+        自分の見方が変わりましたか。
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-block speaking-guide">
+    <h3 class="section-title">4．自分の考えを話してみましょう</h3>
+
+    <p class="section-description">
+      登場人物を善人・悪人に分けるのではなく、
+      その行動を理解できる部分と受け入れられない部分を
+      それぞれ説明してください。
+    </p>
+
+    <div class="level-grid">
+      <div class="level-card level-card--n3">
+        <div class="level-card-header">
+          <span>N3レベルの答え方</span>
+          <span class="level-label level-label--n3">N3</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私はパワーの気持ちは理解できますが、
+            裏切った行動には賛成できません。
+          </p>
+
+          <p>
+            ニャーコがとても大切だったので、
+            何とかして助けたかったのだと思います。
+          </p>
+
+          <p>
+            しかし、デンジにも命があるので、
+            デンジを犠牲にしてもいいとは思いません。
+          </p>
+
+          <p>
+            私がデンジだったら、
+            すぐにパワーを信じることは難しいです。
+          </p>
+
+          <p>
+            それでも、パワーが本当に反省して
+            行動を変えるなら、
+            もう一度関係を作ることはできると思います。
+          </p>
+        </div>
+      </div>
+
+      <div class="level-card level-card--n2">
+        <div class="level-card-header">
+          <span>N2レベルの答え方</span>
+          <span class="level-label level-label--n2">N2</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、パワーの感情には共感できる一方で、
+            彼女の選択を正当化することはできません。
+          </p>
+
+          <p>
+            ニャーコが唯一大切な存在だったことを考えれば、
+            冷静に別の方法を探す余裕がなかったのかもしれません。
+          </p>
+
+          <p>
+            しかし、大切な存在を救うためだからといって、
+            関係のない人を犠牲にしてよいとは言えません。
+          </p>
+
+          <p>
+            また、デンジが戦った理由も、
+            パワーに対する友情だけではなかったと思います。
+          </p>
+
+          <p>
+            自分の欲望や怒りが動機に含まれていたとしても、
+            危険な相手に立ち向かい、
+            結果的に二人を救ったことには意味があります。
+          </p>
+
+          <p>
+            この場面は、
+            人間の行動を善意か悪意のどちらか一方だけで
+            判断することの難しさを示しているように感じました。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">5．現実の関係へ広げて考える</h3>
+
+    <p class="section-description">
+      裏切り、事情、許し、動機と結果について、
+      友達や家族との現実の関係にもつなげて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          理解することと許すこと
+        </h4>
+
+        <p>
+          相手がなぜ問題のある行動をしたのかを
+          理解できる場合があります。
+        </p>
+
+        <p>
+          しかし、事情を理解できることと、
+          その行動を許せることは同じではありません。
+        </p>
+
+        <div class="discussion-prompt">
+          相手の事情を理解したら、
+          その行動も許さなければならないのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          許すことと信頼すること
+        </h4>
+
+        <p>
+          過去の行動については許しても、
+          再び同じように信頼することは難しい場合があります。
+        </p>
+
+        <p>
+          信頼を回復するためには、
+          謝罪だけではなく、
+          その後の行動や時間も必要でしょう。
+        </p>
+
+        <div class="discussion-prompt">
+          一度失った信頼を取り戻すためには、
+          何が必要だと思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          動機と結果
+        </h4>
+
+        <p>
+          良い意図で行動しても、
+          悪い結果になることがあります。
+        </p>
+
+        <p>
+          反対に、自分の利益のためにした行動が、
+          結果的にほかの人を助ける場合もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          人の行動を評価するとき、
+          意図と結果のどちらをより重視するべきでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          共通の経験と共感
+        </h4>
+
+        <p>
+          自分も同じ苦しみを経験して初めて、
+          過去には理解できなかった人の気持ちが
+          分かることがあります。
+        </p>
+
+        <p>
+          一方で、同じ経験をしていなくても、
+          相手の話を聞き、想像することで
+          共感できるという考え方もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          本当の共感には、
+          相手と同じ経験が必要だと思いますか。
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      이 토론의 목적은 파워를 단순한 배신자, 덴지를 순수한 영웅으로 규정하는 것이 아닙니다.
+      파워의 사정을 이해하는 것과 행동을 용서하는 것의 차이,
+      덴지의 개인적 욕망과 실제로 누군가를 구한 결과를 함께 비교하는 것이 핵심입니다.
+    </div>
+  </div>
+
+  <div class="language-notes">
+    <h3 class="section-title">6．文法・語彙解説</h3>
+
+    <div class="language-note-grid">
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～ためなら</span>
+
+          <p class="grammar-explanation">
+            어떤 목적을 이루기 위해서라면 특정 행동도 할 수 있다는 조건을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            ニャーコを助けるためなら、
+            パワーは何でもするつもりでした。<br>
+            냐코를 구하기 위해서라면 파워는 무엇이든 할 생각이었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～ようになります</span>
+
+          <p class="grammar-explanation">
+            감정, 능력 또는 행동 방식이 이전과 달라지는 변화를 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            パワーはニャーコを大切に思うようになりました。<br>
+            파워는 냐코를 소중하게 생각하게 되었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～ても</span>
+
+          <p class="grammar-explanation">
+            어떤 조건이 있더라도 뒤의 판단이나 행동이 유지됨을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            理由があっても、裏切りには賛成できません。<br>
+            이유가 있어도 배신에는 찬성할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～かもしれません</span>
+
+          <p class="grammar-explanation">
+            등장인물의 확실하지 않은 감정이나 행동 이유를 추측할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            パワーには、別の方法を考える余裕がなかったのかもしれません。<br>
+            파워에게는 다른 방법을 생각할 여유가 없었을지도 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ことができます</span>
+
+          <p class="grammar-explanation">
+            어떤 행동이나 가능성이 가능하다는 것을 나타내는 기본 표현입니다.
+          </p>
+
+          <p class="example-sentence">
+            時間をかければ、信頼を取り戻すことができると思います。<br>
+            시간을 들이면 신뢰를 되찾을 수 있다고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．裏切る（うらぎる）</span>
+
+          <p class="grammar-explanation">
+            상대의 믿음, 약속 또는 기대를 저버리는 행동을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            パワーはデンジを裏切りました。<br>
+            파워는 덴지를 배신했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．見捨てる（みすてる）</span>
+
+          <p class="grammar-explanation">
+            어려운 상황에 있는 사람을 돕지 않고 포기하거나 떠나는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジはパワーを見捨てませんでした。<br>
+            덴지는 파워를 버리지 않았습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．取り戻す（とりもどす）</span>
+
+          <p class="grammar-explanation">
+            잃어버리거나 빼앗긴 대상 또는 상태를 다시 되찾는다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            パワーはニャーコを取り戻そうとしました。<br>
+            파워는 냐코를 되찾으려고 했습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n2">N2</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～からといって</span>
+
+          <p class="grammar-explanation">
+            어떤 이유가 있다고 해서 뒤의 행동이 반드시 정당화되는 것은 아님을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            大切な存在を救うためだからといって、
+            他人を犠牲にしてよいとは言えません。<br>
+            소중한 존재를 구하기 위해서라고 해서
+            타인을 희생해도 된다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～一方で</span>
+
+          <p class="grammar-explanation">
+            하나의 인물이나 행동에 존재하는 서로 다른 두 측면을 함께 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            パワーの気持ちは理解できる一方で、
+            その行動には賛成できません。<br>
+            파워의 마음은 이해할 수 있는 한편,
+            그 행동에는 찬성할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～とは限りません</span>
+
+          <p class="grammar-explanation">
+            항상 그렇거나 반드시 그렇다고 단정할 수 없음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            良い結果が出たからといって、
+            動機も良かったとは限りません。<br>
+            좋은 결과가 나왔다고 해서 동기도 좋았다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～だけではなく</span>
+
+          <p class="grammar-explanation">
+            하나의 이유나 의미 외에 또 다른 요소도 포함된다고 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジはパワーを助けるためだけではなく、
+            自分の夢のためにも戦ったと思います。<br>
+            덴지는 파워를 구하기 위해서뿐만 아니라
+            자신의 꿈을 위해서도 싸웠다고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～としても</span>
+
+          <p class="grammar-explanation">
+            어떤 사실이나 조건을 인정하더라도 뒤의 판단은 변하지 않는다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            パワーに事情があったとしても、
+            デンジを犠牲にするべきではありませんでした。<br>
+            파워에게 사정이 있었다고 하더라도
+            덴지를 희생해서는 안 되었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．正当化する（せいとうかする）</span>
+
+          <p class="grammar-explanation">
+            문제가 있는 행동이나 판단을 옳거나 타당한 것으로 설명하는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            理由を理解することと、行動を正当化することは違います。<br>
+            이유를 이해하는 것과 행동을 정당화하는 것은 다릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．動機（どうき）</span>
+
+          <p class="grammar-explanation">
+            사람이 어떤 행동을 하게 된 내면의 이유나 목적을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジが戦った動機は一つではありません。<br>
+            덴지가 싸운 동기는 하나가 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．信頼を回復する（しんらいをかいふくする）</span>
+
+          <p class="grammar-explanation">
+            무너진 믿음이나 관계를 다시 좋은 상태로 되돌리는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            失った信頼を回復するには、時間と行動が必要です。<br>
+            잃은 신뢰를 회복하려면 시간과 행동이 필요합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">9．利害が一致する（りがいがいっちする）</span>
+
+          <p class="grammar-explanation">
+            서로의 이익이나 목적이 같은 방향과 맞아떨어지는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            二人は完全に信頼し合っていたというより、
+            一時的に利害が一致していたとも考えられます。<br>
+            두 사람은 완전히 서로 신뢰했다기보다
+            일시적으로 이해관계가 일치했다고도 생각할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">10．自然な会話表現</span>
+
+          <p class="grammar-explanation">
+            등장인물의 사정에는 공감하지만 행동에는 반대하는 등,
+            복합적인 의견을 자연스럽게 말할 때 사용할 수 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            気持ちは理解できますが、行動には賛成できません。<br>
+            事情があったとしても、別の方法を探すべきだったと思います。<br>
+            デンジの動機は純粋ではありませんが、行動自体には意味があります。<br>
+            許すことはできても、すぐに信頼するのは難しいです。<br>
+            その意見を聞いて、パワーに対する見方が少し変わりました。
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="question-card" id="anime-question-3">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN 03</span>
+    <h2 class="question-title">
+      姫野はなぜ、アキを助けるために自分のすべてを差し出したのでしょうか。
+    </h2>
+  </header>
+
+  <div class="section-block">
+    <h3 class="section-title">1．場面紹介</h3>
+
+    <div class="situation">
+      <p>
+        公安のデビルハンターたちは、
+        突然、複数の敵から襲撃を受けます。
+      </p>
+
+      <p>
+        アキはサムライソードと戦い、
+        自分の寿命を代償にする危険な力まで使います。
+      </p>
+
+      <p>
+        アキは一度相手を倒したように見えましたが、
+        サムライソードは再び立ち上がります。
+      </p>
+
+      <p>
+        アキは攻撃を受け、
+        自分で戦い続けることが難しい状態になります。
+      </p>
+
+      <p>
+        姫野は以前から、
+        自分の右目を代償として
+        幽霊の悪魔の力を借りていました。
+      </p>
+
+      <p>
+        しかし、普段使える力だけでは、
+        アキを助けることができません。
+      </p>
+
+      <div class="message-box">
+        <p>
+          姫野は幽霊の悪魔に
+          自分の体のすべてを差し出し、
+          その力を完全に使おうとします。
+        </p>
+
+        <p>
+          幽霊の悪魔が戦うにつれて、
+          姫野の体は少しずつ消えていきます。
+        </p>
+      </div>
+
+      <p>
+        姫野は自分が助からないことを理解しながらも、
+        アキを生かすために戦い続けます。
+      </p>
+
+      <p>
+        しかし、幽霊の悪魔は
+        沢渡アカネが呼び出した蛇の悪魔に倒され、
+        姫野の望んだ結果にはなりません。
+      </p>
+
+      <p>
+        最後には姫野の服だけが残り、
+        姫野自身は完全に姿を消します。
+      </p>
+
+      <p>
+        <strong>
+          姫野の選択を、
+          あなたはどのように受け止めますか。
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">2．鑑賞ポイント</h3>
+
+    <p class="section-description">
+      姫野の行動を単純に美しい犠牲と評価するのではなく、
+      姫野、アキ、二人の関係、行動の結果を
+      それぞれ分けて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          姫野の立場
+        </h4>
+
+        <p>
+          姫野は多くの同僚を失いながら、
+          危険なデビルハンターの仕事を続けてきました。
+        </p>
+
+        <p>
+          そのような姫野にとってアキは、
+          同じ職場で働く一人の同僚というだけではなく、
+          必ず生き残ってほしい大切な仲間でした。
+        </p>
+
+        <p>
+          姫野は自分の命とアキの命を比較し、
+          アキを生かすことを選んだように見えます。
+        </p>
+
+        <div class="discussion-prompt">
+          姫野は冷静に判断して自分を犠牲にしたのでしょうか。
+          それとも、アキを失う恐怖によって
+          ほかの選択肢が見えなくなっていたのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          アキの立場
+        </h4>
+
+        <p>
+          アキは自分を助けるために、
+          姫野がすべてを失うことを
+          自分で選んだわけではありません。
+        </p>
+
+        <p>
+          誰かが自分のために大きな犠牲を払った場合、
+          救われた人は感謝だけでなく、
+          罪悪感や責任も感じる可能性があります。
+        </p>
+
+        <p>
+          特に、自分が止めることのできない状況で起きた犠牲は、
+          長い間心に残るかもしれません。
+        </p>
+
+        <div class="discussion-prompt">
+          自分のために相手が命をかけた場合、
+          素直に感謝することができるでしょうか。
+          それとも、強い罪悪感を感じるでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          先輩と後輩の関係
+        </h4>
+
+        <p>
+          姫野はアキより先に公安で働き、
+          危険な仕事の経験も多い先輩でした。
+        </p>
+
+        <p>
+          先輩には後輩を守る責任があるという考え方もあります。
+        </p>
+
+        <p>
+          しかし、後輩を守るために
+          先輩が自分の命まで失うことが、
+          本当に望ましいとは限りません。
+        </p>
+
+        <div class="discussion-prompt">
+          先輩やリーダーには、
+          仲間を守るためにどこまで責任を負う義務があると思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          望んだ結果にならなかった犠牲
+        </h4>
+
+        <p>
+          姫野はアキを助けるためにすべてを差し出しましたが、
+          幽霊の悪魔は敵に倒されてしまいます。
+        </p>
+
+        <p>
+          姫野の行動は、
+          望んだ結果を完全には生み出せませんでした。
+        </p>
+
+        <p>
+          それでも、結果だけを見て
+          姫野の選択には意味がなかったと
+          判断することは難しいでしょう。
+        </p>
+
+        <div class="discussion-prompt">
+          犠牲によって目的を達成できなかった場合、
+          その行動にも意味や価値があると言えるでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          残された人が受け取るもの
+        </h4>
+
+        <p>
+          誰かがいなくなった後にも、
+          その人の言葉、考え方、行動は
+          残された人の中に残ります。
+        </p>
+
+        <p>
+          それは生きる力になることもあれば、
+          返すことのできない借りや責任として
+          重く感じられることもあります。
+        </p>
+
+        <p>
+          姫野の選択は、
+          アキに生きる理由を与えると同時に、
+          大きな心の負担を残した可能性もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          誰かに救われた人は、
+          救ってくれた人の期待や願いに
+          応える責任があると思いますか。
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h3 class="section-title">3．主要な質問</h3>
+
+    <p class="section-description">
+      姫野の感情、アキの立場、二人の関係、
+      犠牲の結果を分けて考えながら、
+      自分の経験や価値観へ話を広げてみましょう。
+    </p>
+
+    <ul class="follow-up-list">
+      <li class="follow-up-item">
+        この場面では、
+        姫野とアキのどちらにより強く共感しましたか。
+        その理由は何ですか。
+      </li>
+
+      <li class="follow-up-item">
+        姫野が自分のすべてを差し出した最大の理由は、
+        先輩としての責任、仲間への愛情、
+        アキを失う恐怖のうち、どれだったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        姫野は十分に考えたうえで決断したのでしょうか。
+        それとも、考える時間のない状況で
+        感情的に決断したのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        姫野には、
+        自分を犠牲にする以外の選択肢が
+        残されていたと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        自分の命を使ってでも仲間を助けようとした姫野を、
+        勇敢だと思いますか。
+        それとも、無理をしすぎたと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        姫野の行動を「自己犠牲」と呼ぶことに賛成ですか。
+        それとも、本人が望んで選んだ行動なので
+        別の言葉が適切だと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        相手を助けたいという気持ちが強すぎると、
+        自分自身の命や人生を軽く考えてしまうことが
+        あると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキが姫野の選択を事前に知っていたら、
+        受け入れたと思いますか。
+        それとも、必ず止めたと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かを助ける行動は、
+        助けられる本人の同意がなくても
+        正当化できるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたがアキの立場だったら、
+        姫野に対して感謝、悲しみ、怒り、罪悪感のうち
+        どの感情を最も強く感じると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        自分のために大きな犠牲を払った人に対して、
+        「そこまでしてほしくなかった」と
+        怒りを感じることは自然でしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        姫野の犠牲が望んだ結果につながらなかったとしても、
+        その選択には意味があったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        行動を評価するとき、
+        最終的な結果と行動した人の意志では、
+        どちらをより重視しますか。
+      </li>
+
+      <li class="follow-up-item">
+        良い意図で行った行動が
+        良くない結果を生んだ場合、
+        その人をどのように評価しますか。
+      </li>
+
+      <li class="follow-up-item">
+        先輩やリーダーは、
+        後輩やチームメンバーを守るために
+        より大きな危険を負うべきだと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        リーダーが一人で責任を背負うことと、
+        チーム全員で危険を分けることでは、
+        どちらが望ましいと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        家族や友達を助けるために、
+        自分の時間、仕事、お金を
+        どこまで使うことができますか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かを助け続けることで
+        自分の生活が壊れ始めた場合、
+        どの時点で助けることを止めるべきでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたには、
+        誰かが自分のために大きな負担を引き受けてくれた経験がありますか。
+        そのとき、どのように感じましたか。
+      </li>
+
+      <li class="follow-up-item">
+        反対に、あなたが誰かのために
+        自分の時間や機会をあきらめた経験はありますか。
+        後悔しましたか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かから受けた大きな助けは、
+        반드시 갚아야 하는 빚이라고 생각합니까。
+        それとも、別の人を助けることでつないでいけばよいでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        他の参加者の意見を聞いて、
+        姫野の行動に対する評価や
+        アキの立場についての考えが変わりましたか。
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-block speaking-guide">
+    <h3 class="section-title">4．自分の考えを話してみましょう</h3>
+
+    <p class="section-description">
+      姫野の行動が正しかったか間違っていたかだけでなく、
+      理解できる部分、疑問に感じる部分、
+      自分ならどうするかまで説明してください。
+    </p>
+
+    <div class="level-grid">
+      <div class="level-card level-card--n3">
+        <div class="level-card-header">
+          <span>N3レベルの答え方</span>
+          <span class="level-label level-label--n3">N3</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は姫野の気持ちは理解できます。
+          </p>
+
+          <p>
+            姫野にとってアキは、
+            必ず助けたい大切な仲間だったからです。
+          </p>
+
+          <p>
+            しかし、自分の命を全部使うことには
+            賛成できません。
+          </p>
+
+          <p>
+            アキも、
+            姫野にそこまでしてほしくなかったと思います。
+          </p>
+
+          <p>
+            私が姫野の立場だったら、
+            できるだけ仲間を助けたいですが、
+            自分も生き残れる方法を最後まで探したいです。
+          </p>
+
+          <p>
+            誰かを守ることは大切ですが、
+            自分の命も同じように大切だと思います。
+          </p>
+        </div>
+      </div>
+
+      <div class="level-card level-card--n2">
+        <div class="level-card-header">
+          <span>N2レベルの答え方</span>
+          <span class="level-label level-label--n2">N2</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は姫野の決断に強く心を動かされましたが、
+            それを無条件に正しい行動だとは評価できません。
+          </p>
+
+          <p>
+            姫野は数多くの仲間を失ってきたため、
+            アキまで失うことだけは
+            受け入れられなかったのだと思います。
+          </p>
+
+          <p>
+            その意味では、
+            姫野の選択は先輩としての責任感だけではなく、
+            これ以上大切な仲間を失いたくないという
+            強い恐怖から生まれたとも考えられます。
+          </p>
+
+          <p>
+            また、姫野自身が納得して選んだとしても、
+            アキはその犠牲を望んでいなかった可能性があります。
+          </p>
+
+          <p>
+            誰かを救うという目的があっても、
+            助けられる人に返すことのできない負担を
+            背負わせてしまうこともあります。
+          </p>
+
+          <p>
+            それでも、望んだ結果にならなかったからといって、
+            姫野の意志や行動がすべて無意味だったとは言い切れません。
+          </p>
+
+          <p>
+            この場面は、
+            仲間を守る責任と自分自身を守る責任のどちらも
+            簡単には捨てられないことを示しているように感じました。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">5．現実の関係へ広げて考える</h3>
+
+    <p class="section-description">
+      作品の中の命をかけた戦いを、
+      現実の家族、友達、職場、チームの関係へ置き換えて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          仲間を守る責任
+        </h4>
+
+        <p>
+          職場やチームでは、
+          経験の多い人が経験の少ない人を
+          守ることを求められる場合があります。
+        </p>
+
+        <p>
+          しかし、一人の先輩やリーダーが
+          すべての問題と責任を引き受けると、
+          その人自身が限界を超えてしまいます。
+        </p>
+
+        <div class="discussion-prompt">
+          良いリーダーとは、
+          仲間の代わりに危険を引き受ける人でしょうか。
+          それとも、危険を全員に適切に分ける人でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          助ける側の限界
+        </h4>
+
+        <p>
+          大切な人が困っていると、
+          自分が無理をしてでも
+         助けなければならないと感じることがあります。
+        </p>
+
+        <p>
+          しかし、助ける人が倒れてしまえば、
+          長い期間相手を支えることができなくなります。
+        </p>
+
+        <div class="discussion-prompt">
+          相手を助けながら自分も守るためには、
+          どのような限界や境界線が必要でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          救われた人の罪悪感
+        </h4>
+
+        <p>
+          誰かが自分のために大きなものを失った場合、
+          救われた人は
+          「自分のせいで相手が犠牲になった」と
+          感じることがあります。
+        </p>
+
+        <p>
+          しかし、それは救った人が
+          自分の意志で選んだ行動でもあります。
+        </p>
+
+        <div class="discussion-prompt">
+          救われた人は、
+          相手の選択に対してどこまで責任を感じる必要があるでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          失敗した助けにも意味があるか
+        </h4>
+
+        <p>
+          誰かを助けようとしても、
+          必ず良い結果になるとは限りません。
+        </p>
+
+        <p>
+          結果だけを見れば失敗でも、
+          その人の意志や努力が
+          残された人に影響を与えることがあります。
+        </p>
+
+        <div class="discussion-prompt">
+          目的を達成できなかった善意や努力にも、
+          価値があると思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          受けた助けをどう返すか
+        </h4>
+
+        <p>
+          大きな助けを受けても、
+          助けてくれた本人に
+          直接返すことができない場合があります。
+        </p>
+
+        <p>
+          その場合、受け取ったものを
+          別の人へつないでいくという考え方もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          誰かから受けた助けは、
+          その本人に返すべきでしょうか。
+          それとも、別の人を助けることで返してもよいでしょうか。
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      이 토론의 목적은 히메노의 희생을 무조건 아름답거나 옳은 행동으로 결론 내리는 것이 아닙니다.
+      동료를 지키려는 책임감과 자기 자신을 지켜야 할 책임,
+      도움을 주는 사람의 의사와 도움을 받는 사람에게 남는 부담,
+      결과를 이루지 못한 희생의 의미를 함께 비교하는 것이 핵심입니다.
+    </div>
+  </div>
+
+  <div class="language-notes">
+    <h3 class="section-title">6．文法・語彙解説</h3>
+
+    <div class="language-note-grid">
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～ために</span>
+
+          <p class="grammar-explanation">
+            어떤 목적을 위해 행동했다는 것을 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野はアキを助けるために、すべてを差し出しました。<br>
+            히메노는 아키를 구하기 위해 모든 것을 내놓았습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～ようとします</span>
+
+          <p class="grammar-explanation">
+            어떤 행동을 하려고 시도하거나 노력하는 것을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野は最後までアキを守ろうとしました。<br>
+            히메노는 마지막까지 아키를 지키려고 했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～ても</span>
+
+          <p class="grammar-explanation">
+            어떤 조건이 있어도 뒤의 행동이나 판단이 유지됨을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            自分が危険になっても、仲間を助けたいと思いました。<br>
+            자신이 위험해져도 동료를 돕고 싶다고 생각했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～かもしれません</span>
+
+          <p class="grammar-explanation">
+            확실하지 않은 등장인물의 감정이나 행동 이유를 추측할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野はアキを失うことが怖かったのかもしれません。<br>
+            히메노는 아키를 잃는 것이 두려웠을지도 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ことができません</span>
+
+          <p class="grammar-explanation">
+            능력, 상황 또는 조건 때문에 어떤 행동이 불가능하다는 의미입니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは姫野の決断を止めることができませんでした。<br>
+            아키는 히메노의 결정을 막을 수 없었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．差し出す（さしだす）</span>
+
+          <p class="grammar-explanation">
+            자신의 물건이나 권리 등을 상대에게 내어주는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野は幽霊の悪魔に自分のすべてを差し出しました。<br>
+            히메노는 유령의 악마에게 자신의 모든 것을 내놓았습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．生き残る（いきのこる）</span>
+
+          <p class="grammar-explanation">
+            위험한 상황이나 사고를 겪고도 죽지 않고 살아남는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野はアキに生き残ってほしかったのだと思います。<br>
+            히메노는 아키가 살아남기를 바랐다고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．背負う（せおう）</span>
+
+          <p class="grammar-explanation">
+            실제 짐을 지는 의미 외에도 책임, 부담, 죄책감 등을 맡는다는 의미로 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは大きな悲しみと責任を背負うことになります。<br>
+            아키는 큰 슬픔과 책임을 짊어지게 됩니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n2">N2</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～からといって</span>
+
+          <p class="grammar-explanation">
+            어떤 이유가 있다고 해서 뒤의 행동이 반드시 옳다고 할 수 없음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            仲間を助けるためだからといって、
+            自分の命を軽く考えてよいとは言えません。<br>
+            동료를 구하기 위해서라고 해서
+            자신의 목숨을 가볍게 생각해도 된다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～一方で</span>
+
+          <p class="grammar-explanation">
+            하나의 상황에 존재하는 서로 다른 두 측면을 대비하여 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野の行動はアキを救おうとした一方で、
+            アキに大きな負担を残した可能性があります。<br>
+            히메노의 행동은 아키를 구하려 한 한편,
+            아키에게 큰 부담을 남겼을 가능성이 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～とは限りません</span>
+
+          <p class="grammar-explanation">
+            항상 그렇거나 반드시 그런 결과가 된다고 단정할 수 없음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            自分を犠牲にすることが、
+            必ず相手のためになるとは限りません。<br>
+            자신을 희생하는 것이 반드시 상대를 위한 일이 된다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～たからといって、～わけではありません</span>
+
+          <p class="grammar-explanation">
+            특정 결과가 나왔다고 해서 그 행동 전체의 가치가 결정되는 것은 아니라고 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            望んだ結果にならなかったからといって、
+            姫野の行動が無意味だったわけではありません。<br>
+            바랐던 결과가 되지 않았다고 해서
+            히메노의 행동이 무의미했던 것은 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ずにはいられません</span>
+
+          <p class="grammar-explanation">
+            감정이나 상황 때문에 어떤 행동을 하지 않을 수 없다는 강한 마음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            アキが危険な状態になり、
+            姫野は助けずにはいられなかったのだと思います。<br>
+            아키가 위험한 상태가 되어
+            히메노는 돕지 않을 수 없었던 것이라고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．～にほかなりません</span>
+
+          <p class="grammar-explanation">
+            어떤 행동의 본질적인 이유가 바로 그것이라고 강하게 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野が自分を犠牲にしたのは、
+            アキに生きてほしかったからにほかなりません。<br>
+            히메노가 자신을 희생한 것은
+            아키가 살아주기를 바랐기 때문임에 틀림없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．自己犠牲（じこぎせい）</span>
+
+          <p class="grammar-explanation">
+            다른 사람이나 목적을 위해 자신의 이익, 안전, 생명 등을 포기하는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野の行動を自己犠牲と評価する人もいます。<br>
+            히메노의 행동을 자기희생이라고 평가하는 사람도 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．罪悪感（ざいあくかん）</span>
+
+          <p class="grammar-explanation">
+            자신 때문에 좋지 않은 일이 일어났다고 생각하여 느끼는 미안함과 책임감을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは自分だけが生き残ったことに罪悪感を抱くかもしれません。<br>
+            아키는 자신만 살아남았다는 것에 죄책감을 느낄지도 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">9．報われる（むくわれる）</span>
+
+          <p class="grammar-explanation">
+            노력이나 희생이 좋은 결과나 보상으로 이어지는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野の犠牲は報われなかったように見えます。<br>
+            히메노의 희생은 보답받지 못한 것처럼 보입니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">10．意志を受け継ぐ（いしをうけつぐ）</span>
+
+          <p class="grammar-explanation">
+            다른 사람이 남긴 생각, 목표, 각오 등을 이어받는다는 의미입니다.
+          </p>
+
+          <p class="example-sentence">
+            残された人が姫野の意志を受け継ぐことにも意味があります。<br>
+            남겨진 사람이 히메노의 뜻을 이어받는 것에도 의미가 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">11．自然な会話表現</span>
+
+          <p class="grammar-explanation">
+            등장인물의 희생에 감동하면서도 그 선택을 비판적으로 말할 때 사용할 수 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            気持ちは理解できますが、ほかの方法も探してほしかったです。<br>
+            勇敢な行動ではありますが、正しい選択だったとは言い切れません。<br>
+            結果だけを見て、無意味だったと判断することはできません。<br>
+            アキの立場を考えると、感謝より罪悪感のほうが強いかもしれません。<br>
+            仲間を守る責任と、自分を守る責任の両方があると思います。
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
+
+<section class="question-card" id="anime-question-4">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN 04</span>
+    <h2 class="question-title">
+      「Easy revenge!」のたばこを受け取ったアキは、何を乗り越えたのでしょうか。
+    </h2>
+  </header>
+
+  <div class="section-block">
+    <h3 class="section-title">1．場面紹介</h3>
+
+    <div class="situation">
+      <p>
+        姫野を失った後、
+        アキは沢渡アカネと幽霊の悪魔に立ち向かいます。
+      </p>
+
+      <p>
+        幽霊の悪魔は非常に大きく、
+        多くの腕を使ってアキの首を締め上げます。
+      </p>
+
+      <p>
+        アキは動くことができず、
+        このままでは命を失う状態になります。
+      </p>
+
+      <p>
+        しかし、幽霊の悪魔は突然攻撃を止め、
+        一本のたばこをアキに差し出します。
+      </p>
+
+      <div class="message-box">
+        <p>
+          そのたばこには、
+          「Easy revenge!」という言葉が書かれていました。
+        </p>
+      </div>
+
+      <p>
+        それは、姫野が生きていた頃に
+        アキへ渡そうとしていたたばこを思わせるものでした。
+      </p>
+
+      <p>
+        アキはそのたばこを見て、
+        姫野から教えられた幽霊の悪魔の特徴を思い出します。
+      </p>
+
+      <p>
+        幽霊の悪魔には目がなく、
+        相手の恐怖を感じ取って攻撃していました。
+      </p>
+
+      <p>
+        アキは恐怖を抑え、
+        落ち着いたまま幽霊の悪魔の体を登ります。
+      </p>
+
+      <p>
+        そして、抵抗されることなく
+        幽霊の悪魔の首を切り落とします。
+      </p>
+
+      <p>
+        <strong>
+          アキにとって、
+          「Easy revenge!」のたばこは
+          どのような意味を持っていたのでしょうか。
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">2．鑑賞ポイント</h3>
+
+    <p class="section-description">
+      この場面を単純な復讐の成功として見るのではなく、
+      アキの恐怖、姫野の記憶、残された物、
+      悲しみとの向き合い方を分けて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          アキが感じていた恐怖
+        </h4>
+
+        <p>
+          アキはもともと危険な戦いに慣れており、
+          自分の寿命を使う力もためらわずに使用していました。
+        </p>
+
+        <p>
+          しかし、姫野を失った後のアキは、
+          以前より多くの悲しみや迷いを抱えていました。
+        </p>
+
+        <p>
+          幽霊の悪魔が感じ取っていた恐怖は、
+          目の前で死ぬことへの恐怖だけではなかった可能性があります。
+        </p>
+
+        <div class="discussion-prompt">
+          アキが恐れていたのは自分の死でしょうか。
+          それとも、姫野まで失った現実や、
+          これ以上仲間を失うことだったのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          姫野が残した言葉
+        </h4>
+
+        <p>
+          「Easy revenge!」という言葉は、
+          深刻な復讐を軽く扱っているようにも見えます。
+        </p>
+
+        <p>
+          一方で、復讐心に支配されているアキへ、
+          力を入れすぎず落ち着くように伝える
+          姫野らしい言葉だったとも考えられます。
+        </p>
+
+        <p>
+          姫野は生きていた頃から、
+          危険な仕事を続けるアキのことを心配していました。
+        </p>
+
+        <div class="discussion-prompt">
+          「気楽に復讐しよう」という言葉は、
+          復讐を勧める言葉でしょうか。
+          それとも、復讐だけに人生を奪われないようにする言葉でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          残された物が持つ意味
+        </h4>
+
+        <p>
+          一本のたばこ自体には、
+          特別な力があるわけではありません。
+        </p>
+
+        <p>
+          しかし、それを見ることで
+          アキは姫野との会話や経験を思い出しました。
+        </p>
+
+        <p>
+          人がいなくなった後には、
+          写真、手紙、服、音楽などの物が
+          その人の存在を思い出させる場合があります。
+        </p>
+
+        <div class="discussion-prompt">
+          普通の物が、
+          特定の人との記憶によって
+          特別な意味を持つことがありますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          恐怖が消えた理由
+        </h4>
+
+        <p>
+          アキはたばこを見た後、
+          幽霊の悪魔の弱点を思い出し、
+          恐怖を抑えて前へ進みます。
+        </p>
+
+        <p>
+          恐怖そのものが完全に消えたのではなく、
+          恐怖よりも強い目的や記憶を見つけた可能性もあります。
+        </p>
+
+        <p>
+          怖くなくなったから行動したのか、
+          怖いままでも行動する覚悟を決めたのかによって、
+          この場面の意味は変わります。
+        </p>
+
+        <div class="discussion-prompt">
+          勇気とは、恐怖を感じないことでしょうか。
+          それとも、恐怖を感じながらも行動することでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          復讐と悲しみ
+        </h4>
+
+        <p>
+          アキは家族を奪った銃の悪魔への復讐を目的に、
+          デビルハンターを続けてきました。
+        </p>
+
+        <p>
+          さらに姫野まで失ったことで、
+          復讐を続ける理由は増えたように見えます。
+        </p>
+
+        <p>
+          しかし、復讐を成功させても、
+          失った人が戻ってくるわけではありません。
+        </p>
+
+        <div class="discussion-prompt">
+          復讐は悲しみを整理する助けになるでしょうか。
+          それとも、悲しみから離れられなくする可能性がありますか。
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h3 class="section-title">3．主要な質問</h3>
+
+    <p class="section-description">
+      アキの感情と行動を考えながら、
+      記憶、恐怖、勇気、復讐、残された物について
+      自分の経験や価値観へ話を広げてみましょう。
+    </p>
+
+    <ul class="follow-up-list">
+      <li class="follow-up-item">
+        この場面で最も印象に残ったのは、
+        たばこ、姫野の言葉、アキの表情、
+        幽霊の悪魔を倒す行動のうちどれですか。
+      </li>
+
+      <li class="follow-up-item">
+        「Easy revenge!」という言葉を、
+        あなたはどのような意味だと解釈しましたか。
+      </li>
+
+      <li class="follow-up-item">
+        姫野は本当にアキに復讐してほしかったのでしょうか。
+        それとも、復讐を深刻に考えすぎないでほしかったのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        アキはたばこを見たことで、
+        姫野に励まされたと感じたのでしょうか。
+        それとも、姫野を失った悲しみを再び感じたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        幽霊の悪魔がたばこを渡した行動を、
+        姫野の意志が残っていたからだと思いますか。
+        それとも、別の理由があったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        作品の中で明確に説明されていない部分を、
+        自分なりに解釈することをどう思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキの恐怖は、
+        たばこを見た瞬間に完全に消えたと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        恐怖を感じない人と、
+        恐怖を感じても行動できる人では、
+        どちらがより勇敢だと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたには、
+        怖かったけれど誰かの言葉を思い出して
+        行動できた経験がありますか。
+      </li>
+
+      <li class="follow-up-item">
+        人から 들은 짧은 한마디가,
+        오랫동안 자신의 판단에 영향을 준 경험이 있습니까。
+      </li>
+
+      <li class="follow-up-item">
+        姫野から聞いた幽霊の悪魔の特徴を
+        アキが覚えていたことには、
+        どのような意味があると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        亡くなった人から教わったことを使って
+        困難を乗り越えることは、
+        その人と今も一緒にいることになるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたにも、
+        特定の人を思い出させる物、音楽、場所、言葉がありますか。
+      </li>
+
+      <li class="follow-up-item">
+        思い出の物を持ち続けることは、
+        悲しみを乗り越える助けになると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        反対に、思い出の物を見るたびに
+        悲しみが強くなる場合は、
+        手放したほうがよいでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        人を忘れないことと、
+        悲しみから前へ進めないことの違いは何でしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        アキが幽霊の悪魔を倒したことを、
+        姫野のための復讐だと考えますか。
+        それとも、生き残るための戦いだと考えますか。
+      </li>
+
+      <li class="follow-up-item">
+        復讐によって相手を倒しても、
+        悲しみが消えない場合があります。
+        それでも復讐には意味があると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かを傷つけた相手に罰を与えることと、
+        自分の悲しみを整理することは
+        別の問題だと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキはこの場面を通じて、
+        姫野の死を受け入れられるようになったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        悲しみを乗り越えるとは、
+        その人を忘れることでしょうか。
+        それとも、記憶を持ったまま生活を続けることでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        他の参加者の意見を聞いて、
+        「Easy revenge!」という言葉や
+        アキの行動に対する見方が変わりましたか。
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-block speaking-guide">
+    <h3 class="section-title">4．自分の考えを話してみましょう</h3>
+
+    <p class="section-description">
+      この場面の正しい解釈を決める必要はありません。
+      アキの恐怖がなぜ変化したのか、
+      たばこと姫野の記憶がどのような力を与えたのかを
+      自分の言葉で説明してください。
+    </p>
+
+    <div class="level-grid">
+      <div class="level-card level-card--n3">
+        <div class="level-card-header">
+          <span>N3レベルの答え方</span>
+          <span class="level-label level-label--n3">N3</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、たばこがアキに勇気を与えたと思います。
+          </p>
+
+          <p>
+            たばこを見たことで、
+            アキは姫野との会話を思い出しました。
+          </p>
+
+          <p>
+            そして、幽霊の悪魔が
+            恐怖を感じて攻撃することにも気づきました。
+          </p>
+
+          <p>
+            アキは怖くなくなったというより、
+            姫野の言葉を信じて
+            前に進むことを決めたのだと思います。
+          </p>
+
+          <p>
+            私は、勇気とは
+            全く怖くないことではないと思います。
+          </p>
+
+          <p>
+            怖くても、自分が 해야 할 일을 하는 것이
+            勇気だと思います。
+          </p>
+        </div>
+      </div>
+
+      <div class="level-card level-card--n2">
+        <div class="level-card-header">
+          <span>N2レベルの答え方</span>
+          <span class="level-label level-label--n2">N2</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、このたばこが
+            姫野からの単純な復讐命令だったとは考えていません。
+          </p>
+
+          <p>
+            「Easy revenge!」という軽い表現には、
+            復讐心に支配されているアキに対して、
+            もっと肩の力を抜いてほしいという
+            姫野らしい気持ちが含まれていたように感じます。
+          </p>
+
+          <p>
+            また、たばこを見たことで、
+            アキは姫野の言葉と
+            幽霊の悪魔の特徴を思い出しました。
+          </p>
+
+          <p>
+            つまり、姫野が残したのは
+            感情的な励ましだけではなく、
+            アキが生き残るために必要な知識でもありました。
+          </p>
+
+          <p>
+            アキの恐怖が完全に消えたとは限りません。
+          </p>
+
+          <p>
+            それでも、恐怖に支配されるのではなく、
+            姫野から受け取ったものを使って
+            自分で行動することを選びました。
+          </p>
+
+          <p>
+            この場面は復讐を完成させた場面というより、
+            アキが姫野の記憶を力に変え、
+            再び自分の足で進み始めた場面だと思います。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">5．現実の関係へ広げて考える</h3>
+
+    <p class="section-description">
+      アキと姫野の場面を、
+      大切な人の記憶、残された物、
+      恐怖を乗り越えた経験、悲しみとの向き合い方へ広げて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          人が残した言葉
+        </h4>
+
+        <p>
+          何気なく聞いた言葉でも、
+          어려운 상황이 되면 갑자기 떠오르는 경우가 있습니다。
+        </p>
+
+        <p>
+          その人がいなくなった後にも、
+          言葉が判断や行動を支えることがあります。
+        </p>
+
+        <div class="discussion-prompt">
+          あなたの考え方や人生に長く残っている
+          誰かの言葉はありますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          思い出の物
+        </h4>
+
+        <p>
+          物の金銭的な価値が低くても、
+          人との記憶が含まれていれば
+          捨てられないことがあります。
+        </p>
+
+        <p>
+          その物は、過去にとどまる原因にも、
+          앞으로 나아가는 힘에도 될 수 있습니다。
+        </p>
+
+        <div class="discussion-prompt">
+          思い出の物は、
+          できるだけ残したいですか。
+          それとも必要な時には手放したいですか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          恐怖と行動
+        </h4>
+
+        <p>
+          恐怖を完全になくしてから
+          行動できるとは限りません。
+        </p>
+
+        <p>
+          多くの場合は、
+          怖い状態のまま小さな一歩を踏み出す必要があります。
+        </p>
+
+        <div class="discussion-prompt">
+          あなたは怖いとき、
+          情報、準備、人の言葉、自分の経験のうち
+          何から最も勇気を得ますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          忘れずに前へ進むこと
+        </h4>
+
+        <p>
+          大切な人や過去の経験を忘れなくても、
+          새로운 생활을 시작할 수 있습니다。
+        </p>
+
+        <p>
+          悲しみが完全に消えることではなく、
+          悲しみと一緒に生きられるようになることが
+          前へ進むことだという考え方もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          過去を大切にすることと、
+          過去にとらわれることの違いは何だと思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          復讐ではなく受け継ぐこと
+        </h4>
+
+        <p>
+          大切な人を傷つけた相手に
+          罰を与えることだけが、
+          その人のための行動とは限りません。
+        </p>
+
+        <p>
+          その人から学んだことや願いを
+          自分の生活の中で続けることもできます。
+        </p>
+
+        <div class="discussion-prompt">
+          亡くなった人や離れた人を大切にする最も良い方法は、
+          その人のために戦うことでしょうか。
+          それとも、その人から受け取ったものを生かすことでしょうか。
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      이 토론의 목적은 ‘Easy revenge!’라는 문구의 공식적인 정답을 정하는 것이 아닙니다.
+      아키가 히메노의 기억과 남겨진 물건을 어떻게 힘으로 바꾸었는지,
+      두려움이 사라진 것과 두려움 속에서도 행동하는 것의 차이,
+      복수와 애도의 관계를 참가자 자신의 경험으로 확장하는 것이 핵심입니다.
+    </div>
+  </div>
+
+  <div class="language-notes">
+    <h3 class="section-title">6．文法・語彙解説</h3>
+
+    <div class="language-note-grid">
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～ことを思い出します</span>
+
+          <p class="grammar-explanation">
+            과거에 들었거나 경험했던 내용을 다시 떠올릴 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは姫野から聞いたことを思い出しました。<br>
+            아키는 히메노에게 들었던 것을 떠올렸습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～ことに気づきます</span>
+
+          <p class="grammar-explanation">
+            이전에는 알지 못했던 사실을 새롭게 깨달을 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは幽霊の悪魔が恐怖を感じ取ることに気づきました。<br>
+            아키는 유령의 악마가 공포를 감지한다는 것을 깨달았습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～まま</span>
+
+          <p class="grammar-explanation">
+            어떤 상태가 변하지 않은 채 다음 행동이 이어질 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは落ち着いたまま、幽霊の悪魔に近づきました。<br>
+            아키는 침착한 채로 유령의 악마에게 다가갔습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～というより</span>
+
+          <p class="grammar-explanation">
+            앞의 표현보다 뒤의 표현이 자신의 생각에 더 정확하다고 고쳐 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            怖くなくなったというより、
+            怖くても進むことを決めたのだと思います。<br>
+            무서워지지 않았다기보다 무서워도 나아가기로 한 것이라고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ように見えます</span>
+
+          <p class="grammar-explanation">
+            등장인물의 표정이나 행동을 보고 자신의 해석을 부드럽게 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは恐怖を乗り越えたように見えます。<br>
+            아키는 두려움을 극복한 것처럼 보입니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．乗り越える（のりこえる）</span>
+
+          <p class="grammar-explanation">
+            어려움, 슬픔, 장애물 등을 이겨 내고 앞으로 나아간다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは姫野の言葉によって恐怖を乗り越えました。<br>
+            아키는 히메노의 말로 두려움을 극복했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．受け取る（うけとる）</span>
+
+          <p class="grammar-explanation">
+            물건을 받는 의미뿐 아니라 말이나 뜻을 자신만의 방식으로 받아들인다는 의미도 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            アキはたばことともに、姫野の思いも受け取りました。<br>
+            아키는 담배와 함께 히메노의 마음도 받아들였습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．残す（のこす）</span>
+
+          <p class="grammar-explanation">
+            물건, 말, 기억, 영향 등을 사라지지 않고 남게 한다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野はアキに大切な言葉を残しました。<br>
+            히메노는 아키에게 중요한 말을 남겼습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n2">N2</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～にすぎません</span>
+
+          <p class="grammar-explanation">
+            겉으로는 단지 그것에 불과하지만 실제로는 다른 의미가 있을 수 있음을 나타낼 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            それは普通のたばこ一本にすぎませんが、
+            アキには特別な意味がありました。<br>
+            그것은 평범한 담배 한 개비에 불과하지만,
+            아키에게는 특별한 의미가 있었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～をきっかけに</span>
+
+          <p class="grammar-explanation">
+            특정 사건이나 물건을 계기로 감정이나 행동이 변화할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            たばこをきっかけに、
+            アキは姫野の言葉を思い出しました。<br>
+            담배를 계기로 아키는 히메노의 말을 떠올렸습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～とは限りません</span>
+
+          <p class="grammar-explanation">
+            반드시 그렇다고 단정할 수 없다는 의미입니다.
+          </p>
+
+          <p class="example-sentence">
+            勇気があるからといって、
+            恐怖を感じないとは限りません。<br>
+            용기가 있다고 해서 두려움을 느끼지 않는 것은 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～ずにはいられません</span>
+
+          <p class="grammar-explanation">
+            강한 감정 때문에 어떤 행동이나 생각을 하지 않을 수 없음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            そのたばこを見ると、
+            姫野のことを思い出さずにはいられません。<br>
+            그 담배를 보면 히메노를 떠올리지 않을 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～にほかなりません</span>
+
+          <p class="grammar-explanation">
+            어떤 행동이나 변화의 핵심 이유가 바로 그것이라고 강하게 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキが前へ進めたのは、
+            姫野から受け取った記憶があったからにほかなりません。<br>
+            아키가 앞으로 나아갈 수 있었던 것은
+            히메노에게 받은 기억이 있었기 때문임에 틀림없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．～にとらわれる</span>
+
+          <p class="grammar-explanation">
+            특정 감정, 생각 또는 과거에서 벗어나지 못하고 계속 영향을 받는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは恐怖や復讐心にとらわれていました。<br>
+            아키는 두려움과 복수심에 사로잡혀 있었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．形見（かたみ）</span>
+
+          <p class="grammar-explanation">
+            세상을 떠났거나 헤어진 사람을 기억하기 위해 간직하는 물건을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            そのたばこは、
+            アキにとって姫野の形見のようなものです。<br>
+            그 담배는 아키에게 히메노의 유품과 같은 것입니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．面影（おもかげ）</span>
+
+          <p class="grammar-explanation">
+            과거의 사람이나 모습이 떠오르게 하는 흔적이나 인상을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            その言葉には、姫野の面影が残っていました。<br>
+            그 말에는 히메노의 모습이 남아 있었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">9．心の支え（こころのささえ）</span>
+
+          <p class="grammar-explanation">
+            힘든 상황에서 마음이 무너지지 않도록 지탱해 주는 사람, 기억, 말 등을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野の記憶は、アキの心の支えになりました。<br>
+            히메노의 기억은 아키의 마음을 지탱해 주는 힘이 되었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">10．自然な会話表現</span>
+
+          <p class="grammar-explanation">
+            장면의 의미를 단정하지 않고 자신의 해석을 제시하거나,
+            다른 참가자의 해석에 덧붙일 때 사용할 수 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            私は、復讐を勧める言葉ではなかったように感じました。<br>
+            恐怖が消えたというより、恐怖に支配されなくなったのだと思います。<br>
+            ただのたばこですが、アキにとっては姫野そのものに近かったのかもしれません。<br>
+            その解釈も分かりますが、私は悲しみより励ましの意味が強いと思いました。<br>
+            大切な人を忘れずに前へ進む場面だったのではないでしょうか。
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="question-card" id="anime-question-5">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN 05</span>
+    <h2 class="question-title">
+      永遠の悪魔との戦いで、デンジはなぜ笑うことができたのでしょうか。
+    </h2>
+  </header>
+
+  <div class="section-block">
+    <h3 class="section-title">1．場面紹介</h3>
+
+    <div class="situation">
+      <p>
+        デンジたち公安のメンバーは、
+        悪魔を探すためにホテルへ入ります。
+      </p>
+
+      <p>
+        しかし、ホテルの八階から
+        何度移動しても外へ出ることができません。
+      </p>
+
+      <p>
+        階段を上っても同じ八階に戻り、
+        窓から外へ出ようとしても
+        再びホテルの中へ戻ってしまいます。
+      </p>
+
+      <p>
+        さらに、ホテルの中では
+        時間まで止まっていました。
+      </p>
+
+      <p>
+        メンバーたちは、
+        いつ脱出できるか分からない状況で
+        少しずつ冷静さを失っていきます。
+      </p>
+
+      <div class="message-box">
+        <p>
+          永遠の悪魔は、
+          デンジの心臓を渡せば
+          ほかのメンバーを外へ出すと提案します。
+        </p>
+      </div>
+
+      <p>
+        コベニと荒井は恐怖に耐えられなくなり、
+        デンジを殺して悪魔へ渡そうとします。
+      </p>
+
+      <p>
+        しかし、アキはデンジを守ろうとして
+        コベニのナイフで刺されてしまいます。
+      </p>
+
+      <p>
+        アキは銃の悪魔を倒すために
+        デンジの力が必要だと考え、
+        自分が傷ついてもデンジを守りました。
+      </p>
+
+      <p>
+        それを見たデンジは、
+        自分から永遠の悪魔の体の中へ飛び込みます。
+      </p>
+
+      <p>
+        デンジはチェンソーマンに変身し、
+        永遠の悪魔の体を何度も切り続けます。
+      </p>
+
+      <p>
+        血を失ってチェンソーが止まりそうになると、
+        今度は永遠の悪魔の血を飲んで回復します。
+      </p>
+
+      <div class="message-box">
+        <p>
+          デンジは、悪魔を切れば血が出て、
+          その血を飲めば自分が再び戦えることに気づきます。
+        </p>
+
+        <p>
+          そして、この戦いを
+          自分なりの「永久機関」のように考えます。
+        </p>
+      </div>
+
+      <p>
+        デンジは三日間、
+        眠ることも休むこともなく
+        永遠の悪魔を攻撃し続けます。
+      </p>
+
+      <p>
+        最後には永遠の悪魔のほうが
+        痛みに耐えられなくなり、
+        デンジに自分を殺してほしいと願います。
+      </p>
+
+      <p>
+        <strong>
+          デンジの行動は勇気だったのでしょうか。
+          それとも、普通の人とは違う危険な無謀さだったのでしょうか。
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">2．鑑賞ポイント</h3>
+
+    <p class="section-description">
+      デンジを単純に勇敢な主人公として見るのではなく、
+      デンジの経験、恐怖への反応、仲間との関係、
+      行動の危険性を分けて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          デンジは恐怖を感じていなかったのか
+        </h4>
+
+        <p>
+          ホテルから出られない状況で、
+          ほかのメンバーは強い恐怖を感じていました。
+        </p>
+
+        <p>
+          一方、デンジは睡眠を取ったり、
+          食べ物を探したりしながら
+          比較的落ち着いて行動していました。
+        </p>
+
+        <p>
+          これはデンジが特別に勇敢だからとも考えられますが、
+          幼い頃から危険な生活に慣れすぎていたため、
+          普通の人と危険を感じる基準が違った可能性もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          デンジは恐怖を乗り越えたのでしょうか。
+          それとも、危険に慣れすぎて
+          恐怖を感じにくくなっていたのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          アキに守られたこと
+        </h4>
+
+        <p>
+          アキはデンジと知り合ってから
+          まだ長い時間がたっていません。
+        </p>
+
+        <p>
+          それでも、デンジが殺されそうになると、
+          自分が傷つく危険を負ってデンジを守りました。
+        </p>
+
+        <p>
+          アキには銃の悪魔を倒すという目的があり、
+          デンジの力が必要だという現実的な理由もありました。
+        </p>
+
+        <p>
+          しかし、理由が現実的だったとしても、
+          実際に自分の体を使って守った事実は残ります。
+        </p>
+
+        <div class="discussion-prompt">
+          デンジはアキへの感謝や借りを返すために
+          戦ったのでしょうか。
+          それとも、単純に自分の生き方を選んだのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          無謀さと発想力
+        </h4>
+
+        <p>
+          普通に戦えば、
+          永遠の悪魔を倒すことは難しい状況でした。
+        </p>
+
+        <p>
+          デンジは悪魔の血で回復できる自分の特徴を利用し、
+          相手が先に痛みに耐えられなくなるまで
+          攻撃を続ける方法を考えます。
+        </p>
+
+        <p>
+          非常に危険な方法ですが、
+          相手と自分の特徴を組み合わせた
+          実用的な作戦でもあります。
+        </p>
+
+        <div class="discussion-prompt">
+          デンジの作戦は無計画な力任せでしょうか。
+          それとも、状況を利用した柔軟で合理的な発想でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          痛みを楽しむように見えるデンジ
+        </h4>
+
+        <p>
+          デンジは自分も傷ついているにもかかわらず、
+          悪魔が苦しむ姿を見ながら笑って戦います。
+        </p>
+
+        <p>
+          これは相手を苦しめること自体を
+          楽しんでいたようにも見えます。
+        </p>
+
+        <p>
+          一方で、恐怖や痛みを笑いに変えることで、
+          自分の精神を守っていたとも考えられます。
+        </p>
+
+        <div class="discussion-prompt">
+          苦しい状況で笑うことは、
+          精神的な強さでしょうか。
+          それとも、感情の感覚が普通とは違うのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          チームの中の「普通ではない人」
+        </h4>
+
+        <p>
+          ホテルに閉じ込められたメンバーの多くは、
+          恐怖によって正常な判断が難しくなっていました。
+        </p>
+
+        <p>
+          その中でデンジだけが、
+          ほかの人には考えにくい方法で
+          状況を変えました。
+        </p>
+
+        <p>
+          普段は問題が多く見える人でも、
+          非常事態ではその人の独特な考え方が
+          チームを救うことがあります。
+        </p>
+
+        <div class="discussion-prompt">
+          チームには、規則をよく守る安定した人だけでなく、
+          常識から外れた行動をする人も必要だと思いますか。
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h3 class="section-title">3．主要な質問</h3>
+
+    <p class="section-description">
+      デンジの勇気、無謀さ、発想力、仲間との関係を考えながら、
+      自分が恐怖や困難にどう対応するかまで話を広げてみましょう。
+    </p>
+
+    <ul class="follow-up-list">
+      <li class="follow-up-item">
+        この場面でデンジを見て、
+        勇敢だと感じましたか。
+        それとも危険すぎると感じましたか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジが永遠の悪魔の中へ飛び込んだ最大の理由は、
+        自分が生き残るため、仲間を救うため、
+        アキへの借りを返すためのうち、どれだったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキがデンジを守らなかったとしても、
+        デンジは同じように戦ったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキがデンジを守った理由は、
+        仲間として大切に思ったからでしょうか。
+        それとも、銃の悪魔を倒すために必要だったからでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        現実的な目的があって人を助けた場合でも、
+        その行動を友情や信頼の表現이라고 볼 수 있습니까。
+      </li>
+
+      <li class="follow-up-item">
+        デンジは本当に恐怖を感じていなかったと思いますか。
+        それとも、恐怖を別の感情に変えていたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        危険な生活を長く経験すると、
+        普通の人より強くなると思いますか。
+        それとも危険への感覚が弱くなると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        恐怖を感じにくいことは、
+        常に長所になるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジの「相手の血を飲みながら戦い続ける」という方法は、
+        頭の良い作戦だと思いますか。
+        それとも結果的に成功しただけでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        良い作戦かどうかを判断するとき、
+        方法の安全性と最終的な結果の
+        どちらをより重視しますか。
+      </li>
+
+      <li class="follow-up-item">
+        成功する可能性が低くても、
+        ほかに方法がない場合は
+        危険な挑戦をするべきでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたが同じチームのメンバーだったら、
+        デンジの作戦を止めますか。
+        それとも任せますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジが笑いながら戦っていたことを、
+        どのように受け止めましたか。
+      </li>
+
+      <li class="follow-up-item">
+        非常に苦しい状況で冗談を言ったり笑ったりする人は、
+        本当に余裕があるのでしょうか。
+        それとも不安を隠しているのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたは困難な状況で、
+        真剣になるほうですか。
+        それとも冗談や笑いによって緊張を減らすほうですか。
+      </li>
+
+      <li class="follow-up-item">
+        ホテルに閉じ込められたメンバーが
+        デンジを悪魔へ渡そうとしたことを理解できますか。
+      </li>
+
+      <li class="follow-up-item">
+        多くの人を救うために
+        一人を犠牲にする選択は許されると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        恐怖の中で行った行動にも、
+        평소와 같은 수준의 책임을 물어야 한다고 생각합니까。
+      </li>
+
+      <li class="follow-up-item">
+        コベニや荒井の反応は弱さでしょうか。
+        それとも普通の人間として自然な反応でしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        チームの全員が同じように冷静で論理的な人だったら、
+        より良い結果になったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        普段は扱いにくい人の独特な考え方が、
+        危機的な状況で役に立った経験はありますか。
+      </li>
+
+      <li class="follow-up-item">
+        チームでは、安定して計画を守る人と、
+        必要なときに常識を破れる人の
+        どちらがより重要だと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジのような人物と一緒に働くとしたら、
+        믿을 수 있는 동료라고 느낄까요。
+        それとも危険で管理しにくい人物だと感じるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        他の参加者の意見を聞いて、
+        デンジの勇気や無謀さに対する
+        自分の評価が変わりましたか。
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-block speaking-guide">
+    <h3 class="section-title">4．自分の考えを話してみましょう</h3>
+
+    <p class="section-description">
+      デンジの行動を勇気か無謀さのどちらか一方に決めず、
+      理解できる部分、危険だと思う部分、
+      自分ならどう行動するかまで説明してください。
+    </p>
+
+    <div class="level-grid">
+      <div class="level-card level-card--n3">
+        <div class="level-card-header">
+          <span>N3レベルの答え方</span>
+          <span class="level-label level-label--n3">N3</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、デンジは勇敢ですが、
+            少し無謀でもあると思います。
+          </p>
+
+          <p>
+            デンジが戦わなければ、
+            みんなはホテルから出られなかったかもしれません。
+          </p>
+
+          <p>
+            また、アキが自分を守ってくれたので、
+            デンジも仲間を助けようとしたのだと思います。
+          </p>
+
+          <p>
+            しかし、三日間も戦い続ける方法は
+            とても危険です。
+          </p>
+
+          <p>
+            私が同じ立場だったら、
+            一人で飛び込む前に
+            ほかの方法がないかもう少し考えたいです。
+          </p>
+
+          <p>
+            それでも、ほかに方法がなければ、
+            デンジのように挑戦する必要もあると思います。
+          </p>
+        </div>
+      </div>
+
+      <div class="level-card level-card--n2">
+        <div class="level-card-header">
+          <span>N2レベルの答え方</span>
+          <span class="level-label level-label--n2">N2</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、デンジの行動には
+            勇気と無謀さの両方が含まれていたと思います。
+          </p>
+
+          <p>
+            十分に安全性を検討したうえで
+            行動したわけではないため、
+            一般的な意味では慎重な作戦とは言えません。
+          </p>
+
+          <p>
+            その一方で、
+            悪魔の血を飲めば回復できるという
+            自分の特徴をすぐに理解し、
+            相手の苦痛を利用する作戦へ変えました。
+          </p>
+
+          <p>
+            そのため、完全に何も考えず
+            力任せに戦っていたとも言い切れません。
+          </p>
+
+          <p>
+            また、アキが自分を守って負傷したことも、
+            デンジが危険を引き受けるきっかけに
+            なったのではないでしょうか。
+          </p>
+
+          <p>
+            デンジは感謝や友情をはっきり言葉にしませんが、
+            自分の行動によって返そうとしたように見えます。
+          </p>
+
+          <p>
+            この場面の面白さは、
+            普段は社会性がなく未熟に見えるデンジの異常さが、
+            全員を救うために必要な能力へ変わったことだと思います。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">5．現実の関係へ広げて考える</h3>
+
+    <p class="section-description">
+      デンジたちの危機を、
+      現実の恐怖、チームでの役割、危険な決断、
+      独特な人物との協力へ置き換えて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          恐怖に慣れること
+        </h4>
+
+        <p>
+          難しい経験を何度もすると、
+          以前より落ち着いて対応できるようになる場合があります。
+        </p>
+
+        <p>
+          しかし、危険に慣れすぎると、
+          本来避けるべき危険まで
+          가볍게 판단하게 될 수 있습니다。
+        </p>
+
+        <div class="discussion-prompt">
+          恐怖に慣れることは成長でしょうか。
+          それとも、自分を守る感覚を失う危険もありますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          無謀さと実行力
+        </h4>
+
+        <p>
+          慎重に考えすぎれば、
+          行動する機会を失うことがあります。
+        </p>
+
+        <p>
+          反対に、すぐ行動すれば
+          問題を早く解決できる場合もありますが、
+          大きな失敗につながる可能性もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          実行力と無謀さを分ける基準は、
+          どこにあると思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          行動によって返す感謝
+        </h4>
+
+        <p>
+          感謝を言葉で伝えることが苦手でも、
+          必要なときに相手を助けることで
+          気持ちを表現する人がいます。
+        </p>
+
+        <p>
+          言葉と行動のどちらも重要ですが、
+          人によって表現の方法は異なります。
+        </p>
+
+        <div class="discussion-prompt">
+          感謝や信頼は、
+          言葉で伝えなければ相手に伝わらないでしょうか。
+          行動だけでも十分でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          チームの多様性
+        </h4>
+
+        <p>
+          チームには、計画を作る人、
+          人間関係を調整する人、
+          위험한 순간에 바로 움직이는 사람 등
+          여러 역할이 필요합니다。
+        </p>
+
+        <p>
+          普段は理解しにくい特徴も、
+          特定の状況では大きな強みになることがあります。
+        </p>
+
+        <div class="discussion-prompt">
+          自分とは考え方が大きく違う人と
+          協力するためには、何が必要でしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          多数のために一人を犠牲にすること
+        </h4>
+
+        <p>
+          危機的な状況では、
+          多くの人を救うために
+          一人へ大きな負担を求める意見が出ることがあります。
+        </p>
+
+        <p>
+          しかし、その一人の同意がなければ、
+          효율적인 선택이라는 이유만으로
+          희생을 강요하기는 어렵습니다。
+        </p>
+
+        <div class="discussion-prompt">
+          多くの人を救えるとしても、
+          本人の同意なしに一人を犠牲にすることは
+          許されるでしょうか。
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      이 토론의 목적은 덴지의 행동을 단순히 용감하거나 무모하다고 하나로 결론 내리는 것이 아닙니다.
+      위험에 익숙해진 사람의 강함과 위험성, 행동하면서 방법을 찾아내는 실행력,
+      아키에게 받은 도움을 행동으로 돌려주는 방식,
+      평소에는 문제처럼 보이는 특성이 위기 상황에서 팀의 강점이 되는 과정을 함께 비교하는 것이 핵심입니다.
+    </div>
+  </div>
+
+  <div class="language-notes">
+    <h3 class="section-title">6．文法・語彙解説</h3>
+
+    <div class="language-note-grid">
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～続けます</span>
+
+          <p class="grammar-explanation">
+            어떤 행동을 중단하지 않고 계속한다는 의미입니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは三日間、悪魔を攻撃し続けました。<br>
+            덴지는 사흘 동안 악마를 계속 공격했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～ようとします</span>
+
+          <p class="grammar-explanation">
+            어떤 행동을 시도하거나 하려고 노력하는 것을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            アキはデンジを守ろうとしました。<br>
+            아키는 덴지를 지키려고 했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～ても</span>
+
+          <p class="grammar-explanation">
+            특정한 조건이 있더라도 뒤의 행동이나 상태가 유지됨을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            何度傷ついても、デンジは戦うのをやめませんでした。<br>
+            몇 번을 다쳐도 덴지는 싸움을 멈추지 않았습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～ことに気づきます</span>
+
+          <p class="grammar-explanation">
+            이전에는 몰랐던 사실이나 방법을 새롭게 깨달을 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは悪魔の血で回復できることに気づきました。<br>
+            덴지는 악마의 피로 회복할 수 있다는 것을 깨달았습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～しかありません</span>
+
+          <p class="grammar-explanation">
+            선택할 수 있는 다른 방법이 거의 없고 그것만 남아 있음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            この状況では、戦うしかありませんでした。<br>
+            이 상황에서는 싸울 수밖에 없었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．耐える（たえる）</span>
+
+          <p class="grammar-explanation">
+            고통, 어려움, 압박 등을 참고 견딘다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            永遠の悪魔は痛みに耐えることができませんでした。<br>
+            영원의 악마는 고통을 견딜 수 없었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．飛び込む（とびこむ）</span>
+
+          <p class="grammar-explanation">
+            실제로 안으로 뛰어드는 의미와 함께, 위험한 상황에 적극적으로 들어간다는 의미로도 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは自分から悪魔の中へ飛び込みました。<br>
+            덴지는 스스로 악마 속으로 뛰어들었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．追い詰める（おいつめる）</span>
+
+          <p class="grammar-explanation">
+            상대를 도망가거나 버티기 어려운 상황까지 몰아붙인다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは永遠の悪魔を精神的にも追い詰めました。<br>
+            덴지는 영원의 악마를 정신적으로도 몰아붙였습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n2">N2</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～たからといって</span>
+
+          <p class="grammar-explanation">
+            특정한 사실 하나만으로 뒤의 판단을 반드시 내릴 수 없다는 의미입니다.
+          </p>
+
+          <p class="example-sentence">
+            危険を恐れないからといって、
+            必ず勇敢だとは限りません。<br>
+            위험을 두려워하지 않는다고 해서 반드시 용감한 것은 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～というより</span>
+
+          <p class="grammar-explanation">
+            앞의 표현보다 뒤의 표현이 자신의 생각을 더 정확히 나타낼 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは恐怖を乗り越えたというより、
+            危険に慣れすぎていたのかもしれません。<br>
+            덴지는 두려움을 극복했다기보다 위험에 너무 익숙해졌을지도 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～一方で</span>
+
+          <p class="grammar-explanation">
+            한 행동이나 성격에 포함된 서로 다른 두 측면을 비교할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジの行動は勇敢な一方で、
+            非常に危険でもありました。<br>
+            덴지의 행동은 용감한 한편 매우 위험하기도 했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～とは言い切れません</span>
+
+          <p class="grammar-explanation">
+            하나의 해석이나 판단만이 완전히 옳다고 단정하기 어려울 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            何も考えずに戦っていたとは言い切れません。<br>
+            아무 생각 없이 싸우고 있었다고 단정할 수는 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ざるを得ません</span>
+
+          <p class="grammar-explanation">
+            상황상 다른 방법이 없어 어쩔 수 없이 어떤 행동을 해야 할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            ほかに方法がなければ、
+            危険な作戦を選ばざるを得ません。<br>
+            다른 방법이 없다면 위험한 작전을 선택할 수밖에 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．～にほかなりません</span>
+
+          <p class="grammar-explanation">
+            어떤 결과의 본질적인 원인이 바로 그것이라고 강하게 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            全員が助かったのは、
+            デンジが危険を引き受けたからにほかなりません。<br>
+            모두가 살아난 것은 덴지가 위험을 떠맡았기 때문임에 틀림없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．無謀（むぼう）</span>
+
+          <p class="grammar-explanation">
+            성공 가능성이나 위험을 충분히 고려하지 않고 행동하는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            勇気と無謀を区別するのは簡単ではありません。<br>
+            용기와 무모함을 구별하는 것은 쉽지 않습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．機転を利かせる（きてんをきかせる）</span>
+
+          <p class="grammar-explanation">
+            예상하지 못한 상황에서 빠르게 상황을 판단하여 적절한 방법을 생각해 내는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは機転を利かせて、
+            悪魔の血を自分の回復に利用しました。<br>
+            덴지는 기지를 발휘해 악마의 피를 자신의 회복에 이용했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">9．常識にとらわれる（じょうしきにとらわれる）</span>
+
+          <p class="grammar-explanation">
+            일반적인 생각이나 기존의 방식에서 벗어나지 못하는 상태를 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            常識にとらわれていたら、
+            この作戦は思いつかなかったでしょう。<br>
+            상식에 사로잡혀 있었다면 이 작전은 떠올리지 못했을 것입니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">10．極限状態（きょくげんじょうたい）</span>
+
+          <p class="grammar-explanation">
+            정신적·육체적으로 버틸 수 있는 한계에 가까운 매우 심각한 상황을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            極限状態では、その人の本当の性格が現れることがあります。<br>
+            극한 상황에서는 그 사람의 진짜 성격이 드러나는 경우가 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">11．自然な会話表現</span>
+
+          <p class="grammar-explanation">
+            등장인물의 행동에 용기와 무모함이 함께 있다고 말하거나,
+            다른 참가자의 해석에 부분적으로 동의할 때 사용할 수 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            勇気はあると思いますが、かなり無謀でもあります。<br>
+            何も考えていないように見えて、実は状況を利用しています。<br>
+            恐怖を感じなかったというより、恐怖に慣れていたのかもしれません。<br>
+            その意見には賛成ですが、アキに対する感謝もあったと思います。<br>
+            普段は問題に見える性格が、この場面では強みになりました。
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="question-card" id="anime-question-6">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN 06</span>
+    <h2 class="question-title">
+      泣くアキと泣けないデンジは、悲しみ方が違うだけなのでしょうか。
+    </h2>
+  </header>
+
+  <div class="section-block">
+    <h3 class="section-title">1．場面紹介</h3>
+
+    <div class="situation">
+      <p>
+        サムライソードたちによる襲撃の後、
+        アキは病院のベッドで目を覚まします。
+      </p>
+
+      <p>
+        病室にはデンジとパワーがいました。
+      </p>
+
+      <p>
+        二人は漫画を読んだり、
+        お見舞いのリンゴを食べようとしたりしながら、
+        いつもと大きく変わらない様子で話しています。
+      </p>
+
+      <p>
+        アキは二人に、
+        公安の仲間たちがどうなったのかを確認します。
+      </p>
+
+      <p>
+        デンジは生き残った人について説明しますが、
+        姫野はもう戻ってこないという現実も
+        同時に明らかになります。
+      </p>
+
+      <p>
+        デンジとパワーが病室を出た後、
+        アキは一人になります。
+      </p>
+
+      <div class="message-box">
+        <p>
+          アキは姫野のことを思い出し、
+          病室で静かに涙を流します。
+        </p>
+      </div>
+
+      <p>
+        忘れ物を取りに戻ったデンジは、
+        アキが泣いている姿を目にします。
+      </p>
+
+      <p>
+        デンジは、
+        アキが多くの仲間を失ってきたことを考え、
+        アキが泣く理由を理解します。
+      </p>
+
+      <p>
+        しかし同時に、
+        自分はなぜ姫野を思い出しても
+        涙が出ないのか疑問を持ちます。
+      </p>
+
+      <p>
+        姫野はデンジに友達になろうと声をかけ、
+        デンジを助けたこともありました。
+      </p>
+
+      <p>
+        それでもデンジは、
+        姫野の死について
+        アキのようには悲しめない自分に気づきます。
+      </p>
+
+      <p>
+        さらにデンジは、
+        もしパワーやアキが死んだとしても、
+        自分は泣かないのではないかと考えます。
+      </p>
+
+      <p>
+        <strong>
+          涙が出ないデンジは、
+          本当に姫野を悲しんでいなかったのでしょうか。
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">2．鑑賞ポイント</h3>
+
+    <p class="section-description">
+      アキを感情が豊かな人、デンジを冷たい人と簡単に分けず、
+      二人の経験、関係の深さ、悲しみの表し方を
+      それぞれ分けて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          一人になってから泣いたアキ
+        </h4>
+
+        <p>
+          アキはデンジとパワーがいる間、
+          大きく感情を表に出しませんでした。
+        </p>
+
+        <p>
+          しかし、二人が病室を出て
+          一人になった後で涙を流します。
+        </p>
+
+        <p>
+          アキは人前で弱い姿を見せたくなかったのかもしれません。
+        </p>
+
+        <p>
+          また、誰かがそばにいる間は現実を受け止められず、
+          一人になって初めて感情が出てきたとも考えられます。
+        </p>
+
+        <div class="discussion-prompt">
+          悲しいときは誰かと一緒にいたいですか。
+          それとも、一人になってから感情を整理したいですか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          デンジに涙が出なかった理由
+        </h4>
+
+        <p>
+          デンジは姫野に対して
+          何の感情も持っていなかったわけではありません。
+        </p>
+
+        <p>
+          姫野が自分に親切だったことも、
+          友達になろうと言ってくれたことも覚えています。
+        </p>
+
+        <p>
+          しかし、デンジと姫野が一緒に過ごした時間は
+          それほど長くありませんでした。
+        </p>
+
+        <p>
+          デンジは悲しくないのではなく、
+          まだ姫野の死を自分の現実として
+          十分に感じられていなかった可能性もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          人との関係が短かった場合、
+          その人が亡くなっても強く悲しめないことは
+          冷たいことなのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          涙と悲しみは同じものか
+        </h4>
+
+        <p>
+          悲しいとすぐに泣く人もいれば、
+          涙が出なくても長い間その出来事を考える人もいます。
+        </p>
+
+        <p>
+          反対に、その場では泣いても、
+          比較的早く日常へ戻れる人もいます。
+        </p>
+
+        <p>
+          涙は感情を表す一つの方法ですが、
+          悲しみの大きさを正確に測るものとは限りません。
+        </p>
+
+        <div class="discussion-prompt">
+          泣いている人のほうが、
+          泣いていない人より深く悲しんでいると言えるでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          デンジが自分を疑ったこと
+        </h4>
+
+        <p>
+          デンジは涙が出ない自分を当然だとは考えず、
+          「自分は大切なものを失っているのではないか」と疑います。
+        </p>
+
+        <p>
+          パワーやアキが死んでも泣かないかもしれないと考え、
+          自分の心が以前とは変わってしまった可能性まで想像します。
+        </p>
+
+        <p>
+          しかし、自分の感情について疑問を持つこと自体が、
+          デンジに他人との関係を大切にしたい気持ちがあることを
+          示しているとも考えられます。
+        </p>
+
+        <div class="discussion-prompt">
+          「自分は冷たい人なのではないか」と悩む人は、
+          本当に冷たい人なのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          二人が過ごしてきた人生の違い
+        </h4>
+
+        <p>
+          アキは公安に入ってから、
+          姫野と長い時間をともに過ごしてきました。
+        </p>
+
+        <p>
+          一方、デンジは幼い頃から
+          生きるために危険な仕事を続け、
+          人との安定した関係をほとんど経験できませんでした。
+        </p>
+
+        <p>
+          二人の反応が違うのは、
+         性格だけではなく、
+          それまでに作ってきた関係や経験が違うためかもしれません。
+        </p>
+
+        <div class="discussion-prompt">
+          同じ出来事を経験しても、
+          それまでの人生によって感情の出方が変わると思いますか。
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h3 class="section-title">3．主要な質問</h3>
+
+    <p class="section-description">
+      アキとデンジのどちらが正しいかを決めるのではなく、
+      二人の悲しみ方の違いを考えながら、
+      自分や周りの人の感情表現へ話を広げてみましょう。
+    </p>
+
+    <ul class="follow-up-list">
+      <li class="follow-up-item">
+        この場面では、
+        アキとデンジのどちらにより共感しましたか。
+        その理由は何ですか。
+      </li>
+
+      <li class="follow-up-item">
+        アキはなぜ、
+        デンジとパワーがいる間には泣かず、
+        一人になってから泣いたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        アキは人前で泣くことを
+        弱さだと考えていたと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かと一緒にいるときより、
+        一人になった後で悲しみが強くなることがありますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジに涙が出なかった最大の理由は、
+        姫野との関係が短かったこと、
+        死をまだ実感できていなかったこと、
+        これまでの厳しい生活のうち、どれだと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジは姫野の死を悲しんでいなかったのでしょうか。
+        それとも、悲しみが涙とは違う形で現れていたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        涙が出なかったとしても、
+        亡くなった人について何度も考えるなら、
+        それも悲しみだと言えるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        泣くことは悲しみの深さを示すものだと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        人が泣いていないという理由だけで、
+        冷たい人だと判断してもよいでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        反対に、人前で大きく泣く人を見たとき、
+        感情が強すぎると感じることがありますか。
+      </li>
+
+      <li class="follow-up-item">
+        悲しいときに感情を表すことと、
+        普段どおりに行動することでは、
+        どちらが自分に合っていますか。
+      </li>
+
+      <li class="follow-up-item">
+        自分の感情が周りの人と違ったために、
+        「自分はおかしいのではないか」と
+        心配した経験はありますか。
+      </li>
+
+      <li class="follow-up-item">
+        周りの人が強く悲しんでいるとき、
+        自分も同じように悲しみを表現するべきだと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        自分はそれほど悲しくなくても、
+        悲しんでいる人のそばにいるためには
+        どのように行動すればよいでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        悲しんでいる人に言葉をかけることと、
+        何も言わずにそばにいることでは、
+        どちらがより助けになると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキはデンジとパワーの前で
+        涙を見せてもよかったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジはアキが泣いていることに気づいた後、
+        声をかけずにその場を離れたほうがよかったのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        誰かが一人で泣いている場面を見た場合、
+        あなたなら声をかけますか。
+        それとも見なかったことにしますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジはポチタを失ったときには悲しみました。
+        姫野の死には同じ反応をしなかった違いを、
+        どのように考えますか。
+      </li>
+
+      <li class="follow-up-item">
+        一緒に過ごした時間の長さと、
+        関係の深さは必ず一致すると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        長く知っている人よりも、
+        短い時間で強く心に残る人がいると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジが「アキやパワーが死んでも泣かないかもしれない」と
+        考えたことをどう受け止めましたか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジはまだアキとパワーを
+        大切な仲間だと完全には認識していなかったのでしょうか。
+        それとも、すでに大切だからこそ考えたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        人との関係は、
+        相手を失いそうになったときに初めて
+        自分にとっての大切さが分かることがありますか。
+      </li>
+
+      <li class="follow-up-item">
+        悲しい出来事が起きた後でも、
+        食事をしたり漫画を読んだり笑ったりすることは
+        不自然だと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        大きな悲しみの後に日常生活を続けることには、
+        どのような意味があると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        他の参加者の意見を聞いて、
+        涙が出ないデンジや
+        一人で泣くアキに対する見方が変わりましたか。
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-block speaking-guide">
+    <h3 class="section-title">4．自分の考えを話してみましょう</h3>
+
+    <p class="section-description">
+      涙の有無だけで登場人物の感情を判断せず、
+      なぜ二人の反応が違ったのか、
+      自分ならどのように感情を表すかまで説明してください。
+    </p>
+
+    <div class="level-grid">
+      <div class="level-card level-card--n3">
+        <div class="level-card-header">
+          <span>N3レベルの答え方</span>
+          <span class="level-label level-label--n3">N3</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私はアキに共感しました。
+          </p>
+
+          <p>
+            アキは姫野と長い間一緒に働いていたので、
+            姫野を失った悲しみがとても大きかったと思います。
+          </p>
+
+          <p>
+            しかし、デンジが泣かなかったからといって、
+            冷たい人だとは思いません。
+          </p>
+
+          <p>
+            デンジは姫野と過ごした時間が短く、
+            まだ死を実感できなかったのかもしれません。
+          </p>
+
+          <p>
+            また、人によって悲しみの表し方は違います。
+          </p>
+
+          <p>
+            泣く人もいれば、
+            一人で静かに考える人もいると思います。
+          </p>
+
+          <p>
+            大切なのは、
+            涙が出るかどうかではなく、
+            その人が何を感じているかだと思います。
+          </p>
+        </div>
+      </div>
+
+      <div class="level-card level-card--n2">
+        <div class="level-card-header">
+          <span>N2レベルの答え方</span>
+          <span class="level-label level-label--n2">N2</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、アキとデンジのどちらも
+            それぞれの方法で姫野の死を受け止めようとしていたと思います。
+          </p>
+
+          <p>
+            アキは姫野と長い時間をともに過ごし、
+            多くの危険な経験を共有してきました。
+          </p>
+
+          <p>
+            そのため、姫野を失ったことは
+            同僚を一人失ったというだけでなく、
+            自分の日常の一部を失ったことに近かったのでしょう。
+          </p>
+
+          <p>
+            一方、デンジは姫野から親切にされていましたが、
+            二人の関係は始まったばかりでした。
+          </p>
+
+          <p>
+            涙が出なかったのは、
+            姫野を大切に思っていなかったからではなく、
+            まだ喪失を自分の現実として
+            感じられなかったからかもしれません。
+          </p>
+
+          <p>
+            また、デンジが自分の感情について疑問を持ったこと自体、
+            人との関係をどう受け止めればよいか
+            真剣に考え始めた証拠にも見えます。
+          </p>
+
+          <p>
+            この場面は、
+            泣く人のほうが優しく、
+            泣かない人のほうが冷たいという
+            単純な区別ができないことを示しているように感じました。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">5．現実の関係へ広げて考える</h3>
+
+    <p class="section-description">
+      アキとデンジの反応を、
+      現実の悲しみ、感情表現、人への配慮、
+      日常へ戻ることの意味へ広げて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          人によって違う悲しみ方
+        </h4>
+
+        <p>
+          悲しいとすぐに涙を流す人もいれば、
+          その場では普段どおりに行動する人もいます。
+        </p>
+
+        <p>
+          数日後や数か月後に、
+          突然悲しみを強く感じる場合もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          周りの人と悲しみ方が違っていても、
+          自分の感情をそのまま受け入れられますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          感情を見せない人への判断
+        </h4>
+
+        <p>
+          表情や言葉に感情を出さない人は、
+          冷静で強い人に見えることがあります。
+        </p>
+
+        <p>
+          しかし、外から見えないところで
+          深く考えている場合もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          相手の感情が見えないとき、
+          どのように理解しようとすればよいでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          悲しんでいる人との距離
+        </h4>
+
+        <p>
+          悲しんでいる人に積極的に話しかけることが
+          助けになる場合があります。
+        </p>
+
+        <p>
+          一方で、一人で静かに考える時間を
+          必要としている人もいます。
+        </p>
+
+        <div class="discussion-prompt">
+          相手が何を望んでいるか分からないとき、
+          どのように声をかけるのがよいと思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          日常を続けること
+        </h4>
+
+        <p>
+          悲しい出来事が起きても、
+          食事、仕事、学校、家事などの
+          日常生活は続いていきます。
+        </p>
+
+        <p>
+          普段どおりに行動することは、
+          忘れようとしているのではなく、
+          生活を守るために必要な場合もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          悲しいときにも普段どおり生活することは、
+          強さでしょうか。
+          それとも無理をしている場合もありますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          関係の深さを知る瞬間
+        </h4>
+
+        <p>
+          普段は意識していなくても、
+          相手がいなくなったり離れたりした後で、
+          その人が自分の日常に大きな存在だったと
+          気づくことがあります。
+        </p>
+
+        <p>
+          関係の大切さは、
+          一緒にいる時間だけでは判断できないこともあります。
+        </p>
+
+        <div class="discussion-prompt">
+          誰かがいなくなってから、
+          その人の大切さに気づいた経験はありますか。
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      이 토론의 목적은 아키가 더 인간적이고 덴지가 더 차갑다고 결론 내리는 것이 아닙니다.
+      눈물은 슬픔을 표현하는 여러 방식 중 하나일 뿐이며,
+      관계의 깊이, 함께한 시간, 살아온 경험에 따라 같은 사건에도 반응이 달라질 수 있습니다.
+      참가자들이 서로 다른 감정 표현을 쉽게 판단하지 않고 이해하는 방향으로 대화를 확장하는 것이 핵심입니다.
+    </div>
+  </div>
+
+  <div class="language-notes">
+    <h3 class="section-title">6．文法・語彙解説</h3>
+
+    <div class="language-note-grid">
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～からといって</span>
+
+          <p class="grammar-explanation">
+            어떤 사실 하나만으로 뒤의 내용을 바로 판단할 수 없다고 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            泣かなかったからといって、
+            悲しくなかったとは言えません。<br>
+            울지 않았다고 해서 슬프지 않았다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～のかもしれません</span>
+
+          <p class="grammar-explanation">
+            등장인물의 확실하지 않은 감정이나 행동 이유를 추측할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジはまだ姫野の死を実感できなかったのかもしれません。<br>
+            덴지는 아직 히메노의 죽음을 실감하지 못했을지도 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～ように見えます</span>
+
+          <p class="grammar-explanation">
+            표정이나 행동을 보고 자신의 해석을 단정하지 않고 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは一人で悲しみに耐えているように見えました。<br>
+            아키는 혼자 슬픔을 견디고 있는 것처럼 보였습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～わけではありません</span>
+
+          <p class="grammar-explanation">
+            어떤 내용을 완전히 부정하지 않고 의미를 제한하여 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは姫野に何も感じていなかったわけではありません。<br>
+            덴지는 히메노에게 아무 감정도 느끼지 않았던 것은 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～によって違います</span>
+
+          <p class="grammar-explanation">
+            사람이나 조건에 따라 결과나 방식이 달라진다고 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            悲しみの表し方は、人によって違います。<br>
+            슬픔을 표현하는 방식은 사람에 따라 다릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．涙を流す（なみだをながす）</span>
+
+          <p class="grammar-explanation">
+            눈물을 흘린다는 뜻으로, 단순히 「泣く」보다 장면을 묘사할 때 자주 사용됩니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは病室で静かに涙を流しました。<br>
+            아키는 병실에서 조용히 눈물을 흘렸습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．受け止める（うけとめる）</span>
+
+          <p class="grammar-explanation">
+            사건, 감정, 상대의 말 등을 피하지 않고 받아들이고 생각한다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは姫野を失った現実を受け止めようとしています。<br>
+            아키는 히메노를 잃은 현실을 받아들이려고 하고 있습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．実感する（じっかんする）</span>
+
+          <p class="grammar-explanation">
+            어떤 사실을 머리로 아는 것뿐 아니라 실제 감정으로 느끼는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは姫野の死をまだ実感できていなかったのかもしれません。<br>
+            덴지는 히메노의 죽음을 아직 실감하지 못했을지도 모릅니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n2">N2</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～とは限りません</span>
+
+          <p class="grammar-explanation">
+            일반적으로 그렇게 보이더라도 반드시 그렇다고는 할 수 없을 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            涙を流す人のほうが、
+            深く悲しんでいるとは限りません。<br>
+            눈물을 흘리는 사람이 더 깊이 슬퍼한다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～というより</span>
+
+          <p class="grammar-explanation">
+            앞의 설명보다 뒤의 설명이 자신의 해석에 더 가깝다고 수정할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            悲しくなかったというより、
+            まだ現実として感じられなかったのだと思います。<br>
+            슬프지 않았다기보다 아직 현실로 느끼지 못했던 것이라고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～一方で</span>
+
+          <p class="grammar-explanation">
+            서로 다른 두 사람의 반응이나 한 상황의 두 측면을 비교할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは涙を流した一方で、
+            デンジは自分の感情について静かに考えていました。<br>
+            아키는 눈물을 흘린 한편,
+            덴지는 자신의 감정에 대해 조용히 생각하고 있었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～からこそ</span>
+
+          <p class="grammar-explanation">
+            바로 그 이유 때문에 특정한 행동이나 감정이 생겼음을 강조할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは人との関係を大切にしたいからこそ、
+            泣けない自分を疑ったのかもしれません。<br>
+            덴지는 사람과의 관계를 소중히 여기고 싶었기 때문에
+            울지 못하는 자신을 의심했을지도 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ずにはいられません</span>
+
+          <p class="grammar-explanation">
+            강한 감정 때문에 특정한 행동이나 생각을 하지 않을 수 없을 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野のことを考えると、
+            アキは涙を流さずにはいられませんでした。<br>
+            히메노를 생각하면 아키는 눈물을 흘리지 않을 수 없었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．～にすぎません</span>
+
+          <p class="grammar-explanation">
+            어떤 것이 전체가 아니라 하나의 요소나 방법에 불과하다고 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            涙は悲しみを表す一つの方法にすぎません。<br>
+            눈물은 슬픔을 표현하는 하나의 방법에 불과합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．喪失感（そうしつかん）</span>
+
+          <p class="grammar-explanation">
+            소중한 사람이나 대상을 잃은 뒤 느끼는 빈자리와 허전함을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは姫野を失った強い喪失感を抱えていました。<br>
+            아키는 히메노를 잃은 강한 상실감을 안고 있었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．感情を表に出す（かんじょうをおもてにだす）</span>
+
+          <p class="grammar-explanation">
+            마음속의 기쁨, 슬픔, 분노 등을 표정이나 말로 외부에 드러낸다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは人前では感情を表に出しませんでした。<br>
+            아키는 사람들 앞에서는 감정을 겉으로 드러내지 않았습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">9．気丈に振る舞う（きじょうにふるまう）</span>
+
+          <p class="grammar-explanation">
+            힘들거나 슬픈 상황에서도 약한 모습을 보이지 않고 씩씩하게 행동한다는 뜻입니다.
+          </p>
+
+          <p class="example-sentence">
+            アキはデンジたちの前では気丈に振る舞っていました。<br>
+            아키는 덴지 일행 앞에서는 씩씩하게 행동하고 있었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">10．心の整理がつく（こころのせいりがつく）</span>
+
+          <p class="grammar-explanation">
+            복잡한 감정이나 힘든 사건을 어느 정도 받아들일 수 있게 된다는 표현입니다.
+          </p>
+
+          <p class="example-sentence">
+            大切な人を失った後、
+            すぐに心の整理がつくわけではありません。<br>
+            소중한 사람을 잃은 뒤 바로 마음이 정리되는 것은 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">11．自然な会話表現</span>
+
+          <p class="grammar-explanation">
+            눈물이나 겉으로 보이는 반응만으로 인물의 감정을 단정하지 않고,
+            다른 참가자의 경험과 해석을 존중하며 말할 때 사용할 수 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            泣かなかったからといって、冷たいとは言えないと思います。<br>
+            悲しみの表し方は、人によってかなり違うのではないでしょうか。<br>
+            デンジは悲しくないというより、まだ実感できていなかったのかもしれません。<br>
+            私はアキに共感しますが、デンジの反応も理解できます。<br>
+            その意見を聞いて、涙と悲しみは同じではないと感じました。
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="question-card" id="anime-question-8">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN 08</span>
+    <h2 class="question-title">
+      デンジとアキの「大会」は、復讐だったのでしょうか。それとも二人なりの弔いだったのでしょうか。
+    </h2>
+  </header>
+
+  <div class="section-block">
+    <h3 class="section-title">1．場面紹介</h3>
+
+    <div class="situation">
+      <p>
+        デンジとアキたちは、
+        多くの公安職員を襲ったサムライソードたちの
+        拠点へ向かいます。
+      </p>
+
+      <p>
+        デンジはサムライソードと激しく戦い、
+        最後には相手の体を切断して勝利します。
+      </p>
+
+      <p>
+        サムライソードはすぐには死なず、
+        公安に逮捕されるまで
+        動けない状態で拘束されます。
+      </p>
+
+      <p>
+        デンジはサムライソードが、
+        姫野を含む多くの公安職員が命を失った襲撃に
+        関わっていたことを忘れていませんでした。
+      </p>
+
+      <p>
+        しかし、デンジはサムライソードを
+        その場で殺そうとはしません。
+      </p>
+
+      <p>
+        その代わりに、
+        サムライソードの股間を交互に蹴り、
+        より大きな悲鳴を出させたほうが勝つという
+        奇妙な競争をアキに提案します。
+      </p>
+
+      <div class="message-box">
+        <p>
+          デンジは、この行動を
+          姫野のための弔いとして行おうとします。
+        </p>
+
+        <p>
+          最初はためらっていたアキも、
+          最終的にはデンジの提案を受け入れます。
+        </p>
+      </div>
+
+      <p>
+        二人は交代しながら
+        サムライソードを何度も蹴ります。
+      </p>
+
+      <p>
+        それまでアキは、
+        姫野を失った悲しみを
+        一人で静かに抱えていました。
+      </p>
+
+      <p>
+        一方、デンジは姫野の死に対して
+        アキと同じように涙を流すことができませんでした。
+      </p>
+
+      <p>
+        二人は悲しみ方も性格も大きく違いますが、
+        この奇妙な行動を通じて、
+        初めて同じ感情を共有しているようにも見えます。
+      </p>
+
+      <p>
+        <strong>
+          この場面で二人が共有していたのは、
+          復讐の喜び、姫野への悲しみ、
+          仲間としての信頼のうち、どれだったのでしょうか。
+        </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">2．鑑賞ポイント</h3>
+
+    <p class="section-description">
+      この場面を単なる笑える場面として見るのではなく、
+      復讐、弔い、悲しみへの向き合い方、
+      デンジとアキの関係の変化を分けて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          デンジなりの弔い
+        </h4>
+
+        <p>
+          デンジは姫野が亡くなったとき、
+          アキのように涙を流すことができませんでした。
+        </p>
+
+        <p>
+          しかし、姫野を完全に忘れていたわけではなく、
+          サムライソードを捕まえた後、
+          姫野のために何かをしようとします。
+        </p>
+
+        <p>
+          デンジは悲しみを言葉や涙で表す代わりに、
+          自分らしい行動によって
+          姫野のことを思い出そうとしたのかもしれません。
+        </p>
+
+        <div class="discussion-prompt">
+          涙を流さなくても、
+          亡くなった人のために行動することは
+          弔いになると思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          アキが提案を受け入れた理由
+        </h4>
+
+        <p>
+          普段のアキは真面目で、
+          規則や任務を重視する人物です。
+        </p>
+
+        <p>
+          拘束した相手に個人的な罰を与える行動は、
+          普段のアキなら拒否しそうにも見えます。
+        </p>
+
+        <p>
+          それでもアキは、
+          デンジの提案に参加しました。
+        </p>
+
+        <p>
+          姫野を失った怒りを表現したかったのか、
+          デンジの気持ちを受け入れたのか、
+          あるいは一人で悲しむことに疲れていたのかもしれません。
+        </p>
+
+        <div class="discussion-prompt">
+          アキは復讐したかったのでしょうか。
+          それとも、デンジと悲しみを共有したかったのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          復讐と正当な処罰の違い
+        </h4>
+
+        <p>
+          サムライソードは多くの人を襲い、
+          姫野が亡くなる原因にも関わっています。
+        </p>
+
+        <p>
+          そのため、何らかの罰を受けるべき人物であることは
+          多くの人が認めるでしょう。
+        </p>
+
+        <p>
+          しかし、法律や組織による処罰と、
+          被害を受けた人が個人的に苦痛を与えることは
+          同じではありません。
+        </p>
+
+        <div class="discussion-prompt">
+          悪いことをした相手なら、
+          被害者が個人的に仕返しをしてもよいのでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          暗い状況の中の笑い
+        </h4>
+
+        <p>
+          この場面は、
+          多くの人が亡くなった事件の後に描かれています。
+        </p>
+
+        <p>
+          それにもかかわらず、
+          デンジとアキの行動は
+          非常に幼稚で笑えるものとして表現されます。
+        </p>
+
+        <p>
+          深刻な悲しみの中に笑いが入ることで、
+          二人が少しだけ日常へ戻ったようにも見えます。
+        </p>
+
+        <div class="discussion-prompt">
+          悲しい出来事の後に笑うことは、
+          亡くなった人に失礼でしょうか。
+          それとも、生き続けるために必要なことでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          デンジとアキの関係の変化
+        </h4>
+
+        <p>
+          出会ったばかりの頃、
+          アキはデンジを信用しておらず、
+          デンジもアキに反発していました。
+        </p>
+
+        <p>
+          しかし、永遠の悪魔との戦いや
+          公安への襲撃を経験する中で、
+          二人は少しずつ互いを仲間として見るようになります。
+        </p>
+
+        <p>
+          この場面では、
+          アキがデンジの幼稚な提案に合わせることで、
+          二人の距離が縮まったように見えます。
+        </p>
+
+        <div class="discussion-prompt">
+          本当に親しい関係とは、
+          真面目な会話ができる関係でしょうか。
+          それとも、くだらないことを一緒にできる関係でしょうか。
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h3 class="section-title">3．主要な質問</h3>
+
+    <p class="section-description">
+      二人の行動を面白いか不快かだけで判断せず、
+      復讐、悲しみ、仲間意識、暗いユーモアについて
+      自分の経験や価値観へ話を広げてみましょう。
+    </p>
+
+    <ul class="follow-up-list">
+      <li class="follow-up-item">
+        この場面を初めて見たとき、
+        面白い、痛快、残酷、悲しいのうち
+        どの感情を最も強く感じましたか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジがこの競争を提案した最大の理由は、
+        姫野のため、アキを元気にするため、
+        自分が楽しむためのうちどれだったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジは姫野の死を
+        自分なりに悲しんでいたと言えるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        以前は泣けない自分を心配していたデンジが、
+        このような方法で姫野を思い出したことを
+        どのように受け止めましたか。
+      </li>
+
+      <li class="follow-up-item">
+        弔いには決まった方法があると思いますか。
+        それとも、本人たちが意味を感じるなら
+        どのような方法でもよいでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        亡くなった人が姫野だったからこそ、
+        このような明るく奇妙な弔いが
+        似合っていたと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        姫野本人がこの場面を見たら、
+        喜んだと思いますか。
+        怒ったと思いますか。
+        それとも笑ったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキは最初、
+        デンジの提案を幼稚だと感じたでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        真面目なアキが最終的に参加した理由を、
+        どのように解釈しましたか。
+      </li>
+
+      <li class="follow-up-item">
+        アキはサムライソードへの怒りを
+        それまで我慢していたのでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        アキにとってこの行動は、
+        悲しみを整理する助けになったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        デンジはアキに
+        「悲しいなら泣くべきだ」とは言いませんでした。
+        代わりに一緒に行動する方法を提案しました。
+        この支え方をどう思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        悲しんでいる人を支えるとき、
+        深刻な話をすることと
+        一緒にくだらないことをすることでは、
+        どちらが効果的だと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        相手が深く悲しんでいるときに
+        冗談を言うことは危険でしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        どのような関係なら、
+        悲しい状況でも冗談を言うことが許されると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        深刻な出来事の後に笑うことへ、
+        罪悪感を持った経験がありますか。
+      </li>
+
+      <li class="follow-up-item">
+        悲しみを十分に表現する前に笑うことは、
+        感情から逃げていることになるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        反対に、悲しい状態を長く維持しなければならないという
+        周囲の期待も負担になると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        サムライソードは重い罪を犯しています。
+        そのため、二人の仕返しも許されると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        悪いことをした人に苦痛を与えると、
+        被害を受けた人の気持ちは本当に軽くなるでしょうか。
+      </li>
+
+      <li class="follow-up-item">
+        仕返しによって一時的に気分が良くなっても、
+        問題の根本的な解決にはならない場合があります。
+        それでも仕返しには意味があると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        正式な処罰だけでは感情が整理できない被害者に、
+        個人的な復讐を求める気持ちが生まれることを
+        理解できますか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたが公安の同僚だったら、
+        デンジとアキの行動を止めますか。
+        それとも短い時間なら見なかったことにしますか。
+      </li>
+
+      <li class="follow-up-item">
+        規則を破ることが、
+        仲間の感情を守るために必要になる場合がありますか。
+      </li>
+
+      <li class="follow-up-item">
+        アキとデンジはこの場面によって、
+        本当の仲間になったと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        二人の関係が変わった最も大きな瞬間は、
+        この場面、永遠の悪魔との戦い、
+        姫野の死のうちどれだと思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        性格が全く違う人同士でも,
+        共通の経験があれば強い仲間になれると思いますか。
+      </li>
+
+      <li class="follow-up-item">
+        あなたには、
+        最初は合わないと思っていた人と
+        何かを一緒に経験して親しくなったことがありますか。
+      </li>
+
+      <li class="follow-up-item">
+        友達や同僚と親しくなったと感じるのは、
+        真剣な悩みを話したときですか。
+        それとも一緒にくだらないことで笑ったときですか。
+      </li>
+
+      <li class="follow-up-item">
+        他の参加者の意見を聞いて、
+        二人の行動を復讐、弔い、友情のうち
+        どのように見るか変わりましたか。
+      </li>
+    </ul>
+  </div>
+
+  <div class="section-block speaking-guide">
+    <h3 class="section-title">4．自分の考えを話してみましょう</h3>
+
+    <p class="section-description">
+      二人の行動に賛成か反対かだけでなく、
+      理解できる部分、問題だと思う部分、
+      姫野への弔いとしてどのような意味があったかを説明してください。
+    </p>
+
+    <div class="level-grid">
+      <div class="level-card level-card--n3">
+        <div class="level-card-header">
+          <span>N3レベルの答え方</span>
+          <span class="level-label level-label--n3">N3</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、この場面は復讐でもあり、
+            二人なりの弔いでもあったと思います。
+          </p>
+
+          <p>
+            サムライソードは多くの公安職員を襲い、
+            姫野が亡くなる原因にも関わっていました。
+          </p>
+
+          <p>
+            ですから、
+            デンジとアキが怒る気持ちは理解できます。
+          </p>
+
+          <p>
+            しかし、動けない相手を何度も蹴ることが
+            正しい行動だとは思いません。
+          </p>
+
+          <p>
+            それでも、この行動によって
+            アキが少し元気になったように見えました。
+          </p>
+
+          <p>
+            デンジは悲しみについて
+            上手に話すことができません。
+          </p>
+
+          <p>
+            そのため、自分らしい方法で
+            アキと悲しみを共有しようとしたのだと思います。
+          </p>
+
+          <p>
+            私はこの場面で、
+            二人が本当の仲間になったように感じました。
+          </p>
+        </div>
+      </div>
+
+      <div class="level-card level-card--n2">
+        <div class="level-card-header">
+          <span>N2レベルの答え方</span>
+          <span class="level-label level-label--n2">N2</span>
+        </div>
+
+        <div class="level-card-body">
+          <p>
+            私は、この場面を単純な復讐の成功としてではなく、
+            デンジとアキが初めて悲しみを共有した場面として見ました。
+          </p>
+
+          <p>
+            デンジは姫野の死に対して
+            アキのように涙を流すことができず、
+            自分の感情が普通ではないのではないかと悩んでいました。
+          </p>
+
+          <p>
+            しかし、涙が出なかったからといって、
+            姫野の存在を忘れていたわけではありません。
+          </p>
+
+          <p>
+            デンジは言葉で慰める代わりに、
+            自分なりのくだらない方法を通じて
+            アキを悲しみの中から少しだけ外へ連れ出そうとしたのだと思います。
+          </p>
+
+          <p>
+            一方、真面目なアキが提案を受け入れたことからも、
+            一人で悲しみに耐えるだけではなく、
+            誰かと感情を共有する必要を感じていたことが分かります。
+          </p>
+
+          <p>
+            もちろん、拘束された相手へ個人的に苦痛を与える行為を
+            正当化することはできません。
+          </p>
+
+          <p>
+            それでも作品の中では、
+            道徳的に正しい行動としてというより、
+            不完全な二人が不完全な方法で
+            仲間の死を受け止めようとした場面として描かれているように感じました。
+          </p>
+
+          <p>
+            深刻な悲しみの中でも一緒に笑えるようになったことが、
+            二人の関係が変わった証拠なのではないでしょうか。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">5．現実の関係へ広げて考える</h3>
+
+    <p class="section-description">
+      二人の場面を、現実の復讐心、悲しみの共有、
+      暗い状況での笑い、友達や同僚との距離へ広げて考えてみましょう。
+    </p>
+
+    <div class="mbti-grid">
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          悲しいときの冗談
+        </h4>
+
+        <p>
+          悲しいときに冗談を言うと、
+          緊張が少し弱くなることがあります。
+        </p>
+
+        <p>
+          一方で、相手の気持ちやタイミングを考えなければ、
+          悲しみを軽く扱っているように見えることもあります。
+        </p>
+
+        <div class="discussion-prompt">
+          悲しんでいる人に冗談を言ってもよいかどうかは、
+          何を基準に判断すればよいでしょうか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          言葉以外の慰め方
+        </h4>
+
+        <p>
+          慰める言葉が見つからなくても、
+          一緒に食事をしたり散歩をしたり、
+          普段どおりの時間を過ごすことで
+          相手を支えられる場合があります。
+        </p>
+
+        <p>
+          相手によっては、
+          深刻な会話よりも普通の時間を必要とすることもあります。
+        </p>
+
+        <div class="discussion-prompt">
+          あなたが落ち込んでいるとき、
+          言葉による慰めと普段どおりの時間では、
+          どちらを望みますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          仕返しによる満足
+        </h4>
+
+        <p>
+          自分を傷つけた相手が罰を受けると、
+          一時的に気持ちが軽くなることがあります。
+        </p>
+
+        <p>
+          しかし、仕返しをしても、
+          失ったものや受けた傷が元に戻るとは限りません。
+        </p>
+
+        <div class="discussion-prompt">
+          仕返しによって得られる満足には、
+          どのような意味と限界があると思いますか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          関係が深まる瞬間
+        </h4>
+
+        <p>
+          人間関係は、長い会話だけでなく、
+          共通の問題を乗り越えたり、
+          同じことで笑ったりする中でも深くなります。
+        </p>
+
+        <p>
+          性格が違う人同士でも、
+          共有した経験が強い信頼を作ることがあります。
+        </p>
+
+        <div class="discussion-prompt">
+          あなたが誰かと本当に親しくなったと感じたのは、
+          どのような瞬間でしたか。
+        </div>
+      </article>
+
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          正しさと感情の間
+        </h4>
+
+        <p>
+          感情的には仕返しをしたくても、
+          社会の規則や自分の価値観によって
+          行動を止める必要があります。
+        </p>
+
+        <p>
+          一方で、怒りを全く表現せずに抑え続けると、
+          心の中に長く残る場合もあります。
+        </p>
+
+        <div class="discussion-prompt">
+          相手を傷つけずに怒りや復讐心を表現するには、
+          どのような方法があるでしょうか。
+        </div>
+      </article>
+    </div>
+
+    <div class="notice-box">
+      이 토론의 목적은 덴지와 아키가 움직이지 못하는 상대를 공격한 행동을 정당화하는 것이 아닙니다.
+      복수하고 싶은 감정과 실제 행동의 차이, 슬픔을 눈물이나 진지한 대화로만 표현해야 하는지,
+      어두운 상황에서도 함께 웃는 것이 애도와 회복에 어떤 역할을 하는지 살펴보는 것이 핵심입니다.
+      또한 성격이 전혀 다른 두 사람이 불완전한 방식으로 서로를 위로하며 동료가 되어가는 과정을 함께 이야기합니다.
+    </div>
+  </div>
+
+  <div class="language-notes">
+    <h3 class="section-title">6．文法・語彙解説</h3>
+
+    <div class="language-note-grid">
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～ために</span>
+
+          <p class="grammar-explanation">
+            특정한 목적을 위해 어떤 행동을 한다고 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは姫野を弔うために、
+            アキへ奇妙な大会を提案しました。<br>
+            덴지는 히메노를 추모하기 위해 아키에게 기묘한 대회를 제안했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～ことにします</span>
+
+          <p class="grammar-explanation">
+            여러 가능성 중에서 자신이 어떤 행동을 하기로 결정할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキはデンジの提案に参加することにしました。<br>
+            아키는 덴지의 제안에 참여하기로 했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～ながら</span>
+
+          <p class="grammar-explanation">
+            두 가지 행동이나 상태가 동시에 이어질 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            二人は笑いながら、サムライソードを蹴りました。<br>
+            두 사람은 웃으면서 사무라이 소드를 찼습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～からといって</span>
+
+          <p class="grammar-explanation">
+            어떤 이유가 있다고 해서 뒤의 행동이 반드시 허용되는 것은 아니라고 말할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            相手が悪い人だからといって、
+            何をしてもよいとは言えません。<br>
+            상대가 나쁜 사람이라고 해서 무엇을 해도 된다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ように見えます</span>
+
+          <p class="grammar-explanation">
+            인물의 표정이나 행동을 바탕으로 자신의 해석을 부드럽게 제시할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキは少しだけ元気を取り戻したように見えます。<br>
+            아키는 조금이나마 기운을 되찾은 것처럼 보입니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．弔う（とむらう）</span>
+
+          <p class="grammar-explanation">
+            세상을 떠난 사람을 기억하고 슬퍼하며 그 죽음을 기리는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            二人は自分たちなりの方法で姫野を弔いました。<br>
+            두 사람은 자신들만의 방식으로 히메노를 추모했습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．仕返しをする（しかえしをする）</span>
+
+          <p class="grammar-explanation">
+            자신에게 피해를 준 사람에게 비슷한 행동으로 되갚는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            仕返しをしても、悲しみが消えるとは限りません。<br>
+            앙갚음을 해도 슬픔이 사라진다고는 할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．元気を取り戻す（げんきをとりもどす）</span>
+
+          <p class="grammar-explanation">
+            힘들거나 우울했던 상태에서 다시 활기나 기운을 회복하는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジと一緒に行動して、
+            アキは少し元気を取り戻しました。<br>
+            덴지와 함께 행동하면서 아키는 조금 기운을 되찾았습니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n2">N2</span>
+          文法・表現
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">1．～というより</span>
+
+          <p class="grammar-explanation">
+            앞의 표현보다 뒤의 표현이 자신의 해석에 더 정확하다고 수정할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            復讐というより、
+            二人なりの弔いだったように感じました。<br>
+            복수라기보다 두 사람만의 추모였던 것처럼 느꼈습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">2．～わけではありません</span>
+
+          <p class="grammar-explanation">
+            어떤 내용을 전부 부정하지 않고, 의미를 제한하거나 오해를 정정할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            デンジは涙を流さなかったからといって、
+            姫野を忘れていたわけではありません。<br>
+            덴지는 눈물을 흘리지 않았다고 해서 히메노를 잊고 있던 것은 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">3．～一方で</span>
+
+          <p class="grammar-explanation">
+            한 행동이나 장면에 포함된 서로 다른 두 측면을 함께 설명할 때 사용합니다.
+          </p>
+
+          <p class="example-sentence">
+            この場面は残酷な一方で、
+            二人の友情を感じさせる場面でもあります。<br>
+            이 장면은 잔혹한 한편 두 사람의 우정을 느끼게 하는 장면이기도 합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">4．～たところで</span>
+
+          <p class="grammar-explanation">
+            어떤 행동을 해도 원하는 결과가 생기지 않거나 상황이 달라지지 않음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            仕返しをしたところで、
+            姫野が戻ってくるわけではありません。<br>
+            복수한다고 해도 히메노가 돌아오는 것은 아닙니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">5．～ずにはいられません</span>
+
+          <p class="grammar-explanation">
+            강한 감정 때문에 어떤 행동을 하지 않을 수 없음을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            姫野のことを考えると、
+            アキは怒りを感じずにはいられなかったのでしょう。<br>
+            히메노를 생각하면 아키는 분노를 느끼지 않을 수 없었을 것입니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">6．～なりの</span>
+
+          <p class="grammar-explanation">
+            일반적인 방식은 아니더라도 그 사람이나 집단에 맞는 고유한 방식임을 나타냅니다.
+          </p>
+
+          <p class="example-sentence">
+            これはデンジなりの慰め方だったのだと思います。<br>
+            이것은 덴지만의 위로 방식이었다고 생각합니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">7．不謹慎（ふきんしん）</span>
+
+          <p class="grammar-explanation">
+            심각하거나 슬픈 상황에서 적절하지 않은 말이나 행동을 하는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            悲しい場面で笑うことを、
+            不謹慎だと感じる人もいるでしょう。<br>
+            슬픈 장면에서 웃는 것을 부적절하다고 느끼는 사람도 있을 것입니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">8．気を紛らわせる（きをまぎらわせる）</span>
+
+          <p class="grammar-explanation">
+            괴로운 감정이나 걱정에만 집중하지 않도록 다른 행동으로 주의를 돌리는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            二人はくだらない行動で、
+            一時的に悲しみから気を紛らわせました。<br>
+            두 사람은 시시한 행동으로 일시적으로 슬픔에서 주의를 돌렸습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">9．憂さを晴らす（うさをはらす）</span>
+
+          <p class="grammar-explanation">
+            쌓인 불만, 분노, 답답함을 어떤 행동을 통해 풀어내는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            アキはサムライソードを蹴ることで、
+            少しだけ憂さを晴らしたのかもしれません。<br>
+            아키는 사무라이 소드를 차면서 조금이나마 울분을 풀었을지도 모릅니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">10．打ち解ける（うちとける）</span>
+
+          <p class="grammar-explanation">
+            서로에 대한 경계나 어색함이 줄어들고 편하게 마음을 나누게 되는 것을 뜻합니다.
+          </p>
+
+          <p class="example-sentence">
+            この経験を通して、
+            デンジとアキは少しずつ打ち解けていきました。<br>
+            이 경험을 통해 덴지와 아키는 조금씩 마음을 열게 되었습니다.
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">11．自然な会話表現</span>
+
+          <p class="grammar-explanation">
+            행동 자체에는 반대하면서도 인물의 감정과 장면의 의미에는 공감하는 복합적인 의견을 말할 때 사용할 수 있습니다.
+          </p>
+
+          <p class="example-sentence">
+            行動そのものは正しいとは思いませんが、二人の気持ちは理解できます。<br>
+            復讐というより、不器用な慰め方だったのではないでしょうか。<br>
+            不謹慎に見える一方で、悲しみから立ち直るために必要な時間だったと思います。<br>
+            デンジは言葉ではなく、行動によってアキを支えたように感じました。<br>
+            真面目なアキが参加したことで、二人の距離が縮まったことが分かります。<br>
+            仕返しをしても問題は解決しませんが、感情を整理するきっかけにはなったかもしれません。
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
