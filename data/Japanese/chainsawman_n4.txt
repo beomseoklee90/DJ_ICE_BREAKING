@@ -1,0 +1,1839 @@
+[アニメ会]チェインソーマン_N4
+<style>
+  /* =========================================================
+     CHAINSAW MAN JAPANESE TALK MATERIAL
+     일본어 장문·요미가나·모바일 대응 스타일
+  ========================================================= */
+
+  :root {
+    --page-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --section-bg: #f8fafc;
+
+    --text-main: #1f2937;
+    --text-sub: #4b5563;
+    --text-light: #6b7280;
+
+    --border-main: #d8dee8;
+    --border-light: #e7eaf0;
+
+    --accent: #dc2626;
+    --accent-dark: #991b1b;
+    --accent-soft: #fef2f2;
+
+    --blue: #2563eb;
+    --blue-soft: #eff6ff;
+
+    --yellow: #b45309;
+    --yellow-soft: #fffbeb;
+
+    --green: #047857;
+    --green-soft: #ecfdf5;
+
+    --purple: #7e22ce;
+    --purple-soft: #faf5ff;
+
+    --shadow-light: 0 4px 14px rgba(15, 23, 42, 0.06);
+    --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+    --radius-small: 10px;
+    --radius-medium: 16px;
+    --radius-large: 22px;
+  }
+
+  /* =========================================================
+     기본 초기화
+  ========================================================= */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 24px 14px;
+    background: var(--page-bg);
+    color: var(--text-main);
+
+    font-family:
+      "Noto Sans JP",
+      "Noto Sans KR",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      "Meiryo",
+      "Apple SD Gothic Neo",
+      "Malgun Gothic",
+      sans-serif;
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
+
+  p,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  div,
+  span {
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    margin: 0 0 14px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    font-weight: 800;
+  }
+
+  /* =========================================================
+     요미가나
+  ========================================================= */
+
+  ruby {
+    display: ruby;
+    ruby-position: over;
+    white-space: nowrap;
+    line-height: 1.3;
+  }
+
+  rt {
+    font-size: 0.52em;
+    font-weight: 500;
+    line-height: 1;
+    color: #64748b;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  rp {
+    display: none;
+  }
+
+  /* =========================================================
+     전체 자료 카드
+  ========================================================= */
+
+  .question-card {
+    width: min(100%, 1120px);
+    margin: 0 auto 42px;
+    padding: 0;
+    overflow: hidden;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+
+    writing-mode: horizontal-tb;
+  }
+
+  /* =========================================================
+     헤더
+  ========================================================= */
+
+  .question-header {
+    padding: 30px 34px 28px;
+    background:
+      linear-gradient(
+        135deg,
+        #111827 0%,
+        #1f2937 62%,
+        #7f1d1d 100%
+      );
+    color: #ffffff;
+  }
+
+  .question-number {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    margin-bottom: 13px;
+    padding: 5px 12px;
+
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+  }
+
+  .question-title {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .question-title ruby,
+  .question-title rt {
+    color: inherit;
+  }
+
+  /* =========================================================
+     일반 섹션
+  ========================================================= */
+
+  .section-block,
+  .language-notes {
+    margin: 0;
+    padding: 30px 34px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .section-block:nth-of-type(even) {
+    background: #fcfcfd;
+  }
+
+  .section-title {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 11px 16px;
+
+    color: #111827;
+    font-size: clamp(1.18rem, 2.2vw, 1.48rem);
+    font-weight: 900;
+    line-height: 1.55;
+    letter-spacing: -0.02em;
+
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .section-title::before {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    bottom: 0.45em;
+    left: 0;
+
+    width: 5px;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+
+  .section-description {
+    margin: -5px 0 22px;
+    color: var(--text-sub);
+    font-size: 0.96rem;
+    line-height: 1.8;
+  }
+
+  /* =========================================================
+     장면 설명
+  ========================================================= */
+
+  .situation {
+    padding: 24px 26px;
+
+    background: var(--section-bg);
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+  }
+
+  .situation p {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  .message-box {
+    margin: 0 0 20px;
+    padding: 17px 20px;
+
+    background: var(--accent-soft);
+    border: 1px solid #fecaca;
+    border-left: 6px solid var(--accent);
+    border-radius: var(--radius-small);
+  }
+
+  .message-box p {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
+  /* =========================================================
+     질문 카드 그리드
+  ========================================================= */
+
+  .mbti-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+
+    width: 100%;
+    min-width: 0;
+  }
+
+  .mbti-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+    padding: 23px 23px 24px;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .mbti-card:hover {
+    border-color: #c5ccd8;
+    box-shadow: 0 9px 25px rgba(15, 23, 42, 0.1);
+    transform: translateY(-1px);
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .mbti-card-title {
+    display: block;
+    margin: 0 0 16px;
+
+    color: #111827;
+    font-size: 1.06rem;
+    font-weight: 850;
+    line-height: 2;
+    letter-spacing: -0.015em;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
+
+  .mbti-choice-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    margin: 0 8px 3px 0;
+    vertical-align: middle;
+
+    background: var(--accent);
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 0.86rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .mbti-card > p:not(.example-sentence) {
+    color: var(--text-sub);
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  /* =========================================================
+     답변 포인트
+  ========================================================= */
+
+  .discussion-prompt {
+    margin: 8px 0 16px;
+    padding: 13px 15px;
+
+    background: var(--blue-soft);
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius-small);
+
+    color: #1e3a8a;
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.75;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* =========================================================
+     예제 답변
+  ========================================================= */
+
+  .example-sentence {
+    margin-top: auto;
+    padding: 18px 18px;
+
+    background: var(--green-soft);
+    border: 1px solid #a7f3d0;
+    border-radius: var(--radius-small);
+
+    color: #134e4a;
+    font-size: 0.96rem;
+    line-height: 2.05;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
+
+  .example-sentence strong {
+    display: inline-block;
+    margin-bottom: 3px;
+    color: var(--green);
+  }
+
+  /* =========================================================
+     난이도·연습 카드
+  ========================================================= */
+
+  .level-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .level-card {
+    min-width: 0;
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+  }
+
+  .level-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+
+    padding: 15px 18px;
+
+    background: #f8fafc;
+    border-bottom: 1px solid var(--border-main);
+
+    color: #111827;
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  .level-card-body {
+    padding: 19px 20px;
+  }
+
+  .level-card-body p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  .level-label {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 10px;
+    border-radius: 999px;
+
+    font-size: 0.74rem;
+    font-weight: 900;
+    line-height: 1.3;
+  }
+
+  .level-label--n4 {
+    color: #166534;
+    background: #dcfce7;
+  }
+
+  .level-label--n3 {
+    color: #1d4ed8;
+    background: #dbeafe;
+  }
+
+  .level-label--n2 {
+    color: #7e22ce;
+    background: #f3e8ff;
+  }
+
+  /* =========================================================
+     추가 질문 리스트
+  ========================================================= */
+
+  .follow-up-list {
+    display: grid;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .follow-up-item {
+    position: relative;
+    padding: 15px 18px 15px 42px;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-small);
+
+    color: var(--text-main);
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+
+  .follow-up-item::before {
+    content: "Q";
+    position: absolute;
+    top: 16px;
+    left: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 21px;
+    height: 21px;
+
+    background: #111827;
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  /* =========================================================
+     문법·어휘
+  ========================================================= */
+
+  .language-notes {
+    background: #f8fafc;
+  }
+
+  .language-note-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 22px;
+
+    width: 100%;
+    min-width: 0;
+  }
+
+  .language-note-card {
+    min-width: 0;
+    padding: 23px;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+  }
+
+  .language-note-card > h3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin: 0 0 18px;
+    padding-bottom: 13px;
+
+    border-bottom: 2px solid var(--border-light);
+
+    color: #111827;
+    font-size: 1.05rem;
+    font-weight: 850;
+    line-height: 1.6;
+  }
+
+  .grammar-item {
+    min-width: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .grammar-item:first-of-type {
+    padding-top: 0;
+  }
+
+  .grammar-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .grammar-expression {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--purple);
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.75;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .grammar-explanation {
+    margin-bottom: 11px;
+
+    color: var(--text-sub);
+    font-size: 0.93rem;
+    line-height: 1.85;
+  }
+
+  .grammar-item .example-sentence {
+    margin-top: 12px;
+  }
+
+  /* =========================================================
+     안내 박스
+  ========================================================= */
+
+  .notice-box {
+    margin: 22px 0 0;
+    padding: 19px 21px;
+
+    background: var(--yellow-soft);
+    border: 1px solid #fde68a;
+    border-left: 6px solid #f59e0b;
+    border-radius: var(--radius-small);
+
+    color: #78350f;
+    font-size: 0.94rem;
+    line-height: 1.9;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .question-card > .notice-box {
+    margin: 0 34px 34px;
+  }
+
+  /* =========================================================
+     태블릿
+  ========================================================= */
+
+  @media (max-width: 900px) {
+    body {
+      padding: 16px 10px;
+    }
+
+    .question-header,
+    .section-block,
+    .language-notes {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .mbti-grid,
+    .language-note-grid,
+    .level-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .question-card > .notice-box {
+      margin-right: 24px;
+      margin-left: 24px;
+    }
+  }
+
+  /* =========================================================
+     모바일
+  ========================================================= */
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 15px;
+    }
+
+    body {
+      padding: 0;
+      background: #ffffff;
+    }
+
+    .question-card {
+      width: 100%;
+      margin: 0;
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .question-header {
+      padding: 25px 18px 23px;
+    }
+
+    .question-number {
+      margin-bottom: 11px;
+      padding: 4px 10px;
+      font-size: 0.71rem;
+    }
+
+    .question-title {
+      font-size: 1.55rem;
+      line-height: 1.5;
+    }
+
+    .section-block,
+    .language-notes {
+      padding: 25px 16px;
+    }
+
+    .section-title {
+      margin-bottom: 17px;
+      padding-left: 13px;
+      font-size: 1.17rem;
+      line-height: 1.65;
+    }
+
+    .situation {
+      padding: 19px 17px;
+    }
+
+    .situation p {
+      font-size: 0.97rem;
+      line-height: 2.05;
+    }
+
+    .mbti-grid,
+    .language-note-grid,
+    .level-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .mbti-card,
+    .language-note-card {
+      width: 100%;
+      min-width: 0;
+      padding: 19px 17px 20px;
+      border-radius: 13px;
+    }
+
+    .mbti-card-title {
+      font-size: 1rem;
+      line-height: 2.05;
+    }
+
+    .mbti-choice-number {
+      width: 28px;
+      height: 28px;
+      margin-right: 6px;
+    }
+
+    .discussion-prompt {
+      padding: 12px 13px;
+      font-size: 0.88rem;
+    }
+
+    .example-sentence {
+      padding: 16px 14px;
+      font-size: 0.94rem;
+      line-height: 2.05;
+    }
+
+    .language-note-card > h3 {
+      align-items: flex-start;
+      font-size: 1rem;
+    }
+
+    .grammar-expression {
+      font-size: 0.98rem;
+    }
+
+    .grammar-explanation {
+      font-size: 0.91rem;
+    }
+
+    .question-card > .notice-box {
+      margin: 0 16px 26px;
+    }
+
+    ruby {
+      white-space: nowrap;
+    }
+
+    rt {
+      font-size: 0.5em;
+    }
+  }
+
+  /* =========================================================
+     매우 작은 모바일
+  ========================================================= */
+
+  @media (max-width: 380px) {
+    html {
+      font-size: 14px;
+    }
+
+    .question-header {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
+
+    .section-block,
+    .language-notes {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    .mbti-card,
+    .language-note-card {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
+
+    .question-card > .notice-box {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+  }
+
+  /* =========================================================
+     인쇄
+  ========================================================= */
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 13mm;
+    }
+
+    body {
+      padding: 0;
+      background: #ffffff;
+      color: #000000;
+      font-size: 10.5pt;
+    }
+
+    .question-card {
+      width: 100%;
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .question-header {
+      background: #222222 !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .section-block,
+    .language-notes {
+      padding: 20px 0;
+    }
+
+    .mbti-grid,
+    .language-note-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .mbti-card,
+    .language-note-card,
+    .situation,
+    .notice-box,
+    .example-sentence,
+    .discussion-prompt {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+
+    .mbti-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .question-card > .notice-box {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+</style>
+
+<section class="question-card" id="chainsawman-scene-1-n4">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN SCENE 01 · N4</span>
+    <h2 class="question-title">
+      デンジとアキの「イージーリベンジ」
+    </h2>
+  </header>
+
+  <!-- 1. 장면 묘사 -->
+  <div class="section-block">
+    <h3 class="section-title">
+      1．ばめんの せつめい
+      （장면 묘사）
+    </h3>
+
+    <div class="situation">
+
+      <p>
+        デンジとアキは、
+        ともだちを きずつけた
+        サムライソードを つかまえます。
+        （덴지와 아키는 친구들을 다치게 한 사무라이 소드를 붙잡습니다.）
+      </p>
+
+      <p>
+        サムライソードは、
+        もう うごくことが できません。
+        でも、デンジはアキに、
+        「こいつの こかんを、
+        かわりばんこに キックしよう」
+        と いいます。
+        （사무라이 소드는 이제 움직일 수 없습니다.
+        하지만 덴지는 아키에게
+        “이 녀석의 가랑이를 번갈아 차자”고 말합니다.）
+      </p>
+
+      <p>
+        そして、
+        サムライソードが
+        いちばん 大きい こえを だしたとき、
+        キックした人が かちです。
+        デンジは、
+        そんな へんな ゲームを はじめます。
+        （그리고 사무라이 소드가 가장 큰 소리를 냈을 때,
+        발로 찬 사람이 이기는 것입니다.
+        덴지는 그런 이상한 게임을 시작합니다.）
+      </p>
+
+      <p>
+        アキは はじめ、
+        「やらない」と いいます。
+        でも、すこし かんがえたあと、
+        デンジと いっしょに
+        サムライソードを キックします。
+        （아키는 처음에는 “하지 않겠다”고 말합니다.
+        하지만 조금 생각한 뒤
+        덴지와 함께 사무라이 소드를 찹니다.）
+      </p>
+
+      <p>
+        アキは いつも まじめです。
+        でも、このときは
+        デンジと いっしょに
+        ばかなことを しました。
+        そこが おもしろい ばめんです。
+        （아키는 항상 진지합니다.
+        하지만 이때는 덴지와 함께 바보 같은 일을 했습니다.
+        그 부분이 재미있는 장면입니다.）
+      </p>
+
+      <div class="notice-box">
+        むずかしく かんがえなくても いいです。
+
+        「おもしろかったです」
+        「すこし ひどいと おもいました」
+        「アキが おもしろかったです」など、
+        じぶんの きもちを
+        かんたんに はなしてください。
+
+        （어렵게 생각하지 않아도 됩니다.
+
+        ‘재미있었습니다’,
+        ‘조금 심하다고 생각했습니다’,
+        ‘아키가 재미있었습니다’처럼
+        자신의 느낌을 간단하게 말해 주세요.）
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. 질문 10개 + N4 예제 답변 -->
+  <div class="section-block mbti-analysis">
+
+    <h3 class="section-title">
+      2．ばめんについての しつもん
+      （장면에 대한 질문 10개）
+    </h3>
+
+    <p class="section-description">
+      一つの しつもんに、
+      2～3この みじかい ぶんで
+      こたえてみましょう。
+      （질문 하나에 2~3개의 짧은 문장으로 답해 봅시다.）
+    </p>
+
+    <div class="mbti-grid">
+
+      <!-- Q1 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          この ばめんは、
+          おもしろかったですか。
+          それとも、すこし ひどいと おもいましたか。
+        </h4>
+
+        <p>
+          이 장면은 재미있었습니까?
+          아니면 조금 심하다고 생각했습니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・おもしろかったです<br>
+          ・すこし ひどいと おもいました<br>
+          ・～からです
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          わたしは わらいました。<br>
+          アキも いっしょに
+          キックしたからです。<br>
+          でも、すこし ひどいと おもいました。<br><br>
+
+          （저는 웃었습니다.
+          아키도 함께 찼기 때문입니다.
+          하지만 조금 심하다고 생각했습니다.）
+        </p>
+
+      </article>
+
+      <!-- Q2 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          アキは はじめ、
+          「やらない」と いいました。
+          でも、どうして あとで
+          いっしょに やったと おもいますか。
+        </h4>
+
+        <p>
+          아키는 처음에는 “하지 않겠다”고 말했습니다.
+          그런데 왜 나중에는 함께 했다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・おこっていました<br>
+          ・やりたくなりました<br>
+          ・だから～
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          アキも おこっていたと おもいます。<br>
+          だから、あとで
+          いっしょに やりました。<br><br>
+
+          （아키도 화가 나 있었다고 생각합니다.
+          그래서 나중에 함께 했습니다.）
+        </p>
+
+      </article>
+
+      <!-- Q3 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          アキが サムライソードを
+          キックしたとき、
+          どんな きもちだったと おもいますか。
+        </h4>
+
+        <p>
+          아키가 사무라이 소드를 찰 때,
+          어떤 기분이었다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・おこっていました<br>
+          ・かなしかったです<br>
+          ・すこし らくに なりました
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          とても おこっていたと おもいます。<br>
+          キックしたあと、
+          すこし らくに なったと おもいます。<br><br>
+
+          （매우 화가 나 있었다고 생각합니다.
+          찬 뒤에는 조금 마음이 편해졌다고 생각합니다.）
+        </p>
+
+      </article>
+
+      <!-- Q4 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          デンジの「イージーリベンジ」は、
+          ばかな アイデアだと おもいますか。
+          それとも、いい アイデアだと おもいますか。
+        </h4>
+
+        <p>
+          덴지의 ‘이지 리벤지’는
+          바보 같은 생각이라고 봅니까?
+          아니면 좋은 생각이라고 봅니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・すこし ばかだと おもいます<br>
+          ・でも、わるくないです<br>
+          ・アキが げんきに なりました
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          すこし ばかだと おもいます。<br>
+          でも、アキは
+          すこし げんきに なりました。<br>
+          だから、わるくないと おもいます。<br><br>
+
+          （조금 바보 같다고 생각합니다.
+          하지만 아키는 조금 기운을 차렸습니다.
+          그래서 나쁘지 않다고 생각합니다.）
+        </p>
+
+      </article>
+
+      <!-- Q5 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          このあと、
+          アキの きもちは
+          すこし らくに なったと おもいますか。
+        </h4>
+
+        <p>
+          이 일이 끝난 뒤,
+          아키의 마음이 조금 편해졌다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・はい、そう おもいます<br>
+          ・すこし げんきに なりました<br>
+          ・かなしいことを わすれました
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          はい、すこし らくに なったと おもいます。<br>
+          デンジと いっしょに
+          ばかなことを したからです。<br>
+          かなしいことも
+          すこし わすれたと おもいます。<br><br>
+
+          （네, 조금 편해졌다고 생각합니다.
+          덴지와 함께 바보 같은 일을 했기 때문입니다.
+          슬픈 일도 조금 잊었다고 생각합니다.）
+        </p>
+
+      </article>
+
+      <!-- Q6 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">6</span>
+          もし パワーも ここに いたら、
+          なにを いったと おもいますか。
+          なにを したと おもいますか。
+        </h4>
+
+        <p>
+          만약 파워도 이곳에 있었다면,
+          무슨 말을 하고 무엇을 했을 것 같습니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・いっしょに やったと おもいます<br>
+          ・「わしが 一ばんだ！」と いいました<br>
+          ・デンジと ゲームを しました
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          パワーも いっしょに
+          やったと おもいます。<br>
+          「わしが 一ばんだ！」と
+          いったと おもいます。<br>
+          デンジと ゲームを したと おもいます。<br><br>
+
+          （파워도 함께 했을 것이라고 생각합니다.
+          “내가 일등이다!”라고 말했을 것 같습니다.
+          덴지와 게임을 했을 것 같습니다.）
+        </p>
+
+      </article>
+
+      <!-- Q7 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">7</span>
+          このあと、
+          デンジとアキは
+          まえより なかよくなったと おもいますか。
+        </h4>
+
+        <p>
+          이 장면 이후,
+          덴지와 아키는 전보다 친해졌다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・なかよくなったと おもいます<br>
+          ・二人で いっしょに やりました<br>
+          ・まえより たのしそうです
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          はい、まえより
+          なかよくなったと おもいます。<br>
+          二人で いっしょに
+          ばかなことを したからです。<br><br>
+
+          （네, 전보다 친해졌다고 생각합니다.
+          두 사람이 함께 바보 같은 일을 했기 때문입니다.）
+        </p>
+
+      </article>
+
+      <!-- Q8 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">8</span>
+          あなたも ともだちと、
+          ばかな あそびや
+          おもしろい いたずらを
+          したことが ありますか。
+        </h4>
+
+        <p>
+          당신도 친구와
+          바보 같은 놀이나 재미있는 장난을 한 적이 있습니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・～たことが あります<br>
+          ・ともだちと～しました<br>
+          ・たのしかったです
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          はい、あります。<br>
+          ともだちと
+          へんな うたを うたいました。<br>
+          とても たのしかったです。<br><br>
+
+          （네, 있습니다.
+          친구와 이상한 노래를 불렀습니다.
+          매우 즐거웠습니다.）
+        </p>
+
+      </article>
+
+      <!-- Q9 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">9</span>
+          もし あなたも ここに いたら、
+          デンジと いっしょに やりますか。
+          それとも、二人を とめますか。
+        </h4>
+
+        <p>
+          만약 당신도 이곳에 있었다면,
+          덴지와 함께 하겠습니까?
+          아니면 두 사람을 말리겠습니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・いっしょに やります<br>
+          ・二人を とめます<br>
+          ・見ていると おもいます
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          わたしは いっしょに やりません。<br>
+          でも、二人を とめません。<br>
+          たぶん、となりで 見ていると おもいます。<br><br>
+
+          （저는 함께 하지 않습니다.
+          하지만 두 사람을 말리지는 않습니다.
+          아마 옆에서 보고 있을 것 같습니다.）
+        </p>
+
+      </article>
+
+      <!-- Q10 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">10</span>
+          デンジが ゲームを かんがえたことと、
+          アキが ほんとうに やったことでは、
+          どちらが おもしろかったですか。
+        </h4>
+
+        <p>
+          덴지가 게임을 생각한 것과
+          아키가 실제로 한 것 중
+          어느 쪽이 더 재미있었습니까?
+        </p>
+
+        <div class="discussion-prompt">
+          つかえる ことば：<br>
+          ・～のほうが おもしろかったです<br>
+          ・アキは いつも まじめです<br>
+          ・びっくりしました
+        </div>
+
+        <p class="example-sentence">
+          <strong>N4 れいぶん</strong><br><br>
+
+          アキが やったことのほうが
+          おもしろかったです。<br>
+          アキは いつも まじめだからです。<br>
+          だから、びっくりしました。<br><br>
+
+          （아키가 한 쪽이 더 재미있었습니다.
+          아키는 항상 진지하기 때문입니다.
+          그래서 놀랐습니다.）
+        </p>
+
+      </article>
+
+    </div>
+  </div>
+
+  <!-- 3. N4 문법 설명 -->
+  <div class="language-notes">
+
+    <h3 class="section-title">
+      3．ぶんぽうの せつめい
+      （문법 설명）
+    </h3>
+
+    <div class="language-note-grid">
+
+      <section class="language-note-card">
+
+        <h3>
+          <span class="level-label level-label--n4">N4</span>
+          かんそうを はなす ぶんぽう
+        </h3>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            1．～と おもいます
+          </span>
+
+          <p class="grammar-explanation">
+            じぶんの かんがえを
+            はなすときに つかいます。
+            （자신의 생각을 말할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキは おこっていたと おもいます。<br>
+            この ばめんは おもしろかったと おもいます。<br>
+            （아키는 화가 나 있었다고 생각합니다.<br>
+            이 장면은 재미있었다고 생각합니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            2．～からです
+          </span>
+
+          <p class="grammar-explanation">
+            りゆうを はなすときに つかいます。
+            （이유를 말할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキが おもしろかったです。<br>
+            いつも まじめだからです。<br>
+            （아키가 재미있었습니다.<br>
+            항상 진지하기 때문입니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            3．でも
+          </span>
+
+          <p class="grammar-explanation">
+            まえの ぶんと
+            ちがう ことを はなすときに つかいます.
+            （앞 문장과 다른 내용을 말할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            すこし ひどいと おもいました。<br>
+            でも、おもしろかったです。<br>
+            （조금 심하다고 생각했습니다.<br>
+            하지만 재미있었습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            4．だから
+          </span>
+
+          <p class="grammar-explanation">
+            まえの ぶんの あとに、
+            けっかを はなすときに つかいます。
+            （앞 문장 다음에 결과를 말할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキも おこっていました。<br>
+            だから、いっしょに やりました。<br>
+            （아키도 화가 나 있었습니다.<br>
+            그래서 함께 했습니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="language-note-card">
+
+        <h3>
+          <span class="level-label level-label--n4">N4</span>
+          けいけん・もしの はなし
+        </h3>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            5．～たことが あります
+          </span>
+
+          <p class="grammar-explanation">
+            いままでの けいけんを
+            はなすときに つかいます。
+            （지금까지의 경험을 말할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            ともだちと
+            へんな うたを うたったことが あります。<br>
+            （친구와 이상한 노래를 부른 적이 있습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            6．もし～たら
+          </span>
+
+          <p class="grammar-explanation">
+            ほんとうではない ばめんを
+            かんがえるときに つかいます。
+            （실제로 일어나지 않은 상황을 생각할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            もし パワーが いたら、
+            いっしょに やったと おもいます。<br>
+            （만약 파워가 있었다면 함께 했을 것이라고 생각합니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            7．～より、～のほうが
+          </span>
+
+          <p class="grammar-explanation">
+            二つの ものを
+            くらべるときに つかいます。
+            （두 가지를 비교할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジの アイデアより、
+            アキが やったことのほうが
+            おもしろかったです。<br>
+            （덴지의 생각보다 아키가 한 일이 더 재미있었습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            8．～たあと
+          </span>
+
+          <p class="grammar-explanation">
+            一つの ことが おわってから、
+            つぎの ことが あるときに つかいます。
+            （한 일이 끝난 다음 다른 일이 있을 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            キックしたあと、
+            アキは すこし らくに なりました。<br>
+            （찬 뒤 아키는 조금 편해졌습니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <!-- 4. N4 어휘 설명 -->
+  <div class="language-notes">
+
+    <h3 class="section-title">
+      4．ことばの せつめい
+      （어휘 설명）
+    </h3>
+
+    <div class="language-note-grid">
+
+      <section class="language-note-card">
+
+        <h3>
+          <span class="level-label level-label--n4">ことば</span>
+          この ばめんで つかう ことば
+        </h3>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            1．キックする
+          </span>
+
+          <p class="grammar-explanation">
+            あしで 人や ものを
+            つよく うつことです。
+            （발로 사람이나 물건을 세게 차는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジは
+            サムライソードを キックしました。<br>
+            （덴지는 사무라이 소드를 찼습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            2．こかん
+          </span>
+
+          <p class="grammar-explanation">
+            二つの あしの あいだに ある
+            からだの ぶぶんです。
+            （두 다리 사이에 있는 신체 부위입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジは
+            サムライソードの こかんを
+            キックしました。<br>
+            （덴지는 사무라이 소드의 가랑이를 찼습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            3．かわりばんこ
+          </span>
+
+          <p class="grammar-explanation">
+            二人いじょうの 人が、
+            一人ずつ じゅんばんに やることです。
+            （두 명 이상의 사람이 한 명씩 차례대로 하는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジとアキは
+            かわりばんこに キックしました。<br>
+            （덴지와 아키는 번갈아 찼습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            4．まじめ
+          </span>
+
+          <p class="grammar-explanation">
+            ふざけないで、
+            いつも しっかりしている ことです。
+            （장난치지 않고 항상 성실한 것을 말합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキは いつも まじめです。<br>
+            （아키는 항상 진지합니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            5．ばかなこと
+          </span>
+
+          <p class="grammar-explanation">
+            あまり まじめではない、
+            おかしい ことや あそびです。
+            （별로 진지하지 않은 우스운 행동이나 놀이입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジとアキは
+            いっしょに ばかなことを しました。<br>
+            （덴지와 아키는 함께 바보 같은 일을 했습니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="language-note-card">
+
+        <h3>
+          <span class="level-label level-label--n4">ことば</span>
+          きもちを はなす ことば
+        </h3>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            6．おこる
+          </span>
+
+          <p class="grammar-explanation">
+            いやなことが あって、
+            きもちが わるくなることです。
+            （싫은 일이 있어 화가 나는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキは とても おこっていました。<br>
+            （아키는 매우 화가 나 있었습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            7．かなしい
+          </span>
+
+          <p class="grammar-explanation">
+            いやなことや、
+            つらいことが あったときの
+            きもちです。
+            （싫거나 힘든 일이 있을 때의 감정입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキは とても かなしかったと おもいます。<br>
+            （아키는 매우 슬펐다고 생각합니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            8．らくに なる
+          </span>
+
+          <p class="grammar-explanation">
+            つらい きもちが
+            すこし へることです。
+            （힘든 감정이 조금 줄어드는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキの きもちは
+            すこし らくに なりました。<br>
+            （아키의 마음은 조금 편해졌습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            9．なかよくなる
+          </span>
+
+          <p class="grammar-explanation">
+            まえよりも
+            いい かんけいに なることです。
+            （전보다 더 좋은 관계가 되는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジとアキは
+            まえより なかよくなりました。<br>
+            （덴지와 아키는 전보다 친해졌습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <span class="grammar-expression">
+            10．びっくりする
+          </span>
+
+          <p class="grammar-explanation">
+            おもっていなかったことが あって、
+            おどろくことです。
+            （생각하지 못한 일이 있어 놀라는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキも やったので、
+            びっくりしました。<br>
+            （아키도 했기 때문에 놀랐습니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div class="notice-box">
+    N4では、
+    ながい ぶんを はなさなくても いいです。
+
+    「おもしろかったです。」
+    「アキが おもしろかったです。」
+    「いつも まじめだからです。」
+
+    このように、
+    みじかい ぶんを
+    2～3こ つづけて はなしてみましょう。
+
+    わからない ことばが あったら、
+    みじかい ことばや
+    かんたんな ことばに
+    かえても だいじょうぶです。
+
+    （N4에서는 긴 문장을 말하지 않아도 됩니다.
+
+    ‘재미있었습니다.’
+    ‘아키가 재미있었습니다.’
+    ‘항상 진지하기 때문입니다.’
+
+    이처럼 짧은 문장을
+    2~3개 이어서 말해 봅시다.
+
+    모르는 단어가 있다면
+    짧고 간단한 표현으로 바꾸어도 괜찮습니다.）
+  </div>
+
+</section>

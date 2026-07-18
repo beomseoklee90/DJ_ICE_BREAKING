@@ -1,0 +1,2070 @@
+[アニメ会]チェインソーマン_N3
+<style>
+  /* =========================================================
+     CHAINSAW MAN JAPANESE TALK MATERIAL
+     일본어 장문·요미가나·모바일 대응 스타일
+  ========================================================= */
+
+  :root {
+    --page-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --section-bg: #f8fafc;
+
+    --text-main: #1f2937;
+    --text-sub: #4b5563;
+    --text-light: #6b7280;
+
+    --border-main: #d8dee8;
+    --border-light: #e7eaf0;
+
+    --accent: #dc2626;
+    --accent-dark: #991b1b;
+    --accent-soft: #fef2f2;
+
+    --blue: #2563eb;
+    --blue-soft: #eff6ff;
+
+    --yellow: #b45309;
+    --yellow-soft: #fffbeb;
+
+    --green: #047857;
+    --green-soft: #ecfdf5;
+
+    --purple: #7e22ce;
+    --purple-soft: #faf5ff;
+
+    --shadow-light: 0 4px 14px rgba(15, 23, 42, 0.06);
+    --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+    --radius-small: 10px;
+    --radius-medium: 16px;
+    --radius-large: 22px;
+  }
+
+  /* =========================================================
+     기본 초기화
+  ========================================================= */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 24px 14px;
+    background: var(--page-bg);
+    color: var(--text-main);
+
+    font-family:
+      "Noto Sans JP",
+      "Noto Sans KR",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      "Meiryo",
+      "Apple SD Gothic Neo",
+      "Malgun Gothic",
+      sans-serif;
+
+    font-size: 16px;
+    line-height: 1.85;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
+
+  p,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  div,
+  span {
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    margin: 0 0 14px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    font-weight: 800;
+  }
+
+  /* =========================================================
+     요미가나
+  ========================================================= */
+
+  ruby {
+    display: ruby;
+    ruby-position: over;
+    white-space: nowrap;
+    line-height: 1.3;
+  }
+
+  rt {
+    font-size: 0.52em;
+    font-weight: 500;
+    line-height: 1;
+    color: #64748b;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  rp {
+    display: none;
+  }
+
+  /* =========================================================
+     전체 자료 카드
+  ========================================================= */
+
+  .question-card {
+    width: min(100%, 1120px);
+    margin: 0 auto 42px;
+    padding: 0;
+    overflow: hidden;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
+
+    writing-mode: horizontal-tb;
+  }
+
+  /* =========================================================
+     헤더
+  ========================================================= */
+
+  .question-header {
+    padding: 30px 34px 28px;
+    background:
+      linear-gradient(
+        135deg,
+        #111827 0%,
+        #1f2937 62%,
+        #7f1d1d 100%
+      );
+    color: #ffffff;
+  }
+
+  .question-number {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    margin-bottom: 13px;
+    padding: 5px 12px;
+
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+  }
+
+  .question-title {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .question-title ruby,
+  .question-title rt {
+    color: inherit;
+  }
+
+  /* =========================================================
+     일반 섹션
+  ========================================================= */
+
+  .section-block,
+  .language-notes {
+    margin: 0;
+    padding: 30px 34px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .section-block:nth-of-type(even) {
+    background: #fcfcfd;
+  }
+
+  .section-title {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 11px 16px;
+
+    color: #111827;
+    font-size: clamp(1.18rem, 2.2vw, 1.48rem);
+    font-weight: 900;
+    line-height: 1.55;
+    letter-spacing: -0.02em;
+
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .section-title::before {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    bottom: 0.45em;
+    left: 0;
+
+    width: 5px;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+
+  .section-description {
+    margin: -5px 0 22px;
+    color: var(--text-sub);
+    font-size: 0.96rem;
+    line-height: 1.8;
+  }
+
+  /* =========================================================
+     장면 설명
+  ========================================================= */
+
+  .situation {
+    padding: 24px 26px;
+
+    background: var(--section-bg);
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+  }
+
+  .situation p {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  .message-box {
+    margin: 0 0 20px;
+    padding: 17px 20px;
+
+    background: var(--accent-soft);
+    border: 1px solid #fecaca;
+    border-left: 6px solid var(--accent);
+    border-radius: var(--radius-small);
+  }
+
+  .message-box p {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+
+  /* =========================================================
+     질문 카드 그리드
+  ========================================================= */
+
+  .mbti-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+
+    width: 100%;
+    min-width: 0;
+  }
+
+  .mbti-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+    padding: 23px 23px 24px;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .mbti-card:hover {
+    border-color: #c5ccd8;
+    box-shadow: 0 9px 25px rgba(15, 23, 42, 0.1);
+    transform: translateY(-1px);
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .mbti-card-title {
+    display: block;
+    margin: 0 0 16px;
+
+    color: #111827;
+    font-size: 1.06rem;
+    font-weight: 850;
+    line-height: 2;
+    letter-spacing: -0.015em;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
+
+  .mbti-choice-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    margin: 0 8px 3px 0;
+    vertical-align: middle;
+
+    background: var(--accent);
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 0.86rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .mbti-card > p:not(.example-sentence) {
+    color: var(--text-sub);
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  /* =========================================================
+     답변 포인트
+  ========================================================= */
+
+  .discussion-prompt {
+    margin: 8px 0 16px;
+    padding: 13px 15px;
+
+    background: var(--blue-soft);
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius-small);
+
+    color: #1e3a8a;
+    font-size: 0.9rem;
+    font-weight: 650;
+    line-height: 1.75;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* =========================================================
+     예제 답변
+  ========================================================= */
+
+  .example-sentence {
+    margin-top: auto;
+    padding: 18px 18px;
+
+    background: var(--green-soft);
+    border: 1px solid #a7f3d0;
+    border-radius: var(--radius-small);
+
+    color: #134e4a;
+    font-size: 0.96rem;
+    line-height: 2.05;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
+  }
+
+  .example-sentence strong {
+    display: inline-block;
+    margin-bottom: 3px;
+    color: var(--green);
+  }
+
+  /* =========================================================
+     난이도·연습 카드
+  ========================================================= */
+
+  .level-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .level-card {
+    min-width: 0;
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+  }
+
+  .level-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+
+    padding: 15px 18px;
+
+    background: #f8fafc;
+    border-bottom: 1px solid var(--border-main);
+
+    color: #111827;
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  .level-card-body {
+    padding: 19px 20px;
+  }
+
+  .level-card-body p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  .level-label {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 10px;
+    border-radius: 999px;
+
+    font-size: 0.74rem;
+    font-weight: 900;
+    line-height: 1.3;
+  }
+
+  .level-label--n4 {
+    color: #166534;
+    background: #dcfce7;
+  }
+
+  .level-label--n3 {
+    color: #1d4ed8;
+    background: #dbeafe;
+  }
+
+  .level-label--n2 {
+    color: #7e22ce;
+    background: #f3e8ff;
+  }
+
+  /* =========================================================
+     추가 질문 리스트
+  ========================================================= */
+
+  .follow-up-list {
+    display: grid;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .follow-up-item {
+    position: relative;
+    padding: 15px 18px 15px 42px;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-small);
+
+    color: var(--text-main);
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+
+  .follow-up-item::before {
+    content: "Q";
+    position: absolute;
+    top: 16px;
+    left: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 21px;
+    height: 21px;
+
+    background: #111827;
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  /* =========================================================
+     문법·어휘
+  ========================================================= */
+
+  .language-notes {
+    background: #f8fafc;
+  }
+
+  .language-note-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 22px;
+
+    width: 100%;
+    min-width: 0;
+  }
+
+  .language-note-card {
+    min-width: 0;
+    padding: 23px;
+
+    background: #ffffff;
+    border: 1px solid var(--border-main);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-light);
+  }
+
+  .language-note-card > h3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin: 0 0 18px;
+    padding-bottom: 13px;
+
+    border-bottom: 2px solid var(--border-light);
+
+    color: #111827;
+    font-size: 1.05rem;
+    font-weight: 850;
+    line-height: 1.6;
+  }
+
+  .grammar-item {
+    min-width: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .grammar-item:first-of-type {
+    padding-top: 0;
+  }
+
+  .grammar-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .grammar-expression {
+    display: block;
+    margin-bottom: 9px;
+
+    color: var(--purple);
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.75;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .grammar-explanation {
+    margin-bottom: 11px;
+
+    color: var(--text-sub);
+    font-size: 0.93rem;
+    line-height: 1.85;
+  }
+
+  .grammar-item .example-sentence {
+    margin-top: 12px;
+  }
+
+  /* =========================================================
+     안내 박스
+  ========================================================= */
+
+  .notice-box {
+    margin: 22px 0 0;
+    padding: 19px 21px;
+
+    background: var(--yellow-soft);
+    border: 1px solid #fde68a;
+    border-left: 6px solid #f59e0b;
+    border-radius: var(--radius-small);
+
+    color: #78350f;
+    font-size: 0.94rem;
+    line-height: 1.9;
+
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .question-card > .notice-box {
+    margin: 0 34px 34px;
+  }
+
+  /* =========================================================
+     태블릿
+  ========================================================= */
+
+  @media (max-width: 900px) {
+    body {
+      padding: 16px 10px;
+    }
+
+    .question-header,
+    .section-block,
+    .language-notes {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .mbti-grid,
+    .language-note-grid,
+    .level-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .question-card > .notice-box {
+      margin-right: 24px;
+      margin-left: 24px;
+    }
+  }
+
+  /* =========================================================
+     모바일
+  ========================================================= */
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 15px;
+    }
+
+    body {
+      padding: 0;
+      background: #ffffff;
+    }
+
+    .question-card {
+      width: 100%;
+      margin: 0;
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .question-header {
+      padding: 25px 18px 23px;
+    }
+
+    .question-number {
+      margin-bottom: 11px;
+      padding: 4px 10px;
+      font-size: 0.71rem;
+    }
+
+    .question-title {
+      font-size: 1.55rem;
+      line-height: 1.5;
+    }
+
+    .section-block,
+    .language-notes {
+      padding: 25px 16px;
+    }
+
+    .section-title {
+      margin-bottom: 17px;
+      padding-left: 13px;
+      font-size: 1.17rem;
+      line-height: 1.65;
+    }
+
+    .situation {
+      padding: 19px 17px;
+    }
+
+    .situation p {
+      font-size: 0.97rem;
+      line-height: 2.05;
+    }
+
+    .mbti-grid,
+    .language-note-grid,
+    .level-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .mbti-card,
+    .language-note-card {
+      width: 100%;
+      min-width: 0;
+      padding: 19px 17px 20px;
+      border-radius: 13px;
+    }
+
+    .mbti-card-title {
+      font-size: 1rem;
+      line-height: 2.05;
+    }
+
+    .mbti-choice-number {
+      width: 28px;
+      height: 28px;
+      margin-right: 6px;
+    }
+
+    .discussion-prompt {
+      padding: 12px 13px;
+      font-size: 0.88rem;
+    }
+
+    .example-sentence {
+      padding: 16px 14px;
+      font-size: 0.94rem;
+      line-height: 2.05;
+    }
+
+    .language-note-card > h3 {
+      align-items: flex-start;
+      font-size: 1rem;
+    }
+
+    .grammar-expression {
+      font-size: 0.98rem;
+    }
+
+    .grammar-explanation {
+      font-size: 0.91rem;
+    }
+
+    .question-card > .notice-box {
+      margin: 0 16px 26px;
+    }
+
+    ruby {
+      white-space: nowrap;
+    }
+
+    rt {
+      font-size: 0.5em;
+    }
+  }
+
+  /* =========================================================
+     매우 작은 모바일
+  ========================================================= */
+
+  @media (max-width: 380px) {
+    html {
+      font-size: 14px;
+    }
+
+    .question-header {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
+
+    .section-block,
+    .language-notes {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    .mbti-card,
+    .language-note-card {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
+
+    .question-card > .notice-box {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+  }
+
+  /* =========================================================
+     인쇄
+  ========================================================= */
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 13mm;
+    }
+
+    body {
+      padding: 0;
+      background: #ffffff;
+      color: #000000;
+      font-size: 10.5pt;
+    }
+
+    .question-card {
+      width: 100%;
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .question-header {
+      background: #222222 !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .section-block,
+    .language-notes {
+      padding: 20px 0;
+    }
+
+    .mbti-grid,
+    .language-note-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .mbti-card,
+    .language-note-card,
+    .situation,
+    .notice-box,
+    .example-sentence,
+    .discussion-prompt {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      box-shadow: none;
+    }
+
+    .mbti-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .question-card > .notice-box {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+</style>
+<section class="question-card" id="chainsawman-scene-1-n3">
+
+  <header class="question-header">
+    <span class="question-number">CHAINSAW MAN SCENE 01 · N3</span>
+    <h2 class="question-title">
+      デンジとアキの「イージーリベンジ」
+    </h2>
+  </header>
+
+  <!-- 1. 장면 묘사 -->
+  <div class="section-block">
+    <h3 class="section-title">
+      1．<ruby>場面描写<rt>ばめんびょうしゃ</rt></ruby>
+      （장면 묘사）
+    </h3>
+
+    <div class="situation">
+      <p>
+        デンジとアキは、
+        <ruby>仲間<rt>なかま</rt></ruby>を
+        <ruby>傷<rt>きず</rt></ruby>つけたサムライソードを
+        <ruby>捕<rt>つか</rt></ruby>まえます。
+        （덴지와 아키는 동료를 다치게 한 사무라이 소드를 붙잡습니다.）
+      </p>
+
+      <p>
+        サムライソードはすでに
+        <ruby>動<rt>うご</rt></ruby>けない
+        <ruby>状態<rt>じょうたい</rt></ruby>でしたが、
+        デンジはアキに
+        「こいつの
+        <ruby>股間<rt>こかん</rt></ruby>を
+        <ruby>交代<rt>こうたい</rt></ruby>で
+        <ruby>蹴<rt>け</rt></ruby>ろう」
+        と<ruby>提案<rt>ていあん</rt></ruby>します。
+        （사무라이 소드는 이미 움직일 수 없는 상태였지만,
+        덴지는 아키에게 “이 녀석의 가랑이를 번갈아 차자”고 제안합니다.）
+      </p>
+
+      <p>
+        そして、
+        一番大きな
+        <ruby>悲鳴<rt>ひめい</rt></ruby>を
+        <ruby>出<rt>だ</rt></ruby>させた
+        <ruby>人<rt>ひと</rt></ruby>が
+        <ruby>勝<rt>か</rt></ruby>ちという
+        <ruby>変<rt>へん</rt></ruby>な
+        ゲームを<ruby>始<rt>はじ</rt></ruby>めようとします。
+        （그리고 가장 큰 비명을 지르게 한 사람이 이기는
+        이상한 게임을 시작하려고 합니다.）
+      </p>
+
+      <p>
+        アキは
+        <ruby>最初<rt>さいしょ</rt></ruby>、
+        デンジの<ruby>提案<rt>ていあん</rt></ruby>を
+        <ruby>断<rt>ことわ</rt></ruby>ります。
+        しかし、しばらく
+        <ruby>考<rt>かんが</rt></ruby>えたあと、
+        <ruby>結局<rt>けっきょく</rt></ruby>
+        デンジと<ruby>一緒<rt>いっしょ</rt></ruby>に
+        サムライソードを
+        <ruby>蹴<rt>け</rt></ruby>ります。
+        （아키는 처음에는 덴지의 제안을 거절합니다.
+        하지만 잠시 생각한 뒤 결국 덴지와 함께 사무라이 소드를 찹니다.）
+      </p>
+
+      <p>
+        とても
+        <ruby>真面目<rt>まじめ</rt></ruby>なアキが、
+        デンジの
+        <ruby>子供<rt>こども</rt></ruby>っぽい
+        <ruby>復讐<rt>ふくしゅう</rt></ruby>に
+        <ruby>参加<rt>さんか</rt></ruby>するところが
+        <ruby>印象的<rt>いんしょうてき</rt></ruby>な
+        <ruby>場面<rt>ばめん</rt></ruby>です。
+        （매우 진지한 아키가 덴지의 어린아이 같은 복수에 참여하는 점이
+        인상적인 장면입니다.）
+      </p>
+
+      <div class="notice-box">
+        この<ruby>場面<rt>ばめん</rt></ruby>について、
+        <ruby>正解<rt>せいかい</rt></ruby>を
+        <ruby>考<rt>かんが</rt></ruby>える
+        <ruby>必要<rt>ひつよう</rt></ruby>はありません。
+        <ruby>面白<rt>おもしろ</rt></ruby>かったか、
+        ひどいと<ruby>思<rt>おも</rt></ruby>ったかなど、
+        <ruby>自分<rt>じぶん</rt></ruby>が
+        <ruby>感<rt>かん</rt></ruby>じたことを
+        <ruby>自由<rt>じゆう</rt></ruby>に
+        <ruby>話<rt>はな</rt></ruby>してください。
+        （이 장면에 대해 정답을 생각할 필요는 없습니다.
+        재미있었는지, 심하다고 생각했는지 등
+        자신이 느낀 것을 자유롭게 말해 주세요.）
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. 질문 10개 + 예제 답변 -->
+  <div class="section-block mbti-analysis">
+    <h3 class="section-title">
+      2．<ruby>場面<rt>ばめん</rt></ruby>についての
+      <ruby>質問<rt>しつもん</rt></ruby>
+      （장면에 대한 질문 10개）
+    </h3>
+
+    <p class="section-description">
+      一つの<ruby>質問<rt>しつもん</rt></ruby>に
+      20～40<ruby>秒<rt>びょう</rt></ruby>くらいで
+      <ruby>答<rt>こた</rt></ruby>えてみましょう。
+      （질문 하나에 20~40초 정도로 답해 봅시다.）
+    </p>
+
+    <div class="mbti-grid">
+
+      <!-- Q1 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">1</span>
+          この<ruby>場面<rt>ばめん</rt></ruby>は
+          <ruby>正直<rt>しょうじき</rt></ruby>
+          <ruby>笑<rt>わら</rt></ruby>えましたか。
+          それとも、少しひどいと
+          <ruby>思<rt>おも</rt></ruby>いましたか。
+        </h4>
+
+        <p>
+          이 장면은 솔직히 웃겼습니까?
+          아니면 조금 심하다고 생각했습니까?
+        </p>
+
+        <div class="discussion-prompt">
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>最初<rt>さいしょ</rt></ruby>の
+          <ruby>印象<rt>いんしょう</rt></ruby>＋その
+          <ruby>理由<rt>りゆう</rt></ruby><br>
+          （답변 포인트: 첫인상＋그 이유）
+        </div>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          <ruby>正直<rt>しょうじき</rt></ruby>、
+          私はかなり
+          <ruby>笑<rt>わら</rt></ruby>いました。<br>
+          サムライソードが
+          <ruby>悪<rt>わる</rt></ruby>い
+          <ruby>人<rt>ひと</rt></ruby>だったので、
+          あまりかわいそうだとは
+          <ruby>思<rt>おも</rt></ruby>いませんでした。<br>
+          特に、いつも
+          <ruby>真面目<rt>まじめ</rt></ruby>なアキまで
+          <ruby>参加<rt>さんか</rt></ruby>したところが
+          <ruby>面白<rt>おもしろ</rt></ruby>かったです。<br><br>
+
+          （솔직히 저는 상당히 웃었습니다.
+          사무라이 소드가 나쁜 사람이었기 때문에
+          별로 불쌍하다고 생각하지 않았습니다.
+          특히 평소에 진지한 아키까지 참가한 점이 재미있었습니다.）
+        </p>
+      </article>
+
+      <!-- Q2 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">2</span>
+          アキは
+          <ruby>最初<rt>さいしょ</rt></ruby>
+          <ruby>断<rt>ことわ</rt></ruby>ったのに、
+          どうして
+          <ruby>途中<rt>とちゅう</rt></ruby>で
+          <ruby>気持<rt>きも</rt></ruby>ちを
+          <ruby>変<rt>か</rt></ruby>えたと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </h4>
+
+        <p>
+          아키는 처음에는 거절했는데,
+          왜 도중에 마음을 바꿨다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          アキの<ruby>気持<rt>きも</rt></ruby>ちを
+          <ruby>自由<rt>じゆう</rt></ruby>に
+          <ruby>想像<rt>そうぞう</rt></ruby>する<br>
+          （답변 포인트: 아키의 마음을 자유롭게 상상하기）
+        </div>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          アキも
+          <ruby>本当<rt>ほんとう</rt></ruby>は
+          サムライソードに
+          <ruby>怒<rt>おこ</rt></ruby>っていたからだと
+          <ruby>思<rt>おも</rt></ruby>います。<br>
+          <ruby>最初<rt>さいしょ</rt></ruby>は
+          <ruby>子供<rt>こども</rt></ruby>っぽい
+          <ruby>行動<rt>こうどう</rt></ruby>だと
+          <ruby>思<rt>おも</rt></ruby>って
+          <ruby>断<rt>ことわ</rt></ruby>りました。<br>
+          でも、デンジの
+          <ruby>提案<rt>ていあん</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>いているうちに、
+          少し<ruby>気持<rt>きも</rt></ruby>ちが
+          <ruby>楽<rt>らく</rt></ruby>になるかもしれないと
+          <ruby>思<rt>おも</rt></ruby>ったのではないでしょうか。<br><br>
+
+          （아키도 사실은 사무라이 소드에게 화가 났기 때문이라고 생각합니다.
+          처음에는 어린아이 같은 행동이라고 생각해서 거절했습니다.
+          하지만 덴지의 제안을 듣는 동안
+          조금은 기분이 편해질지도 모른다고 생각한 것이 아닐까요?）
+        </p>
+      </article>
+
+      <!-- Q3 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">3</span>
+          アキがサムライソードを
+          <ruby>蹴<rt>け</rt></ruby>ったとき、
+          どんな<ruby>気持<rt>きも</rt></ruby>ちだったと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </h4>
+
+        <p>
+          아키가 사무라이 소드를 찰 때,
+          어떤 기분이었다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+          <ruby>復讐<rt>ふくしゅう</rt></ruby>・
+          <ruby>怒<rt>いか</rt></ruby>り・
+          ストレス<ruby>発散<rt>はっさん</rt></ruby>などから
+          <ruby>選<rt>えら</rt></ruby>べます。<br>
+          （복수·분노·스트레스 해소 등에서 고를 수 있습니다.）
+        </div>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          <ruby>復讐<rt>ふくしゅう</rt></ruby>したい
+          <ruby>気持<rt>きも</rt></ruby>ちも
+          あったと<ruby>思<rt>おも</rt></ruby>いますが、
+          ストレスを
+          <ruby>発散<rt>はっさん</rt></ruby>したい
+          <ruby>気持<rt>きも</rt></ruby>ちも
+          あったと<ruby>思<rt>おも</rt></ruby>います。<br>
+          アキはずっと
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>気持<rt>きも</rt></ruby>ちを
+          <ruby>我慢<rt>がまん</rt></ruby>していました。<br>
+          だから、このときだけは
+          <ruby>真面目<rt>まじめ</rt></ruby>に
+          <ruby>考<rt>かんが</rt></ruby>えず、
+          デンジと
+          <ruby>一緒<rt>いっしょ</rt></ruby>に
+          <ruby>暴<rt>あば</rt></ruby>れたかったのかもしれません。<br><br>
+
+          （복수하고 싶은 마음도 있었다고 생각하지만,
+          스트레스를 풀고 싶은 마음도 있었다고 생각합니다.
+          아키는 계속 슬픈 감정을 참고 있었습니다.
+          그래서 이때만큼은 진지하게 생각하지 않고
+          덴지와 함께 날뛰고 싶었을지도 모릅니다.）
+        </p>
+      </article>
+
+      <!-- Q4 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">4</span>
+          デンジの「イージーリベンジ」という
+          <ruby>考<rt>かんが</rt></ruby>えは、
+          <ruby>頭<rt>あたま</rt></ruby>が
+          <ruby>悪<rt>わる</rt></ruby>そうに
+          <ruby>見<rt>み</rt></ruby>えましたか。
+          それとも、
+          <ruby>意外<rt>いがい</rt></ruby>と
+          いい<ruby>考<rt>かんが</rt></ruby>えだと
+          <ruby>思<rt>おも</rt></ruby>いましたか。
+        </h4>
+
+        <p>
+          덴지의 ‘이지 리벤지’라는 생각은
+          머리가 나빠 보였습니까?
+          아니면 의외로 좋은 생각이라고 느꼈습니까?
+        </p>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          <ruby>少<rt>すこ</rt></ruby>し
+          <ruby>頭<rt>あたま</rt></ruby>が
+          <ruby>悪<rt>わる</rt></ruby>そうに
+          <ruby>見<rt>み</rt></ruby>えましたが、
+          アキの<ruby>気分<rt>きぶん</rt></ruby>を
+          <ruby>変<rt>か</rt></ruby>えるには
+          いい<ruby>方法<rt>ほうほう</rt></ruby>だったと
+          <ruby>思<rt>おも</rt></ruby>います。<br>
+          デンジは
+          <ruby>難<rt>むずか</rt></ruby>しい
+          <ruby>言葉<rt>ことば</rt></ruby>で
+          <ruby>慰<rt>なぐさ</rt></ruby>めることは
+          できません。<br>
+          その<ruby>代<rt>か</rt></ruby>わり、
+          アキと<ruby>一緒<rt>いっしょ</rt></ruby>に
+          <ruby>馬鹿<rt>ばか</rt></ruby>なことをして
+          <ruby>元気<rt>げんき</rt></ruby>にしようとしたのだと
+          <ruby>思<rt>おも</rt></ruby>います。<br><br>
+
+          （조금 머리가 나빠 보이기는 했지만,
+          아키의 기분을 바꾸기에는 좋은 방법이었다고 생각합니다.
+          덴지는 어려운 말로 위로할 수는 없습니다.
+          그 대신 아키와 함께 바보 같은 일을 해서
+          기운을 내게 하려고 했다고 생각합니다.）
+        </p>
+      </article>
+
+      <!-- Q5 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">5</span>
+          この<ruby>行動<rt>こうどう</rt></ruby>で、
+          アキの<ruby>気持<rt>きも</rt></ruby>ちは
+          少し<ruby>楽<rt>らく</rt></ruby>になったと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </h4>
+
+        <p>
+          이 행동으로 아키의 기분이
+          조금 편해졌다고 생각합니까?
+        </p>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          <ruby>完全<rt>かんぜん</rt></ruby>に
+          <ruby>元気<rt>げんき</rt></ruby>になったわけでは
+          ないと<ruby>思<rt>おも</rt></ruby>います。<br>
+          でも、ずっと
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>顔<rt>かお</rt></ruby>をしているより、
+          デンジと<ruby>馬鹿<rt>ばか</rt></ruby>なことをしたほうが
+          少し<ruby>気分転換<rt>きぶんてんかん</rt></ruby>に
+          なったと<ruby>思<rt>おも</rt></ruby>います。<br>
+          <ruby>短<rt>みじか</rt></ruby>い
+          <ruby>時間<rt>じかん</rt></ruby>でも、
+          <ruby>嫌<rt>いや</rt></ruby>なことを
+          <ruby>忘<rt>わす</rt></ruby>れられたのではないでしょうか。<br><br>
+
+          （완전히 기운을 차린 것은 아니라고 생각합니다.
+          하지만 계속 슬픈 얼굴을 하고 있는 것보다
+          덴지와 바보 같은 일을 하는 편이 조금은 기분 전환이 되었을 것입니다.
+          짧은 시간이라도 싫은 일을 잊을 수 있었던 것이 아닐까요?）
+        </p>
+      </article>
+
+      <!-- Q6 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">6</span>
+          もしパワーもこの
+          <ruby>場面<rt>ばめん</rt></ruby>にいたら、
+          何を<ruby>言<rt>い</rt></ruby>って、
+          どんな<ruby>行動<rt>こうどう</rt></ruby>をしたと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </h4>
+
+        <p>
+          만약 파워도 이 장면에 있었다면
+          무슨 말을 하고 어떤 행동을 했을 것 같습니까?
+        </p>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          パワーも
+          <ruby>絶対<rt>ぜったい</rt></ruby>に
+          <ruby>参加<rt>さんか</rt></ruby>したと
+          <ruby>思<rt>おも</rt></ruby>います。<br>
+          たぶん「ワシが
+          <ruby>一番強<rt>いちばんつよ</rt></ruby>く
+          <ruby>蹴<rt>け</rt></ruby>れる！」と
+          <ruby>言<rt>い</rt></ruby>いながら、
+          デンジと
+          <ruby>競争<rt>きょうそう</rt></ruby>したのではないでしょうか。<br>
+          そして、
+          <ruby>自分<rt>じぶん</rt></ruby>が
+          <ruby>勝<rt>か</rt></ruby>ったと
+          <ruby>勝手<rt>かって</rt></ruby>に
+          <ruby>決<rt>き</rt></ruby>めそうです。<br><br>
+
+          （파워도 반드시 참가했을 것이라고 생각합니다.
+          아마 “내가 가장 세게 찰 수 있다!”라고 말하면서
+          덴지와 경쟁하지 않았을까요?
+          그리고 자신이 이겼다고 마음대로 결정할 것 같습니다.）
+        </p>
+      </article>
+
+      <!-- Q7 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">7</span>
+          この<ruby>場面<rt>ばめん</rt></ruby>のあと、
+          デンジとアキは
+          <ruby>前<rt>まえ</rt></ruby>より
+          <ruby>仲良<rt>なかよ</rt></ruby>くなったと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </h4>
+
+        <p>
+          이 장면 이후 덴지와 아키는
+          전보다 친해졌다고 생각합니까?
+        </p>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          はい、少し
+          <ruby>仲良<rt>なかよ</rt></ruby>くなったと
+          <ruby>思<rt>おも</rt></ruby>います。<br>
+          二人は
+          <ruby>性格<rt>せいかく</rt></ruby>が
+          <ruby>全然違<rt>ぜんぜんちが</rt></ruby>いますが、
+          この<ruby>場面<rt>ばめん</rt></ruby>では
+          同じ<ruby>目的<rt>もくてき</rt></ruby>で
+          <ruby>一緒<rt>いっしょ</rt></ruby>に
+          <ruby>行動<rt>こうどう</rt></ruby>しました。<br>
+          こういう
+          <ruby>馬鹿<rt>ばか</rt></ruby>な
+          <ruby>経験<rt>けいけん</rt></ruby>を
+          <ruby>共有<rt>きょうゆう</rt></ruby>すると、
+          <ruby>人<rt>ひと</rt></ruby>は
+          <ruby>意外<rt>いがい</rt></ruby>と
+          <ruby>仲良<rt>なかよ</rt></ruby>くなると
+          <ruby>思<rt>おも</rt></ruby>います。<br><br>
+
+          （네, 조금 친해졌다고 생각합니다.
+          두 사람은 성격이 전혀 다르지만,
+          이 장면에서는 같은 목적으로 함께 행동했습니다.
+          이런 바보 같은 경험을 공유하면
+          사람은 의외로 친해진다고 생각합니다.）
+        </p>
+      </article>
+
+      <!-- Q8 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">8</span>
+          あなたも
+          <ruby>友達<rt>ともだち</rt></ruby>と
+          <ruby>一緒<rt>いっしょ</rt></ruby>に、
+          <ruby>子供<rt>こども</rt></ruby>っぽい
+          <ruby>遊<rt>あそ</rt></ruby>びや
+          <ruby>馬鹿<rt>ばか</rt></ruby>な
+          <ruby>冗談<rt>じょうだん</rt></ruby>をしたことがありますか。
+        </h4>
+
+        <p>
+          당신도 친구와 함께
+          어린아이 같은 놀이나 바보 같은 장난을 한 적이 있습니까?
+        </p>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          はい、あります。<br>
+          <ruby>友達<rt>ともだち</rt></ruby>と
+          カラオケに
+          <ruby>行<rt>い</rt></ruby>ったとき、
+          どちらがもっと
+          <ruby>変<rt>へん</rt></ruby>な
+          <ruby>声<rt>こえ</rt></ruby>で
+          <ruby>歌<rt>うた</rt></ruby>えるか
+          <ruby>競争<rt>きょうそう</rt></ruby>したことがあります。<br>
+          とても
+          <ruby>子供<rt>こども</rt></ruby>っぽい
+          <ruby>遊<rt>あそ</rt></ruby>びでしたが、
+          ストレスが
+          <ruby>減<rt>へ</rt></ruby>って
+          <ruby>楽<rt>たの</rt></ruby>しかったです。<br><br>
+
+          （네, 있습니다.
+          친구와 노래방에 갔을 때
+          누가 더 이상한 목소리로 노래할 수 있는지 경쟁한 적이 있습니다.
+          매우 어린아이 같은 놀이였지만
+          스트레스가 줄어들어 즐거웠습니다.）
+        </p>
+      </article>
+
+      <!-- Q9 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">9</span>
+          もしあなたがアキと
+          <ruby>一緒<rt>いっしょ</rt></ruby>にいたら、
+          デンジのゲームに
+          <ruby>参加<rt>さんか</rt></ruby>しますか。
+          それとも
+          <ruby>止<rt>と</rt></ruby>めますか。
+        </h4>
+
+        <p>
+          만약 당신이 아키와 함께 있었다면
+          덴지의 게임에 참가하겠습니까?
+          아니면 말리겠습니까?
+        </p>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          私は
+          <ruby>直接<rt>ちょくせつ</rt></ruby>
+          <ruby>参加<rt>さんか</rt></ruby>しないと
+          <ruby>思<rt>おも</rt></ruby>います。<br>
+          でも、二人を
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>止<rt>と</rt></ruby>めることもしないと
+          <ruby>思<rt>おも</rt></ruby>います。<br>
+          サムライソードがしたことを
+          <ruby>考<rt>かんが</rt></ruby>えると、
+          二人が少し
+          <ruby>怒<rt>いか</rt></ruby>りを
+          <ruby>発散<rt>はっさん</rt></ruby>したい
+          <ruby>気持<rt>きも</rt></ruby>ちは
+          <ruby>理解<rt>りかい</rt></ruby>できるからです。<br>
+          たぶん少し
+          <ruby>離<rt>はな</rt></ruby>れたところから
+          <ruby>見<rt>み</rt></ruby>ていると
+          <ruby>思<rt>おも</rt></ruby>います。<br><br>
+
+          （저는 직접 참가하지는 않을 것 같습니다.
+          하지만 두 사람을 강하게 말리지도 않을 것 같습니다.
+          사무라이 소드가 한 일을 생각하면
+          두 사람이 조금 분노를 풀고 싶은 마음은 이해할 수 있기 때문입니다.
+          아마 조금 떨어진 곳에서 보고 있을 것 같습니다.）
+        </p>
+      </article>
+
+      <!-- Q10 -->
+      <article class="mbti-card">
+        <h4 class="mbti-card-title">
+          <span class="mbti-choice-number">10</span>
+          デンジがゲームを
+          <ruby>提案<rt>ていあん</rt></ruby>したことと、
+          アキが<ruby>本当<rt>ほんとう</rt></ruby>に
+          <ruby>参加<rt>さんか</rt></ruby>したことでは、
+          どちらのほうが
+          <ruby>面白<rt>おもしろ</rt></ruby>かったですか。
+        </h4>
+
+        <p>
+          덴지가 게임을 제안한 것과
+          아키가 실제로 참가한 것 중
+          어느 쪽이 더 재미있었습니까?
+        </p>
+
+        <p class="example-sentence">
+          <strong>N3 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
+
+          私はアキが
+          <ruby>本当<rt>ほんとう</rt></ruby>に
+          <ruby>参加<rt>さんか</rt></ruby>したことのほうが
+          <ruby>面白<rt>おもしろ</rt></ruby>かったです。<br>
+          デンジなら、
+          あのような
+          <ruby>馬鹿<rt>ばか</rt></ruby>な
+          <ruby>提案<rt>ていあん</rt></ruby>をしても
+          あまり<ruby>驚<rt>おどろ</rt></ruby>きません。<br>
+          しかし、
+          <ruby>普段<rt>ふだん</rt></ruby>は
+          <ruby>真面目<rt>まじめ</rt></ruby>なアキが
+          <ruby>参加<rt>さんか</rt></ruby>したので、
+          とても<ruby>意外<rt>いがい</rt></ruby>でした。<br>
+          アキにもこういう
+          <ruby>面<rt>めん</rt></ruby>があるんだと
+          <ruby>思<rt>おも</rt></ruby>いました。<br><br>
+
+          （저는 아키가 실제로 참가한 쪽이 더 재미있었습니다.
+          덴지라면 그런 바보 같은 제안을 해도 별로 놀랍지 않습니다.
+          하지만 평소에 진지한 아키가 참가했기 때문에 매우 의외였습니다.
+          아키에게도 이런 면이 있다고 생각했습니다.）
+        </p>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- 3. 문법 설명 -->
+  <div class="language-notes">
+    <h3 class="section-title">
+      3．<ruby>文法説明<rt>ぶんぽうせつめい</rt></ruby>
+      （문법 설명）
+    </h3>
+
+    <div class="language-note-grid">
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          <ruby>意見<rt>いけん</rt></ruby>を
+          <ruby>話<rt>はな</rt></ruby>す
+          <ruby>表現<rt>ひょうげん</rt></ruby>
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            1．～と<ruby>思<rt>おも</rt></ruby>います
+          </span>
+
+          <p class="grammar-explanation">
+            自分の<ruby>意見<rt>いけん</rt></ruby>や
+            <ruby>予想<rt>よそう</rt></ruby>を
+            <ruby>伝<rt>つた</rt></ruby>える
+            <ruby>基本的<rt>きほんてき</rt></ruby>な
+            <ruby>表現<rt>ひょうげん</rt></ruby>です。
+            （자신의 의견이나 예상을 전달하는 기본적인 표현입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキも
+            <ruby>怒<rt>おこ</rt></ruby>っていたと
+            <ruby>思<rt>おも</rt></ruby>います。<br>
+            この<ruby>場面<rt>ばめん</rt></ruby>は
+            <ruby>面白<rt>おもしろ</rt></ruby>かったと
+            <ruby>思<rt>おも</rt></ruby>います。<br>
+            （아키도 화가 나 있었다고 생각합니다.<br>
+            이 장면은 재미있었다고 생각합니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            2．～のではないでしょうか
+          </span>
+
+          <p class="grammar-explanation">
+            自分の<ruby>予想<rt>よそう</rt></ruby>や
+            <ruby>意見<rt>いけん</rt></ruby>を
+            <ruby>少<rt>すこ</rt></ruby>し
+            <ruby>柔<rt>やわ</rt></ruby>らかく
+            <ruby>伝<rt>つた</rt></ruby>える
+            <ruby>表現<rt>ひょうげん</rt></ruby>です。
+            （자신의 예상이나 의견을 조금 부드럽게 전달하는 표현입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキも
+            <ruby>気分転換<rt>きぶんてんかん</rt></ruby>を
+            したかったのではないでしょうか。<br>
+            パワーも
+            <ruby>参加<rt>さんか</rt></ruby>したのではないでしょうか。<br>
+            （아키도 기분 전환을 하고 싶었던 것이 아닐까요?<br>
+            파워도 참가하지 않았을까요?）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            3．～かもしれません
+          </span>
+
+          <p class="grammar-explanation">
+            はっきりとは
+            <ruby>分<rt>わ</rt></ruby>からないことを
+            <ruby>想像<rt>そうぞう</rt></ruby>するときに
+            <ruby>使<rt>つか</rt></ruby>います。
+            （확실하게 알 수 없는 것을 상상할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキは少し
+            <ruby>楽<rt>らく</rt></ruby>になったかもしれません。<br>
+            デンジはアキを
+            <ruby>元気<rt>げんき</rt></ruby>にしたかったのかもしれません。<br>
+            （아키는 조금 편해졌을지도 모릅니다.<br>
+            덴지는 아키를 기운 나게 하고 싶었을지도 모릅니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            4．～ように<ruby>見<rt>み</rt></ruby>えます
+          </span>
+
+          <p class="grammar-explanation">
+            人の<ruby>表情<rt>ひょうじょう</rt></ruby>や
+            <ruby>行動<rt>こうどう</rt></ruby>から
+            <ruby>受<rt>う</rt></ruby>けた
+            <ruby>印象<rt>いんしょう</rt></ruby>を
+            <ruby>話<rt>はな</rt></ruby>すときに
+            <ruby>使<rt>つか</rt></ruby>います。
+            （사람의 표정이나 행동에서 받은 인상을 말할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキはまだ
+            <ruby>悲<rt>かな</rt></ruby>しそうに
+            <ruby>見<rt>み</rt></ruby>えました。<br>
+            デンジは
+            <ruby>楽<rt>たの</rt></ruby>しんでいるように
+            <ruby>見<rt>み</rt></ruby>えました。<br>
+            （아키는 아직 슬퍼 보였습니다.<br>
+            덴지는 즐기고 있는 것처럼 보였습니다.）
+          </p>
+        </div>
+
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">N3</span>
+          <ruby>比較<rt>ひかく</rt></ruby>・
+          <ruby>理由<rt>りゆう</rt></ruby>の
+          <ruby>表現<rt>ひょうげん</rt></ruby>
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            5．～より、～のほうが
+          </span>
+
+          <p class="grammar-explanation">
+            二つのものを
+            <ruby>比<rt>くら</rt></ruby>べて、
+            どちらがより
+            <ruby>強<rt>つよ</rt></ruby>いか、
+            <ruby>面白<rt>おもしろ</rt></ruby>いかなどを
+            <ruby>話<rt>はな</rt></ruby>す
+            <ruby>表現<rt>ひょうげん</rt></ruby>です。
+            （두 가지를 비교하여 어느 쪽이 더 강한지,
+            재미있는지 등을 말하는 표현입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジの
+            <ruby>提案<rt>ていあん</rt></ruby>より、
+            アキが<ruby>参加<rt>さんか</rt></ruby>したことのほうが
+            <ruby>面白<rt>おもしろ</rt></ruby>かったです。<br>
+            <ruby>真面目<rt>まじめ</rt></ruby>な
+            <ruby>会話<rt>かいわ</rt></ruby>より、
+            <ruby>馬鹿<rt>ばか</rt></ruby>な
+            <ruby>遊<rt>あそ</rt></ruby>びのほうが
+            <ruby>気分転換<rt>きぶんてんかん</rt></ruby>になることもあります。<br>
+            （덴지의 제안보다 아키가 참가한 것이 더 재미있었습니다.<br>
+            진지한 대화보다 바보 같은 놀이가 기분 전환이 되는 경우도 있습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            6．～からです
+          </span>
+
+          <p class="grammar-explanation">
+            自分の<ruby>意見<rt>いけん</rt></ruby>の
+            <ruby>理由<rt>りゆう</rt></ruby>を
+            <ruby>説明<rt>せつめい</rt></ruby>するときに
+            <ruby>使<rt>つか</rt></ruby>います。
+            （자신의 의견에 대한 이유를 설명할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキが<ruby>参加<rt>さんか</rt></ruby>したところが
+            <ruby>面白<rt>おもしろ</rt></ruby>かったです。<br>
+            <ruby>普段<rt>ふだん</rt></ruby>のアキからは
+            <ruby>想像<rt>そうぞう</rt></ruby>できない
+            <ruby>行動<rt>こうどう</rt></ruby>だったからです。<br>
+            （아키가 참가한 부분이 재미있었습니다.<br>
+            평소의 아키에게서는 상상할 수 없는 행동이었기 때문입니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            7．～わけではありません
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>全部<rt>ぜんぶ</rt></ruby>がそうではない、
+            または<ruby>完全<rt>かんぜん</rt></ruby>に
+            そうではないと
+            <ruby>説明<rt>せつめい</rt></ruby>するときに
+            <ruby>使<rt>つか</rt></ruby>います。
+            （전부 그런 것은 아니거나,
+            완전히 그런 것은 아니라고 설명할 때 사용합니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキが
+            <ruby>完全<rt>かんぜん</rt></ruby>に
+            <ruby>元気<rt>げんき</rt></ruby>になったわけではありません。<br>
+            デンジが何も
+            <ruby>考<rt>かんが</rt></ruby>えていないわけではありません。<br>
+            （아키가 완전히 기운을 차린 것은 아닙니다.<br>
+            덴지가 아무 생각도 하지 않는 것은 아닙니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            8．～ているうちに
+          </span>
+
+          <p class="grammar-explanation">
+            ある<ruby>行動<rt>こうどう</rt></ruby>や
+            <ruby>状態<rt>じょうたい</rt></ruby>が
+            <ruby>続<rt>つづ</rt></ruby>いている
+            <ruby>間<rt>あいだ</rt></ruby>に、
+            <ruby>自然<rt>しぜん</rt></ruby>に
+            <ruby>変化<rt>へんか</rt></ruby>が
+            <ruby>起<rt>お</rt></ruby>こることを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （어떤 행동이나 상태가 계속되는 동안
+            자연스럽게 변화가 일어나는 것을 나타냅니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジの<ruby>話<rt>はなし</rt></ruby>を
+            <ruby>聞<rt>き</rt></ruby>いているうちに、
+            アキも<ruby>参加<rt>さんか</rt></ruby>したくなりました。<br>
+            <ruby>一緒<rt>いっしょ</rt></ruby>に
+            <ruby>働<rt>はたら</rt></ruby>いているうちに、
+            二人は<ruby>仲良<rt>なかよ</rt></ruby>くなりました。<br>
+            （덴지의 이야기를 듣는 동안
+            아키도 참가하고 싶어졌습니다.<br>
+            함께 일하는 동안 두 사람은 친해졌습니다.）
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <!-- 4. 어휘 설명 -->
+  <div class="language-notes">
+    <h3 class="section-title">
+      4．<ruby>語彙説明<rt>ごいせつめい</rt></ruby>
+      （어휘 설명）
+    </h3>
+
+    <div class="language-note-grid">
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">語彙</span>
+          <ruby>場面<rt>ばめん</rt></ruby>を
+          <ruby>話<rt>はな</rt></ruby>すための
+          <ruby>言葉<rt>ことば</rt></ruby>
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            1．<ruby>復讐<rt>ふくしゅう</rt></ruby>
+          </span>
+
+          <p class="grammar-explanation">
+            自分や<ruby>大切<rt>たいせつ</rt></ruby>な
+            <ruby>人<rt>ひと</rt></ruby>を
+            <ruby>傷<rt>きず</rt></ruby>つけた
+            <ruby>相手<rt>あいて</rt></ruby>に、
+            <ruby>仕返<rt>しかえ</rt></ruby>しをすることです。
+            （자신이나 소중한 사람을 다치게 한 상대에게 보복하는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジは
+            <ruby>簡単<rt>かんたん</rt></ruby>な
+            <ruby>復讐<rt>ふくしゅう</rt></ruby>を
+            <ruby>提案<rt>ていあん</rt></ruby>しました。<br>
+            （덴지는 간단한 복수를 제안했습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            2．<ruby>仕返<rt>しかえ</rt></ruby>し
+          </span>
+
+          <p class="grammar-explanation">
+            自分に<ruby>嫌<rt>いや</rt></ruby>なことをした
+            <ruby>相手<rt>あいて</rt></ruby>に、
+            同じように
+            <ruby>嫌<rt>いや</rt></ruby>なことをすることです。
+            「<ruby>復讐<rt>ふくしゅう</rt></ruby>」より
+            <ruby>日常的<rt>にちじょうてき</rt></ruby>で
+            <ruby>軽<rt>かる</rt></ruby>い
+            <ruby>場面<rt>ばめん</rt></ruby>でも
+            <ruby>使<rt>つか</rt></ruby>われます。
+            （자신에게 싫은 일을 한 상대에게
+            비슷한 방식으로 되갚는 것입니다.
+            ‘복수’보다 일상적이고 가벼운 상황에서도 사용됩니다.）
+          </p>
+
+          <p class="example-sentence">
+            <ruby>弟<rt>おとうと</rt></ruby>に
+            いたずらをされたので、
+            <ruby>仕返<rt>しかえ</rt></ruby>しをしました。<br>
+            （남동생에게 장난을 당해서 되갚아 주었습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            3．<ruby>股間<rt>こかん</rt></ruby>
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>両足<rt>りょうあし</rt></ruby>の
+            <ruby>間<rt>あいだ</rt></ruby>にある
+            <ruby>体<rt>からだ</rt></ruby>の
+            <ruby>部分<rt>ぶぶん</rt></ruby>です。
+            （두 다리 사이에 있는 신체 부위입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジはサムライソードの
+            <ruby>股間<rt>こかん</rt></ruby>を
+            <ruby>蹴<rt>け</rt></ruby>りました。<br>
+            （덴지는 사무라이 소드의 가랑이를 찼습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            4．<ruby>蹴<rt>け</rt></ruby>る
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>足<rt>あし</rt></ruby>を
+            <ruby>使<rt>つか</rt></ruby>って
+            <ruby>人<rt>ひと</rt></ruby>や
+            <ruby>物<rt>もの</rt></ruby>を
+            <ruby>強<rt>つよ</rt></ruby>く
+            <ruby>打<rt>う</rt></ruby>つことです。
+            （발을 사용하여 사람이나 물건을 강하게 치는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            ボールを
+            <ruby>強<rt>つよ</rt></ruby>く
+            <ruby>蹴<rt>け</rt></ruby>りました。<br>
+            （공을 세게 찼습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            5．<ruby>悲鳴<rt>ひめい</rt></ruby>
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>怖<rt>こわ</rt></ruby>いときや
+            <ruby>痛<rt>いた</rt></ruby>いときに
+            <ruby>出<rt>だ</rt></ruby>す
+            大きな<ruby>声<rt>こえ</rt></ruby>です。
+            （무섭거나 아플 때 내는 큰 소리입니다.）
+          </p>
+
+          <p class="example-sentence">
+            サムライソードは大きな
+            <ruby>悲鳴<rt>ひめい</rt></ruby>を
+            <ruby>上<rt>あ</rt></ruby>げました。<br>
+            （사무라이 소드는 큰 비명을 질렀습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            6．<ruby>提案<rt>ていあん</rt></ruby>する
+          </span>
+
+          <p class="grammar-explanation">
+            自分の<ruby>考<rt>かんが</rt></ruby>えや
+            <ruby>方法<rt>ほうほう</rt></ruby>を
+            <ruby>相手<rt>あいて</rt></ruby>に
+            <ruby>示<rt>しめ</rt></ruby>すことです。
+            （자신의 생각이나 방법을 상대에게 제시하는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジは
+            <ruby>変<rt>へん</rt></ruby>なゲームを
+            <ruby>提案<rt>ていあん</rt></ruby>しました。<br>
+            （덴지는 이상한 게임을 제안했습니다.）
+          </p>
+        </div>
+
+      </section>
+
+      <section class="language-note-card">
+        <h3>
+          <span class="level-label level-label--n3">語彙</span>
+          <ruby>感情<rt>かんじょう</rt></ruby>と
+          <ruby>関係<rt>かんけい</rt></ruby>の
+          <ruby>言葉<rt>ことば</rt></ruby>
+        </h3>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            7．<ruby>気分転換<rt>きぶんてんかん</rt></ruby>
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>嫌<rt>いや</rt></ruby>な
+            <ruby>気持<rt>きも</rt></ruby>ちや
+            ストレスを
+            <ruby>変<rt>か</rt></ruby>えるために、
+            別のことをすることです。
+            （싫은 기분이나 스트레스를 바꾸기 위해
+            다른 일을 하는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            <ruby>気分転換<rt>きぶんてんかん</rt></ruby>のために
+            <ruby>散歩<rt>さんぽ</rt></ruby>します。<br>
+            （기분 전환을 위해 산책합니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            8．ストレスを<ruby>発散<rt>はっさん</rt></ruby>する
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>心<rt>こころ</rt></ruby>の
+            <ruby>中<rt>なか</rt></ruby>にたまった
+            ストレスを
+            <ruby>外<rt>そと</rt></ruby>に
+            <ruby>出<rt>だ</rt></ruby>して、
+            <ruby>気持<rt>きも</rt></ruby>ちを
+            <ruby>楽<rt>らく</rt></ruby>にすることです。
+            （마음속에 쌓인 스트레스를 밖으로 풀어내
+            기분을 편하게 하는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            私は<ruby>運動<rt>うんどう</rt></ruby>をして
+            ストレスを
+            <ruby>発散<rt>はっさん</rt></ruby>します。<br>
+            （저는 운동을 해서 스트레스를 풉니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            9．<ruby>我慢<rt>がまん</rt></ruby>する
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>痛<rt>いた</rt></ruby>みや
+            <ruby>悲<rt>かな</rt></ruby>しみ、
+            <ruby>怒<rt>いか</rt></ruby>りなどを
+            <ruby>表<rt>おもて</rt></ruby>に
+            <ruby>出<rt>だ</rt></ruby>さずに
+            <ruby>耐<rt>た</rt></ruby>えることです。
+            （아픔이나 슬픔, 분노 등을 겉으로 드러내지 않고 참는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキは
+            <ruby>悲<rt>かな</rt></ruby>しい
+            <ruby>気持<rt>きも</rt></ruby>ちを
+            <ruby>我慢<rt>がまん</rt></ruby>していました。<br>
+            （아키는 슬픈 감정을 참고 있었습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            10．<ruby>仲間意識<rt>なかまいしき</rt></ruby>
+          </span>
+
+          <p class="grammar-explanation">
+            同じグループやチームの
+            <ruby>人<rt>ひと</rt></ruby>を
+            <ruby>大切<rt>たいせつ</rt></ruby>に
+            <ruby>思<rt>おも</rt></ruby>う
+            <ruby>気持<rt>きも</rt></ruby>ちです。
+            （같은 그룹이나 팀의 사람을 소중하게 생각하는 마음입니다.）
+          </p>
+
+          <p class="example-sentence">
+            この<ruby>場面<rt>ばめん</rt></ruby>で、
+            二人の<ruby>仲間意識<rt>なかまいしき</rt></ruby>が
+            <ruby>強<rt>つよ</rt></ruby>くなったと
+            <ruby>思<rt>おも</rt></ruby>います。<br>
+            （이 장면에서 두 사람의 동료 의식이 강해졌다고 생각합니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            11．<ruby>意外<rt>いがい</rt></ruby>
+          </span>
+
+          <p class="grammar-explanation">
+            自分が<ruby>予想<rt>よそう</rt></ruby>していた
+            <ruby>結果<rt>けっか</rt></ruby>と
+            <ruby>違<rt>ちが</rt></ruby>うことです。
+            （자신이 예상했던 결과와 다른 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            アキが<ruby>参加<rt>さんか</rt></ruby>したのは
+            <ruby>意外<rt>いがい</rt></ruby>でした。<br>
+            （아키가 참가한 것은 의외였습니다.）
+          </p>
+        </div>
+
+        <div class="grammar-item">
+          <span class="grammar-expression">
+            12．<ruby>子供<rt>こども</rt></ruby>っぽい
+          </span>
+
+          <p class="grammar-explanation">
+            <ruby>行動<rt>こうどう</rt></ruby>や
+            <ruby>考<rt>かんが</rt></ruby>え
+            <ruby>方<rt>かた</rt></ruby>が、
+            <ruby>子供<rt>こども</rt></ruby>のように
+            <ruby>見<rt>み</rt></ruby>えることです。
+            （행동이나 사고방식이 아이처럼 보이는 것입니다.）
+          </p>
+
+          <p class="example-sentence">
+            デンジの
+            <ruby>復讐方法<rt>ふくしゅうほうほう</rt></ruby>は
+            <ruby>子供<rt>こども</rt></ruby>っぽいですが、
+            <ruby>面白<rt>おもしろ</rt></ruby>かったです。<br>
+            （덴지의 복수 방법은 어린아이 같았지만 재미있었습니다.）
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <div class="notice-box">
+    この<ruby>場面<rt>ばめん</rt></ruby>では、
+    <ruby>復讐<rt>ふくしゅう</rt></ruby>の
+    <ruby>意味<rt>いみ</rt></ruby>や
+    <ruby>人間<rt>にんげん</rt></ruby>の
+    <ruby>本質<rt>ほんしつ</rt></ruby>について
+    <ruby>難<rt>むずか</rt></ruby>しく
+    <ruby>考<rt>かんが</rt></ruby>える
+    <ruby>必要<rt>ひつよう</rt></ruby>はありません。
+
+    「<ruby>笑<rt>わら</rt></ruby>えたか」、
+    「アキはどうして
+    <ruby>参加<rt>さんか</rt></ruby>したのか」、
+    「パワーがいたらどうしたか」など、
+    <ruby>友達<rt>ともだち</rt></ruby>と
+    アニメを<ruby>見<rt>み</rt></ruby>ながら
+    <ruby>話<rt>はな</rt></ruby>すような
+    <ruby>感覚<rt>かんかく</rt></ruby>で
+    <ruby>答<rt>こた</rt></ruby>えてください。
+
+    （이 장면에서는 복수의 의미나 인간의 본질에 대해
+    어렵게 생각할 필요가 없습니다.
+
+    ‘웃겼는지’, ‘아키가 왜 참가했는지’,
+    ‘파워가 있었다면 어떻게 했을지’ 등
+    친구와 애니메이션을 보면서 이야기하는 느낌으로 답해 주세요.）
+  </div>
+
+</section>
