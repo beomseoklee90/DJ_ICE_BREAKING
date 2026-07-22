@@ -906,1403 +906,193 @@
       デンジとアキの「イージーリベンジ」
     </h2>
   </header>
-
-  <!-- 1. 장면 묘사 -->
-  <div class="section-block">
-    <h3 class="section-title">
-      1．<ruby>場面描写<rt>ばめんびょうしゃ</rt></ruby>
-      （장면 묘사）
-    </h3>
-
-    <div class="situation">
-      <p>
-        デンジとアキは、
-        <ruby>仲間<rt>なかま</rt></ruby>を
-        <ruby>傷<rt>きず</rt></ruby>つけたサムライソードを
-        <ruby>捕<rt>つか</rt></ruby>まえます。
-        （덴지와 아키는 동료를 다치게 한 사무라이 소드를 붙잡습니다.）
-      </p>
-
-      <p>
-        サムライソードはすでに
-        <ruby>抵抗<rt>ていこう</rt></ruby>できない
-        <ruby>状態<rt>じょうたい</rt></ruby>でしたが、
-        デンジはアキに、
-        「こいつの
-        <ruby>股間<rt>こかん</rt></ruby>を
-        <ruby>交代<rt>こうたい</rt></ruby>で
-        <ruby>蹴<rt>け</rt></ruby>ろう」
-        と<ruby>提案<rt>ていあん</rt></ruby>します。
-        （사무라이 소드는 이미 저항할 수 없는 상태였지만,
-        덴지는 아키에게 “이 녀석의 가랑이를 번갈아 차자”고 제안합니다.）
-      </p>
-
-      <p>
-        さらに、
-        一番大きな
-        <ruby>悲鳴<rt>ひめい</rt></ruby>を
-        <ruby>上<rt>あ</rt></ruby>げさせた
-        <ruby>人<rt>ひと</rt></ruby>が
-        <ruby>勝<rt>か</rt></ruby>ちという、
-        かなり
-        <ruby>悪趣味<rt>あくしゅみ</rt></ruby>なゲームまで
-        <ruby>始<rt>はじ</rt></ruby>めようとします。
-        （게다가 가장 큰 비명을 지르게 한 사람이 이긴다는,
-        상당히 짓궂은 게임까지 시작하려고 합니다.）
-      </p>
-
-      <p>
-        アキは
-        <ruby>当初<rt>とうしょ</rt></ruby>、
-        デンジの<ruby>提案<rt>ていあん</rt></ruby>を
-        <ruby>冷静<rt>れいせい</rt></ruby>に
-        <ruby>断<rt>ことわ</rt></ruby>ります。
-        しかし、
-        少し<ruby>考<rt>かんが</rt></ruby>えたあと、
-        <ruby>結局<rt>けっきょく</rt></ruby>は
-        デンジの<ruby>悪<rt>わる</rt></ruby>ノリに
-        <ruby>加<rt>くわ</rt></ruby>わり、
-        サムライソードを
-        <ruby>一緒<rt>いっしょ</rt></ruby>に
-        <ruby>蹴<rt>け</rt></ruby>ります。
-        （아키는 처음에는 덴지의 제안을 냉정하게 거절합니다.
-        그러나 잠시 생각한 뒤 결국 덴지의 짓궂은 장난에 동참해
-        함께 사무라이 소드를 찹니다.）
-      </p>
-
-      <p>
-        <ruby>普段<rt>ふだん</rt></ruby>は
-        <ruby>真面目<rt>まじめ</rt></ruby>で
-        <ruby>感情<rt>かんじょう</rt></ruby>を
-        <ruby>表<rt>おもて</rt></ruby>に
-        <ruby>出<rt>だ</rt></ruby>さないアキが、
-        デンジの
-        <ruby>子供<rt>こども</rt></ruby>っぽい
-        <ruby>仕返<rt>しかえ</rt></ruby>しに
-        <ruby>便乗<rt>びんじょう</rt></ruby>するところが
-        <ruby>印象的<rt>いんしょうてき</rt></ruby>な
-        <ruby>場面<rt>ばめん</rt></ruby>です。
-        （평소에는 진지하고 감정을 겉으로 드러내지 않는 아키가
-        덴지의 어린아이 같은 복수에 편승하는 점이 인상적인 장면입니다.）
-      </p>
-
-      <div class="notice-box">
-        この<ruby>場面<rt>ばめん</rt></ruby>について、
-        <ruby>難<rt>むずか</rt></ruby>しい
-        <ruby>分析<rt>ぶんせき</rt></ruby>をする
-        <ruby>必要<rt>ひつよう</rt></ruby>はありません。
-
-        「<ruby>笑<rt>わら</rt></ruby>えたか」、
-        「少しやりすぎだと
-        <ruby>感<rt>かん</rt></ruby>じたか」、
-        「アキがなぜ
-        <ruby>参加<rt>さんか</rt></ruby>したのか」など、
-        <ruby>友達<rt>ともだち</rt></ruby>と
-        アニメを<ruby>見<rt>み</rt></ruby>ながら
-        <ruby>話<rt>はな</rt></ruby>すような
-        <ruby>感覚<rt>かんかく</rt></ruby>で
-        <ruby>答<rt>こた</rt></ruby>えてください。
-
-        （이 장면에 대해 어려운 분석을 할 필요는 없습니다.
-        ‘웃겼는지’, ‘조금 지나치다고 느꼈는지’,
-        ‘아키가 왜 참가했는지’ 등
-        친구와 애니메이션을 보면서 이야기하는 느낌으로 답해 주세요.）
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. 질문 10개 + N2 예제 답변 -->
-  <div class="section-block mbti-analysis">
-    <h3 class="section-title">
-      2．<ruby>場面<rt>ばめん</rt></ruby>についての
-      <ruby>質問<rt>しつもん</rt></ruby>
-      （장면에 대한 질문 10개）
-    </h3>
-
-    <p class="section-description">
-      一つの<ruby>質問<rt>しつもん</rt></ruby>に
-      20～40<ruby>秒<rt>びょう</rt></ruby>くらいで
-      <ruby>答<rt>こた</rt></ruby>えてみましょう。
-      <ruby>結論<rt>けつろん</rt></ruby>だけでなく、
-      <ruby>理由<rt>りゆう</rt></ruby>や
-      <ruby>補足<rt>ほそく</rt></ruby>を一つ
-      <ruby>加<rt>くわ</rt></ruby>えると、
-      よりN2らしい<ruby>答<rt>こた</rt></ruby>えになります。
-      （질문 하나에 20~40초 정도로 답해 봅시다.
-      결론뿐 아니라 이유나 보충 설명을 하나 추가하면
-      더욱 N2다운 답변이 됩니다.）
-    </p>
-
-    <div class="mbti-grid">
-
-      <!-- Q1 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">1</span>
-          この<ruby>場面<rt>ばめん</rt></ruby>は
-          <ruby>正直<rt>しょうじき</rt></ruby>
-          <ruby>笑<rt>わら</rt></ruby>えましたか。
-          それとも、少しひどいと
-          <ruby>思<rt>おも</rt></ruby>いましたか。
-        </h4>
-
-        <p>
-          이 장면은 솔직히 웃겼습니까?
-          아니면 조금 심하다고 생각했습니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>面白<rt>おもしろ</rt></ruby>かったか＋
-          やりすぎだと<ruby>感<rt>かん</rt></ruby>じたか＋
-          その<ruby>理由<rt>りゆう</rt></ruby><br>
-          （답변 포인트: 재미있었는지＋지나치다고 느꼈는지＋그 이유）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          <ruby>正直<rt>しょうじき</rt></ruby>に
-          <ruby>言<rt>い</rt></ruby>うと、
-          かなり<ruby>笑<rt>わら</rt></ruby>いました。<br>
-          すでに<ruby>抵抗<rt>ていこう</rt></ruby>できない
-          <ruby>相手<rt>あいて</rt></ruby>を
-          <ruby>蹴<rt>け</rt></ruby>るのは、
-          多少やりすぎだとは
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          とはいえ、
-          サムライソードがそれまでにしたことを
-          <ruby>考<rt>かんが</rt></ruby>えると、
-          あまり<ruby>同情<rt>どうじょう</rt></ruby>する
-          <ruby>気<rt>き</rt></ruby>にはなれませんでした。<br>
-          何より、アキまで
-          <ruby>真顔<rt>まがお</rt></ruby>で
-          <ruby>参加<rt>さんか</rt></ruby>したところが
-          一番<ruby>面白<rt>おもしろ</rt></ruby>かったです。<br><br>
-
-          （솔직히 말하면 상당히 웃었습니다.
-          이미 저항할 수 없는 상대를 차는 것은
-          다소 지나치다고 생각합니다.
-          그렇다고 해도 사무라이 소드가 그동안 한 일을 생각하면
-          별로 동정하고 싶은 마음은 들지 않았습니다.
-          무엇보다 아키까지 진지한 얼굴로 참가한 부분이 가장 재미있었습니다.）
-        </p>
-      </article>
-
-      <!-- Q2 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">2</span>
-          アキは
-          <ruby>最初<rt>さいしょ</rt></ruby>
-          <ruby>断<rt>ことわ</rt></ruby>ったのに、
-          どうして
-          <ruby>途中<rt>とちゅう</rt></ruby>で
-          <ruby>気持<rt>きも</rt></ruby>ちを
-          <ruby>変<rt>か</rt></ruby>えたと
-          <ruby>思<rt>おも</rt></ruby>いますか。
-        </h4>
-
-        <p>
-          아키는 처음에는 거절했는데,
-          왜 도중에 마음을 바꿨다고 생각합니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          アキの<ruby>怒<rt>いか</rt></ruby>り・
-          デンジへの<ruby>反応<rt>はんのう</rt></ruby>・
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby><br>
-          （답변 포인트: 아키의 분노·덴지에 대한 반응·기분 전환）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          アキは<ruby>最初<rt>さいしょ</rt></ruby>、
-          デンジの<ruby>提案<rt>ていあん</rt></ruby>を
-          くだらないと
-          <ruby>思<rt>おも</rt></ruby>ったのだと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          ただ、アキ<ruby>自身<rt>じしん</rt></ruby>も
-          サムライソードに対して
-          かなり<ruby>怒<rt>いか</rt></ruby>りを
-          <ruby>抱<rt>かか</rt></ruby>えていたはずです。<br>
-          デンジの<ruby>話<rt>はなし</rt></ruby>を
-          <ruby>聞<rt>き</rt></ruby>いているうちに、
-          今だけは<ruby>理性<rt>りせい</rt></ruby>より
-          <ruby>感情<rt>かんじょう</rt></ruby>を
-          <ruby>優先<rt>ゆうせん</rt></ruby>してもいいと
-          <ruby>思<rt>おも</rt></ruby>ったのではないでしょうか。<br>
-          デンジの<ruby>悪<rt>わる</rt></ruby>ノリに
-          <ruby>背中<rt>せなか</rt></ruby>を
-          <ruby>押<rt>お</rt></ruby>されたようにも
-          <ruby>見<rt>み</rt></ruby>えました。<br><br>
-
-          （아키는 처음에는 덴지의 제안을 시시하다고 생각했을 것입니다.
-          하지만 아키 자신도 사무라이 소드에게 상당한 분노를 품고 있었을 것입니다.
-          덴지의 이야기를 듣는 동안
-          지금만큼은 이성보다 감정을 우선해도 된다고 생각한 것이 아닐까요?
-          덴지의 짓궂은 장난에 등을 떠밀린 것처럼도 보였습니다.）
-        </p>
-      </article>
-
-      <!-- Q3 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">3</span>
-          アキがサムライソードを
-          <ruby>蹴<rt>け</rt></ruby>ったとき、
-          どんな<ruby>気持<rt>きも</rt></ruby>ちだったと
-          <ruby>思<rt>おも</rt></ruby>いますか。
-        </h4>
-
-        <p>
-          아키가 사무라이 소드를 찰 때,
-          어떤 기분이었다고 생각합니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>復讐<rt>ふくしゅう</rt></ruby>・
-          <ruby>腹<rt>はら</rt></ruby>いせ・
-          ストレス<ruby>発散<rt>はっさん</rt></ruby>・
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby><br>
-          （복수·분풀이·스트레스 해소·기분 전환）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          <ruby>復讐<rt>ふくしゅう</rt></ruby>というより、
-          <ruby>溜<rt>た</rt></ruby>め<ruby>込<rt>こ</rt></ruby>んでいた
-          <ruby>怒<rt>いか</rt></ruby>りを
-          <ruby>一気<rt>いっき</rt></ruby>に
-          <ruby>発散<rt>はっさん</rt></ruby>していたように
-          <ruby>見<rt>み</rt></ruby>えました。<br>
-          アキはそれまで、
-          <ruby>仲間<rt>なかま</rt></ruby>を
-          <ruby>失<rt>うしな</rt></ruby>った
-          <ruby>悲<rt>かな</rt></ruby>しみや
-          <ruby>怒<rt>いか</rt></ruby>りを、
-          ほとんど<ruby>表<rt>おもて</rt></ruby>に
-          <ruby>出<rt>だ</rt></ruby>していませんでした。<br>
-          だからこそ、
-          あのときはデンジに
-          <ruby>便乗<rt>びんじょう</rt></ruby>して、
-          <ruby>遠慮<rt>えんりょ</rt></ruby>なく
-          <ruby>感情<rt>かんじょう</rt></ruby>を
-          <ruby>出<rt>だ</rt></ruby>したかったのだと
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
-
-          （복수라기보다 쌓아 두었던 분노를
-          한꺼번에 풀고 있는 것처럼 보였습니다.
-          아키는 그동안 동료를 잃은 슬픔과 분노를
-          거의 겉으로 드러내지 않았습니다.
-          그렇기 때문에 그때는 덴지에게 편승해
-          거리낌 없이 감정을 드러내고 싶었던 것 같습니다.）
-        </p>
-      </article>
-
-      <!-- Q4 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">4</span>
-          デンジの「イージーリベンジ」という
-          <ruby>考<rt>かんが</rt></ruby>えは、
-          <ruby>頭<rt>あたま</rt></ruby>が
-          <ruby>悪<rt>わる</rt></ruby>そうに
-          <ruby>見<rt>み</rt></ruby>えましたか。
-          それとも、
-          <ruby>意外<rt>いがい</rt></ruby>と
-          いい<ruby>考<rt>かんが</rt></ruby>えだと
-          <ruby>思<rt>おも</rt></ruby>いましたか。
-        </h4>
-
-        <p>
-          덴지의 ‘이지 리벤지’라는 생각은
-          머리가 나빠 보였습니까?
-          아니면 의외로 좋은 생각이라고 느꼈습니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>馬鹿<rt>ばか</rt></ruby>らしさ＋
-          アキの<ruby>気分<rt>きぶん</rt></ruby>への
-          <ruby>影響<rt>えいきょう</rt></ruby><br>
-          （답변 포인트: 바보 같음＋아키의 기분에 끼친 영향）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          <ruby>一見<rt>いっけん</rt></ruby>すると、
-          かなり<ruby>馬鹿<rt>ばか</rt></ruby>らしい
-          <ruby>考<rt>かんが</rt></ruby>えに
-          <ruby>見<rt>み</rt></ruby>えます。<br>
-          ただ、デンジなりにアキを
-          <ruby>元気<rt>げんき</rt></ruby>づけようとしたのだとすれば、
-          意外と<ruby>悪<rt>わる</rt></ruby>くない
-          <ruby>方法<rt>ほうほう</rt></ruby>だったと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          デンジは<ruby>気<rt>き</rt></ruby>の
-          <ruby>利<rt>き</rt></ruby>いた
-          <ruby>慰<rt>なぐさ</rt></ruby>めの
-          <ruby>言葉<rt>ことば</rt></ruby>を
-          <ruby>言<rt>い</rt></ruby>えるタイプではありません。<br>
-          その<ruby>代<rt>か</rt></ruby>わりに、
-          自分と<ruby>一緒<rt>いっしょ</rt></ruby>に
-          <ruby>馬鹿<rt>ばか</rt></ruby>なことをさせることで、
-          アキの<ruby>気持<rt>きも</rt></ruby>ちを
-          <ruby>軽<rt>かる</rt></ruby>くしようとしたのかもしれません。<br><br>
-
-          （언뜻 보면 상당히 바보 같은 생각으로 보입니다.
-          하지만 덴지 나름대로 아키를 기운 나게 하려고 한 것이라면
-          의외로 나쁘지 않은 방법이었다고 생각합니다.
-          덴지는 재치 있는 위로의 말을 할 수 있는 타입이 아닙니다.
-          그 대신 자신과 함께 바보 같은 일을 하게 함으로써
-          아키의 마음을 가볍게 하려고 했을지도 모릅니다.）
-        </p>
-      </article>
-
-      <!-- Q5 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">5</span>
-          この<ruby>行動<rt>こうどう</rt></ruby>で、
-          アキの<ruby>気持<rt>きも</rt></ruby>ちは
-          少し<ruby>楽<rt>らく</rt></ruby>になったと
-          <ruby>思<rt>おも</rt></ruby>いますか。
-        </h4>
-
-        <p>
-          이 행동으로 아키의 기분이
-          조금 편해졌다고 생각합니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>完全<rt>かんぜん</rt></ruby>に
-          <ruby>元気<rt>げんき</rt></ruby>になったか＋
-          <ruby>一時的<rt>いちじてき</rt></ruby>な
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby>になったか<br>
-          （답변 포인트: 완전히 회복했는지＋일시적인 기분 전환이 되었는지）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          この<ruby>行動<rt>こうどう</rt></ruby>だけで、
-          アキの<ruby>悲<rt>かな</rt></ruby>しみが
-          <ruby>消<rt>き</rt></ruby>えたわけではないと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          それでも、
-          <ruby>感情<rt>かんじょう</rt></ruby>を
-          <ruby>抑<rt>おさ</rt></ruby>えたまま
-          一人で<ruby>抱<rt>かか</rt></ruby>え
-          <ruby>込<rt>こ</rt></ruby>むよりは、
-          デンジと<ruby>一緒<rt>いっしょ</rt></ruby>に
-          <ruby>馬鹿<rt>ばか</rt></ruby>なことをしたほうが
-          <ruby>気持<rt>きも</rt></ruby>ちは
-          <ruby>和<rt>やわ</rt></ruby>らいだはずです。<br>
-          <ruby>一時的<rt>いちじてき</rt></ruby>ではあっても、
-          <ruby>嫌<rt>いや</rt></ruby>なことから
-          <ruby>意識<rt>いしき</rt></ruby>を
-          <ruby>外<rt>そ</rt></ruby>らせたという
-          <ruby>意味<rt>いみ</rt></ruby>では、
-          いい<ruby>気分転換<rt>きぶんてんかん</rt></ruby>になったと
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
-
-          （이 행동만으로 아키의 슬픔이 사라진 것은 아니라고 생각합니다.
-          그래도 감정을 억누른 채 혼자 끌어안고 있는 것보다는
-          덴지와 함께 바보 같은 일을 하는 편이 마음이 누그러졌을 것입니다.
-          일시적이기는 해도 싫은 일에서 의식을 돌렸다는 의미에서는
-          좋은 기분 전환이 되었다고 생각합니다.）
-        </p>
-      </article>
-
-      <!-- Q6 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">6</span>
-          もしパワーもこの
-          <ruby>場面<rt>ばめん</rt></ruby>にいたら、
-          何を<ruby>言<rt>い</rt></ruby>って、
-          どんな<ruby>行動<rt>こうどう</rt></ruby>をしたと
-          <ruby>思<rt>おも</rt></ruby>いますか。
-        </h4>
-
-        <p>
-          만약 파워도 이 장면에 있었다면
-          무슨 말을 하고 어떤 행동을 했을 것 같습니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          パワーの<ruby>話<rt>はな</rt></ruby>し
-          <ruby>方<rt>かた</rt></ruby>＋
-          デンジとの<ruby>競争<rt>きょうそう</rt></ruby>＋
-          <ruby>勝手<rt>かって</rt></ruby>な
-          <ruby>行動<rt>こうどう</rt></ruby><br>
-          （답변 포인트: 파워의 말투＋덴지와의 경쟁＋제멋대로인 행동）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          パワーなら、
-          デンジに<ruby>誘<rt>さそ</rt></ruby>われるまでもなく、
-          自分から<ruby>参加<rt>さんか</rt></ruby>したに
-          <ruby>違<rt>ちが</rt></ruby>いありません。<br>
-          「ワシが一番大きな
-          <ruby>悲鳴<rt>ひめい</rt></ruby>を
-          <ruby>上<rt>あ</rt></ruby>げさせる！」と
-          <ruby>宣言<rt>せんげん</rt></ruby>して、
-          デンジと<ruby>本気<rt>ほんき</rt></ruby>で
-          <ruby>競<rt>きそ</rt></ruby>ったと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          しかも、
-          <ruby>実際<rt>じっさい</rt></ruby>の
-          <ruby>結果<rt>けっか</rt></ruby>に
-          <ruby>関係<rt>かんけい</rt></ruby>なく、
-          最後には自分が
-          <ruby>勝<rt>か</rt></ruby>ったと
-          <ruby>言<rt>い</rt></ruby>い
-          <ruby>張<rt>は</rt></ruby>りそうです。<br>
-          パワーがいたら、
-          この<ruby>場面<rt>ばめん</rt></ruby>は
-          さらに<ruby>騒<rt>さわ</rt></ruby>がしくなっていたでしょう。<br><br>
-
-          （파워라면 덴지의 권유를 기다릴 것도 없이
-          스스로 참가했을 것이 틀림없습니다.
-          “내가 가장 큰 비명을 지르게 하겠다!”라고 선언하고
-          덴지와 진심으로 경쟁했을 것입니다.
-          게다가 실제 결과와 상관없이
-          마지막에는 자신이 이겼다고 우겼을 것 같습니다.
-          파워가 있었다면 이 장면은 더욱 시끄러워졌을 것입니다.）
-        </p>
-      </article>
-
-      <!-- Q7 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">7</span>
-          この<ruby>場面<rt>ばめん</rt></ruby>のあと、
-          デンジとアキは
-          <ruby>前<rt>まえ</rt></ruby>より
-          <ruby>仲良<rt>なかよ</rt></ruby>くなったと
-          <ruby>思<rt>おも</rt></ruby>いますか。
-        </h4>
-
-        <p>
-          이 장면 이후 덴지와 아키는
-          전보다 친해졌다고 생각합니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>共通<rt>きょうつう</rt></ruby>の
-          <ruby>経験<rt>けいけん</rt></ruby>＋
-          二人の<ruby>距離感<rt>きょりかん</rt></ruby>の
-          <ruby>変化<rt>へんか</rt></ruby><br>
-          （답변 포인트: 공통 경험＋두 사람의 거리감 변화）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          この<ruby>出来事<rt>できごと</rt></ruby>を
-          きっかけに、
-          二人の<ruby>距離<rt>きょり</rt></ruby>は
-          少し<ruby>縮<rt>ちぢ</rt></ruby>まったと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          それまでのアキは、
-          デンジを<ruby>面倒<rt>めんどう</rt></ruby>な
-          <ruby>新人<rt>しんじん</rt></ruby>として
-          <ruby>扱<rt>あつか</rt></ruby>っているように
-          <ruby>見<rt>み</rt></ruby>えました。<br>
-          しかし、この<ruby>場面<rt>ばめん</rt></ruby>では、
-          デンジの<ruby>馬鹿<rt>ばか</rt></ruby>な
-          <ruby>提案<rt>ていあん</rt></ruby>を
-          <ruby>受<rt>う</rt></ruby>け
-          <ruby>入<rt>い</rt></ruby>れて、
-          同じ<ruby>立場<rt>たちば</rt></ruby>で
-          <ruby>一緒<rt>いっしょ</rt></ruby>に
-          <ruby>楽<rt>たの</rt></ruby>しんでいます。<br>
-          こうした<ruby>共通<rt>きょうつう</rt></ruby>の
-          <ruby>経験<rt>けいけん</rt></ruby>が、
-          二人を<ruby>単<rt>たん</rt></ruby>なる
-          <ruby>同僚<rt>どうりょう</rt></ruby>から
-          <ruby>仲間<rt>なかま</rt></ruby>に
-          <ruby>変<rt>か</rt></ruby>えたのかもしれません。<br><br>
-
-          （이 일을 계기로 두 사람의 거리는 조금 가까워졌다고 생각합니다.
-          그때까지 아키는 덴지를 성가신 신입으로 대하는 것처럼 보였습니다.
-          하지만 이 장면에서는 덴지의 바보 같은 제안을 받아들이고
-          같은 입장에서 함께 즐기고 있습니다.
-          이런 공통의 경험이 두 사람을 단순한 동료에서
-          동료 이상의 관계로 바꿨을지도 모릅니다.）
-        </p>
-      </article>
-
-      <!-- Q8 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">8</span>
-          あなたも
-          <ruby>友達<rt>ともだち</rt></ruby>と
-          <ruby>一緒<rt>いっしょ</rt></ruby>に、
-          <ruby>子供<rt>こども</rt></ruby>っぽい
-          <ruby>遊<rt>あそ</rt></ruby>びや
-          <ruby>馬鹿<rt>ばか</rt></ruby>な
-          <ruby>冗談<rt>じょうだん</rt></ruby>をしたことがありますか。
-        </h4>
-
-        <p>
-          당신도 친구와 함께
-          어린아이 같은 놀이나 바보 같은 장난을 한 적이 있습니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          いつ・どこで・何をしたか＋
-          そのときの<ruby>感想<rt>かんそう</rt></ruby><br>
-          （답변 포인트: 언제·어디서·무엇을 했는지＋그때의 감상）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          学生のころ、
-          <ruby>友達<rt>ともだち</rt></ruby>と
-          カラオケに<ruby>行<rt>い</rt></ruby>き、
-          誰が一番<ruby>変<rt>へん</rt></ruby>な
-          <ruby>声<rt>こえ</rt></ruby>で
-          <ruby>歌<rt>うた</rt></ruby>えるか
-          <ruby>競<rt>きそ</rt></ruby>ったことがあります。<br>
-          今<ruby>振<rt>ふ</rt></ruby>り
-          <ruby>返<rt>かえ</rt></ruby>ると、
-          かなり<ruby>子供<rt>こども</rt></ruby>っぽくて
-          <ruby>恥<rt>は</rt></ruby>ずかしい
-          <ruby>遊<rt>あそ</rt></ruby>びでした。<br>
-          とはいえ、
-          そのときは全員が
-          <ruby>本気<rt>ほんき</rt></ruby>で
-          <ruby>笑<rt>わら</rt></ruby>っていて、
-          とてもいい
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby>になりました。<br>
-          大人になってからも、
-          ときどきこういう
-          <ruby>馬鹿<rt>ばか</rt></ruby>なことをするのは
-          <ruby>悪<rt>わる</rt></ruby>くないと
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
-
-          （학생 때 친구들과 노래방에 가서
-          누가 가장 이상한 목소리로 노래할 수 있는지 겨룬 적이 있습니다.
-          지금 돌이켜 보면 상당히 어린아이 같고 부끄러운 놀이였습니다.
-          그렇다고 해도 그때는 모두 진심으로 웃었고
-          매우 좋은 기분 전환이 되었습니다.
-          어른이 된 뒤에도 가끔 이런 바보 같은 일을 하는 것은
-          나쁘지 않다고 생각합니다.）
-        </p>
-      </article>
-
-      <!-- Q9 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">9</span>
-          もしあなたがアキと
-          <ruby>一緒<rt>いっしょ</rt></ruby>にいたら、
-          デンジのゲームに
-          <ruby>参加<rt>さんか</rt></ruby>しますか。
-          それとも
-          <ruby>止<rt>と</rt></ruby>めますか。
-        </h4>
-
-        <p>
-          만약 당신이 아키와 함께 있었다면
-          덴지의 게임에 참가하겠습니까?
-          아니면 말리겠습니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>参加<rt>さんか</rt></ruby>する・
-          <ruby>止<rt>と</rt></ruby>める・
-          <ruby>見守<rt>みまも</rt></ruby>る＋その
-          <ruby>理由<rt>りゆう</rt></ruby><br>
-          （답변 포인트: 참가하기·말리기·지켜보기＋그 이유）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          私なら、
-          自分から<ruby>積極的<rt>せっきょくてき</rt></ruby>に
-          <ruby>参加<rt>さんか</rt></ruby>することは
-          ないと<ruby>思<rt>おも</rt></ruby>います。<br>
-          ただ、サムライソードがしたことを
-          <ruby>考<rt>かんが</rt></ruby>えると、
-          デンジとアキを
-          <ruby>本気<rt>ほんき</rt></ruby>で
-          <ruby>止<rt>と</rt></ruby>める
-          <ruby>気<rt>き</rt></ruby>にもなれません。<br>
-          二人にとっては、
-          これが<ruby>怒<rt>いか</rt></ruby>りや
-          ストレスを<ruby>発散<rt>はっさん</rt></ruby>する
-          <ruby>方法<rt>ほうほう</rt></ruby>だったからです。<br>
-          そのため、
-          少し<ruby>離<rt>はな</rt></ruby>れたところから
-          <ruby>様子<rt>ようす</rt></ruby>を
-          <ruby>見守<rt>みまも</rt></ruby>り、
-          やりすぎたら
-          <ruby>止<rt>と</rt></ruby>めると
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
-
-          （저라면 스스로 적극적으로 참가하지는 않을 것 같습니다.
-          하지만 사무라이 소드가 한 일을 생각하면
-          덴지와 아키를 진심으로 말리고 싶은 마음도 들지 않습니다.
-          두 사람에게는 이것이 분노나 스트레스를 푸는 방법이었기 때문입니다.
-          따라서 조금 떨어진 곳에서 상황을 지켜보다가
-          너무 심해지면 말릴 것 같습니다.）
-        </p>
-      </article>
-
-      <!-- Q10 -->
-      <article class="mbti-card">
-        <h4 class="mbti-card-title">
-          <span class="mbti-choice-number">10</span>
-          デンジがゲームを
-          <ruby>提案<rt>ていあん</rt></ruby>したことと、
-          アキが<ruby>本当<rt>ほんとう</rt></ruby>に
-          <ruby>参加<rt>さんか</rt></ruby>したことでは、
-          どちらのほうが
-          <ruby>面白<rt>おもしろ</rt></ruby>かったですか。
-        </h4>
-
-        <p>
-          덴지가 게임을 제안한 것과
-          아키가 실제로 참가한 것 중
-          어느 쪽이 더 재미있었습니까?
-        </p>
-
-        <div class="discussion-prompt">
-          <ruby>答<rt>こた</rt></ruby>えるポイント：
-          デンジらしさ・アキらしくなさ＋
-          <ruby>意外性<rt>いがいせい</rt></ruby><br>
-          （답변 포인트: 덴지다움·아키답지 않음＋의외성）
-        </div>
-
-        <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
-
-          私は、アキが
-          <ruby>実際<rt>じっさい</rt></ruby>に
-          <ruby>参加<rt>さんか</rt></ruby>したことのほうが
-          <ruby>面白<rt>おもしろ</rt></ruby>かったです。<br>
-          デンジの<ruby>提案<rt>ていあん</rt></ruby>は
-          <ruby>馬鹿<rt>ばか</rt></ruby>らしいものの、
-          デンジの<ruby>性格<rt>せいかく</rt></ruby>からすると
-          それほど<ruby>意外<rt>いがい</rt></ruby>ではありません。<br>
-          一方、アキは
-          <ruby>普段<rt>ふだん</rt></ruby>なら
-          そのような<ruby>悪<rt>わる</rt></ruby>ノリを
-          <ruby>止<rt>と</rt></ruby>める
-          <ruby>側<rt>がわ</rt></ruby>です。<br>
-          そのアキが
-          <ruby>真顔<rt>まがお</rt></ruby>で
-          <ruby>便乗<rt>びんじょう</rt></ruby>したからこそ、
-          <ruby>意表<rt>いひょう</rt></ruby>を
-          <ruby>突<rt>つ</rt></ruby>かれて
-          <ruby>笑<rt>わら</rt></ruby>ってしまいました。<br><br>
-
-          （저는 아키가 실제로 참가한 쪽이 더 재미있었습니다.
-          덴지의 제안은 바보 같기는 하지만
-          덴지의 성격을 생각하면 그다지 의외는 아닙니다.
-          반면 아키는 평소라면 그런 짓궂은 장난을 말리는 쪽입니다.
-          그런 아키가 진지한 얼굴로 편승했기 때문에
-          허를 찔려 웃고 말았습니다.）
-        </p>
-      </article>
-
-    </div>
-  </div>
-
-  <!-- 3. N2 문법 설명 -->
-  <div class="language-notes">
-    <h3 class="section-title">
-      3．<ruby>文法説明<rt>ぶんぽうせつめい</rt></ruby>
-      （문법 설명）
-    </h3>
-
-    <div class="language-note-grid">
-
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">N2</span>
-          <ruby>意見<rt>いけん</rt></ruby>を
-          <ruby>補足<rt>ほそく</rt></ruby>する
-          <ruby>表現<rt>ひょうげん</rt></ruby>
-        </h3>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            1．～とはいえ
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>前<rt>まえ</rt></ruby>の
-            <ruby>内容<rt>ないよう</rt></ruby>を
-            <ruby>認<rt>みと</rt></ruby>めながら、
-            それとは<ruby>異<rt>こと</rt></ruby>なる
-            <ruby>事情<rt>じじょう</rt></ruby>や
-            <ruby>意見<rt>いけん</rt></ruby>を
-            <ruby>付<rt>つ</rt></ruby>け
-            <ruby>加<rt>くわ</rt></ruby>える
-            <ruby>表現<rt>ひょうげん</rt></ruby>です。
-            （앞의 내용을 인정하면서
-            그와 다른 사정이나 의견을 덧붙이는 표현입니다.）
-          </p>
-
-          <p class="example-sentence">
-            少しやりすぎだとは
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            とはいえ、サムライソードに
-            <ruby>同情<rt>どうじょう</rt></ruby>する
-            <ruby>気<rt>き</rt></ruby>にはなれません。<br>
-            （조금 지나치다고 생각합니다.<br>
-            그렇다고 해도 사무라이 소드를 동정하고 싶은 마음은 들지 않습니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            2．～というより
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>最初<rt>さいしょ</rt></ruby>の
-            <ruby>表現<rt>ひょうげん</rt></ruby>よりも、
-            あとの<ruby>表現<rt>ひょうげん</rt></ruby>のほうが
-            より<ruby>正確<rt>せいかく</rt></ruby>だと
-            <ruby>説明<rt>せつめい</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （앞의 표현보다 뒤의 표현이 더 정확하다고 설명할 때 사용합니다.）
-          </p>
-
-          <p class="example-sentence">
-            <ruby>復讐<rt>ふくしゅう</rt></ruby>というより、
-            <ruby>腹<rt>はら</rt></ruby>いせに
-            <ruby>近<rt>ちか</rt></ruby>かったと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （복수라기보다 분풀이에 가까웠다고 생각합니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            3．～からすると／～からすれば
-          </span>
-
-          <p class="grammar-explanation">
-            ある<ruby>情報<rt>じょうほう</rt></ruby>や
-            <ruby>立場<rt>たちば</rt></ruby>を
-            <ruby>基準<rt>きじゅん</rt></ruby>にして
-            <ruby>判断<rt>はんだん</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （어떤 정보나 입장을 기준으로 판단할 때 사용합니다.）
-          </p>
-
-          <p class="example-sentence">
-            デンジの<ruby>性格<rt>せいかく</rt></ruby>からすると、
-            この<ruby>提案<rt>ていあん</rt></ruby>は
-            それほど<ruby>意外<rt>いがい</rt></ruby>ではありません。<br>
-            （덴지의 성격을 생각하면
-            이 제안은 그다지 의외가 아닙니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            4．～に<ruby>違<rt>ちが</rt></ruby>いない
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>強<rt>つよ</rt></ruby>い
-            <ruby>確信<rt>かくしん</rt></ruby>を
-            <ruby>持<rt>も</rt></ruby>って
-            <ruby>予想<rt>よそう</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （강한 확신을 가지고 예상할 때 사용합니다.）
-          </p>
-
-          <p class="example-sentence">
-            パワーがいたら、
-            自分から<ruby>参加<rt>さんか</rt></ruby>したに
-            <ruby>違<rt>ちが</rt></ruby>いありません。<br>
-            （파워가 있었다면 스스로 참가했을 것이 틀림없습니다.）
-          </p>
-        </div>
-
-      </section>
-
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">N2</span>
-          <ruby>対比<rt>たいひ</rt></ruby>・
-          <ruby>限定<rt>げんてい</rt></ruby>の
-          <ruby>表現<rt>ひょうげん</rt></ruby>
-        </h3>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            5．～ものの
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>前<rt>まえ</rt></ruby>の
-            <ruby>事実<rt>じじつ</rt></ruby>を
-            <ruby>認<rt>みと</rt></ruby>めたうえで、
-            <ruby>予想<rt>よそう</rt></ruby>とは
-            <ruby>異<rt>こと</rt></ruby>なる
-            <ruby>内容<rt>ないよう</rt></ruby>を
-            <ruby>続<rt>つづ</rt></ruby>ける
-            <ruby>表現<rt>ひょうげん</rt></ruby>です。
-            （앞의 사실을 인정한 뒤
-            예상과 다른 내용을 이어 가는 표현입니다.）
-          </p>
-
-          <p class="example-sentence">
-            デンジの<ruby>提案<rt>ていあん</rt></ruby>は
-            <ruby>馬鹿<rt>ばか</rt></ruby>らしいものの、
-            アキの<ruby>気分転換<rt>きぶんてんかん</rt></ruby>には
-            なったと<ruby>思<rt>おも</rt></ruby>います。<br>
-            （덴지의 제안은 바보 같기는 하지만
-            아키의 기분 전환은 되었다고 생각합니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            6．～わけではない
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>全部<rt>ぜんぶ</rt></ruby>がそうではない、
-            または<ruby>完全<rt>かんぜん</rt></ruby>に
-            そうだとは
-            <ruby>言<rt>い</rt></ruby>えないことを
-            <ruby>表<rt>あらわ</rt></ruby>します。
-            （전부 그런 것은 아니거나
-            완전히 그렇다고 말할 수 없음을 나타냅니다.）
-          </p>
-
-          <p class="example-sentence">
-            この<ruby>行動<rt>こうどう</rt></ruby>だけで、
-            アキが<ruby>完全<rt>かんぜん</rt></ruby>に
-            <ruby>元気<rt>げんき</rt></ruby>になったわけではありません。<br>
-            （이 행동만으로 아키가 완전히 기운을 차린 것은 아닙니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            7．～一方で
-          </span>
-
-          <p class="grammar-explanation">
-            一つの<ruby>事柄<rt>ことがら</rt></ruby>にある
-            <ruby>異<rt>こと</rt></ruby>なる二つの
-            <ruby>側面<rt>そくめん</rt></ruby>を
-            <ruby>対比<rt>たいひ</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （하나의 일에 존재하는 서로 다른 두 측면을 비교할 때 사용합니다.）
-          </p>
-
-          <p class="example-sentence">
-            デンジの<ruby>行動<rt>こうどう</rt></ruby>は
-            <ruby>乱暴<rt>らんぼう</rt></ruby>である一方で、
-            アキを<ruby>元気<rt>げんき</rt></ruby>づけようとする
-            <ruby>優<rt>やさ</rt></ruby>しさも
-            <ruby>感<rt>かん</rt></ruby>じられます。<br>
-            （덴지의 행동은 난폭한 한편
-            아키를 기운 나게 하려는 다정함도 느껴집니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            8．～からこそ
-          </span>
-
-          <p class="grammar-explanation">
-            その<ruby>理由<rt>りゆう</rt></ruby>が
-            特に<ruby>重要<rt>じゅうよう</rt></ruby>であることを
-            <ruby>強調<rt>きょうちょう</rt></ruby>する
-            <ruby>表現<rt>ひょうげん</rt></ruby>です。
-            （그 이유가 특히 중요하다는 점을 강조하는 표현입니다.）
-          </p>
-
-          <p class="example-sentence">
-            <ruby>普段<rt>ふだん</rt></ruby>は
-            <ruby>真面目<rt>まじめ</rt></ruby>なアキが
-            <ruby>参加<rt>さんか</rt></ruby>したからこそ、
-            この<ruby>場面<rt>ばめん</rt></ruby>は
-            <ruby>面白<rt>おもしろ</rt></ruby>かったのだと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （평소에는 진지한 아키가 참가했기 때문에야말로
-            이 장면이 재미있었다고 생각합니다.）
-          </p>
-        </div>
-
-      </section>
-
-    </div>
-  </div>
-
-  <!-- 4. N2 어휘 설명 -->
-  <div class="language-notes">
-    <h3 class="section-title">
-      4．<ruby>語彙説明<rt>ごいせつめい</rt></ruby>
-      （어휘 설명）
-    </h3>
-
-    <div class="language-note-grid">
-
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">語彙</span>
-          <ruby>行動<rt>こうどう</rt></ruby>を
-          <ruby>表<rt>あらわ</rt></ruby>す
-          <ruby>言葉<rt>ことば</rt></ruby>
-        </h3>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            1．<ruby>便乗<rt>びんじょう</rt></ruby>する
-          </span>
-
-          <p class="grammar-explanation">
-            他の<ruby>人<rt>ひと</rt></ruby>が
-            <ruby>始<rt>はじ</rt></ruby>めたことや
-            <ruby>流<rt>なが</rt></ruby>れに
-            <ruby>乗<rt>の</rt></ruby>って、
-            自分も<ruby>参加<rt>さんか</rt></ruby>することです。
-            （다른 사람이 시작한 일이나 분위기에 올라타
-            자신도 참가하는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            アキはデンジの
-            <ruby>悪<rt>わる</rt></ruby>ノリに
-            <ruby>便乗<rt>びんじょう</rt></ruby>しました。<br>
-            （아키는 덴지의 짓궂은 장난에 편승했습니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            2．<ruby>悪<rt>わる</rt></ruby>ノリ
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>場<rt>ば</rt></ruby>の
-            <ruby>雰囲気<rt>ふんいき</rt></ruby>に
-            <ruby>乗<rt>の</rt></ruby>って、
-            ふざけすぎたり、
-            やりすぎたりすることです。
-            （분위기에 휩쓸려 지나치게 장난치거나
-            선을 넘는 행동을 하는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            デンジの<ruby>悪<rt>わる</rt></ruby>ノリに、
-            アキまで<ruby>加<rt>くわ</rt></ruby>わりました。<br>
-            （덴지의 짓궂은 장난에 아키까지 가담했습니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            3．<ruby>腹<rt>はら</rt></ruby>いせ
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>怒<rt>いか</rt></ruby>りや
-            <ruby>不満<rt>ふまん</rt></ruby>を
-            <ruby>晴<rt>は</rt></ruby>らすために、
-            相手に<ruby>嫌<rt>いや</rt></ruby>なことをすることです。
-            （분노나 불만을 풀기 위해
-            상대방에게 싫은 일을 하는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            アキは<ruby>腹<rt>はら</rt></ruby>いせに、
-            サムライソードを
-            <ruby>蹴<rt>け</rt></ruby>ったのかもしれません。<br>
-            （아키는 분풀이로 사무라이 소드를 찼을지도 모릅니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            4．<ruby>言<rt>い</rt></ruby>い
-            <ruby>張<rt>は</rt></ruby>る
-          </span>
-
-          <p class="grammar-explanation">
-            他の<ruby>人<rt>ひと</rt></ruby>が
-            <ruby>反対<rt>はんたい</rt></ruby>しても、
-            自分の<ruby>意見<rt>いけん</rt></ruby>が
-            <ruby>正<rt>ただ</rt></ruby>しいと
-            <ruby>強<rt>つよ</rt></ruby>く
-            <ruby>主張<rt>しゅちょう</rt></ruby>し
-            <ruby>続<rt>つづ</rt></ruby>けることです。
-            （다른 사람이 반대해도
-            자신의 주장이 맞다고 강하게 계속 주장하는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            パワーなら、
-            自分が<ruby>勝<rt>か</rt></ruby>ったと
-            <ruby>言<rt>い</rt></ruby>い
-            <ruby>張<rt>は</rt></ruby>ると
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （파워라면 자신이 이겼다고 우길 것 같습니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            5．<ruby>見守<rt>みまも</rt></ruby>る
-          </span>
-
-          <p class="grammar-explanation">
-            すぐに<ruby>手<rt>て</rt></ruby>を
-            <ruby>出<rt>だ</rt></ruby>さず、
-            <ruby>安全<rt>あんぜん</rt></ruby>や
-            <ruby>様子<rt>ようす</rt></ruby>を
-            <ruby>注意深<rt>ちゅういぶか</rt></ruby>く
-            <ruby>見<rt>み</rt></ruby>ることです。
-            （바로 개입하지 않고
-            안전이나 상황을 주의 깊게 지켜보는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            私なら、少し<ruby>離<rt>はな</rt></ruby>れたところから
-            二人を<ruby>見守<rt>みまも</rt></ruby>ります。<br>
-            （저라면 조금 떨어진 곳에서 두 사람을 지켜보겠습니다.）
-          </p>
-        </div>
-
-      </section>
-
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">語彙</span>
-          <ruby>感情<rt>かんじょう</rt></ruby>・
-          <ruby>印象<rt>いんしょう</rt></ruby>を
-          <ruby>表<rt>あらわ</rt></ruby>す
-          <ruby>言葉<rt>ことば</rt></ruby>
-        </h3>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            6．<ruby>溜<rt>た</rt></ruby>め
-            <ruby>込<rt>こ</rt></ruby>む
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>感情<rt>かんじょう</rt></ruby>や
-            ストレスなどを
-            <ruby>外<rt>そと</rt></ruby>に
-            <ruby>出<rt>だ</rt></ruby>さず、
-            <ruby>心<rt>こころ</rt></ruby>の
-            <ruby>中<rt>なか</rt></ruby>に
-            <ruby>持<rt>も</rt></ruby>ち
-            <ruby>続<rt>つづ</rt></ruby>けることです。
-            （감정이나 스트레스를 밖으로 드러내지 않고
-            마음속에 계속 쌓아 두는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            アキは<ruby>悲<rt>かな</rt></ruby>しみや
-            <ruby>怒<rt>いか</rt></ruby>りを
-            <ruby>溜<rt>た</rt></ruby>め
-            <ruby>込<rt>こ</rt></ruby>んでいました。<br>
-            （아키는 슬픔과 분노를 쌓아 두고 있었습니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            7．<ruby>和<rt>やわ</rt></ruby>らぐ
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>怒<rt>いか</rt></ruby>り、
-            <ruby>緊張<rt>きんちょう</rt></ruby>、
-            <ruby>悲<rt>かな</rt></ruby>しみなどが
-            <ruby>弱<rt>よわ</rt></ruby>くなることです。
-            （분노, 긴장, 슬픔 등이 약해지는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            デンジと<ruby>一緒<rt>いっしょ</rt></ruby>に
-            <ruby>馬鹿<rt>ばか</rt></ruby>なことをして、
-            アキの<ruby>気持<rt>きも</rt></ruby>ちは
-            少し<ruby>和<rt>やわ</rt></ruby>らいだと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （덴지와 함께 바보 같은 일을 하면서
-            아키의 마음은 조금 누그러졌다고 생각합니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            8．<ruby>吹<rt>ふ</rt></ruby>っ
-            <ruby>切<rt>き</rt></ruby>れる
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>悩<rt>なや</rt></ruby>みや
-            <ruby>迷<rt>まよ</rt></ruby>いが
-            <ruby>消<rt>き</rt></ruby>え、
-            <ruby>気持<rt>きも</rt></ruby>ちを
-            <ruby>切<rt>き</rt></ruby>り
-            <ruby>替<rt>か</rt></ruby>えられる
-            <ruby>状態<rt>じょうたい</rt></ruby>になることです。
-            （고민이나 망설임이 사라져
-            마음을 전환할 수 있게 되는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            サムライソードを
-            <ruby>蹴<rt>け</rt></ruby>ったあと、
-            アキは少し
-            <ruby>吹<rt>ふ</rt></ruby>っ
-            <ruby>切<rt>き</rt></ruby>れたように
-            <ruby>見<rt>み</rt></ruby>えました。<br>
-            （사무라이 소드를 찬 뒤
-            아키는 조금 마음을 털어낸 것처럼 보였습니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            9．<ruby>意表<rt>いひょう</rt></ruby>を
-            <ruby>突<rt>つ</rt></ruby>く
-          </span>
-
-          <p class="grammar-explanation">
-            <ruby>相手<rt>あいて</rt></ruby>が
-            <ruby>予想<rt>よそう</rt></ruby>していなかった
-            <ruby>行動<rt>こうどう</rt></ruby>をして、
-            <ruby>驚<rt>おどろ</rt></ruby>かせることです。
-            （상대방이 예상하지 못한 행동을 해 놀라게 하는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            アキが<ruby>参加<rt>さんか</rt></ruby>したので、
-            <ruby>意表<rt>いひょう</rt></ruby>を
-            <ruby>突<rt>つ</rt></ruby>かれました。<br>
-            （아키가 참가했기 때문에 허를 찔렸습니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            10．<ruby>距離<rt>きょり</rt></ruby>が
-            <ruby>縮<rt>ちぢ</rt></ruby>まる
-          </span>
-
-          <p class="grammar-explanation">
-            二人の<ruby>関係<rt>かんけい</rt></ruby>が
-            <ruby>前<rt>まえ</rt></ruby>より
-            <ruby>親<rt>した</rt></ruby>しくなることです。
-            （두 사람의 관계가 전보다 가까워지는 것입니다.）
-          </p>
-
-          <p class="example-sentence">
-            この<ruby>出来事<rt>できごと</rt></ruby>を
-            きっかけに、
-            デンジとアキの<ruby>距離<rt>きょり</rt></ruby>は
-            <ruby>縮<rt>ちぢ</rt></ruby>まったと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （이 일을 계기로 덴지와 아키의 거리는 가까워졌다고 생각합니다.）
-          </p>
-        </div>
-
-      </section>
-
-    </div>
-  </div>
-
-  <div class="notice-box">
-    N2の<ruby>答<rt>こた</rt></ruby>えでは、
-    <ruby>難<rt>むずか</rt></ruby>しい
-    <ruby>内容<rt>ないよう</rt></ruby>を
-    <ruby>話<rt>はな</rt></ruby>す
-    <ruby>必要<rt>ひつよう</rt></ruby>はありません。
-
-    「<ruby>面白<rt>おもしろ</rt></ruby>かった」
-    「アキは<ruby>怒<rt>おこ</rt></ruby>っていたと
-    <ruby>思<rt>おも</rt></ruby>う」のような
-    <ruby>簡単<rt>かんたん</rt></ruby>な
-    <ruby>結論<rt>けつろん</rt></ruby>に、
-
-    「とはいえ」
-    「～というより」
-    「～からすると」
-    「～ものの」
-    「～わけではない」などを
-    <ruby>加<rt>くわ</rt></ruby>え、
-    <ruby>理由<rt>りゆう</rt></ruby>や
-    <ruby>補足<rt>ほそく</rt></ruby>を
-    一つ<ruby>続<rt>つづ</rt></ruby>けてみましょう。
-
-    <ruby>質問<rt>しつもん</rt></ruby>の
-    <ruby>内容<rt>ないよう</rt></ruby>は
-    N3と<ruby>同<rt>おな</rt></ruby>じですが、
-    <ruby>答<rt>こた</rt></ruby>えの
-    <ruby>組<rt>く</rt></ruby>み
-    <ruby>立<rt>た</rt></ruby>て
-    <ruby>方<rt>かた</rt></ruby>を
-    少し<ruby>自然<rt>しぜん</rt></ruby>で
-    <ruby>詳<rt>くわ</rt></ruby>しくするのが
-    N2の<ruby>目標<rt>もくひょう</rt></ruby>です。
-
-    （N2 답변에서는 어려운 내용을 말할 필요가 없습니다.
-
-    ‘재미있었다’,
-    ‘아키는 화가 나 있었다고 생각한다’와 같은 간단한 결론에
-
-    ‘그렇다고 해도’,
-    ‘~라기보다’,
-    ‘~를 생각하면’,
-    ‘~하기는 하지만’,
-    ‘~인 것은 아니다’ 등의 표현을 추가하고
-    이유나 보충 설명을 하나 이어서 말해 봅시다.
-
-    질문 내용은 N3와 같지만
-    답변을 구성하는 방식을 조금 더 자연스럽고 자세하게 만드는 것이
-    N2의 목표입니다.）
-  </div>
-
-</section> <section class="question-card" id="chainsawman-scene-1-n2">
+<!-- =========================================================
+     CHAINSAW MAN SCENE 01 · N2
+     アキと姫野の「Easy Revenge!」
+
+     CSS 선택자:
+     .scene-01
+     [data-scene="1"]
+     #chainsawman-scene-1-n2
+========================================================= -->
+
+<section
+  class="question-card anime-scene scene-01"
+  id="chainsawman-scene-1-n2"
+  data-scene="1"
+>
 
   <header class="question-header">
-    <span class="question-number">CHAINSAW MAN SCENE 01 · N2</span>
+
+    <span class="question-number">
+      CHAINSAW MAN SCENE 01 · N2
+    </span>
+
     <h2 class="question-title">
-      デンジとアキの「イージーリベンジ」
+      アキと<ruby>姫野<rt>ひめの</rt></ruby>の
+      「Easy Revenge!」
     </h2>
+
   </header>
 
-  <!-- 1. 장면 묘사 -->
+  <!-- =====================================================
+       1. 장면 묘사
+  ====================================================== -->
+
   <div class="section-block">
+
     <h3 class="section-title">
       1．<ruby>場面描写<rt>ばめんびょうしゃ</rt></ruby>
       （장면 묘사）
     </h3>
 
     <div class="situation">
+
       <p>
-        デンジとアキは、
-        <ruby>仲間<rt>なかま</rt></ruby>を
-        <ruby>傷<rt>きず</rt></ruby>つけたサムライソードを
-        <ruby>捕<rt>つか</rt></ruby>まえます。
-        （덴지와 아키는 동료를 다치게 한 사무라이 소드를 붙잡습니다.）
+        アキは、
+        <ruby>沢渡<rt>さわたり</rt></ruby>が
+        <ruby>操<rt>あやつ</rt></ruby>る
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>と
+        <ruby>戦<rt>たたか</rt></ruby>います。
+        （아키는 사와타리가 조종하는
+        고스트의 악마와 싸웁니다.）
       </p>
 
       <p>
-        サムライソードはすでに
-        <ruby>抵抗<rt>ていこう</rt></ruby>できない
-        <ruby>状態<rt>じょうたい</rt></ruby>でしたが、
-        デンジはアキに、
-        「こいつの
-        <ruby>股間<rt>こかん</rt></ruby>を
-        <ruby>交代<rt>こうたい</rt></ruby>で
-        <ruby>蹴<rt>け</rt></ruby>ろう」
-        と<ruby>提案<rt>ていあん</rt></ruby>します。
-        （사무라이 소드는 이미 저항할 수 없는 상태였지만,
-        덴지는 아키에게 “이 녀석의 가랑이를 번갈아 차자”고 제안합니다.）
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>には
+        たくさんの
+        <ruby>腕<rt>うで</rt></ruby>があり、
+        アキは
+        <ruby>首<rt>くび</rt></ruby>を
+        つかまれて、
+        <ruby>動<rt>うご</rt></ruby>けなくなってしまいます。
+        （고스트의 악마에게는 수많은 팔이 있었고,
+        아키는 목을 붙잡혀 움직일 수 없게 됩니다.）
       </p>
 
       <p>
-        さらに、
-        一番大きな
-        <ruby>悲鳴<rt>ひめい</rt></ruby>を
-        <ruby>上<rt>あ</rt></ruby>げさせた
-        <ruby>人<rt>ひと</rt></ruby>が
-        <ruby>勝<rt>か</rt></ruby>ちという、
-        かなり
-        <ruby>悪趣味<rt>あくしゅみ</rt></ruby>なゲームまで
-        <ruby>始<rt>はじ</rt></ruby>めようとします。
-        （게다가 가장 큰 비명을 지르게 한 사람이 이긴다는,
-        상당히 짓궂은 게임까지 시작하려고 합니다.）
+        ところが、
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>は
+        <ruby>突然<rt>とつぜん</rt></ruby>
+        アキを<ruby>放<rt>はな</rt></ruby>し、
+        一本の
+        <ruby>煙草<rt>たばこ</rt></ruby>を
+        <ruby>差<rt>さ</rt></ruby>し
+        <ruby>出<rt>だ</rt></ruby>します。
+        （그런데 고스트의 악마는 갑자기 아키를 놓아주고,
+        담배 한 개비를 내밉니다.）
+      </p>
+
+      <p>
+        その<ruby>煙草<rt>たばこ</rt></ruby>には、
+        「Easy Revenge!」という
+        <ruby>言葉<rt>ことば</rt></ruby>が
+        <ruby>書<rt>か</rt></ruby>かれていました。
+        （그 담배에는
+        ‘Easy Revenge!’라는 말이 적혀 있었습니다.）
+      </p>
+
+      <p>
+        アキはそれを<ruby>見<rt>み</rt></ruby>て、
+        <ruby>姫野<rt>ひめの</rt></ruby>と
+        <ruby>過<rt>す</rt></ruby>ごした
+        <ruby>時間<rt>じかん</rt></ruby>や、
+        <ruby>姫野<rt>ひめの</rt></ruby>から
+        <ruby>聞<rt>き</rt></ruby>いた
+        <ruby>言葉<rt>ことば</rt></ruby>を
+        <ruby>思<rt>おも</rt></ruby>い
+        <ruby>出<rt>だ</rt></ruby>します。
+        （아키는 그것을 보고
+        히메노와 함께 보낸 시간과
+        히메노에게 들었던 말을 떠올립니다.）
+      </p>
+
+      <p>
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>には
+        <ruby>目<rt>め</rt></ruby>がなく、
+        <ruby>相手<rt>あいて</rt></ruby>の
+        <ruby>恐怖<rt>きょうふ</rt></ruby>を
+        <ruby>感<rt>かん</rt></ruby>じて
+        <ruby>動<rt>うご</rt></ruby>くことを
+        アキは<ruby>思<rt>おも</rt></ruby>い
+        <ruby>出<rt>だ</rt></ruby>します。
+        （고스트의 악마에게는 눈이 없고,
+        상대의 공포를 느끼며 움직인다는 사실을
+        아키는 떠올립니다.）
       </p>
 
       <p>
         アキは
-        <ruby>当初<rt>とうしょ</rt></ruby>、
-        デンジの<ruby>提案<rt>ていあん</rt></ruby>を
-        <ruby>冷静<rt>れいせい</rt></ruby>に
-        <ruby>断<rt>ことわ</rt></ruby>ります。
-        しかし、
-        少し<ruby>考<rt>かんが</rt></ruby>えたあと、
-        <ruby>結局<rt>けっきょく</rt></ruby>は
-        デンジの<ruby>悪<rt>わる</rt></ruby>ノリに
-        <ruby>加<rt>くわ</rt></ruby>わり、
-        サムライソードを
-        <ruby>一緒<rt>いっしょ</rt></ruby>に
-        <ruby>蹴<rt>け</rt></ruby>ります。
-        （아키는 처음에는 덴지의 제안을 냉정하게 거절합니다.
-        그러나 잠시 생각한 뒤 결국 덴지의 짓궂은 장난에 동참해
-        함께 사무라이 소드를 찹니다.）
+        <ruby>恐怖<rt>きょうふ</rt></ruby>を
+        <ruby>抑<rt>おさ</rt></ruby>え、
+        <ruby>静<rt>しず</rt></ruby>かに
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>の
+        <ruby>腕<rt>うで</rt></ruby>を
+        <ruby>歩<rt>ある</rt></ruby>いていきます。
+        そして、
+        <ruby>最後<rt>さいご</rt></ruby>には
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>を
+        <ruby>倒<rt>たお</rt></ruby>します。
+        （아키는 두려움을 억누르고,
+        조용히 고스트의 악마의 팔 위를 걸어갑니다.
+        그리고 마지막에는 고스트의 악마를 쓰러뜨립니다.）
       </p>
 
       <p>
-        <ruby>普段<rt>ふだん</rt></ruby>は
-        <ruby>真面目<rt>まじめ</rt></ruby>で
-        <ruby>感情<rt>かんじょう</rt></ruby>を
-        <ruby>表<rt>おもて</rt></ruby>に
-        <ruby>出<rt>だ</rt></ruby>さないアキが、
-        デンジの
-        <ruby>子供<rt>こども</rt></ruby>っぽい
-        <ruby>仕返<rt>しかえ</rt></ruby>しに
-        <ruby>便乗<rt>びんじょう</rt></ruby>するところが
+        <ruby>亡<rt>な</rt></ruby>くなった
+        <ruby>姫野<rt>ひめの</rt></ruby>の
+        <ruby>記憶<rt>きおく</rt></ruby>が
+        アキを<ruby>助<rt>たす</rt></ruby>け、
+        アキが
+        <ruby>恐怖<rt>きょうふ</rt></ruby>を
+        <ruby>乗<rt>の</rt></ruby>り
+        <ruby>越<rt>こ</rt></ruby>える
         <ruby>印象的<rt>いんしょうてき</rt></ruby>な
         <ruby>場面<rt>ばめん</rt></ruby>です。
-        （평소에는 진지하고 감정을 겉으로 드러내지 않는 아키가
-        덴지의 어린아이 같은 복수에 편승하는 점이 인상적인 장면입니다.）
+        （세상을 떠난 히메노의 기억이 아키를 돕고,
+        아키가 두려움을 극복하는 인상적인 장면입니다.）
       </p>
 
       <div class="notice-box">
+
         この<ruby>場面<rt>ばめん</rt></ruby>について、
-        <ruby>難<rt>むずか</rt></ruby>しい
-        <ruby>分析<rt>ぶんせき</rt></ruby>をする
+        <ruby>難<rt>むずか</rt></ruby>しく
+        <ruby>分析<rt>ぶんせき</rt></ruby>する
         <ruby>必要<rt>ひつよう</rt></ruby>はありません。
 
-        「<ruby>笑<rt>わら</rt></ruby>えたか」、
-        「少しやりすぎだと
-        <ruby>感<rt>かん</rt></ruby>じたか」、
-        「アキがなぜ
-        <ruby>参加<rt>さんか</rt></ruby>したのか」など、
+        「<ruby>感動<rt>かんどう</rt></ruby>したか」、
+        「どの<ruby>瞬間<rt>しゅんかん</rt></ruby>が
+        一番<ruby>印象<rt>いんしょう</rt></ruby>に
+        <ruby>残<rt>のこ</rt></ruby>ったか」、
+        「『Easy Revenge!』という
+        <ruby>言葉<rt>ことば</rt></ruby>を
+        どう<ruby>感<rt>かん</rt></ruby>じたか」など、
         <ruby>友達<rt>ともだち</rt></ruby>と
         アニメを<ruby>見<rt>み</rt></ruby>ながら
         <ruby>話<rt>はな</rt></ruby>すような
         <ruby>感覚<rt>かんかく</rt></ruby>で
         <ruby>答<rt>こた</rt></ruby>えてください。
 
-        （이 장면에 대해 어려운 분석을 할 필요는 없습니다.
-        ‘웃겼는지’, ‘조금 지나치다고 느꼈는지’,
-        ‘아키가 왜 참가했는지’ 등
-        친구와 애니메이션을 보면서 이야기하는 느낌으로 답해 주세요.）
+        （이 장면에 대해 어렵게 분석할 필요는 없습니다.
+
+        ‘감동했는지’,
+        ‘어느 순간이 가장 인상에 남았는지’,
+        ‘Easy Revenge!라는 말을 어떻게 느꼈는지’ 등
+        친구와 애니메이션을 보면서 이야기하는 느낌으로
+        답해 주세요.）
+
       </div>
+
     </div>
+
   </div>
 
-  <!-- 2. 질문 10개 + N2 예제 답변 -->
+  <!-- =====================================================
+       2. 장면 질문 10개
+  ====================================================== -->
+
   <div class="section-block mbti-analysis">
+
     <h3 class="section-title">
       2．<ruby>場面<rt>ばめん</rt></ruby>についての
       <ruby>質問<rt>しつもん</rt></ruby>
@@ -2310,615 +1100,930 @@
     </h3>
 
     <p class="section-description">
-      一つの<ruby>質問<rt>しつもん</rt></ruby>に
+
+      <ruby>答<rt>こた</rt></ruby>えたい
+      <ruby>質問<rt>しつもん</rt></ruby>を
+      <ruby>自由<rt>じゆう</rt></ruby>に
+      <ruby>選<rt>えら</rt></ruby>んでください。
+
+      一つの
+      <ruby>質問<rt>しつもん</rt></ruby>に
       20～40<ruby>秒<rt>びょう</rt></ruby>くらいで
       <ruby>答<rt>こた</rt></ruby>えてみましょう。
+
       <ruby>結論<rt>けつろん</rt></ruby>だけでなく、
       <ruby>理由<rt>りゆう</rt></ruby>や
-      <ruby>補足<rt>ほそく</rt></ruby>を一つ
-      <ruby>加<rt>くわ</rt></ruby>えると、
-      よりN2らしい<ruby>答<rt>こた</rt></ruby>えになります。
-      （질문 하나에 20~40초 정도로 답해 봅시다.
-      결론뿐 아니라 이유나 보충 설명을 하나 추가하면
+      <ruby>補足<rt>ほそく</rt></ruby>を
+      一つ<ruby>加<rt>くわ</rt></ruby>えると、
+      よりN2らしい
+      <ruby>答<rt>こた</rt></ruby>えになります。
+
+      （답하고 싶은 질문을 자유롭게 선택해 주세요.
+
+      질문 하나에 20~40초 정도로 답해 봅시다.
+
+      결론뿐 아니라 이유나 보충 설명을 하나 더하면
       더욱 N2다운 답변이 됩니다.）
+
     </p>
 
     <div class="mbti-grid">
 
       <!-- Q1 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">1</span>
-          この<ruby>場面<rt>ばめん</rt></ruby>は
-          <ruby>正直<rt>しょうじき</rt></ruby>
-          <ruby>笑<rt>わら</rt></ruby>えましたか。
-          それとも、少しひどいと
-          <ruby>思<rt>おも</rt></ruby>いましたか。
+
+          「Easy Revenge!」と
+          <ruby>書<rt>か</rt></ruby>かれた
+          <ruby>煙草<rt>たばこ</rt></ruby>が
+          <ruby>出<rt>で</rt></ruby>てきたとき、
+          どんな<ruby>気持<rt>きも</rt></ruby>ちになりましたか。
+
         </h4>
 
         <p>
-          이 장면은 솔직히 웃겼습니까?
-          아니면 조금 심하다고 생각했습니까?
+          ‘Easy Revenge!’라고 적힌 담배가 나왔을 때
+          어떤 기분이 들었습니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>面白<rt>おもしろ</rt></ruby>かったか＋
-          やりすぎだと<ruby>感<rt>かん</rt></ruby>じたか＋
-          その<ruby>理由<rt>りゆう</rt></ruby><br>
-          （답변 포인트: 재미있었는지＋지나치다고 느꼈는지＋그 이유）
+          <ruby>驚<rt>おどろ</rt></ruby>いた・
+          <ruby>悲<rt>かな</rt></ruby>しかった・
+          <ruby>感動<rt>かんどう</rt></ruby>した＋
+          その<ruby>理由<rt>りゆう</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          놀랐다·슬펐다·감동했다＋그 이유）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          <ruby>正直<rt>しょうじき</rt></ruby>に
-          <ruby>言<rt>い</rt></ruby>うと、
-          かなり<ruby>笑<rt>わら</rt></ruby>いました。<br>
-          すでに<ruby>抵抗<rt>ていこう</rt></ruby>できない
-          <ruby>相手<rt>あいて</rt></ruby>を
-          <ruby>蹴<rt>け</rt></ruby>るのは、
-          多少やりすぎだとは
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          とはいえ、
-          サムライソードがそれまでにしたことを
-          <ruby>考<rt>かんが</rt></ruby>えると、
-          あまり<ruby>同情<rt>どうじょう</rt></ruby>する
-          <ruby>気<rt>き</rt></ruby>にはなれませんでした。<br>
-          何より、アキまで
-          <ruby>真顔<rt>まがお</rt></ruby>で
-          <ruby>参加<rt>さんか</rt></ruby>したところが
-          一番<ruby>面白<rt>おもしろ</rt></ruby>かったです。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （솔직히 말하면 상당히 웃었습니다.
-          이미 저항할 수 없는 상대를 차는 것은
-          다소 지나치다고 생각합니다.
-          그렇다고 해도 사무라이 소드가 그동안 한 일을 생각하면
-          별로 동정하고 싶은 마음은 들지 않았습니다.
-          무엇보다 아키까지 진지한 얼굴로 참가한 부분이 가장 재미있었습니다.）
+          <br><br>
+
+          <ruby>最初<rt>さいしょ</rt></ruby>は、
+          なぜゴーストの
+          <ruby>悪魔<rt>あくま</rt></ruby>が
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>渡<rt>わた</rt></ruby>したのか
+          <ruby>分<rt>わ</rt></ruby>からず、
+          <ruby>驚<rt>おどろ</rt></ruby>きました。
+          <br>
+
+          しかし、
+          「Easy Revenge!」という
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>た
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>、
+          <ruby>姫野<rt>ひめの</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>して、
+          少し<ruby>悲<rt>かな</rt></ruby>しくなりました。
+          <br>
+
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>場面<rt>ばめん</rt></ruby>ではあるものの、
+          アキがもう一度
+          <ruby>勇気<rt>ゆうき</rt></ruby>を
+          <ruby>出<rt>だ</rt></ruby>す
+          きっかけになったところは
+          とても<ruby>感動的<rt>かんどうてき</rt></ruby>でした。
+
+          <br><br>
+
+          （처음에는 왜 고스트의 악마가 담배를 건넸는지 몰라
+          놀랐습니다.
+
+          하지만 ‘Easy Revenge!’라는 말을 보는 순간
+          히메노가 떠올라 조금 슬퍼졌습니다.
+
+          슬픈 장면이기는 하지만,
+          아키가 다시 용기를 내는 계기가 된 점은
+          매우 감동적이었습니다.）
+
         </p>
+
       </article>
 
       <!-- Q2 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">2</span>
-          アキは
-          <ruby>最初<rt>さいしょ</rt></ruby>
-          <ruby>断<rt>ことわ</rt></ruby>ったのに、
-          どうして
-          <ruby>途中<rt>とちゅう</rt></ruby>で
-          <ruby>気持<rt>きも</rt></ruby>ちを
-          <ruby>変<rt>か</rt></ruby>えたと
+
+          「Easy Revenge!」という
+          <ruby>言葉<rt>ことば</rt></ruby>は、
+          <ruby>姫野<rt>ひめの</rt></ruby>らしい
+          <ruby>言葉<rt>ことば</rt></ruby>だと
           <ruby>思<rt>おも</rt></ruby>いますか。
+
         </h4>
 
         <p>
-          아키는 처음에는 거절했는데,
-          왜 도중에 마음을 바꿨다고 생각합니까?
+          ‘Easy Revenge!’라는 말은
+          히메노다운 말이라고 생각합니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          アキの<ruby>怒<rt>いか</rt></ruby>り・
-          デンジへの<ruby>反応<rt>はんのう</rt></ruby>・
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby><br>
-          （답변 포인트: 아키의 분노·덴지에 대한 반응·기분 전환）
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>性格<rt>せいかく</rt></ruby>＋
+          <ruby>軽<rt>かる</rt></ruby>い
+          <ruby>言<rt>い</rt></ruby>い
+          <ruby>方<rt>かた</rt></ruby>＋
+          アキへの<ruby>気持<rt>きも</rt></ruby>ち
+
+          <br>
+
+          （답변 포인트:
+          히메노의 성격＋가벼운 말투＋아키를 향한 마음）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          アキは<ruby>最初<rt>さいしょ</rt></ruby>、
-          デンジの<ruby>提案<rt>ていあん</rt></ruby>を
-          くだらないと
-          <ruby>思<rt>おも</rt></ruby>ったのだと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          ただ、アキ<ruby>自身<rt>じしん</rt></ruby>も
-          サムライソードに対して
-          かなり<ruby>怒<rt>いか</rt></ruby>りを
-          <ruby>抱<rt>かか</rt></ruby>えていたはずです。<br>
-          デンジの<ruby>話<rt>はなし</rt></ruby>を
-          <ruby>聞<rt>き</rt></ruby>いているうちに、
-          今だけは<ruby>理性<rt>りせい</rt></ruby>より
-          <ruby>感情<rt>かんじょう</rt></ruby>を
-          <ruby>優先<rt>ゆうせん</rt></ruby>してもいいと
-          <ruby>思<rt>おも</rt></ruby>ったのではないでしょうか。<br>
-          デンジの<ruby>悪<rt>わる</rt></ruby>ノリに
-          <ruby>背中<rt>せなか</rt></ruby>を
-          <ruby>押<rt>お</rt></ruby>されたようにも
-          <ruby>見<rt>み</rt></ruby>えました。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （아키는 처음에는 덴지의 제안을 시시하다고 생각했을 것입니다.
-          하지만 아키 자신도 사무라이 소드에게 상당한 분노를 품고 있었을 것입니다.
-          덴지의 이야기를 듣는 동안
-          지금만큼은 이성보다 감정을 우선해도 된다고 생각한 것이 아닐까요?
-          덴지의 짓궂은 장난에 등을 떠밀린 것처럼도 보였습니다.）
+          <br><br>
+
+          とても
+          <ruby>姫野<rt>ひめの</rt></ruby>らしい
+          <ruby>言葉<rt>ことば</rt></ruby>だと
+          <ruby>思<rt>おも</rt></ruby>います。
+          <br>
+
+          「<ruby>絶対<rt>ぜったい</rt></ruby>に
+          <ruby>復讐<rt>ふくしゅう</rt></ruby>して」
+          と<ruby>重<rt>おも</rt></ruby>く
+          <ruby>言<rt>い</rt></ruby>うのではなく、
+          <ruby>冗談<rt>じょうだん</rt></ruby>のように
+          <ruby>短<rt>みじか</rt></ruby>く
+          <ruby>書<rt>か</rt></ruby>いているところが
+          <ruby>姫野<rt>ひめの</rt></ruby>らしいです。
+          <br>
+
+          <ruby>深刻<rt>しんこく</rt></ruby>な
+          <ruby>状況<rt>じょうきょう</rt></ruby>でも、
+          アキをあまり
+          <ruby>緊張<rt>きんちょう</rt></ruby>させたくなかったのかもしれません。
+
+          <br><br>
+
+          （매우 히메노다운 말이라고 생각합니다.
+
+          ‘반드시 복수해’라고 무겁게 말하는 것이 아니라,
+          농담처럼 짧게 적은 점이 히메노답습니다.
+
+          심각한 상황에서도 아키를 너무 긴장시키고 싶지 않았을지도 모릅니다.）
+
         </p>
+
       </article>
 
       <!-- Q3 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">3</span>
-          アキがサムライソードを
-          <ruby>蹴<rt>け</rt></ruby>ったとき、
-          どんな<ruby>気持<rt>きも</rt></ruby>ちだったと
+
+          アキが
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>たあと、
+          <ruby>表情<rt>ひょうじょう</rt></ruby>や
+          <ruby>雰囲気<rt>ふんいき</rt></ruby>は
+          どう<ruby>変<rt>か</rt></ruby>わったと
           <ruby>思<rt>おも</rt></ruby>いますか。
+
         </h4>
 
         <p>
-          아키가 사무라이 소드를 찰 때,
-          어떤 기분이었다고 생각합니까?
+          아키가 담배를 본 뒤
+          표정이나 분위기는 어떻게 달라졌다고 생각합니까?
         </p>
 
         <div class="discussion-prompt">
-          <ruby>復讐<rt>ふくしゅう</rt></ruby>・
-          <ruby>腹<rt>はら</rt></ruby>いせ・
-          ストレス<ruby>発散<rt>はっさん</rt></ruby>・
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby><br>
-          （복수·분풀이·스트레스 해소·기분 전환）
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>恐怖<rt>きょうふ</rt></ruby>・
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>き・
+          <ruby>覚悟<rt>かくご</rt></ruby>＋
+          <ruby>歩<rt>ある</rt></ruby>き
+          <ruby>方<rt>かた</rt></ruby>や
+          <ruby>表情<rt>ひょうじょう</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          공포·침착함·각오＋걸음걸이나 표정）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          <ruby>復讐<rt>ふくしゅう</rt></ruby>というより、
-          <ruby>溜<rt>た</rt></ruby>め<ruby>込<rt>こ</rt></ruby>んでいた
-          <ruby>怒<rt>いか</rt></ruby>りを
-          <ruby>一気<rt>いっき</rt></ruby>に
-          <ruby>発散<rt>はっさん</rt></ruby>していたように
-          <ruby>見<rt>み</rt></ruby>えました。<br>
-          アキはそれまで、
-          <ruby>仲間<rt>なかま</rt></ruby>を
-          <ruby>失<rt>うしな</rt></ruby>った
-          <ruby>悲<rt>かな</rt></ruby>しみや
-          <ruby>怒<rt>いか</rt></ruby>りを、
-          ほとんど<ruby>表<rt>おもて</rt></ruby>に
-          <ruby>出<rt>だ</rt></ruby>していませんでした。<br>
-          だからこそ、
-          あのときはデンジに
-          <ruby>便乗<rt>びんじょう</rt></ruby>して、
-          <ruby>遠慮<rt>えんりょ</rt></ruby>なく
-          <ruby>感情<rt>かんじょう</rt></ruby>を
-          <ruby>出<rt>だ</rt></ruby>したかったのだと
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （복수라기보다 쌓아 두었던 분노를
-          한꺼번에 풀고 있는 것처럼 보였습니다.
-          아키는 그동안 동료를 잃은 슬픔과 분노를
-          거의 겉으로 드러내지 않았습니다.
-          그렇기 때문에 그때는 덴지에게 편승해
-          거리낌 없이 감정을 드러내고 싶었던 것 같습니다.）
+          <br><br>
+
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>る
+          <ruby>前<rt>まえ</rt></ruby>のアキは、
+          <ruby>何<rt>なに</rt></ruby>もできずに
+          <ruby>苦<rt>くる</rt></ruby>しんでいるように
+          <ruby>見<rt>み</rt></ruby>えました。
+          <br>
+
+          ところが、
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>してからは、
+          <ruby>急<rt>きゅう</rt></ruby>に
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>いたように
+          <ruby>感<rt>かん</rt></ruby>じました。
+          <br>
+
+          <ruby>大声<rt>おおごえ</rt></ruby>を
+          <ruby>出<rt>だ</rt></ruby>したわけではありませんが、
+          <ruby>静<rt>しず</rt></ruby>かな
+          <ruby>表情<rt>ひょうじょう</rt></ruby>から
+          <ruby>覚悟<rt>かくご</rt></ruby>が
+          <ruby>伝<rt>つた</rt></ruby>わってきました。
+
+          <br><br>
+
+          （담배를 보기 전의 아키는
+          아무것도 하지 못한 채 괴로워하는 것처럼 보였습니다.
+
+          그런데 히메노의 말을 떠올린 뒤에는
+          갑자기 침착해진 것처럼 느껴졌습니다.
+
+          큰 소리를 낸 것은 아니지만,
+          조용한 표정에서 각오가 전해졌습니다.）
+
         </p>
+
       </article>
 
       <!-- Q4 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">4</span>
-          デンジの「イージーリベンジ」という
-          <ruby>考<rt>かんが</rt></ruby>えは、
-          <ruby>頭<rt>あたま</rt></ruby>が
-          <ruby>悪<rt>わる</rt></ruby>そうに
-          <ruby>見<rt>み</rt></ruby>えましたか。
-          それとも、
-          <ruby>意外<rt>いがい</rt></ruby>と
-          いい<ruby>考<rt>かんが</rt></ruby>えだと
-          <ruby>思<rt>おも</rt></ruby>いましたか。
+
+          この<ruby>場面<rt>ばめん</rt></ruby>で
+          一番<ruby>印象<rt>いんしょう</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>った
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>は
+          どこですか。
+
         </h4>
 
         <p>
-          덴지의 ‘이지 리벤지’라는 생각은
-          머리가 나빠 보였습니까?
-          아니면 의외로 좋은 생각이라고 느꼈습니까?
+          이 장면에서 가장 인상에 남은 순간은 어디입니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>馬鹿<rt>ばか</rt></ruby>らしさ＋
-          アキの<ruby>気分<rt>きぶん</rt></ruby>への
-          <ruby>影響<rt>えいきょう</rt></ruby><br>
-          （답변 포인트: 바보 같음＋아키의 기분에 끼친 영향）
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>受<rt>う</rt></ruby>け
+          <ruby>取<rt>と</rt></ruby>る
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>・
+          アキが<ruby>歩<rt>ある</rt></ruby>く
+          <ruby>場面<rt>ばめん</rt></ruby>・
+          <ruby>最後<rt>さいご</rt></ruby>の
+          <ruby>攻撃<rt>こうげき</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          담배를 받는 순간·아키가 걷는 장면·마지막 공격）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          <ruby>一見<rt>いっけん</rt></ruby>すると、
-          かなり<ruby>馬鹿<rt>ばか</rt></ruby>らしい
-          <ruby>考<rt>かんが</rt></ruby>えに
-          <ruby>見<rt>み</rt></ruby>えます。<br>
-          ただ、デンジなりにアキを
-          <ruby>元気<rt>げんき</rt></ruby>づけようとしたのだとすれば、
-          意外と<ruby>悪<rt>わる</rt></ruby>くない
-          <ruby>方法<rt>ほうほう</rt></ruby>だったと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          デンジは<ruby>気<rt>き</rt></ruby>の
-          <ruby>利<rt>き</rt></ruby>いた
-          <ruby>慰<rt>なぐさ</rt></ruby>めの
-          <ruby>言葉<rt>ことば</rt></ruby>を
-          <ruby>言<rt>い</rt></ruby>えるタイプではありません。<br>
-          その<ruby>代<rt>か</rt></ruby>わりに、
-          自分と<ruby>一緒<rt>いっしょ</rt></ruby>に
-          <ruby>馬鹿<rt>ばか</rt></ruby>なことをさせることで、
-          アキの<ruby>気持<rt>きも</rt></ruby>ちを
-          <ruby>軽<rt>かる</rt></ruby>くしようとしたのかもしれません。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （언뜻 보면 상당히 바보 같은 생각으로 보입니다.
-          하지만 덴지 나름대로 아키를 기운 나게 하려고 한 것이라면
-          의외로 나쁘지 않은 방법이었다고 생각합니다.
-          덴지는 재치 있는 위로의 말을 할 수 있는 타입이 아닙니다.
-          그 대신 자신과 함께 바보 같은 일을 하게 함으로써
-          아키의 마음을 가볍게 하려고 했을지도 모릅니다.）
+          <br><br>
+
+          私は、
+          アキがゴーストの
+          <ruby>悪魔<rt>あくま</rt></ruby>の
+          <ruby>腕<rt>うで</rt></ruby>の
+          <ruby>上<rt>うえ</rt></ruby>を
+          <ruby>静<rt>しず</rt></ruby>かに
+          <ruby>歩<rt>ある</rt></ruby>いていく
+          <ruby>場面<rt>ばめん</rt></ruby>が
+          一番<ruby>印象的<rt>いんしょうてき</rt></ruby>でした。
+          <br>
+
+          その<ruby>直前<rt>ちょくぜん</rt></ruby>までは
+          <ruby>動<rt>うご</rt></ruby>けなかったのに、
+          <ruby>恐怖<rt>きょうふ</rt></ruby>を
+          <ruby>抑<rt>おさ</rt></ruby>えた
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>、
+          <ruby>立場<rt>たちば</rt></ruby>が
+          <ruby>逆<rt>ぎゃく</rt></ruby>になりました。
+          <br>
+
+          <ruby>派手<rt>はで</rt></ruby>な
+          <ruby>動<rt>うご</rt></ruby>きよりも、
+          <ruby>静<rt>しず</rt></ruby>かに
+          <ruby>歩<rt>ある</rt></ruby>く
+          <ruby>姿<rt>すがた</rt></ruby>のほうが
+          かっこよく<ruby>見<rt>み</rt></ruby>えました。
+
+          <br><br>
+
+          （저는 아키가 고스트의 악마의 팔 위를
+          조용히 걸어가는 장면이 가장 인상적이었습니다.
+
+          바로 전까지 움직이지 못했는데,
+          두려움을 억누르는 순간 상황이 역전되었습니다.
+
+          화려한 움직임보다 조용히 걷는 모습이 더 멋있어 보였습니다.）
+
         </p>
+
       </article>
 
       <!-- Q5 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">5</span>
-          この<ruby>行動<rt>こうどう</rt></ruby>で、
-          アキの<ruby>気持<rt>きも</rt></ruby>ちは
-          少し<ruby>楽<rt>らく</rt></ruby>になったと
-          <ruby>思<rt>おも</rt></ruby>いますか。
+
+          アキを<ruby>助<rt>たす</rt></ruby>けたのは、
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>知識<rt>ちしき</rt></ruby>ですか。
+
+          それとも、
+          <ruby>姫野<rt>ひめの</rt></ruby>との
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>で</rt></ruby>ですか。
+
         </h4>
 
         <p>
-          이 행동으로 아키의 기분이
-          조금 편해졌다고 생각합니까?
+          아키를 도운 것은 히메노의 지식입니까?
+          아니면 히메노와의 추억입니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>完全<rt>かんぜん</rt></ruby>に
-          <ruby>元気<rt>げんき</rt></ruby>になったか＋
-          <ruby>一時的<rt>いちじてき</rt></ruby>な
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby>になったか<br>
-          （답변 포인트: 완전히 회복했는지＋일시적인 기분 전환이 되었는지）
+          ゴーストの
+          <ruby>弱点<rt>じゃくてん</rt></ruby>＋
+          <ruby>勇気<rt>ゆうき</rt></ruby>＋
+          どちらがより
+          <ruby>大切<rt>たいせつ</rt></ruby>だったか
+
+          <br>
+
+          （답변 포인트:
+          고스트의 약점＋용기＋어느 쪽이 더 중요했는지）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          この<ruby>行動<rt>こうどう</rt></ruby>だけで、
-          アキの<ruby>悲<rt>かな</rt></ruby>しみが
-          <ruby>消<rt>き</rt></ruby>えたわけではないと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          それでも、
-          <ruby>感情<rt>かんじょう</rt></ruby>を
-          <ruby>抑<rt>おさ</rt></ruby>えたまま
-          一人で<ruby>抱<rt>かか</rt></ruby>え
-          <ruby>込<rt>こ</rt></ruby>むよりは、
-          デンジと<ruby>一緒<rt>いっしょ</rt></ruby>に
-          <ruby>馬鹿<rt>ばか</rt></ruby>なことをしたほうが
-          <ruby>気持<rt>きも</rt></ruby>ちは
-          <ruby>和<rt>やわ</rt></ruby>らいだはずです。<br>
-          <ruby>一時的<rt>いちじてき</rt></ruby>ではあっても、
-          <ruby>嫌<rt>いや</rt></ruby>なことから
-          <ruby>意識<rt>いしき</rt></ruby>を
-          <ruby>外<rt>そ</rt></ruby>らせたという
-          <ruby>意味<rt>いみ</rt></ruby>では、
-          いい<ruby>気分転換<rt>きぶんてんかん</rt></ruby>になったと
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （이 행동만으로 아키의 슬픔이 사라진 것은 아니라고 생각합니다.
-          그래도 감정을 억누른 채 혼자 끌어안고 있는 것보다는
-          덴지와 함께 바보 같은 일을 하는 편이 마음이 누그러졌을 것입니다.
-          일시적이기는 해도 싫은 일에서 의식을 돌렸다는 의미에서는
-          좋은 기분 전환이 되었다고 생각합니다.）
+          <br><br>
+
+          どちらも
+          <ruby>必要<rt>ひつよう</rt></ruby>だったと
+          <ruby>思<rt>おも</rt></ruby>いますが、
+          私は<ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>で</rt></ruby>のほうが
+          <ruby>大<rt>おお</rt></ruby>きかったと
+          <ruby>思<rt>おも</rt></ruby>います。
+          <br>
+
+          ゴーストの
+          <ruby>弱点<rt>じゃくてん</rt></ruby>を
+          <ruby>知<rt>し</rt></ruby>っているだけでは、
+          <ruby>恐怖<rt>きょうふ</rt></ruby>を
+          <ruby>抑<rt>おさ</rt></ruby>えられなかったかもしれません。
+          <br>
+
+          <ruby>姫野<rt>ひめの</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>したおかげで、
+          アキはもう一度
+          <ruby>前<rt>まえ</rt></ruby>に
+          <ruby>進<rt>すす</rt></ruby>む
+          <ruby>勇気<rt>ゆうき</rt></ruby>を
+          <ruby>持<rt>も</rt></ruby>てたのだと
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （둘 다 필요했다고 생각하지만,
+          저는 추억의 힘이 더 컸다고 생각합니다.
+
+          고스트의 약점을 알고 있는 것만으로는
+          두려움을 억누르지 못했을 수도 있습니다.
+
+          히메노를 떠올린 덕분에
+          아키는 다시 앞으로 나아갈 용기를 가질 수 있었다고 생각합니다.）
+
         </p>
+
       </article>
 
       <!-- Q6 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">6</span>
-          もしパワーもこの
-          <ruby>場面<rt>ばめん</rt></ruby>にいたら、
-          何を<ruby>言<rt>い</rt></ruby>って、
-          どんな<ruby>行動<rt>こうどう</rt></ruby>をしたと
-          <ruby>思<rt>おも</rt></ruby>いますか。
+
+          アキのように、
+          <ruby>緊張<rt>きんちょう</rt></ruby>したときに
+          <ruby>誰<rt>だれ</rt></ruby>かの
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>したことがありますか。
+
         </h4>
 
         <p>
-          만약 파워도 이 장면에 있었다면
-          무슨 말을 하고 어떤 행동을 했을 것 같습니까?
+          아키처럼 긴장했을 때
+          누군가의 말을 떠올린 적이 있습니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          パワーの<ruby>話<rt>はな</rt></ruby>し
-          <ruby>方<rt>かた</rt></ruby>＋
-          デンジとの<ruby>競争<rt>きょうそう</rt></ruby>＋
-          <ruby>勝手<rt>かって</rt></ruby>な
-          <ruby>行動<rt>こうどう</rt></ruby><br>
-          （답변 포인트: 파워의 말투＋덴지와의 경쟁＋제멋대로인 행동）
+          <ruby>家族<rt>かぞく</rt></ruby>・
+          <ruby>友達<rt>ともだち</rt></ruby>・
+          <ruby>先生<rt>せんせい</rt></ruby>の
+          <ruby>言葉<rt>ことば</rt></ruby>＋
+          どんな<ruby>状況<rt>じょうきょう</rt></ruby>だったか
+
+          <br>
+
+          （답변 포인트:
+          가족·친구·선생님의 말＋어떤 상황이었는지）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          パワーなら、
-          デンジに<ruby>誘<rt>さそ</rt></ruby>われるまでもなく、
-          自分から<ruby>参加<rt>さんか</rt></ruby>したに
-          <ruby>違<rt>ちが</rt></ruby>いありません。<br>
-          「ワシが一番大きな
-          <ruby>悲鳴<rt>ひめい</rt></ruby>を
-          <ruby>上<rt>あ</rt></ruby>げさせる！」と
-          <ruby>宣言<rt>せんげん</rt></ruby>して、
-          デンジと<ruby>本気<rt>ほんき</rt></ruby>で
-          <ruby>競<rt>きそ</rt></ruby>ったと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          しかも、
-          <ruby>実際<rt>じっさい</rt></ruby>の
-          <ruby>結果<rt>けっか</rt></ruby>に
-          <ruby>関係<rt>かんけい</rt></ruby>なく、
-          最後には自分が
-          <ruby>勝<rt>か</rt></ruby>ったと
-          <ruby>言<rt>い</rt></ruby>い
-          <ruby>張<rt>は</rt></ruby>りそうです。<br>
-          パワーがいたら、
-          この<ruby>場面<rt>ばめん</rt></ruby>は
-          さらに<ruby>騒<rt>さわ</rt></ruby>がしくなっていたでしょう。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （파워라면 덴지의 권유를 기다릴 것도 없이
-          스스로 참가했을 것이 틀림없습니다.
-          “내가 가장 큰 비명을 지르게 하겠다!”라고 선언하고
-          덴지와 진심으로 경쟁했을 것입니다.
-          게다가 실제 결과와 상관없이
-          마지막에는 자신이 이겼다고 우겼을 것 같습니다.
-          파워가 있었다면 이 장면은 더욱 시끄러워졌을 것입니다.）
+          <br><br>
+
+          <ruby>大切<rt>たいせつ</rt></ruby>な
+          <ruby>発表<rt>はっぴょう</rt></ruby>の
+          <ruby>前<rt>まえ</rt></ruby>に、
+          <ruby>友達<rt>ともだち</rt></ruby>から
+          「<ruby>失敗<rt>しっぱい</rt></ruby>しても
+          <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>」
+          と<ruby>言<rt>い</rt></ruby>われたことがあります。
+          <br>
+
+          <ruby>発表<rt>はっぴょう</rt></ruby>の
+          <ruby>直前<rt>ちょくぜん</rt></ruby>に
+          その<ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>したら、
+          少し<ruby>緊張<rt>きんちょう</rt></ruby>が
+          <ruby>和<rt>やわ</rt></ruby>らぎました。
+          <br>
+
+          <ruby>短<rt>みじか</rt></ruby>い
+          <ruby>言葉<rt>ことば</rt></ruby>でも、
+          <ruby>誰<rt>だれ</rt></ruby>が
+          <ruby>言<rt>い</rt></ruby>ったかによって、
+          <ruby>大<rt>おお</rt></ruby>きな
+          <ruby>力<rt>ちから</rt></ruby>になると
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （중요한 발표를 앞두고
+          친구에게 ‘실패해도 괜찮아’라는 말을 들은 적이 있습니다.
+
+          발표 직전에 그 말을 떠올리자
+          긴장이 조금 누그러졌습니다.
+
+          짧은 말이라도 누가 말했는지에 따라
+          큰 힘이 될 수 있다고 생각합니다.）
+
         </p>
+
       </article>
 
       <!-- Q7 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">7</span>
-          この<ruby>場面<rt>ばめん</rt></ruby>のあと、
-          デンジとアキは
-          <ruby>前<rt>まえ</rt></ruby>より
-          <ruby>仲良<rt>なかよ</rt></ruby>くなったと
-          <ruby>思<rt>おも</rt></ruby>いますか。
+
+          あなたが
+          <ruby>大切<rt>たいせつ</rt></ruby>な
+          <ruby>挑戦<rt>ちょうせん</rt></ruby>をする
+          <ruby>前<rt>まえ</rt></ruby>に、
+          一つだけ
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          もらえるなら、
+          どんな<ruby>言葉<rt>ことば</rt></ruby>が
+          ほしいですか。
+
         </h4>
 
         <p>
-          이 장면 이후 덴지와 아키는
-          전보다 친해졌다고 생각합니까?
+          중요한 도전을 앞두고
+          한마디만 받을 수 있다면
+          어떤 말을 듣고 싶습니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>共通<rt>きょうつう</rt></ruby>の
-          <ruby>経験<rt>けいけん</rt></ruby>＋
-          二人の<ruby>距離感<rt>きょりかん</rt></ruby>の
-          <ruby>変化<rt>へんか</rt></ruby><br>
-          （답변 포인트: 공통 경험＋두 사람의 거리감 변화）
+          「<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>」・
+          「<ruby>楽<rt>たの</rt></ruby>しんで」・
+          「いつもどおりでいい」など＋
+          その<ruby>理由<rt>りゆう</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          ‘괜찮아’·‘즐겨’·‘평소처럼 하면 돼’ 등＋그 이유）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          この<ruby>出来事<rt>できごと</rt></ruby>を
-          きっかけに、
-          二人の<ruby>距離<rt>きょり</rt></ruby>は
-          少し<ruby>縮<rt>ちぢ</rt></ruby>まったと
-          <ruby>思<rt>おも</rt></ruby>います。<br>
-          それまでのアキは、
-          デンジを<ruby>面倒<rt>めんどう</rt></ruby>な
-          <ruby>新人<rt>しんじん</rt></ruby>として
-          <ruby>扱<rt>あつか</rt></ruby>っているように
-          <ruby>見<rt>み</rt></ruby>えました。<br>
-          しかし、この<ruby>場面<rt>ばめん</rt></ruby>では、
-          デンジの<ruby>馬鹿<rt>ばか</rt></ruby>な
-          <ruby>提案<rt>ていあん</rt></ruby>を
-          <ruby>受<rt>う</rt></ruby>け
-          <ruby>入<rt>い</rt></ruby>れて、
-          同じ<ruby>立場<rt>たちば</rt></ruby>で
-          <ruby>一緒<rt>いっしょ</rt></ruby>に
-          <ruby>楽<rt>たの</rt></ruby>しんでいます。<br>
-          こうした<ruby>共通<rt>きょうつう</rt></ruby>の
-          <ruby>経験<rt>けいけん</rt></ruby>が、
-          二人を<ruby>単<rt>たん</rt></ruby>なる
-          <ruby>同僚<rt>どうりょう</rt></ruby>から
-          <ruby>仲間<rt>なかま</rt></ruby>に
-          <ruby>変<rt>か</rt></ruby>えたのかもしれません。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （이 일을 계기로 두 사람의 거리는 조금 가까워졌다고 생각합니다.
-          그때까지 아키는 덴지를 성가신 신입으로 대하는 것처럼 보였습니다.
-          하지만 이 장면에서는 덴지의 바보 같은 제안을 받아들이고
-          같은 입장에서 함께 즐기고 있습니다.
-          이런 공통의 경험이 두 사람을 단순한 동료에서
-          동료 이상의 관계로 바꿨을지도 모릅니다.）
+          <br><br>
+
+          私は、
+          「いつもどおりでいい」
+          と<ruby>言<rt>い</rt></ruby>ってほしいです。
+          <br>
+
+          「<ruby>絶対<rt>ぜったい</rt></ruby>に
+          <ruby>成功<rt>せいこう</rt></ruby>して」
+          と<ruby>言<rt>い</rt></ruby>われると、
+          かえって
+          <ruby>緊張<rt>きんちょう</rt></ruby>してしまうからです。
+          <br>
+
+          <ruby>特別<rt>とくべつ</rt></ruby>なことを
+          しなくてもいいと
+          <ruby>言<rt>い</rt></ruby>われたほうが、
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>いて
+          <ruby>挑戦<rt>ちょうせん</rt></ruby>できると
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （저는 ‘평소처럼 하면 돼’라는 말을 듣고 싶습니다.
+
+          ‘반드시 성공해’라는 말을 들으면
+          오히려 긴장해 버리기 때문입니다.
+
+          특별한 것을 하지 않아도 된다는 말을 듣는 편이
+          침착하게 도전할 수 있을 것 같습니다.）
+
         </p>
+
       </article>
 
       <!-- Q8 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">8</span>
-          あなたも
-          <ruby>友達<rt>ともだち</rt></ruby>と
-          <ruby>一緒<rt>いっしょ</rt></ruby>に、
-          <ruby>子供<rt>こども</rt></ruby>っぽい
-          <ruby>遊<rt>あそ</rt></ruby>びや
-          <ruby>馬鹿<rt>ばか</rt></ruby>な
-          <ruby>冗談<rt>じょうだん</rt></ruby>をしたことがありますか。
+
+          <ruby>写真<rt>しゃしん</rt></ruby>や
+          <ruby>音楽<rt>おんがく</rt></ruby>、
+          <ruby>手紙<rt>てがみ</rt></ruby>などを
+          <ruby>見<rt>み</rt></ruby>ると、
+          <ruby>誰<rt>だれ</rt></ruby>かを
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>すことがありますか。
+
         </h4>
 
         <p>
-          당신도 친구와 함께
-          어린아이 같은 놀이나 바보 같은 장난을 한 적이 있습니까?
+          사진이나 음악, 편지 등을 보면
+          누군가를 떠올리는 경우가 있습니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          いつ・どこで・何をしたか＋
-          そのときの<ruby>感想<rt>かんそう</rt></ruby><br>
-          （답변 포인트: 언제·어디서·무엇을 했는지＋그때의 감상）
+          <ruby>物<rt>もの</rt></ruby>・
+          <ruby>音楽<rt>おんがく</rt></ruby>・
+          <ruby>場所<rt>ばしょ</rt></ruby>＋
+          <ruby>誰<rt>だれ</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>すか
+
+          <br>
+
+          （답변 포인트:
+          물건·음악·장소＋누구를 떠올리는지）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          学生のころ、
-          <ruby>友達<rt>ともだち</rt></ruby>と
-          カラオケに<ruby>行<rt>い</rt></ruby>き、
-          誰が一番<ruby>変<rt>へん</rt></ruby>な
-          <ruby>声<rt>こえ</rt></ruby>で
-          <ruby>歌<rt>うた</rt></ruby>えるか
-          <ruby>競<rt>きそ</rt></ruby>ったことがあります。<br>
-          今<ruby>振<rt>ふ</rt></ruby>り
-          <ruby>返<rt>かえ</rt></ruby>ると、
-          かなり<ruby>子供<rt>こども</rt></ruby>っぽくて
-          <ruby>恥<rt>は</rt></ruby>ずかしい
-          <ruby>遊<rt>あそ</rt></ruby>びでした。<br>
-          とはいえ、
-          そのときは全員が
-          <ruby>本気<rt>ほんき</rt></ruby>で
-          <ruby>笑<rt>わら</rt></ruby>っていて、
-          とてもいい
-          <ruby>気分転換<rt>きぶんてんかん</rt></ruby>になりました。<br>
-          大人になってからも、
-          ときどきこういう
-          <ruby>馬鹿<rt>ばか</rt></ruby>なことをするのは
-          <ruby>悪<rt>わる</rt></ruby>くないと
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （학생 때 친구들과 노래방에 가서
-          누가 가장 이상한 목소리로 노래할 수 있는지 겨룬 적이 있습니다.
-          지금 돌이켜 보면 상당히 어린아이 같고 부끄러운 놀이였습니다.
-          그렇다고 해도 그때는 모두 진심으로 웃었고
-          매우 좋은 기분 전환이 되었습니다.
-          어른이 된 뒤에도 가끔 이런 바보 같은 일을 하는 것은
-          나쁘지 않다고 생각합니다.）
+          <br><br>
+
+          <ruby>学生<rt>がくせい</rt></ruby>のころに
+          よく<ruby>聞<rt>き</rt></ruby>いていた
+          <ruby>音楽<rt>おんがく</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>くと、
+          そのころの
+          <ruby>友達<rt>ともだち</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>します。
+          <br>
+
+          その<ruby>音楽<rt>おんがく</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>くたびに、
+          <ruby>一緒<rt>いっしょ</rt></ruby>に
+          <ruby>遊<rt>あそ</rt></ruby>んだことや
+          <ruby>話<rt>はな</rt></ruby>したことが
+          <ruby>自然<rt>しぜん</rt></ruby>に
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>浮<rt>う</rt></ruby>かびます。
+          <br>
+
+          <ruby>人<rt>ひと</rt></ruby>の
+          <ruby>記憶<rt>きおく</rt></ruby>は、
+          <ruby>言葉<rt>ことば</rt></ruby>だけでなく
+          <ruby>音<rt>おと</rt></ruby>や
+          <ruby>物<rt>もの</rt></ruby>にも
+          <ruby>残<rt>のこ</rt></ruby>るのだと
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （학생 때 자주 듣던 음악을 들으면
+          그때의 친구들이 떠오릅니다.
+
+          그 음악을 들을 때마다
+          함께 놀았던 일과 이야기했던 일이 자연스럽게 생각납니다.
+
+          사람에 대한 기억은 말뿐 아니라
+          소리와 물건에도 남는다고 생각합니다.）
+
         </p>
+
       </article>
 
       <!-- Q9 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">9</span>
-          もしあなたがアキと
-          <ruby>一緒<rt>いっしょ</rt></ruby>にいたら、
-          デンジのゲームに
-          <ruby>参加<rt>さんか</rt></ruby>しますか。
-          それとも
-          <ruby>止<rt>と</rt></ruby>めますか。
+
+          <ruby>怖<rt>こわ</rt></ruby>いときや
+          <ruby>緊張<rt>きんちょう</rt></ruby>したとき、
+          あなたはどうやって
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>きますか。
+
         </h4>
 
         <p>
-          만약 당신이 아키와 함께 있었다면
-          덴지의 게임에 참가하겠습니까?
-          아니면 말리겠습니까?
+          무섭거나 긴장될 때
+          어떻게 마음을 가라앉힙니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          <ruby>参加<rt>さんか</rt></ruby>する・
-          <ruby>止<rt>と</rt></ruby>める・
-          <ruby>見守<rt>みまも</rt></ruby>る＋その
-          <ruby>理由<rt>りゆう</rt></ruby><br>
-          （답변 포인트: 참가하기·말리기·지켜보기＋그 이유）
+          <ruby>深呼吸<rt>しんこきゅう</rt></ruby>・
+          <ruby>音楽<rt>おんがく</rt></ruby>・
+          <ruby>誰<rt>だれ</rt></ruby>かと
+          <ruby>話<rt>はな</rt></ruby>す・
+          一人になるなど
+
+          <br>
+
+          （답변 포인트:
+          심호흡·음악·누군가와 대화하기·혼자 있기 등）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          私なら、
-          自分から<ruby>積極的<rt>せっきょくてき</rt></ruby>に
-          <ruby>参加<rt>さんか</rt></ruby>することは
-          ないと<ruby>思<rt>おも</rt></ruby>います。<br>
-          ただ、サムライソードがしたことを
-          <ruby>考<rt>かんが</rt></ruby>えると、
-          デンジとアキを
-          <ruby>本気<rt>ほんき</rt></ruby>で
-          <ruby>止<rt>と</rt></ruby>める
-          <ruby>気<rt>き</rt></ruby>にもなれません。<br>
-          二人にとっては、
-          これが<ruby>怒<rt>いか</rt></ruby>りや
-          ストレスを<ruby>発散<rt>はっさん</rt></ruby>する
-          <ruby>方法<rt>ほうほう</rt></ruby>だったからです。<br>
-          そのため、
-          少し<ruby>離<rt>はな</rt></ruby>れたところから
-          <ruby>様子<rt>ようす</rt></ruby>を
-          <ruby>見守<rt>みまも</rt></ruby>り、
-          やりすぎたら
-          <ruby>止<rt>と</rt></ruby>めると
-          <ruby>思<rt>おも</rt></ruby>います。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （저라면 스스로 적극적으로 참가하지는 않을 것 같습니다.
-          하지만 사무라이 소드가 한 일을 생각하면
-          덴지와 아키를 진심으로 말리고 싶은 마음도 들지 않습니다.
-          두 사람에게는 이것이 분노나 스트레스를 푸는 방법이었기 때문입니다.
-          따라서 조금 떨어진 곳에서 상황을 지켜보다가
-          너무 심해지면 말릴 것 같습니다.）
+          <br><br>
+
+          私は
+          <ruby>緊張<rt>きんちょう</rt></ruby>したとき、
+          まずゆっくり
+          <ruby>深呼吸<rt>しんこきゅう</rt></ruby>をします。
+          <br>
+
+          そのあと、
+          <ruby>今<rt>いま</rt></ruby>すぐ
+          できることだけを
+          一つずつ
+          <ruby>考<rt>かんが</rt></ruby>えるようにしています。
+          <br>
+
+          <ruby>失敗<rt>しっぱい</rt></ruby>したあとのことまで
+          <ruby>考<rt>かんが</rt></ruby>えると
+          さらに<ruby>不安<rt>ふあん</rt></ruby>になるので、
+          <ruby>目<rt>め</rt></ruby>の
+          <ruby>前<rt>まえ</rt></ruby>のことに
+          <ruby>集中<rt>しゅうちゅう</rt></ruby>するのが
+          一番いいと
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （저는 긴장할 때 먼저 천천히 심호흡합니다.
+
+          그다음 지금 당장 할 수 있는 일만
+          하나씩 생각하려고 합니다.
+
+          실패한 뒤의 일까지 생각하면 더 불안해지기 때문에
+          눈앞의 일에 집중하는 것이 가장 좋다고 생각합니다.）
+
         </p>
+
       </article>
 
       <!-- Q10 -->
       <article class="mbti-card">
+
         <h4 class="mbti-card-title">
+
           <span class="mbti-choice-number">10</span>
-          デンジがゲームを
-          <ruby>提案<rt>ていあん</rt></ruby>したことと、
-          アキが<ruby>本当<rt>ほんとう</rt></ruby>に
-          <ruby>参加<rt>さんか</rt></ruby>したことでは、
-          どちらのほうが
-          <ruby>面白<rt>おもしろ</rt></ruby>かったですか。
+
+          この<ruby>場面<rt>ばめん</rt></ruby>は、
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>場面<rt>ばめん</rt></ruby>と
+          かっこいい
+          <ruby>場面<rt>ばめん</rt></ruby>の
+          どちらに
+          <ruby>近<rt>ちか</rt></ruby>いと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+
         </h4>
 
         <p>
-          덴지가 게임을 제안한 것과
-          아키가 실제로 참가한 것 중
-          어느 쪽이 더 재미있었습니까?
+          이 장면은 슬픈 장면과 멋있는 장면 중
+          어느 쪽에 더 가깝다고 생각합니까?
         </p>
 
         <div class="discussion-prompt">
+
           <ruby>答<rt>こた</rt></ruby>えるポイント：
-          デンジらしさ・アキらしくなさ＋
-          <ruby>意外性<rt>いがいせい</rt></ruby><br>
-          （답변 포인트: 덴지다움·아키답지 않음＋의외성）
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>記憶<rt>きおく</rt></ruby>＋
+          アキの<ruby>戦<rt>たたか</rt></ruby>い＋
+          どちらをより
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>感<rt>かん</rt></ruby>じたか
+
+          <br>
+
+          （답변 포인트:
+          히메노의 기억＋아키의 전투＋어느 쪽을 더 강하게 느꼈는지）
+
         </div>
 
         <p class="example-sentence">
-          <strong>N2 <ruby>例文<rt>れいぶん</rt></ruby></strong><br><br>
 
-          私は、アキが
-          <ruby>実際<rt>じっさい</rt></ruby>に
-          <ruby>参加<rt>さんか</rt></ruby>したことのほうが
-          <ruby>面白<rt>おもしろ</rt></ruby>かったです。<br>
-          デンジの<ruby>提案<rt>ていあん</rt></ruby>は
-          <ruby>馬鹿<rt>ばか</rt></ruby>らしいものの、
-          デンジの<ruby>性格<rt>せいかく</rt></ruby>からすると
-          それほど<ruby>意外<rt>いがい</rt></ruby>ではありません。<br>
-          一方、アキは
-          <ruby>普段<rt>ふだん</rt></ruby>なら
-          そのような<ruby>悪<rt>わる</rt></ruby>ノリを
-          <ruby>止<rt>と</rt></ruby>める
-          <ruby>側<rt>がわ</rt></ruby>です。<br>
-          そのアキが
-          <ruby>真顔<rt>まがお</rt></ruby>で
-          <ruby>便乗<rt>びんじょう</rt></ruby>したからこそ、
-          <ruby>意表<rt>いひょう</rt></ruby>を
-          <ruby>突<rt>つ</rt></ruby>かれて
-          <ruby>笑<rt>わら</rt></ruby>ってしまいました。<br><br>
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
 
-          （저는 아키가 실제로 참가한 쪽이 더 재미있었습니다.
-          덴지의 제안은 바보 같기는 하지만
-          덴지의 성격을 생각하면 그다지 의외는 아닙니다.
-          반면 아키는 평소라면 그런 짓궂은 장난을 말리는 쪽입니다.
-          그런 아키가 진지한 얼굴로 편승했기 때문에
-          허를 찔려 웃고 말았습니다.）
+          <br><br>
+
+          私は、
+          かっこいい
+          <ruby>場面<rt>ばめん</rt></ruby>というより、
+          <ruby>少<rt>すこ</rt></ruby>し
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>場面<rt>ばめん</rt></ruby>に
+          <ruby>近<rt>ちか</rt></ruby>いと
+          <ruby>思<rt>おも</rt></ruby>います。
+          <br>
+
+          アキが
+          <ruby>恐怖<rt>きょうふ</rt></ruby>を
+          <ruby>乗<rt>の</rt></ruby>り
+          <ruby>越<rt>こ</rt></ruby>えて
+          <ruby>戦<rt>たたか</rt></ruby>う
+          <ruby>姿<rt>すがた</rt></ruby>は
+          とてもかっこよかったです。
+          <br>
+
+          とはいえ、
+          その<ruby>力<rt>ちから</rt></ruby>を
+          <ruby>与<rt>あた</rt></ruby>えた
+          <ruby>姫野<rt>ひめの</rt></ruby>が
+          もういないことを
+          <ruby>考<rt>かんが</rt></ruby>えると、
+          <ruby>悲<rt>かな</rt></ruby>しさのほうが
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>残<rt>のこ</rt></ruby>りました。
+
+          <br><br>
+
+          （저는 멋있는 장면이라기보다
+          조금 슬픈 장면에 가깝다고 생각합니다.
+
+          아키가 두려움을 극복하고 싸우는 모습은 매우 멋있었습니다.
+
+          그렇지만 그 힘을 준 히메노가 더는 없다는 점을 생각하면
+          슬픔이 더 강하게 남았습니다.）
+
         </p>
+
       </article>
 
     </div>
+
+    <div class="notice-box free-sharing-box">
+
+      <strong>
+        ほかに<ruby>話<rt>はな</rt></ruby>したいこと
+      </strong>
+
+      <br><br>
+
+      ほかに、この
+      <ruby>場面<rt>ばめん</rt></ruby>について
+      <ruby>話<rt>はな</rt></ruby>したいことや、
+      ほかの
+      <ruby>人<rt>ひと</rt></ruby>の
+      <ruby>意見<rt>いけん</rt></ruby>を
+      <ruby>聞<rt>き</rt></ruby>いてみたいことがあれば、
+      <ruby>自由<rt>じゆう</rt></ruby>に
+      <ruby>共有<rt>きょうゆう</rt></ruby>してください。
+
+      <br><br>
+
+      （이 밖에 이 장면에 관해 이야기하고 싶은 점이나
+      다른 사람의 의견을 들어 보고 싶은 점이 있다면
+      자유롭게 공유해 주세요.）
+
+    </div>
+
   </div>
 
-  <!-- 3. N2 문법 설명 -->
+  <!-- =====================================================
+       3. 문법 설명
+  ====================================================== -->
+
   <div class="language-notes">
+
     <h3 class="section-title">
       3．<ruby>文法説明<rt>ぶんぽうせつめい</rt></ruby>
       （문법 설명）
@@ -2926,231 +2031,277 @@
 
     <div class="language-note-grid">
 
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">N2</span>
-          <ruby>意見<rt>いけん</rt></ruby>を
-          <ruby>補足<rt>ほそく</rt></ruby>する
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          N2
+          <ruby>感想<rt>かんそう</rt></ruby>を
+          <ruby>詳<rt>くわ</rt></ruby>しくする
           <ruby>表現<rt>ひょうげん</rt></ruby>
-        </h3>
+        </h4>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            1．～とはいえ
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>前<rt>まえ</rt></ruby>の
-            <ruby>内容<rt>ないよう</rt></ruby>を
-            <ruby>認<rt>みと</rt></ruby>めながら、
-            それとは<ruby>異<rt>こと</rt></ruby>なる
-            <ruby>事情<rt>じじょう</rt></ruby>や
-            <ruby>意見<rt>いけん</rt></ruby>を
-            <ruby>付<rt>つ</rt></ruby>け
-            <ruby>加<rt>くわ</rt></ruby>える
-            <ruby>表現<rt>ひょうげん</rt></ruby>です。
-            （앞의 내용을 인정하면서
-            그와 다른 사정이나 의견을 덧붙이는 표현입니다.）
+          <h5>
+            1．～た<ruby>瞬間<rt>しゅんかん</rt></ruby>
+          </h5>
+
+          <p>
+            あることが
+            <ruby>起<rt>お</rt></ruby>きた
+            すぐそのときを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （어떤 일이 일어난 바로 그 순간을 나타냅니다.）
           </p>
 
-          <p class="example-sentence">
-            少しやりすぎだとは
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            とはいえ、サムライソードに
-            <ruby>同情<rt>どうじょう</rt></ruby>する
-            <ruby>気<rt>き</rt></ruby>にはなれません。<br>
-            （조금 지나치다고 생각합니다.<br>
-            그렇다고 해도 사무라이 소드를 동정하고 싶은 마음은 들지 않습니다.）
+          <p class="grammar-example">
+            「Easy Revenge!」という
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>見<rt>み</rt></ruby>た
+            <ruby>瞬間<rt>しゅんかん</rt></ruby>、
+            <ruby>姫野<rt>ひめの</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>しました。
+            <br>
+            （‘Easy Revenge!’라는 말을 보는 순간
+            히메노가 떠올랐습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            2．～というより
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>最初<rt>さいしょ</rt></ruby>の
-            <ruby>表現<rt>ひょうげん</rt></ruby>よりも、
-            あとの<ruby>表現<rt>ひょうげん</rt></ruby>のほうが
-            より<ruby>正確<rt>せいかく</rt></ruby>だと
-            <ruby>説明<rt>せつめい</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （앞의 표현보다 뒤의 표현이 더 정확하다고 설명할 때 사용합니다.）
+          <h5>
+            2．～ように<ruby>見<rt>み</rt></ruby>える
+          </h5>
+
+          <p>
+            <ruby>表情<rt>ひょうじょう</rt></ruby>や
+            <ruby>行動<rt>こうどう</rt></ruby>から、
+            そのような
+            <ruby>状態<rt>じょうたい</rt></ruby>だと
+            <ruby>感<rt>かん</rt></ruby>じることを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （표정이나 행동을 통해
+            그러한 상태처럼 느껴짐을 나타냅니다.）
           </p>
 
-          <p class="example-sentence">
-            <ruby>復讐<rt>ふくしゅう</rt></ruby>というより、
-            <ruby>腹<rt>はら</rt></ruby>いせに
-            <ruby>近<rt>ちか</rt></ruby>かったと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （복수라기보다 분풀이에 가까웠다고 생각합니다.）
+          <p class="grammar-example">
+            アキは
+            <ruby>急<rt>きゅう</rt></ruby>に
+            <ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>いたように
+            <ruby>見<rt>み</rt></ruby>えました。
+            <br>
+            （아키는 갑자기 침착해진 것처럼 보였습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            3．～からすると／～からすれば
-          </span>
 
-          <p class="grammar-explanation">
-            ある<ruby>情報<rt>じょうほう</rt></ruby>や
-            <ruby>立場<rt>たちば</rt></ruby>を
-            <ruby>基準<rt>きじゅん</rt></ruby>にして
-            <ruby>判断<rt>はんだん</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （어떤 정보나 입장을 기준으로 판단할 때 사용합니다.）
+          <h5>
+            3．～おかげで
+          </h5>
+
+          <p>
+            あるよい
+            <ruby>結果<rt>けっか</rt></ruby>が
+            <ruby>生<rt>う</rt></ruby>まれた
+            <ruby>理由<rt>りゆう</rt></ruby>を
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （좋은 결과가 생긴 이유를 나타냅니다.）
           </p>
 
-          <p class="example-sentence">
-            デンジの<ruby>性格<rt>せいかく</rt></ruby>からすると、
-            この<ruby>提案<rt>ていあん</rt></ruby>は
-            それほど<ruby>意外<rt>いがい</rt></ruby>ではありません。<br>
-            （덴지의 성격을 생각하면
-            이 제안은 그다지 의외가 아닙니다.）
+          <p class="grammar-example">
+            <ruby>姫野<rt>ひめの</rt></ruby>の
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>したおかげで、
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>抑<rt>おさ</rt></ruby>えることができました。
+            <br>
+            （히메노의 말을 떠올린 덕분에
+            아키는 두려움을 억누를 수 있었습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            4．～に<ruby>違<rt>ちが</rt></ruby>いない
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>強<rt>つよ</rt></ruby>い
-            <ruby>確信<rt>かくしん</rt></ruby>を
-            <ruby>持<rt>も</rt></ruby>って
-            <ruby>予想<rt>よそう</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （강한 확신을 가지고 예상할 때 사용합니다.）
+          <h5>
+            4．～たびに
+          </h5>
+
+          <p>
+            あることが
+            <ruby>起<rt>お</rt></ruby>きる
+            <ruby>毎回<rt>まいかい</rt></ruby>、
+            <ruby>同<rt>おな</rt></ruby>じことが
+            <ruby>起<rt>お</rt></ruby>きるという
+            <ruby>意味<rt>いみ</rt></ruby>です。
+            （어떤 일이 일어날 때마다
+            같은 일이 일어난다는 뜻입니다.）
           </p>
 
-          <p class="example-sentence">
-            パワーがいたら、
-            自分から<ruby>参加<rt>さんか</rt></ruby>したに
-            <ruby>違<rt>ちが</rt></ruby>いありません。<br>
-            （파워가 있었다면 스스로 참가했을 것이 틀림없습니다.）
+          <p class="grammar-example">
+            この<ruby>音楽<rt>おんがく</rt></ruby>を
+            <ruby>聞<rt>き</rt></ruby>くたびに、
+            <ruby>昔<rt>むかし</rt></ruby>の
+            <ruby>友達<rt>ともだち</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>します。
+            <br>
+            （이 음악을 들을 때마다
+            옛 친구가 떠오릅니다.）
           </p>
+
         </div>
 
       </section>
 
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">N2</span>
-          <ruby>対比<rt>たいひ</rt></ruby>・
-          <ruby>限定<rt>げんてい</rt></ruby>の
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          N2
+          <ruby>意見<rt>いけん</rt></ruby>を
+          <ruby>比<rt>くら</rt></ruby>べる
           <ruby>表現<rt>ひょうげん</rt></ruby>
-        </h3>
+        </h4>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            5．～ものの
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>前<rt>まえ</rt></ruby>の
-            <ruby>事実<rt>じじつ</rt></ruby>を
-            <ruby>認<rt>みと</rt></ruby>めたうえで、
-            <ruby>予想<rt>よそう</rt></ruby>とは
-            <ruby>異<rt>こと</rt></ruby>なる
-            <ruby>内容<rt>ないよう</rt></ruby>を
-            <ruby>続<rt>つづ</rt></ruby>ける
-            <ruby>表現<rt>ひょうげん</rt></ruby>です。
-            （앞의 사실을 인정한 뒤
-            예상과 다른 내용을 이어 가는 표현입니다.）
+          <h5>
+            5．～というより
+          </h5>
+
+          <p>
+            <ruby>最初<rt>さいしょ</rt></ruby>の
+            <ruby>表現<rt>ひょうげん</rt></ruby>より、
+            あとの
+            <ruby>表現<rt>ひょうげん</rt></ruby>のほうが
+            より<ruby>正確<rt>せいかく</rt></ruby>だと
+            <ruby>説明<rt>せつめい</rt></ruby>するときに
+            <ruby>使<rt>つか</rt></ruby>います。
+            （앞의 표현보다 뒤의 표현이
+            더 정확하다고 설명할 때 사용합니다.）
           </p>
 
-          <p class="example-sentence">
-            デンジの<ruby>提案<rt>ていあん</rt></ruby>は
-            <ruby>馬鹿<rt>ばか</rt></ruby>らしいものの、
-            アキの<ruby>気分転換<rt>きぶんてんかん</rt></ruby>には
-            なったと<ruby>思<rt>おも</rt></ruby>います。<br>
-            （덴지의 제안은 바보 같기는 하지만
-            아키의 기분 전환은 되었다고 생각합니다.）
+          <p class="grammar-example">
+            かっこいいというより、
+            <ruby>悲<rt>かな</rt></ruby>しい
+            <ruby>場面<rt>ばめん</rt></ruby>に
+            <ruby>近<rt>ちか</rt></ruby>いと
+            <ruby>思<rt>おも</rt></ruby>います。
+            <br>
+            （멋있는 장면이라기보다
+            슬픈 장면에 가깝다고 생각합니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            6．～わけではない
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>全部<rt>ぜんぶ</rt></ruby>がそうではない、
-            または<ruby>完全<rt>かんぜん</rt></ruby>に
+          <h5>
+            6．～わけではない
+          </h5>
+
+          <p>
+            <ruby>全部<rt>ぜんぶ</rt></ruby>が
+            そうなのではない、
+            または
+            <ruby>完全<rt>かんぜん</rt></ruby>に
             そうだとは
             <ruby>言<rt>い</rt></ruby>えないことを
             <ruby>表<rt>あらわ</rt></ruby>します。
             （전부 그런 것은 아니거나
-            완전히 그렇다고 말할 수 없음을 나타냅니다.）
+            완전히 그렇다고 할 수 없음을 나타냅니다.）
           </p>
 
-          <p class="example-sentence">
-            この<ruby>行動<rt>こうどう</rt></ruby>だけで、
-            アキが<ruby>完全<rt>かんぜん</rt></ruby>に
-            <ruby>元気<rt>げんき</rt></ruby>になったわけではありません。<br>
-            （이 행동만으로 아키가 완전히 기운을 차린 것은 아닙니다.）
+          <p class="grammar-example">
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>感<rt>かん</rt></ruby>じなくなった
+            わけではありません。
+            <br>
+            （아키가 두려움을 느끼지 않게 된 것은 아닙니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            7．～一方で
-          </span>
 
-          <p class="grammar-explanation">
-            一つの<ruby>事柄<rt>ことがら</rt></ruby>にある
-            <ruby>異<rt>こと</rt></ruby>なる二つの
-            <ruby>側面<rt>そくめん</rt></ruby>を
-            <ruby>対比<rt>たいひ</rt></ruby>するときに
-            <ruby>使<rt>つか</rt></ruby>います。
-            （하나의 일에 존재하는 서로 다른 두 측면을 비교할 때 사용합니다.）
-          </p>
+          <h5>
+            7．～ものの
+          </h5>
 
-          <p class="example-sentence">
-            デンジの<ruby>行動<rt>こうどう</rt></ruby>は
-            <ruby>乱暴<rt>らんぼう</rt></ruby>である一方で、
-            アキを<ruby>元気<rt>げんき</rt></ruby>づけようとする
-            <ruby>優<rt>やさ</rt></ruby>しさも
-            <ruby>感<rt>かん</rt></ruby>じられます。<br>
-            （덴지의 행동은 난폭한 한편
-            아키를 기운 나게 하려는 다정함도 느껴집니다.）
-          </p>
-        </div>
-
-        <div class="grammar-item">
-          <span class="grammar-expression">
-            8．～からこそ
-          </span>
-
-          <p class="grammar-explanation">
-            その<ruby>理由<rt>りゆう</rt></ruby>が
-            特に<ruby>重要<rt>じゅうよう</rt></ruby>であることを
-            <ruby>強調<rt>きょうちょう</rt></ruby>する
+          <p>
+            <ruby>前<rt>まえ</rt></ruby>の
+            <ruby>内容<rt>ないよう</rt></ruby>を
+            <ruby>認<rt>みと</rt></ruby>めながら、
+            それとは
+            <ruby>異<rt>こと</rt></ruby>なる
+            <ruby>内容<rt>ないよう</rt></ruby>を
+            <ruby>続<rt>つづ</rt></ruby>ける
             <ruby>表現<rt>ひょうげん</rt></ruby>です。
-            （그 이유가 특히 중요하다는 점을 강조하는 표현입니다.）
+            （앞의 내용을 인정하면서
+            다른 내용을 이어 가는 표현입니다.）
           </p>
 
-          <p class="example-sentence">
-            <ruby>普段<rt>ふだん</rt></ruby>は
-            <ruby>真面目<rt>まじめ</rt></ruby>なアキが
-            <ruby>参加<rt>さんか</rt></ruby>したからこそ、
-            この<ruby>場面<rt>ばめん</rt></ruby>は
-            <ruby>面白<rt>おもしろ</rt></ruby>かったのだと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （평소에는 진지한 아키가 참가했기 때문에야말로
-            이 장면이 재미있었다고 생각합니다.）
+          <p class="grammar-example">
+            <ruby>悲<rt>かな</rt></ruby>しい
+            <ruby>場面<rt>ばめん</rt></ruby>ではあるものの、
+            アキの
+            <ruby>姿<rt>すがた</rt></ruby>は
+            とてもかっこよかったです。
+            <br>
+            （슬픈 장면이기는 하지만,
+            아키의 모습은 매우 멋있었습니다.）
           </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            8．かえって
+          </h5>
+
+          <p>
+            <ruby>予想<rt>よそう</rt></ruby>していた
+            <ruby>結果<rt>けっか</rt></ruby>とは
+            <ruby>反対<rt>はんたい</rt></ruby>の
+            <ruby>結果<rt>けっか</rt></ruby>になることを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （예상했던 것과 반대의 결과가 나타남을 표현합니다.）
+          </p>
+
+          <p class="grammar-example">
+            「<ruby>絶対<rt>ぜったい</rt></ruby>に
+            <ruby>成功<rt>せいこう</rt></ruby>して」
+            と<ruby>言<rt>い</rt></ruby>われると、
+            かえって
+            <ruby>緊張<rt>きんちょう</rt></ruby>します。
+            <br>
+            （‘반드시 성공해’라는 말을 들으면
+            오히려 긴장됩니다.）
+          </p>
+
         </div>
 
       </section>
 
     </div>
+
   </div>
 
-  <!-- 4. N2 어휘 설명 -->
-  <div class="language-notes">
+  <!-- =====================================================
+       4. 어휘 설명
+  ====================================================== -->
+
+  <div class="language-notes vocabulary-notes">
+
     <h3 class="section-title">
       4．<ruby>語彙説明<rt>ごいせつめい</rt></ruby>
       （어휘 설명）
@@ -3158,324 +2309,2101 @@
 
     <div class="language-note-grid">
 
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">語彙</span>
-          <ruby>行動<rt>こうどう</rt></ruby>を
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          <ruby>感情<rt>かんじょう</rt></ruby>・
+          <ruby>心<rt>こころ</rt></ruby>を
           <ruby>表<rt>あらわ</rt></ruby>す
           <ruby>言葉<rt>ことば</rt></ruby>
-        </h3>
+        </h4>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            1．<ruby>便乗<rt>びんじょう</rt></ruby>する
-          </span>
 
-          <p class="grammar-explanation">
-            他の<ruby>人<rt>ひと</rt></ruby>が
-            <ruby>始<rt>はじ</rt></ruby>めたことや
-            <ruby>流<rt>なが</rt></ruby>れに
-            <ruby>乗<rt>の</rt></ruby>って、
-            自分も<ruby>参加<rt>さんか</rt></ruby>することです。
-            （다른 사람이 시작한 일이나 분위기에 올라타
-            자신도 참가하는 것입니다.）
+          <h5>
+            1．<ruby>恐怖<rt>きょうふ</rt></ruby>
+          </h5>
+
+          <p>
+            とても<ruby>怖<rt>こわ</rt></ruby>いと
+            <ruby>感<rt>かん</rt></ruby>じる
+            <ruby>気持<rt>きも</rt></ruby>ちです。
+            （매우 무섭다고 느끼는 감정입니다.）
           </p>
 
-          <p class="example-sentence">
-            アキはデンジの
-            <ruby>悪<rt>わる</rt></ruby>ノリに
-            <ruby>便乗<rt>びんじょう</rt></ruby>しました。<br>
-            （아키는 덴지의 짓궂은 장난에 편승했습니다.）
+          <p class="grammar-example">
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>抑<rt>おさ</rt></ruby>えました。
+            <br>
+            （아키는 두려움을 억눌렀습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            2．<ruby>悪<rt>わる</rt></ruby>ノリ
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>場<rt>ば</rt></ruby>の
-            <ruby>雰囲気<rt>ふんいき</rt></ruby>に
-            <ruby>乗<rt>の</rt></ruby>って、
-            ふざけすぎたり、
-            やりすぎたりすることです。
-            （분위기에 휩쓸려 지나치게 장난치거나
-            선을 넘는 행동을 하는 것입니다.）
+          <h5>
+            2．<ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>く
+          </h5>
+
+          <p>
+            <ruby>緊張<rt>きんちょう</rt></ruby>や
+            <ruby>不安<rt>ふあん</rt></ruby>が
+            <ruby>弱<rt>よわ</rt></ruby>くなり、
+            <ruby>冷静<rt>れいせい</rt></ruby>になることです。
+            （긴장이나 불안이 약해져 침착해지는 것입니다.）
           </p>
 
-          <p class="example-sentence">
-            デンジの<ruby>悪<rt>わる</rt></ruby>ノリに、
-            アキまで<ruby>加<rt>くわ</rt></ruby>わりました。<br>
-            （덴지의 짓궂은 장난에 아키까지 가담했습니다.）
+          <p class="grammar-example">
+            <ruby>姫野<rt>ひめの</rt></ruby>の
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>して、
+            アキは
+            <ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>きました。
+            <br>
+            （히메노의 말을 떠올리고 아키는 침착해졌습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            3．<ruby>腹<rt>はら</rt></ruby>いせ
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>怒<rt>いか</rt></ruby>りや
-            <ruby>不満<rt>ふまん</rt></ruby>を
-            <ruby>晴<rt>は</rt></ruby>らすために、
-            相手に<ruby>嫌<rt>いや</rt></ruby>なことをすることです。
-            （분노나 불만을 풀기 위해
-            상대방에게 싫은 일을 하는 것입니다.）
+          <h5>
+            3．<ruby>覚悟<rt>かくご</rt></ruby>
+          </h5>
+
+          <p>
+            <ruby>難<rt>むずか</rt></ruby>しいことや
+            <ruby>危険<rt>きけん</rt></ruby>なことを
+            <ruby>受<rt>う</rt></ruby>け
+            <ruby>入<rt>い</rt></ruby>れ、
+            <ruby>決心<rt>けっしん</rt></ruby>することです。
+            （어려움이나 위험을 받아들이고 결심하는 것입니다.）
           </p>
 
-          <p class="example-sentence">
-            アキは<ruby>腹<rt>はら</rt></ruby>いせに、
-            サムライソードを
-            <ruby>蹴<rt>け</rt></ruby>ったのかもしれません。<br>
-            （아키는 분풀이로 사무라이 소드를 찼을지도 모릅니다.）
+          <p class="grammar-example">
+            アキの
+            <ruby>静<rt>しず</rt></ruby>かな
+            <ruby>表情<rt>ひょうじょう</rt></ruby>から、
+            <ruby>覚悟<rt>かくご</rt></ruby>が
+            <ruby>伝<rt>つた</rt></ruby>わりました。
+            <br>
+            （아키의 조용한 표정에서 각오가 전해졌습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            4．<ruby>言<rt>い</rt></ruby>い
-            <ruby>張<rt>は</rt></ruby>る
-          </span>
 
-          <p class="grammar-explanation">
-            他の<ruby>人<rt>ひと</rt></ruby>が
-            <ruby>反対<rt>はんたい</rt></ruby>しても、
-            自分の<ruby>意見<rt>いけん</rt></ruby>が
-            <ruby>正<rt>ただ</rt></ruby>しいと
-            <ruby>強<rt>つよ</rt></ruby>く
-            <ruby>主張<rt>しゅちょう</rt></ruby>し
-            <ruby>続<rt>つづ</rt></ruby>けることです。
-            （다른 사람이 반대해도
-            자신의 주장이 맞다고 강하게 계속 주장하는 것입니다.）
+          <h5>
+            4．<ruby>勇気<rt>ゆうき</rt></ruby>づける
+          </h5>
+
+          <p>
+            <ruby>相手<rt>あいて</rt></ruby>が
+            <ruby>前向<rt>まえむ</rt></ruby>きに
+            <ruby>行動<rt>こうどう</rt></ruby>できるように、
+            <ruby>力<rt>ちから</rt></ruby>を
+            <ruby>与<rt>あた</rt></ruby>えることです。
+            （상대가 긍정적으로 행동할 수 있도록
+            용기를 주는 것입니다.）
           </p>
 
-          <p class="example-sentence">
-            パワーなら、
-            自分が<ruby>勝<rt>か</rt></ruby>ったと
-            <ruby>言<rt>い</rt></ruby>い
-            <ruby>張<rt>は</rt></ruby>ると
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （파워라면 자신이 이겼다고 우길 것 같습니다.）
+          <p class="grammar-example">
+            「Easy Revenge!」という
+            <ruby>言葉<rt>ことば</rt></ruby>が
+            アキを
+            <ruby>勇気<rt>ゆうき</rt></ruby>づけました。
+            <br>
+            （‘Easy Revenge!’라는 말이 아키에게 용기를 주었습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            5．<ruby>見守<rt>みまも</rt></ruby>る
-          </span>
 
-          <p class="grammar-explanation">
-            すぐに<ruby>手<rt>て</rt></ruby>を
-            <ruby>出<rt>だ</rt></ruby>さず、
-            <ruby>安全<rt>あんぜん</rt></ruby>や
-            <ruby>様子<rt>ようす</rt></ruby>を
-            <ruby>注意深<rt>ちゅういぶか</rt></ruby>く
-            <ruby>見<rt>み</rt></ruby>ることです。
-            （바로 개입하지 않고
-            안전이나 상황을 주의 깊게 지켜보는 것입니다.）
+          <h5>
+            5．<ruby>乗<rt>の</rt></ruby>り
+            <ruby>越<rt>こ</rt></ruby>える
+          </h5>
+
+          <p>
+            <ruby>困難<rt>こんなん</rt></ruby>や
+            <ruby>問題<rt>もんだい</rt></ruby>を
+            <ruby>克服<rt>こくふく</rt></ruby>することです。
+            （어려움이나 문제를 극복하는 것입니다.）
           </p>
 
-          <p class="example-sentence">
-            私なら、少し<ruby>離<rt>はな</rt></ruby>れたところから
-            二人を<ruby>見守<rt>みまも</rt></ruby>ります。<br>
-            （저라면 조금 떨어진 곳에서 두 사람을 지켜보겠습니다.）
+          <p class="grammar-example">
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>乗<rt>の</rt></ruby>り
+            <ruby>越<rt>こ</rt></ruby>えました。
+            <br>
+            （아키는 두려움을 극복했습니다.）
           </p>
+
         </div>
 
       </section>
 
-      <section class="language-note-card">
-        <h3>
-          <span class="level-label level-label--n2">語彙</span>
-          <ruby>感情<rt>かんじょう</rt></ruby>・
-          <ruby>印象<rt>いんしょう</rt></ruby>を
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          <ruby>記憶<rt>きおく</rt></ruby>・
+          <ruby>場面<rt>ばめん</rt></ruby>を
           <ruby>表<rt>あらわ</rt></ruby>す
           <ruby>言葉<rt>ことば</rt></ruby>
-        </h3>
+        </h4>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            6．<ruby>溜<rt>た</rt></ruby>め
-            <ruby>込<rt>こ</rt></ruby>む
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>感情<rt>かんじょう</rt></ruby>や
-            ストレスなどを
-            <ruby>外<rt>そと</rt></ruby>に
-            <ruby>出<rt>だ</rt></ruby>さず、
-            <ruby>心<rt>こころ</rt></ruby>の
+          <h5>
+            6．<ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>す
+          </h5>
+
+          <p>
+            <ruby>以前<rt>いぜん</rt></ruby>の
+            <ruby>出来事<rt>できごと</rt></ruby>や
+            <ruby>人<rt>ひと</rt></ruby>を
+            もう一度
+            <ruby>記憶<rt>きおく</rt></ruby>の
             <ruby>中<rt>なか</rt></ruby>に
-            <ruby>持<rt>も</rt></ruby>ち
-            <ruby>続<rt>つづ</rt></ruby>けることです。
-            （감정이나 스트레스를 밖으로 드러내지 않고
-            마음속에 계속 쌓아 두는 것입니다.）
+            <ruby>浮<rt>う</rt></ruby>かべることです。
+            （과거의 일이나 사람을 다시 떠올리는 것입니다.）
           </p>
 
-          <p class="example-sentence">
-            アキは<ruby>悲<rt>かな</rt></ruby>しみや
-            <ruby>怒<rt>いか</rt></ruby>りを
-            <ruby>溜<rt>た</rt></ruby>め
-            <ruby>込<rt>こ</rt></ruby>んでいました。<br>
-            （아키는 슬픔과 분노를 쌓아 두고 있었습니다.）
+          <p class="grammar-example">
+            アキは
+            <ruby>姫野<rt>ひめの</rt></ruby>の
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>しました。
+            <br>
+            （아키는 히메노의 말을 떠올렸습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            7．<ruby>和<rt>やわ</rt></ruby>らぐ
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>怒<rt>いか</rt></ruby>り、
-            <ruby>緊張<rt>きんちょう</rt></ruby>、
-            <ruby>悲<rt>かな</rt></ruby>しみなどが
-            <ruby>弱<rt>よわ</rt></ruby>くなることです。
-            （분노, 긴장, 슬픔 등이 약해지는 것입니다.）
+          <h5>
+            7．<ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>で</rt></ruby>
+          </h5>
+
+          <p>
+            <ruby>過去<rt>かこ</rt></ruby>に
+            <ruby>経験<rt>けいけん</rt></ruby>したことについての
+            <ruby>記憶<rt>きおく</rt></ruby>です。
+            （과거에 경험한 일에 대한 추억입니다.）
           </p>
 
-          <p class="example-sentence">
-            デンジと<ruby>一緒<rt>いっしょ</rt></ruby>に
-            <ruby>馬鹿<rt>ばか</rt></ruby>なことをして、
-            アキの<ruby>気持<rt>きも</rt></ruby>ちは
-            少し<ruby>和<rt>やわ</rt></ruby>らいだと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （덴지와 함께 바보 같은 일을 하면서
-            아키의 마음은 조금 누그러졌다고 생각합니다.）
+          <p class="grammar-example">
+            <ruby>姫野<rt>ひめの</rt></ruby>との
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>で</rt></ruby>が、
+            アキの
+            <ruby>力<rt>ちから</rt></ruby>になりました。
+            <br>
+            （히메노와의 추억이 아키의 힘이 되었습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            8．<ruby>吹<rt>ふ</rt></ruby>っ
-            <ruby>切<rt>き</rt></ruby>れる
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>悩<rt>なや</rt></ruby>みや
-            <ruby>迷<rt>まよ</rt></ruby>いが
-            <ruby>消<rt>き</rt></ruby>え、
-            <ruby>気持<rt>きも</rt></ruby>ちを
-            <ruby>切<rt>き</rt></ruby>り
-            <ruby>替<rt>か</rt></ruby>えられる
-            <ruby>状態<rt>じょうたい</rt></ruby>になることです。
-            （고민이나 망설임이 사라져
-            마음을 전환할 수 있게 되는 것입니다.）
+          <h5>
+            8．<ruby>受<rt>う</rt></ruby>け
+            <ruby>取<rt>と</rt></ruby>る
+          </h5>
+
+          <p>
+            <ruby>誰<rt>だれ</rt></ruby>かが
+            <ruby>渡<rt>わた</rt></ruby>したものを
+            <ruby>自分<rt>じぶん</rt></ruby>の
+            <ruby>手<rt>て</rt></ruby>に
+            <ruby>取<rt>と</rt></ruby>ることです。
+            （누군가가 건넨 것을 받아 드는 것입니다.）
           </p>
 
-          <p class="example-sentence">
-            サムライソードを
-            <ruby>蹴<rt>け</rt></ruby>ったあと、
-            アキは少し
-            <ruby>吹<rt>ふ</rt></ruby>っ
-            <ruby>切<rt>き</rt></ruby>れたように
-            <ruby>見<rt>み</rt></ruby>えました。<br>
-            （사무라이 소드를 찬 뒤
-            아키는 조금 마음을 털어낸 것처럼 보였습니다.）
+          <p class="grammar-example">
+            アキは
+            ゴーストの
+            <ruby>悪魔<rt>あくま</rt></ruby>から
+            <ruby>煙草<rt>たばこ</rt></ruby>を
+            <ruby>受<rt>う</rt></ruby>け
+            <ruby>取<rt>と</rt></ruby>りました。
+            <br>
+            （아키는 고스트의 악마에게서 담배를 받았습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            9．<ruby>意表<rt>いひょう</rt></ruby>を
-            <ruby>突<rt>つ</rt></ruby>く
-          </span>
 
-          <p class="grammar-explanation">
-            <ruby>相手<rt>あいて</rt></ruby>が
-            <ruby>予想<rt>よそう</rt></ruby>していなかった
-            <ruby>行動<rt>こうどう</rt></ruby>をして、
-            <ruby>驚<rt>おどろ</rt></ruby>かせることです。
-            （상대방이 예상하지 못한 행동을 해 놀라게 하는 것입니다.）
+          <h5>
+            9．<ruby>印象<rt>いんしょう</rt></ruby>に
+            <ruby>残<rt>のこ</rt></ruby>る
+          </h5>
+
+          <p>
+            <ruby>見<rt>み</rt></ruby>たり
+            <ruby>聞<rt>き</rt></ruby>いたりしたことが、
+            <ruby>強<rt>つよ</rt></ruby>く
+            <ruby>記憶<rt>きおく</rt></ruby>に
+            <ruby>残<rt>のこ</rt></ruby>ることです。
+            （보고 들은 것이 강하게 기억에 남는 것입니다.）
           </p>
 
-          <p class="example-sentence">
-            アキが<ruby>参加<rt>さんか</rt></ruby>したので、
-            <ruby>意表<rt>いひょう</rt></ruby>を
-            <ruby>突<rt>つ</rt></ruby>かれました。<br>
-            （아키가 참가했기 때문에 허를 찔렸습니다.）
+          <p class="grammar-example">
+            アキが
+            <ruby>静<rt>しず</rt></ruby>かに
+            <ruby>歩<rt>ある</rt></ruby>く
+            <ruby>場面<rt>ばめん</rt></ruby>が
+            <ruby>印象<rt>いんしょう</rt></ruby>に
+            <ruby>残<rt>のこ</rt></ruby>りました。
+            <br>
+            （아키가 조용히 걷는 장면이 인상에 남았습니다.）
           </p>
+
         </div>
 
         <div class="grammar-item">
-          <span class="grammar-expression">
-            10．<ruby>距離<rt>きょり</rt></ruby>が
-            <ruby>縮<rt>ちぢ</rt></ruby>まる
-          </span>
 
-          <p class="grammar-explanation">
-            二人の<ruby>関係<rt>かんけい</rt></ruby>が
-            <ruby>前<rt>まえ</rt></ruby>より
-            <ruby>親<rt>した</rt></ruby>しくなることです。
-            （두 사람의 관계가 전보다 가까워지는 것입니다.）
+          <h5>
+            10．きっかけ
+          </h5>
+
+          <p>
+            ある<ruby>行動<rt>こうどう</rt></ruby>や
+            <ruby>変化<rt>へんか</rt></ruby>が
+            <ruby>始<rt>はじ</rt></ruby>まる
+            <ruby>原因<rt>げんいん</rt></ruby>となるものです。
+            （어떤 행동이나 변화가 시작되는 계기입니다.）
           </p>
 
-          <p class="example-sentence">
-            この<ruby>出来事<rt>できごと</rt></ruby>を
-            きっかけに、
-            デンジとアキの<ruby>距離<rt>きょり</rt></ruby>は
-            <ruby>縮<rt>ちぢ</rt></ruby>まったと
-            <ruby>思<rt>おも</rt></ruby>います。<br>
-            （이 일을 계기로 덴지와 아키의 거리는 가까워졌다고 생각합니다.）
+          <p class="grammar-example">
+            <ruby>煙草<rt>たばこ</rt></ruby>を
+            <ruby>見<rt>み</rt></ruby>たことが、
+            アキが
+            <ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>く
+            きっかけになりました。
+            <br>
+            （담배를 본 것이 아키가 침착해지는 계기가 되었습니다.）
           </p>
+
         </div>
 
       </section>
 
     </div>
+
   </div>
 
-  <div class="notice-box">
+  <!-- =====================================================
+       마무리 안내
+  ====================================================== -->
+
+  <div class="notice-box final-note">
+
     N2の<ruby>答<rt>こた</rt></ruby>えでは、
     <ruby>難<rt>むずか</rt></ruby>しい
-    <ruby>内容<rt>ないよう</rt></ruby>を
-    <ruby>話<rt>はな</rt></ruby>す
+    <ruby>分析<rt>ぶんせき</rt></ruby>をする
     <ruby>必要<rt>ひつよう</rt></ruby>はありません。
 
-    「<ruby>面白<rt>おもしろ</rt></ruby>かった」
-    「アキは<ruby>怒<rt>おこ</rt></ruby>っていたと
-    <ruby>思<rt>おも</rt></ruby>う」のような
+    「<ruby>感動<rt>かんどう</rt></ruby>しました」
+    「アキがかっこよかったです」
+    「<ruby>姫野<rt>ひめの</rt></ruby>を
+    <ruby>思<rt>おも</rt></ruby>い
+    <ruby>出<rt>だ</rt></ruby>して
+    <ruby>悲<rt>かな</rt></ruby>しくなりました」
+    のような
     <ruby>簡単<rt>かんたん</rt></ruby>な
-    <ruby>結論<rt>けつろん</rt></ruby>に、
+    <ruby>感想<rt>かんそう</rt></ruby>から
+    <ruby>始<rt>はじ</rt></ruby>めてください。
 
-    「とはいえ」
+    そのあとに、
+    「～た<ruby>瞬間<rt>しゅんかん</rt></ruby>」
     「～というより」
-    「～からすると」
     「～ものの」
-    「～わけではない」などを
-    <ruby>加<rt>くわ</rt></ruby>え、
+    「～おかげで」などを
+    <ruby>使<rt>つか</rt></ruby>い、
     <ruby>理由<rt>りゆう</rt></ruby>や
     <ruby>補足<rt>ほそく</rt></ruby>を
-    一つ<ruby>続<rt>つづ</rt></ruby>けてみましょう。
+    一つ<ruby>加<rt>くわ</rt></ruby>えてみましょう。
 
-    <ruby>質問<rt>しつもん</rt></ruby>の
-    <ruby>内容<rt>ないよう</rt></ruby>は
-    N3と<ruby>同<rt>おな</rt></ruby>じですが、
-    <ruby>答<rt>こた</rt></ruby>えの
-    <ruby>組<rt>く</rt></ruby>み
-    <ruby>立<rt>た</rt></ruby>て
-    <ruby>方<rt>かた</rt></ruby>を
-    少し<ruby>自然<rt>しぜん</rt></ruby>で
-    <ruby>詳<rt>くわ</rt></ruby>しくするのが
-    N2の<ruby>目標<rt>もくひょう</rt></ruby>です。
+    <br><br>
 
-    （N2 답변에서는 어려운 내용을 말할 필요가 없습니다.
+    （N2 답변에서도 어려운 분석을 할 필요는 없습니다.
 
-    ‘재미있었다’,
-    ‘아키는 화가 나 있었다고 생각한다’와 같은 간단한 결론에
+    ‘감동했습니다’,
+    ‘아키가 멋있었습니다’,
+    ‘히메노가 떠올라 슬퍼졌습니다’와 같은
+    간단한 감상에서 시작해 주세요.
 
-    ‘그렇다고 해도’,
+    그 뒤에 ‘~한 순간’,
     ‘~라기보다’,
-    ‘~를 생각하면’,
     ‘~하기는 하지만’,
-    ‘~인 것은 아니다’ 등의 표현을 추가하고
-    이유나 보충 설명을 하나 이어서 말해 봅시다.
+    ‘~한 덕분에’ 등의 표현을 사용하여
+    이유나 보충 설명을 하나 더해 봅시다.）
 
-    질문 내용은 N3와 같지만
-    답변을 구성하는 방식을 조금 더 자연스럽고 자세하게 만드는 것이
-    N2의 목표입니다.）
+  </div>
+
+</section> <!-- =========================================================
+     CHAINSAW MAN SCENE 01 · N2
+     アキと姫野の「Easy Revenge!」
+
+     CSS 선택자:
+     .scene-01
+     [data-scene="1"]
+     #chainsawman-scene-1-n2
+========================================================= -->
+
+<section
+  class="question-card anime-scene scene-01"
+  id="chainsawman-scene-1-n2"
+  data-scene="1"
+>
+
+  <header class="question-header">
+
+    <span class="question-number">
+      CHAINSAW MAN SCENE 01 · N2
+    </span>
+
+    <h2 class="question-title">
+      アキと<ruby>姫野<rt>ひめの</rt></ruby>の
+      「Easy Revenge!」
+    </h2>
+
+  </header>
+
+  <!-- =====================================================
+       1. 장면 묘사
+  ====================================================== -->
+
+  <div class="section-block">
+
+    <h3 class="section-title">
+      1．<ruby>場面描写<rt>ばめんびょうしゃ</rt></ruby>
+      （장면 묘사）
+    </h3>
+
+    <div class="situation">
+
+      <p>
+        アキは、
+        <ruby>沢渡<rt>さわたり</rt></ruby>が
+        <ruby>操<rt>あやつ</rt></ruby>る
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>と
+        <ruby>戦<rt>たたか</rt></ruby>います。
+        （아키는 사와타리가 조종하는
+        고스트의 악마와 싸웁니다.）
+      </p>
+
+      <p>
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>には
+        たくさんの
+        <ruby>腕<rt>うで</rt></ruby>があり、
+        アキは
+        <ruby>首<rt>くび</rt></ruby>を
+        つかまれて、
+        <ruby>動<rt>うご</rt></ruby>けなくなってしまいます。
+        （고스트의 악마에게는 수많은 팔이 있었고,
+        아키는 목을 붙잡혀 움직일 수 없게 됩니다.）
+      </p>
+
+      <p>
+        ところが、
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>は
+        <ruby>突然<rt>とつぜん</rt></ruby>
+        アキを<ruby>放<rt>はな</rt></ruby>し、
+        一本の
+        <ruby>煙草<rt>たばこ</rt></ruby>を
+        <ruby>差<rt>さ</rt></ruby>し
+        <ruby>出<rt>だ</rt></ruby>します。
+        （그런데 고스트의 악마는 갑자기 아키를 놓아주고,
+        담배 한 개비를 내밉니다.）
+      </p>
+
+      <p>
+        その<ruby>煙草<rt>たばこ</rt></ruby>には、
+        「Easy Revenge!」という
+        <ruby>言葉<rt>ことば</rt></ruby>が
+        <ruby>書<rt>か</rt></ruby>かれていました。
+        （그 담배에는
+        ‘Easy Revenge!’라는 말이 적혀 있었습니다.）
+      </p>
+
+      <p>
+        アキはそれを<ruby>見<rt>み</rt></ruby>て、
+        <ruby>姫野<rt>ひめの</rt></ruby>と
+        <ruby>過<rt>す</rt></ruby>ごした
+        <ruby>時間<rt>じかん</rt></ruby>や、
+        <ruby>姫野<rt>ひめの</rt></ruby>から
+        <ruby>聞<rt>き</rt></ruby>いた
+        <ruby>言葉<rt>ことば</rt></ruby>を
+        <ruby>思<rt>おも</rt></ruby>い
+        <ruby>出<rt>だ</rt></ruby>します。
+        （아키는 그것을 보고
+        히메노와 함께 보낸 시간과
+        히메노에게 들었던 말을 떠올립니다.）
+      </p>
+
+      <p>
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>には
+        <ruby>目<rt>め</rt></ruby>がなく、
+        <ruby>相手<rt>あいて</rt></ruby>の
+        <ruby>恐怖<rt>きょうふ</rt></ruby>を
+        <ruby>感<rt>かん</rt></ruby>じて
+        <ruby>動<rt>うご</rt></ruby>くことを
+        アキは<ruby>思<rt>おも</rt></ruby>い
+        <ruby>出<rt>だ</rt></ruby>します。
+        （고스트의 악마에게는 눈이 없고,
+        상대의 공포를 느끼며 움직인다는 사실을
+        아키는 떠올립니다.）
+      </p>
+
+      <p>
+        アキは
+        <ruby>恐怖<rt>きょうふ</rt></ruby>を
+        <ruby>抑<rt>おさ</rt></ruby>え、
+        <ruby>静<rt>しず</rt></ruby>かに
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>の
+        <ruby>腕<rt>うで</rt></ruby>を
+        <ruby>歩<rt>ある</rt></ruby>いていきます。
+        そして、
+        <ruby>最後<rt>さいご</rt></ruby>には
+        ゴーストの<ruby>悪魔<rt>あくま</rt></ruby>を
+        <ruby>倒<rt>たお</rt></ruby>します。
+        （아키는 두려움을 억누르고,
+        조용히 고스트의 악마의 팔 위를 걸어갑니다.
+        그리고 마지막에는 고스트의 악마를 쓰러뜨립니다.）
+      </p>
+
+      <p>
+        <ruby>亡<rt>な</rt></ruby>くなった
+        <ruby>姫野<rt>ひめの</rt></ruby>の
+        <ruby>記憶<rt>きおく</rt></ruby>が
+        アキを<ruby>助<rt>たす</rt></ruby>け、
+        アキが
+        <ruby>恐怖<rt>きょうふ</rt></ruby>を
+        <ruby>乗<rt>の</rt></ruby>り
+        <ruby>越<rt>こ</rt></ruby>える
+        <ruby>印象的<rt>いんしょうてき</rt></ruby>な
+        <ruby>場面<rt>ばめん</rt></ruby>です。
+        （세상을 떠난 히메노의 기억이 아키를 돕고,
+        아키가 두려움을 극복하는 인상적인 장면입니다.）
+      </p>
+
+      <div class="notice-box">
+
+        この<ruby>場面<rt>ばめん</rt></ruby>について、
+        <ruby>難<rt>むずか</rt></ruby>しく
+        <ruby>分析<rt>ぶんせき</rt></ruby>する
+        <ruby>必要<rt>ひつよう</rt></ruby>はありません。
+
+        「<ruby>感動<rt>かんどう</rt></ruby>したか」、
+        「どの<ruby>瞬間<rt>しゅんかん</rt></ruby>が
+        一番<ruby>印象<rt>いんしょう</rt></ruby>に
+        <ruby>残<rt>のこ</rt></ruby>ったか」、
+        「『Easy Revenge!』という
+        <ruby>言葉<rt>ことば</rt></ruby>を
+        どう<ruby>感<rt>かん</rt></ruby>じたか」など、
+        <ruby>友達<rt>ともだち</rt></ruby>と
+        アニメを<ruby>見<rt>み</rt></ruby>ながら
+        <ruby>話<rt>はな</rt></ruby>すような
+        <ruby>感覚<rt>かんかく</rt></ruby>で
+        <ruby>答<rt>こた</rt></ruby>えてください。
+
+        （이 장면에 대해 어렵게 분석할 필요는 없습니다.
+
+        ‘감동했는지’,
+        ‘어느 순간이 가장 인상에 남았는지’,
+        ‘Easy Revenge!라는 말을 어떻게 느꼈는지’ 등
+        친구와 애니메이션을 보면서 이야기하는 느낌으로
+        답해 주세요.）
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       2. 장면 질문 10개
+  ====================================================== -->
+
+  <div class="section-block mbti-analysis">
+
+    <h3 class="section-title">
+      2．<ruby>場面<rt>ばめん</rt></ruby>についての
+      <ruby>質問<rt>しつもん</rt></ruby>
+      （장면에 대한 질문 10개）
+    </h3>
+
+    <p class="section-description">
+
+      <ruby>答<rt>こた</rt></ruby>えたい
+      <ruby>質問<rt>しつもん</rt></ruby>を
+      <ruby>自由<rt>じゆう</rt></ruby>に
+      <ruby>選<rt>えら</rt></ruby>んでください。
+
+      一つの
+      <ruby>質問<rt>しつもん</rt></ruby>に
+      20～40<ruby>秒<rt>びょう</rt></ruby>くらいで
+      <ruby>答<rt>こた</rt></ruby>えてみましょう。
+
+      <ruby>結論<rt>けつろん</rt></ruby>だけでなく、
+      <ruby>理由<rt>りゆう</rt></ruby>や
+      <ruby>補足<rt>ほそく</rt></ruby>を
+      一つ<ruby>加<rt>くわ</rt></ruby>えると、
+      よりN2らしい
+      <ruby>答<rt>こた</rt></ruby>えになります。
+
+      （답하고 싶은 질문을 자유롭게 선택해 주세요.
+
+      질문 하나에 20~40초 정도로 답해 봅시다.
+
+      결론뿐 아니라 이유나 보충 설명을 하나 더하면
+      더욱 N2다운 답변이 됩니다.）
+
+    </p>
+
+    <div class="mbti-grid">
+
+      <!-- Q1 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">1</span>
+
+          「Easy Revenge!」と
+          <ruby>書<rt>か</rt></ruby>かれた
+          <ruby>煙草<rt>たばこ</rt></ruby>が
+          <ruby>出<rt>で</rt></ruby>てきたとき、
+          どんな<ruby>気持<rt>きも</rt></ruby>ちになりましたか。
+
+        </h4>
+
+        <p>
+          ‘Easy Revenge!’라고 적힌 담배가 나왔을 때
+          어떤 기분이 들었습니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>驚<rt>おどろ</rt></ruby>いた・
+          <ruby>悲<rt>かな</rt></ruby>しかった・
+          <ruby>感動<rt>かんどう</rt></ruby>した＋
+          その<ruby>理由<rt>りゆう</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          놀랐다·슬펐다·감동했다＋그 이유）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          <ruby>最初<rt>さいしょ</rt></ruby>は、
+          なぜゴーストの
+          <ruby>悪魔<rt>あくま</rt></ruby>が
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>渡<rt>わた</rt></ruby>したのか
+          <ruby>分<rt>わ</rt></ruby>からず、
+          <ruby>驚<rt>おどろ</rt></ruby>きました。
+          <br>
+
+          しかし、
+          「Easy Revenge!」という
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>た
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>、
+          <ruby>姫野<rt>ひめの</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>して、
+          少し<ruby>悲<rt>かな</rt></ruby>しくなりました。
+          <br>
+
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>場面<rt>ばめん</rt></ruby>ではあるものの、
+          アキがもう一度
+          <ruby>勇気<rt>ゆうき</rt></ruby>を
+          <ruby>出<rt>だ</rt></ruby>す
+          きっかけになったところは
+          とても<ruby>感動的<rt>かんどうてき</rt></ruby>でした。
+
+          <br><br>
+
+          （처음에는 왜 고스트의 악마가 담배를 건넸는지 몰라
+          놀랐습니다.
+
+          하지만 ‘Easy Revenge!’라는 말을 보는 순간
+          히메노가 떠올라 조금 슬퍼졌습니다.
+
+          슬픈 장면이기는 하지만,
+          아키가 다시 용기를 내는 계기가 된 점은
+          매우 감동적이었습니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q2 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">2</span>
+
+          「Easy Revenge!」という
+          <ruby>言葉<rt>ことば</rt></ruby>は、
+          <ruby>姫野<rt>ひめの</rt></ruby>らしい
+          <ruby>言葉<rt>ことば</rt></ruby>だと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+
+        </h4>
+
+        <p>
+          ‘Easy Revenge!’라는 말은
+          히메노다운 말이라고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>性格<rt>せいかく</rt></ruby>＋
+          <ruby>軽<rt>かる</rt></ruby>い
+          <ruby>言<rt>い</rt></ruby>い
+          <ruby>方<rt>かた</rt></ruby>＋
+          アキへの<ruby>気持<rt>きも</rt></ruby>ち
+
+          <br>
+
+          （답변 포인트:
+          히메노의 성격＋가벼운 말투＋아키를 향한 마음）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          とても
+          <ruby>姫野<rt>ひめの</rt></ruby>らしい
+          <ruby>言葉<rt>ことば</rt></ruby>だと
+          <ruby>思<rt>おも</rt></ruby>います。
+          <br>
+
+          「<ruby>絶対<rt>ぜったい</rt></ruby>に
+          <ruby>復讐<rt>ふくしゅう</rt></ruby>して」
+          と<ruby>重<rt>おも</rt></ruby>く
+          <ruby>言<rt>い</rt></ruby>うのではなく、
+          <ruby>冗談<rt>じょうだん</rt></ruby>のように
+          <ruby>短<rt>みじか</rt></ruby>く
+          <ruby>書<rt>か</rt></ruby>いているところが
+          <ruby>姫野<rt>ひめの</rt></ruby>らしいです。
+          <br>
+
+          <ruby>深刻<rt>しんこく</rt></ruby>な
+          <ruby>状況<rt>じょうきょう</rt></ruby>でも、
+          アキをあまり
+          <ruby>緊張<rt>きんちょう</rt></ruby>させたくなかったのかもしれません。
+
+          <br><br>
+
+          （매우 히메노다운 말이라고 생각합니다.
+
+          ‘반드시 복수해’라고 무겁게 말하는 것이 아니라,
+          농담처럼 짧게 적은 점이 히메노답습니다.
+
+          심각한 상황에서도 아키를 너무 긴장시키고 싶지 않았을지도 모릅니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q3 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">3</span>
+
+          アキが
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>たあと、
+          <ruby>表情<rt>ひょうじょう</rt></ruby>や
+          <ruby>雰囲気<rt>ふんいき</rt></ruby>は
+          どう<ruby>変<rt>か</rt></ruby>わったと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+
+        </h4>
+
+        <p>
+          아키가 담배를 본 뒤
+          표정이나 분위기는 어떻게 달라졌다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>恐怖<rt>きょうふ</rt></ruby>・
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>き・
+          <ruby>覚悟<rt>かくご</rt></ruby>＋
+          <ruby>歩<rt>ある</rt></ruby>き
+          <ruby>方<rt>かた</rt></ruby>や
+          <ruby>表情<rt>ひょうじょう</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          공포·침착함·각오＋걸음걸이나 표정）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>る
+          <ruby>前<rt>まえ</rt></ruby>のアキは、
+          <ruby>何<rt>なに</rt></ruby>もできずに
+          <ruby>苦<rt>くる</rt></ruby>しんでいるように
+          <ruby>見<rt>み</rt></ruby>えました。
+          <br>
+
+          ところが、
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>してからは、
+          <ruby>急<rt>きゅう</rt></ruby>に
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>いたように
+          <ruby>感<rt>かん</rt></ruby>じました。
+          <br>
+
+          <ruby>大声<rt>おおごえ</rt></ruby>を
+          <ruby>出<rt>だ</rt></ruby>したわけではありませんが、
+          <ruby>静<rt>しず</rt></ruby>かな
+          <ruby>表情<rt>ひょうじょう</rt></ruby>から
+          <ruby>覚悟<rt>かくご</rt></ruby>が
+          <ruby>伝<rt>つた</rt></ruby>わってきました。
+
+          <br><br>
+
+          （담배를 보기 전의 아키는
+          아무것도 하지 못한 채 괴로워하는 것처럼 보였습니다.
+
+          그런데 히메노의 말을 떠올린 뒤에는
+          갑자기 침착해진 것처럼 느껴졌습니다.
+
+          큰 소리를 낸 것은 아니지만,
+          조용한 표정에서 각오가 전해졌습니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q4 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">4</span>
+
+          この<ruby>場面<rt>ばめん</rt></ruby>で
+          一番<ruby>印象<rt>いんしょう</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>った
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>は
+          どこですか。
+
+        </h4>
+
+        <p>
+          이 장면에서 가장 인상에 남은 순간은 어디입니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>煙草<rt>たばこ</rt></ruby>を
+          <ruby>受<rt>う</rt></ruby>け
+          <ruby>取<rt>と</rt></ruby>る
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>・
+          アキが<ruby>歩<rt>ある</rt></ruby>く
+          <ruby>場面<rt>ばめん</rt></ruby>・
+          <ruby>最後<rt>さいご</rt></ruby>の
+          <ruby>攻撃<rt>こうげき</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          담배를 받는 순간·아키가 걷는 장면·마지막 공격）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          私は、
+          アキがゴーストの
+          <ruby>悪魔<rt>あくま</rt></ruby>の
+          <ruby>腕<rt>うで</rt></ruby>の
+          <ruby>上<rt>うえ</rt></ruby>を
+          <ruby>静<rt>しず</rt></ruby>かに
+          <ruby>歩<rt>ある</rt></ruby>いていく
+          <ruby>場面<rt>ばめん</rt></ruby>が
+          一番<ruby>印象的<rt>いんしょうてき</rt></ruby>でした。
+          <br>
+
+          その<ruby>直前<rt>ちょくぜん</rt></ruby>までは
+          <ruby>動<rt>うご</rt></ruby>けなかったのに、
+          <ruby>恐怖<rt>きょうふ</rt></ruby>を
+          <ruby>抑<rt>おさ</rt></ruby>えた
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>、
+          <ruby>立場<rt>たちば</rt></ruby>が
+          <ruby>逆<rt>ぎゃく</rt></ruby>になりました。
+          <br>
+
+          <ruby>派手<rt>はで</rt></ruby>な
+          <ruby>動<rt>うご</rt></ruby>きよりも、
+          <ruby>静<rt>しず</rt></ruby>かに
+          <ruby>歩<rt>ある</rt></ruby>く
+          <ruby>姿<rt>すがた</rt></ruby>のほうが
+          かっこよく<ruby>見<rt>み</rt></ruby>えました。
+
+          <br><br>
+
+          （저는 아키가 고스트의 악마의 팔 위를
+          조용히 걸어가는 장면이 가장 인상적이었습니다.
+
+          바로 전까지 움직이지 못했는데,
+          두려움을 억누르는 순간 상황이 역전되었습니다.
+
+          화려한 움직임보다 조용히 걷는 모습이 더 멋있어 보였습니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q5 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">5</span>
+
+          アキを<ruby>助<rt>たす</rt></ruby>けたのは、
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>知識<rt>ちしき</rt></ruby>ですか。
+
+          それとも、
+          <ruby>姫野<rt>ひめの</rt></ruby>との
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>で</rt></ruby>ですか。
+
+        </h4>
+
+        <p>
+          아키를 도운 것은 히메노의 지식입니까?
+          아니면 히메노와의 추억입니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          ゴーストの
+          <ruby>弱点<rt>じゃくてん</rt></ruby>＋
+          <ruby>勇気<rt>ゆうき</rt></ruby>＋
+          どちらがより
+          <ruby>大切<rt>たいせつ</rt></ruby>だったか
+
+          <br>
+
+          （답변 포인트:
+          고스트의 약점＋용기＋어느 쪽이 더 중요했는지）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          どちらも
+          <ruby>必要<rt>ひつよう</rt></ruby>だったと
+          <ruby>思<rt>おも</rt></ruby>いますが、
+          私は<ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>で</rt></ruby>のほうが
+          <ruby>大<rt>おお</rt></ruby>きかったと
+          <ruby>思<rt>おも</rt></ruby>います。
+          <br>
+
+          ゴーストの
+          <ruby>弱点<rt>じゃくてん</rt></ruby>を
+          <ruby>知<rt>し</rt></ruby>っているだけでは、
+          <ruby>恐怖<rt>きょうふ</rt></ruby>を
+          <ruby>抑<rt>おさ</rt></ruby>えられなかったかもしれません。
+          <br>
+
+          <ruby>姫野<rt>ひめの</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>したおかげで、
+          アキはもう一度
+          <ruby>前<rt>まえ</rt></ruby>に
+          <ruby>進<rt>すす</rt></ruby>む
+          <ruby>勇気<rt>ゆうき</rt></ruby>を
+          <ruby>持<rt>も</rt></ruby>てたのだと
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （둘 다 필요했다고 생각하지만,
+          저는 추억의 힘이 더 컸다고 생각합니다.
+
+          고스트의 약점을 알고 있는 것만으로는
+          두려움을 억누르지 못했을 수도 있습니다.
+
+          히메노를 떠올린 덕분에
+          아키는 다시 앞으로 나아갈 용기를 가질 수 있었다고 생각합니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q6 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">6</span>
+
+          アキのように、
+          <ruby>緊張<rt>きんちょう</rt></ruby>したときに
+          <ruby>誰<rt>だれ</rt></ruby>かの
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>したことがありますか。
+
+        </h4>
+
+        <p>
+          아키처럼 긴장했을 때
+          누군가의 말을 떠올린 적이 있습니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>家族<rt>かぞく</rt></ruby>・
+          <ruby>友達<rt>ともだち</rt></ruby>・
+          <ruby>先生<rt>せんせい</rt></ruby>の
+          <ruby>言葉<rt>ことば</rt></ruby>＋
+          どんな<ruby>状況<rt>じょうきょう</rt></ruby>だったか
+
+          <br>
+
+          （답변 포인트:
+          가족·친구·선생님의 말＋어떤 상황이었는지）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          <ruby>大切<rt>たいせつ</rt></ruby>な
+          <ruby>発表<rt>はっぴょう</rt></ruby>の
+          <ruby>前<rt>まえ</rt></ruby>に、
+          <ruby>友達<rt>ともだち</rt></ruby>から
+          「<ruby>失敗<rt>しっぱい</rt></ruby>しても
+          <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>」
+          と<ruby>言<rt>い</rt></ruby>われたことがあります。
+          <br>
+
+          <ruby>発表<rt>はっぴょう</rt></ruby>の
+          <ruby>直前<rt>ちょくぜん</rt></ruby>に
+          その<ruby>言葉<rt>ことば</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>したら、
+          少し<ruby>緊張<rt>きんちょう</rt></ruby>が
+          <ruby>和<rt>やわ</rt></ruby>らぎました。
+          <br>
+
+          <ruby>短<rt>みじか</rt></ruby>い
+          <ruby>言葉<rt>ことば</rt></ruby>でも、
+          <ruby>誰<rt>だれ</rt></ruby>が
+          <ruby>言<rt>い</rt></ruby>ったかによって、
+          <ruby>大<rt>おお</rt></ruby>きな
+          <ruby>力<rt>ちから</rt></ruby>になると
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （중요한 발표를 앞두고
+          친구에게 ‘실패해도 괜찮아’라는 말을 들은 적이 있습니다.
+
+          발표 직전에 그 말을 떠올리자
+          긴장이 조금 누그러졌습니다.
+
+          짧은 말이라도 누가 말했는지에 따라
+          큰 힘이 될 수 있다고 생각합니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q7 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">7</span>
+
+          あなたが
+          <ruby>大切<rt>たいせつ</rt></ruby>な
+          <ruby>挑戦<rt>ちょうせん</rt></ruby>をする
+          <ruby>前<rt>まえ</rt></ruby>に、
+          一つだけ
+          <ruby>言葉<rt>ことば</rt></ruby>を
+          もらえるなら、
+          どんな<ruby>言葉<rt>ことば</rt></ruby>が
+          ほしいですか。
+
+        </h4>
+
+        <p>
+          중요한 도전을 앞두고
+          한마디만 받을 수 있다면
+          어떤 말을 듣고 싶습니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          「<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>」・
+          「<ruby>楽<rt>たの</rt></ruby>しんで」・
+          「いつもどおりでいい」など＋
+          その<ruby>理由<rt>りゆう</rt></ruby>
+
+          <br>
+
+          （답변 포인트:
+          ‘괜찮아’·‘즐겨’·‘평소처럼 하면 돼’ 등＋그 이유）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          私は、
+          「いつもどおりでいい」
+          と<ruby>言<rt>い</rt></ruby>ってほしいです。
+          <br>
+
+          「<ruby>絶対<rt>ぜったい</rt></ruby>に
+          <ruby>成功<rt>せいこう</rt></ruby>して」
+          と<ruby>言<rt>い</rt></ruby>われると、
+          かえって
+          <ruby>緊張<rt>きんちょう</rt></ruby>してしまうからです。
+          <br>
+
+          <ruby>特別<rt>とくべつ</rt></ruby>なことを
+          しなくてもいいと
+          <ruby>言<rt>い</rt></ruby>われたほうが、
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>いて
+          <ruby>挑戦<rt>ちょうせん</rt></ruby>できると
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （저는 ‘평소처럼 하면 돼’라는 말을 듣고 싶습니다.
+
+          ‘반드시 성공해’라는 말을 들으면
+          오히려 긴장해 버리기 때문입니다.
+
+          특별한 것을 하지 않아도 된다는 말을 듣는 편이
+          침착하게 도전할 수 있을 것 같습니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q8 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">8</span>
+
+          <ruby>写真<rt>しゃしん</rt></ruby>や
+          <ruby>音楽<rt>おんがく</rt></ruby>、
+          <ruby>手紙<rt>てがみ</rt></ruby>などを
+          <ruby>見<rt>み</rt></ruby>ると、
+          <ruby>誰<rt>だれ</rt></ruby>かを
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>すことがありますか。
+
+        </h4>
+
+        <p>
+          사진이나 음악, 편지 등을 보면
+          누군가를 떠올리는 경우가 있습니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>物<rt>もの</rt></ruby>・
+          <ruby>音楽<rt>おんがく</rt></ruby>・
+          <ruby>場所<rt>ばしょ</rt></ruby>＋
+          <ruby>誰<rt>だれ</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>すか
+
+          <br>
+
+          （답변 포인트:
+          물건·음악·장소＋누구를 떠올리는지）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          <ruby>学生<rt>がくせい</rt></ruby>のころに
+          よく<ruby>聞<rt>き</rt></ruby>いていた
+          <ruby>音楽<rt>おんがく</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>くと、
+          そのころの
+          <ruby>友達<rt>ともだち</rt></ruby>を
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>します。
+          <br>
+
+          その<ruby>音楽<rt>おんがく</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>くたびに、
+          <ruby>一緒<rt>いっしょ</rt></ruby>に
+          <ruby>遊<rt>あそ</rt></ruby>んだことや
+          <ruby>話<rt>はな</rt></ruby>したことが
+          <ruby>自然<rt>しぜん</rt></ruby>に
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>浮<rt>う</rt></ruby>かびます。
+          <br>
+
+          <ruby>人<rt>ひと</rt></ruby>の
+          <ruby>記憶<rt>きおく</rt></ruby>は、
+          <ruby>言葉<rt>ことば</rt></ruby>だけでなく
+          <ruby>音<rt>おと</rt></ruby>や
+          <ruby>物<rt>もの</rt></ruby>にも
+          <ruby>残<rt>のこ</rt></ruby>るのだと
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （학생 때 자주 듣던 음악을 들으면
+          그때의 친구들이 떠오릅니다.
+
+          그 음악을 들을 때마다
+          함께 놀았던 일과 이야기했던 일이 자연스럽게 생각납니다.
+
+          사람에 대한 기억은 말뿐 아니라
+          소리와 물건에도 남는다고 생각합니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q9 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">9</span>
+
+          <ruby>怖<rt>こわ</rt></ruby>いときや
+          <ruby>緊張<rt>きんちょう</rt></ruby>したとき、
+          あなたはどうやって
+          <ruby>落<rt>お</rt></ruby>ち
+          <ruby>着<rt>つ</rt></ruby>きますか。
+
+        </h4>
+
+        <p>
+          무섭거나 긴장될 때
+          어떻게 마음을 가라앉힙니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>深呼吸<rt>しんこきゅう</rt></ruby>・
+          <ruby>音楽<rt>おんがく</rt></ruby>・
+          <ruby>誰<rt>だれ</rt></ruby>かと
+          <ruby>話<rt>はな</rt></ruby>す・
+          一人になるなど
+
+          <br>
+
+          （답변 포인트:
+          심호흡·음악·누군가와 대화하기·혼자 있기 등）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          私は
+          <ruby>緊張<rt>きんちょう</rt></ruby>したとき、
+          まずゆっくり
+          <ruby>深呼吸<rt>しんこきゅう</rt></ruby>をします。
+          <br>
+
+          そのあと、
+          <ruby>今<rt>いま</rt></ruby>すぐ
+          できることだけを
+          一つずつ
+          <ruby>考<rt>かんが</rt></ruby>えるようにしています。
+          <br>
+
+          <ruby>失敗<rt>しっぱい</rt></ruby>したあとのことまで
+          <ruby>考<rt>かんが</rt></ruby>えると
+          さらに<ruby>不安<rt>ふあん</rt></ruby>になるので、
+          <ruby>目<rt>め</rt></ruby>の
+          <ruby>前<rt>まえ</rt></ruby>のことに
+          <ruby>集中<rt>しゅうちゅう</rt></ruby>するのが
+          一番いいと
+          <ruby>思<rt>おも</rt></ruby>います。
+
+          <br><br>
+
+          （저는 긴장할 때 먼저 천천히 심호흡합니다.
+
+          그다음 지금 당장 할 수 있는 일만
+          하나씩 생각하려고 합니다.
+
+          실패한 뒤의 일까지 생각하면 더 불안해지기 때문에
+          눈앞의 일에 집중하는 것이 가장 좋다고 생각합니다.）
+
+        </p>
+
+      </article>
+
+      <!-- Q10 -->
+      <article class="mbti-card">
+
+        <h4 class="mbti-card-title">
+
+          <span class="mbti-choice-number">10</span>
+
+          この<ruby>場面<rt>ばめん</rt></ruby>は、
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>場面<rt>ばめん</rt></ruby>と
+          かっこいい
+          <ruby>場面<rt>ばめん</rt></ruby>の
+          どちらに
+          <ruby>近<rt>ちか</rt></ruby>いと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+
+        </h4>
+
+        <p>
+          이 장면은 슬픈 장면과 멋있는 장면 중
+          어느 쪽에 더 가깝다고 생각합니까?
+        </p>
+
+        <div class="discussion-prompt">
+
+          <ruby>答<rt>こた</rt></ruby>えるポイント：
+          <ruby>姫野<rt>ひめの</rt></ruby>の
+          <ruby>記憶<rt>きおく</rt></ruby>＋
+          アキの<ruby>戦<rt>たたか</rt></ruby>い＋
+          どちらをより
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>感<rt>かん</rt></ruby>じたか
+
+          <br>
+
+          （답변 포인트:
+          히메노의 기억＋아키의 전투＋어느 쪽을 더 강하게 느꼈는지）
+
+        </div>
+
+        <p class="example-sentence">
+
+          <strong>
+            N2 <ruby>例文<rt>れいぶん</rt></ruby>
+          </strong>
+
+          <br><br>
+
+          私は、
+          かっこいい
+          <ruby>場面<rt>ばめん</rt></ruby>というより、
+          <ruby>少<rt>すこ</rt></ruby>し
+          <ruby>悲<rt>かな</rt></ruby>しい
+          <ruby>場面<rt>ばめん</rt></ruby>に
+          <ruby>近<rt>ちか</rt></ruby>いと
+          <ruby>思<rt>おも</rt></ruby>います。
+          <br>
+
+          アキが
+          <ruby>恐怖<rt>きょうふ</rt></ruby>を
+          <ruby>乗<rt>の</rt></ruby>り
+          <ruby>越<rt>こ</rt></ruby>えて
+          <ruby>戦<rt>たたか</rt></ruby>う
+          <ruby>姿<rt>すがた</rt></ruby>は
+          とてもかっこよかったです。
+          <br>
+
+          とはいえ、
+          その<ruby>力<rt>ちから</rt></ruby>を
+          <ruby>与<rt>あた</rt></ruby>えた
+          <ruby>姫野<rt>ひめの</rt></ruby>が
+          もういないことを
+          <ruby>考<rt>かんが</rt></ruby>えると、
+          <ruby>悲<rt>かな</rt></ruby>しさのほうが
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>残<rt>のこ</rt></ruby>りました。
+
+          <br><br>
+
+          （저는 멋있는 장면이라기보다
+          조금 슬픈 장면에 가깝다고 생각합니다.
+
+          아키가 두려움을 극복하고 싸우는 모습은 매우 멋있었습니다.
+
+          그렇지만 그 힘을 준 히메노가 더는 없다는 점을 생각하면
+          슬픔이 더 강하게 남았습니다.）
+
+        </p>
+
+      </article>
+
+    </div>
+
+    <div class="notice-box free-sharing-box">
+
+      <strong>
+        ほかに<ruby>話<rt>はな</rt></ruby>したいこと
+      </strong>
+
+      <br><br>
+
+      ほかに、この
+      <ruby>場面<rt>ばめん</rt></ruby>について
+      <ruby>話<rt>はな</rt></ruby>したいことや、
+      ほかの
+      <ruby>人<rt>ひと</rt></ruby>の
+      <ruby>意見<rt>いけん</rt></ruby>を
+      <ruby>聞<rt>き</rt></ruby>いてみたいことがあれば、
+      <ruby>自由<rt>じゆう</rt></ruby>に
+      <ruby>共有<rt>きょうゆう</rt></ruby>してください。
+
+      <br><br>
+
+      （이 밖에 이 장면에 관해 이야기하고 싶은 점이나
+      다른 사람의 의견을 들어 보고 싶은 점이 있다면
+      자유롭게 공유해 주세요.）
+
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       3. 문법 설명
+  ====================================================== -->
+
+  <div class="language-notes">
+
+    <h3 class="section-title">
+      3．<ruby>文法説明<rt>ぶんぽうせつめい</rt></ruby>
+      （문법 설명）
+    </h3>
+
+    <div class="language-note-grid">
+
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          N2
+          <ruby>感想<rt>かんそう</rt></ruby>を
+          <ruby>詳<rt>くわ</rt></ruby>しくする
+          <ruby>表現<rt>ひょうげん</rt></ruby>
+        </h4>
+
+        <div class="grammar-item">
+
+          <h5>
+            1．～た<ruby>瞬間<rt>しゅんかん</rt></ruby>
+          </h5>
+
+          <p>
+            あることが
+            <ruby>起<rt>お</rt></ruby>きた
+            すぐそのときを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （어떤 일이 일어난 바로 그 순간을 나타냅니다.）
+          </p>
+
+          <p class="grammar-example">
+            「Easy Revenge!」という
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>見<rt>み</rt></ruby>た
+            <ruby>瞬間<rt>しゅんかん</rt></ruby>、
+            <ruby>姫野<rt>ひめの</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>しました。
+            <br>
+            （‘Easy Revenge!’라는 말을 보는 순간
+            히메노가 떠올랐습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            2．～ように<ruby>見<rt>み</rt></ruby>える
+          </h5>
+
+          <p>
+            <ruby>表情<rt>ひょうじょう</rt></ruby>や
+            <ruby>行動<rt>こうどう</rt></ruby>から、
+            そのような
+            <ruby>状態<rt>じょうたい</rt></ruby>だと
+            <ruby>感<rt>かん</rt></ruby>じることを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （표정이나 행동을 통해
+            그러한 상태처럼 느껴짐을 나타냅니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキは
+            <ruby>急<rt>きゅう</rt></ruby>に
+            <ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>いたように
+            <ruby>見<rt>み</rt></ruby>えました。
+            <br>
+            （아키는 갑자기 침착해진 것처럼 보였습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            3．～おかげで
+          </h5>
+
+          <p>
+            あるよい
+            <ruby>結果<rt>けっか</rt></ruby>が
+            <ruby>生<rt>う</rt></ruby>まれた
+            <ruby>理由<rt>りゆう</rt></ruby>を
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （좋은 결과가 생긴 이유를 나타냅니다.）
+          </p>
+
+          <p class="grammar-example">
+            <ruby>姫野<rt>ひめの</rt></ruby>の
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>したおかげで、
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>抑<rt>おさ</rt></ruby>えることができました。
+            <br>
+            （히메노의 말을 떠올린 덕분에
+            아키는 두려움을 억누를 수 있었습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            4．～たびに
+          </h5>
+
+          <p>
+            あることが
+            <ruby>起<rt>お</rt></ruby>きる
+            <ruby>毎回<rt>まいかい</rt></ruby>、
+            <ruby>同<rt>おな</rt></ruby>じことが
+            <ruby>起<rt>お</rt></ruby>きるという
+            <ruby>意味<rt>いみ</rt></ruby>です。
+            （어떤 일이 일어날 때마다
+            같은 일이 일어난다는 뜻입니다.）
+          </p>
+
+          <p class="grammar-example">
+            この<ruby>音楽<rt>おんがく</rt></ruby>を
+            <ruby>聞<rt>き</rt></ruby>くたびに、
+            <ruby>昔<rt>むかし</rt></ruby>の
+            <ruby>友達<rt>ともだち</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>します。
+            <br>
+            （이 음악을 들을 때마다
+            옛 친구가 떠오릅니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          N2
+          <ruby>意見<rt>いけん</rt></ruby>を
+          <ruby>比<rt>くら</rt></ruby>べる
+          <ruby>表現<rt>ひょうげん</rt></ruby>
+        </h4>
+
+        <div class="grammar-item">
+
+          <h5>
+            5．～というより
+          </h5>
+
+          <p>
+            <ruby>最初<rt>さいしょ</rt></ruby>の
+            <ruby>表現<rt>ひょうげん</rt></ruby>より、
+            あとの
+            <ruby>表現<rt>ひょうげん</rt></ruby>のほうが
+            より<ruby>正確<rt>せいかく</rt></ruby>だと
+            <ruby>説明<rt>せつめい</rt></ruby>するときに
+            <ruby>使<rt>つか</rt></ruby>います。
+            （앞의 표현보다 뒤의 표현이
+            더 정확하다고 설명할 때 사용합니다.）
+          </p>
+
+          <p class="grammar-example">
+            かっこいいというより、
+            <ruby>悲<rt>かな</rt></ruby>しい
+            <ruby>場面<rt>ばめん</rt></ruby>に
+            <ruby>近<rt>ちか</rt></ruby>いと
+            <ruby>思<rt>おも</rt></ruby>います。
+            <br>
+            （멋있는 장면이라기보다
+            슬픈 장면에 가깝다고 생각합니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            6．～わけではない
+          </h5>
+
+          <p>
+            <ruby>全部<rt>ぜんぶ</rt></ruby>が
+            そうなのではない、
+            または
+            <ruby>完全<rt>かんぜん</rt></ruby>に
+            そうだとは
+            <ruby>言<rt>い</rt></ruby>えないことを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （전부 그런 것은 아니거나
+            완전히 그렇다고 할 수 없음을 나타냅니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>感<rt>かん</rt></ruby>じなくなった
+            わけではありません。
+            <br>
+            （아키가 두려움을 느끼지 않게 된 것은 아닙니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            7．～ものの
+          </h5>
+
+          <p>
+            <ruby>前<rt>まえ</rt></ruby>の
+            <ruby>内容<rt>ないよう</rt></ruby>を
+            <ruby>認<rt>みと</rt></ruby>めながら、
+            それとは
+            <ruby>異<rt>こと</rt></ruby>なる
+            <ruby>内容<rt>ないよう</rt></ruby>を
+            <ruby>続<rt>つづ</rt></ruby>ける
+            <ruby>表現<rt>ひょうげん</rt></ruby>です。
+            （앞의 내용을 인정하면서
+            다른 내용을 이어 가는 표현입니다.）
+          </p>
+
+          <p class="grammar-example">
+            <ruby>悲<rt>かな</rt></ruby>しい
+            <ruby>場面<rt>ばめん</rt></ruby>ではあるものの、
+            アキの
+            <ruby>姿<rt>すがた</rt></ruby>は
+            とてもかっこよかったです。
+            <br>
+            （슬픈 장면이기는 하지만,
+            아키의 모습은 매우 멋있었습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            8．かえって
+          </h5>
+
+          <p>
+            <ruby>予想<rt>よそう</rt></ruby>していた
+            <ruby>結果<rt>けっか</rt></ruby>とは
+            <ruby>反対<rt>はんたい</rt></ruby>の
+            <ruby>結果<rt>けっか</rt></ruby>になることを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+            （예상했던 것과 반대의 결과가 나타남을 표현합니다.）
+          </p>
+
+          <p class="grammar-example">
+            「<ruby>絶対<rt>ぜったい</rt></ruby>に
+            <ruby>成功<rt>せいこう</rt></ruby>して」
+            と<ruby>言<rt>い</rt></ruby>われると、
+            かえって
+            <ruby>緊張<rt>きんちょう</rt></ruby>します。
+            <br>
+            （‘반드시 성공해’라는 말을 들으면
+            오히려 긴장됩니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       4. 어휘 설명
+  ====================================================== -->
+
+  <div class="language-notes vocabulary-notes">
+
+    <h3 class="section-title">
+      4．<ruby>語彙説明<rt>ごいせつめい</rt></ruby>
+      （어휘 설명）
+    </h3>
+
+    <div class="language-note-grid">
+
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          <ruby>感情<rt>かんじょう</rt></ruby>・
+          <ruby>心<rt>こころ</rt></ruby>を
+          <ruby>表<rt>あらわ</rt></ruby>す
+          <ruby>言葉<rt>ことば</rt></ruby>
+        </h4>
+
+        <div class="grammar-item">
+
+          <h5>
+            1．<ruby>恐怖<rt>きょうふ</rt></ruby>
+          </h5>
+
+          <p>
+            とても<ruby>怖<rt>こわ</rt></ruby>いと
+            <ruby>感<rt>かん</rt></ruby>じる
+            <ruby>気持<rt>きも</rt></ruby>ちです。
+            （매우 무섭다고 느끼는 감정입니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>抑<rt>おさ</rt></ruby>えました。
+            <br>
+            （아키는 두려움을 억눌렀습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            2．<ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>く
+          </h5>
+
+          <p>
+            <ruby>緊張<rt>きんちょう</rt></ruby>や
+            <ruby>不安<rt>ふあん</rt></ruby>が
+            <ruby>弱<rt>よわ</rt></ruby>くなり、
+            <ruby>冷静<rt>れいせい</rt></ruby>になることです。
+            （긴장이나 불안이 약해져 침착해지는 것입니다.）
+          </p>
+
+          <p class="grammar-example">
+            <ruby>姫野<rt>ひめの</rt></ruby>の
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>して、
+            アキは
+            <ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>きました。
+            <br>
+            （히메노의 말을 떠올리고 아키는 침착해졌습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            3．<ruby>覚悟<rt>かくご</rt></ruby>
+          </h5>
+
+          <p>
+            <ruby>難<rt>むずか</rt></ruby>しいことや
+            <ruby>危険<rt>きけん</rt></ruby>なことを
+            <ruby>受<rt>う</rt></ruby>け
+            <ruby>入<rt>い</rt></ruby>れ、
+            <ruby>決心<rt>けっしん</rt></ruby>することです。
+            （어려움이나 위험을 받아들이고 결심하는 것입니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキの
+            <ruby>静<rt>しず</rt></ruby>かな
+            <ruby>表情<rt>ひょうじょう</rt></ruby>から、
+            <ruby>覚悟<rt>かくご</rt></ruby>が
+            <ruby>伝<rt>つた</rt></ruby>わりました。
+            <br>
+            （아키의 조용한 표정에서 각오가 전해졌습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            4．<ruby>勇気<rt>ゆうき</rt></ruby>づける
+          </h5>
+
+          <p>
+            <ruby>相手<rt>あいて</rt></ruby>が
+            <ruby>前向<rt>まえむ</rt></ruby>きに
+            <ruby>行動<rt>こうどう</rt></ruby>できるように、
+            <ruby>力<rt>ちから</rt></ruby>を
+            <ruby>与<rt>あた</rt></ruby>えることです。
+            （상대가 긍정적으로 행동할 수 있도록
+            용기를 주는 것입니다.）
+          </p>
+
+          <p class="grammar-example">
+            「Easy Revenge!」という
+            <ruby>言葉<rt>ことば</rt></ruby>が
+            アキを
+            <ruby>勇気<rt>ゆうき</rt></ruby>づけました。
+            <br>
+            （‘Easy Revenge!’라는 말이 아키에게 용기를 주었습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            5．<ruby>乗<rt>の</rt></ruby>り
+            <ruby>越<rt>こ</rt></ruby>える
+          </h5>
+
+          <p>
+            <ruby>困難<rt>こんなん</rt></ruby>や
+            <ruby>問題<rt>もんだい</rt></ruby>を
+            <ruby>克服<rt>こくふく</rt></ruby>することです。
+            （어려움이나 문제를 극복하는 것입니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキは
+            <ruby>恐怖<rt>きょうふ</rt></ruby>を
+            <ruby>乗<rt>の</rt></ruby>り
+            <ruby>越<rt>こ</rt></ruby>えました。
+            <br>
+            （아키는 두려움을 극복했습니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="language-note-section">
+
+        <h4 class="language-note-title">
+          <ruby>記憶<rt>きおく</rt></ruby>・
+          <ruby>場面<rt>ばめん</rt></ruby>を
+          <ruby>表<rt>あらわ</rt></ruby>す
+          <ruby>言葉<rt>ことば</rt></ruby>
+        </h4>
+
+        <div class="grammar-item">
+
+          <h5>
+            6．<ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>す
+          </h5>
+
+          <p>
+            <ruby>以前<rt>いぜん</rt></ruby>の
+            <ruby>出来事<rt>できごと</rt></ruby>や
+            <ruby>人<rt>ひと</rt></ruby>を
+            もう一度
+            <ruby>記憶<rt>きおく</rt></ruby>の
+            <ruby>中<rt>なか</rt></ruby>に
+            <ruby>浮<rt>う</rt></ruby>かべることです。
+            （과거의 일이나 사람을 다시 떠올리는 것입니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキは
+            <ruby>姫野<rt>ひめの</rt></ruby>の
+            <ruby>言葉<rt>ことば</rt></ruby>を
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>だ</rt></ruby>しました。
+            <br>
+            （아키는 히메노의 말을 떠올렸습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            7．<ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>で</rt></ruby>
+          </h5>
+
+          <p>
+            <ruby>過去<rt>かこ</rt></ruby>に
+            <ruby>経験<rt>けいけん</rt></ruby>したことについての
+            <ruby>記憶<rt>きおく</rt></ruby>です。
+            （과거에 경험한 일에 대한 추억입니다.）
+          </p>
+
+          <p class="grammar-example">
+            <ruby>姫野<rt>ひめの</rt></ruby>との
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>出<rt>で</rt></ruby>が、
+            アキの
+            <ruby>力<rt>ちから</rt></ruby>になりました。
+            <br>
+            （히메노와의 추억이 아키의 힘이 되었습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            8．<ruby>受<rt>う</rt></ruby>け
+            <ruby>取<rt>と</rt></ruby>る
+          </h5>
+
+          <p>
+            <ruby>誰<rt>だれ</rt></ruby>かが
+            <ruby>渡<rt>わた</rt></ruby>したものを
+            <ruby>自分<rt>じぶん</rt></ruby>の
+            <ruby>手<rt>て</rt></ruby>に
+            <ruby>取<rt>と</rt></ruby>ることです。
+            （누군가가 건넨 것을 받아 드는 것입니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキは
+            ゴーストの
+            <ruby>悪魔<rt>あくま</rt></ruby>から
+            <ruby>煙草<rt>たばこ</rt></ruby>を
+            <ruby>受<rt>う</rt></ruby>け
+            <ruby>取<rt>と</rt></ruby>りました。
+            <br>
+            （아키는 고스트의 악마에게서 담배를 받았습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            9．<ruby>印象<rt>いんしょう</rt></ruby>に
+            <ruby>残<rt>のこ</rt></ruby>る
+          </h5>
+
+          <p>
+            <ruby>見<rt>み</rt></ruby>たり
+            <ruby>聞<rt>き</rt></ruby>いたりしたことが、
+            <ruby>強<rt>つよ</rt></ruby>く
+            <ruby>記憶<rt>きおく</rt></ruby>に
+            <ruby>残<rt>のこ</rt></ruby>ることです。
+            （보고 들은 것이 강하게 기억에 남는 것입니다.）
+          </p>
+
+          <p class="grammar-example">
+            アキが
+            <ruby>静<rt>しず</rt></ruby>かに
+            <ruby>歩<rt>ある</rt></ruby>く
+            <ruby>場面<rt>ばめん</rt></ruby>が
+            <ruby>印象<rt>いんしょう</rt></ruby>に
+            <ruby>残<rt>のこ</rt></ruby>りました。
+            <br>
+            （아키가 조용히 걷는 장면이 인상에 남았습니다.）
+          </p>
+
+        </div>
+
+        <div class="grammar-item">
+
+          <h5>
+            10．きっかけ
+          </h5>
+
+          <p>
+            ある<ruby>行動<rt>こうどう</rt></ruby>や
+            <ruby>変化<rt>へんか</rt></ruby>が
+            <ruby>始<rt>はじ</rt></ruby>まる
+            <ruby>原因<rt>げんいん</rt></ruby>となるものです。
+            （어떤 행동이나 변화가 시작되는 계기입니다.）
+          </p>
+
+          <p class="grammar-example">
+            <ruby>煙草<rt>たばこ</rt></ruby>を
+            <ruby>見<rt>み</rt></ruby>たことが、
+            アキが
+            <ruby>落<rt>お</rt></ruby>ち
+            <ruby>着<rt>つ</rt></ruby>く
+            きっかけになりました。
+            <br>
+            （담배를 본 것이 아키가 침착해지는 계기가 되었습니다.）
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       마무리 안내
+  ====================================================== -->
+
+  <div class="notice-box final-note">
+
+    N2の<ruby>答<rt>こた</rt></ruby>えでは、
+    <ruby>難<rt>むずか</rt></ruby>しい
+    <ruby>分析<rt>ぶんせき</rt></ruby>をする
+    <ruby>必要<rt>ひつよう</rt></ruby>はありません。
+
+    「<ruby>感動<rt>かんどう</rt></ruby>しました」
+    「アキがかっこよかったです」
+    「<ruby>姫野<rt>ひめの</rt></ruby>を
+    <ruby>思<rt>おも</rt></ruby>い
+    <ruby>出<rt>だ</rt></ruby>して
+    <ruby>悲<rt>かな</rt></ruby>しくなりました」
+    のような
+    <ruby>簡単<rt>かんたん</rt></ruby>な
+    <ruby>感想<rt>かんそう</rt></ruby>から
+    <ruby>始<rt>はじ</rt></ruby>めてください。
+
+    そのあとに、
+    「～た<ruby>瞬間<rt>しゅんかん</rt></ruby>」
+    「～というより」
+    「～ものの」
+    「～おかげで」などを
+    <ruby>使<rt>つか</rt></ruby>い、
+    <ruby>理由<rt>りゆう</rt></ruby>や
+    <ruby>補足<rt>ほそく</rt></ruby>を
+    一つ<ruby>加<rt>くわ</rt></ruby>えてみましょう。
+
+    <br><br>
+
+    （N2 답변에서도 어려운 분석을 할 필요는 없습니다.
+
+    ‘감동했습니다’,
+    ‘아키가 멋있었습니다’,
+    ‘히메노가 떠올라 슬퍼졌습니다’와 같은
+    간단한 감상에서 시작해 주세요.
+
+    그 뒤에 ‘~한 순간’,
+    ‘~라기보다’,
+    ‘~하기는 하지만’,
+    ‘~한 덕분에’ 등의 표현을 사용하여
+    이유나 보충 설명을 하나 더해 봅시다.）
+
   </div>
 
 </section>
