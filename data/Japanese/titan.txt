@@ -1,0 +1,4291 @@
+진격의 거인
+<style>
+.anime-talk-question-01 {
+max-width: 1050px;
+margin: 0 auto;
+padding: 28px;
+background: #f7f8fc;
+color: #25262b;
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Noto Sans JP",
+"Noto Sans KR",
+"Hiragino Kaku Gothic ProN",
+"Yu Gothic",
+sans-serif;
+line-height: 1.85;
+box-sizing: border-box;
+}
+
+.anime-talk-question-01 * {
+box-sizing: border-box;
+}
+
+.anime-talk-question-01 ruby {
+ruby-position: over;
+}
+
+.anime-talk-question-01 rt {
+font-size: 0.56em;
+color: #706c80;
+font-weight: 400;
+}
+
+.anime-talk-question-01 .main-header {
+padding: 30px;
+border-radius: 21px;
+background: linear-gradient(135deg, #312f58, #675f9d);
+color: #fff;
+}
+
+.anime-talk-question-01 .question-label {
+display: inline-block;
+margin-bottom: 12px;
+padding: 5px 13px;
+border-radius: 999px;
+background: rgba(255, 255, 255, 0.17);
+font-size: 0.84rem;
+font-weight: 800;
+letter-spacing: 0.08em;
+}
+
+.anime-talk-question-01 .main-title {
+margin: 0;
+font-size: clamp(1.5rem, 4vw, 2.25rem);
+line-height: 1.5;
+}
+
+.anime-talk-question-01 .main-title-ko {
+margin: 14px 0 0;
+color: #ebe9fa;
+font-size: 1rem;
+font-weight: 600;
+}
+
+.anime-talk-question-01 .content-section {
+margin-top: 24px;
+padding: 26px;
+border: 1px solid #dedfeb;
+border-radius: 18px;
+background: #fff;
+box-shadow: 0 5px 18px rgba(48, 46, 85, 0.05);
+}
+
+.anime-talk-question-01 .section-title {
+margin: 0 0 20px;
+padding-bottom: 11px;
+border-bottom: 3px solid #675f9d;
+color: #47436d;
+font-size: 1.35rem;
+}
+
+.anime-talk-question-01 .sub-title {
+margin: 24px 0 10px;
+color: #56517f;
+font-size: 1.1rem;
+}
+
+.anime-talk-question-01 .jp-text {
+margin: 11px 0 5px;
+color: #2c2d35;
+font-size: 1.01rem;
+}
+
+.anime-talk-question-01 .ko-text {
+margin: 0 0 15px;
+padding: 11px 14px;
+border-left: 4px solid #cbc8df;
+border-radius: 0 9px 9px 0;
+background: #f3f2f9;
+color: #555560;
+font-size: 0.95rem;
+}
+
+.anime-talk-question-01 .question-box {
+margin-top: 20px;
+padding: 21px;
+border: 2px solid #675f9d;
+border-radius: 15px;
+background: #f2f0fa;
+}
+
+.anime-talk-question-01 .question-box .jp-text {
+margin-top: 0;
+color: #403b6a;
+font-size: 1.14rem;
+font-weight: 800;
+}
+
+.anime-talk-question-01 .level-badge {
+display: inline-block;
+margin-bottom: 12px;
+padding: 5px 13px;
+border-radius: 999px;
+font-size: 0.84rem;
+font-weight: 800;
+}
+
+.anime-talk-question-01 .level-n3 {
+background: #e8f4ee;
+color: #286349;
+}
+
+.anime-talk-question-01 .level-n2 {
+background: #eeeafa;
+color: #504481;
+}
+
+.anime-talk-question-01 .answer-card {
+margin-top: 18px;
+padding: 21px;
+border: 1px solid #e0e0e8;
+border-radius: 15px;
+background: #fafafa;
+}
+
+.anime-talk-question-01 .answer-card.n2-answer {
+background: #f9f7fd;
+}
+
+.anime-talk-question-01 .point-list {
+margin: 12px 0 0;
+padding-left: 22px;
+}
+
+.anime-talk-question-01 .point-list li {
+margin-bottom: 12px;
+}
+
+.anime-talk-question-01 .follow-up-card {
+margin-top: 14px;
+padding: 18px;
+border: 1px solid #e0deeb;
+border-radius: 14px;
+background: #fbfbfd;
+}
+
+.anime-talk-question-01 .follow-up-number {
+display: inline-block;
+min-width: 29px;
+height: 29px;
+margin-right: 8px;
+border-radius: 50%;
+background: #675f9d;
+color: #fff;
+font-size: 0.88rem;
+font-weight: 800;
+line-height: 29px;
+text-align: center;
+}
+
+.anime-talk-question-01 .language-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 18px;
+}
+
+.anime-talk-question-01 .language-card {
+padding: 19px;
+border: 1px solid #dfdfeb;
+border-radius: 15px;
+background: #fff;
+}
+
+.anime-talk-question-01 .language-card h4 {
+margin: 0 0 12px;
+color: #56517f;
+font-size: 1.07rem;
+}
+
+.anime-talk-question-01 .example-box {
+margin-top: 11px;
+padding: 13px;
+border-radius: 10px;
+background: #f4f3f8;
+}
+
+.anime-talk-question-01 .conversation-note {
+margin-top: 22px;
+padding: 19px;
+border-radius: 14px;
+background: #fff8e9;
+color: #544c3b;
+}
+
+@media (max-width: 800px) {
+.anime-talk-question-01 {
+padding: 14px;
+}
+
+.anime-talk-question-01 .main-header,
+.anime-talk-question-01 .content-section {
+padding: 20px;
+}
+
+.anime-talk-question-01 .language-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
+
+
+<section
+class="anime-talk-question-01"
+id="anime-talk-question-01"
+data-question="1"
+>
+
+<header class="main-header">
+
+<span class="question-label">
+ANIME TALK · QUESTION 01
+</span>
+
+<h1 class="main-title">
+あなたが
+<ruby>一番<rt>いちばん</rt></ruby>
+<ruby>好<rt>す</rt></ruby>きな
+キャラクターは
+<ruby>誰<rt>だれ</rt></ruby>ですか。
+</h1>
+
+<p class="main-title-ko">
+당신이 가장 좋아하는 캐릭터는 누구입니까?
+</p>
+
+</header>
+
+
+<!-- ==========================================
+1. 질문
+=========================================== -->
+
+<section class="content-section">
+
+<h2 class="section-title">
+1．<ruby>質問<rt>しつもん</rt></ruby>
+</h2>
+
+<p class="jp-text">
+アニメには、
+<ruby>主人公<rt>しゅじんこう</rt></ruby>、
+ライバル、
+<ruby>仲間<rt>なかま</rt></ruby>、
+<ruby>悪役<rt>あくやく</rt></ruby>など、
+さまざまなキャラクターが
+<ruby>登場<rt>とうじょう</rt></ruby>します。
+</p>
+
+<p class="ko-text">
+애니메이션에는 주인공, 라이벌, 동료, 악역 등
+다양한 캐릭터가 등장합니다.
+</p>
+
+<p class="jp-text">
+キャラクターを
+<ruby>好<rt>す</rt></ruby>きになる
+<ruby>理由<rt>りゆう</rt></ruby>も
+<ruby>人<rt>ひと</rt></ruby>によって
+<ruby>異<rt>こと</rt></ruby>なります。
+</p>
+
+<p class="ko-text">
+캐릭터를 좋아하게 되는 이유도 사람에 따라 다릅니다.
+</p>
+
+<p class="jp-text">
+<ruby>性格<rt>せいかく</rt></ruby>が
+<ruby>魅力的<rt>みりょくてき</rt></ruby>だから
+<ruby>好<rt>す</rt></ruby>きになる
+<ruby>人<rt>ひと</rt></ruby>もいれば、
+<ruby>外見<rt>がいけん</rt></ruby>、
+<ruby>能力<rt>のうりょく</rt></ruby>、
+<ruby>行動<rt>こうどう</rt></ruby>、
+<ruby>成長<rt>せいちょう</rt></ruby>の
+<ruby>過程<rt>かてい</rt></ruby>に
+<ruby>魅力<rt>みりょく</rt></ruby>を
+<ruby>感<rt>かん</rt></ruby>じる
+<ruby>人<rt>ひと</rt></ruby>もいます。
+</p>
+
+<p class="ko-text">
+성격이 매력적이어서 좋아하는 사람도 있고,
+외모, 능력, 행동, 성장 과정에 매력을 느끼는 사람도 있습니다.
+</p>
+
+<div class="question-box">
+
+<p class="jp-text">
+あなたが
+<ruby>一番<rt>いちばん</rt></ruby>
+<ruby>好<rt>す</rt></ruby>きな
+アニメのキャラクターは
+<ruby>誰<rt>だれ</rt></ruby>ですか。
+</p>
+
+<p class="jp-text">
+そのキャラクターの
+どのような
+<ruby>点<rt>てん</rt></ruby>に
+<ruby>魅力<rt>みりょく</rt></ruby>を
+<ruby>感<rt>かん</rt></ruby>じましたか。
+</p>
+
+<p class="jp-text">
+また、そのキャラクターを
+<ruby>好<rt>す</rt></ruby>きになった
+<ruby>具体的<rt>ぐたいてき</rt></ruby>な
+<ruby>場面<rt>ばめん</rt></ruby>や
+<ruby>行動<rt>こうどう</rt></ruby>があれば、
+<ruby>説明<rt>せつめい</rt></ruby>してください。
+</p>
+
+<p class="ko-text">
+당신이 가장 좋아하는 애니메이션 캐릭터는 누구입니까?
+그 캐릭터의 어떤 점에서 매력을 느꼈습니까?
+또한 그 캐릭터를 좋아하게 된 구체적인 장면이나 행동이 있다면
+설명해 주세요.
+</p>
+
+</div>
+
+<h3 class="sub-title">
+<ruby>話<rt>はな</rt></ruby>すときのポイント
+</h3>
+
+<ul class="point-list">
+
+<li>
+<p class="jp-text">
+キャラクターの
+<ruby>名前<rt>なまえ</rt></ruby>と
+<ruby>作品名<rt>さくひんめい</rt></ruby>
+</p>
+
+<p class="ko-text">
+캐릭터 이름과 작품명
+</p>
+</li>
+
+<li>
+<p class="jp-text">
+<ruby>性格<rt>せいかく</rt></ruby>、
+<ruby>外見<rt>がいけん</rt></ruby>、
+<ruby>能力<rt>のうりょく</rt></ruby>、
+<ruby>考<rt>かんが</rt></ruby>え
+<ruby>方<rt>かた</rt></ruby>のうち、
+<ruby>特<rt>とく</rt></ruby>に
+<ruby>好<rt>す</rt></ruby>きな
+<ruby>点<rt>てん</rt></ruby>
+</p>
+
+<p class="ko-text">
+성격, 외모, 능력, 사고방식 중 특히 좋아하는 점
+</p>
+</li>
+
+<li>
+<p class="jp-text">
+そのキャラクターを
+<ruby>好<rt>す</rt></ruby>きになった
+<ruby>場面<rt>ばめん</rt></ruby>
+</p>
+
+<p class="ko-text">
+그 캐릭터를 좋아하게 된 장면
+</p>
+</li>
+
+<li>
+<p class="jp-text">
+<ruby>自分<rt>じぶん</rt></ruby>と
+<ruby>似<rt>に</rt></ruby>ている
+<ruby>点<rt>てん</rt></ruby>、
+または
+<ruby>自分<rt>じぶん</rt></ruby>にはない
+<ruby>憧<rt>あこが</rt></ruby>れる
+<ruby>点<rt>てん</rt></ruby>
+</p>
+
+<p class="ko-text">
+자신과 닮은 점 또는 자신에게는 없어서 동경하는 점
+</p>
+</li>
+
+</ul>
+
+</section>
+
+
+<!-- ==========================================
+2. N3 답변
+=========================================== -->
+
+<section class="content-section">
+
+<h2 class="section-title">
+2．N3レベルの
+<ruby>回答例<rt>かいとうれい</rt></ruby>
+</h2>
+
+<article class="answer-card">
+
+<span class="level-badge level-n3">
+N3
+</span>
+
+<p class="jp-text">
+私が
+<ruby>一番<rt>いちばん</rt></ruby>
+<ruby>好<rt>す</rt></ruby>きなキャラクターは、
+『チェンソーマン』の
+<ruby>早川<rt>はやかわ</rt></ruby>アキです。
+</p>
+
+<p class="ko-text">
+제가 가장 좋아하는 캐릭터는
+『체인소 맨』의 하야카와 아키입니다.
+</p>
+
+<p class="jp-text">
+アキは
+<ruby>真面目<rt>まじめ</rt></ruby>で、
+<ruby>責任感<rt>せきにんかん</rt></ruby>が
+<ruby>強<rt>つよ</rt></ruby>いキャラクターです。
+</p>
+
+<p class="ko-text">
+아키는 성실하고 책임감이 강한 캐릭터입니다.
+</p>
+
+<p class="jp-text">
+<ruby>最初<rt>さいしょ</rt></ruby>は
+デンジとあまり
+<ruby>仲<rt>なか</rt></ruby>が
+<ruby>良<rt>よ</rt></ruby>くありませんでしたが、
+<ruby>一緒<rt>いっしょ</rt></ruby>に
+<ruby>生活<rt>せいかつ</rt></ruby>するうちに、
+<ruby>家族<rt>かぞく</rt></ruby>のように
+<ruby>大切<rt>たいせつ</rt></ruby>にするようになりました。
+</p>
+
+<p class="ko-text">
+처음에는 덴지와 별로 사이가 좋지 않았지만,
+함께 생활하면서 가족처럼 소중하게 생각하게 되었습니다.
+</p>
+
+<p class="jp-text">
+<ruby>自分<rt>じぶん</rt></ruby>の
+<ruby>気持<rt>きも</rt></ruby>ちを
+あまり
+<ruby>言葉<rt>ことば</rt></ruby>にしませんが、
+<ruby>行動<rt>こうどう</rt></ruby>で
+<ruby>仲間<rt>なかま</rt></ruby>を
+<ruby>守<rt>まも</rt></ruby>るところが
+<ruby>好<rt>す</rt></ruby>きです。
+</p>
+
+<p class="ko-text">
+자신의 마음을 말로 많이 표현하지는 않지만,
+행동으로 동료를 지키는 점이 좋습니다.
+</p>
+
+<p class="jp-text">
+<ruby>冷<rt>つめ</rt></ruby>たく
+<ruby>見<rt>み</rt></ruby>えても、
+<ruby>本当<rt>ほんとう</rt></ruby>は
+<ruby>優<rt>やさ</rt></ruby>しいところが
+<ruby>魅力的<rt>みりょくてき</rt></ruby>だと
+<ruby>思<rt>おも</rt></ruby>います。
+</p>
+
+<p class="ko-text">
+차갑게 보여도 사실은 다정한 점이 매력적이라고 생각합니다.
+</p>
+
+</article>
+
+</section>
+
+
+<!-- ==========================================
+3. N2 답변
+=========================================== -->
+
+<section class="content-section">
+
+<h2 class="section-title">
+3．N2レベルの
+<ruby>回答例<rt>かいとうれい</rt></ruby>
+</h2>
+
+<article class="answer-card n2-answer">
+
+<span class="level-badge level-n2">
+N2
+</span>
+
+<p class="jp-text">
+私が
+<ruby>最<rt>もっと</rt></ruby>も
+<ruby>魅力<rt>みりょく</rt></ruby>を
+<ruby>感<rt>かん</rt></ruby>じたキャラクターは、
+『チェンソーマン』に
+<ruby>登場<rt>とうじょう</rt></ruby>する
+<ruby>早川<rt>はやかわ</rt></ruby>アキです。
+</p>
+
+<p class="ko-text">
+제가 가장 매력을 느낀 캐릭터는
+『체인소 맨』에 등장하는 하야카와 아키입니다.
+</p>
+
+<p class="jp-text">
+アキは
+<ruby>一見<rt>いっけん</rt></ruby>すると
+<ruby>冷静<rt>れいせい</rt></ruby>で
+<ruby>厳<rt>きび</rt></ruby>しい
+<ruby>人物<rt>じんぶつ</rt></ruby>ですが、
+<ruby>実際<rt>じっさい</rt></ruby>には
+<ruby>仲間<rt>なかま</rt></ruby>への
+<ruby>情<rt>じょう</rt></ruby>が
+<ruby>深<rt>ふか</rt></ruby>く、
+<ruby>自分<rt>じぶん</rt></ruby>よりも
+<ruby>他人<rt>たにん</rt></ruby>を
+<ruby>優先<rt>ゆうせん</rt></ruby>することがあります。
+</p>
+
+<p class="ko-text">
+아키는 언뜻 보면 침착하고 엄격한 인물이지만,
+실제로는 동료에 대한 정이 깊고
+자신보다 다른 사람을 우선할 때가 있습니다.
+</p>
+
+<p class="jp-text">
+<ruby>特<rt>とく</rt></ruby>に
+<ruby>印象<rt>いんしょう</rt></ruby>に
+<ruby>残<rt>のこ</rt></ruby>ったのは、
+デンジやパワーと
+<ruby>生活<rt>せいかつ</rt></ruby>するうちに、
+アキの
+<ruby>態度<rt>たいど</rt></ruby>が
+<ruby>少<rt>すこ</rt></ruby>しずつ
+<ruby>変化<rt>へんか</rt></ruby>していくところです。
+</p>
+
+<p class="ko-text">
+특히 인상에 남은 것은
+덴지와 파워와 생활하면서
+아키의 태도가 조금씩 변화해 가는 부분입니다.
+</p>
+
+<p class="jp-text">
+<ruby>最初<rt>さいしょ</rt></ruby>から
+<ruby>親切<rt>しんせつ</rt></ruby>だったわけではありませんが、
+<ruby>共同生活<rt>きょうどうせいかつ</rt></ruby>を
+<ruby>通<rt>とお</rt></ruby>して
+<ruby>相手<rt>あいて</rt></ruby>を
+<ruby>理解<rt>りかい</rt></ruby>し、
+<ruby>言葉<rt>ことば</rt></ruby>ではなく
+<ruby>行動<rt>こうどう</rt></ruby>によって
+<ruby>大切<rt>たいせつ</rt></ruby>にしていることを
+<ruby>示<rt>しめ</rt></ruby>すようになります。
+</p>
+
+<p class="ko-text">
+처음부터 친절했던 것은 아니지만,
+공동생활을 통해 상대를 이해하고
+말이 아니라 행동으로 소중히 생각한다는 것을 보여 주게 됩니다.
+</p>
+
+<p class="jp-text">
+私は、
+キャラクターが
+<ruby>最初<rt>さいしょ</rt></ruby>から
+<ruby>完璧<rt>かんぺき</rt></ruby>であることよりも、
+<ruby>他人<rt>たにん</rt></ruby>との
+<ruby>関係<rt>かんけい</rt></ruby>を
+<ruby>通<rt>とお</rt></ruby>して
+<ruby>考<rt>かんが</rt></ruby>え
+<ruby>方<rt>かた</rt></ruby>や
+<ruby>感情<rt>かんじょう</rt></ruby>が
+<ruby>変<rt>か</rt></ruby>わっていく
+<ruby>過程<rt>かてい</rt></ruby>に
+<ruby>魅力<rt>みりょく</rt></ruby>を
+<ruby>感<rt>かん</rt></ruby>じます。
+</p>
+
+<p class="ko-text">
+저는 캐릭터가 처음부터 완벽한 것보다,
+다른 사람과의 관계를 통해
+사고방식과 감정이 변화해 가는 과정에서 매력을 느낍니다.
+</p>
+
+<p class="jp-text">
+アキは
+<ruby>感情<rt>かんじょう</rt></ruby>を
+<ruby>派手<rt>はで</rt></ruby>に
+<ruby>表現<rt>ひょうげん</rt></ruby>するタイプではないからこそ、
+<ruby>小<rt>ちい</rt></ruby>さな
+<ruby>表情<rt>ひょうじょう</rt></ruby>や
+<ruby>行動<rt>こうどう</rt></ruby>の
+<ruby>変化<rt>へんか</rt></ruby>が
+より
+<ruby>印象的<rt>いんしょうてき</rt></ruby>に
+<ruby>感<rt>かん</rt></ruby>じられました。
+</p>
+
+<p class="ko-text">
+아키는 감정을 화려하게 표현하는 유형이 아니기 때문에,
+작은 표정과 행동의 변화가 더욱 인상적으로 느껴졌습니다.
+</p>
+
+</article>
+
+</section>
+
+
+<!-- ==========================================
+4. 추가 질문
+=========================================== -->
+
+<section class="content-section">
+
+<h2 class="section-title">
+4．<ruby>会話<rt>かいわ</rt></ruby>を
+<ruby>続<rt>つづ</rt></ruby>けるための
+<ruby>追加質問<rt>ついかしつもん</rt></ruby>
+</h2>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">1</span>
+
+そのキャラクターは、
+<ruby>最初<rt>さいしょ</rt></ruby>から
+<ruby>好<rt>す</rt></ruby>きでしたか。
+それとも、
+<ruby>物語<rt>ものがたり</rt></ruby>が
+<ruby>進<rt>すす</rt></ruby>むにつれて
+<ruby>好<rt>す</rt></ruby>きになりましたか。
+</p>
+
+<p class="ko-text">
+그 캐릭터를 처음부터 좋아했습니까?
+아니면 이야기가 진행되면서 좋아하게 되었습니까?
+</p>
+
+</article>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">2</span>
+
+そのキャラクターの
+<ruby>長所<rt>ちょうしょ</rt></ruby>と
+<ruby>短所<rt>たんしょ</rt></ruby>は
+<ruby>何<rt>なん</rt></ruby>だと
+<ruby>思<rt>おも</rt></ruby>いますか。
+</p>
+
+<p class="ko-text">
+그 캐릭터의 장점과 단점은 무엇이라고 생각합니까?
+</p>
+
+</article>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">3</span>
+
+そのキャラクターと
+<ruby>現実<rt>げんじつ</rt></ruby>で
+<ruby>友達<rt>ともだち</rt></ruby>になりたいと
+<ruby>思<rt>おも</rt></ruby>いますか。
+</p>
+
+<p class="jp-text">
+そう
+<ruby>思<rt>おも</rt></ruby>う
+<ruby>理由<rt>りゆう</rt></ruby>、
+またはそう
+<ruby>思<rt>おも</rt></ruby>わない
+<ruby>理由<rt>りゆう</rt></ruby>も
+<ruby>説明<rt>せつめい</rt></ruby>してください。
+</p>
+
+<p class="ko-text">
+그 캐릭터와 현실에서 친구가 되고 싶습니까?
+그렇게 생각하는 이유 또는 그렇게 생각하지 않는 이유도 설명해 주세요.
+</p>
+
+</article>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">4</span>
+
+そのキャラクターと
+<ruby>自分<rt>じぶん</rt></ruby>には、
+<ruby>似<rt>に</rt></ruby>ている
+<ruby>点<rt>てん</rt></ruby>がありますか。
+</p>
+
+<p class="ko-text">
+그 캐릭터와 자신에게 닮은 점이 있습니까?
+</p>
+
+</article>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">5</span>
+
+そのキャラクターの
+<ruby>考<rt>かんが</rt></ruby>え
+<ruby>方<rt>かた</rt></ruby>や
+<ruby>行動<rt>こうどう</rt></ruby>の
+<ruby>中<rt>なか</rt></ruby>で、
+<ruby>共感<rt>きょうかん</rt></ruby>できない
+<ruby>部分<rt>ぶぶん</rt></ruby>もありますか。
+</p>
+
+<p class="ko-text">
+그 캐릭터의 사고방식이나 행동 중에서
+공감하기 어려운 부분도 있습니까?
+</p>
+
+</article>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">6</span>
+
+<ruby>性格<rt>せいかく</rt></ruby>、
+<ruby>外見<rt>がいけん</rt></ruby>、
+<ruby>能力<rt>のうりょく</rt></ruby>、
+<ruby>過去<rt>かこ</rt></ruby>の
+<ruby>物語<rt>ものがたり</rt></ruby>のうち、
+キャラクターを
+<ruby>好<rt>す</rt></ruby>きになるうえで、
+<ruby>何<rt>なに</rt></ruby>を
+<ruby>最<rt>もっと</rt></ruby>も
+<ruby>重視<rt>じゅうし</rt></ruby>しますか。
+</p>
+
+<p class="ko-text">
+성격, 외모, 능력, 과거 이야기 중
+캐릭터를 좋아하는 데 있어 무엇을 가장 중시합니까?
+</p>
+
+</article>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">7</span>
+
+<ruby>主人公<rt>しゅじんこう</rt></ruby>よりも
+<ruby>脇役<rt>わきやく</rt></ruby>や
+<ruby>悪役<rt>あくやく</rt></ruby>を
+<ruby>好<rt>す</rt></ruby>きになることはありますか。
+</p>
+
+<p class="ko-text">
+주인공보다 조연이나 악역을 좋아하는 경우도 있습니까?
+</p>
+
+</article>
+
+
+<article class="follow-up-card">
+
+<p class="jp-text">
+<span class="follow-up-number">8</span>
+
+<ruby>外見<rt>がいけん</rt></ruby>は
+<ruby>好<rt>す</rt></ruby>きですが、
+<ruby>性格<rt>せいかく</rt></ruby>には
+<ruby>共感<rt>きょうかん</rt></ruby>できない
+キャラクターはいますか。
+</p>
+
+<p class="ko-text">
+외모는 좋아하지만 성격에는 공감하기 어려운 캐릭터가 있습니까?
+</p>
+
+</article>
+
+</section>
+
+
+<!-- ==========================================
+5. 문법
+=========================================== -->
+
+<section class="content-section">
+
+<h2 class="section-title">
+5．N2・N3
+<ruby>文法解説<rt>ぶんぽうかいせつ</rt></ruby>
+</h2>
+
+<div class="language-grid">
+
+
+<article class="language-card">
+
+<h4>
+1．～うちに
+</h4>
+
+<p class="jp-text">
+ある
+<ruby>状態<rt>じょうたい</rt></ruby>や
+<ruby>行動<rt>こうどう</rt></ruby>が
+<ruby>続<rt>つづ</rt></ruby>いている
+<ruby>間<rt>あいだ</rt></ruby>に、
+<ruby>自然<rt>しぜん</rt></ruby>に
+<ruby>変化<rt>へんか</rt></ruby>が
+<ruby>起<rt>お</rt></ruby>こることを
+<ruby>表<rt>あらわ</rt></ruby>します。
+</p>
+
+<p class="ko-text">
+어떤 상태나 행동이 계속되는 동안
+자연스럽게 변화가 일어남을 나타냅니다.
+</p>
+
+<div class="example-box">
+
+<p class="jp-text">
+<ruby>一緒<rt>いっしょ</rt></ruby>に
+<ruby>生活<rt>せいかつ</rt></ruby>するうちに、
+<ruby>家族<rt>かぞく</rt></ruby>のような
+<ruby>関係<rt>かんけい</rt></ruby>になりました。
+</p>
+
+<p class="ko-text">
+함께 생활하면서 가족 같은 관계가 되었습니다.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+2．～わけではありません
+</h4>
+
+<p class="jp-text">
+ある
+<ruby>内容<rt>ないよう</rt></ruby>を
+<ruby>完全<rt>かんぜん</rt></ruby>に
+<ruby>否定<rt>ひてい</rt></ruby>するのではなく、
+<ruby>一部<rt>いちぶ</rt></ruby>を
+<ruby>限定<rt>げんてい</rt></ruby>して
+<ruby>説明<rt>せつめい</rt></ruby>するときに
+<ruby>使<rt>つか</rt></ruby>います。
+</p>
+
+<p class="ko-text">
+어떤 내용을 완전히 부정하지 않고
+일부 의미를 제한해서 설명할 때 사용합니다.
+</p>
+
+<div class="example-box">
+
+<p class="jp-text">
+アキは
+<ruby>最初<rt>さいしょ</rt></ruby>から
+<ruby>親切<rt>しんせつ</rt></ruby>だった
+わけではありません。
+</p>
+
+<p class="ko-text">
+아키가 처음부터 친절했던 것은 아닙니다.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+3．～を
+<ruby>通<rt>とお</rt></ruby>して
+</h4>
+
+<p class="jp-text">
+ある
+<ruby>経験<rt>けいけん</rt></ruby>、
+<ruby>活動<rt>かつどう</rt></ruby>、
+<ruby>手段<rt>しゅだん</rt></ruby>を
+<ruby>経<rt>へ</rt></ruby>て、
+<ruby>変化<rt>へんか</rt></ruby>や
+<ruby>結果<rt>けっか</rt></ruby>が
+<ruby>生<rt>う</rt></ruby>まれることを
+<ruby>表<rt>あらわ</rt></ruby>します。
+</p>
+
+<p class="ko-text">
+어떤 경험이나 활동, 수단을 거쳐
+변화나 결과가 생기는 것을 나타냅니다.
+</p>
+
+<div class="example-box">
+
+<p class="jp-text">
+<ruby>共同生活<rt>きょうどうせいかつ</rt></ruby>を
+<ruby>通<rt>とお</rt></ruby>して、
+<ruby>相手<rt>あいて</rt></ruby>を
+<ruby>理解<rt>りかい</rt></ruby>するようになりました。
+</p>
+
+<p class="ko-text">
+공동생활을 통해 상대를 이해하게 되었습니다.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+4．～からこそ
+</h4>
+
+<p class="jp-text">
+ある
+<ruby>理由<rt>りゆう</rt></ruby>を
+<ruby>特<rt>とく</rt></ruby>に
+<ruby>強調<rt>きょうちょう</rt></ruby>し、
+その
+<ruby>理由<rt>りゆう</rt></ruby>があるために
+<ruby>特別<rt>とくべつ</rt></ruby>な
+<ruby>結果<rt>けっか</rt></ruby>が
+<ruby>生<rt>う</rt></ruby>まれることを
+<ruby>表<rt>あらわ</rt></ruby>します。
+</p>
+
+<p class="ko-text">
+어떤 이유를 특별히 강조하며,
+바로 그 이유 때문에 특정 결과가 생긴다는 뜻입니다.
+</p>
+
+<div class="example-box">
+
+<p class="jp-text">
+<ruby>感情<rt>かんじょう</rt></ruby>を
+あまり
+<ruby>表<rt>おもて</rt></ruby>に
+<ruby>出<rt>だ</rt></ruby>さないからこそ、
+<ruby>小<rt>ちい</rt></ruby>さな
+<ruby>変化<rt>へんか</rt></ruby>が
+<ruby>印象的<rt>いんしょうてき</rt></ruby>に
+<ruby>見<rt>み</rt></ruby>えます。
+</p>
+
+<p class="ko-text">
+감정을 잘 겉으로 드러내지 않기 때문에
+작은 변화가 인상적으로 보입니다.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+5．～につれて
+</h4>
+
+<p class="jp-text">
+一つの
+<ruby>変化<rt>へんか</rt></ruby>に
+<ruby>伴<rt>ともな</rt></ruby>って、
+<ruby>別<rt>べつ</rt></ruby>の
+<ruby>状態<rt>じょうたい</rt></ruby>も
+<ruby>変化<rt>へんか</rt></ruby>することを
+<ruby>表<rt>あらわ</rt></ruby>します。
+</p>
+
+<p class="ko-text">
+하나의 변화에 따라 다른 상태도 함께 변하는 것을 나타냅니다.
+</p>
+
+<div class="example-box">
+
+<p class="jp-text">
+<ruby>物語<rt>ものがたり</rt></ruby>が
+<ruby>進<rt>すす</rt></ruby>むにつれて、
+そのキャラクターを
+<ruby>好<rt>す</rt></ruby>きになりました。
+</p>
+
+<p class="ko-text">
+이야기가 진행될수록 그 캐릭터를 좋아하게 되었습니다.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+6．～というより
+</h4>
+
+<p class="jp-text">
+<ruby>最初<rt>さいしょ</rt></ruby>に
+<ruby>述<rt>の</rt></ruby>べた
+<ruby>表現<rt>ひょうげん</rt></ruby>よりも、
+<ruby>後<rt>あと</rt></ruby>に
+<ruby>述<rt>の</rt></ruby>べる
+<ruby>表現<rt>ひょうげん</rt></ruby>のほうが
+より
+<ruby>正確<rt>せいかく</rt></ruby>であることを
+<ruby>示<rt>しめ</rt></ruby>します。
+</p>
+
+<p class="ko-text">
+앞의 표현보다 뒤의 표현이 더 정확하다는 것을 나타냅니다.
+</p>
+
+<div class="example-box">
+
+<p class="jp-text">
+<ruby>格好<rt>かっこう</rt></ruby>いいというより、
+<ruby>不器用<rt>ぶきよう</rt></ruby>ですが
+<ruby>優<rt>やさ</rt></ruby>しいところが
+<ruby>好<rt>す</rt></ruby>きです。
+</p>
+
+<p class="ko-text">
+멋있다기보다 서툴지만 다정한 점이 좋습니다.
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================
+6. 어휘
+=========================================== -->
+
+<section class="content-section">
+
+<h2 class="section-title">
+6．N2・N3
+<ruby>語彙解説<rt>ごいかいせつ</rt></ruby>
+</h2>
+
+<div class="language-grid">
+
+
+<article class="language-card">
+
+<h4>
+1．<ruby>魅力<rt>みりょく</rt></ruby>
+</h4>
+
+<p class="jp-text">
+<ruby>人<rt>ひと</rt></ruby>を
+<ruby>引<rt>ひ</rt></ruby>きつけ、
+<ruby>好<rt>す</rt></ruby>きにさせる
+<ruby>特徴<rt>とくちょう</rt></ruby>です。
+</p>
+
+<p class="ko-text">
+사람을 끌어당겨 좋아하게 만드는 특징, 즉 매력입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+2．<ruby>責任感<rt>せきにんかん</rt></ruby>
+</h4>
+
+<p class="jp-text">
+<ruby>自分<rt>じぶん</rt></ruby>が
+<ruby>引<rt>ひ</rt></ruby>き
+<ruby>受<rt>う</rt></ruby>けた
+<ruby>仕事<rt>しごと</rt></ruby>や
+<ruby>役割<rt>やくわり</rt></ruby>を
+<ruby>最後<rt>さいご</rt></ruby>まで
+<ruby>果<rt>は</rt></ruby>たそうとする
+<ruby>気持<rt>きも</rt></ruby>ちです。
+</p>
+
+<p class="ko-text">
+자신이 맡은 일이나 역할을 끝까지 해내려는 책임감입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+3．<ruby>一見<rt>いっけん</rt></ruby>
+</h4>
+
+<p class="jp-text">
+ちょっと
+<ruby>見<rt>み</rt></ruby>た
+<ruby>印象<rt>いんしょう</rt></ruby>では、
+という
+<ruby>意味<rt>いみ</rt></ruby>です。
+</p>
+
+<p class="ko-text">
+언뜻 보기에, 잠깐 본 인상으로는이라는 뜻입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+4．<ruby>情<rt>じょう</rt></ruby>が
+<ruby>深<rt>ふか</rt></ruby>い
+</h4>
+
+<p class="jp-text">
+<ruby>他人<rt>たにん</rt></ruby>に
+<ruby>対<rt>たい</rt></ruby>する
+<ruby>愛情<rt>あいじょう</rt></ruby>や
+<ruby>思<rt>おも</rt></ruby>いやりが
+<ruby>強<rt>つよ</rt></ruby>いことです。
+</p>
+
+<p class="ko-text">
+다른 사람에 대한 애정과 배려가 깊다는 뜻입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+5．<ruby>印象<rt>いんしょう</rt></ruby>に
+<ruby>残<rt>のこ</rt></ruby>る
+</h4>
+
+<p class="jp-text">
+<ruby>見<rt>み</rt></ruby>たり
+<ruby>経験<rt>けいけん</rt></ruby>したりしたことが、
+<ruby>強<rt>つよ</rt></ruby>く
+<ruby>記憶<rt>きおく</rt></ruby>に
+<ruby>残<rt>のこ</rt></ruby>ることです。
+</p>
+
+<p class="ko-text">
+보거나 경험한 것이 강하게 기억에 남는다는 뜻입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+6．<ruby>共同生活<rt>きょうどうせいかつ</rt></ruby>
+</h4>
+
+<p class="jp-text">
+<ruby>複数<rt>ふくすう</rt></ruby>の
+<ruby>人<rt>ひと</rt></ruby>が
+<ruby>同<rt>おな</rt></ruby>じ
+<ruby>場所<rt>ばしょ</rt></ruby>で
+<ruby>一緒<rt>いっしょ</rt></ruby>に
+<ruby>暮<rt>く</rt></ruby>らすことです。
+</p>
+
+<p class="ko-text">
+여러 사람이 같은 장소에서 함께 생활하는 것입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+7．<ruby>成長過程<rt>せいちょうかてい</rt></ruby>
+</h4>
+
+<p class="jp-text">
+キャラクターの
+<ruby>考<rt>かんが</rt></ruby>え
+<ruby>方<rt>かた</rt></ruby>や
+<ruby>能力<rt>のうりょく</rt></ruby>が
+<ruby>変化<rt>へんか</rt></ruby>し、
+<ruby>成長<rt>せいちょう</rt></ruby>していく
+<ruby>道筋<rt>みちすじ</rt></ruby>です。
+</p>
+
+<p class="ko-text">
+캐릭터의 사고방식이나 능력이 변화하고 성장해 가는 과정입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+8．<ruby>共感<rt>きょうかん</rt></ruby>する
+</h4>
+
+<p class="jp-text">
+<ruby>相手<rt>あいて</rt></ruby>の
+<ruby>感情<rt>かんじょう</rt></ruby>や
+<ruby>考<rt>かんが</rt></ruby>えを
+<ruby>理解<rt>りかい</rt></ruby>し、
+<ruby>自分<rt>じぶん</rt></ruby>も
+<ruby>同<rt>おな</rt></ruby>じように
+<ruby>感<rt>かん</rt></ruby>じることです。
+</p>
+
+<p class="ko-text">
+상대의 감정이나 생각을 이해하고 자신도 비슷하게 느끼는 것입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+9．<ruby>憧<rt>あこが</rt></ruby>れる
+</h4>
+
+<p class="jp-text">
+<ruby>自分<rt>じぶん</rt></ruby>も
+その
+<ruby>人<rt>ひと</rt></ruby>のようになりたいと
+<ruby>強<rt>つよ</rt></ruby>く
+<ruby>思<rt>おも</rt></ruby>うことです。
+</p>
+
+<p class="ko-text">
+자신도 그 사람처럼 되고 싶다고 강하게 생각하는 것입니다.
+</p>
+
+</article>
+
+
+<article class="language-card">
+
+<h4>
+10．<ruby>脇役<rt>わきやく</rt></ruby>
+</h4>
+
+<p class="jp-text">
+<ruby>主人公<rt>しゅじんこう</rt></ruby>ではありませんが、
+<ruby>物語<rt>ものがたり</rt></ruby>を
+<ruby>支<rt>ささ</rt></ruby>える
+<ruby>重要<rt>じゅうよう</rt></ruby>な
+キャラクターです。
+</p>
+
+<p class="ko-text">
+주인공은 아니지만 이야기를 뒷받침하는 중요한 조연 캐릭터입니다.
+</p>
+
+</article>
+
+</div>
+
+<div class="conversation-note">
+
+<p class="jp-text">
+この
+<ruby>質問<rt>しつもん</rt></ruby>には
+<ruby>正解<rt>せいかい</rt></ruby>がありません。
+</p>
+
+<p class="jp-text">
+キャラクターの
+<ruby>性格<rt>せいかく</rt></ruby>、
+<ruby>外見<rt>がいけん</rt></ruby>、
+<ruby>能力<rt>のうりょく</rt></ruby>、
+<ruby>成長<rt>せいちょう</rt></ruby>、
+<ruby>印象的<rt>いんしょうてき</rt></ruby>な
+<ruby>場面<rt>ばめん</rt></ruby>など、
+<ruby>話<rt>はな</rt></ruby>しやすい
+<ruby>部分<rt>ぶぶん</rt></ruby>を
+<ruby>一<rt>ひと</rt></ruby>つ
+<ruby>選<rt>えら</rt></ruby>んで
+<ruby>説明<rt>せつめい</rt></ruby>してみましょう。
+</p>
+
+<p class="jp-text">
+N3の
+<ruby>回答<rt>かいとう</rt></ruby>を
+<ruby>基本<rt>きほん</rt></ruby>にして、
+<ruby>具体的<rt>ぐたいてき</rt></ruby>な
+<ruby>場面<rt>ばめん</rt></ruby>や
+<ruby>自分<rt>じぶん</rt></ruby>の
+<ruby>考<rt>かんが</rt></ruby>えを
+<ruby>加<rt>くわ</rt></ruby>えると、
+N2レベルの
+<ruby>回答<rt>かいとう</rt></ruby>に
+<ruby>発展<rt>はってん</rt></ruby>させることができます。
+</p>
+
+<p class="ko-text">
+이 질문에는 정답이 없습니다.
+캐릭터의 성격, 외모, 능력, 성장, 인상적인 장면 등
+말하기 편한 부분을 하나 선택해 설명해 봅시다.
+N3 답변을 기본으로 구체적인 장면이나 자신의 생각을 더하면
+N2 수준의 답변으로 발전시킬 수 있습니다.
+</p>
+
+</div>
+
+</section>
+
+</section>
+
+
+<style>
+  .aot-anime-talk {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 28px;
+    background: #f5f6f3;
+    color: #252823;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Noto Sans JP",
+      "Noto Sans KR",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    line-height: 1.85;
+    box-sizing: border-box;
+  }
+
+  .aot-anime-talk * {
+    box-sizing: border-box;
+  }
+
+  .aot-anime-talk ruby {
+    ruby-position: over;
+  }
+
+  .aot-anime-talk rt {
+    font-size: 0.56em;
+    color: #6c7168;
+    font-weight: 400;
+  }
+
+  .aot-anime-talk .series-header {
+    margin-bottom: 28px;
+    padding: 32px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #253229, #536455);
+    color: #fff;
+  }
+
+  .aot-anime-talk .series-label {
+    display: inline-block;
+    margin-bottom: 13px;
+    padding: 5px 13px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .aot-anime-talk .series-title {
+    margin: 0;
+    font-size: clamp(1.7rem, 4vw, 2.55rem);
+    line-height: 1.45;
+  }
+
+  .aot-anime-talk .series-subtitle {
+    margin: 14px 0 0;
+    color: #e2e8e0;
+    font-size: 1rem;
+  }
+
+  .aot-anime-talk .question-unit {
+    margin-top: 34px;
+    padding-top: 3px;
+  }
+
+  .aot-anime-talk .question-header {
+    padding: 27px;
+    border-radius: 19px;
+    background: linear-gradient(135deg, #493e32, #7a6954);
+    color: #fff;
+  }
+
+  .aot-anime-talk .question-number {
+    display: inline-block;
+    margin-bottom: 11px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .aot-anime-talk .question-title {
+    margin: 0;
+    font-size: clamp(1.45rem, 4vw, 2.1rem);
+    line-height: 1.55;
+  }
+
+  .aot-anime-talk .question-title-ko {
+    margin: 13px 0 0;
+    color: #f2ece4;
+    font-weight: 600;
+  }
+
+  .aot-anime-talk .content-section {
+    margin-top: 21px;
+    padding: 25px;
+    border: 1px solid #dde1d9;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 5px 17px rgba(43, 52, 42, 0.05);
+  }
+
+  .aot-anime-talk .section-title {
+    margin: 0 0 19px;
+    padding-bottom: 11px;
+    border-bottom: 3px solid #6f7c6c;
+    color: #3d4b3e;
+    font-size: 1.35rem;
+  }
+
+  .aot-anime-talk .sub-title {
+    margin: 24px 0 11px;
+    color: #536355;
+    font-size: 1.1rem;
+  }
+
+  .aot-anime-talk .jp-text {
+    margin: 11px 0 5px;
+    color: #292d28;
+    font-size: 1.01rem;
+  }
+
+  .aot-anime-talk .ko-text {
+    margin: 0 0 15px;
+    padding: 11px 14px;
+    border-left: 4px solid #b9c4b6;
+    border-radius: 0 9px 9px 0;
+    background: #f1f5ef;
+    color: #535a51;
+    font-size: 0.95rem;
+  }
+
+  .aot-anime-talk .question-box {
+    margin-top: 18px;
+    padding: 20px;
+    border: 2px solid #6f7c6c;
+    border-radius: 14px;
+    background: #eef3ec;
+  }
+
+  .aot-anime-talk .question-box .jp-text {
+    color: #354637;
+    font-size: 1.12rem;
+    font-weight: 800;
+  }
+
+  .aot-anime-talk .point-list {
+    margin: 8px 0 0;
+    padding-left: 22px;
+  }
+
+  .aot-anime-talk .point-list li {
+    margin-bottom: 12px;
+  }
+
+  .aot-anime-talk .answer-card {
+    margin-top: 18px;
+    padding: 21px;
+    border: 1px solid #dde1d9;
+    border-radius: 15px;
+    background: #fafafa;
+  }
+
+  .aot-anime-talk .answer-card.n2 {
+    background: #f5f2ed;
+  }
+
+  .aot-anime-talk .level-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 13px;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 800;
+  }
+
+  .aot-anime-talk .level-n3 {
+    background: #e7f3eb;
+    color: #286044;
+  }
+
+  .aot-anime-talk .level-n2 {
+    background: #eee6dc;
+    color: #704c31;
+  }
+
+  .aot-anime-talk .follow-up-card {
+    margin-top: 14px;
+    padding: 17px;
+    border: 1px solid #dde1d9;
+    border-radius: 13px;
+    background: #fbfcfa;
+  }
+
+  .aot-anime-talk .follow-up-number {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #5e6e60;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .aot-anime-talk .language-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .aot-anime-talk .language-card {
+    padding: 18px;
+    border: 1px solid #dde1d9;
+    border-radius: 14px;
+    background: #fff;
+  }
+
+  .aot-anime-talk .language-card h4 {
+    margin: 0 0 11px;
+    color: #536355;
+    font-size: 1.06rem;
+  }
+
+  .aot-anime-talk .example-box {
+    margin-top: 11px;
+    padding: 12px;
+    border-radius: 9px;
+    background: #f2f4f0;
+  }
+
+  .aot-anime-talk .discussion-box {
+    margin-top: 19px;
+    padding: 18px;
+    border-radius: 14px;
+    background: #fff7e8;
+  }
+
+  @media (max-width: 800px) {
+    .aot-anime-talk {
+      padding: 14px;
+    }
+
+    .aot-anime-talk .series-header,
+    .aot-anime-talk .question-header,
+    .aot-anime-talk .content-section {
+      padding: 20px;
+    }
+
+    .aot-anime-talk .language-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+<section class="aot-anime-talk">
+
+  <header class="series-header">
+
+    <span class="series-label">
+      ANIME TALK · QUESTIONS 02–06
+    </span>
+
+    <h1 class="series-title">
+      『<ruby>進撃<rt>しんげき</rt></ruby>の
+      <ruby>巨人<rt>きょじん</rt></ruby>』で
+      <ruby>話<rt>はな</rt></ruby>す
+      アニメ
+      <ruby>交流<rt>こうりゅう</rt></ruby>
+    </h1>
+
+    <p class="series-subtitle">
+      『진격의 거인』을 주제로 이야기하는 애니메이션 교류 자료
+    </p>
+
+  </header>
+
+
+  <!-- =====================================================
+       QUESTION 02
+  ====================================================== -->
+
+  <article class="question-unit" id="anime-talk-question-02">
+
+    <header class="question-header">
+
+      <span class="question-number">
+        QUESTION 02
+      </span>
+
+      <h2 class="question-title">
+        『<ruby>進撃<rt>しんげき</rt></ruby>の
+        <ruby>巨人<rt>きょじん</rt></ruby>』の
+        <ruby>漫画<rt>まんが</rt></ruby>や
+        グッズを
+        <ruby>買<rt>か</rt></ruby>ったことがありますか。
+      </h2>
+
+      <p class="question-title-ko">
+        『진격의 거인』 만화책이나 굿즈를 구매한 적이 있습니까?
+      </p>
+
+    </header>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        1．<ruby>質問<rt>しつもん</rt></ruby>
+      </h3>
+
+      <p class="jp-text">
+        アニメを
+        <ruby>好<rt>す</rt></ruby>きになると、
+        <ruby>原作<rt>げんさく</rt></ruby>の
+        <ruby>漫画<rt>まんが</rt></ruby>を
+        <ruby>読<rt>よ</rt></ruby>んだり、
+        キャラクターのグッズを
+        <ruby>集<rt>あつ</rt></ruby>めたりする
+        <ruby>人<rt>ひと</rt></ruby>もいます。
+      </p>
+
+      <p class="ko-text">
+        애니메이션을 좋아하게 되면 원작 만화를 읽거나
+        캐릭터 굿즈를 모으는 사람도 있습니다.
+      </p>
+
+      <p class="jp-text">
+        グッズには、
+        フィギュア、
+        アクリルスタンド、
+        キーホルダー、
+        ポスター、
+        <ruby>衣類<rt>いるい</rt></ruby>、
+        <ruby>文房具<rt>ぶんぼうぐ</rt></ruby>など、
+        さまざまな
+        <ruby>種類<rt>しゅるい</rt></ruby>があります。
+      </p>
+
+      <p class="ko-text">
+        굿즈에는 피규어, 아크릴 스탠드, 열쇠고리,
+        포스터, 의류, 문구류 등 다양한 종류가 있습니다.
+      </p>
+
+      <div class="question-box">
+
+        <p class="jp-text">
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』の
+          <ruby>漫画<rt>まんが</rt></ruby>や
+          グッズを
+          <ruby>買<rt>か</rt></ruby>ったことがありますか。
+        </p>
+
+        <p class="jp-text">
+          <ruby>買<rt>か</rt></ruby>ったことがある
+          <ruby>場合<rt>ばあい</rt></ruby>は、
+          <ruby>何<rt>なに</rt></ruby>を
+          どこで
+          <ruby>買<rt>か</rt></ruby>いましたか。
+        </p>
+
+        <p class="jp-text">
+          また、その
+          <ruby>商品<rt>しょうひん</rt></ruby>を
+          <ruby>選<rt>えら</rt></ruby>んだ
+          <ruby>理由<rt>りゆう</rt></ruby>と、
+          <ruby>買<rt>か</rt></ruby>った
+          <ruby>後<rt>あと</rt></ruby>の
+          <ruby>感想<rt>かんそう</rt></ruby>も
+          <ruby>説明<rt>せつめい</rt></ruby>してください。
+        </p>
+
+        <p class="ko-text">
+          『진격의 거인』 만화책이나 굿즈를 구매한 적이 있습니까?
+          구매한 적이 있다면 무엇을 어디에서 샀습니까?
+          그 상품을 선택한 이유와 구매 후의 감상도 설명해 주세요.
+        </p>
+
+      </div>
+
+      <h4 class="sub-title">
+        <ruby>話<rt>はな</rt></ruby>すときのポイント
+      </h4>
+
+      <ul class="point-list">
+        <li>무엇을 샀는지</li>
+        <li>오프라인 매장인지 인터넷인지</li>
+        <li>왜 그 캐릭터나 디자인을 골랐는지</li>
+        <li>실제로 사용하거나 장식하고 있는지</li>
+      </ul>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        2．N3レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card">
+
+        <span class="level-badge level-n3">
+          N3
+        </span>
+
+        <p class="jp-text">
+          私は
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』の
+          <ruby>漫画<rt>まんが</rt></ruby>を
+          <ruby>何冊<rt>なんさつ</rt></ruby>か
+          <ruby>持<rt>も</rt></ruby>っています。
+        </p>
+
+        <p class="ko-text">
+          저는 『진격의 거인』 만화책을 몇 권 가지고 있습니다.
+        </p>
+
+        <p class="jp-text">
+          アニメを
+          <ruby>見<rt>み</rt></ruby>たあと、
+          <ruby>原作<rt>げんさく</rt></ruby>では
+          どのように
+          <ruby>描<rt>えが</rt></ruby>かれているのか
+          <ruby>気<rt>き</rt></ruby>になったので
+          <ruby>買<rt>か</rt></ruby>いました。
+        </p>
+
+        <p class="ko-text">
+          애니메이션을 본 뒤 원작에서는 어떻게 그려졌는지 궁금해서 샀습니다.
+        </p>
+
+        <p class="jp-text">
+          また、
+          <ruby>調査兵団<rt>ちょうさへいだん</rt></ruby>の
+          <ruby>紋章<rt>もんしょう</rt></ruby>が
+          <ruby>入<rt>はい</rt></ruby>った
+          キーホルダーも
+          <ruby>買<rt>か</rt></ruby>いました。
+        </p>
+
+        <p class="ko-text">
+          또한 조사병단 문장이 들어간 열쇠고리도 샀습니다.
+        </p>
+
+        <p class="jp-text">
+          それは
+          <ruby>秋葉原<rt>あきはばら</rt></ruby>の
+          アニメショップで
+          <ruby>買<rt>か</rt></ruby>いました。
+        </p>
+
+        <p class="ko-text">
+          그것은 아키하바라의 애니메이션 매장에서 샀습니다.
+        </p>
+
+        <p class="jp-text">
+          デザインが
+          <ruby>格好<rt>かっこう</rt></ruby>よくて、
+          <ruby>普段<rt>ふだん</rt></ruby>も
+          <ruby>使<rt>つか</rt></ruby>いやすいので
+          <ruby>気<rt>き</rt></ruby>に
+          <ruby>入<rt>い</rt></ruby>っています。
+        </p>
+
+        <p class="ko-text">
+          디자인이 멋있고 평소에도 사용하기 편해서 마음에 듭니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        3．N2レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card n2">
+
+        <span class="level-badge level-n2">
+          N2
+        </span>
+
+        <p class="jp-text">
+          私はアニメを
+          <ruby>見終<rt>みお</rt></ruby>えたあと、
+          <ruby>物語<rt>ものがたり</rt></ruby>を
+          もう一度
+          <ruby>細<rt>こま</rt></ruby>かく
+          <ruby>確認<rt>かくにん</rt></ruby>したくなり、
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』の
+          <ruby>単行本<rt>たんこうぼん</rt></ruby>を
+          <ruby>何冊<rt>なんさつ</rt></ruby>か
+          <ruby>購入<rt>こうにゅう</rt></ruby>しました。
+        </p>
+
+        <p class="ko-text">
+          저는 애니메이션을 다 본 뒤 이야기를 다시 세부적으로 확인하고 싶어서
+          『진격의 거인』 단행본을 몇 권 구매했습니다.
+        </p>
+
+        <p class="jp-text">
+          アニメでは
+          <ruby>映像<rt>えいぞう</rt></ruby>や
+          <ruby>音楽<rt>おんがく</rt></ruby>によって
+          <ruby>緊張感<rt>きんちょうかん</rt></ruby>が
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>伝<rt>つた</rt></ruby>わってきますが、
+          <ruby>漫画<rt>まんが</rt></ruby>では
+          キャラクターの
+          <ruby>表情<rt>ひょうじょう</rt></ruby>や
+          せりふを
+          <ruby>自分<rt>じぶん</rt></ruby>のペースで
+          <ruby>読<rt>よ</rt></ruby>めるところに
+          <ruby>魅力<rt>みりょく</rt></ruby>を
+          <ruby>感<rt>かん</rt></ruby>じました。
+        </p>
+
+        <p class="ko-text">
+          애니메이션에서는 영상과 음악을 통해 긴장감이 강하게 전달되지만,
+          만화에서는 캐릭터의 표정과 대사를 자신의 속도로 읽을 수 있다는 점에
+          매력을 느꼈습니다.
+        </p>
+
+        <p class="jp-text">
+          グッズについては、
+          <ruby>調査兵団<rt>ちょうさへいだん</rt></ruby>の
+          <ruby>紋章<rt>もんしょう</rt></ruby>が
+          <ruby>入<rt>はい</rt></ruby>った
+          キーホルダーと、
+          リヴァイのアクリルスタンドを
+          <ruby>買<rt>か</rt></ruby>ったことがあります。
+        </p>
+
+        <p class="ko-text">
+          굿즈로는 조사병단 문장이 들어간 열쇠고리와
+          리바이 아크릴 스탠드를 구매한 적이 있습니다.
+        </p>
+
+        <p class="jp-text">
+          キーホルダーは
+          <ruby>秋葉原<rt>あきはばら</rt></ruby>の
+          アニメショップで、
+          アクリルスタンドは
+          オンラインショップで
+          <ruby>注文<rt>ちゅうもん</rt></ruby>しました。
+        </p>
+
+        <p class="ko-text">
+          열쇠고리는 아키하바라의 애니메이션 매장에서,
+          아크릴 스탠드는 온라인 매장에서 주문했습니다.
+        </p>
+
+        <p class="jp-text">
+          キャラクターの
+          <ruby>顔<rt>かお</rt></ruby>が
+          <ruby>大<rt>おお</rt></ruby>きく
+          <ruby>描<rt>えが</rt></ruby>かれた
+          グッズというより、
+          <ruby>作品<rt>さくひん</rt></ruby>を
+          <ruby>知<rt>し</rt></ruby>っている
+          <ruby>人<rt>ひと</rt></ruby>だけが
+          <ruby>気<rt>き</rt></ruby>づくような
+          デザインのほうが
+          <ruby>普段<rt>ふだん</rt></ruby>
+          <ruby>使<rt>つか</rt></ruby>いやすいと
+          <ruby>思<rt>おも</rt></ruby>います。
+        </p>
+
+        <p class="ko-text">
+          캐릭터 얼굴이 크게 그려진 굿즈보다는
+          작품을 아는 사람만 알아볼 수 있는 디자인이
+          평소 사용하기 더 편하다고 생각합니다.
+        </p>
+
+        <p class="jp-text">
+          グッズを
+          <ruby>集<rt>あつ</rt></ruby>めること
+          <ruby>自体<rt>じたい</rt></ruby>が
+          <ruby>目的<rt>もくてき</rt></ruby>なのではなく、
+          <ruby>気<rt>き</rt></ruby>に
+          <ruby>入<rt>い</rt></ruby>ったものだけを
+          <ruby>選<rt>えら</rt></ruby>んで
+          <ruby>長<rt>なが</rt></ruby>く
+          <ruby>使<rt>つか</rt></ruby>いたいと
+          <ruby>考<rt>かんが</rt></ruby>えています。
+        </p>
+
+        <p class="ko-text">
+          굿즈를 모으는 것 자체가 목적이라기보다,
+          마음에 드는 것만 골라 오래 사용하고 싶다고 생각합니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        4．<ruby>追加質問<rt>ついかしつもん</rt></ruby>
+      </h3>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">1</span>
+          <ruby>漫画<rt>まんが</rt></ruby>は
+          <ruby>紙<rt>かみ</rt></ruby>の
+          <ruby>本<rt>ほん</rt></ruby>と
+          <ruby>電子書籍<rt>でんししょせき</rt></ruby>の
+          どちらで
+          <ruby>読<rt>よ</rt></ruby>みたいですか。
+        </p>
+        <p class="ko-text">
+          만화책은 종이책과 전자책 중 어느 쪽으로 읽고 싶습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">2</span>
+          グッズを
+          <ruby>買<rt>か</rt></ruby>うとき、
+          キャラクターと
+          デザインのどちらを
+          <ruby>重視<rt>じゅうし</rt></ruby>しますか。
+        </p>
+        <p class="ko-text">
+          굿즈를 살 때 캐릭터와 디자인 중 어느 쪽을 중시합니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">3</span>
+          <ruby>限定商品<rt>げんていしょうひん</rt></ruby>なら、
+          <ruby>予定<rt>よてい</rt></ruby>より
+          <ruby>高<rt>たか</rt></ruby>くても
+          <ruby>買<rt>か</rt></ruby>いますか。
+        </p>
+        <p class="ko-text">
+          한정 상품이라면 예상보다 비싸도 구매합니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">4</span>
+          <ruby>買<rt>か</rt></ruby>ったグッズは
+          <ruby>実際<rt>じっさい</rt></ruby>に
+          <ruby>使<rt>つか</rt></ruby>いますか。
+          それとも
+          <ruby>飾<rt>かざ</rt></ruby>って
+          <ruby>保管<rt>ほかん</rt></ruby>しますか。
+        </p>
+        <p class="ko-text">
+          구매한 굿즈는 실제로 사용합니까, 아니면 장식하여 보관합니까?
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        5．N2・N3
+        <ruby>文法<rt>ぶんぽう</rt></ruby>・
+        <ruby>語彙<rt>ごい</rt></ruby>
+      </h3>
+
+      <div class="language-grid">
+
+        <article class="language-card">
+          <h4>～というより</h4>
+          <p class="jp-text">
+            <ruby>最初<rt>さいしょ</rt></ruby>の
+            <ruby>表現<rt>ひょうげん</rt></ruby>よりも、
+            <ruby>後<rt>あと</rt></ruby>の
+            <ruby>表現<rt>ひょうげん</rt></ruby>のほうが
+            <ruby>正確<rt>せいかく</rt></ruby>だと
+            <ruby>示<rt>しめ</rt></ruby>します。
+          </p>
+          <p class="ko-text">
+            앞의 표현보다 뒤의 표현이 더 정확하다는 뜻입니다.
+          </p>
+          <div class="example-box">
+            <p class="jp-text">
+              <ruby>集<rt>あつ</rt></ruby>めるというより、
+              <ruby>気<rt>き</rt></ruby>に
+              <ruby>入<rt>い</rt></ruby>ったものだけを
+              <ruby>買<rt>か</rt></ruby>っています。
+            </p>
+            <p class="ko-text">
+              모은다기보다 마음에 드는 것만 사고 있습니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="language-card">
+          <h4>～<ruby>自体<rt>じたい</rt></ruby></h4>
+          <p class="jp-text">
+            ある
+            <ruby>物事<rt>ものごと</rt></ruby>そのものを
+            <ruby>強調<rt>きょうちょう</rt></ruby>するときに
+            <ruby>使<rt>つか</rt></ruby>います。
+          </p>
+          <p class="ko-text">
+            어떤 일이나 대상 그 자체를 강조할 때 사용합니다.
+          </p>
+          <div class="example-box">
+            <p class="jp-text">
+              グッズを
+              <ruby>持<rt>も</rt></ruby>つこと
+              <ruby>自体<rt>じたい</rt></ruby>が
+              <ruby>目的<rt>もくてき</rt></ruby>ではありません。
+            </p>
+            <p class="ko-text">
+              굿즈를 소유하는 것 자체가 목적은 아닙니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>原作<rt>げんさく</rt></ruby></h4>
+          <p class="jp-text">
+            アニメや
+            <ruby>映画<rt>えいが</rt></ruby>の
+            <ruby>基<rt>もと</rt></ruby>になった
+            <ruby>漫画<rt>まんが</rt></ruby>や
+            <ruby>小説<rt>しょうせつ</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            애니메이션이나 영화의 바탕이 된 만화나 소설, 즉 원작입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>単行本<rt>たんこうぼん</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>雑誌<rt>ざっし</rt></ruby>などに
+            <ruby>掲載<rt>けいさい</rt></ruby>された
+            <ruby>作品<rt>さくひん</rt></ruby>を
+            一冊にまとめた
+            <ruby>本<rt>ほん</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            잡지 등에 연재된 작품을 한 권으로 묶은 단행본입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>限定商品<rt>げんていしょうひん</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>販売期間<rt>はんばいきかん</rt></ruby>や
+            <ruby>数量<rt>すうりょう</rt></ruby>、
+            <ruby>場所<rt>ばしょ</rt></ruby>が
+            <ruby>限<rt>かぎ</rt></ruby>られた
+            <ruby>商品<rt>しょうひん</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            판매 기간, 수량, 장소가 제한된 한정 상품입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>保管<rt>ほかん</rt></ruby>する</h4>
+          <p class="jp-text">
+            <ruby>物<rt>もの</rt></ruby>が
+            <ruby>壊<rt>こわ</rt></ruby>れたり
+            なくなったりしないように
+            <ruby>保存<rt>ほぞん</rt></ruby>することです。
+          </p>
+          <p class="ko-text">
+            물건이 망가지거나 없어지지 않도록 보관하는 것입니다.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </article>
+
+
+  <!-- =====================================================
+       QUESTION 03
+  ====================================================== -->
+
+  <article class="question-unit" id="anime-talk-question-03">
+
+    <header class="question-header">
+
+      <span class="question-number">
+        QUESTION 03
+      </span>
+
+      <h2 class="question-title">
+        <ruby>秋葉原<rt>あきはばら</rt></ruby>や
+        <ruby>日本<rt>にほん</rt></ruby>の
+        アニメ
+        <ruby>観光地<rt>かんこうち</rt></ruby>へ
+        <ruby>行<rt>い</rt></ruby>ったことがありますか。
+      </h2>
+
+      <p class="question-title-ko">
+        아키하바라나 일본의 애니메이션 관광지에 가 본 적이 있습니까?
+      </p>
+
+    </header>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        1．<ruby>質問<rt>しつもん</rt></ruby>
+      </h3>
+
+      <p class="jp-text">
+        <ruby>日本<rt>にほん</rt></ruby>には、
+        アニメショップや
+        <ruby>作品<rt>さくひん</rt></ruby>の
+        <ruby>舞台<rt>ぶたい</rt></ruby>になった
+        <ruby>場所<rt>ばしょ</rt></ruby>など、
+        アニメファンが
+        <ruby>楽<rt>たの</rt></ruby>しめる
+        <ruby>観光地<rt>かんこうち</rt></ruby>が
+        あります。
+      </p>
+
+      <p class="ko-text">
+        일본에는 애니메이션 매장이나 작품의 배경이 된 장소 등
+        애니메이션 팬이 즐길 수 있는 관광지가 있습니다.
+      </p>
+
+      <div class="question-box">
+
+        <p class="jp-text">
+          <ruby>秋葉原<rt>あきはばら</rt></ruby>や
+          <ruby>日本<rt>にほん</rt></ruby>の
+          アニメ
+          <ruby>関連施設<rt>かんれんしせつ</rt></ruby>へ
+          <ruby>行<rt>い</rt></ruby>ったことがありますか。
+        </p>
+
+        <p class="jp-text">
+          <ruby>行<rt>い</rt></ruby>ったことがある
+          <ruby>場合<rt>ばあい</rt></ruby>は、
+          どのような
+          <ruby>場所<rt>ばしょ</rt></ruby>を
+          <ruby>訪<rt>おとず</rt></ruby>れ、
+          <ruby>何<rt>なに</rt></ruby>をしましたか。
+        </p>
+
+        <p class="jp-text">
+          また、
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』に
+          <ruby>関連<rt>かんれん</rt></ruby>する
+          <ruby>商品<rt>しょうひん</rt></ruby>や
+          <ruby>展示<rt>てんじ</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>た
+          <ruby>経験<rt>けいけん</rt></ruby>があれば
+          <ruby>説明<rt>せつめい</rt></ruby>してください。
+        </p>
+
+        <p class="ko-text">
+          아키하바라나 일본의 애니메이션 관련 시설에 가 본 적이 있습니까?
+          방문한 적이 있다면 어떤 장소에서 무엇을 했습니까?
+          『진격의 거인』 관련 상품이나 전시를 본 경험도 설명해 주세요.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        2．N3レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card">
+
+        <span class="level-badge level-n3">
+          N3
+        </span>
+
+        <p class="jp-text">
+          私は
+          <ruby>東京<rt>とうきょう</rt></ruby>へ
+          <ruby>旅行<rt>りょこう</rt></ruby>したとき、
+          <ruby>秋葉原<rt>あきはばら</rt></ruby>へ
+          <ruby>行<rt>い</rt></ruby>きました。
+        </p>
+
+        <p class="ko-text">
+          저는 도쿄로 여행했을 때 아키하바라에 갔습니다.
+        </p>
+
+        <p class="jp-text">
+          アニメショップや
+          フィギュアショップを
+          <ruby>見<rt>み</rt></ruby>て
+          <ruby>回<rt>まわ</rt></ruby>りました。
+        </p>
+
+        <p class="ko-text">
+          애니메이션 매장과 피규어 매장을 둘러보았습니다.
+        </p>
+
+        <p class="jp-text">
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』の
+          グッズが
+          <ruby>置<rt>お</rt></ruby>いてある
+          コーナーもありました。
+        </p>
+
+        <p class="ko-text">
+          『진격의 거인』 굿즈가 놓인 코너도 있었습니다.
+        </p>
+
+        <p class="jp-text">
+          リヴァイや
+          ミカサのグッズが
+          <ruby>多<rt>おお</rt></ruby>くて、
+          <ruby>見<rt>み</rt></ruby>ているだけでも
+          <ruby>楽<rt>たの</rt></ruby>しかったです。
+        </p>
+
+        <p class="ko-text">
+          리바이와 미카사 굿즈가 많아서 구경하는 것만으로도 즐거웠습니다.
+        </p>
+
+        <p class="jp-text">
+          インターネットで
+          <ruby>買<rt>か</rt></ruby>うのとは
+          <ruby>違<rt>ちが</rt></ruby>い、
+          <ruby>実際<rt>じっさい</rt></ruby>に
+          <ruby>商品<rt>しょうひん</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>られるところが
+          よかったです。
+        </p>
+
+        <p class="ko-text">
+          인터넷으로 사는 것과 달리 실제 상품을 볼 수 있어서 좋았습니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        3．N2レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card n2">
+
+        <span class="level-badge level-n2">
+          N2
+        </span>
+
+        <p class="jp-text">
+          私は
+          <ruby>東京<rt>とうきょう</rt></ruby>を
+          <ruby>訪<rt>おとず</rt></ruby>れた
+          <ruby>際<rt>さい</rt></ruby>に、
+          <ruby>秋葉原<rt>あきはばら</rt></ruby>の
+          アニメショップや
+          フィギュアショップを
+          <ruby>見<rt>み</rt></ruby>て
+          <ruby>回<rt>まわ</rt></ruby>りました。
+        </p>
+
+        <p class="ko-text">
+          저는 도쿄를 방문했을 때 아키하바라의 애니메이션 매장과
+          피규어 매장을 둘러보았습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>事前<rt>じぜん</rt></ruby>に
+          <ruby>特定<rt>とくてい</rt></ruby>の
+          <ruby>商品<rt>しょうひん</rt></ruby>を
+          <ruby>買<rt>か</rt></ruby>うと
+          <ruby>決<rt>き</rt></ruby>めていたわけではなく、
+          その
+          <ruby>場<rt>ば</rt></ruby>で
+          <ruby>気<rt>き</rt></ruby>に
+          <ruby>入<rt>い</rt></ruby>ったものがあれば
+          <ruby>買<rt>か</rt></ruby>おうと
+          <ruby>思<rt>おも</rt></ruby>っていました。
+        </p>
+
+        <p class="ko-text">
+          사전에 특정 상품을 사기로 정해 둔 것은 아니고,
+          현장에서 마음에 드는 것이 있으면 사려고 생각했습니다.
+        </p>
+
+        <p class="jp-text">
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』のコーナーでは、
+          キャラクターグッズだけでなく、
+          <ruby>調査兵団<rt>ちょうさへいだん</rt></ruby>の
+          <ruby>紋章<rt>もんしょう</rt></ruby>や
+          <ruby>立体機動装置<rt>りったいきどうそうち</rt></ruby>を
+          イメージした
+          <ruby>商品<rt>しょうひん</rt></ruby>も
+          <ruby>見<rt>み</rt></ruby>かけました。
+        </p>
+
+        <p class="ko-text">
+          『진격의 거인』 코너에서는 캐릭터 굿즈뿐 아니라
+          조사병단 문장이나 입체기동장치를 이미지화한 상품도 보았습니다.
+        </p>
+
+        <p class="jp-text">
+          オンラインショップのほうが
+          <ruby>商品<rt>しょうひん</rt></ruby>を
+          <ruby>検索<rt>けんさく</rt></ruby>しやすく、
+          <ruby>価格<rt>かかく</rt></ruby>も
+          <ruby>比較<rt>ひかく</rt></ruby>しやすい
+          <ruby>一方<rt>いっぽう</rt></ruby>で、
+          <ruby>実際<rt>じっさい</rt></ruby>の
+          <ruby>店舗<rt>てんぽ</rt></ruby>には
+          <ruby>偶然<rt>ぐうぜん</rt></ruby>
+          <ruby>面白<rt>おもしろ</rt></ruby>いものを
+          <ruby>発見<rt>はっけん</rt></ruby>できる
+          <ruby>楽<rt>たの</rt></ruby>しさがあります。
+        </p>
+
+        <p class="ko-text">
+          온라인 매장은 상품 검색과 가격 비교가 편리한 한편,
+          실제 매장에는 우연히 재미있는 물건을 발견하는 즐거움이 있습니다.
+        </p>
+
+        <p class="jp-text">
+          また、
+          <ruby>街全体<rt>まちぜんたい</rt></ruby>に
+          アニメの
+          <ruby>広告<rt>こうこく</rt></ruby>や
+          <ruby>看板<rt>かんばん</rt></ruby>が
+          <ruby>多<rt>おお</rt></ruby>いため、
+          <ruby>買<rt>か</rt></ruby>い
+          <ruby>物<rt>もの</rt></ruby>をしなくても
+          アニメ
+          <ruby>文化<rt>ぶんか</rt></ruby>の
+          <ruby>雰囲気<rt>ふんいき</rt></ruby>を
+          <ruby>感<rt>かん</rt></ruby>じられました。
+        </p>
+
+        <p class="ko-text">
+          거리 전체에 애니메이션 광고와 간판이 많아서
+          쇼핑하지 않더라도 애니메이션 문화의 분위기를 느낄 수 있었습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>観光地<rt>かんこうち</rt></ruby>として
+          <ruby>有名<rt>ゆうめい</rt></ruby>だから
+          <ruby>行<rt>い</rt></ruby>くというより、
+          <ruby>同<rt>おな</rt></ruby>じ
+          <ruby>作品<rt>さくひん</rt></ruby>を
+          <ruby>好<rt>す</rt></ruby>きな
+          <ruby>人<rt>ひと</rt></ruby>が
+          <ruby>集<rt>あつ</rt></ruby>まる
+          <ruby>空間<rt>くうかん</rt></ruby>を
+          <ruby>体験<rt>たいけん</rt></ruby>できたことが
+          <ruby>印象<rt>いんしょう</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>っています。
+        </p>
+
+        <p class="ko-text">
+          유명한 관광지이기 때문에 간다기보다,
+          같은 작품을 좋아하는 사람들이 모이는 공간을 체험할 수 있었다는 점이
+          인상에 남았습니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        4．<ruby>追加質問<rt>ついかしつもん</rt></ruby>
+      </h3>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">1</span>
+          アニメショップでは
+          <ruby>買<rt>か</rt></ruby>い
+          <ruby>物<rt>もの</rt></ruby>をしなくても
+          <ruby>楽<rt>たの</rt></ruby>しめると
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </p>
+        <p class="ko-text">
+          애니메이션 매장에서는 물건을 사지 않아도 즐길 수 있다고 생각합니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">2</span>
+          <ruby>作品<rt>さくひん</rt></ruby>の
+          <ruby>舞台<rt>ぶたい</rt></ruby>になった
+          <ruby>場所<rt>ばしょ</rt></ruby>を
+          <ruby>訪<rt>おとず</rt></ruby>れる
+          「<ruby>聖地巡礼<rt>せいちじゅんれい</rt></ruby>」に
+          <ruby>興味<rt>きょうみ</rt></ruby>がありますか。
+        </p>
+        <p class="ko-text">
+          작품의 배경이 된 장소를 방문하는 성지순례에 관심이 있습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">3</span>
+          アニメ
+          <ruby>関連<rt>かんれん</rt></ruby>の
+          <ruby>旅行<rt>りょこう</rt></ruby>では、
+          <ruby>展示<rt>てんじ</rt></ruby>、
+          グッズ、
+          <ruby>写真<rt>しゃしん</rt></ruby>、
+          <ruby>食事<rt>しょくじ</rt></ruby>のうち、
+          <ruby>何<rt>なに</rt></ruby>を
+          <ruby>最<rt>もっと</rt></ruby>も
+          <ruby>楽<rt>たの</rt></ruby>しみたいですか。
+        </p>
+        <p class="ko-text">
+          애니메이션 관련 여행에서 전시, 굿즈, 사진, 식사 중 무엇을 가장 즐기고 싶습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">4</span>
+          <ruby>混雑<rt>こんざつ</rt></ruby>していても
+          <ruby>有名<rt>ゆうめい</rt></ruby>な
+          アニメ
+          <ruby>観光地<rt>かんこうち</rt></ruby>へ
+          <ruby>行<rt>い</rt></ruby>きたいですか。
+        </p>
+        <p class="ko-text">
+          혼잡하더라도 유명한 애니메이션 관광지에 가고 싶습니까?
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        5．N2・N3
+        <ruby>文法<rt>ぶんぽう</rt></ruby>・
+        <ruby>語彙<rt>ごい</rt></ruby>
+      </h3>
+
+      <div class="language-grid">
+
+        <article class="language-card">
+          <h4>～<ruby>際<rt>さい</rt></ruby>に</h4>
+          <p class="jp-text">
+            「～するとき」という
+            <ruby>意味<rt>いみ</rt></ruby>の
+            やや
+            <ruby>改<rt>あらた</rt></ruby>まった
+            <ruby>表現<rt>ひょうげん</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            ‘~할 때’라는 의미의 다소 격식 있는 표현입니다.
+          </p>
+          <div class="example-box">
+            <p class="jp-text">
+              <ruby>東京<rt>とうきょう</rt></ruby>を
+              <ruby>訪<rt>おとず</rt></ruby>れた
+              <ruby>際<rt>さい</rt></ruby>に、
+              <ruby>秋葉原<rt>あきはばら</rt></ruby>へ
+              <ruby>行<rt>い</rt></ruby>きました。
+            </p>
+            <p class="ko-text">
+              도쿄를 방문했을 때 아키하바라에 갔습니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="language-card">
+          <h4>～<ruby>一方<rt>いっぽう</rt></ruby>で</h4>
+          <p class="jp-text">
+            二つの
+            <ruby>異<rt>こと</rt></ruby>なる
+            <ruby>特徴<rt>とくちょう</rt></ruby>や
+            <ruby>側面<rt>そくめん</rt></ruby>を
+            <ruby>比較<rt>ひかく</rt></ruby>するときに
+            <ruby>使<rt>つか</rt></ruby>います。
+          </p>
+          <p class="ko-text">
+            서로 다른 두 특징이나 측면을 비교할 때 사용합니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>聖地巡礼<rt>せいちじゅんれい</rt></ruby></h4>
+          <p class="jp-text">
+            アニメや
+            <ruby>映画<rt>えいが</rt></ruby>の
+            <ruby>舞台<rt>ぶたい</rt></ruby>になった
+            <ruby>場所<rt>ばしょ</rt></ruby>を
+            ファンが
+            <ruby>訪<rt>おとず</rt></ruby>れることです。
+          </p>
+          <p class="ko-text">
+            애니메이션이나 영화의 배경이 된 장소를 팬이 방문하는 성지순례입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>関連施設<rt>かんれんしせつ</rt></ruby></h4>
+          <p class="jp-text">
+            ある
+            <ruby>作品<rt>さくひん</rt></ruby>や
+            <ruby>分野<rt>ぶんや</rt></ruby>と
+            <ruby>関係<rt>かんけい</rt></ruby>のある
+            <ruby>施設<rt>しせつ</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            특정 작품이나 분야와 관계있는 시설입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>見<rt>み</rt></ruby>て
+          <ruby>回<rt>まわ</rt></ruby>る</h4>
+          <p class="jp-text">
+            <ruby>複数<rt>ふくすう</rt></ruby>の
+            <ruby>場所<rt>ばしょ</rt></ruby>や
+            <ruby>商品<rt>しょうひん</rt></ruby>を
+            <ruby>順番<rt>じゅんばん</rt></ruby>に
+            <ruby>見<rt>み</rt></ruby>ることです。
+          </p>
+          <p class="ko-text">
+            여러 장소나 상품을 차례로 둘러보는 것입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>混雑<rt>こんざつ</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>人<rt>ひと</rt></ruby>や
+            <ruby>車<rt>くるま</rt></ruby>が
+            <ruby>多<rt>おお</rt></ruby>く、
+            <ruby>移動<rt>いどう</rt></ruby>しにくい
+            <ruby>状態<rt>じょうたい</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            사람이나 차량이 많아 이동하기 어려운 혼잡한 상태입니다.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </article>
+
+
+  <!-- =====================================================
+       QUESTION 04
+  ====================================================== -->
+
+  <article class="question-unit" id="anime-talk-question-04">
+
+    <header class="question-header">
+
+      <span class="question-number">
+        QUESTION 04
+      </span>
+
+      <h2 class="question-title">
+        『<ruby>進撃<rt>しんげき</rt></ruby>の
+        <ruby>巨人<rt>きょじん</rt></ruby>』で
+        <ruby>特<rt>とく</rt></ruby>に
+        <ruby>感動<rt>かんどう</rt></ruby>した
+        <ruby>場面<rt>ばめん</rt></ruby>や
+        <ruby>印象<rt>いんしょう</rt></ruby>に
+        <ruby>残<rt>のこ</rt></ruby>った
+        <ruby>場面<rt>ばめん</rt></ruby>は
+        どこですか。
+      </h2>
+
+      <p class="question-title-ko">
+        『진격의 거인』에서 특히 감동받았거나 인상 깊었던 장면은 무엇입니까?
+      </p>
+
+    </header>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        1．<ruby>質問<rt>しつもん</rt></ruby>
+      </h3>
+
+      <p class="jp-text">
+        アニメでは、
+        キャラクターの
+        <ruby>選択<rt>せんたく</rt></ruby>、
+        <ruby>別<rt>わか</rt></ruby>れ、
+        <ruby>成長<rt>せいちょう</rt></ruby>、
+        <ruby>戦<rt>たたか</rt></ruby>い、
+        <ruby>家族<rt>かぞく</rt></ruby>や
+        <ruby>仲間<rt>なかま</rt></ruby>との
+        <ruby>関係<rt>かんけい</rt></ruby>などが
+        <ruby>強<rt>つよ</rt></ruby>い
+        <ruby>印象<rt>いんしょう</rt></ruby>を
+        <ruby>残<rt>のこ</rt></ruby>すことがあります。
+      </p>
+
+      <p class="ko-text">
+        애니메이션에서는 캐릭터의 선택, 이별, 성장, 전투,
+        가족이나 동료와의 관계 등이 강한 인상을 남기기도 합니다.
+      </p>
+
+      <div class="question-box">
+
+        <p class="jp-text">
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』の
+          <ruby>中<rt>なか</rt></ruby>で、
+          <ruby>特<rt>とく</rt></ruby>に
+          <ruby>感動<rt>かんどう</rt></ruby>した
+          <ruby>場面<rt>ばめん</rt></ruby>、
+          または
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>印象<rt>いんしょう</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>った
+          <ruby>場面<rt>ばめん</rt></ruby>は
+          どこですか。
+        </p>
+
+        <p class="jp-text">
+          その
+          <ruby>場面<rt>ばめん</rt></ruby>で
+          キャラクターが
+          どのような
+          <ruby>状況<rt>じょうきょう</rt></ruby>にいて、
+          <ruby>何<rt>なに</rt></ruby>を
+          <ruby>選択<rt>せんたく</rt></ruby>したのかを
+          <ruby>説明<rt>せつめい</rt></ruby>してください。
+        </p>
+
+        <p class="jp-text">
+          また、
+          なぜその
+          <ruby>場面<rt>ばめん</rt></ruby>が
+          <ruby>自分<rt>じぶん</rt></ruby>の
+          <ruby>心<rt>こころ</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>ったのかも
+          <ruby>話<rt>はな</rt></ruby>してみましょう。
+        </p>
+
+        <p class="ko-text">
+          『진격의 거인』에서 특히 감동받았거나 강하게 인상에 남은 장면은 무엇입니까?
+          그 장면에서 캐릭터가 어떤 상황에 있었고 무엇을 선택했는지 설명해 주세요.
+          왜 그 장면이 자신의 마음에 남았는지도 이야기해 봅시다.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        2．N3レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card">
+
+        <span class="level-badge level-n3">
+          N3
+        </span>
+
+        <p class="jp-text">
+          私が
+          <ruby>印象<rt>いんしょう</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>ったのは、
+          ミカサが
+          <ruby>一度<rt>いちど</rt></ruby>
+          <ruby>戦<rt>たたか</rt></ruby>う
+          <ruby>気持<rt>きも</rt></ruby>ちを
+          <ruby>失<rt>うしな</rt></ruby>いそうになる
+          <ruby>場面<rt>ばめん</rt></ruby>です。
+        </p>
+
+        <p class="ko-text">
+          제가 인상 깊었던 것은 미카사가 한때 싸울 의지를 잃을 것 같은 장면입니다.
+        </p>
+
+        <p class="jp-text">
+          ミカサはエレンが
+          <ruby>死<rt>し</rt></ruby>んだと
+          <ruby>聞<rt>き</rt></ruby>いて、
+          とても
+          <ruby>悲<rt>かな</rt></ruby>しくなります。
+        </p>
+
+        <p class="ko-text">
+          미카사는 에렌이 죽었다는 말을 듣고 매우 슬퍼집니다.
+        </p>
+
+        <p class="jp-text">
+          しかし、
+          <ruby>自分<rt>じぶん</rt></ruby>まで
+          <ruby>死<rt>し</rt></ruby>んだら、
+          エレンのことを
+          <ruby>覚<rt>おぼ</rt></ruby>えている
+          <ruby>人<rt>ひと</rt></ruby>が
+          いなくなると
+          <ruby>考<rt>かんが</rt></ruby>えます。
+        </p>
+
+        <p class="ko-text">
+          그러나 자신까지 죽으면 에렌을 기억하는 사람이 없어질 것이라고 생각합니다.
+        </p>
+
+        <p class="jp-text">
+          そして、
+          もう一度
+          <ruby>生<rt>い</rt></ruby>きるために
+          <ruby>戦<rt>たたか</rt></ruby>うことを
+          <ruby>決<rt>き</rt></ruby>めます。
+        </p>
+
+        <p class="ko-text">
+          그리고 다시 살아남기 위해 싸우기로 결심합니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>悲<rt>かな</rt></ruby>しくても
+          <ruby>前<rt>まえ</rt></ruby>へ
+          <ruby>進<rt>すす</rt></ruby>もうとする
+          ミカサの
+          <ruby>強<rt>つよ</rt></ruby>さに
+          <ruby>感動<rt>かんどう</rt></ruby>しました。
+        </p>
+
+        <p class="ko-text">
+          슬프더라도 앞으로 나아가려는 미카사의 강인함에 감동했습니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        3．N2レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card n2">
+
+        <span class="level-badge level-n2">
+          N2
+        </span>
+
+        <p class="jp-text">
+          私が
+          <ruby>特<rt>とく</rt></ruby>に
+          <ruby>印象<rt>いんしょう</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>ったのは、
+          ミカサがエレンを
+          <ruby>失<rt>うしな</rt></ruby>ったと
+          <ruby>思<rt>おも</rt></ruby>い、
+          <ruby>生<rt>い</rt></ruby>きる
+          <ruby>意味<rt>いみ</rt></ruby>まで
+          <ruby>見失<rt>みうしな</rt></ruby>いかける
+          <ruby>場面<rt>ばめん</rt></ruby>です。
+        </p>
+
+        <p class="ko-text">
+          제가 특히 인상 깊었던 것은 미카사가 에렌을 잃었다고 생각하여
+          살아갈 의미까지 잃을 뻔하는 장면입니다.
+        </p>
+
+        <p class="jp-text">
+          それまでのミカサにとって、
+          エレンは
+          <ruby>家族<rt>かぞく</rt></ruby>であると
+          <ruby>同時<rt>どうじ</rt></ruby>に、
+          <ruby>自分<rt>じぶん</rt></ruby>が
+          <ruby>生<rt>い</rt></ruby>きる
+          <ruby>理由<rt>りゆう</rt></ruby>のような
+          <ruby>存在<rt>そんざい</rt></ruby>でした。
+        </p>
+
+        <p class="ko-text">
+          그때까지 미카사에게 에렌은 가족인 동시에
+          자신이 살아가는 이유와 같은 존재였습니다.
+        </p>
+
+        <p class="jp-text">
+          そのため、
+          エレンがいない
+          <ruby>世界<rt>せかい</rt></ruby>で
+          <ruby>戦<rt>たたか</rt></ruby>い
+          <ruby>続<rt>つづ</rt></ruby>けることに
+          <ruby>意味<rt>いみ</rt></ruby>を
+          <ruby>感<rt>かん</rt></ruby>じられなくなるのも
+          <ruby>無理<rt>むり</rt></ruby>はないと
+          <ruby>思<rt>おも</rt></ruby>います。
+        </p>
+
+        <p class="ko-text">
+          그래서 에렌이 없는 세계에서 계속 싸우는 것에 의미를 느끼지 못한 것도
+          무리는 아니라고 생각합니다.
+        </p>
+
+        <p class="jp-text">
+          しかし、
+          <ruby>死<rt>し</rt></ruby>を
+          <ruby>受<rt>う</rt></ruby>け
+          <ruby>入<rt>い</rt></ruby>れかけた
+          <ruby>瞬間<rt>しゅんかん</rt></ruby>に、
+          <ruby>自分<rt>じぶん</rt></ruby>が
+          <ruby>生<rt>い</rt></ruby>きていなければ
+          エレンとの
+          <ruby>記憶<rt>きおく</rt></ruby>まで
+          <ruby>消<rt>き</rt></ruby>えてしまうと
+          <ruby>気<rt>き</rt></ruby>づきます。
+        </p>
+
+        <p class="ko-text">
+          그러나 죽음을 받아들이려던 순간,
+          자신이 살아 있지 않으면 에렌과의 기억까지 사라진다는 것을 깨닫습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>希望<rt>きぼう</rt></ruby>があるから
+          <ruby>戦<rt>たたか</rt></ruby>うのではなく、
+          <ruby>大切<rt>たいせつ</rt></ruby>な
+          <ruby>記憶<rt>きおく</rt></ruby>を
+          <ruby>失<rt>うしな</rt></ruby>わないために
+          <ruby>生<rt>い</rt></ruby>きようとするところが
+          <ruby>印象的<rt>いんしょうてき</rt></ruby>でした。
+        </p>
+
+        <p class="ko-text">
+          희망이 있기 때문에 싸우는 것이 아니라,
+          소중한 기억을 잃지 않기 위해 살아가려 한다는 점이 인상적이었습니다.
+        </p>
+
+        <p class="jp-text">
+          この
+          <ruby>場面<rt>ばめん</rt></ruby>は、
+          <ruby>強<rt>つよ</rt></ruby>い
+          <ruby>人<rt>ひと</rt></ruby>とは
+          <ruby>悲<rt>かな</rt></ruby>しまない
+          <ruby>人<rt>ひと</rt></ruby>ではなく、
+          <ruby>深<rt>ふか</rt></ruby>く
+          <ruby>傷<rt>きず</rt></ruby>ついても
+          <ruby>再<rt>ふたた</rt></ruby>び
+          <ruby>立<rt>た</rt></ruby>ち
+          <ruby>上<rt>あ</rt></ruby>がれる
+          <ruby>人<rt>ひと</rt></ruby>なのだと
+          <ruby>感<rt>かん</rt></ruby>じさせます。
+        </p>
+
+        <p class="ko-text">
+          이 장면은 강한 사람이란 슬퍼하지 않는 사람이 아니라,
+          깊이 상처받아도 다시 일어설 수 있는 사람이라는 생각을 들게 합니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        4．<ruby>追加質問<rt>ついかしつもん</rt></ruby>
+      </h3>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">1</span>
+          その
+          <ruby>場面<rt>ばめん</rt></ruby>では、
+          <ruby>音楽<rt>おんがく</rt></ruby>や
+          <ruby>演出<rt>えんしゅつ</rt></ruby>も
+          <ruby>印象<rt>いんしょう</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>りましたか。
+        </p>
+        <p class="ko-text">
+          그 장면에서는 음악이나 연출도 인상에 남았습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">2</span>
+          アニメと
+          <ruby>漫画<rt>まんが</rt></ruby>では、
+          どちらのほうが
+          <ruby>感情<rt>かんじょう</rt></ruby>が
+          <ruby>強<rt>つよ</rt></ruby>く
+          <ruby>伝<rt>つた</rt></ruby>わると
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </p>
+        <p class="ko-text">
+          애니메이션과 만화 중 어느 쪽에서 감정이 더 강하게 전달된다고 생각합니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">3</span>
+          <ruby>自分<rt>じぶん</rt></ruby>が
+          <ruby>同<rt>おな</rt></ruby>じ
+          <ruby>状況<rt>じょうきょう</rt></ruby>なら、
+          そのキャラクターと
+          <ruby>同<rt>おな</rt></ruby>じ
+          <ruby>選択<rt>せんたく</rt></ruby>をしたと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </p>
+        <p class="ko-text">
+          자신이 같은 상황이었다면 그 캐릭터와 같은 선택을 했을 것 같습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">4</span>
+          <ruby>感動的<rt>かんどうてき</rt></ruby>な
+          <ruby>場面<rt>ばめん</rt></ruby>と
+          <ruby>衝撃的<rt>しょうげきてき</rt></ruby>な
+          <ruby>場面<rt>ばめん</rt></ruby>では、
+          どちらが
+          <ruby>長<rt>なが</rt></ruby>く
+          <ruby>記憶<rt>きおく</rt></ruby>に
+          <ruby>残<rt>のこ</rt></ruby>りますか。
+        </p>
+        <p class="ko-text">
+          감동적인 장면과 충격적인 장면 중 어느 쪽이 더 오래 기억에 남습니까?
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        5．N2・N3
+        <ruby>文法<rt>ぶんぽう</rt></ruby>・
+        <ruby>語彙<rt>ごい</rt></ruby>
+      </h3>
+
+      <div class="language-grid">
+
+        <article class="language-card">
+          <h4>～かける</h4>
+          <p class="jp-text">
+            ある
+            <ruby>動作<rt>どうさ</rt></ruby>や
+            <ruby>状態<rt>じょうたい</rt></ruby>が
+            <ruby>始<rt>はじ</rt></ruby>まったものの、
+            まだ
+            <ruby>完了<rt>かんりょう</rt></ruby>していないことを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+          </p>
+          <p class="ko-text">
+            어떤 동작이나 상태가 시작되었지만 아직 완료되지 않았음을 나타냅니다.
+          </p>
+          <div class="example-box">
+            <p class="jp-text">
+              <ruby>生<rt>い</rt></ruby>きる
+              <ruby>意味<rt>いみ</rt></ruby>を
+              <ruby>見失<rt>みうしな</rt></ruby>いかけました。
+            </p>
+            <p class="ko-text">
+              살아갈 의미를 잃을 뻔했습니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="language-card">
+          <h4>～のも
+          <ruby>無理<rt>むり</rt></ruby>はない</h4>
+          <p class="jp-text">
+            その
+            <ruby>人<rt>ひと</rt></ruby>が
+            そう
+            <ruby>感<rt>かん</rt></ruby>じたり
+            <ruby>行動<rt>こうどう</rt></ruby>したりするのは
+            <ruby>当然<rt>とうぜん</rt></ruby>だと
+            <ruby>理解<rt>りかい</rt></ruby>を
+            <ruby>示<rt>しめ</rt></ruby>します。
+          </p>
+          <p class="ko-text">
+            그 사람이 그렇게 느끼거나 행동하는 것도 무리가 아니라고 이해를 나타냅니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>見失<rt>みうしな</rt></ruby>う</h4>
+          <p class="jp-text">
+            <ruby>見<rt>み</rt></ruby>えていたものを
+            <ruby>見<rt>み</rt></ruby>つけられなくなること、
+            または
+            <ruby>目的<rt>もくてき</rt></ruby>や
+            <ruby>意味<rt>いみ</rt></ruby>が
+            <ruby>分<rt>わ</rt></ruby>からなくなることです。
+          </p>
+          <p class="ko-text">
+            보이던 것을 놓치거나 목적과 의미를 알 수 없게 되는 것입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>立<rt>た</rt></ruby>ち
+          <ruby>上<rt>あ</rt></ruby>がる</h4>
+          <p class="jp-text">
+            <ruby>失敗<rt>しっぱい</rt></ruby>や
+            <ruby>悲<rt>かな</rt></ruby>しみのあと、
+            もう一度
+            <ruby>行動<rt>こうどう</rt></ruby>を
+            <ruby>始<rt>はじ</rt></ruby>めることです。
+          </p>
+          <p class="ko-text">
+            실패나 슬픔 뒤에 다시 행동을 시작하고 일어서는 것입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>演出<rt>えんしゅつ</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>映像<rt>えいぞう</rt></ruby>、
+            <ruby>音楽<rt>おんがく</rt></ruby>、
+            <ruby>声<rt>こえ</rt></ruby>、
+            <ruby>動<rt>うご</rt></ruby>きなどを
+            <ruby>使<rt>つか</rt></ruby>って、
+            <ruby>場面<rt>ばめん</rt></ruby>を
+            <ruby>効果的<rt>こうかてき</rt></ruby>に
+            <ruby>見<rt>み</rt></ruby>せることです。
+          </p>
+          <p class="ko-text">
+            영상, 음악, 목소리, 움직임 등으로 장면을 효과적으로 보여 주는 연출입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>衝撃的<rt>しょうげきてき</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>予想<rt>よそう</rt></ruby>していなかった
+            <ruby>強<rt>つよ</rt></ruby>い
+            <ruby>驚<rt>おどろ</rt></ruby>きや
+            <ruby>影響<rt>えいきょう</rt></ruby>を
+            <ruby>与<rt>あた</rt></ruby>えることです。
+          </p>
+          <p class="ko-text">
+            예상하지 못한 강한 놀라움이나 영향을 주는 충격적인 상태입니다.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </article>
+
+
+  <!-- =====================================================
+       QUESTION 05
+  ====================================================== -->
+
+  <article class="question-unit" id="anime-talk-question-05">
+
+    <header class="question-header">
+
+      <span class="question-number">
+        QUESTION 05
+      </span>
+
+      <h2 class="question-title">
+        『<ruby>進撃<rt>しんげき</rt></ruby>の
+        <ruby>巨人<rt>きょじん</rt></ruby>』を
+        <ruby>見<rt>み</rt></ruby>たことによって、
+        <ruby>日常生活<rt>にちじょうせいかつ</rt></ruby>や
+        <ruby>考<rt>かんが</rt></ruby>え
+        <ruby>方<rt>かた</rt></ruby>に
+        <ruby>影響<rt>えいきょう</rt></ruby>を
+        <ruby>受<rt>う</rt></ruby>けましたか。
+      </h2>
+
+      <p class="question-title-ko">
+        『진격의 거인』을 본 뒤 일상생활이나 사고방식에 영향을 받았습니까?
+      </p>
+
+    </header>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        1．<ruby>質問<rt>しつもん</rt></ruby>
+      </h3>
+
+      <p class="jp-text">
+        アニメを
+        <ruby>見<rt>み</rt></ruby>たあと、
+        キャラクターの
+        <ruby>言葉<rt>ことば</rt></ruby>や
+        <ruby>選択<rt>せんたく</rt></ruby>を
+        <ruby>思<rt>おも</rt></ruby>い
+        <ruby>出<rt>だ</rt></ruby>したり、
+        <ruby>自分<rt>じぶん</rt></ruby>の
+        <ruby>生活<rt>せいかつ</rt></ruby>や
+        <ruby>価値観<rt>かちかん</rt></ruby>を
+        <ruby>見直<rt>みなお</rt></ruby>したりすることがあります。
+      </p>
+
+      <p class="ko-text">
+        애니메이션을 본 뒤 캐릭터의 말과 선택을 떠올리거나,
+        자신의 생활과 가치관을 재검토하기도 합니다.
+      </p>
+
+      <div class="question-box">
+
+        <p class="jp-text">
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』を
+          <ruby>見<rt>み</rt></ruby>たことによって、
+          <ruby>日常生活<rt>にちじょうせいかつ</rt></ruby>、
+          <ruby>考<rt>かんが</rt></ruby>え
+          <ruby>方<rt>かた</rt></ruby>、
+          <ruby>人間関係<rt>にんげんかんけい</rt></ruby>、
+          <ruby>勉強<rt>べんきょう</rt></ruby>などに
+          <ruby>影響<rt>えいきょう</rt></ruby>を
+          <ruby>受<rt>う</rt></ruby>けたことがありますか。
+        </p>
+
+        <p class="jp-text">
+          <ruby>影響<rt>えいきょう</rt></ruby>を
+          <ruby>受<rt>う</rt></ruby>けた
+          <ruby>場合<rt>ばあい</rt></ruby>は、
+          <ruby>作品<rt>さくひん</rt></ruby>の
+          どのような
+          <ruby>内容<rt>ないよう</rt></ruby>が
+          <ruby>自分<rt>じぶん</rt></ruby>の
+          <ruby>行動<rt>こうどう</rt></ruby>や
+          <ruby>考<rt>かんが</rt></ruby>え
+          <ruby>方<rt>かた</rt></ruby>を
+          <ruby>変<rt>か</rt></ruby>えたのか
+          <ruby>説明<rt>せつめい</rt></ruby>してください。
+        </p>
+
+        <p class="ko-text">
+          『진격의 거인』을 본 뒤 일상생활, 사고방식, 인간관계,
+          공부 등에 영향을 받은 적이 있습니까?
+          작품의 어떤 내용이 자신의 행동이나 생각을 바꾸었는지 설명해 주세요.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        2．N3レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card">
+
+        <span class="level-badge level-n3">
+          N3
+        </span>
+
+        <p class="jp-text">
+          私は
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』を
+          <ruby>見<rt>み</rt></ruby>て、
+          <ruby>自由<rt>じゆう</rt></ruby>について
+          よく
+          <ruby>考<rt>かんが</rt></ruby>えるようになりました。
+        </p>
+
+        <p class="ko-text">
+          저는 『진격의 거인』을 보고 자유에 대해 자주 생각하게 되었습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>自由<rt>じゆう</rt></ruby>に
+          <ruby>生<rt>い</rt></ruby>きるためには、
+          <ruby>自分<rt>じぶん</rt></ruby>で
+          <ruby>選<rt>えら</rt></ruby>ばなければならないと
+          <ruby>思<rt>おも</rt></ruby>いました。
+        </p>
+
+        <p class="ko-text">
+          자유롭게 살기 위해서는 스스로 선택해야 한다고 생각했습니다.
+        </p>
+
+        <p class="jp-text">
+          また、
+          <ruby>同<rt>おな</rt></ruby>じ
+          <ruby>出来事<rt>できごと</rt></ruby>でも、
+          <ruby>立場<rt>たちば</rt></ruby>によって
+          <ruby>見<rt>み</rt></ruby>え
+          <ruby>方<rt>かた</rt></ruby>が
+          <ruby>違<rt>ちが</rt></ruby>うことを
+          <ruby>学<rt>まな</rt></ruby>びました。
+        </p>
+
+        <p class="ko-text">
+          또한 같은 사건도 입장에 따라 보이는 방식이 다르다는 것을 배웠습니다.
+        </p>
+
+        <p class="jp-text">
+          そのため、
+          <ruby>誰<rt>だれ</rt></ruby>かの
+          <ruby>話<rt>はなし</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>いたとき、
+          すぐに
+          <ruby>判断<rt>はんだん</rt></ruby>しないようにしています。
+        </p>
+
+        <p class="ko-text">
+          그래서 누군가의 이야기를 들었을 때 바로 판단하지 않으려고 합니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        3．N2レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card n2">
+
+        <span class="level-badge level-n2">
+          N2
+        </span>
+
+        <p class="jp-text">
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』を
+          <ruby>見<rt>み</rt></ruby>たことによって、
+          私は
+          <ruby>自由<rt>じゆう</rt></ruby>と
+          <ruby>責任<rt>せきにん</rt></ruby>の
+          <ruby>関係<rt>かんけい</rt></ruby>について
+          <ruby>考<rt>かんが</rt></ruby>えるようになりました。
+        </p>
+
+        <p class="ko-text">
+          『진격의 거인』을 본 뒤 저는 자유와 책임의 관계를 생각하게 되었습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>作品<rt>さくひん</rt></ruby>の
+          <ruby>中<rt>なか</rt></ruby>では、
+          キャラクターたちが
+          <ruby>自由<rt>じゆう</rt></ruby>を
+          <ruby>求<rt>もと</rt></ruby>めて
+          <ruby>行動<rt>こうどう</rt></ruby>しますが、
+          その
+          <ruby>選択<rt>せんたく</rt></ruby>によって
+          <ruby>他<rt>ほか</rt></ruby>の
+          <ruby>人<rt>ひと</rt></ruby>が
+          <ruby>影響<rt>えいきょう</rt></ruby>を
+          <ruby>受<rt>う</rt></ruby>けることもあります。
+        </p>
+
+        <p class="ko-text">
+          작품 속 인물들은 자유를 추구하며 행동하지만,
+          그 선택으로 다른 사람이 영향을 받기도 합니다.
+        </p>
+
+        <p class="jp-text">
+          そのため、
+          <ruby>自由<rt>じゆう</rt></ruby>とは
+          <ruby>自分<rt>じぶん</rt></ruby>の
+          <ruby>好<rt>す</rt></ruby>きなように
+          <ruby>行動<rt>こうどう</rt></ruby>することだけではなく、
+          <ruby>選択<rt>せんたく</rt></ruby>の
+          <ruby>結果<rt>けっか</rt></ruby>を
+          <ruby>引<rt>ひ</rt></ruby>き
+          <ruby>受<rt>う</rt></ruby>けることでもあると
+          <ruby>感<rt>かん</rt></ruby>じました。
+        </p>
+
+        <p class="ko-text">
+          그래서 자유란 자신이 원하는 대로 행동하는 것만이 아니라
+          선택의 결과를 감당하는 것이기도 하다고 느꼈습니다.
+        </p>
+
+        <p class="jp-text">
+          また、
+          <ruby>物語<rt>ものがたり</rt></ruby>が
+          <ruby>進<rt>すす</rt></ruby>むにつれて、
+          <ruby>最初<rt>さいしょ</rt></ruby>は
+          <ruby>敵<rt>てき</rt></ruby>に
+          <ruby>見<rt>み</rt></ruby>えた
+          <ruby>人物<rt>じんぶつ</rt></ruby>にも、
+          その
+          <ruby>人<rt>ひと</rt></ruby>なりの
+          <ruby>事情<rt>じじょう</rt></ruby>や
+          <ruby>恐怖<rt>きょうふ</rt></ruby>があることが
+          <ruby>分<rt>わ</rt></ruby>かってきます。
+        </p>
+
+        <p class="ko-text">
+          이야기가 진행되면서 처음에는 적으로 보였던 인물에게도
+          그 사람 나름의 사정과 두려움이 있다는 것을 알게 됩니다.
+        </p>
+
+        <p class="jp-text">
+          この
+          <ruby>構成<rt>こうせい</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>てから、
+          私は
+          <ruby>現実<rt>げんじつ</rt></ruby>の
+          <ruby>人間関係<rt>にんげんかんけい</rt></ruby>でも、
+          <ruby>一方<rt>いっぽう</rt></ruby>の
+          <ruby>説明<rt>せつめい</rt></ruby>だけで
+          <ruby>相手<rt>あいて</rt></ruby>を
+          <ruby>判断<rt>はんだん</rt></ruby>しないように
+          <ruby>意識<rt>いしき</rt></ruby>するようになりました。
+        </p>
+
+        <p class="ko-text">
+          이러한 구성을 본 뒤 현실의 인간관계에서도
+          한쪽의 설명만으로 상대를 판단하지 않으려고 의식하게 되었습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>情報<rt>じょうほう</rt></ruby>を
+          <ruby>受<rt>う</rt></ruby>け
+          <ruby>取<rt>と</rt></ruby>ったときには、
+          「<ruby>誰<rt>だれ</rt></ruby>の
+          <ruby>立場<rt>たちば</rt></ruby>から
+          <ruby>語<rt>かた</rt></ruby>られているのか」
+          「<ruby>別<rt>べつ</rt></ruby>の
+          <ruby>見方<rt>みかた</rt></ruby>はないのか」
+          と
+          <ruby>考<rt>かんが</rt></ruby>えるようにしています。
+        </p>
+
+        <p class="ko-text">
+          정보를 받아들일 때는 누구의 입장에서 말해지는지,
+          다른 관점은 없는지를 생각하려고 합니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        4．<ruby>追加質問<rt>ついかしつもん</rt></ruby>
+      </h3>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">1</span>
+          アニメの
+          <ruby>言葉<rt>ことば</rt></ruby>や
+          <ruby>考<rt>かんが</rt></ruby>え
+          <ruby>方<rt>かた</rt></ruby>を
+          <ruby>日常生活<rt>にちじょうせいかつ</rt></ruby>で
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>だ</rt></ruby>すことがありますか。
+        </p>
+        <p class="ko-text">
+          애니메이션의 말이나 사고방식을 일상에서 떠올릴 때가 있습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">2</span>
+          アニメを
+          <ruby>見<rt>み</rt></ruby>たことが
+          きっかけで、
+          <ruby>歴史<rt>れきし</rt></ruby>や
+          <ruby>社会問題<rt>しゃかいもんだい</rt></ruby>を
+          <ruby>調<rt>しら</rt></ruby>べたことがありますか。
+        </p>
+        <p class="ko-text">
+          애니메이션을 계기로 역사나 사회 문제를 조사한 적이 있습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">3</span>
+          キャラクターの
+          <ruby>生<rt>い</rt></ruby>き
+          <ruby>方<rt>かた</rt></ruby>を
+          <ruby>参考<rt>さんこう</rt></ruby>にしたいと
+          <ruby>思<rt>おも</rt></ruby>うことがありますか。
+        </p>
+        <p class="ko-text">
+          캐릭터의 삶의 방식을 참고하고 싶다고 생각할 때가 있습니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">4</span>
+          アニメが
+          <ruby>人<rt>ひと</rt></ruby>の
+          <ruby>価値観<rt>かちかん</rt></ruby>を
+          <ruby>変<rt>か</rt></ruby>えることは
+          あると
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </p>
+        <p class="ko-text">
+          애니메이션이 사람의 가치관을 바꿀 수 있다고 생각합니까?
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        5．N2・N3
+        <ruby>文法<rt>ぶんぽう</rt></ruby>・
+        <ruby>語彙<rt>ごい</rt></ruby>
+      </h3>
+
+      <div class="language-grid">
+
+        <article class="language-card">
+          <h4>～ことによって</h4>
+          <p class="jp-text">
+            ある
+            <ruby>行動<rt>こうどう</rt></ruby>や
+            <ruby>出来事<rt>できごと</rt></ruby>が
+            <ruby>原因<rt>げんいん</rt></ruby>や
+            <ruby>手段<rt>しゅだん</rt></ruby>となって、
+            <ruby>結果<rt>けっか</rt></ruby>が
+            <ruby>生<rt>う</rt></ruby>まれることを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+          </p>
+          <p class="ko-text">
+            어떤 행동이나 사건으로 인해 결과가 생기는 것을 나타냅니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4>～につれて</h4>
+          <p class="jp-text">
+            一つの
+            <ruby>変化<rt>へんか</rt></ruby>と
+            <ruby>同時<rt>どうじ</rt></ruby>に、
+            <ruby>別<rt>べつ</rt></ruby>のことも
+            <ruby>変化<rt>へんか</rt></ruby>することを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+          </p>
+          <p class="ko-text">
+            하나가 변화함에 따라 다른 것도 함께 변화함을 나타냅니다.
+          </p>
+          <div class="example-box">
+            <p class="jp-text">
+              <ruby>物語<rt>ものがたり</rt></ruby>が
+              <ruby>進<rt>すす</rt></ruby>むにつれて、
+              <ruby>敵<rt>てき</rt></ruby>の
+              <ruby>事情<rt>じじょう</rt></ruby>も
+              <ruby>分<rt>わ</rt></ruby>かってきます。
+            </p>
+            <p class="ko-text">
+              이야기가 진행될수록 적의 사정도 알게 됩니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>引<rt>ひ</rt></ruby>き
+          <ruby>受<rt>う</rt></ruby>ける</h4>
+          <p class="jp-text">
+            <ruby>責任<rt>せきにん</rt></ruby>、
+            <ruby>仕事<rt>しごと</rt></ruby>、
+            <ruby>結果<rt>けっか</rt></ruby>などを
+            <ruby>自分<rt>じぶん</rt></ruby>が
+            <ruby>受<rt>う</rt></ruby>け
+            <ruby>持<rt>も</rt></ruby>つことです。
+          </p>
+          <p class="ko-text">
+            책임, 일, 결과 등을 자신이 맡거나 감당하는 것입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>価値観<rt>かちかん</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>何<rt>なに</rt></ruby>が
+            <ruby>大切<rt>たいせつ</rt></ruby>で、
+            <ruby>何<rt>なに</rt></ruby>が
+            <ruby>正<rt>ただ</rt></ruby>しいと
+            <ruby>考<rt>かんが</rt></ruby>えるかという
+            <ruby>個人<rt>こじん</rt></ruby>の
+            <ruby>基準<rt>きじゅん</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            무엇이 중요하고 옳은지를 판단하는 개인의 가치 기준입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>立場<rt>たちば</rt></ruby></h4>
+          <p class="jp-text">
+            その
+            <ruby>人<rt>ひと</rt></ruby>が
+            <ruby>置<rt>お</rt></ruby>かれている
+            <ruby>位置<rt>いち</rt></ruby>、
+            <ruby>役割<rt>やくわり</rt></ruby>、
+            <ruby>状況<rt>じょうきょう</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            그 사람이 놓인 위치, 역할, 상황을 뜻하는 입장입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>見直<rt>みなお</rt></ruby>す</h4>
+          <p class="jp-text">
+            <ruby>今<rt>いま</rt></ruby>までの
+            <ruby>考<rt>かんが</rt></ruby>えや
+            <ruby>方法<rt>ほうほう</rt></ruby>を
+            もう一度
+            <ruby>検討<rt>けんとう</rt></ruby>することです。
+          </p>
+          <p class="ko-text">
+            지금까지의 생각이나 방법을 다시 검토하는 것입니다.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </article>
+
+
+  <!-- =====================================================
+       QUESTION 06
+  ====================================================== -->
+
+  <article class="question-unit" id="anime-talk-question-06">
+
+    <header class="question-header">
+
+      <span class="question-number">
+        QUESTION 06
+      </span>
+
+      <h2 class="question-title">
+        『<ruby>進撃<rt>しんげき</rt></ruby>の
+        <ruby>巨人<rt>きょじん</rt></ruby>』の
+        <ruby>中<rt>なか</rt></ruby>で、
+        <ruby>理解<rt>りかい</rt></ruby>しやすかった
+        <ruby>部分<rt>ぶぶん</rt></ruby>と
+        <ruby>解釈<rt>かいしゃく</rt></ruby>が
+        <ruby>難<rt>むずか</rt></ruby>しかった
+        <ruby>部分<rt>ぶぶん</rt></ruby>は
+        どこですか。
+      </h2>
+
+      <p class="question-title-ko">
+        『진격의 거인』에서 이해하기 쉬웠던 부분과
+        해석하기 어려웠던 부분은 무엇입니까?
+      </p>
+
+    </header>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        1．<ruby>質問<rt>しつもん</rt></ruby>
+      </h3>
+
+      <p class="jp-text">
+        『<ruby>進撃<rt>しんげき</rt></ruby>の
+        <ruby>巨人<rt>きょじん</rt></ruby>』には、
+        <ruby>自由<rt>じゆう</rt></ruby>、
+        <ruby>正義<rt>せいぎ</rt></ruby>、
+        <ruby>差別<rt>さべつ</rt></ruby>、
+        <ruby>戦争<rt>せんそう</rt></ruby>、
+        <ruby>記憶<rt>きおく</rt></ruby>、
+        <ruby>復讐<rt>ふくしゅう</rt></ruby>など、
+        さまざまなテーマが
+        <ruby>含<rt>ふく</rt></ruby>まれています。
+      </p>
+
+      <p class="ko-text">
+        『진격의 거인』에는 자유, 정의, 차별, 전쟁,
+        기억, 복수 등 다양한 주제가 포함되어 있습니다.
+      </p>
+
+      <p class="jp-text">
+        キャラクターの
+        <ruby>感情<rt>かんじょう</rt></ruby>は
+        <ruby>理解<rt>りかい</rt></ruby>しやすくても、
+        その
+        <ruby>行動<rt>こうどう</rt></ruby>が
+        <ruby>正<rt>ただ</rt></ruby>しかったかどうかを
+        <ruby>判断<rt>はんだん</rt></ruby>するのは
+        <ruby>難<rt>むずか</rt></ruby>しい
+        <ruby>場合<rt>ばあい</rt></ruby>があります。
+      </p>
+
+      <p class="ko-text">
+        캐릭터의 감정은 이해하기 쉬워도,
+        그 행동이 옳았는지를 판단하기는 어려울 수 있습니다.
+      </p>
+
+      <div class="question-box">
+
+        <p class="jp-text">
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』の
+          <ruby>物語<rt>ものがたり</rt></ruby>、
+          キャラクターの
+          <ruby>感情<rt>かんじょう</rt></ruby>、
+          <ruby>世界観<rt>せかいかん</rt></ruby>、
+          テーマの
+          <ruby>中<rt>なか</rt></ruby>で、
+          <ruby>理解<rt>りかい</rt></ruby>しやすかった
+          <ruby>部分<rt>ぶぶん</rt></ruby>は
+          どこですか。
+        </p>
+
+        <p class="jp-text">
+          <ruby>反対<rt>はんたい</rt></ruby>に、
+          <ruby>意味<rt>いみ</rt></ruby>や
+          <ruby>意図<rt>いと</rt></ruby>を
+          <ruby>解釈<rt>かいしゃく</rt></ruby>するのが
+          <ruby>難<rt>むずか</rt></ruby>しかった
+          <ruby>部分<rt>ぶぶん</rt></ruby>は
+          どこですか。
+        </p>
+
+        <p class="jp-text">
+          <ruby>一<rt>ひと</rt></ruby>つの
+          <ruby>正解<rt>せいかい</rt></ruby>を
+          <ruby>決<rt>き</rt></ruby>めるのではなく、
+          <ruby>複数<rt>ふくすう</rt></ruby>の
+          <ruby>見方<rt>みかた</rt></ruby>を
+          <ruby>比<rt>くら</rt></ruby>べながら
+          <ruby>話<rt>はな</rt></ruby>し
+          <ruby>合<rt>あ</rt></ruby>ってみましょう。
+        </p>
+
+        <p class="ko-text">
+          이야기, 감정, 세계관, 주제 가운데 이해하기 쉬웠던 부분은 무엇입니까?
+          반대로 의미와 의도를 해석하기 어려웠던 부분은 무엇입니까?
+          하나의 정답을 정하지 말고 여러 관점을 비교하며 토론해 봅시다.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        2．N3レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card">
+
+        <span class="level-badge level-n3">
+          N3
+        </span>
+
+        <p class="jp-text">
+          私は、
+          キャラクターが
+          <ruby>家族<rt>かぞく</rt></ruby>や
+          <ruby>仲間<rt>なかま</rt></ruby>を
+          <ruby>守<rt>まも</rt></ruby>りたいと
+          <ruby>思<rt>おも</rt></ruby>う
+          <ruby>気持<rt>きも</rt></ruby>ちは
+          <ruby>理解<rt>りかい</rt></ruby>しやすかったです。
+        </p>
+
+        <p class="ko-text">
+          저는 인물들이 가족과 동료를 지키고 싶어 하는 마음은 이해하기 쉬웠습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>怖<rt>こわ</rt></ruby>くても
+          <ruby>戦<rt>たたか</rt></ruby>わなければならない
+          <ruby>状況<rt>じょうきょう</rt></ruby>にも
+          <ruby>共感<rt>きょうかん</rt></ruby>できました。
+        </p>
+
+        <p class="ko-text">
+          무섭더라도 싸워야 하는 상황에도 공감할 수 있었습니다.
+        </p>
+
+        <p class="jp-text">
+          しかし、
+          <ruby>物語<rt>ものがたり</rt></ruby>が
+          <ruby>進<rt>すす</rt></ruby>むと、
+          <ruby>誰<rt>だれ</rt></ruby>が
+          <ruby>正<rt>ただ</rt></ruby>しいのか
+          <ruby>分<rt>わ</rt></ruby>からなくなりました。
+        </p>
+
+        <p class="ko-text">
+          그러나 이야기가 진행되면서 누가 옳은지 알기 어려워졌습니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>自由<rt>じゆう</rt></ruby>のために
+          <ruby>他<rt>ほか</rt></ruby>の
+          <ruby>人<rt>ひと</rt></ruby>を
+          <ruby>傷<rt>きず</rt></ruby>つけてもいいのかという
+          <ruby>問題<rt>もんだい</rt></ruby>も
+          <ruby>難<rt>むずか</rt></ruby>しかったです。
+        </p>
+
+        <p class="ko-text">
+          자유를 위해 다른 사람을 상처 입혀도 되는가라는 문제도 어려웠습니다.
+        </p>
+
+        <p class="jp-text">
+          この
+          <ruby>作品<rt>さくひん</rt></ruby>には、
+          <ruby>簡単<rt>かんたん</rt></ruby>な
+          <ruby>答<rt>こた</rt></ruby>えがないと
+          <ruby>思<rt>おも</rt></ruby>います。
+        </p>
+
+        <p class="ko-text">
+          이 작품에는 간단한 정답이 없다고 생각합니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        3．N2レベルの
+        <ruby>回答例<rt>かいとうれい</rt></ruby>
+      </h3>
+
+      <article class="answer-card n2">
+
+        <span class="level-badge level-n2">
+          N2
+        </span>
+
+        <p class="jp-text">
+          私が
+          <ruby>比較的<rt>ひかくてき</rt></ruby>
+          <ruby>理解<rt>りかい</rt></ruby>しやすいと
+          <ruby>感<rt>かん</rt></ruby>じたのは、
+          キャラクターたちが
+          <ruby>恐怖<rt>きょうふ</rt></ruby>を
+          <ruby>感<rt>かん</rt></ruby>じながらも、
+          <ruby>家族<rt>かぞく</rt></ruby>や
+          <ruby>仲間<rt>なかま</rt></ruby>を
+          <ruby>守<rt>まも</rt></ruby>ろうとする
+          <ruby>感情<rt>かんじょう</rt></ruby>です。
+        </p>
+
+        <p class="ko-text">
+          제가 비교적 이해하기 쉽다고 느낀 것은,
+          인물들이 두려움을 느끼면서도 가족과 동료를 지키려는 감정입니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>極限状態<rt>きょくげんじょうたい</rt></ruby>では、
+          <ruby>普段<rt>ふだん</rt></ruby>なら
+          <ruby>考<rt>かんが</rt></ruby>えられないような
+          <ruby>選択<rt>せんたく</rt></ruby>をすることもありますが、
+          「<ruby>大切<rt>たいせつ</rt></ruby>な
+          <ruby>人<rt>ひと</rt></ruby>を
+          <ruby>失<rt>うしな</rt></ruby>いたくない」
+          という
+          <ruby>気持<rt>きも</rt></ruby>ちは
+          <ruby>立場<rt>たちば</rt></ruby>が
+          <ruby>違<rt>ちが</rt></ruby>っても
+          <ruby>共通<rt>きょうつう</rt></ruby>していると
+          <ruby>思<rt>おも</rt></ruby>います。
+        </p>
+
+        <p class="ko-text">
+          극한 상황에서는 평소라면 상상하기 어려운 선택을 하기도 하지만,
+          소중한 사람을 잃고 싶지 않다는 마음은 입장이 달라도 공통적이라고 생각합니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>一方<rt>いっぽう</rt></ruby>で、
+          <ruby>解釈<rt>かいしゃく</rt></ruby>が
+          <ruby>難<rt>むずか</rt></ruby>しかったのは、
+          <ruby>自由<rt>じゆう</rt></ruby>を
+          <ruby>求<rt>もと</rt></ruby>めることと、
+          <ruby>他者<rt>たしゃ</rt></ruby>の
+          <ruby>自由<rt>じゆう</rt></ruby>を
+          <ruby>奪<rt>うば</rt></ruby>うことの
+          <ruby>境界<rt>きょうかい</rt></ruby>です。
+        </p>
+
+        <p class="ko-text">
+          한편 해석하기 어려웠던 것은 자유를 추구하는 것과
+          타인의 자유를 빼앗는 것의 경계입니다.
+        </p>
+
+        <p class="jp-text">
+          <ruby>自分<rt>じぶん</rt></ruby>や
+          <ruby>自分<rt>じぶん</rt></ruby>の
+          <ruby>仲間<rt>なかま</rt></ruby>を
+          <ruby>守<rt>まも</rt></ruby>るための
+          <ruby>行動<rt>こうどう</rt></ruby>であっても、
+          その
+          <ruby>結果<rt>けっか</rt></ruby>として
+          <ruby>無関係<rt>むかんけい</rt></ruby>な
+          <ruby>人<rt>ひと</rt></ruby>まで
+          <ruby>犠牲<rt>ぎせい</rt></ruby>になるなら、
+          それを
+          <ruby>正当化<rt>せいとうか</rt></ruby>できるのかという
+          <ruby>疑問<rt>ぎもん</rt></ruby>が
+          <ruby>残<rt>のこ</rt></ruby>ります。
+        </p>
+
+        <p class="ko-text">
+          자신과 동료를 지키기 위한 행동이라도,
+          그 결과 관계없는 사람까지 희생된다면 정당화할 수 있는지 의문이 남습니다.
+        </p>
+
+        <p class="jp-text">
+          また、
+          この
+          <ruby>作品<rt>さくひん</rt></ruby>では、
+          <ruby>同<rt>おな</rt></ruby>じ
+          <ruby>出来事<rt>できごと</rt></ruby>でも
+          どちらの
+          <ruby>側<rt>がわ</rt></ruby>から
+          <ruby>見<rt>み</rt></ruby>るかによって
+          <ruby>意味<rt>いみ</rt></ruby>が
+          <ruby>変<rt>か</rt></ruby>わります。
+        </p>
+
+        <p class="ko-text">
+          또한 이 작품에서는 같은 사건도 어느 쪽에서 보느냐에 따라 의미가 달라집니다.
+        </p>
+
+        <p class="jp-text">
+          ある
+          <ruby>人物<rt>じんぶつ</rt></ruby>にとっては
+          <ruby>正義<rt>せいぎ</rt></ruby>であっても、
+          <ruby>別<rt>べつ</rt></ruby>の
+          <ruby>人物<rt>じんぶつ</rt></ruby>にとっては
+          <ruby>暴力<rt>ぼうりょく</rt></ruby>や
+          <ruby>侵略<rt>しんりゃく</rt></ruby>に
+          <ruby>見<rt>み</rt></ruby>えることがあります。
+        </p>
+
+        <p class="ko-text">
+          어떤 인물에게는 정의여도 다른 인물에게는 폭력과 침략으로 보일 수 있습니다.
+        </p>
+
+        <p class="jp-text">
+          そのため、
+          この
+          <ruby>作品<rt>さくひん</rt></ruby>は
+          「<ruby>誰<rt>だれ</rt></ruby>が
+          <ruby>正<rt>ただ</rt></ruby>しいか」
+          を
+          <ruby>決<rt>き</rt></ruby>めるというより、
+          「なぜ
+          <ruby>人<rt>ひと</rt></ruby>は
+          <ruby>同<rt>おな</rt></ruby>じ
+          <ruby>争<rt>あらそ</rt></ruby>いを
+          <ruby>繰<rt>く</rt></ruby>り
+          <ruby>返<rt>かえ</rt></ruby>すのか」
+          を
+          <ruby>考<rt>かんが</rt></ruby>えさせる
+          <ruby>作品<rt>さくひん</rt></ruby>だと
+          <ruby>解釈<rt>かいしゃく</rt></ruby>しています。
+        </p>
+
+        <p class="ko-text">
+          그래서 이 작품은 누가 옳은지를 정하기보다,
+          왜 인간은 같은 분쟁을 반복하는지를 생각하게 하는 작품이라고 해석합니다.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        4．<ruby>討論質問<rt>とうろんしつもん</rt></ruby>
+      </h3>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">1</span>
+          <ruby>自分<rt>じぶん</rt></ruby>たちを
+          <ruby>守<rt>まも</rt></ruby>るためなら、
+          <ruby>他<rt>ほか</rt></ruby>の
+          <ruby>集団<rt>しゅうだん</rt></ruby>を
+          <ruby>攻撃<rt>こうげき</rt></ruby>することは
+          <ruby>許<rt>ゆる</rt></ruby>されるでしょうか。
+        </p>
+        <p class="ko-text">
+          자신들을 지키기 위해서라면 다른 집단을 공격하는 것이 허용될까요?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">2</span>
+          キャラクターの
+          <ruby>事情<rt>じじょう</rt></ruby>を
+          <ruby>理解<rt>りかい</rt></ruby>することと、
+          その
+          <ruby>行動<rt>こうどう</rt></ruby>を
+          <ruby>許<rt>ゆる</rt></ruby>すことは
+          <ruby>同<rt>おな</rt></ruby>じでしょうか。
+        </p>
+        <p class="ko-text">
+          캐릭터의 사정을 이해하는 것과 그 행동을 용서하는 것은 같을까요?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">3</span>
+          『<ruby>進撃<rt>しんげき</rt></ruby>の
+          <ruby>巨人<rt>きょじん</rt></ruby>』における
+          <ruby>自由<rt>じゆう</rt></ruby>とは、
+          どのような
+          <ruby>状態<rt>じょうたい</rt></ruby>だと
+          <ruby>思<rt>おも</rt></ruby>いますか。
+        </p>
+        <p class="ko-text">
+          『진격의 거인』에서 자유란 어떤 상태라고 생각합니까?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">4</span>
+          <ruby>憎<rt>にく</rt></ruby>しみの
+          <ruby>連鎖<rt>れんさ</rt></ruby>を
+          <ruby>止<rt>と</rt></ruby>めるためには、
+          <ruby>誰<rt>だれ</rt></ruby>が
+          <ruby>最初<rt>さいしょ</rt></ruby>に
+          <ruby>行動<rt>こうどう</rt></ruby>を
+          <ruby>変<rt>か</rt></ruby>える
+          <ruby>必要<rt>ひつよう</rt></ruby>があるでしょうか。
+        </p>
+        <p class="ko-text">
+          증오의 연쇄를 멈추려면 누가 먼저 행동을 바꾸어야 할까요?
+        </p>
+      </article>
+
+      <article class="follow-up-card">
+        <p class="jp-text">
+          <span class="follow-up-number">5</span>
+          <ruby>過去<rt>かこ</rt></ruby>の
+          <ruby>歴史<rt>れきし</rt></ruby>について、
+          <ruby>現在<rt>げんざい</rt></ruby>を
+          <ruby>生<rt>い</rt></ruby>きる
+          <ruby>人<rt>ひと</rt></ruby>は
+          どこまで
+          <ruby>責任<rt>せきにん</rt></ruby>を
+          <ruby>負<rt>お</rt></ruby>うべきでしょうか。
+        </p>
+        <p class="ko-text">
+          과거의 역사에 대해 현재를 사는 사람은 어디까지 책임을 져야 할까요?
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="content-section">
+
+      <h3 class="section-title">
+        5．N2・N3
+        <ruby>文法<rt>ぶんぽう</rt></ruby>・
+        <ruby>語彙<rt>ごい</rt></ruby>
+      </h3>
+
+      <div class="language-grid">
+
+        <article class="language-card">
+          <h4>～であっても</h4>
+          <p class="jp-text">
+            ある
+            <ruby>条件<rt>じょうけん</rt></ruby>を
+            <ruby>認<rt>みと</rt></ruby>めたとしても、
+            <ruby>結果<rt>けっか</rt></ruby>は
+            <ruby>変<rt>か</rt></ruby>わらないことを
+            <ruby>表<rt>あらわ</rt></ruby>します。
+          </p>
+          <p class="ko-text">
+            어떤 조건을 인정하더라도 결과는 달라지지 않음을 나타냅니다.
+          </p>
+          <div class="example-box">
+            <p class="jp-text">
+              <ruby>仲間<rt>なかま</rt></ruby>を
+              <ruby>守<rt>まも</rt></ruby>るためであっても、
+              <ruby>無関係<rt>むかんけい</rt></ruby>な
+              <ruby>人<rt>ひと</rt></ruby>を
+              <ruby>傷<rt>きず</rt></ruby>つけてよいとは
+              <ruby>限<rt>かぎ</rt></ruby>りません。
+            </p>
+            <p class="ko-text">
+              동료를 지키기 위한 것이라도 무관한 사람을 상처 입혀도 되는 것은 아닙니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="language-card">
+          <h4>～というより</h4>
+          <p class="jp-text">
+            <ruby>前<rt>まえ</rt></ruby>の
+            <ruby>表現<rt>ひょうげん</rt></ruby>を
+            <ruby>修正<rt>しゅうせい</rt></ruby>し、
+            より
+            <ruby>正確<rt>せいかく</rt></ruby>な
+            <ruby>説明<rt>せつめい</rt></ruby>を
+            <ruby>後<rt>あと</rt></ruby>に
+            <ruby>述<rt>の</rt></ruby>べます。
+          </p>
+          <p class="ko-text">
+            앞의 표현을 수정하여 뒤에 더 정확한 설명을 제시합니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>極限状態<rt>きょくげんじょうたい</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>精神的<rt>せいしんてき</rt></ruby>、
+            <ruby>身体的<rt>しんたいてき</rt></ruby>に
+            <ruby>限界<rt>げんかい</rt></ruby>に
+            <ruby>近<rt>ちか</rt></ruby>い
+            <ruby>非常<rt>ひじょう</rt></ruby>に
+            <ruby>厳<rt>きび</rt></ruby>しい
+            <ruby>状態<rt>じょうたい</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            정신적·육체적으로 한계에 가까운 극도로 어려운 상태입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>正当化<rt>せいとうか</rt></ruby>する</h4>
+          <p class="jp-text">
+            ある
+            <ruby>行動<rt>こうどう</rt></ruby>や
+            <ruby>考<rt>かんが</rt></ruby>えが
+            <ruby>正<rt>ただ</rt></ruby>しい、
+            または
+            <ruby>仕方<rt>しかた</rt></ruby>がないものだと
+            <ruby>説明<rt>せつめい</rt></ruby>することです。
+          </p>
+          <p class="ko-text">
+            어떤 행동이나 생각이 옳거나 어쩔 수 없다고 정당화하는 것입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>憎<rt>にく</rt></ruby>しみの
+          <ruby>連鎖<rt>れんさ</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>被害<rt>ひがい</rt></ruby>を
+            <ruby>受<rt>う</rt></ruby>けた
+            <ruby>人<rt>ひと</rt></ruby>が
+            <ruby>復讐<rt>ふくしゅう</rt></ruby>し、
+            その
+            <ruby>相手<rt>あいて</rt></ruby>も
+            また
+            <ruby>復讐<rt>ふくしゅう</rt></ruby>する
+            <ruby>状態<rt>じょうたい</rt></ruby>です。
+          </p>
+          <p class="ko-text">
+            피해자가 복수하고 상대도 다시 복수하는 증오의 연쇄입니다.
+          </p>
+        </article>
+
+        <article class="language-card">
+          <h4><ruby>侵略<rt>しんりゃく</rt></ruby></h4>
+          <p class="jp-text">
+            <ruby>他<rt>ほか</rt></ruby>の
+            <ruby>国<rt>くに</rt></ruby>や
+            <ruby>地域<rt>ちいき</rt></ruby>へ
+            <ruby>武力<rt>ぶりょく</rt></ruby>で
+            <ruby>入<rt>はい</rt></ruby>り、
+            <ruby>支配<rt>しはい</rt></ruby>しようとすることです。
+          </p>
+          <p class="ko-text">
+            다른 국가나 지역에 무력으로 들어가 지배하려는 침략입니다.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="discussion-box">
+
+        <p class="jp-text">
+          この
+          <ruby>質問<rt>しつもん</rt></ruby>では、
+          <ruby>相手<rt>あいて</rt></ruby>の
+          <ruby>意見<rt>いけん</rt></ruby>を
+          すぐに
+          <ruby>否定<rt>ひてい</rt></ruby>せず、
+          「なぜそう
+          <ruby>解釈<rt>かいしゃく</rt></ruby>したのか」
+          を
+          <ruby>聞<rt>き</rt></ruby>いてみましょう。
+        </p>
+
+        <p class="jp-text">
+          <ruby>同<rt>おな</rt></ruby>じ
+          <ruby>場面<rt>ばめん</rt></ruby>でも、
+          キャラクターの
+          <ruby>感情<rt>かんじょう</rt></ruby>を
+          <ruby>重視<rt>じゅうし</rt></ruby>するか、
+          <ruby>行動<rt>こうどう</rt></ruby>の
+          <ruby>結果<rt>けっか</rt></ruby>を
+          <ruby>重視<rt>じゅうし</rt></ruby>するかによって、
+          <ruby>評価<rt>ひょうか</rt></ruby>が
+          <ruby>変<rt>か</rt></ruby>わることがあります。
+        </p>
+
+        <p class="ko-text">
+          이 질문에서는 상대의 의견을 바로 부정하지 말고,
+          왜 그렇게 해석했는지를 물어봅시다.
+          같은 장면이라도 캐릭터의 감정을 중시하는지,
+          행동의 결과를 중시하는지에 따라 평가가 달라질 수 있습니다.
+        </p>
+
+      </div>
+
+    </section>
+
+  </article>
+
+</section>
