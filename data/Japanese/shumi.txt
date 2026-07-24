@@ -1,0 +1,3818 @@
+趣味
+  <style>
+  .hobby-talk {
+    --main: #6755a5;
+    --main-dark: #403568;
+    --main-light: #f0edfa;
+    --accent: #eb8b6f;
+    --accent-light: #fff1ec;
+    --green: #4f7b67;
+    --green-light: #edf6f1;
+    --yellow-light: #fff8e5;
+    --text: #292832;
+    --subtext: #5d5a67;
+    --line: #dedbe8;
+    --background: #f6f5fa;
+    --white: #ffffff;
+
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 28px;
+    background: var(--background);
+    color: var(--text);
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Noto Sans JP",
+      "Noto Sans KR",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    line-height: 1.85;
+    box-sizing: border-box;
+  }
+
+  .hobby-talk * {
+    box-sizing: border-box;
+  }
+
+  .hobby-talk ruby {
+    ruby-position: over;
+  }
+
+  .hobby-talk rt {
+    color: #777184;
+    font-size: 0.56em;
+    font-weight: 400;
+  }
+
+  .hobby-talk .cover {
+    min-height: 470px;
+    padding: 48px 40px;
+    border-radius: 26px;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(255, 255, 255, 0.2),
+        transparent 35%
+      ),
+      linear-gradient(135deg, var(--main-dark), var(--main));
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 16px 35px rgba(64, 53, 104, 0.18);
+  }
+
+  .hobby-talk .cover-label,
+  .hobby-talk .slide-label {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.83rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .hobby-talk .cover-label {
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .hobby-talk .cover-title {
+    margin: 0;
+    font-size: clamp(2.1rem, 6vw, 4rem);
+    line-height: 1.3;
+  }
+
+  .hobby-talk .cover-jp {
+    margin: 18px 0 0;
+    color: #eeeafc;
+    font-size: clamp(1.15rem, 3vw, 1.6rem);
+    font-weight: 700;
+  }
+
+  .hobby-talk .cover-description {
+    max-width: 720px;
+    margin: 23px 0 0;
+    color: #e5e1f2;
+    font-size: 1.02rem;
+  }
+
+  .hobby-talk .slide {
+    margin-top: 34px;
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: 0 7px 22px rgba(61, 53, 91, 0.06);
+  }
+
+  .hobby-talk .slide-label {
+    margin-bottom: 14px;
+    background: var(--main-light);
+    color: var(--main-dark);
+  }
+
+  .hobby-talk .slide-title {
+    margin: 0 0 12px;
+    color: var(--main-dark);
+    font-size: clamp(1.55rem, 4vw, 2.25rem);
+    line-height: 1.45;
+  }
+
+  .hobby-talk .slide-subtitle {
+    margin: 0 0 22px;
+    color: var(--subtext);
+    font-size: 1rem;
+  }
+
+  .hobby-talk .jp-main {
+    margin: 15px 0 7px;
+    color: var(--main-dark);
+    font-size: 1.18rem;
+    font-weight: 800;
+  }
+
+  .hobby-talk .ko-main {
+    margin: 0 0 20px;
+    padding: 12px 15px;
+    border-left: 4px solid var(--main);
+    border-radius: 0 10px 10px 0;
+    background: var(--main-light);
+    color: var(--subtext);
+  }
+
+  .hobby-talk .instruction-grid,
+  .hobby-talk .topic-grid,
+  .hobby-talk .two-column {
+    display: grid;
+    gap: 18px;
+  }
+
+  .hobby-talk .instruction-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hobby-talk .topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hobby-talk .two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hobby-talk .instruction-card,
+  .hobby-talk .topic-card,
+  .hobby-talk .content-card {
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fcfcfe;
+  }
+
+  .hobby-talk .instruction-number,
+  .hobby-talk .topic-number,
+  .hobby-talk .question-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--main);
+    color: var(--white);
+    font-weight: 800;
+  }
+
+  .hobby-talk .instruction-number {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 12px;
+  }
+
+  .hobby-talk .instruction-card h3,
+  .hobby-talk .content-card h3 {
+    margin: 0 0 9px;
+    color: var(--main-dark);
+    font-size: 1.08rem;
+  }
+
+  .hobby-talk .instruction-card p,
+  .hobby-talk .content-card p {
+    margin: 0;
+    color: var(--subtext);
+  }
+
+  .hobby-talk .topic-card {
+    position: relative;
+    min-height: 175px;
+    padding: 23px;
+    background: linear-gradient(145deg, #ffffff, #f7f5fc);
+  }
+
+  .hobby-talk .topic-number {
+    width: 39px;
+    height: 39px;
+    margin-bottom: 13px;
+  }
+
+  .hobby-talk .topic-card h3 {
+    margin: 0 0 7px;
+    color: var(--main-dark);
+    font-size: 1.18rem;
+  }
+
+  .hobby-talk .topic-card p {
+    margin: 0;
+    color: var(--subtext);
+  }
+
+  .hobby-talk .question-box {
+    padding: 22px;
+    border: 2px solid var(--main);
+    border-radius: 17px;
+    background: var(--main-light);
+  }
+
+  .hobby-talk .section-heading {
+    margin: 25px 0 13px;
+    color: var(--main-dark);
+    font-size: 1.15rem;
+  }
+
+  .hobby-talk .hint-list,
+  .hobby-talk .follow-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .hobby-talk .hint-list li,
+  .hobby-talk .follow-list li {
+    margin-top: 11px;
+    padding: 13px 15px;
+    border-radius: 11px;
+  }
+
+  .hobby-talk .hint-list li {
+    background: var(--green-light);
+    color: #365a49;
+  }
+
+  .hobby-talk .follow-list li {
+    border: 1px solid var(--line);
+    background: #fbfbfd;
+  }
+
+  .hobby-talk .question-number {
+    width: 27px;
+    height: 27px;
+    margin-right: 9px;
+    font-size: 0.82rem;
+    vertical-align: middle;
+  }
+
+  .hobby-talk .alternative-box {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 15px;
+    background: var(--yellow-light);
+  }
+
+  .hobby-talk .alternative-box h3 {
+    margin: 0 0 9px;
+    color: #775d26;
+    font-size: 1.03rem;
+  }
+
+  .hobby-talk .alternative-box p {
+    margin: 6px 0;
+  }
+
+  .hobby-talk .progress-box {
+    margin-top: 21px;
+    padding: 18px;
+    border-radius: 15px;
+    background: var(--accent-light);
+  }
+
+  .hobby-talk .progress-box strong {
+    color: #8a4b39;
+  }
+
+  .hobby-talk .ending-box {
+    padding: 26px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #edf6f1, #f4f0fb);
+  }
+
+  .hobby-talk .ending-box p {
+    margin: 11px 0;
+  }
+
+  @media (max-width: 820px) {
+    .hobby-talk {
+      padding: 14px;
+    }
+
+    .hobby-talk .cover {
+      min-height: 400px;
+      padding: 32px 24px;
+    }
+
+    .hobby-talk .slide {
+      padding: 22px;
+    }
+
+    .hobby-talk .instruction-grid,
+    .hobby-talk .topic-grid,
+    .hobby-talk .two-column {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+<main class="hobby-talk">
+
+  <!-- =========================================
+       표지
+  ========================================== -->
+
+  <section class="cover">
+
+    <span class="cover-label">
+      日本語 ICE BREAKING
+    </span>
+
+    <h1 class="cover-title">
+      일본어 취미 토론
+    </h1>
+
+    <p class="cover-jp">
+      <ruby>趣味<rt>しゅみ</rt></ruby>について
+      <ruby>日本語<rt>にほんご</rt></ruby>で
+      <ruby>話<rt>はな</rt></ruby>そう
+    </p>
+
+    <p class="cover-description">
+      유튜브, 음악, 배움, 드라마와 영화 등
+      자신이 좋아하는 취미와 콘텐츠를 일본어로 편하게 소개하고,
+      서로 질문하며 대화를 이어 가는 시간입니다.
+    </p>
+
+  </section>
+
+
+  <!-- =========================================
+       진행 방법
+  ========================================== -->
+
+  <section class="slide" id="guide">
+
+    <span class="slide-label">
+      HOW TO TALK
+    </span>
+
+    <h2 class="slide-title">
+      오늘의 진행 방법
+    </h2>
+
+    <p class="slide-subtitle">
+      모든 질문에 답할 필요는 없습니다.
+      이야기하고 싶은 질문을 골라서 대화를 시작합니다.
+    </p>
+
+    <div class="instruction-grid">
+
+      <article class="instruction-card">
+
+        <span class="instruction-number">1</span>
+
+        <h3>질문 고르기</h3>
+
+        <p>
+          여섯 가지 주제 중 자신이 이야기하고 싶은 질문을
+          하나 고릅니다.
+        </p>
+
+      </article>
+
+      <article class="instruction-card">
+
+        <span class="instruction-number">2</span>
+
+        <h3>자신의 경험 말하기</h3>
+
+        <p>
+          이름이나 장르만 말하지 않고,
+          좋아하는 이유와 자신의 경험을 함께 설명합니다.
+        </p>
+
+      </article>
+
+      <article class="instruction-card">
+
+        <span class="instruction-number">3</span>
+
+        <h3>서로 질문하기</h3>
+
+        <p>
+          다른 사람의 답변을 들은 뒤,
+          궁금한 점을 한 가지 이상 질문합니다.
+        </p>
+
+      </article>
+
+    </div>
+
+    <div class="progress-box">
+
+      <strong>진행 원칙</strong>
+
+      <p>
+        같은 질문을 여러 사람이 선택해도 괜찮습니다.
+        대화가 길게 이어진다면 모든 질문을 다루지 않아도 됩니다.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       질문 선택
+  ========================================== -->
+
+  <section class="slide" id="topic-menu">
+
+    <span class="slide-label">
+      CHOOSE A TOPIC
+    </span>
+
+    <h2 class="slide-title">
+      어떤 이야기를 하고 싶습니까?
+    </h2>
+
+    <p class="jp-main">
+      <ruby>話<rt>はな</rt></ruby>してみたい
+      <ruby>質問<rt>しつもん</rt></ruby>を
+      <ruby>一<rt>ひと</rt></ruby>つ
+      <ruby>選<rt>えら</rt></ruby>んでください。
+    </p>
+
+    <p class="ko-main">
+      이야기해 보고 싶은 질문을 하나 선택해 주세요.
+    </p>
+
+    <div class="topic-grid">
+
+      <article class="topic-card">
+
+        <span class="topic-number">1</span>
+
+        <h3>즐겨 보는 유튜브</h3>
+
+        <p>
+          평소 자주 보는 채널이나 영상 콘텐츠
+        </p>
+
+      </article>
+
+      <article class="topic-card">
+
+        <span class="topic-number">2</span>
+
+        <h3>즐겨 듣는 음악</h3>
+
+        <p>
+          좋아하는 장르, 가수, 노래와 감상 습관
+        </p>
+
+      </article>
+
+      <article class="topic-card">
+
+        <span class="topic-number">3</span>
+
+        <h3>배우고 있는 취미</h3>
+
+        <p>
+          지금 배우는 것과 앞으로 배우고 싶은 것
+        </p>
+
+      </article>
+
+      <article class="topic-card">
+
+        <span class="topic-number">4</span>
+
+        <h3>드라마·영화·예능</h3>
+
+        <p>
+          좋아하는 작품과 추천하고 싶은 콘텐츠
+        </p>
+
+      </article>
+
+      <article class="topic-card">
+
+        <span class="topic-number">5</span>
+
+        <h3>즐거웠던 취미 경험</h3>
+
+        <p>
+          최근 취미와 관련해 기억에 남은 경험
+        </p>
+
+      </article>
+
+      <article class="topic-card">
+
+        <span class="topic-number">6</span>
+
+        <h3>새롭게 시작하고 싶은 취미</h3>
+
+        <p>
+          시간과 돈에 여유가 생긴다면 해 보고 싶은 활동
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       질문 1
+  ========================================== -->
+
+  <section class="slide" id="topic-01">
+
+    <span class="slide-label">
+      TOPIC 01 · YOUTUBE
+    </span>
+
+    <h2 class="slide-title">
+      즐겨 보는 유튜브 채널이나 콘텐츠
+    </h2>
+
+    <div class="question-box">
+
+      <p class="jp-main">
+        <ruby>普段<rt>ふだん</rt></ruby>、
+        どのようなYouTubeチャンネルや
+        <ruby>動画<rt>どうが</rt></ruby>を
+        よく
+        <ruby>見<rt>み</rt></ruby>ますか。
+      </p>
+
+      <p class="ko-main">
+        평소 어떤 유튜브 채널이나 영상을 자주 봅니까?
+      </p>
+
+    </div>
+
+    <!-- =====================================================
+     TOPIC 01 · YOUTUBE
+     question-box 바로 뒤에 삽입
+====================================================== -->
+
+<div class="two-column">
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N3 ANSWER FRAME
+    </span>
+
+    <h3>
+      N3 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私は
+      <ruby>普段<rt>ふだん</rt></ruby>、
+      「〇〇」というYouTubeチャンネルを
+      よく
+      <ruby>見<rt>み</rt></ruby>ます。
+    </p>
+
+    <p class="ko-main">
+      저는 평소 ‘〇〇’라는 유튜브 채널을 자주 봅니다.
+    </p>
+
+    <p class="jp-main">
+      そのチャンネルでは、
+      <ruby>主<rt>おも</rt></ruby>に
+      〇〇についての
+      <ruby>動画<rt>どうが</rt></ruby>が
+      <ruby>投稿<rt>とうこう</rt></ruby>されています。
+    </p>
+
+    <p class="ko-main">
+      그 채널에는 주로 〇〇에 관한 영상이 올라옵니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>見始<rt>みはじ</rt></ruby>めた
+      きっかけは〇〇です。
+    </p>
+
+    <p class="ko-main">
+      보기 시작한 계기는 〇〇입니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>面白<rt>おもしろ</rt></ruby>いだけでなく、
+      〇〇について
+      <ruby>学<rt>まな</rt></ruby>べるので、
+      よく
+      <ruby>見<rt>み</rt></ruby>ています。
+    </p>
+
+    <p class="ko-main">
+      재미있을 뿐만 아니라 〇〇에 관해 배울 수 있어서 자주 봅니다.
+    </p>
+
+  </article>
+
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N2 ANSWER FRAME
+    </span>
+
+    <h3>
+      N2 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私が
+      <ruby>普段<rt>ふだん</rt></ruby>よく
+      <ruby>見<rt>み</rt></ruby>るのは、
+      〇〇を
+      <ruby>扱<rt>あつか</rt></ruby>っている
+      YouTubeチャンネルです。
+    </p>
+
+    <p class="ko-main">
+      제가 평소 자주 보는 것은 〇〇를 다루는 유튜브 채널입니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>単<rt>たん</rt></ruby>に
+      <ruby>面白<rt>おもしろ</rt></ruby>いからというだけでなく、
+      <ruby>説明<rt>せつめい</rt></ruby>が
+      <ruby>分<rt>わ</rt></ruby>かりやすく、
+      <ruby>自分<rt>じぶん</rt></ruby>では
+      <ruby>知<rt>し</rt></ruby>らなかった
+      <ruby>情報<rt>じょうほう</rt></ruby>を
+      <ruby>得<rt>え</rt></ruby>られる
+      <ruby>点<rt>てん</rt></ruby>にも
+      <ruby>魅力<rt>みりょく</rt></ruby>を
+      <ruby>感<rt>かん</rt></ruby>じています。
+    </p>
+
+    <p class="ko-main">
+      단순히 재미있기 때문만이 아니라 설명이 이해하기 쉽고,
+      제가 몰랐던 정보를 얻을 수 있다는 점에도 매력을 느낍니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>特<rt>とく</rt></ruby>に
+      〇〇に
+      <ruby>関<rt>かん</rt></ruby>する
+      <ruby>動画<rt>どうが</rt></ruby>は、
+      〇〇なので
+      <ruby>印象<rt>いんしょう</rt></ruby>に
+      <ruby>残<rt>のこ</rt></ruby>っています。
+    </p>
+
+    <p class="ko-main">
+      특히 〇〇에 관한 영상은 〇〇하기 때문에 기억에 남아 있습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>最近<rt>さいきん</rt></ruby>では、
+      <ruby>新<rt>あたら</rt></ruby>しい
+      <ruby>動画<rt>どうが</rt></ruby>が
+      <ruby>公開<rt>こうかい</rt></ruby>されると、
+      できるだけ
+      <ruby>早<rt>はや</rt></ruby>く
+      <ruby>見<rt>み</rt></ruby>るようにしています。
+    </p>
+
+    <p class="ko-main">
+      최근에는 새로운 영상이 공개되면 가능한 한 빨리 보려고 합니다.
+    </p>
+
+  </article>
+
+</div>
+
+
+<article class="content-card">
+
+  <h3>
+    <ruby>追加質問<rt>ついかしつもん</rt></ruby>
+    · 추가 질문
+  </h3>
+
+  <ol class="follow-list">
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">1</span>
+        その
+        <ruby>動画<rt>どうが</rt></ruby>から、
+        <ruby>情報<rt>じょうほう</rt></ruby>、
+        <ruby>面白<rt>おもしろ</rt></ruby>さ、
+        <ruby>気分転換<rt>きぶんてんかん</rt></ruby>のうち、
+        <ruby>何<rt>なに</rt></ruby>を
+        <ruby>最<rt>もっと</rt></ruby>も
+        <ruby>得<rt>え</rt></ruby>ていますか。
+      </p>
+
+      <p class="ko-main">
+        그 영상에서 정보, 재미, 기분 전환 중 무엇을 가장 많이 얻습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">2</span>
+        そのチャンネルを
+        <ruby>他<rt>ほか</rt></ruby>の
+        <ruby>人<rt>ひと</rt></ruby>にも
+        <ruby>勧<rt>すす</rt></ruby>めたいですか。
+      </p>
+
+      <p class="ko-main">
+        그 채널을 다른 사람에게도 추천하고 싶습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">3</span>
+        <ruby>短<rt>みじか</rt></ruby>い
+        <ruby>動画<rt>どうが</rt></ruby>と
+        <ruby>長<rt>なが</rt></ruby>い
+        <ruby>動画<rt>どうが</rt></ruby>では、
+        どちらを
+        <ruby>好<rt>この</rt></ruby>みますか。
+      </p>
+
+      <p class="ko-main">
+        짧은 영상과 긴 영상 중 어느 쪽을 선호합니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">4</span>
+        <ruby>以前<rt>いぜん</rt></ruby>と
+        <ruby>比<rt>くら</rt></ruby>べて、
+        よく
+        <ruby>見<rt>み</rt></ruby>る
+        <ruby>動画<rt>どうが</rt></ruby>の
+        <ruby>種類<rt>しゅるい</rt></ruby>は
+        <ruby>変<rt>か</rt></ruby>わりましたか。
+      </p>
+
+      <p class="ko-main">
+        예전과 비교해 자주 보는 영상의 종류가 달라졌습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">5</span>
+        <ruby>自分<rt>じぶん</rt></ruby>で
+        YouTubeチャンネルを
+        <ruby>作<rt>つく</rt></ruby>るとしたら、
+        どのような
+        <ruby>動画<rt>どうが</rt></ruby>を
+        <ruby>作<rt>つく</rt></ruby>りたいですか。
+      </p>
+
+      <p class="ko-main">
+        직접 유튜브 채널을 만든다면 어떤 영상을 만들고 싶습니까?
+      </p>
+    </li>
+
+  </ol>
+
+</article>
+
+
+
+    <div class="two-column">
+
+      <article class="content-card">
+
+        <h3>
+          답변할 때 말해 볼 내용
+        </h3>
+
+        <ul class="hint-list">
+          <li>채널이나 콘텐츠의 이름</li>
+          <li>영상의 장르와 주요 내용</li>
+          <li>처음 보기 시작한 계기</li>
+          <li>그 콘텐츠를 자주 보는 이유</li>
+          <li>주로 영상을 보는 시간과 상황</li>
+        </ul>
+
+      </article>
+
+      <article class="content-card">
+
+        <h3>
+          대화를 이어 가는 질문
+        </h3>
+
+        <ol class="follow-list">
+
+          <li>
+            <span class="question-number">1</span>
+            정보, 재미, 휴식 중 무엇을 가장 많이 얻습니까?
+          </li>
+
+          <li>
+            <span class="question-number">2</span>
+            다른 사람에게도 추천하고 싶은 채널입니까?
+          </li>
+
+          <li>
+            <span class="question-number">3</span>
+            짧은 영상과 긴 영상 중 어느 쪽을 선호합니까?
+          </li>
+
+          <li>
+            <span class="question-number">4</span>
+            예전과 비교해 즐겨 보는 콘텐츠가 달라졌습니까?
+          </li>
+
+          <li>
+            <span class="question-number">5</span>
+            직접 유튜브 채널을 만든다면 어떤 영상을 만들고 싶습니까?
+          </li>
+
+        </ol>
+
+      </article>
+
+    </div>
+
+    <aside class="alternative-box">
+
+      <h3>
+        YouTube를 자주 보지 않는다면
+      </h3>
+
+      <p class="jp-main">
+        YouTubeをあまり
+        <ruby>見<rt>み</rt></ruby>ない
+        <ruby>場合<rt>ばあい</rt></ruby>、
+        <ruby>普段<rt>ふだん</rt></ruby>は
+        どのようなコンテンツを
+        <ruby>楽<rt>たの</rt></ruby>しんでいますか。
+      </p>
+
+      <p>
+        유튜브를 별로 보지 않는다면 평소 어떤 콘텐츠를 즐깁니까?
+      </p>
+
+    </aside>
+
+  </section>
+
+
+  <!-- =========================================
+       질문 2
+  ========================================== -->
+
+  <section class="slide" id="topic-02">
+
+    <span class="slide-label">
+      TOPIC 02 · MUSIC
+    </span>
+
+    <h2 class="slide-title">
+      즐겨 듣는 음악
+    </h2>
+
+    <div class="question-box">
+
+      <p class="jp-main">
+        <ruby>普段<rt>ふだん</rt></ruby>、
+        どのような
+        <ruby>音楽<rt>おんがく</rt></ruby>を
+        よく
+        <ruby>聴<rt>き</rt></ruby>きますか。
+      </p>
+
+      <p class="ko-main">
+        평소 어떤 음악을 자주 듣습니까?
+      </p>
+
+    </div>
+
+<!-- =====================================================
+     TOPIC 02 · MUSIC
+====================================================== -->
+
+<div class="two-column">
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N3 ANSWER FRAME
+    </span>
+
+    <h3>
+      N3 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私は
+      <ruby>普段<rt>ふだん</rt></ruby>、
+      〇〇という
+      <ruby>音楽<rt>おんがく</rt></ruby>を
+      よく
+      <ruby>聴<rt>き</rt></ruby>きます。
+    </p>
+
+    <p class="ko-main">
+      저는 평소 〇〇라는 음악을 자주 듣습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>最近<rt>さいきん</rt></ruby>は、
+      〇〇という
+      <ruby>曲<rt>きょく</rt></ruby>を
+      <ruby>繰<rt>く</rt></ruby>り
+      <ruby>返<rt>かえ</rt></ruby>し
+      <ruby>聴<rt>き</rt></ruby>いています。
+    </p>
+
+    <p class="ko-main">
+      최근에는 〇〇라는 곡을 반복해서 듣고 있습니다.
+    </p>
+
+    <p class="jp-main">
+      この
+      <ruby>曲<rt>きょく</rt></ruby>は、
+      〇〇なところが
+      <ruby>好<rt>す</rt></ruby>きです。
+    </p>
+
+    <p class="ko-main">
+      이 곡은 〇〇한 점이 좋습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>主<rt>おも</rt></ruby>に
+      〇〇するときに
+      <ruby>聴<rt>き</rt></ruby>いています。
+    </p>
+
+    <p class="ko-main">
+      주로 〇〇할 때 듣고 있습니다.
+    </p>
+
+  </article>
+
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N2 ANSWER FRAME
+    </span>
+
+    <h3>
+      N2 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私が
+      <ruby>普段<rt>ふだん</rt></ruby>よく
+      <ruby>聴<rt>き</rt></ruby>くのは、
+      〇〇というジャンルの
+      <ruby>音楽<rt>おんがく</rt></ruby>です。
+    </p>
+
+    <p class="ko-main">
+      제가 평소 자주 듣는 것은 〇〇라는 장르의 음악입니다.
+    </p>
+
+    <p class="jp-main">
+      〇〇という
+      <ruby>歌手<rt>かしゅ</rt></ruby>の
+      <ruby>曲<rt>きょく</rt></ruby>が
+      <ruby>特<rt>とく</rt></ruby>に
+      <ruby>好<rt>す</rt></ruby>きで、
+      <ruby>曲調<rt>きょくちょう</rt></ruby>だけでなく、
+      <ruby>歌詞<rt>かし</rt></ruby>にも
+      <ruby>魅力<rt>みりょく</rt></ruby>を
+      <ruby>感<rt>かん</rt></ruby>じています。
+    </p>
+
+    <p class="ko-main">
+      특히 〇〇라는 가수의 곡을 좋아하며,
+      곡조뿐 아니라 가사에서도 매력을 느낍니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>気分<rt>きぶん</rt></ruby>に
+      <ruby>応<rt>おう</rt></ruby>じて
+      <ruby>聴<rt>き</rt></ruby>く
+      <ruby>音楽<rt>おんがく</rt></ruby>を
+      <ruby>変<rt>か</rt></ruby>えており、
+      〇〇するときには
+      〇〇のような
+      <ruby>曲<rt>きょく</rt></ruby>を
+      <ruby>選<rt>えら</rt></ruby>びます。
+    </p>
+
+    <p class="ko-main">
+      기분에 따라 듣는 음악을 바꾸며,
+      〇〇할 때에는 〇〇 같은 곡을 선택합니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>音楽<rt>おんがく</rt></ruby>には
+      <ruby>気持<rt>きも</rt></ruby>ちを
+      <ruby>切<rt>き</rt></ruby>り
+      <ruby>替<rt>か</rt></ruby>えたり、
+      <ruby>集中力<rt>しゅうちゅうりょく</rt></ruby>を
+      <ruby>高<rt>たか</rt></ruby>めたりする
+      <ruby>効果<rt>こうか</rt></ruby>があると
+      <ruby>感<rt>かん</rt></ruby>じています。
+    </p>
+
+    <p class="ko-main">
+      음악에는 기분을 전환하거나 집중력을 높이는 효과가 있다고 느낍니다.
+    </p>
+
+  </article>
+
+</div>
+
+
+<article class="content-card">
+
+  <h3>
+    <ruby>追加質問<rt>ついかしつもん</rt></ruby>
+    · 추가 질문
+  </h3>
+
+  <ol class="follow-list">
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">1</span>
+        <ruby>音楽<rt>おんがく</rt></ruby>を
+        <ruby>聴<rt>き</rt></ruby>くとき、
+        <ruby>歌詞<rt>かし</rt></ruby>と
+        メロディーのどちらを
+        より
+        <ruby>重視<rt>じゅうし</rt></ruby>しますか。
+      </p>
+
+      <p class="ko-main">
+        음악을 들을 때 가사와 멜로디 중 무엇을 더 중시합니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">2</span>
+        <ruby>勉強<rt>べんきょう</rt></ruby>、
+        <ruby>運動<rt>うんどう</rt></ruby>、
+        <ruby>休憩<rt>きゅうけい</rt></ruby>をするときに
+        <ruby>聴<rt>き</rt></ruby>く
+        <ruby>音楽<rt>おんがく</rt></ruby>は
+        それぞれ
+        <ruby>違<rt>ちが</rt></ruby>いますか。
+      </p>
+
+      <p class="ko-main">
+        공부, 운동, 휴식할 때 듣는 음악은 서로 다릅니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">3</span>
+        コンサートや
+        <ruby>音楽<rt>おんがく</rt></ruby>フェスに
+        <ruby>行<rt>い</rt></ruby>ったことがありますか。
+      </p>
+
+      <p class="ko-main">
+        콘서트나 음악 축제에 가 본 적이 있습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">4</span>
+        <ruby>昔<rt>むかし</rt></ruby>から
+        <ruby>好<rt>す</rt></ruby>きな
+        <ruby>曲<rt>きょく</rt></ruby>と、
+        <ruby>最近<rt>さいきん</rt></ruby>
+        <ruby>好<rt>す</rt></ruby>きになった
+        <ruby>曲<rt>きょく</rt></ruby>を
+        <ruby>教<rt>おし</rt></ruby>えてください。
+      </p>
+
+      <p class="ko-main">
+        예전부터 좋아한 곡과 최근 좋아하게 된 곡을 알려 주세요.
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">5</span>
+        <ruby>他<rt>ほか</rt></ruby>の
+        <ruby>参加者<rt>さんかしゃ</rt></ruby>に
+        一曲だけ
+        <ruby>勧<rt>すす</rt></ruby>めるとしたら、
+        どの
+        <ruby>曲<rt>きょく</rt></ruby>を
+        <ruby>選<rt>えら</rt></ruby>びますか。
+      </p>
+
+      <p class="ko-main">
+        다른 참가자에게 한 곡만 추천한다면 어떤 곡을 고르겠습니까?
+      </p>
+    </li>
+
+  </ol>
+
+</article>
+
+    <div class="two-column">
+
+      <article class="content-card">
+
+        <h3>
+          답변할 때 말해 볼 내용
+        </h3>
+
+        <ul class="hint-list">
+          <li>좋아하는 장르와 가수</li>
+          <li>최근 반복해서 듣는 곡</li>
+          <li>그 음악을 좋아하는 이유</li>
+          <li>음악을 듣는 시간과 장소</li>
+          <li>음악을 들을 때 느끼는 감정</li>
+        </ul>
+
+      </article>
+
+      <article class="content-card">
+
+        <h3>
+          대화를 이어 가는 질문
+        </h3>
+
+        <ol class="follow-list">
+
+          <li>
+            <span class="question-number">1</span>
+            가사와 멜로디 중 무엇을 더 중요하게 생각합니까?
+          </li>
+
+          <li>
+            <span class="question-number">2</span>
+            공부·운동·휴식할 때 듣는 음악이 서로 다릅니까?
+          </li>
+
+          <li>
+            <span class="question-number">3</span>
+            콘서트나 음악 축제에 가 본 적이 있습니까?
+          </li>
+
+          <li>
+            <span class="question-number">4</span>
+            예전부터 좋아한 음악과 최근 좋아하게 된 음악은 무엇입니까?
+          </li>
+
+          <li>
+            <span class="question-number">5</span>
+            다른 참가자에게 한 곡만 추천한다면 어떤 곡을 고르겠습니까?
+          </li>
+
+        </ol>
+
+      </article>
+
+    </div>
+
+    <aside class="alternative-box">
+
+      <h3>
+        음악을 자주 듣지 않는다면
+      </h3>
+
+      <p class="jp-main">
+        <ruby>音楽<rt>おんがく</rt></ruby>を
+        あまり
+        <ruby>聴<rt>き</rt></ruby>かない
+        <ruby>場合<rt>ばあい</rt></ruby>、
+        <ruby>静<rt>しず</rt></ruby>かな
+        <ruby>環境<rt>かんきょう</rt></ruby>のほうが
+        <ruby>好<rt>す</rt></ruby>きですか。
+      </p>
+
+      <p>
+        음악을 별로 듣지 않는다면 조용한 환경을 더 좋아합니까?
+      </p>
+
+    </aside>
+
+  </section>
+
+
+  <!-- =========================================
+       질문 3
+  ========================================== -->
+
+  <section class="slide" id="topic-03">
+
+    <span class="slide-label">
+      TOPIC 03 · LEARNING
+    </span>
+
+    <h2 class="slide-title">
+      취미로 배우고 있거나 배우고 싶은 것
+    </h2>
+
+    <div class="question-box">
+
+      <p class="jp-main">
+        <ruby>今<rt>いま</rt></ruby>、
+        <ruby>趣味<rt>しゅみ</rt></ruby>として
+        <ruby>習<rt>なら</rt></ruby>っていること、
+        またはこれから
+        <ruby>習<rt>なら</rt></ruby>ってみたいことは
+        ありますか。
+      </p>
+
+      <p class="ko-main">
+        지금 취미로 배우고 있는 것 또는
+        앞으로 배워 보고 싶은 것이 있습니까?
+      </p>
+
+    </div>
+
+    <!-- =====================================================
+     TOPIC 03 · LEARNING
+====================================================== -->
+
+<div class="two-column">
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N3 ANSWER FRAME
+    </span>
+
+    <h3>
+      N3 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私は
+      <ruby>今<rt>いま</rt></ruby>、
+      <ruby>趣味<rt>しゅみ</rt></ruby>として
+      〇〇を
+      <ruby>習<rt>なら</rt></ruby>っています。
+    </p>
+
+    <p class="ko-main">
+      저는 지금 취미로 〇〇를 배우고 있습니다.
+    </p>
+
+    <p class="jp-main">
+      〇〇がきっかけで
+      <ruby>始<rt>はじ</rt></ruby>めました。
+    </p>
+
+    <p class="ko-main">
+      〇〇를 계기로 시작했습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>特<rt>とく</rt></ruby>に
+      〇〇するところが
+      <ruby>楽<rt>たの</rt></ruby>しいです。
+    </p>
+
+    <p class="ko-main">
+      특히 〇〇하는 부분이 재미있습니다.
+    </p>
+
+    <p class="jp-main">
+      まだ〇〇は
+      <ruby>難<rt>むずか</rt></ruby>しいですが、
+      これからもっと
+      <ruby>上手<rt>じょうず</rt></ruby>になりたいです。
+    </p>
+
+    <p class="ko-main">
+      아직 〇〇는 어렵지만 앞으로 더 잘하고 싶습니다.
+    </p>
+
+  </article>
+
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N2 ANSWER FRAME
+    </span>
+
+    <h3>
+      N2 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私は
+      <ruby>現在<rt>げんざい</rt></ruby>、
+      <ruby>趣味<rt>しゅみ</rt></ruby>として
+      〇〇を
+      <ruby>学<rt>まな</rt></ruby>んでいます。
+    </p>
+
+    <p class="ko-main">
+      저는 현재 취미로 〇〇를 배우고 있습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>始<rt>はじ</rt></ruby>めた
+      <ruby>理由<rt>りゆう</rt></ruby>は、
+      〇〇を
+      <ruby>見<rt>み</rt></ruby>て
+      <ruby>興味<rt>きょうみ</rt></ruby>を
+      <ruby>持<rt>も</rt></ruby>ったからです。
+    </p>
+
+    <p class="ko-main">
+      시작한 이유는 〇〇를 보고 관심을 갖게 되었기 때문입니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>実際<rt>じっさい</rt></ruby>に
+      <ruby>始<rt>はじ</rt></ruby>めてみると、
+      〇〇という
+      <ruby>点<rt>てん</rt></ruby>が
+      <ruby>予想<rt>よそう</rt></ruby>していたよりも
+      <ruby>難<rt>むずか</rt></ruby>しいと
+      <ruby>感<rt>かん</rt></ruby>じました。
+    </p>
+
+    <p class="ko-main">
+      실제로 시작해 보니 〇〇라는 점이 예상보다 어렵다고 느꼈습니다.
+    </p>
+
+    <p class="jp-main">
+      しかし、
+      <ruby>練習<rt>れんしゅう</rt></ruby>を
+      <ruby>続<rt>つづ</rt></ruby>けるうちに、
+      <ruby>少<rt>すこ</rt></ruby>しずつ
+      <ruby>成長<rt>せいちょう</rt></ruby>を
+      <ruby>実感<rt>じっかん</rt></ruby>できるようになりました。
+    </p>
+
+    <p class="ko-main">
+      그러나 연습을 계속하면서 조금씩 성장하고 있음을 실감하게 되었습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>将来<rt>しょうらい</rt></ruby>は、
+      〇〇ができる
+      <ruby>程度<rt>ていど</rt></ruby>まで
+      <ruby>上達<rt>じょうたつ</rt></ruby>したいと
+      <ruby>考<rt>かんが</rt></ruby>えています。
+    </p>
+
+    <p class="ko-main">
+      앞으로는 〇〇를 할 수 있을 정도까지 실력을 키우고 싶습니다.
+    </p>
+
+  </article>
+
+</div>
+
+
+<article class="content-card">
+
+  <h3>
+    <ruby>追加質問<rt>ついかしつもん</rt></ruby>
+    · 추가 질문
+  </h3>
+
+  <ol class="follow-list">
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">1</span>
+        いつから
+        <ruby>習<rt>なら</rt></ruby>い
+        <ruby>始<rt>はじ</rt></ruby>めましたか。
+      </p>
+
+      <p class="ko-main">
+        언제부터 배우기 시작했습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">2</span>
+        一週間にどのくらい
+        <ruby>練習<rt>れんしゅう</rt></ruby>していますか。
+      </p>
+
+      <p class="ko-main">
+        일주일에 어느 정도 연습합니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">3</span>
+        <ruby>一人<rt>ひとり</rt></ruby>で
+        <ruby>学<rt>まな</rt></ruby>ぶことと、
+        <ruby>先生<rt>せんせい</rt></ruby>に
+        <ruby>習<rt>なら</rt></ruby>うことでは、
+        どちらが
+        <ruby>自分<rt>じぶん</rt></ruby>に
+        <ruby>合<rt>あ</rt></ruby>っていると
+        <ruby>思<rt>おも</rt></ruby>いますか。
+      </p>
+
+      <p class="ko-main">
+        혼자 배우는 것과 선생님에게 배우는 것 중 어느 쪽이 자신에게 맞습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">4</span>
+        <ruby>途中<rt>とちゅう</rt></ruby>で
+        やめてしまった
+        <ruby>趣味<rt>しゅみ</rt></ruby>はありますか。
+      </p>
+
+      <p class="ko-main">
+        중간에 그만둔 취미가 있습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">5</span>
+        <ruby>時間<rt>じかん</rt></ruby>と
+        お
+        <ruby>金<rt>かね</rt></ruby>が
+        <ruby>十分<rt>じゅうぶん</rt></ruby>にあれば、
+        <ruby>何<rt>なに</rt></ruby>を
+        <ruby>専門的<rt>せんもんてき</rt></ruby>に
+        <ruby>学<rt>まな</rt></ruby>びたいですか。
+      </p>
+
+      <p class="ko-main">
+        시간과 돈이 충분하다면 무엇을 전문적으로 배우고 싶습니까?
+      </p>
+    </li>
+
+  </ol>
+
+</article>
+
+
+    <div class="two-column">
+
+      <article class="content-card">
+
+        <h3>
+          답변할 때 말해 볼 내용
+        </h3>
+
+        <ul class="hint-list">
+          <li>배우고 있는 것 또는 배우고 싶은 것</li>
+          <li>그것을 선택한 계기</li>
+          <li>혼자 배우는지 수업을 듣는지</li>
+          <li>재미있는 부분과 어려운 부분</li>
+          <li>도달하고 싶은 목표</li>
+        </ul>
+
+      </article>
+
+      <article class="content-card">
+
+        <h3>
+          대화를 이어 가는 질문
+        </h3>
+
+        <ol class="follow-list">
+
+          <li>
+            <span class="question-number">1</span>
+            언제부터 배우기 시작했습니까?
+          </li>
+
+          <li>
+            <span class="question-number">2</span>
+            일주일에 얼마나 자주 연습합니까?
+          </li>
+
+          <li>
+            <span class="question-number">3</span>
+            혼자 배우는 것과 선생님에게 배우는 것 중 어느 쪽이 좋습니까?
+          </li>
+
+          <li>
+            <span class="question-number">4</span>
+            배우다가 포기했던 취미가 있습니까?
+          </li>
+
+          <li>
+            <span class="question-number">5</span>
+            시간과 돈이 충분하다면 어떤 것을 전문적으로 배우고 싶습니까?
+          </li>
+
+        </ol>
+
+      </article>
+
+    </div>
+
+    <aside class="alternative-box">
+
+      <h3>
+        현재 배우는 취미가 없다면
+      </h3>
+
+      <p class="jp-main">
+        まだ
+        <ruby>始<rt>はじ</rt></ruby>めていなくても、
+        いつか
+        <ruby>挑戦<rt>ちょうせん</rt></ruby>してみたいことは
+        ありますか。
+      </p>
+
+      <p>
+        아직 시작하지 않았더라도 언젠가 도전해 보고 싶은 것이 있습니까?
+      </p>
+
+    </aside>
+
+  </section>
+
+
+  <!-- =========================================
+       질문 4
+  ========================================== -->
+
+  <section class="slide" id="topic-04">
+
+    <span class="slide-label">
+      TOPIC 04 · SCREEN
+    </span>
+
+    <h2 class="slide-title">
+      좋아하는 드라마·영화·예능
+    </h2>
+
+    <div class="question-box">
+
+      <p class="jp-main">
+        <ruby>好<rt>す</rt></ruby>きなドラマ、
+        <ruby>映画<rt>えいが</rt></ruby>、
+        またはバラエティー
+        <ruby>番組<rt>ばんぐみ</rt></ruby>はありますか。
+      </p>
+
+      <p class="ko-main">
+        좋아하는 드라마, 영화 또는 예능 프로그램이 있습니까?
+      </p>
+
+    </div>
+    <!-- =====================================================
+     TOPIC 04 · DRAMA / MOVIE / VARIETY
+====================================================== -->
+
+<div class="two-column">
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N3 ANSWER FRAME
+    </span>
+
+    <h3>
+      N3 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私が
+      <ruby>好<rt>す</rt></ruby>きな
+      <ruby>作品<rt>さくひん</rt></ruby>は
+      「〇〇」です。
+    </p>
+
+    <p class="ko-main">
+      제가 좋아하는 작품은 ‘〇〇’입니다.
+    </p>
+
+    <p class="jp-main">
+      この
+      <ruby>作品<rt>さくひん</rt></ruby>は、
+      〇〇についての
+      <ruby>話<rt>はなし</rt></ruby>です。
+    </p>
+
+    <p class="ko-main">
+      이 작품은 〇〇에 관한 이야기입니다.
+    </p>
+
+    <p class="jp-main">
+      私は〇〇という
+      キャラクターが
+      <ruby>好<rt>す</rt></ruby>きです。
+    </p>
+
+    <p class="ko-main">
+      저는 〇〇라는 캐릭터를 좋아합니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>特<rt>とく</rt></ruby>に
+      〇〇の
+      <ruby>場面<rt>ばめん</rt></ruby>が
+      <ruby>印象<rt>いんしょう</rt></ruby>に
+      <ruby>残<rt>のこ</rt></ruby>りました。
+    </p>
+
+    <p class="ko-main">
+      특히 〇〇 장면이 기억에 남았습니다.
+    </p>
+
+  </article>
+
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N2 ANSWER FRAME
+    </span>
+
+    <h3>
+      N2 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私が
+      <ruby>最近<rt>さいきん</rt></ruby>
+      <ruby>特<rt>とく</rt></ruby>に
+      <ruby>気<rt>き</rt></ruby>に
+      <ruby>入<rt>い</rt></ruby>っている
+      <ruby>作品<rt>さくひん</rt></ruby>は
+      「〇〇」です。
+    </p>
+
+    <p class="ko-main">
+      제가 최근 특히 마음에 들어 하는 작품은 ‘〇〇’입니다.
+    </p>
+
+    <p class="jp-main">
+      この
+      <ruby>作品<rt>さくひん</rt></ruby>は、
+      〇〇をテーマにした
+      〇〇ジャンルの
+      <ruby>作品<rt>さくひん</rt></ruby>です。
+    </p>
+
+    <p class="ko-main">
+      이 작품은 〇〇를 주제로 한 〇〇 장르의 작품입니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>単<rt>たん</rt></ruby>に
+      <ruby>物語<rt>ものがたり</rt></ruby>が
+      <ruby>面白<rt>おもしろ</rt></ruby>いだけでなく、
+      キャラクターの
+      <ruby>感情<rt>かんじょう</rt></ruby>や
+      <ruby>関係<rt>かんけい</rt></ruby>が
+      <ruby>丁寧<rt>ていねい</rt></ruby>に
+      <ruby>描<rt>えが</rt></ruby>かれている
+      <ruby>点<rt>てん</rt></ruby>に
+      <ruby>魅力<rt>みりょく</rt></ruby>を
+      <ruby>感<rt>かん</rt></ruby>じました。
+    </p>
+
+    <p class="ko-main">
+      단순히 이야기가 재미있는 것뿐 아니라,
+      캐릭터의 감정과 관계가 세심하게 그려졌다는 점에 매력을 느꼈습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>特<rt>とく</rt></ruby>に
+      〇〇の
+      <ruby>場面<rt>ばめん</rt></ruby>は、
+      〇〇という
+      <ruby>意味<rt>いみ</rt></ruby>で
+      <ruby>強<rt>つよ</rt></ruby>く
+      <ruby>印象<rt>いんしょう</rt></ruby>に
+      <ruby>残<rt>のこ</rt></ruby>っています。
+    </p>
+
+    <p class="ko-main">
+      특히 〇〇 장면은 〇〇라는 의미에서 강하게 기억에 남았습니다.
+    </p>
+
+    <p class="jp-main">
+      〇〇が
+      <ruby>好<rt>す</rt></ruby>きな
+      <ruby>人<rt>ひと</rt></ruby>には、
+      ぜひ
+      <ruby>勧<rt>すす</rt></ruby>めたい
+      <ruby>作品<rt>さくひん</rt></ruby>です。
+    </p>
+
+    <p class="ko-main">
+      〇〇를 좋아하는 사람에게 꼭 추천하고 싶은 작품입니다.
+    </p>
+
+  </article>
+
+</div>
+
+
+<article class="content-card">
+
+  <h3>
+    <ruby>追加質問<rt>ついかしつもん</rt></ruby>
+    · 추가 질문
+  </h3>
+
+  <ol class="follow-list">
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">1</span>
+        <ruby>最初<rt>さいしょ</rt></ruby>から
+        <ruby>面白<rt>おもしろ</rt></ruby>いと
+        <ruby>感<rt>かん</rt></ruby>じましたか。
+        それとも、
+        <ruby>見<rt>み</rt></ruby>るうちに
+        <ruby>好<rt>す</rt></ruby>きになりましたか。
+      </p>
+
+      <p class="ko-main">
+        처음부터 재미있었습니까, 아니면 보면서 점점 좋아졌습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">2</span>
+        <ruby>結末<rt>けつまつ</rt></ruby>に
+        <ruby>満足<rt>まんぞく</rt></ruby>しましたか。
+      </p>
+
+      <p class="ko-main">
+        결말에 만족했습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">3</span>
+        <ruby>自分<rt>じぶん</rt></ruby>と
+        <ruby>似<rt>に</rt></ruby>ていると
+        <ruby>感<rt>かん</rt></ruby>じた
+        キャラクターはいますか。
+      </p>
+
+      <p class="ko-main">
+        자신과 닮았다고 느낀 캐릭터가 있습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">4</span>
+        <ruby>韓国<rt>かんこく</rt></ruby>の
+        <ruby>作品<rt>さくひん</rt></ruby>と
+        <ruby>日本<rt>にほん</rt></ruby>の
+        <ruby>作品<rt>さくひん</rt></ruby>には、
+        どのような
+        <ruby>違<rt>ちが</rt></ruby>いがあると
+        <ruby>思<rt>おも</rt></ruby>いますか。
+      </p>
+
+      <p class="ko-main">
+        한국 작품과 일본 작품에는 어떤 차이가 있다고 생각합니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">5</span>
+        その
+        <ruby>作品<rt>さくひん</rt></ruby>を
+        もう
+        <ruby>一度<rt>いちど</rt></ruby>
+        <ruby>見<rt>み</rt></ruby>たいと
+        <ruby>思<rt>おも</rt></ruby>いますか。
+      </p>
+
+      <p class="ko-main">
+        그 작품을 다시 보고 싶습니까?
+      </p>
+    </li>
+
+  </ol>
+
+</article>
+
+
+
+    <div class="two-column">
+
+      <article class="content-card">
+
+        <h3>
+          답변할 때 말해 볼 내용
+        </h3>
+
+        <ul class="hint-list">
+          <li>작품이나 프로그램의 제목</li>
+          <li>장르와 기본적인 내용</li>
+          <li>좋아하는 캐릭터나 출연자</li>
+          <li>특히 기억에 남은 장면</li>
+          <li>다른 사람에게 추천하고 싶은 이유</li>
+        </ul>
+
+      </article>
+
+      <article class="content-card">
+
+        <h3>
+          대화를 이어 가는 질문
+        </h3>
+
+        <ol class="follow-list">
+
+          <li>
+            <span class="question-number">1</span>
+            처음부터 재미있었습니까, 아니면 보면서 점점 좋아졌습니까?
+          </li>
+
+          <li>
+            <span class="question-number">2</span>
+            결말에 만족했습니까?
+          </li>
+
+          <li>
+            <span class="question-number">3</span>
+            자신과 비슷하다고 느낀 캐릭터가 있습니까?
+          </li>
+
+          <li>
+            <span class="question-number">4</span>
+            한국 작품과 일본 작품에는 어떤 차이가 있다고 생각합니까?
+          </li>
+
+          <li>
+            <span class="question-number">5</span>
+            다시 보고 싶은 작품입니까?
+          </li>
+
+        </ol>
+
+      </article>
+
+    </div>
+
+    <aside class="alternative-box">
+
+      <h3>
+        드라마와 영화를 자주 보지 않는다면
+      </h3>
+
+      <p class="jp-main">
+        ドラマや
+        <ruby>映画<rt>えいが</rt></ruby>を
+        あまり
+        <ruby>見<rt>み</rt></ruby>ない
+        <ruby>場合<rt>ばあい</rt></ruby>、
+        どのような
+        <ruby>娯楽<rt>ごらく</rt></ruby>を
+        <ruby>楽<rt>たの</rt></ruby>しんでいますか。
+      </p>
+
+      <p>
+        드라마나 영화를 잘 보지 않는다면 어떤 오락을 즐깁니까?
+      </p>
+
+    </aside>
+
+  </section>
+
+
+  <!-- =========================================
+       질문 5
+  ========================================== -->
+
+  <section class="slide" id="topic-05">
+
+    <span class="slide-label">
+      TOPIC 05 · EXPERIENCE
+    </span>
+
+    <h2 class="slide-title">
+      최근 가장 즐거웠던 취미 경험
+    </h2>
+
+    <div class="question-box">
+
+      <p class="jp-main">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>趣味<rt>しゅみ</rt></ruby>に
+        <ruby>関<rt>かん</rt></ruby>して
+        <ruby>最<rt>もっと</rt></ruby>も
+        <ruby>楽<rt>たの</rt></ruby>しかった
+        <ruby>経験<rt>けいけん</rt></ruby>は
+        <ruby>何<rt>なん</rt></ruby>ですか。
+      </p>
+
+      <p class="ko-main">
+        최근 취미와 관련하여 가장 즐거웠던 경험은 무엇입니까?
+      </p>
+
+    </div>
+
+    <!-- =====================================================
+     TOPIC 05 · HOBBY EXPERIENCE
+====================================================== -->
+
+<div class="two-column">
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N3 ANSWER FRAME
+    </span>
+
+    <h3>
+      N3 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      <ruby>最近<rt>さいきん</rt></ruby>、
+      〇〇をしたことが
+      <ruby>最<rt>もっと</rt></ruby>も
+      <ruby>楽<rt>たの</rt></ruby>しかったです。
+    </p>
+
+    <p class="ko-main">
+      최근 〇〇를 한 것이 가장 즐거웠습니다.
+    </p>
+
+    <p class="jp-main">
+      〇〇で、
+      〇〇と
+      <ruby>一緒<rt>いっしょ</rt></ruby>に
+      <ruby>楽<rt>たの</rt></ruby>しみました。
+    </p>
+
+    <p class="ko-main">
+      〇〇에서 〇〇와 함께 즐겼습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>特<rt>とく</rt></ruby>に
+      〇〇したことが
+      <ruby>面白<rt>おもしろ</rt></ruby>かったです。
+    </p>
+
+    <p class="ko-main">
+      특히 〇〇한 것이 재미있었습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>機会<rt>きかい</rt></ruby>があれば、
+      もう
+      <ruby>一度<rt>いちど</rt></ruby>
+      やってみたいです。
+    </p>
+
+    <p class="ko-main">
+      기회가 있다면 다시 한번 해 보고 싶습니다.
+    </p>
+
+  </article>
+
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N2 ANSWER FRAME
+    </span>
+
+    <h3>
+      N2 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      <ruby>最近<rt>さいきん</rt></ruby>の
+      <ruby>趣味<rt>しゅみ</rt></ruby>に
+      <ruby>関<rt>かん</rt></ruby>する
+      <ruby>経験<rt>けいけん</rt></ruby>の
+      <ruby>中<rt>なか</rt></ruby>で、
+      <ruby>最<rt>もっと</rt></ruby>も
+      <ruby>印象<rt>いんしょう</rt></ruby>に
+      <ruby>残<rt>のこ</rt></ruby>っているのは
+      〇〇です。
+    </p>
+
+    <p class="ko-main">
+      최근 취미와 관련된 경험 중 가장 기억에 남는 것은 〇〇입니다.
+    </p>
+
+    <p class="jp-main">
+      〇〇で、
+      〇〇と
+      <ruby>一緒<rt>いっしょ</rt></ruby>に
+      <ruby>参加<rt>さんか</rt></ruby>しました。
+    </p>
+
+    <p class="ko-main">
+      〇〇에서 〇〇와 함께 참여했습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>始<rt>はじ</rt></ruby>める
+      <ruby>前<rt>まえ</rt></ruby>は
+      〇〇だと
+      <ruby>思<rt>おも</rt></ruby>っていましたが、
+      <ruby>実際<rt>じっさい</rt></ruby>には
+      〇〇だったので
+      <ruby>驚<rt>おどろ</rt></ruby>きました。
+    </p>
+
+    <p class="ko-main">
+      시작하기 전에는 〇〇라고 생각했지만,
+      실제로는 〇〇해서 놀랐습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>特<rt>とく</rt></ruby>に
+      〇〇の
+      <ruby>瞬間<rt>しゅんかん</rt></ruby>は、
+      〇〇という
+      <ruby>理由<rt>りゆう</rt></ruby>で
+      <ruby>強<rt>つよ</rt></ruby>く
+      <ruby>記憶<rt>きおく</rt></ruby>に
+      <ruby>残<rt>のこ</rt></ruby>っています。
+    </p>
+
+    <p class="ko-main">
+      특히 〇〇의 순간은 〇〇라는 이유로 강하게 기억에 남아 있습니다.
+    </p>
+
+    <p class="jp-main">
+      この
+      <ruby>経験<rt>けいけん</rt></ruby>を
+      <ruby>通<rt>とお</rt></ruby>して、
+      〇〇という
+      <ruby>趣味<rt>しゅみ</rt></ruby>を
+      さらに
+      <ruby>好<rt>す</rt></ruby>きになりました。
+    </p>
+
+    <p class="ko-main">
+      이 경험을 통해 〇〇라는 취미를 더욱 좋아하게 되었습니다.
+    </p>
+
+  </article>
+
+</div>
+
+
+<article class="content-card">
+
+  <h3>
+    <ruby>追加質問<rt>ついかしつもん</rt></ruby>
+    · 추가 질문
+  </h3>
+
+  <ol class="follow-list">
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">1</span>
+        その
+        <ruby>経験<rt>けいけん</rt></ruby>をする
+        <ruby>前<rt>まえ</rt></ruby>に、
+        どのようなことを
+        <ruby>期待<rt>きたい</rt></ruby>していましたか。
+      </p>
+
+      <p class="ko-main">
+        그 경험을 하기 전에 어떤 것을 기대했습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">2</span>
+        <ruby>最<rt>もっと</rt></ruby>も
+        <ruby>記憶<rt>きおく</rt></ruby>に
+        <ruby>残<rt>のこ</rt></ruby>っている
+        <ruby>瞬間<rt>しゅんかん</rt></ruby>は
+        いつですか。
+      </p>
+
+      <p class="ko-main">
+        가장 기억에 남는 순간은 언제입니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">3</span>
+        その
+        <ruby>経験<rt>けいけん</rt></ruby>を
+        <ruby>他<rt>ほか</rt></ruby>の
+        <ruby>人<rt>ひと</rt></ruby>にも
+        <ruby>勧<rt>すす</rt></ruby>めたいですか。
+      </p>
+
+      <p class="ko-main">
+        그 경험을 다른 사람에게도 추천하고 싶습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">4</span>
+        <ruby>同<rt>おな</rt></ruby>じ
+        <ruby>活動<rt>かつどう</rt></ruby>を
+        もう
+        <ruby>一度<rt>いちど</rt></ruby>するとしたら、
+        <ruby>何<rt>なに</rt></ruby>を
+        <ruby>変<rt>か</rt></ruby>えたいですか。
+      </p>
+
+      <p class="ko-main">
+        같은 활동을 다시 한다면 무엇을 바꾸고 싶습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">5</span>
+        その
+        <ruby>経験<rt>けいけん</rt></ruby>を
+        きっかけに、
+        その
+        <ruby>趣味<rt>しゅみ</rt></ruby>を
+        もっと
+        <ruby>好<rt>す</rt></ruby>きになりましたか。
+      </p>
+
+      <p class="ko-main">
+        그 경험을 계기로 해당 취미를 더 좋아하게 되었습니까?
+      </p>
+    </li>
+
+  </ol>
+
+</article>
+
+
+
+    <div class="two-column">
+
+      <article class="content-card">
+
+        <h3>
+          답변할 때 말해 볼 내용
+        </h3>
+
+        <ul class="hint-list">
+          <li>언제 어디에서 한 경험인지</li>
+          <li>혼자 했는지 다른 사람과 함께했는지</li>
+          <li>무엇이 특히 재미있었는지</li>
+          <li>예상과 달랐던 점</li>
+          <li>다시 하고 싶은지</li>
+        </ul>
+
+      </article>
+
+      <article class="content-card">
+
+        <h3>
+          대화를 이어 가는 질문
+        </h3>
+
+        <ol class="follow-list">
+
+          <li>
+            <span class="question-number">1</span>
+            그 경험을 하기 전에 기대했던 것은 무엇입니까?
+          </li>
+
+          <li>
+            <span class="question-number">2</span>
+            가장 기억에 남는 순간은 언제입니까?
+          </li>
+
+          <li>
+            <span class="question-number">3</span>
+            다른 사람에게도 추천하고 싶습니까?
+          </li>
+
+          <li>
+            <span class="question-number">4</span>
+            같은 활동을 다시 한다면 무엇을 다르게 하고 싶습니까?
+          </li>
+
+          <li>
+            <span class="question-number">5</span>
+            그 경험 때문에 해당 취미를 더 좋아하게 되었습니까?
+          </li>
+
+        </ol>
+
+      </article>
+
+    </div>
+
+    <aside class="alternative-box">
+
+      <h3>
+        최근 특별한 경험이 없다면
+      </h3>
+
+      <p class="jp-main">
+        <ruby>最近<rt>さいきん</rt></ruby>ではなくても、
+        これまでで
+        <ruby>特<rt>とく</rt></ruby>に
+        <ruby>記憶<rt>きおく</rt></ruby>に
+        <ruby>残<rt>のこ</rt></ruby>っている
+        <ruby>趣味<rt>しゅみ</rt></ruby>の
+        <ruby>経験<rt>けいけん</rt></ruby>はありますか。
+      </p>
+
+      <p>
+        최근이 아니더라도 지금까지 특히 기억에 남는 취미 경험이 있습니까?
+      </p>
+
+    </aside>
+
+  </section>
+
+
+  <!-- =========================================
+       질문 6
+  ========================================== -->
+
+  <section class="slide" id="topic-06">
+
+    <span class="slide-label">
+      TOPIC 06 · NEW HOBBY
+    </span>
+
+    <h2 class="slide-title">
+      새롭게 시작하고 싶은 취미
+    </h2>
+
+    <div class="question-box">
+
+      <p class="jp-main">
+        <ruby>時間<rt>じかん</rt></ruby>や
+        お
+        <ruby>金<rt>かね</rt></ruby>に
+        <ruby>余裕<rt>よゆう</rt></ruby>があれば、
+        <ruby>新<rt>あたら</rt></ruby>しく
+        <ruby>始<rt>はじ</rt></ruby>めたい
+        <ruby>趣味<rt>しゅみ</rt></ruby>は
+        <ruby>何<rt>なん</rt></ruby>ですか。
+      </p>
+
+      <p class="ko-main">
+        시간과 돈에 여유가 있다면 새로 시작하고 싶은 취미는 무엇입니까?
+      </p>
+
+    </div>
+
+    <!-- =====================================================
+     TOPIC 06 · NEW HOBBY
+====================================================== -->
+
+<div class="two-column">
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N3 ANSWER FRAME
+    </span>
+
+    <h3>
+      N3 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      私は
+      〇〇を
+      <ruby>新<rt>あたら</rt></ruby>しい
+      <ruby>趣味<rt>しゅみ</rt></ruby>として
+      <ruby>始<rt>はじ</rt></ruby>めたいです。
+    </p>
+
+    <p class="ko-main">
+      저는 〇〇를 새로운 취미로 시작하고 싶습니다.
+    </p>
+
+    <p class="jp-main">
+      〇〇を
+      <ruby>見<rt>み</rt></ruby>て、
+      <ruby>興味<rt>きょうみ</rt></ruby>を
+      <ruby>持<rt>も</rt></ruby>ちました。
+    </p>
+
+    <p class="ko-main">
+      〇〇를 보고 관심을 갖게 되었습니다.
+    </p>
+
+    <p class="jp-main">
+      まだ
+      <ruby>始<rt>はじ</rt></ruby>めていない
+      <ruby>理由<rt>りゆう</rt></ruby>は、
+      〇〇だからです。
+    </p>
+
+    <p class="ko-main">
+      아직 시작하지 않은 이유는 〇〇이기 때문입니다.
+    </p>
+
+    <p class="jp-main">
+      いつか〇〇ができるようになりたいです。
+    </p>
+
+    <p class="ko-main">
+      언젠가 〇〇를 할 수 있게 되고 싶습니다.
+    </p>
+
+  </article>
+
+
+  <article class="content-card">
+
+    <span class="slide-label">
+      N2 ANSWER FRAME
+    </span>
+
+    <h3>
+      N2 수준 답변 틀
+    </h3>
+
+    <p class="jp-main">
+      <ruby>時間<rt>じかん</rt></ruby>や
+      お
+      <ruby>金<rt>かね</rt></ruby>に
+      <ruby>余裕<rt>よゆう</rt></ruby>があれば、
+      〇〇を
+      <ruby>新<rt>あたら</rt></ruby>しい
+      <ruby>趣味<rt>しゅみ</rt></ruby>として
+      <ruby>始<rt>はじ</rt></ruby>めてみたいです。
+    </p>
+
+    <p class="ko-main">
+      시간과 돈에 여유가 있다면 〇〇를 새로운 취미로 시작해 보고 싶습니다.
+    </p>
+
+    <p class="jp-main">
+      〇〇を
+      <ruby>知<rt>し</rt></ruby>ったことが
+      きっかけで
+      <ruby>興味<rt>きょうみ</rt></ruby>を
+      <ruby>持<rt>も</rt></ruby>つようになりました。
+    </p>
+
+    <p class="ko-main">
+      〇〇를 알게 된 것을 계기로 관심을 갖게 되었습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>以前<rt>いぜん</rt></ruby>から
+      <ruby>始<rt>はじ</rt></ruby>めたいとは
+      <ruby>思<rt>おも</rt></ruby>っているものの、
+      〇〇という
+      <ruby>理由<rt>りゆう</rt></ruby>で
+      まだ
+      <ruby>実行<rt>じっこう</rt></ruby>できていません。
+    </p>
+
+    <p class="ko-main">
+      예전부터 시작하고 싶다고 생각했지만,
+      〇〇라는 이유로 아직 실행하지 못하고 있습니다.
+    </p>
+
+    <p class="jp-main">
+      この
+      <ruby>趣味<rt>しゅみ</rt></ruby>を
+      <ruby>通<rt>とお</rt></ruby>して、
+      〇〇を
+      <ruby>身<rt>み</rt></ruby>につけたり、
+      〇〇を
+      <ruby>経験<rt>けいけん</rt></ruby>したりしたいです。
+    </p>
+
+    <p class="ko-main">
+      이 취미를 통해 〇〇를 익히거나 〇〇를 경험하고 싶습니다.
+    </p>
+
+    <p class="jp-main">
+      <ruby>最初<rt>さいしょ</rt></ruby>は
+      <ruby>無理<rt>むり</rt></ruby>のない
+      <ruby>範囲<rt>はんい</rt></ruby>で
+      <ruby>始<rt>はじ</rt></ruby>め、
+      <ruby>少<rt>すこ</rt></ruby>しずつ
+      <ruby>続<rt>つづ</rt></ruby>けていきたいと
+      <ruby>考<rt>かんが</rt></ruby>えています。
+    </p>
+
+    <p class="ko-main">
+      처음에는 무리하지 않는 범위에서 시작해 조금씩 계속하고 싶습니다.
+    </p>
+
+  </article>
+
+</div>
+
+
+<article class="content-card">
+
+  <h3>
+    <ruby>追加質問<rt>ついかしつもん</rt></ruby>
+    · 추가 질문
+  </h3>
+
+  <ol class="follow-list">
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">1</span>
+        <ruby>一人<rt>ひとり</rt></ruby>で
+        <ruby>始<rt>はじ</rt></ruby>めたいですか。
+        それとも、
+        <ruby>誰<rt>だれ</rt></ruby>かと
+        <ruby>一緒<rt>いっしょ</rt></ruby>に
+        <ruby>始<rt>はじ</rt></ruby>めたいですか。
+      </p>
+
+      <p class="ko-main">
+        혼자 시작하고 싶습니까, 아니면 누군가와 함께 시작하고 싶습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">2</span>
+        <ruby>新<rt>あたら</rt></ruby>しい
+        <ruby>趣味<rt>しゅみ</rt></ruby>を
+        <ruby>始<rt>はじ</rt></ruby>めるとき、
+        <ruby>時間<rt>じかん</rt></ruby>と
+        <ruby>費用<rt>ひよう</rt></ruby>の
+        どちらが
+        <ruby>大<rt>おお</rt></ruby>きな
+        <ruby>問題<rt>もんだい</rt></ruby>になりますか。
+      </p>
+
+      <p class="ko-main">
+        새로운 취미를 시작할 때 시간과 비용 중 무엇이 더 큰 문제입니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">3</span>
+        どの
+        <ruby>程度<rt>ていど</rt></ruby>まで
+        <ruby>上達<rt>じょうたつ</rt></ruby>したいですか。
+      </p>
+
+      <p class="ko-main">
+        어느 정도까지 실력을 키우고 싶습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">4</span>
+        その
+        <ruby>趣味<rt>しゅみ</rt></ruby>を
+        <ruby>将来<rt>しょうらい</rt></ruby>
+        <ruby>仕事<rt>しごと</rt></ruby>に
+        <ruby>発展<rt>はってん</rt></ruby>させたいと
+        <ruby>思<rt>おも</rt></ruby>いますか。
+      </p>
+
+      <p class="ko-main">
+        그 취미를 장래에 직업으로 발전시키고 싶습니까?
+      </p>
+    </li>
+
+    <li>
+      <p class="jp-main">
+        <span class="question-number">5</span>
+        <ruby>今日<rt>きょう</rt></ruby>から
+        <ruby>始<rt>はじ</rt></ruby>められるとしたら、
+        <ruby>最初<rt>さいしょ</rt></ruby>に
+        <ruby>何<rt>なに</rt></ruby>をしますか。
+      </p>
+
+      <p class="ko-main">
+        오늘부터 시작할 수 있다면 가장 먼저 무엇을 하겠습니까?
+      </p>
+    </li>
+
+  </ol>
+
+</article>
+
+    <div class="two-column">
+
+      <article class="content-card">
+
+        <h3>
+          답변할 때 말해 볼 내용
+        </h3>
+
+        <ul class="hint-list">
+          <li>새롭게 시작하고 싶은 활동</li>
+          <li>관심을 갖게 된 계기</li>
+          <li>아직 시작하지 못한 이유</li>
+          <li>필요한 시간과 비용</li>
+          <li>그 취미를 통해 얻고 싶은 것</li>
+        </ul>
+
+      </article>
+
+      <article class="content-card">
+
+        <h3>
+          대화를 이어 가는 질문
+        </h3>
+
+        <ol class="follow-list">
+
+          <li>
+            <span class="question-number">1</span>
+            혼자 하고 싶습니까, 다른 사람과 함께하고 싶습니까?
+          </li>
+
+          <li>
+            <span class="question-number">2</span>
+            취미를 시작할 때 비용과 시간 중 무엇이 더 큰 문제입니까?
+          </li>
+
+          <li>
+            <span class="question-number">3</span>
+            실력을 어느 정도까지 키우고 싶습니까?
+          </li>
+
+          <li>
+            <span class="question-number">4</span>
+            그 취미를 직업으로 발전시키고 싶은 생각도 있습니까?
+          </li>
+
+          <li>
+            <span class="question-number">5</span>
+            오늘 당장 시작할 수 있다면 가장 먼저 무엇을 하겠습니까?
+          </li>
+
+        </ol>
+
+      </article>
+
+    </div>
+
+    <aside class="alternative-box">
+
+      <h3>
+        새로운 취미가 떠오르지 않는다면
+      </h3>
+
+      <p class="jp-main">
+        <ruby>今<rt>いま</rt></ruby>の
+        <ruby>趣味<rt>しゅみ</rt></ruby>を
+        もっと
+        <ruby>深<rt>ふか</rt></ruby>く
+        <ruby>楽<rt>たの</rt></ruby>しむために、
+        どのようなことをしてみたいですか。
+      </p>
+
+      <p>
+        현재 취미를 더 깊이 즐기기 위해 무엇을 해 보고 싶습니까?
+      </p>
+
+    </aside>
+
+  </section>
+
+
+  <!-- =========================================
+       마무리
+  ========================================== -->
+
+  <section class="slide" id="closing">
+
+    <span class="slide-label">
+      CLOSING TALK
+    </span>
+
+    <h2 class="slide-title">
+      오늘의 대화를 정리해 봅시다
+    </h2>
+
+    <div class="ending-box">
+
+      <p class="jp-main">
+        <ruby>今日<rt>きょう</rt></ruby>
+        <ruby>聞<rt>き</rt></ruby>いた
+        <ruby>話<rt>はなし</rt></ruby>の
+        <ruby>中<rt>なか</rt></ruby>で、
+        <ruby>最<rt>もっと</rt></ruby>も
+        <ruby>興味深<rt>きょうみぶか</rt></ruby>かったものは
+        <ruby>何<rt>なん</rt></ruby>ですか。
+      </p>
+
+      <p class="ko-main">
+        오늘 들은 이야기 중 가장 흥미로웠던 것은 무엇입니까?
+      </p>
+
+      <p class="jp-main">
+        <ruby>今日<rt>きょう</rt></ruby>の
+        <ruby>会話<rt>かいわ</rt></ruby>を
+        <ruby>通<rt>とお</rt></ruby>して、
+        <ruby>新<rt>あたら</rt></ruby>しく
+        <ruby>興味<rt>きょうみ</rt></ruby>を
+        <ruby>持<rt>も</rt></ruby>った
+        <ruby>趣味<rt>しゅみ</rt></ruby>はありますか。
+      </p>
+
+      <p class="ko-main">
+        오늘의 대화를 통해 새롭게 관심을 갖게 된 취미가 있습니까?
+      </p>
+
+      <p class="jp-main">
+        <ruby>次回<rt>じかい</rt></ruby>、
+        もっと
+        <ruby>詳<rt>くわ</rt></ruby>しく
+        <ruby>話<rt>はな</rt></ruby>してみたい
+        テーマはありますか。
+      </p>
+
+      <p class="ko-main">
+        다음 모임에서 더 자세히 이야기해 보고 싶은 주제가 있습니까?
+      </p>
+
+    </div>
+
+  </section>
+<!-- =====================================================
+     3차 루프
+     topic-06 뒤, closing 앞에 삽입
+====================================================== -->
+
+
+<!-- =====================================================
+     공통 회화 표현
+====================================================== -->
+
+<section class="slide" id="common-expressions">
+
+  <span class="slide-label">
+    USEFUL EXPRESSIONS
+  </span>
+
+  <h2 class="slide-title">
+    대화를 이어 가는 공통 일본어 표현
+  </h2>
+
+  <p class="slide-subtitle">
+    답변을 시작하거나 상대방에게 추가로 질문할 때
+    아래 표현을 활용해 보세요.
+  </p>
+
+
+  <div class="two-column">
+
+    <article class="content-card">
+
+      <h3>
+        답변을 시작할 때
+      </h3>
+
+      <ul class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            私の
+            <ruby>場合<rt>ばあい</rt></ruby>は、
+            〇〇です。
+          </p>
+
+          <p class="ko-main">
+            저의 경우에는 〇〇입니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            私が
+            <ruby>一番<rt>いちばん</rt></ruby>
+            <ruby>好<rt>す</rt></ruby>きなのは、
+            〇〇です。
+          </p>
+
+          <p class="ko-main">
+            제가 가장 좋아하는 것은 〇〇입니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            すぐには
+            <ruby>決<rt>き</rt></ruby>められませんが、
+            〇〇が
+            <ruby>思<rt>おも</rt></ruby>い
+            <ruby>浮<rt>う</rt></ruby>かびます。
+          </p>
+
+          <p class="ko-main">
+            바로 정하기는 어렵지만 〇〇가 떠오릅니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>最近<rt>さいきん</rt></ruby>では、
+            〇〇に
+            <ruby>興味<rt>きょうみ</rt></ruby>があります。
+          </p>
+
+          <p class="ko-main">
+            최근에는 〇〇에 관심이 있습니다.
+          </p>
+        </li>
+
+      </ul>
+
+    </article>
+
+
+    <article class="content-card">
+
+      <h3>
+        이유를 설명할 때
+      </h3>
+
+      <ul class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            その
+            <ruby>理由<rt>りゆう</rt></ruby>は、
+            〇〇だからです。
+          </p>
+
+          <p class="ko-main">
+            그 이유는 〇〇이기 때문입니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            〇〇という
+            <ruby>点<rt>てん</rt></ruby>に
+            <ruby>魅力<rt>みりょく</rt></ruby>を
+            <ruby>感<rt>かん</rt></ruby>じています。
+          </p>
+
+          <p class="ko-main">
+            〇〇라는 점에서 매력을 느끼고 있습니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>単<rt>たん</rt></ruby>に
+            〇〇だからというだけでなく、
+            〇〇という
+            <ruby>理由<rt>りゆう</rt></ruby>もあります。
+          </p>
+
+          <p class="ko-main">
+            단순히 〇〇이기 때문만 아니라
+            〇〇라는 이유도 있습니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            〇〇することで、
+            <ruby>気分転換<rt>きぶんてんかん</rt></ruby>になります。
+          </p>
+
+          <p class="ko-main">
+            〇〇함으로써 기분 전환이 됩니다.
+          </p>
+        </li>
+
+      </ul>
+
+    </article>
+
+  </div>
+
+
+  <div class="two-column">
+
+    <article class="content-card">
+
+      <h3>
+        자신의 경험을 덧붙일 때
+      </h3>
+
+      <ul class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            〇〇がきっかけで
+            <ruby>始<rt>はじ</rt></ruby>めました。
+          </p>
+
+          <p class="ko-main">
+            〇〇를 계기로 시작했습니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>実際<rt>じっさい</rt></ruby>に
+            やってみると、
+            〇〇だと
+            <ruby>分<rt>わ</rt></ruby>かりました。
+          </p>
+
+          <p class="ko-main">
+            실제로 해 보니 〇〇라는 것을 알게 되었습니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>最初<rt>さいしょ</rt></ruby>は
+            〇〇だと
+            <ruby>思<rt>おも</rt></ruby>っていましたが、
+            <ruby>実際<rt>じっさい</rt></ruby>は
+            〇〇でした。
+          </p>
+
+          <p class="ko-main">
+            처음에는 〇〇라고 생각했지만 실제로는 〇〇였습니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            〇〇するうちに、
+            だんだん
+            <ruby>好<rt>す</rt></ruby>きになりました。
+          </p>
+
+          <p class="ko-main">
+            〇〇하는 동안 점점 좋아하게 되었습니다.
+          </p>
+        </li>
+
+      </ul>
+
+    </article>
+
+
+    <article class="content-card">
+
+      <h3>
+        다른 사람에게 질문할 때
+      </h3>
+
+      <ul class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            〇〇さんはどうですか。
+          </p>
+
+          <p class="ko-main">
+            〇〇 씨는 어떻습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            どうしてそう
+            <ruby>思<rt>おも</rt></ruby>いましたか。
+          </p>
+
+          <p class="ko-main">
+            왜 그렇게 생각했습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>具体的<rt>ぐたいてき</rt></ruby>には、
+            どのようなところが
+            <ruby>好<rt>す</rt></ruby>きですか。
+          </p>
+
+          <p class="ko-main">
+            구체적으로 어떤 점을 좋아합니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            いつから
+            <ruby>興味<rt>きょうみ</rt></ruby>を
+            <ruby>持<rt>も</rt></ruby>つようになりましたか。
+          </p>
+
+          <p class="ko-main">
+            언제부터 관심을 갖게 되었습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>初心者<rt>しょしんしゃ</rt></ruby>にも
+            <ruby>勧<rt>すす</rt></ruby>められますか。
+          </p>
+
+          <p class="ko-main">
+            초보자에게도 추천할 수 있습니까?
+          </p>
+        </li>
+
+      </ul>
+
+    </article>
+
+  </div>
+
+
+  <div class="two-column">
+
+    <article class="content-card">
+
+      <h3>
+        상대방의 의견에 반응할 때
+      </h3>
+
+      <ul class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            それは
+            <ruby>面白<rt>おもしろ</rt></ruby>いですね。
+          </p>
+
+          <p class="ko-main">
+            그것은 흥미롭네요.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            私も
+            <ruby>同<rt>おな</rt></ruby>じように
+            <ruby>感<rt>かん</rt></ruby>じます。
+          </p>
+
+          <p class="ko-main">
+            저도 비슷하게 느낍니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            そのような
+            <ruby>見方<rt>みかた</rt></ruby>は
+            <ruby>考<rt>かんが</rt></ruby>えたことが
+            ありませんでした。
+          </p>
+
+          <p class="ko-main">
+            그런 관점은 생각해 본 적이 없었습니다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            私とは
+            <ruby>少<rt>すこ</rt></ruby>し
+            <ruby>違<rt>ちが</rt></ruby>いますが、
+            その
+            <ruby>意見<rt>いけん</rt></ruby>も
+            <ruby>理解<rt>りかい</rt></ruby>できます。
+          </p>
+
+          <p class="ko-main">
+            저와는 조금 다르지만 그 의견도 이해할 수 있습니다.
+          </p>
+        </li>
+
+      </ul>
+
+    </article>
+
+
+    <article class="content-card">
+
+      <h3>
+        잘 이해하지 못했을 때
+      </h3>
+
+      <ul class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            もう
+            <ruby>一度<rt>いちど</rt></ruby>
+            <ruby>言<rt>い</rt></ruby>っていただけますか。
+          </p>
+
+          <p class="ko-main">
+            한 번 더 말씀해 주시겠습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            もう
+            <ruby>少<rt>すこ</rt></ruby>し
+            ゆっくり
+            <ruby>話<rt>はな</rt></ruby>していただけますか。
+          </p>
+
+          <p class="ko-main">
+            조금 더 천천히 말씀해 주시겠습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            〇〇というのは、
+            どういう
+            <ruby>意味<rt>いみ</rt></ruby>ですか。
+          </p>
+
+          <p class="ko-main">
+            〇〇라는 것은 어떤 의미입니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            つまり、
+            〇〇ということですか。
+          </p>
+
+          <p class="ko-main">
+            즉, 〇〇라는 뜻입니까?
+          </p>
+        </li>
+
+      </ul>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     주제별 문법과 어휘
+====================================================== -->
+
+<section class="slide" id="topic-language-bank">
+
+  <span class="slide-label">
+    LANGUAGE BANK
+  </span>
+
+  <h2 class="slide-title">
+    주제별 핵심 문법과 어휘
+  </h2>
+
+  <p class="slide-subtitle">
+    자신의 답변을 더 길고 구체적으로 만들 때
+    활용할 수 있는 표현입니다.
+  </p>
+
+
+  <div class="topic-grid">
+
+    <!-- TOPIC 01 -->
+
+    <article class="topic-card">
+
+      <span class="topic-number">1</span>
+
+      <h3>
+        유튜브·영상
+      </h3>
+
+      <p class="jp-main">
+        ～だけでなく
+      </p>
+
+      <p class="ko-main">
+        ~뿐만 아니라
+      </p>
+
+      <p class="jp-main">
+        ～ようにしています
+      </p>
+
+      <p class="ko-main">
+        의식적으로 ~하려고 하고 있습니다
+      </p>
+
+      <ul class="hint-list">
+        <li>
+          <ruby>動画<rt>どうが</rt></ruby> 콘텐츠·영상
+        </li>
+        <li>
+          <ruby>投稿<rt>とうこう</rt></ruby> 업로드·게시
+        </li>
+        <li>
+          <ruby>公開<rt>こうかい</rt></ruby> 공개
+        </li>
+        <li>
+          <ruby>情報<rt>じょうほう</rt></ruby> 정보
+        </li>
+        <li>
+          <ruby>解説<rt>かいせつ</rt></ruby> 해설
+        </li>
+        <li>
+          <ruby>視聴<rt>しちょう</rt></ruby> 시청
+        </li>
+      </ul>
+
+    </article>
+
+
+    <!-- TOPIC 02 -->
+
+    <article class="topic-card">
+
+      <span class="topic-number">2</span>
+
+      <h3>
+        음악
+      </h3>
+
+      <p class="jp-main">
+        ～に
+        <ruby>応<rt>おう</rt></ruby>じて
+      </p>
+
+      <p class="ko-main">
+        ~에 따라, ~에 맞추어
+      </p>
+
+      <p class="jp-main">
+        ～たり、～たりします
+      </p>
+
+      <p class="ko-main">
+        ~하기도 하고 ~하기도 합니다
+      </p>
+
+      <ul class="hint-list">
+        <li>
+          <ruby>曲<rt>きょく</rt></ruby> 곡
+        </li>
+        <li>
+          <ruby>歌詞<rt>かし</rt></ruby> 가사
+        </li>
+        <li>
+          <ruby>曲調<rt>きょくちょう</rt></ruby> 곡조·음악 분위기
+        </li>
+        <li>
+          <ruby>歌手<rt>かしゅ</rt></ruby> 가수
+        </li>
+        <li>
+          <ruby>繰<rt>く</rt></ruby>り
+          <ruby>返<rt>かえ</rt></ruby>す 반복하다
+        </li>
+        <li>
+          <ruby>気分転換<rt>きぶんてんかん</rt></ruby> 기분 전환
+        </li>
+      </ul>
+
+    </article>
+
+
+    <!-- TOPIC 03 -->
+
+    <article class="topic-card">
+
+      <span class="topic-number">3</span>
+
+      <h3>
+        배우는 취미
+      </h3>
+
+      <p class="jp-main">
+        ～てみると
+      </p>
+
+      <p class="ko-main">
+        실제로 ~해 보니
+      </p>
+
+      <p class="jp-main">
+        ～うちに
+      </p>
+
+      <p class="ko-main">
+        ~하는 동안, ~하다 보니
+      </p>
+
+      <ul class="hint-list">
+        <li>
+          <ruby>習<rt>なら</rt></ruby>う 배우다
+        </li>
+        <li>
+          <ruby>練習<rt>れんしゅう</rt></ruby> 연습
+        </li>
+        <li>
+          <ruby>上達<rt>じょうたつ</rt></ruby> 실력 향상
+        </li>
+        <li>
+          <ruby>成長<rt>せいちょう</rt></ruby> 성장
+        </li>
+        <li>
+          <ruby>実感<rt>じっかん</rt></ruby> 실감
+        </li>
+        <li>
+          <ruby>独学<rt>どくがく</rt></ruby> 독학
+        </li>
+      </ul>
+
+    </article>
+
+
+    <!-- TOPIC 04 -->
+
+    <article class="topic-card">
+
+      <span class="topic-number">4</span>
+
+      <h3>
+        드라마·영화·예능
+      </h3>
+
+      <p class="jp-main">
+        ～という
+        <ruby>点<rt>てん</rt></ruby>で
+      </p>
+
+      <p class="ko-main">
+        ~라는 점에서
+      </p>
+
+      <p class="jp-main">
+        ～だけでなく
+      </p>
+
+      <p class="ko-main">
+        ~뿐만 아니라
+      </p>
+
+      <ul class="hint-list">
+        <li>
+          <ruby>作品<rt>さくひん</rt></ruby> 작품
+        </li>
+        <li>
+          <ruby>物語<rt>ものがたり</rt></ruby> 이야기
+        </li>
+        <li>
+          <ruby>登場人物<rt>とうじょうじんぶつ</rt></ruby> 등장인물
+        </li>
+        <li>
+          <ruby>場面<rt>ばめん</rt></ruby> 장면
+        </li>
+        <li>
+          <ruby>結末<rt>けつまつ</rt></ruby> 결말
+        </li>
+        <li>
+          <ruby>演技<rt>えんぎ</rt></ruby> 연기
+        </li>
+      </ul>
+
+    </article>
+
+
+    <!-- TOPIC 05 -->
+
+    <article class="topic-card">
+
+      <span class="topic-number">5</span>
+
+      <h3>
+        즐거웠던 경험
+      </h3>
+
+      <p class="jp-main">
+        ～を
+        <ruby>通<rt>とお</rt></ruby>して
+      </p>
+
+      <p class="ko-main">
+        ~을 통해서
+      </p>
+
+      <p class="jp-main">
+        ～がきっかけで
+      </p>
+
+      <p class="ko-main">
+        ~를 계기로
+      </p>
+
+      <ul class="hint-list">
+        <li>
+          <ruby>経験<rt>けいけん</rt></ruby> 경험
+        </li>
+        <li>
+          <ruby>参加<rt>さんか</rt></ruby> 참가
+        </li>
+        <li>
+          <ruby>期待<rt>きたい</rt></ruby> 기대
+        </li>
+        <li>
+          <ruby>思<rt>おも</rt></ruby>い
+          <ruby>出<rt>で</rt></ruby> 추억
+        </li>
+        <li>
+          <ruby>瞬間<rt>しゅんかん</rt></ruby> 순간
+        </li>
+        <li>
+          <ruby>印象<rt>いんしょう</rt></ruby> 인상
+        </li>
+      </ul>
+
+    </article>
+
+
+    <!-- TOPIC 06 -->
+
+    <article class="topic-card">
+
+      <span class="topic-number">6</span>
+
+      <h3>
+        새롭게 시작할 취미
+      </h3>
+
+      <p class="jp-main">
+        ～ものの
+      </p>
+
+      <p class="ko-main">
+        ~이기는 하지만
+      </p>
+
+      <p class="jp-main">
+        ～としたら
+      </p>
+
+      <p class="ko-main">
+        만약 ~한다면
+      </p>
+
+      <ul class="hint-list">
+        <li>
+          <ruby>余裕<rt>よゆう</rt></ruby> 여유
+        </li>
+        <li>
+          <ruby>挑戦<rt>ちょうせん</rt></ruby> 도전
+        </li>
+        <li>
+          <ruby>費用<rt>ひよう</rt></ruby> 비용
+        </li>
+        <li>
+          <ruby>実行<rt>じっこう</rt></ruby> 실행
+        </li>
+        <li>
+          <ruby>身<rt>み</rt></ruby>につける 익히다
+        </li>
+        <li>
+          <ruby>無理<rt>むり</rt></ruby>のない
+          <ruby>範囲<rt>はんい</rt></ruby> 무리하지 않는 범위
+        </li>
+      </ul>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     진행자용 대화 운영
+====================================================== -->
+
+<section class="slide" id="facilitator-guide">
+
+  <span class="slide-label">
+    FACILITATOR GUIDE
+  </span>
+
+  <h2 class="slide-title">
+    진행자용 대화 운영 순서
+  </h2>
+
+  <p class="slide-subtitle">
+    한 질문을 약 10~15분 동안 진행하는 것을 기준으로 합니다.
+  </p>
+
+
+  <div class="instruction-grid">
+
+    <article class="instruction-card">
+
+      <span class="instruction-number">1</span>
+
+      <h3>
+        질문 선택
+      </h3>
+
+      <p>
+        참가자 한 명이 오늘 이야기하고 싶은 질문을 선택합니다.
+      </p>
+
+    </article>
+
+
+    <article class="instruction-card">
+
+      <span class="instruction-number">2</span>
+
+      <h3>
+        첫 답변
+      </h3>
+
+      <p>
+        선택한 사람이 자신의 경험과 이유를 포함해 먼저 답합니다.
+      </p>
+
+    </article>
+
+
+    <article class="instruction-card">
+
+      <span class="instruction-number">3</span>
+
+      <h3>
+        참가자 질문
+      </h3>
+
+      <p>
+        다른 참가자들이 답변 내용에서 궁금한 점을 하나씩 질문합니다.
+      </p>
+
+    </article>
+
+
+    <article class="instruction-card">
+
+      <span class="instruction-number">4</span>
+
+      <h3>
+        공통 답변
+      </h3>
+
+      <p>
+        다른 참가자들도 같은 질문에 자신의 경험을 짧게 덧붙입니다.
+      </p>
+
+    </article>
+
+
+    <article class="instruction-card">
+
+      <span class="instruction-number">5</span>
+
+      <h3>
+        비교·확장
+      </h3>
+
+      <p>
+        참가자들의 취향이나 경험이 어떻게 다른지 비교합니다.
+      </p>
+
+    </article>
+
+
+    <article class="instruction-card">
+
+      <span class="instruction-number">6</span>
+
+      <h3>
+        다음 질문
+      </h3>
+
+      <p>
+        대화가 충분히 이어졌다면 새로운 참가자가 다음 질문을 선택합니다.
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <div class="two-column">
+
+    <article class="content-card">
+
+      <h3>
+        답변이 너무 짧을 때
+      </h3>
+
+      <ol class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            いつから
+            <ruby>好<rt>す</rt></ruby>きですか。
+          </p>
+
+          <p class="ko-main">
+            언제부터 좋아했습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            どのようなところが
+            <ruby>特<rt>とく</rt></ruby>に
+            <ruby>好<rt>す</rt></ruby>きですか。
+          </p>
+
+          <p class="ko-main">
+            어떤 점을 특히 좋아합니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>具体的<rt>ぐたいてき</rt></ruby>な
+            <ruby>経験<rt>けいけん</rt></ruby>や
+            エピソードはありますか。
+          </p>
+
+          <p class="ko-main">
+            구체적인 경험이나 에피소드가 있습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>以前<rt>いぜん</rt></ruby>と
+            <ruby>比<rt>くら</rt></ruby>べて
+            <ruby>変<rt>か</rt></ruby>わったことはありますか。
+          </p>
+
+          <p class="ko-main">
+            예전과 비교해 달라진 점이 있습니까?
+          </p>
+        </li>
+
+      </ol>
+
+    </article>
+
+
+    <article class="content-card">
+
+      <h3>
+        한 사람만 계속 말할 때
+      </h3>
+
+      <ol class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            ほかの
+            <ruby>皆<rt>みな</rt></ruby>さんは
+            どうですか。
+          </p>
+
+          <p class="ko-main">
+            다른 분들은 어떻습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>似<rt>に</rt></ruby>た
+            <ruby>経験<rt>けいけん</rt></ruby>がある
+            <ruby>人<rt>ひと</rt></ruby>はいますか。
+          </p>
+
+          <p class="ko-main">
+            비슷한 경험이 있는 분이 있습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>反対<rt>はんたい</rt></ruby>の
+            <ruby>意見<rt>いけん</rt></ruby>を
+            <ruby>持<rt>も</rt></ruby>っている
+            <ruby>人<rt>ひと</rt></ruby>はいますか。
+          </p>
+
+          <p class="ko-main">
+            반대 의견을 가진 분이 있습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            まだ
+            <ruby>話<rt>はな</rt></ruby>していない
+            <ruby>人<rt>ひと</rt></ruby>にも
+            <ruby>聞<rt>き</rt></ruby>いてみましょう。
+          </p>
+
+          <p class="ko-main">
+            아직 말하지 않은 분의 이야기도 들어 봅시다.
+          </p>
+        </li>
+
+      </ol>
+
+    </article>
+
+  </div>
+
+
+  <div class="two-column">
+
+    <article class="content-card">
+
+      <h3>
+        대화가 끊겼을 때
+      </h3>
+
+      <ol class="follow-list">
+
+        <li>
+          <p class="jp-main">
+            では、
+            <ruby>少<rt>すこ</rt></ruby>し
+            <ruby>質問<rt>しつもん</rt></ruby>を
+            <ruby>変<rt>か</rt></ruby>えてみましょう。
+          </p>
+
+          <p class="ko-main">
+            그러면 질문을 조금 바꾸어 봅시다.
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            もし
+            <ruby>時間<rt>じかん</rt></ruby>と
+            お
+            <ruby>金<rt>かね</rt></ruby>が
+            <ruby>十分<rt>じゅうぶん</rt></ruby>にあれば、
+            どうしますか。
+          </p>
+
+          <p class="ko-main">
+            시간과 돈이 충분하다면 어떻게 하겠습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>一<rt>ひと</rt></ruby>つだけ
+            <ruby>選<rt>えら</rt></ruby>ぶとしたら、
+            どれを
+            <ruby>選<rt>えら</rt></ruby>びますか。
+          </p>
+
+          <p class="ko-main">
+            하나만 선택한다면 무엇을 고르겠습니까?
+          </p>
+        </li>
+
+        <li>
+          <p class="jp-main">
+            <ruby>初心者<rt>しょしんしゃ</rt></ruby>に
+            <ruby>勧<rt>すす</rt></ruby>めるとしたら、
+            どのように
+            <ruby>説明<rt>せつめい</rt></ruby>しますか。
+          </p>
+
+          <p class="ko-main">
+            초보자에게 추천한다면 어떻게 설명하겠습니까?
+          </p>
+        </li>
+
+      </ol>
+
+    </article>
+
+
+    <article class="content-card">
+
+      <h3>
+        진행자가 기억할 원칙
+      </h3>
+
+      <ul class="hint-list">
+
+        <li>
+          일본어가 막히면 한국어 단어를 사용한 뒤
+          참가자들과 일본어 표현을 함께 찾아도 됩니다.
+        </li>
+
+        <li>
+          문법 오류를 모두 즉시 수정하지 않고,
+          의미 전달과 대화의 흐름을 먼저 살립니다.
+        </li>
+
+        <li>
+          한 사람의 답변 뒤에는
+          최소 한 명이 추가 질문을 하도록 유도합니다.
+        </li>
+
+        <li>
+          모든 질문을 끝내는 것보다
+          한 질문에서 좋은 대화가 이어지는 것을 우선합니다.
+        </li>
+
+        <li>
+          개인적으로 답하기 불편한 질문은
+          이유를 설명하지 않고 넘어갈 수 있습니다.
+        </li>
+
+        <li>
+          참가자의 의견을 평가하기보다
+          이유와 경험을 묻는 방식으로 진행합니다.
+        </li>
+
+      </ul>
+
+    </article>
+
+  </div>
+
+
+  <div class="progress-box">
+
+    <strong>권장 진행 시간</strong>
+
+    <p>
+      시작 및 자기소개 10분 → 질문 선택 5분 →
+      취미 토론 70~90분 → 오늘의 표현과 소감 정리 10분
+    </p>
+
+  </div>
+
+</section>
+</main>
