@@ -1,4 +1,4 @@
-です[초급]
+です[초급]한자 걱정 마세요! 설명 드립니다.
 <style>
   :root {
     --primary-color: #4f46e5;
@@ -299,7 +299,7 @@
         <div class="word-chip"><ruby>職場<rt>しょくば</rt></ruby> <span>(직장)</span></div>
         <div class="word-chip"><ruby>同僚<rt>どうりょう</rt></ruby> <span>(동료)</span></div>
       </div>
-      <div class="kr-sentence">6. 그는 제 직장 동료입니다.</div>
+      <div class="kr-sentence">6. 그는 직장 동료입니다.</div>
       <button class="toggle-btn" onclick="const jp = this.nextElementSibling; jp.style.display = jp.style.display === 'block' ? 'none' : 'block'; this.textContent = jp.style.display === 'block' ? '정답 숨기기' : '일본어 확인하기'">일본어 확인하기</button>
       <div class="jp-sentence">
         <ruby>彼<rt>かれ</rt></ruby>は <ruby>職場<rt>しょくば</rt></ruby>の <ruby>同僚<rt>どうりょう</rt></ruby>です。
