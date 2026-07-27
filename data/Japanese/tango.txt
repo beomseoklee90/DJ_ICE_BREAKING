@@ -1,899 +1,1229 @@
 단어[종합]
 <style>
-  .vocab-panel {
-    font-family: 'Pretendard', sans-serif;
-    max-width: 1000px;
-    margin: 20px auto;
-    border: 1px solid #e1e4e8;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  .basic-vocab-sheet {
+    --green: #2f7f33;
+    --blue: #1768c5;
+    --blue-soft: #eef6ff;
+    --orange: #d97916;
+    --orange-soft: #fff7ec;
+    --purple: #7652b8;
+    --purple-soft: #f6f1ff;
+    --ink: #25282d;
+    --muted: #6f747c;
+    --line: #e3e6ea;
+    --surface: #ffffff;
+    --surface-soft: #fafbfc;
+
+    width: 100%;
+    color: var(--ink);
+    font-family:
+      "Pretendard",
+      "Noto Sans KR",
+      "Noto Sans JP",
+      sans-serif;
   }
-  .panel-header {
-    background: #1565c0;
-    color: white;
-    padding: 15px 20px;
+
+  .basic-vocab-sheet *,
+  .basic-vocab-sheet *::before,
+  .basic-vocab-sheet *::after {
+    box-sizing: border-box;
+  }
+
+  .basic-vocab-hero {
+    padding: 38px 24px 32px;
+    margin-bottom: 30px;
+    border-radius: 22px;
+    background: var(--green);
+    color: #fff;
     text-align: center;
   }
-  .level-group {
-    padding: 15px 20px;
-    border-bottom: 1px solid #f0f0f0;
+
+  .basic-vocab-hero__title {
+    margin: 0;
+    font-size: clamp(27px, 4vw, 44px);
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -0.04em;
   }
-  .level-title {
+
+  .basic-vocab-hero__subtitle {
+    margin: 14px 0 0;
+    font-size: clamp(14px, 2vw, 19px);
+    font-weight: 600;
+    line-height: 1.75;
+    opacity: 0.9;
+  }
+
+  .basic-vocab-guide {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 18px;
+    margin-bottom: 34px;
+    border: 1px solid #e5dcae;
+    border-radius: 16px;
+    background: #fffbea;
+    color: #64571b;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+
+  .basic-vocab-guide__icon {
+    flex: 0 0 auto;
+    font-size: 21px;
+  }
+
+  .basic-vocab-guide__text {
+    min-width: 0;
+    word-break: keep-all;
+  }
+
+  .basic-vocab-section {
+    margin-bottom: 46px;
+  }
+
+  .basic-vocab-section__heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 10px;
+    font-size: clamp(21px, 2.7vw, 28px);
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+  }
+
+  .basic-vocab-section__heading::before {
+    content: "";
     display: block;
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: #1565c0;
-    margin-bottom: 10px;
-    border-left: 4px solid #1565c0;
-    padding-left: 10px;
+    flex: 0 0 auto;
+    width: 7px;
+    height: 38px;
+    border-radius: 999px;
   }
-  /* 한 행에 최대한 많이 배치되도록 설정 */
-  .vocab-grid {
+
+  .basic-vocab-section--noun .basic-vocab-section__heading {
+    color: var(--blue);
+  }
+
+  .basic-vocab-section--noun .basic-vocab-section__heading::before {
+    background: var(--blue);
+  }
+
+  .basic-vocab-section--i .basic-vocab-section__heading {
+    color: var(--orange);
+  }
+
+  .basic-vocab-section--i .basic-vocab-section__heading::before {
+    background: var(--orange);
+  }
+
+  .basic-vocab-section--na .basic-vocab-section__heading {
+    color: var(--purple);
+  }
+
+  .basic-vocab-section--na .basic-vocab-section__heading::before {
+    background: var(--purple);
+  }
+
+  .basic-vocab-section__description {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .basic-vocab-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .basic-vocab-card {
+    display: flex;
+    min-width: 0;
+    min-height: 155px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    background: var(--surface);
+    text-align: center;
+    box-shadow: 0 5px 16px rgba(28, 35, 48, 0.04);
+  }
+
+  .basic-vocab-section--noun .basic-vocab-card {
+    border-top: 4px solid #78aee8;
+  }
+
+  .basic-vocab-section--i .basic-vocab-card {
+    border-top: 4px solid #edb06c;
+  }
+
+  .basic-vocab-section--na .basic-vocab-card {
+    border-top: 4px solid #aa8dd7;
+  }
+
+  .basic-vocab-card__inner {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .basic-vocab-card__jp {
+    color: var(--ink);
+    font-family:
+      "Noto Sans JP",
+      "Yu Gothic",
+      sans-serif;
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 700;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+
+  .basic-vocab-card__jp ruby {
+    ruby-align: center;
+    ruby-position: over;
+  }
+
+  .basic-vocab-card__jp rt {
+    color: #646971;
+    font-size: 0.42em;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .basic-vocab-card__kana {
+    margin-top: 5px;
+    color: #7a7f87;
+    font-family:
+      "Noto Sans JP",
+      "Yu Gothic",
+      sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .basic-vocab-card__ko {
+    margin-top: 8px;
+    color: #4f545b;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+
+  .basic-vocab-pattern {
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 16px;
+    background: var(--surface-soft);
+  }
+
+  .basic-vocab-section--noun .basic-vocab-pattern {
+    border: 1px solid #cfe3fa;
+    background: var(--blue-soft);
+  }
+
+  .basic-vocab-section--i .basic-vocab-pattern {
+    border: 1px solid #f1d7b8;
+    background: var(--orange-soft);
+  }
+
+  .basic-vocab-section--na .basic-vocab-pattern {
+    border: 1px solid #ddcff4;
+    background: var(--purple-soft);
+  }
+
+  .basic-vocab-pattern__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .basic-vocab-pattern__examples {
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px;
   }
-  .vocab-card {
-    padding: 8px;
-    border: 1px solid #f0f0f0;
-    border-radius: 6px;
-    background: #fdfdfd;
-    text-align: center;
+
+  .basic-vocab-pattern__chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 7px 11px;
+    border: 1px solid rgba(80, 86, 96, 0.13);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.82);
+    font-family:
+      "Noto Sans JP",
+      "Yu Gothic",
+      sans-serif;
+    font-size: 14px;
+    font-weight: 700;
   }
-  .jp-word {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 2px;
-    color: #333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+  .basic-vocab-warning {
+    padding: 16px 18px;
+    margin-top: 18px;
+    border-left: 5px solid var(--purple);
+    border-radius: 12px;
+    background: var(--purple-soft);
+    color: #51406c;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
   }
-  .kr-mean {
-    font-size: 0.8rem;
-    color: #666;
-    display: block;
+
+  @media (max-width: 1050px) {
+    .basic-vocab-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .basic-vocab-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .basic-vocab-card {
+      min-height: 145px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .basic-vocab-hero {
+      padding: 28px 17px 24px;
+      border-radius: 17px;
+    }
+
+    .basic-vocab-grid {
+      gap: 11px;
+    }
+
+    .basic-vocab-card {
+      min-height: 137px;
+      padding: 16px 8px;
+      border-radius: 14px;
+    }
+
+    .basic-vocab-card__jp {
+      font-size: 21px;
+    }
+
+    .basic-vocab-card__kana {
+      font-size: 11px;
+    }
+
+    .basic-vocab-card__ko {
+      font-size: 14px;
+    }
   }
 </style>
 
+<div class="basic-vocab-sheet">
 
+  <header class="basic-vocab-hero">
+    <h2 class="basic-vocab-hero__title">
+      일본어 문장 만들기 단어 세트
+    </h2>
 
-<div class="vocab-panel">
-  <div class="panel-header" style="background: #2e7d32;">
-    <h2>일본어 말하기 트레이닝 - LEVEL N5</h2>
-    <p style="font-size: 0.9rem; opacity: 0.8; margin: 10px 0 0 0;">기초 문장 구성을 위한 필수 단어 세트 (각 20개)</p>
-  </div>
+    <p class="basic-vocab-hero__subtitle">
+      명사 です형 · い형용사 · な형용사 활용 연습<br>
+      한자 위의 요미가나와 괄호 속 히라가나를 보고 말하세요.
+    </p>
+  </header>
 
-  <div class="level-group">
-    <span class="level-title n5-title">N5 명사 (주어/목적어)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>学生<rt>がくせい</rt></ruby></span><span class="kr-mean">학생</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>学校<rt>がっこう</rt></ruby></span><span class="kr-mean">학교</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>会社<rt>かいしゃ</rt></ruby></span><span class="kr-mean">회사</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>日本語<rt>にほんご</rt></ruby></span><span class="kr-mean">일본어</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>友達<rt>ともだち</rt></ruby></span><span class="kr-mean">친구</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>家族<rt>かぞく</rt></ruby></span><span class="kr-mean">가족</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>食事<rt>しょくじ</rt></ruby></span><span class="kr-mean">식사</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>電話<rt>でんわ</rt></ruby></span><span class="kr-mean">전화</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>名前<rt>なまえ</rt></ruby></span><span class="kr-mean">이름</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>今日<rt>きょう</rt></ruby></span><span class="kr-mean">오늘</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>昨日<rt>きのう</rt></ruby></span><span class="kr-mean">어제</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>毎日<rt>まいにち</rt></ruby></span><span class="kr-mean">매일</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>時間<rt>じかん</rt></ruby></span><span class="kr-mean">시간</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>電車<rt>でんしゃ</rt></ruby></span><span class="kr-mean">전철</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>料理<rt>りょうり</rt></ruby></span><span class="kr-mean">요리</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>天気<rt>てんき</rt></ruby></span><span class="kr-mean">날씨</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>買い物<rt>かいもの</rt></ruby></span><span class="kr-mean">쇼핑</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>写真<rt>しゃしん</rt></ruby></span><span class="kr-mean">사진</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>部屋<rt>へや</rt></ruby></span><span class="kr-mean">방</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>野菜<rt>やさい</rt></ruby></span><span class="kr-mean">야채</span></div>
+  <div class="basic-vocab-guide">
+    <span class="basic-vocab-guide__icon">💡</span>
+
+    <div class="basic-vocab-guide__text">
+      한자를 외울 필요는 없습니다.
+      단어 하나를 자유롭게 골라 현재·과거, 긍정·부정 문장을 만들어 보세요.
+      같은 단어로 여러 형태를 반복하는 것이 핵심입니다.
     </div>
   </div>
 
-  <div class="level-group">
-    <span class="level-title n5-title">N5 형용사 (상태/묘사)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>大<rt>おお</rt></ruby>きい</span><span class="kr-mean">크다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>小<rt>ちい</rt></ruby>さい</span><span class="kr-mean">작다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>新<rt>あたら</rt></ruby>しい</span><span class="kr-mean">새롭다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>古<rt>ふる</rt></ruby>い</span><span class="kr-mean">오래되다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>良<rt>い</rt></ruby>い</span><span class="kr-mean">좋다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>悪<rt>わる</rt></ruby>い</span><span class="kr-mean">나쁘다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>暑<rt>あつ</rt></ruby>い</span><span class="kr-mean">덥다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>寒<rt>さむ</rt></ruby>い</span><span class="kr-mean">춥다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>高<rt>たか</rt></ruby>い</span><span class="kr-mean">높다/비싸다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>安<rt>やす</rt></ruby>い</span><span class="kr-mean">싸다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>楽<rt>たの</rt></ruby>しい</span><span class="kr-mean">즐겁다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>忙<rt>いそが</rt></ruby>しい</span><span class="kr-mean">바쁘다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>美味<rt>おい</rt></ruby>しい</span><span class="kr-mean">맛있다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>遠<rt>とお</rt></ruby>い</span><span class="kr-mean">멀다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>近<rt>ちか</rt></ruby>い</span><span class="kr-mean">가깝다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>好<rt>す</rt></ruby>きだ</span><span class="kr-mean">좋아하다(な)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>暇<rt>ひま</rt></ruby>だ</span><span class="kr-mean">한가하다(な)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>静<rt>しず</rt></ruby>かだ</span><span class="kr-mean">조용하다(な)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>賑<rt>にぎ</rt></ruby>やかだ</span><span class="kr-mean">번화하다(나)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>便利<rt>べんり</rt></ruby>だ</span><span class="kr-mean">편리하다(나)</span></div>
-    </div>
-  </div>
 
-  <div class="level-group">
-    <span class="level-title n5-title">N5 동사 (서술/동작)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>行<rt>い</rt></ruby>く</span><span class="kr-mean">가다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>来<rt>く</rt></ruby>る</span><span class="kr-mean">오다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>食<rt>た</rt></ruby>べる</span><span class="kr-mean">먹다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>飲<rt>の</rt></ruby>む</span><span class="kr-mean">마시다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>寝<rt>ね</rt></ruby>る</span><span class="kr-mean">자다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>起<rt>お</rt></ruby>きる</span><span class="kr-mean">일어나다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>見<rt>み</rt></ruby>る</span><span class="kr-mean">보다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>聞<rt>き</rt></ruby>く</span><span class="kr-mean">듣다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>話<rt>はな</rt></ruby>す</span><span class="kr-mean">이야기하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>読<rt>よ</rt></ruby>む</span><span class="kr-mean">읽다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>書<rt>か</rt></ruby>く</span><span class="kr-mean">쓰다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>買<rt>か</rt></ruby>う</span><span class="kr-mean">사다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>会<rt>あ</rt></ruby>う</span><span class="kr-mean">만나다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>休<rt>やす</rt></ruby>む</span><span class="kr-mean">쉬다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>勉強<rt>べんきょう</rt></ruby>する</span><span class="kr-mean">공부하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>仕事<rt>しごと</rt></ruby>する</span><span class="kr-mean">일하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>作<rt>つく</rt></ruby>る</span><span class="kr-mean">만들다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>待<rt>ま</rt></ruby>つ</span><span class="kr-mean">기다리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>教<rt>おし</rt></ruby>える</span><span class="kr-mean">가르치다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>分<rt>わ</rt></ruby>かる</span><span class="kr-mean">알다/이해하다</span></div>
-    </div>
-  </div>
+  <!-- 명사 -->
 
-  <div class="level-group">
-    <span class="level-title n5-title">N5 부사 (문장의 맛)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word">とても</span><span class="kr-mean">매우</span></div>
-      <div class="vocab-card"><span class="jp-word">あまり</span><span class="kr-mean">별로(부정)</span></div>
-      <div class="vocab-card"><span class="jp-word">ちょっと</span><span class="kr-mean">잠깐/조금</span></div>
-      <div class="vocab-card"><span class="jp-word">たくさん</span><span class="kr-mean">많이</span></div>
-      <div class="vocab-card"><span class="jp-word">ゆっくり</span><span class="kr-mean">천천히</span></div>
-      <div class="vocab-card"><span class="jp-word">いつも</span><span class="kr-mean">언제나</span></div>
-      <div class="vocab-card"><span class="jp-word">ときどき</span><span class="kr-mean">가끔</span></div>
-      <div class="vocab-card"><span class="jp-word">よく</span><span class="kr-mean">자주/잘</span></div>
-      <div class="vocab-card"><span class="jp-word">ぜんぜん</span><span class="kr-mean">전혀(부정)</span></div>
-      <div class="vocab-card"><span class="jp-word">たぶん</span><span class="kr-mean">아마</span></div>
-      <div class="vocab-card"><span class="jp-word">すぐ</span><span class="kr-mean">곧/바로</span></div>
-      <div class="vocab-card"><span class="jp-word">また</span><span class="kr-mean">또</span></div>
-      <div class="vocab-card"><span class="jp-word">もう</span><span class="kr-mean">벌써/이미</span></div>
-      <div class="vocab-card"><span class="jp-word">まだ</span><span class="kr-mean">아직</span></div>
-      <div class="vocab-card"><span class="jp-word">いっしょに</span><span class="kr-mean">함께</span></div>
-      <div class="vocab-card"><span class="jp-word">はじめて</span><span class="kr-mean">처음으로</span></div>
-      <div class="vocab-card"><span class="jp-word">だいたい</span><span class="kr-mean">대체로</span></div>
-      <div class="vocab-card"><span class="jp-word">だんだん</span><span class="kr-mean">점점</span></div>
-      <div class="vocab-card"><span class="jp-word">もちろん</span><span class="kr-mean">물론</span></div>
-      <div class="vocab-card"><span class="jp-word">ようやく</span><span class="kr-mean">겨우/드디어</span></div>
-    </div>
-  </div>
+  <section class="basic-vocab-section basic-vocab-section--noun">
+    <h3 class="basic-vocab-section__heading">
+      명사 — です형 연습
+    </h3>
 
-  <div class="level-group">
-    <span class="level-title n5-title">N5 관용구 (문장 완성형)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word">いただきます</span><span class="kr-mean">잘 먹겠습니다</span></div>
-      <div class="vocab-card"><span class="jp-word">ごちそうさま</span><span class="kr-mean">잘 먹었습니다</span></div>
-      <div class="vocab-card"><span class="jp-word">いってきます</span><span class="kr-mean">다녀오겠습니다</span></div>
-      <div class="vocab-card"><span class="jp-word">おやすみなさい</span><span class="kr-mean">안녕히 주무세요</span></div>
-      <div class="vocab-card"><span class="jp-word">おめでとう</span><span class="kr-mean">축하해</span></div>
-      <div class="vocab-card"><span class="jp-word">おねがいします</span><span class="kr-mean">부탁합니다</span></div>
-      <div class="vocab-card"><span class="jp-word">すみません</span><span class="kr-mean">미안합니다/실례합니다</span></div>
-      <div class="vocab-card"><span class="jp-word">だいじょうぶ</span><span class="kr-mean">괜찮아</span></div>
-      <div class="vocab-card"><span class="jp-word">はじめまして</span><span class="kr-mean">처음 뵙겠습니다</span></div>
-      <div class="vocab-card"><span class="jp-word">よろしく</span><span class="kr-mean">잘 부탁해</span></div>
-      <div class="vocab-card"><span class="jp-word">おなかがすく</span><span class="kr-mean">배가 고프다</span></div>
-      <div class="vocab-card"><span class="jp-word">のどがかわく</span><span class="kr-mean">목이 마르다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>気<rt>き</rt></ruby>をつける</span><span class="kr-mean">조심하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>風邪<rt>かぜ</rt></ruby>をひく</span><span class="kr-mean">감기에 걸리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>興味<rt>きょうみ</rt></ruby>がある</span><span class="kr-mean">흥미가 있다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>用事<rt>ようじ</rt></ruby>がある</span><span class="kr-mean">용건이 있다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>時間<rt>じかん</rt></ruby>がかかる</span><span class="kr-mean">시간이 걸리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>掃除<rt>そうじ</rt></ruby>する</span><span class="kr-mean">청소를 하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>洗濯<rt>せんたく</rt></ruby>する</span><span class="kr-mean">빨래를 하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>散歩<rt>さんぽ</rt></ruby>する</span><span class="kr-mean">산책을 하다</span></div>
-    </div>
-  </div>
-</div>
+    <p class="basic-vocab-section__description">
+      사람, 직업, 장소, 물건 중 하나를 골라
+      「～です」「～ではありません」「～でした」 문장을 만드세요.
+    </p>
 
-<div class="vocab-panel">
-  <div class="panel-header">
-    <h2 style="margin:0;">일본어 말하기 트레이닝 - LEVEL N4</h2>
-  </div>
+    <div class="basic-vocab-grid">
 
-  <div class="level-group">
-    <span class="level-title">N4 명사</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>将来<rt>しょうらい</rt></ruby></span><span class="kr-mean">장래</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>目的<rt>もくてき</rt></ruby></span><span class="kr-mean">목적</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>経験<rt>けいけん</rt></ruby></span><span class="kr-mean">경험</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>理由<rt>りゆう</rt></ruby></span><span class="kr-mean">이유</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>予定<rt>よてい</rt></ruby></span><span class="kr-mean">예정</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>意見<rt>いけん</rt></ruby></span><span class="kr-mean">의견</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>連絡<rt>れんらく</rt></ruby></span><span class="kr-mean">연락</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>約束<rt>やくそく</rt></ruby></span><span class="kr-mean">약속</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>紹介<rt>しょうかい</rt></ruby></span><span class="kr-mean">소개</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>反対<rt>はんたい</rt></ruby></span><span class="kr-mean">반대</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>準備<rt>じゅんび</rt></ruby></span><span class="kr-mean">준비</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>習慣<rt>しゅうかん</rt></ruby></span><span class="kr-mean">습관</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>相談<rt>そうだん</rt></ruby></span><span class="kr-mean">상담</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>注意<rt>ちゅうい</rt></ruby></span><span class="kr-mean">주의</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>生活<rt>せいかつ</rt></ruby></span><span class="kr-mean">생활</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>返事<rt>へんじ</rt></ruby></span><span class="kr-mean">대답</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>試合<rt>しあい</rt></ruby></span><span class="kr-mean">시합</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>世界<rt>せかい</rt></ruby></span><span class="kr-mean">세계</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>機会<rt>きかい</rt></ruby></span><span class="kr-mean">기회</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>故障<rt>こしょう</rt></ruby></span><span class="kr-mean">고장</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>学生<rt>がくせい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（がくせい）</div>
+          <div class="basic-vocab-card__ko">학생</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N4 형용사</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>安全<rt>あんぜん</rt></ruby>だ</span><span class="kr-mean">안전하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>必要<rt>ひつよう</rt></ruby>だ</span><span class="kr-mean">필요하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>特別<rt>とくべつ</rt></ruby>だ</span><span class="kr-mean">특별하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>熱心<rt>ねっしん</rt></ruby>だ</span><span class="kr-mean">열심이다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>無理<rt>むり</rt></ruby>だ</span><span class="kr-mean">무리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>苦<rt>にが</rt></ruby>い</span><span class="kr-mean">쓰다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>甘<rt>あま</rt></ruby>い</span><span class="kr-mean">달다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>辛<rt>から</rt></ruby>い</span><span class="kr-mean">맵다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>痛<rt>いた</rt></ruby>い</span><span class="kr-mean">아프다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>恥<rt>はず</rt></ruby>かしい</span><span class="kr-mean">부끄럽다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>凄<rt>すご</rt></ruby>い</span><span class="kr-mean">대단하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>酷<rt>ひど</rt></ruby>い</span><span class="kr-mean">심하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>正<rt>ただ</rt></ruby>しい</span><span class="kr-mean">올바르다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>珍<rt>めずら</rt></ruby>しい</span><span class="kr-mean">희귀하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>眠<rt>ねむ</rt></ruby>い</span><span class="kr-mean">졸리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>浅<rt>あさ</rt></ruby>い</span><span class="kr-mean">얕다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>深<rt>ふか</rt></ruby>い</span><span class="kr-mean">깊다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>細<rt>こま</rt></ruby>かい</span><span class="kr-mean">세세하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>自由<rt>じゆう</rt></ruby>だ</span><span class="kr-mean">자유롭다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>丁寧<rt>ていねい</rt></ruby>だ</span><span class="kr-mean">정중하다</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>先生<rt>せんせい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（せんせい）</div>
+          <div class="basic-vocab-card__ko">선생님</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N4 동사</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>集<rt>あつ</rt></ruby>める</span><span class="kr-mean">모으다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>謝<rt>あやま</rt></ruby>る</span><span class="kr-mean">사과하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>生<rt>い</rt></ruby>きる</span><span class="kr-mean">살다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>祈<rt>いの</rt></ruby>る</span><span class="kr-mean">기도하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>植<rt>う</rt></ruby>える</span><span class="kr-mean">심다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>選<rt>えら</rt></ruby>ぶ</span><span class="kr-mean">고르다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>踊<rt>おど</rt></ruby>る</span><span class="kr-mean">춤추다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>驚<rt>おどろ</rt></ruby>く</span><span class="kr-mean">놀라다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>通<rt>とお</rt></ruby>る</span><span class="kr-mean">지나다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>届<rt>とど</rt></ruby>ける</span><span class="kr-mean">보내다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>運<rt>はこ</rt></ruby>ぶ</span><span class="kr-mean">운반하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>払<rt>はら</rt></ruby>う</span><span class="kr-mean">지불하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>冷<rt>ひ</rt></ruby>やす</span><span class="kr-mean">식히다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>太<rt>ふと</rt></ruby>る</span><span class="kr-mean">살찌다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>曲<rt>ま</rt></ruby>がる</span><span class="kr-mean">굽다/돌다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>見<rt>み</rt></ruby>つかる</span><span class="kr-mean">발견되다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>迎<rt>むか</rt></ruby>える</span><span class="kr-mean">맞이하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>戻<rt>もど</rt></ruby>る</span><span class="kr-mean">되돌아가다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>汚<rt>よご</rt></ruby>れる</span><span class="kr-mean">더러워지다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>渡<rt>わた</rt></ruby>す</span><span class="kr-mean">건네다</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>会社員<rt>かいしゃいん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（かいしゃいん）</div>
+          <div class="basic-vocab-card__ko">회사원</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N4 부사</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word">かなり</span><span class="kr-mean">제법/꽤</span></div>
-      <div class="vocab-card"><span class="jp-word">きっちり</span><span class="kr-mean">꼭/딱</span></div>
-      <div class="vocab-card"><span class="jp-word">さっき</span><span class="kr-mean">아까</span></div>
-      <div class="vocab-card"><span class="jp-word">しっかり</span><span class="kr-mean">확실히/정신차려</span></div>
-      <div class="vocab-card"><span class="jp-word">ずっと</span><span class="kr-mean">훨씬/계속</span></div>
-      <div class="vocab-card"><span class="jp-word">ぜったいに</span><span class="kr-mean">절대로</span></div>
-      <div class="vocab-card"><span class="jp-word">そろそろ</span><span class="kr-mean">슬슬</span></div>
-      <div class="vocab-card"><span class="jp-word">だいぶ</span><span class="kr-mean">꽤/어느정도</span></div>
-      <div class="vocab-card"><span class="jp-word">たまに</span><span class="kr-mean">가끔</span></div>
-      <div class="vocab-card"><span class="jp-word">ちょうど</span><span class="kr-mean">마침/딱</span></div>
-      <div class="vocab-card"><span class="jp-word">ついに</span><span class="kr-mean">마침내</span></div>
-      <div class="vocab-card"><span class="jp-word">なるべく</span><span class="kr-mean">가능한 한</span></div>
-      <div class="vocab-card"><span class="jp-word">ほとんど</span><span class="kr-mean">거의</span></div>
-      <div class="vocab-card"><span class="jp-word">もし</span><span class="kr-mean">만약</span></div>
-      <div class="vocab-card"><span class="jp-word">ようやく</span><span class="kr-mean">겨우</span></div>
-      <div class="vocab-card"><span class="jp-word">急に</span><span class="kr-mean">갑자기</span></div>
-      <div class="vocab-card"><span class="jp-word">常に</span><span class="kr-mean">항상</span></div>
-      <div class="vocab-card"><span class="jp-word">特に</span><span class="kr-mean">특히</span></div>
-      <div class="vocab-card"><span class="jp-word">結局</span><span class="kr-mean">결국</span></div>
-      <div class="vocab-card"><span class="jp-word">実際</span><span class="kr-mean">실제</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>店員<rt>てんいん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（てんいん）</div>
+          <div class="basic-vocab-card__ko">점원</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N4 관용구</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>腹<rt>はら</rt></ruby>がたつ</span><span class="kr-mean">화가 나다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>気<rt>き</rt></ruby>がつく</span><span class="kr-mean">알아차리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>世話<rt>せわ</rt></ruby>をする</span><span class="kr-mean">돌보다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>手<rt>て</rt></ruby>に<ruby>入<rt>い</rt></ruby>れる</span><span class="kr-mean">손에 넣다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>気<rt>き</rt></ruby>にいる</span><span class="kr-mean">마음에 들다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>耳<rt>みみ</rt></ruby>にする</span><span class="kr-mean">듣게 되다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>口<rt>くち</rt></ruby>にする</span><span class="kr-mean">말하다/먹다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>目<rt>め</rt></ruby>にする</span><span class="kr-mean">보다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>都合<rt>つごう</rt></ruby>がいい</span><span class="kr-mean">형편이 좋다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>足<rt>あし</rt></ruby>をはこぶ</span><span class="kr-mean">찾아가다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>連絡<rt>れんらく</rt></ruby>をとる</span><span class="kr-mean">연락을 취하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>返事<rt>へんじ</rt></ruby>する</span><span class="kr-mean">답장을 하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>挨拶<rt>あいさつ</rt></ruby>する</span><span class="kr-mean">인사하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>無理<rt>むり</rt></ruby>する</span><span class="kr-mean">무리하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>我慢<rt>がまん</rt></ruby>する</span><span class="kr-mean">참다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>遅刻<rt>ちこく</rt></ruby>する</span><span class="kr-mean">지각하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>経験<rt>けいけん</rt></ruby>を積む</span><span class="kr-mean">경험을 쌓다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>予定<rt>よてい</rt></ruby>をたてる</span><span class="kr-mean">계획을 세우다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>約束<rt>やくそく</rt></ruby>をまもる</span><span class="kr-mean">약속을 지키다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>準備<rt>じゅんび</rt></ruby>ができる</span><span class="kr-mean">준비가 되다</span></div>
-    </div>
-  </div>
-</div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>医者<rt>いしゃ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（いしゃ）</div>
+          <div class="basic-vocab-card__ko">의사</div>
+        </div>
+      </article>
 
-<div class="vocab-panel">
-  <div class="panel-header">
-    <h2 style="margin:0;">일본어 말하기 트레이닝 - LEVEL N3</h2>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>料理人<rt>りょうりにん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（りょうりにん）</div>
+          <div class="basic-vocab-card__ko">요리사</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N3 명사 (추상/사회)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>意識<rt>いしき</rt></ruby></span><span class="kr-mean">의식</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>影響<rt>えいきょう</rt></ruby></span><span class="kr-mean">영향</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>価値<rt>かち</rt></ruby></span><span class="kr-mean">가치</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>解決<rt>かいけつ</rt></ruby></span><span class="kr-mean">해결</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>期待<rt>きたい</rt></ruby></span><span class="kr-mean">기대</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>共通<rt>きょうつう</rt></ruby></span><span class="kr-mean">공통</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>協力<rt>きょうりょく</rt></ruby></span><span class="kr-mean">협력</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>結果<rt>けっか</rt></ruby></span><span class="kr-mean">결과</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>効果<rt>こうか</rt></ruby></span><span class="kr-mean">효과</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>行動<rt>こうどう</rt></ruby></span><span class="kr-mean">행동</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>事情<rt>じじょう</rt></ruby></span><span class="kr-mean">사정/형편</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>信頼<rt>しんらい</rt></ruby></span><span class="kr-mean">신뢰</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>責任<rt>せきにん</rt></ruby></span><span class="kr-mean">책임</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>納得<rt>なっとく</rt></ruby></span><span class="kr-mean">납득</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>不満<rt>ふまん</rt></ruby></span><span class="kr-mean">불만</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>普及<rt>ふきゅう</rt></ruby></span><span class="kr-mean">보급</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>目標<rt>もくひょう</rt></ruby></span><span class="kr-mean">목표</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>役割<rt>やくわり</rt></ruby></span><span class="kr-mean">역할</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>流行<rt>りゅうこう</rt></ruby></span><span class="kr-mean">유행</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>理想<rt>りそう</rt></ruby></span><span class="kr-mean">이상</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">エンジニア</div>
+          <div class="basic-vocab-card__kana">（えんじにあ）</div>
+          <div class="basic-vocab-card__ko">엔지니어</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N3 형용사 (심리/상태)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>幸<rt>しあわ</rt></ruby>せだ</span><span class="kr-mean">행복하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>得意<rt>とくい</rt></ruby>だ</span><span class="kr-mean">자신있다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>苦手<rt>にがて</rt></ruby>이다</span><span class="kr-mean">서투르다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>不安<rt>ふあん</rt></ruby>이다</span><span class="kr-mean">불안하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>無理<rt>むり</rt></ruby>이다</span><span class="kr-mean">무리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>惜<rt>お</rt></ruby>しい</span><span class="kr-mean">아깝다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>怪<rt>あや</rt></ruby>しい</span><span class="kr-mean">수상하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>悔<rt>くや</rt></ruby>しい</span><span class="kr-mean">분하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>険<rt>けわ</rt></ruby>しい</span><span class="kr-mean">험악하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>激<rt>はげ</rt></ruby>しい</span><span class="kr-mean">격렬하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>等<rt>ひと</rt></ruby>しい</span><span class="kr-mean">동일하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>貧<rt>まず</rt></ruby>しい</span><span class="kr-mean">가난하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>眩<rt>まぶ</rt></ruby>しい</span><span class="kr-mean">눈부시다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>面倒<rt>めんどう</rt></ruby>だ</span><span class="kr-mean">귀찮다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>正直<rt>しょうじき</rt></ruby>だ</span><span class="kr-mean">솔직하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>積極的<rt>せっきょくてき</rt></ruby>だ</span><span class="kr-mean">적극적이다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>立派<rt>りっぱ</rt></ruby>だ</span><span class="kr-mean">훌륭하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>新鮮<rt>しんせん</rt></ruby>だ</span><span class="kr-mean">신선하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>豊<rt>ゆた</rt></ruby>かだ</span><span class="kr-mean">풍부하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>複雑<rt>ふくざつ</rt></ruby>だ</span><span class="kr-mean">복잡하다</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">デザイナー</div>
+          <div class="basic-vocab-card__kana">（でざいなあ）</div>
+          <div class="basic-vocab-card__ko">디자이너</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N3 동사 (변화/사고)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>当<rt>あ</rt></ruby>たる</span><span class="kr-mean">맞다/당첨되다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>表<rt>あらわ</rt></ruby>す</span><span class="kr-mean">나타내다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>現<rt>あらわ</rt></ruby>れる</span><span class="kr-mean">나타나다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>信<rt>しん</rt></ruby>じる</span><span class="kr-mean">믿다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>育<rt>そだ</rt></ruby>てる</span><span class="kr-mean">키우다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>助<rt>たす</rt></ruby>ける</span><span class="kr-mean">돕다/살리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>戦<rt>たたか</rt></ruby>う</span><span class="kr-mean">싸우다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>訪<rt>たず</rt></ruby>ねる</span><span class="kr-mean">방문하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>試<rt>ため</rt></ruby>す</span><span class="kr-mean">시험하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>慣<rt>な</rt></ruby>れる</span><span class="kr-mean">익숙해지다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>盗<rt>ぬす</rt></ruby>む</span><span class="kr-mean">훔치다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>残<rt>のこ</rt></ruby>る</span><span class="kr-mean">남다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>運<rt>はこ</rt></ruby>ぶ</span><span class="kr-mean">운반하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>冷<rt>ひ</rt></ruby>える</span><span class="kr-mean">차갑게 식다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>増<rt>ふ</rt></ruby>える</span><span class="kr-mean">늘어나다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>減<rt>へ</rt></ruby>る</span><span class="kr-mean">줄어들다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>守<rt>まも</rt></ruby>る</span><span class="kr-mean">지키다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>向<rt>む</rt></ruby>かう</span><span class="kr-mean">향하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>求<rt>もと</rt></ruby>める</span><span class="kr-mean">구하다/요구하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>許<rt>ゆる</rt></ruby>す</span><span class="kr-mean">허락하다</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>韓国人<rt>かんこくじん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（かんこくじん）</div>
+          <div class="basic-vocab-card__ko">한국인</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N3 부사 (논리/정도)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word">うっかり</span><span class="kr-mean">깜빡</span></div>
-      <div class="vocab-card"><span class="jp-word">がっかり</span><span class="kr-mean">실망</span></div>
-      <div class="vocab-card"><span class="jp-word">すっかり</span><span class="kr-mean">완전히</span></div>
-      <div class="vocab-card"><span class="jp-word">ぴったり</span><span class="kr-mean">딱/딱맞게</span></div>
-      <div class="vocab-card"><span class="jp-word">やっぱり</span><span class="kr-mean">역시</span></div>
-      <div class="vocab-card"><span class="jp-word">思わず</span><span class="kr-mean">나도 모르게</span></div>
-      <div class="vocab-card"><span class="jp-word">ついに</span><span class="kr-mean">드디어</span></div>
-      <div class="vocab-card"><span class="jp-word">ついでに</span><span class="kr-mean">하는 김에</span></div>
-      <div class="vocab-card"><span class="jp-word">とにかく</span><span class="kr-mean">어쨌든</span></div>
-      <div class="vocab-card"><span class="jp-word">どんどん</span><span class="kr-mean">점점/척척</span></div>
-      <div class="vocab-card"><span class="jp-word">ますます</span><span class="kr-mean">더욱더</span></div>
-      <div class="vocab-card"><span class="jp-word">わざと</span><span class="kr-mean">일부러</span></div>
-      <div class="vocab-card"><span class="jp-word">わざわざ</span><span class="kr-mean">번거롭게 일부러</span></div>
-      <div class="vocab-card"><span class="jp-word">一度に</span><span class="kr-mean">한꺼번에</span></div>
-      <div class="vocab-card"><span class="jp-word">徐々に</span><span class="kr-mean">서서히</span></div>
-      <div class="vocab-card"><span class="jp-word">直ちに</span><span class="kr-mean">즉시</span></div>
-      <div class="vocab-card"><span class="jp-word">別に</span><span class="kr-mean">별로/따로</span></div>
-      <div class="vocab-card"><span class="jp-word">結局</span><span class="kr-mean">결국</span></div>
-      <div class="vocab-card"><span class="jp-word">突然</span><span class="kr-mean">갑자기</span></div>
-      <div class="vocab-card"><span class="jp-word">非常に</span><span class="kr-mean">매우/몹시</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>日本人<rt>にほんじん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（にほんじん）</div>
+          <div class="basic-vocab-card__ko">일본인</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N3 관용구 (숙어)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>足<rt>あし</rt></ruby>がでる</span><span class="kr-mean">예산을 초과하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>頭<rt>あたま</rt></ruby>にくる</span><span class="kr-mean">화가 치밀다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>顔<rt>かお</rt></ruby>をだす</span><span class="kr-mean">얼굴을 내밀다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>肩<rt>かた</rt></ruby>をならべる</span><span class="kr-mean">어깨를 나란히하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>口<rt>くち</rt></ruby>をだす</span><span class="kr-mean">참견하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>腰<rt>こし</rt></ruby>をおろす</span><span class="kr-mean">자리에 앉다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>手<rt>て</rt></ruby>をつなぐ</span><span class="kr-mean">손을 잡다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>鼻<rt>はな</rt></ruby>がたかい</span><span class="kr-mean">코대가 높다(자랑)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>目<rt>め</rt></ruby>がない</span><span class="kr-mean">매우 좋아하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>耳<rt>みみ</rt></ruby>をかたむける</span><span class="kr-mean">귀를 기울이다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>世話<rt>せわ</rt></ruby>になる</span><span class="kr-mean">신세를 지다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>文句<rt>もんく</rt></ruby>をいう</span><span class="kr-mean">불평을 말하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>冗談<rt>じょうだん</rt></ruby>をいう</span><span class="kr-mean">농담을 하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>工夫<rt>くふう</rt></ruby>をこらす</span><span class="kr-mean">궁리하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>努力<rt>どりょく</rt></ruby>をかさねる</span><span class="kr-mean">노력을 거듭하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>期待<rt>きたい</rt></ruby>にこたえる</span><span class="kr-mean">기대에 부응하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>解決<rt>かいけつ</rt></ruby>をはかる</span><span class="kr-mean">해결을 꾀하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>影響<rt>えいきょう</rt></ruby>をあたえる</span><span class="kr-mean">영향을 주다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>意識<rt>いしき</rt></ruby>をかえる</span><span class="kr-mean">의식을 바꾸다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>信頼<rt>しんらい</rt></ruby>をえる</span><span class="kr-mean">신뢰를 얻다</span></div>
-    </div>
-  </div>
-</div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>友達<rt>ともだち</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ともだち）</div>
+          <div class="basic-vocab-card__ko">친구</div>
+        </div>
+      </article>
 
-<div class="vocab-panel">
-  <div class="panel-header">
-    <h2 style="margin:0;">일본어 말하기 트레이닝 - LEVEL N2</h2>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>家族<rt>かぞく</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（かぞく）</div>
+          <div class="basic-vocab-card__ko">가족</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N2 명사 (비즈니스/사회 이슈)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>把握<rt>はあく</rt></ruby></span><span class="kr-mean">파악</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>基盤<rt>きばん</rt></ruby></span><span class="kr-mean">기반</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>懸念<rt>けねん</rt></ruby></span><span class="kr-mean">우려</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>交渉<rt>こうしょう</rt></ruby></span><span class="kr-mean">교섭</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>需要<rt>じゅよう</rt></ruby></span><span class="kr-mean">수요</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>推進<rt>すいしん</rt></ruby></span><span class="kr-mean">추진</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>背景<rt>はいけい</rt></ruby></span><span class="kr-mean">배경</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>反映<rt>はんえい</rt></ruby></span><span class="kr-mean">반영</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>矛盾<rt>むじゅん</rt></ruby></span><span class="kr-mean">모순</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>一環<rt>いっかん</rt></ruby></span><span class="kr-mean">일환</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>恩恵<rt>おんけい</rt></ruby></span><span class="kr-mean">혜택</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>該当<rt>がいとう</rt></ruby></span><span class="kr-mean">해당</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>克服<rt>こくふく</rt></ruby></span><span class="kr-mean">극복</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>承認<rt>しょうにん</rt></ruby></span><span class="kr-mean">승인</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>蓄積<rt>ちくせき</rt></ruby></span><span class="kr-mean">축적</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>不況<rt>ふきょう</rt></ruby></span><span class="kr-mean">불황</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>摩擦<rt>まさつ</rt></ruby></span><span class="kr-mean">마찰</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>優先<rt>ゆうせん</rt></ruby></span><span class="kr-mean">우선</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>枠組<rt>わくぐみ</rt></ruby></span><span class="kr-mean">틀/프레임</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>拠点<rt>きょてん</rt></ruby></span><span class="kr-mean">거점</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>学校<rt>がっこう</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（がっこう）</div>
+          <div class="basic-vocab-card__ko">학교</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N2 형용사 (정교한 묘사)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>曖昧<rt>あいまい</rt></ruby>だ</span><span class="kr-mean">모호하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>強引<rt>ごういん</rt></ruby>だ</span><span class="kr-mean">강압적이다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>詳細<rt>しょうさい</rt></ruby>だ</span><span class="kr-mean">상세하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>過剰<rt>かじょう</rt></ruby>だ</span><span class="kr-mean">과잉이다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>妥当<rt>だとう</rt></ruby>だ</span><span class="kr-mean">타당하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>冷静<rt>れいせい</rt></ruby>だ</span><span class="kr-mean">냉정하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>適切<rt>てきせつ</rt></ruby>이다</span><span class="kr-mean">적절하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>貴重<rt>きちょう</rt></ruby>だ</span><span class="kr-mean">귀중하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>迅速<rt>じんそく</rt></ruby>だ</span><span class="kr-mean">신속하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>慎重<rt>しんちょう</rt></ruby>だ</span><span class="kr-mean">신중하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>厚<rt>あつ</rt></ruby>かましい</span><span class="kr-mean">뻔뻔하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>怪<rt>あや</rt></ruby>しい</span><span class="kr-mean">의심스럽다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>恐<rt>おそ</rt></ruby>ろしい</span><span class="kr-mean">두렵다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>騒<rt>ざわ</rt></ruby>がしい</span><span class="kr-mean">어수선하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>頼<rt>たのも</rt></ruby>しい</span><span class="kr-mean">믿음직하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>懐<rt>なつ</rt></ruby>かしい</span><span class="kr-mean">그립다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>激<rt>はげ</rt></ruby>しい</span><span class="kr-mean">격렬하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>等<rt>ひと</rt></ruby>しい</span><span class="kr-mean">동등하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>喧<rt>やかま</rt></ruby>しい</span><span class="kr-mean">시끄럽다/까다롭다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>緩<rt>ゆる</rt></ruby>い</span><span class="kr-mean">느슨하다</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>会社<rt>かいしゃ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（かいしゃ）</div>
+          <div class="basic-vocab-card__ko">회사</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N2 동사 (복합/고급 표현)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>改<rt>あらた</rt></ruby>める</span><span class="kr-mean">고치다/개선하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>補<rt>おぎな</rt></ruby>う</span><span class="kr-mean">보충하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>及<rt>およ</rt></ruby>ぼす</span><span class="kr-mean">미치게하다(영향)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>逆<rt>さか</rt></ruby>らう</span><span class="kr-mean">거스르다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>避<rt>さ</rt></ruby>ける</span><span class="kr-mean">피하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>妨<rt>さまた</rt></ruby>げる</span><span class="kr-mean">방해하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>従<rt>したが</rt></ruby>う</span><span class="kr-mean">따르다/순종하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>備<rt>そな</rt></ruby>える</span><span class="kr-mean">대비하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>蓄<rt>たくわ</rt></ruby>える</span><span class="kr-mean">비축하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>整<rt>ととの</rt></ruby>える</span><span class="kr-mean">정돈하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>慰<rt>なぐさ</rt></ruby>める</span><span class="kr-mean">위로하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>招<rt>まね</rt></ruby>く</span><span class="kr-mean">초대하다/초래하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>結<rt>むす</rt></ruby>ぶ</span><span class="kr-mean">맺다/잇다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>用<rt>もち</rt></ruby>いる</span><span class="kr-mean">사용하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>養<rt>やしな</rt></ruby>う</span><span class="kr-mean">기르다/양육하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>譲<rt>ゆず</rt></ruby>る</span><span class="kr-mean">양보하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>避<rt>よ</rt></ruby>ける</span><span class="kr-mean">피하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>恵<rt>めぐ</rt></ruby>まれる</span><span class="kr-mean">혜택받다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>努<rt>つと</rt></ruby>める</span><span class="kr-mean">힘쓰다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>掲<rt>かか</rt></ruby>げる</span><span class="kr-mean">내걸다/게시하다</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>病院<rt>びょういん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（びょういん）</div>
+          <div class="basic-vocab-card__ko">병원</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N2 부사 (섬세한 뉘앙스)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word">あくまで</span><span class="kr-mean">어디까지나</span></div>
-      <div class="vocab-card"><span class="jp-word">あえて</span><span class="kr-mean">굳이/감히</span></div>
-      <div class="vocab-card"><span class="jp-word">いかに</span><span class="kr-mean">어떻게/얼마나</span></div>
-      <div class="vocab-card"><span class="jp-word">いかにも</span><span class="kr-mean">정말로/과연</span></div>
-      <div class="vocab-card"><span class="jp-word">およそ</span><span class="kr-mean">대략</span></div>
-      <div class="vocab-card"><span class="jp-word">かつて</span><span class="kr-mean">일찍이/예전에</span></div>
-      <div class="vocab-card"><span class="jp-word">さらに</span><span class="kr-mean">한층 더</span></div>
-      <div class="vocab-card"><span class="jp-word">すでに</span><span class="kr-mean">이미</span></div>
-      <div class="vocab-card"><span class="jp-word">せめて</span><span class="kr-mean">적어도</span></div>
-      <div class="vocab-card"><span class="jp-word">絶えず</span><span class="kr-mean">끊임없이</span></div>
-      <div class="vocab-card"><span class="jp-word">単に</span><span class="kr-mean">단순히</span></div>
-      <div class="vocab-card"><span class="jp-word">常に</span><span class="kr-mean">항상</span></div>
-      <div class="vocab-card"><span class="jp-word">到底</span><span class="kr-mean">도저히</span></div>
-      <div class="vocab-card"><span class="jp-word">直ちに</span><span class="kr-mean">즉시</span></div>
-      <div class="vocab-card"><span class="jp-word">何ら</span><span class="kr-mean">아무런</span></div>
-      <div class="vocab-card"><span class="jp-word">果たして</span><span class="kr-mean">과연</span></div>
-      <div class="vocab-card"><span class="jp-word">まさに</span><span class="kr-mean">그야말로</span></div>
-      <div class="vocab-card"><span class="jp-word">むしろ</span><span class="kr-mean">오히려</span></div>
-      <div class="vocab-card"><span class="jp-word">わずかに</span><span class="kr-mean">약간/겨우</span></div>
-      <div class="vocab-card"><span class="jp-word">要するに</span><span class="kr-mean">요컨대</span></div>
-    </div>
-  </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>駅<rt>えき</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（えき）</div>
+          <div class="basic-vocab-card__ko">역</div>
+        </div>
+      </article>
 
-  <div class="level-group">
-    <span class="level-title">N2 관용구 (심화)</span>
-    <div class="vocab-grid">
-      <div class="vocab-card"><span class="jp-word"><ruby>足<rt>あし</rt></ruby>をのばす</span><span class="kr-mean">간 김에 더 멀리 가다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>板<rt>いた</rt></ruby>につく</span><span class="kr-mean">손에 익다/어울리다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>一目<rt>いちもく</rt></ruby>をおく</span><span class="kr-mean">경의를 표하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>陰<rt>かげ</rt></ruby>をひそめる</span><span class="kr-mean">자취를 감추다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>固<rt>かた</rt></ruby>ずをのむ</span><span class="kr-mean">마른침을 삼키다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>釘<rt>くぎ</rt></ruby>をさす</span><span class="kr-mean">다짐을 두다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>終止符<rt>しゅうしふ</rt></ruby>をうつ</span><span class="kr-mean">종지부를 찍다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>白<rt>しろ</rt></ruby>い<ruby>目<rt>め</rt></ruby>でみる</span><span class="kr-mean">백안시하다(냉대)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>拍車<rt>はくしゃ</rt></ruby>をかける</span><span class="kr-mean">박차를 가하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>火<rt>ひ</rt></ruby>をみるより<ruby>明<rt>あき</rt></ruby>らか</span><span class="kr-mean">불 보듯 뻔하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>視野<rt>しや</rt></ruby>にいれる</span><span class="kr-mean">시야에 넣다(고려)</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>焦点<rt>しょうてん</rt></ruby>をあてる</span><span class="kr-mean">초점을 맞추다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>裏<rt>うら</rt></ruby>にでる</span><span class="kr-mean">역효과가 나다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>手<rt>て</rt></ruby>をやく</span><span class="kr-mean">애를 먹다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>肝<rt>きも</rt></ruby>にめいじる</span><span class="kr-mean">명심하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>目<rt>め</rt></ruby>をつぶる</span><span class="kr-mean">눈감아 주다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>耳<rt>みみ</rt></ruby>をうたがう</span><span class="kr-mean">귀를 의심하다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>胸<rt>むね</rt></ruby>をおどらせる</span><span class="kr-mean">가슴을 설레다</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>一石二鳥<rt>いっせきにちょう</rt></ruby></span><span class="kr-mean">일석이조</span></div>
-      <div class="vocab-card"><span class="jp-word"><ruby>試行錯誤<rt>しこうさくご</rt></ruby></span><span class="kr-mean">시행착오</span></div>
-    </div>
-  </div>
-</div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>図書館<rt>としょかん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（としょかん）</div>
+          <div class="basic-vocab-card__ko">도서관</div>
+        </div>
+      </article>
 
-<div class="gym-section gym-font-kr">
-  <h2 class="gym-section-title">Phase 3-1. 본능적 섀도우 복싱 🥊</h2>
-  <p class="gym-sub-title">어디선가 들어본 익숙한 소리들입니다. 글자만 보고 소리를 유추해 본 뒤, 마우스를 올려 정답을 확인하세요.</p>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>食堂<rt>しょくどう</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（しょくどう）</div>
+          <div class="basic-vocab-card__ko">식당</div>
+        </div>
+      </article>
 
-  <div class="gym-shadow-grid gym-font-jp">
-    
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">ありがとうございます</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">아리가토-고자이마스</div>
-        <div class="gym-reveal-meaning">감사합니다</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">すみません</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">스미마센</div>
-        <div class="gym-reveal-meaning">죄송합니다 / 저기요</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">ごめんなさい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">고멘나사이</div>
-        <div class="gym-reveal-meaning">미안해요</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">よろしくおねがいします</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">요로시쿠 오네가이시마스</div>
-        <div class="gym-reveal-meaning">잘 부탁드립니다</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">いらっしゃいませ</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">이랏샤이마세</div>
-        <div class="gym-reveal-meaning">어서 오세요</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">いただきます</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">이타다키마스</div>
-        <div class="gym-reveal-meaning">잘 먹겠습니다</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">ごちそうさまでした</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">고치소-사마데시타</div>
-        <div class="gym-reveal-meaning">잘 먹었습니다</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">おひさしぶり</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">오히사시부리</div>
-        <div class="gym-reveal-meaning">오랜만이야</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">おつかれさま</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">오츠카레사마</div>
-        <div class="gym-reveal-meaning">수고하셨습니다</div>
-      </div>
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>部屋<rt>へや</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（へや）</div>
+          <div class="basic-vocab-card__ko">방</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>本<rt>ほん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ほん）</div>
+          <div class="basic-vocab-card__ko">책</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>写真<rt>しゃしん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（しゃしん）</div>
+          <div class="basic-vocab-card__ko">사진</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>映画<rt>えいが</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（えいが）</div>
+          <div class="basic-vocab-card__ko">영화</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>音楽<rt>おんがく</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（おんがく）</div>
+          <div class="basic-vocab-card__ko">음악</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>料理<rt>りょうり</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（りょうり）</div>
+          <div class="basic-vocab-card__ko">요리</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>趣味<rt>しゅみ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（しゅみ）</div>
+          <div class="basic-vocab-card__ko">취미</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>仕事<rt>しごと</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（しごと）</div>
+          <div class="basic-vocab-card__ko">일, 직업</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>予定<rt>よてい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（よてい）</div>
+          <div class="basic-vocab-card__ko">예정</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>休み<rt>やすみ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（やすみ）</div>
+          <div class="basic-vocab-card__ko">휴일, 휴식</div>
+        </div>
+      </article>
+
     </div>
 
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">ほんとう？</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">혼토-?</div>
-        <div class="gym-reveal-meaning">정말?</div>
+    <div class="basic-vocab-pattern">
+      <div class="basic-vocab-pattern__title">
+        명사 활용 예시
+      </div>
+
+      <div class="basic-vocab-pattern__examples">
+        <span class="basic-vocab-pattern__chip">学生です</span>
+        <span class="basic-vocab-pattern__chip">学生ではありません</span>
+        <span class="basic-vocab-pattern__chip">学生でした</span>
+        <span class="basic-vocab-pattern__chip">学生ではありませんでした</span>
+        <span class="basic-vocab-pattern__chip">学生ではないです</span>
+        <span class="basic-vocab-pattern__chip">学生ではなかったです</span>
       </div>
     </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">まじで？</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">마지데?</div>
-        <div class="gym-reveal-meaning">진짜로? (격투/애니 단골)</div>
+  </section>
+
+
+  <!-- い형용사 -->
+
+  <section class="basic-vocab-section basic-vocab-section--i">
+    <h3 class="basic-vocab-section__heading">
+      い형용사 — 상태와 느낌 말하기
+    </h3>
+
+    <p class="basic-vocab-section__description">
+      물건, 장소, 음식, 날씨를 하나 정한 뒤
+      형용사를 골라 현재·과거 문장을 만드세요.
+    </p>
+
+    <div class="basic-vocab-grid">
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>大きい<rt>おおきい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（おおきい）</div>
+          <div class="basic-vocab-card__ko">크다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>小さい<rt>ちいさい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ちいさい）</div>
+          <div class="basic-vocab-card__ko">작다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>高い<rt>たかい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（たかい）</div>
+          <div class="basic-vocab-card__ko">비싸다, 높다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>安い<rt>やすい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（やすい）</div>
+          <div class="basic-vocab-card__ko">싸다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>新しい<rt>あたらしい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（あたらしい）</div>
+          <div class="basic-vocab-card__ko">새롭다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>古い<rt>ふるい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ふるい）</div>
+          <div class="basic-vocab-card__ko">오래되다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>長い<rt>ながい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ながい）</div>
+          <div class="basic-vocab-card__ko">길다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>短い<rt>みじかい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（みじかい）</div>
+          <div class="basic-vocab-card__ko">짧다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>広い<rt>ひろい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ひろい）</div>
+          <div class="basic-vocab-card__ko">넓다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>狭い<rt>せまい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（せまい）</div>
+          <div class="basic-vocab-card__ko">좁다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>近い<rt>ちかい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ちかい）</div>
+          <div class="basic-vocab-card__ko">가깝다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>遠い<rt>とおい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（とおい）</div>
+          <div class="basic-vocab-card__ko">멀다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>早い<rt>はやい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（はやい）</div>
+          <div class="basic-vocab-card__ko">이르다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>遅い<rt>おそい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（おそい）</div>
+          <div class="basic-vocab-card__ko">늦다, 느리다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>暑い<rt>あつい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（あつい）</div>
+          <div class="basic-vocab-card__ko">덥다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>寒い<rt>さむい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（さむい）</div>
+          <div class="basic-vocab-card__ko">춥다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>熱い<rt>あつい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（あつい）</div>
+          <div class="basic-vocab-card__ko">뜨겁다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>冷たい<rt>つめたい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（つめたい）</div>
+          <div class="basic-vocab-card__ko">차갑다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>明るい<rt>あかるい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（あかるい）</div>
+          <div class="basic-vocab-card__ko">밝다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>暗い<rt>くらい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（くらい）</div>
+          <div class="basic-vocab-card__ko">어둡다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>面白い<rt>おもしろい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（おもしろい）</div>
+          <div class="basic-vocab-card__ko">재미있다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>難しい<rt>むずかしい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（むずかしい）</div>
+          <div class="basic-vocab-card__ko">어렵다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>忙しい<rt>いそがしい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（いそがしい）</div>
+          <div class="basic-vocab-card__ko">바쁘다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>楽しい<rt>たのしい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（たのしい）</div>
+          <div class="basic-vocab-card__ko">즐겁다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">おいしい</div>
+          <div class="basic-vocab-card__kana">（おいしい）</div>
+          <div class="basic-vocab-card__ko">맛있다</div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="basic-vocab-pattern">
+      <div class="basic-vocab-pattern__title">
+        い형용사 활용 예시
+      </div>
+
+      <div class="basic-vocab-pattern__examples">
+        <span class="basic-vocab-pattern__chip">高いです</span>
+        <span class="basic-vocab-pattern__chip">高くないです</span>
+        <span class="basic-vocab-pattern__chip">高くありません</span>
+        <span class="basic-vocab-pattern__chip">高かったです</span>
+        <span class="basic-vocab-pattern__chip">高くなかったです</span>
+        <span class="basic-vocab-pattern__chip">高くありませんでした</span>
       </div>
     </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">うそ！</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">우소!</div>
-        <div class="gym-reveal-meaning">거짓말! / 말도 안 돼!</div>
-      </div>
+  </section>
+
+
+  <!-- な형용사 -->
+
+  <section class="basic-vocab-section basic-vocab-section--na">
+    <h3 class="basic-vocab-section__heading">
+      な형용사 — 특징과 평가 말하기
+    </h3>
+
+    <p class="basic-vocab-section__description">
+      사람, 장소, 물건의 상태를 골라
+      명사 です형과 같은 방식으로 활용하세요.
+    </p>
+
+    <div class="basic-vocab-grid">
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>静か<rt>しずか</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（しずか）</div>
+          <div class="basic-vocab-card__ko">조용하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>便利<rt>べんり</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（べんり）</div>
+          <div class="basic-vocab-card__ko">편리하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>不便<rt>ふべん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ふべん）</div>
+          <div class="basic-vocab-card__ko">불편하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>簡単<rt>かんたん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（かんたん）</div>
+          <div class="basic-vocab-card__ko">간단하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>元気<rt>げんき</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（げんき）</div>
+          <div class="basic-vocab-card__ko">건강하다, 활기차다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>親切<rt>しんせつ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（しんせつ）</div>
+          <div class="basic-vocab-card__ko">친절하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>有名<rt>ゆうめい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ゆうめい）</div>
+          <div class="basic-vocab-card__ko">유명하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>大切<rt>たいせつ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（たいせつ）</div>
+          <div class="basic-vocab-card__ko">소중하다, 중요하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>必要<rt>ひつよう</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ひつよう）</div>
+          <div class="basic-vocab-card__ko">필요하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>安全<rt>あんぜん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（あんぜん）</div>
+          <div class="basic-vocab-card__ko">안전하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>危険<rt>きけん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（きけん）</div>
+          <div class="basic-vocab-card__ko">위험하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>丈夫<rt>じょうぶ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（じょうぶ）</div>
+          <div class="basic-vocab-card__ko">튼튼하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>暇<rt>ひま</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ひま）</div>
+          <div class="basic-vocab-card__ko">한가하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>上手<rt>じょうず</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（じょうず）</div>
+          <div class="basic-vocab-card__ko">잘하다, 능숙하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>下手<rt>へた</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（へた）</div>
+          <div class="basic-vocab-card__ko">서투르다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>真面目<rt>まじめ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（まじめ）</div>
+          <div class="basic-vocab-card__ko">성실하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>特別<rt>とくべつ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（とくべつ）</div>
+          <div class="basic-vocab-card__ko">특별하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>自由<rt>じゆう</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（じゆう）</div>
+          <div class="basic-vocab-card__ko">자유롭다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>普通<rt>ふつう</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（ふつう）</div>
+          <div class="basic-vocab-card__ko">보통이다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（だいじょうぶ）</div>
+          <div class="basic-vocab-card__ko">괜찮다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>好き<rt>すき</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（すき）</div>
+          <div class="basic-vocab-card__ko">좋아하다, 좋아함</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>嫌い<rt>きらい</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（きらい）</div>
+          <div class="basic-vocab-card__ko">싫어하다, 싫어함</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">きれい</div>
+          <div class="basic-vocab-card__kana">（きれい）</div>
+          <div class="basic-vocab-card__ko">깨끗하다, 아름답다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">にぎやか</div>
+          <div class="basic-vocab-card__kana">（にぎやか）</div>
+          <div class="basic-vocab-card__ko">활기차다, 번화하다</div>
+        </div>
+      </article>
+
+      <article class="basic-vocab-card">
+        <div class="basic-vocab-card__inner">
+          <div class="basic-vocab-card__jp">
+            <ruby>新鮮<rt>しんせん</rt></ruby>
+          </div>
+          <div class="basic-vocab-card__kana">（しんせん）</div>
+          <div class="basic-vocab-card__ko">신선하다</div>
+        </div>
+      </article>
+
     </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">やばい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">야바이</div>
-        <div class="gym-reveal-meaning">대박 / 헐 / 큰일 났다</div>
+
+    <div class="basic-vocab-pattern">
+      <div class="basic-vocab-pattern__title">
+        な형용사 활용 예시
       </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">なるほど</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">나루호도</div>
-        <div class="gym-reveal-meaning">과연 / 그렇구나</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">もちろん</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">모치론</div>
-        <div class="gym-reveal-meaning">물론이지</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">なに？</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">나니?</div>
-        <div class="gym-reveal-meaning">뭐야? / 뭣이?</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">びっくりした</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">빗쿠리시타</div>
-        <div class="gym-reveal-meaning">깜짝이야</div>
+
+      <div class="basic-vocab-pattern__examples">
+        <span class="basic-vocab-pattern__chip">静かです</span>
+        <span class="basic-vocab-pattern__chip">静かではありません</span>
+        <span class="basic-vocab-pattern__chip">静かではないです</span>
+        <span class="basic-vocab-pattern__chip">静かでした</span>
+        <span class="basic-vocab-pattern__chip">静かではありませんでした</span>
+        <span class="basic-vocab-pattern__chip">静かではなかったです</span>
       </div>
     </div>
 
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">ちょっと まって</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">춋토 맛테</div>
-        <div class="gym-reveal-meaning">잠깐 기다려</div>
-      </div>
+    <div class="basic-vocab-warning">
+      <strong>주의:</strong>
+      「きれい」와
+      <ruby>嫌い<rt>きらい</rt></ruby>는 끝에 「い」가 있지만
+      い형용사가 아니라 な형용사입니다.
     </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">やめて</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">야메테</div>
-        <div class="gym-reveal-meaning">그만해!</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">にげろ！</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">니게로!</div>
-        <div class="gym-reveal-meaning">도망쳐!</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">たすけて</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">타스케테</div>
-        <div class="gym-reveal-meaning">살려줘 / 도와줘</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">はやく！</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">하야쿠!</div>
-        <div class="gym-reveal-meaning">빨리!</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">がんばれ</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">간바레</div>
-        <div class="gym-reveal-meaning">힘내!</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">いくぞ</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">이쿠조</div>
-        <div class="gym-reveal-meaning">가자!</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">だめ</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">다메</div>
-        <div class="gym-reveal-meaning">안 돼</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">いやだ</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">이야다</div>
-        <div class="gym-reveal-meaning">싫어</div>
-      </div>
-    </div>
+  </section>
 
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">おいしい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">오이시이</div>
-        <div class="gym-reveal-meaning">맛있다</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">うまい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">우마이</div>
-        <div class="gym-reveal-meaning">맛있어 / 끝내줘</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">きもちいい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">키모치이이</div>
-        <div class="gym-reveal-meaning">기분 좋아</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">かわいい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">카와이이</div>
-        <div class="gym-reveal-meaning">귀여워</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">すごい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">스고이</div>
-        <div class="gym-reveal-meaning">대단해 / 쩔어</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">いたい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">이타이</div>
-        <div class="gym-reveal-meaning">아파</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">こわい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">코와이</div>
-        <div class="gym-reveal-meaning">무서워</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">つかれた</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">츠카레타</div>
-        <div class="gym-reveal-meaning">피곤해 / 지쳤어</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">うるさい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">우루사이</div>
-        <div class="gym-reveal-meaning">시끄러워</div>
-      </div>
-    </div>
-
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">せんせい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">센세-</div>
-        <div class="gym-reveal-meaning">선생님</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">せんぱい</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">센파이</div>
-        <div class="gym-reveal-meaning">선배</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">おまえ</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">오마에</div>
-        <div class="gym-reveal-meaning">너 / 네 녀석</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">おいしくなれ</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">오이시쿠나레</div>
-        <div class="gym-reveal-meaning">맛있어져라 (밈)</div>
-      </div>
-    </div>
-    <div class="gym-shadow-card">
-      <div class="gym-shadow-jp">もえもえきゅん</div>
-      <div class="gym-shadow-reveal gym-font-kr">
-        <div class="gym-reveal-pronun">모에모에큔</div>
-        <div class="gym-reveal-meaning">모에모에뀽 (밈)</div>
-      </div>
-    </div>
-
-  </div>
 </div>
