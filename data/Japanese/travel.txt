@@ -1,0 +1,5532 @@
+여행 일본어
+<style>
+  /* ================================
+     여행 일본어 공통 디자인
+     ================================ */
+
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #22252a;
+    --subtext: #646a73;
+    --line: #e4e7eb;
+
+    --main: #e85d4a;
+    --main-soft: #fff1ee;
+
+    --staff: #2878c8;
+    --staff-soft: #edf6ff;
+
+    --customer: #26885d;
+    --customer-soft: #eef9f3;
+
+    --note: #fff8dd;
+    --note-line: #efd67a;
+
+    --practice: #f5efff;
+    --practice-line: #9b72d2;
+
+    --radius: 16px;
+    --small-radius: 10px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Pretendard",
+      "Noto Sans KR",
+      "Noto Sans JP",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+
+  /* 전체 자료 영역 */
+  .travel-japanese {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 20px 14px 48px;
+  }
+
+  /* ================================
+     상단 제목
+     ================================ */
+
+  .lesson-header {
+    margin-bottom: 16px;
+    padding: 22px 20px;
+    background: linear-gradient(135deg, #ff7562, #e84e40);
+    color: #ffffff;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 22px rgba(80, 40, 35, 0.12);
+  }
+
+  .lesson-number {
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    opacity: 0.85;
+  }
+
+  .lesson-title {
+    margin: 0;
+    font-size: clamp(25px, 7vw, 34px);
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+  }
+
+  .lesson-subtitle {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.55;
+    opacity: 0.92;
+  }
+
+  /* ================================
+     공통 섹션
+     ================================ */
+
+  .section {
+    margin-top: 18px;
+    padding: 18px 16px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 3px 12px rgba(30, 35, 40, 0.04);
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px;
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+  }
+
+  .section-title::before {
+    content: "";
+    width: 5px;
+    height: 22px;
+    flex: 0 0 auto;
+    background: var(--main);
+    border-radius: 999px;
+  }
+
+  .section-description {
+    margin: -4px 0 14px;
+    color: var(--subtext);
+    font-size: 14px;
+  }
+
+  /* 오늘의 목표 */
+  .goal-box {
+    margin-top: 14px;
+    padding: 15px 16px;
+    background: var(--main-soft);
+    border: 1px solid #ffd5ce;
+    border-radius: var(--radius);
+  }
+
+  .goal-box strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #c83f31;
+    font-size: 15px;
+  }
+
+  .goal-box ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .goal-box li + li {
+    margin-top: 3px;
+  }
+
+  /* ================================
+     핵심 단어
+     ================================ */
+
+  .word-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .word-card {
+    padding: 11px 12px;
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: var(--small-radius);
+  }
+
+  .word-kana {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  .word-kanji {
+    display: block;
+    color: var(--subtext);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .word-meaning {
+    display: block;
+    margin-top: 3px;
+    color: #363b43;
+    font-size: 13px;
+  }
+
+  /* ================================
+     대화 블록
+     ================================ */
+
+  .dialogue {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dialogue-line {
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+
+  /* 직원 말 */
+  .dialogue-line.staff {
+    background: var(--staff-soft);
+    border-color: #cfe5fa;
+  }
+
+  /* 손님 말 */
+  .dialogue-line.customer {
+    background: var(--customer-soft);
+    border-color: #cdebdc;
+  }
+
+  .speaker {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .staff .speaker {
+    background: #d6ebff;
+    color: #1764a9;
+  }
+
+  .customer .speaker {
+    background: #d7f0e3;
+    color: #147048;
+  }
+
+  /* 히라가나 메인 문장 */
+  .jp-kana {
+    margin: 0;
+    font-size: clamp(21px, 5.7vw, 27px);
+    font-weight: 800;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    word-break: normal;
+  }
+
+  /* 한자 + 위쪽 요미가나 */
+  .jp-kanji {
+    margin: 6px 0 0;
+    color: #555c66;
+    font-size: 15px;
+    line-height: 2;
+    word-break: normal;
+  }
+
+  ruby {
+    ruby-position: over;
+    ruby-align: center;
+  }
+
+  rt {
+    color: #707782;
+    font-size: 0.58em;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  /* 한국어 뜻 */
+  .ko-meaning {
+    margin: 7px 0 0;
+    padding-top: 7px;
+    border-top: 1px dashed rgba(80, 90, 100, 0.22);
+    color: #24282e;
+    font-size: 15px;
+    font-weight: 650;
+  }
+
+  /* ================================
+     문장 해설
+     ================================ */
+
+  .explanation {
+    margin-top: 10px;
+    padding: 11px 12px;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: var(--small-radius);
+    color: #444a53;
+    font-size: 14px;
+  }
+
+  .explanation p {
+    margin: 0;
+  }
+
+  .explanation p + p {
+    margin-top: 5px;
+  }
+
+  .explanation strong {
+    color: #20242a;
+  }
+
+  /* 말을 짧게 쪼개서 설명할 때 */
+  .breakdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 9px;
+  }
+
+  .breakdown-item {
+    padding: 5px 8px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: #454b53;
+    font-size: 13px;
+  }
+
+  .breakdown-item b {
+    color: var(--main);
+  }
+
+  /* ================================
+     짧은 대답 / 바로 쓰는 표현
+     ================================ */
+
+  .quick-replies {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .quick-reply {
+    padding: 11px 12px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--customer);
+    border-radius: var(--small-radius);
+  }
+
+  .quick-reply .jp {
+    display: block;
+    font-size: 18px;
+    font-weight: 750;
+  }
+
+  .quick-reply .ko {
+    display: block;
+    margin-top: 2px;
+    color: var(--subtext);
+    font-size: 13px;
+  }
+
+  /* ================================
+     팁과 주의사항
+     ================================ */
+
+  .tip-box {
+    margin-top: 12px;
+    padding: 13px 14px;
+    background: var(--note);
+    border: 1px solid var(--note-line);
+    border-radius: var(--small-radius);
+    color: #504722;
+    font-size: 14px;
+  }
+
+  .tip-box::before {
+    content: "TIP";
+    display: inline-block;
+    margin-right: 7px;
+    padding: 2px 7px;
+    background: #f2d76d;
+    border-radius: 999px;
+    color: #55491b;
+    font-size: 11px;
+    font-weight: 850;
+  }
+
+  /* 문법 설명을 따로 하지 않는다는 표시 */
+  .course-note {
+    margin-top: 12px;
+    padding: 12px 14px;
+    background: #f5f6f8;
+    border-left: 4px solid #989fa9;
+    border-radius: 8px;
+    color: #5d636c;
+    font-size: 13px;
+  }
+
+  /* ================================
+     연습
+     ================================ */
+
+  .practice-box {
+    margin-top: 14px;
+    padding: 15px;
+    background: var(--practice);
+    border: 1px solid #dac8f2;
+    border-left: 5px solid var(--practice-line);
+    border-radius: var(--small-radius);
+  }
+
+  .practice-title {
+    margin: 0 0 8px;
+    color: #69439b;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .practice-box p,
+  .practice-box ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .practice-box ul {
+    padding-left: 20px;
+  }
+
+  .practice-box li + li {
+    margin-top: 4px;
+  }
+
+  /* 듣기용 / 말하기용 작은 태그 */
+  .usage-tag {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    vertical-align: 2px;
+  }
+
+  .usage-tag.listen {
+    background: #d9ecff;
+    color: #1764a9;
+  }
+
+  .usage-tag.speak {
+    background: #d8f1e4;
+    color: #147048;
+  }
+
+  /* ================================
+     모바일
+     ================================ */
+
+  @media (max-width: 520px) {
+    .travel-japanese {
+      padding: 12px 10px 36px;
+    }
+
+    .lesson-header {
+      padding: 19px 16px;
+      border-radius: 14px;
+    }
+
+    .section {
+      margin-top: 12px;
+      padding: 15px 13px;
+      border-radius: 14px;
+    }
+
+    .word-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .word-card {
+      padding: 9px 10px;
+    }
+
+    .dialogue {
+      gap: 9px;
+    }
+
+    .dialogue-line {
+      padding: 13px 12px;
+    }
+
+    .explanation {
+      padding: 10px;
+    }
+  }
+
+  /* ================================
+     인쇄
+     ================================ */
+
+  @media print {
+    body {
+      background: #ffffff;
+    }
+
+    .travel-japanese {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    .lesson-header,
+    .section,
+    .dialogue-line,
+    .practice-box,
+    .tip-box {
+      box-shadow: none;
+      break-inside: avoid;
+    }
+
+    .lesson-header {
+      color: #000000;
+      background: #ffffff;
+      border: 2px solid #333333;
+    }
+  }
+</style>
+
+<div class="travel-japanese">
+
+  <header class="lesson-header">
+    <div class="lesson-number">TRAVEL JAPANESE 01</div>
+    <h1 class="lesson-title">편의점에서 말하기</h1>
+    <p class="lesson-subtitle">
+      도시락을 데워달라고 하고, 계산대 옆 음식과 봉투를 요청해 봅니다.
+    </p>
+  </header>
+
+  <div class="goal-box">
+    <strong>오늘의 목표</strong>
+    <ul>
+      <li>도시락을 데워달라고 하기</li>
+      <li>야키토리와 젓가락을 요청하기</li>
+      <li>가격과 결제 방법 말하기</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">먼저 알아둘 단어</h2>
+
+    <div class="word-grid">
+
+      <div class="word-card">
+        <span class="word-kana">べんとう</span>
+        <span class="word-kanji">
+          <ruby>弁当<rt>べんとう</rt></ruby>
+        </span>
+        <span class="word-meaning">도시락</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">あたため</span>
+        <span class="word-kanji">
+          <ruby>温<rt>あたた</rt></ruby>め
+        </span>
+        <span class="word-meaning">데우기</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">やきとり</span>
+        <span class="word-kanji">
+          <ruby>焼<rt>や</rt></ruby>き<ruby>鳥<rt>とり</rt></ruby>
+        </span>
+        <span class="word-meaning">야키토리, 닭꼬치</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">おはし</span>
+        <span class="word-kanji">
+          お<ruby>箸<rt>はし</rt></ruby>
+        </span>
+        <span class="word-meaning">젓가락</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ふくろ</span>
+        <span class="word-kanji">
+          <ruby>袋<rt>ふくろ</rt></ruby>
+        </span>
+        <span class="word-meaning">봉투</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">おかいけい</span>
+        <span class="word-kanji">
+          お<ruby>会計<rt>かいけい</rt></ruby>
+        </span>
+        <span class="word-meaning">계산</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 1. 도시락 데우기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          おべんとう、あたためますか？
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>弁当<rt>べんとう</rt></ruby>、
+          <ruby>温<rt>あたた</rt></ruby>めますか？
+        </p>
+
+        <p class="ko-meaning">
+          도시락 데워드릴까요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>お</strong>는 말을 공손하게 만들 때 자주 붙습니다.
+          </p>
+          <p>
+            <strong>あたため</strong>는 음식을 따뜻하게 데운다는 뜻입니다.
+          </p>
+          <p>
+            <strong>べんとう</strong>와 <strong>あたため</strong>가 들리면
+            도시락을 데울지 묻는 상황입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          はい、おねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          はい、お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          네, 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            앞에서 무엇을 원하는지 이미 이야기했기 때문에
+            <strong>おねがいします</strong>만 말해도 충분합니다.
+          </p>
+          <p>
+            여러 상황에서 쓸 수 있는 매우 편리한 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          おはしはおつけしますか？
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>箸<rt>はし</rt></ruby>は
+          お<ruby>付<rt>つ</rt></ruby>けしますか？
+        </p>
+
+        <p class="ko-meaning">
+          젓가락 넣어드릴까요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>おはし</strong>는 젓가락입니다.
+          </p>
+          <p>
+            여기서 <strong>おつけしますか</strong>는
+            “같이 넣어드릴까요?”라는 뜻입니다.
+          </p>
+          <p>
+            문법을 분석하기보다 <strong>おはし</strong>라는 단어를 듣는 것이 중요합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          はい、ひとつおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          はい、<ruby>一<rt>ひと</rt></ruby>つ
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          네, 하나 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ひとつ</strong>는 하나라는 뜻입니다.
+          </p>
+          <p>
+            필요하지 않을 때는
+            <strong>だいじょうぶです</strong>라고 대답하면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">
+          あたためてください。
+        </span>
+        <span class="ko">
+          데워주세요.
+        </span>
+      </div>
+
+      
+
+      <div class="quick-reply">
+        <span class="jp">
+          だいじょうぶです。
+        </span>
+        <span class="ko">
+          괜찮습니다. · 여기서는 필요 없다는 뜻
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 2. 야키토리 주문하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、あのやきとり、ひとつください。
+        </p>
+
+        <p class="jp-kanji">
+          すみません、あの
+          <ruby>焼<rt>や</rt></ruby>き<ruby>鳥<rt>とり</rt></ruby>、
+          <ruby>一<rt>ひと</rt></ruby>つください。
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 저 야키토리 하나 주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>すみません</strong>은 직원을 부를 때 쓰는 “저기요”입니다.
+          </p>
+          <p>
+            <strong>あの</strong>는 조금 떨어져 있는 물건을 가리킬 때 쓰는 “저”입니다.
+          </p>
+          <p>
+            상품 이름을 몰라도 손으로 가리키며
+            <strong>あれ、ひとつください</strong>라고 말할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          たれとしお、どちらにしますか？
+        </p>
+
+        <p class="jp-kanji">
+          たれと<ruby>塩<rt>しお</rt></ruby>、
+          どちらにしますか？
+        </p>
+
+        <p class="ko-meaning">
+          양념과 소금 중 어느 것으로 하시겠어요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>たれ</strong>는 달콤하고 짭짤한 양념입니다.
+          </p>
+          <p>
+            <strong>しお</strong>는 소금 간입니다.
+          </p>
+          <p>
+            <strong>どちら</strong>는 둘 중 어느 쪽인지를 묻는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          たれでおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          たれでお<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          양념으로 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            원하는 것을 말한 뒤 <strong>で</strong>를 붙이면
+            “~로요”라는 느낌이 됩니다.
+          </p>
+          <p>
+            편의점뿐 아니라 음식점과 카페에서도 자주 사용하는 방식입니다.
+          </p>
+        </div>
+
+        <div class="breakdown">
+          <span class="breakdown-item">
+            <b>たれで</b> → 양념으로요
+          </span>
+          <span class="breakdown-item">
+            <b>しおで</b> → 소금으로요
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 3. 가격 묻고 계산하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、これ、いくらですか？
+        </p>
+
+        <p class="jp-kanji">
+          すみません、これ、いくらですか？
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 이거 얼마예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>これ</strong>는 내 가까이에 있는 “이것”입니다.
+          </p>
+          <p>
+            <strong>いくらですか</strong>는 가격을 물을 때 쓰는 표현입니다.
+          </p>
+          <p>
+            가격표를 찾기 어렵거나 진열 상품의 가격이 헷갈릴 때 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          ひゃくきゅうじゅうはちえんです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>百九十八円<rt>ひゃくきゅうじゅうはちえん</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          198엔입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            금액을 정확히 알아듣지 못해도 계산대 화면을 확인하면 됩니다.
+          </p>
+          <p>
+            여행 회화에서는 모든 숫자를 완벽하게 듣는 것보다
+            가격을 묻는 표현을 먼저 익히는 것이 중요합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          ふくろはごりようですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>袋<rt>ふくろ</rt></ruby>は
+          ご<ruby>利用<rt>りよう</rt></ruby>ですか？
+        </p>
+
+        <p class="ko-meaning">
+          봉투 필요하세요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ふくろ</strong>는 봉투입니다.
+          </p>
+          <p>
+            <strong>ごりようですか</strong>는 여기서
+            “사용하시겠어요?”라는 공손한 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ふくろ、おねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>袋<rt>ふくろ</rt></ruby>、
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          봉투 주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ふくろをください</strong>도 가능하지만,
+            가게에서는 <strong>ふくろ、おねがいします</strong>라고 짧게 말해도 자연스럽습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          カードでおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          カードでお<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          카드로 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            실제로는 <strong>カードで</strong>라고만 말해도 충분합니다.
+          </p>
+          <p>
+            현금으로 낼 때는 <strong>げんきんで</strong>라고 말합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      편의점에서는 문장을 길게 만들기보다
+      <strong>カードで</strong>,
+      <strong>ふくろ、おねがいします</strong>처럼
+      필요한 정보만 짧게 말하는 것이 자연스럽습니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">바로 쓰는 편의점 표현</h2>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">
+          これ、ひとつください。
+        </span>
+        <span class="ko">
+          이거 하나 주세요.
+        </span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">
+          あたためてください。
+        </span>
+        <span class="ko">
+          데워주세요.
+        </span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">
+          おはし、おねがいします。
+        </span>
+        <span class="ko">
+          젓가락 주세요.
+        </span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">
+          ふくろはいりません。
+        </span>
+        <span class="ko">
+          봉투는 필요 없습니다.
+        </span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">
+          レシート、おねがいします。
+        </span>
+        <span class="ko">
+          영수증 주세요.
+        </span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">
+          だいじょうぶです。
+        </span>
+        <span class="ko">
+          괜찮습니다. · 필요 없을 때도 사용
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">말 바꿔보기</h2>
+
+    <div class="practice-box">
+      <h3 class="practice-title">손님 역할</h3>
+      <ul>
+        <li>도시락을 데워달라고 해보세요.</li>
+        <li>야키토리 두 개를 주문해보세요.</li>
+        <li>봉투는 필요 없다고 말해보세요.</li>
+        <li>카드로 계산하겠다고 말해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">직원 역할</h3>
+      <ul>
+        <li>도시락을 데울지 물어보세요.</li>
+        <li>젓가락이 필요한지 물어보세요.</li>
+        <li>봉투가 필요한지 물어보세요.</li>
+        <li>야키토리 양념을 선택하게 해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="course-note">
+      이 시간에는 동사의 변화나 문법 구조를 자세히 설명하지 않습니다.
+      일본 여행 중 실제로 들리는 표현과 바로 사용할 수 있는 대답을
+      하나의 말 덩어리로 익힙니다.
+    </div>
+  </section>
+
+</div>
+
+<div class="travel-japanese">
+
+  <header class="lesson-header">
+    <div class="lesson-number">TRAVEL JAPANESE 02</div>
+    <h1 class="lesson-title">패스트푸드점에서 주문하기</h1>
+    <p class="lesson-subtitle">
+      매장 이용과 포장을 선택하고, 버거 세트와 음료를 주문해 봅니다.
+    </p>
+  </header>
+
+  <div class="goal-box">
+    <strong>오늘의 목표</strong>
+    <ul>
+      <li>매장에서 먹을지 포장할지 말하기</li>
+      <li>버거를 세트 또는 단품으로 주문하기</li>
+      <li>음료와 소스를 선택하기</li>
+      <li>잘못 주문한 메뉴를 정정하기</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">먼저 알아둘 단어</h2>
+
+    <div class="word-grid">
+
+      <div class="word-card">
+        <span class="word-kana">てんない</span>
+        <span class="word-kanji">
+          <ruby>店内<rt>てんない</rt></ruby>
+        </span>
+        <span class="word-meaning">매장 안</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">もちかえり</span>
+        <span class="word-kanji">
+          <ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>り
+        </span>
+        <span class="word-meaning">포장, 테이크아웃</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">たんぴん</span>
+        <span class="word-kanji">
+          <ruby>単品<rt>たんぴん</rt></ruby>
+        </span>
+        <span class="word-meaning">단품</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">セット</span>
+        <span class="word-kanji">
+          セット
+        </span>
+        <span class="word-meaning">세트 메뉴</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">のみもの</span>
+        <span class="word-kanji">
+          <ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>
+        </span>
+        <span class="word-meaning">음료</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">いじょう</span>
+        <span class="word-kanji">
+          <ruby>以上<rt>いじょう</rt></ruby>
+        </span>
+        <span class="word-meaning">이상, 여기까지</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 1. 매장 또는 포장 선택하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          てんないでおめしあがりですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>店内<rt>てんない</rt></ruby>で
+          お<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がりですか？
+        </p>
+
+        <p class="ko-meaning">
+          매장에서 드시나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>てんない</strong>는 가게 안, 매장 안이라는 뜻입니다.
+          </p>
+          <p>
+            <strong>おめしあがりですか</strong>는 직원이 손님에게 사용하는
+            공손한 “드시나요?”입니다.
+          </p>
+          <p>
+            직접 말하기보다 <strong>てんない</strong>를 듣고 상황을 알아차리면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          はい、てんないで。
+        </p>
+
+        <p class="jp-kanji">
+          はい、<ruby>店内<rt>てんない</rt></ruby>で。
+        </p>
+
+        <p class="ko-meaning">
+          네, 매장에서요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            긴 문장을 만들지 않고 <strong>てんないで</strong>라고만 말해도 자연스럽습니다.
+          </p>
+          <p>
+            뒤의 <strong>で</strong>는 여기서 “매장 이용으로요”라는 느낌입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          おもちかえりですか？
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>りですか？
+        </p>
+
+        <p class="ko-meaning">
+          포장이신가요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>お</strong>는 말을 공손하게 만들 때 자주 붙습니다.
+          </p>
+          <p>
+            <strong>もち</strong>는 가지고 가는 느낌,
+            <strong>かえり</strong>는 돌아가는 느낌입니다.
+          </p>
+          <p>
+            합치면 “가지고 돌아감”이 되어 포장이라는 뜻으로 사용됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          もちかえりでおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>りで
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          포장으로 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            실제로는 <strong>もちかえりで</strong>라고만 대답해도 충분합니다.
+          </p>
+          <p>
+            <strong>テイクアウトで</strong>도 통하지만,
+            <strong>もちかえり</strong>를 직원에게 들을 가능성이 높습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">てんないで。</span>
+        <span class="ko">매장에서요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">もちかえりで。</span>
+        <span class="ko">포장으로요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 2. 버거 세트 주문하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          ごちゅうもんをどうぞ。
+        </p>
+
+        <p class="jp-kanji">
+          ご<ruby>注文<rt>ちゅうもん</rt></ruby>をどうぞ。
+        </p>
+
+        <p class="ko-meaning">
+          주문해 주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ごちゅうもん</strong>은 주문이라는 뜻입니다.
+          </p>
+          <p>
+            <strong>どうぞ</strong>는 여기서 “말씀해 주세요”라는 느낌입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          てりやきバーガーのセット、ひとつおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          てりやきバーガーのセット、
+          <ruby>一<rt>ひと</rt></ruby>つ
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          데리야키 버거 세트 하나 주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            메뉴 이름 뒤에 <strong>のセット</strong>를 붙이면
+            “~ 세트”라는 뜻입니다.
+          </p>
+          <p>
+            실제 주문에서는 메뉴판을 가리키며
+            <strong>これのセット</strong>라고 해도 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          おのみものはなにになさいますか？
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>は
+          <ruby>何<rt>なに</rt></ruby>になさいますか？
+        </p>
+
+        <p class="ko-meaning">
+          음료는 무엇으로 하시겠어요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>おのみもの</strong>는 음료를 공손하게 말한 표현입니다.
+          </p>
+          <p>
+            <strong>なに</strong>가 들리면 어떤 음료를 원하는지 묻는 상황입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          コーラでおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          コーラでお<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          콜라로 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            음료 이름 뒤에 <strong>で</strong>를 붙여
+            <strong>コーラで</strong>라고 짧게 대답할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          いじょうでよろしいですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>以上<rt>いじょう</rt></ruby>でよろしいですか？
+        </p>
+
+        <p class="ko-meaning">
+          이상으로 괜찮으세요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>いじょう</strong>은 주문이 여기까지라는 뜻입니다.
+          </p>
+          <p>
+            추가할 것이 있는지 마지막으로 확인하는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          はい、いじょうです。
+        </p>
+
+        <p class="jp-kanji">
+          はい、<ruby>以上<rt>いじょう</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          네, 이상입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            주문을 마칠 때 사용하는 짧고 자연스러운 표현입니다.
+          </p>
+          <p>
+            추가할 메뉴가 있다면 <strong>あと、ポテトもおねがいします</strong>라고 말할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">セットでおねがいします。</span>
+        <span class="ko">세트로 부탁합니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">たんぴんで。</span>
+        <span class="ko">단품으로요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ポテトをエルサイズにしてください。</span>
+        <span class="ko">감자튀김을 L 사이즈로 해주세요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">のみものはアイスコーヒーで。</span>
+        <span class="ko">음료는 아이스커피로요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 3. 소스 요청하고 메뉴 정정하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ケチャップ、おおめにできますか？
+        </p>
+
+        <p class="jp-kanji">
+          ケチャップ、
+          <ruby>多<rt>おお</rt></ruby>めにできますか？
+        </p>
+
+        <p class="ko-meaning">
+          케첩을 많이 받을 수 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>おおめ</strong>는 보통보다 조금 많게라는 뜻입니다.
+          </p>
+          <p>
+            소스나 양념을 더 받고 싶을 때
+            <strong>おおめにできますか</strong>라고 물을 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ソース、もうひとつもらえますか？
+        </p>
+
+        <p class="jp-kanji">
+          ソース、もう
+          <ruby>一<rt>ひと</rt></ruby>つもらえますか？
+        </p>
+
+        <p class="ko-meaning">
+          소스 하나 더 받을 수 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>もうひとつ</strong>는 하나 더라는 뜻입니다.
+          </p>
+          <p>
+            <strong>もらえますか</strong>는 여기서
+            “받을 수 있을까요?”라는 부드러운 부탁입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、チーズバーガーじゃなくて、
+          てりやきバーガーでおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          すみません、チーズバーガーじゃなくて、
+          てりやきバーガーでお<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          죄송하지만 치즈버거 말고 데리야키 버거로 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>じゃなくて</strong>는 “~가 아니라”라는 뜻입니다.
+          </p>
+          <p>
+            잘못 주문했을 때
+            <strong>Aじゃなくて、Bでおねがいします</strong>라고 말하면 됩니다.
+          </p>
+        </div>
+
+        <div class="breakdown">
+          <span class="breakdown-item">
+            <b>Aじゃなくて</b> → A 말고
+          </span>
+          <span class="breakdown-item">
+            <b>Bで</b> → B로요
+          </span>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          やっぱり、たんぴんにかえてもいいですか？
+        </p>
+
+        <p class="jp-kanji">
+          やっぱり、<ruby>単品<rt>たんぴん</rt></ruby>に
+          <ruby>変<rt>か</rt></ruby>えてもいいですか？
+        </p>
+
+        <p class="ko-meaning">
+          역시 단품으로 바꿔도 될까요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>やっぱり</strong>는 생각을 바꿨을 때 사용하는
+            “역시, 아무래도”라는 표현입니다.
+          </p>
+          <p>
+            <strong>かえてもいいですか</strong>는
+            “바꿔도 될까요?”라는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      주문을 잘못했다고 당황할 필요는 없습니다.
+      먼저 <strong>すみません</strong>이라고 말하고,
+      원하는 메뉴를 가리키며
+      <strong>これにかえてもいいですか？</strong>라고 해도 충분히 통합니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">바로 쓰는 패스트푸드 표현</h2>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">これをひとつおねがいします。</span>
+        <span class="ko">이거 하나 부탁합니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">セットで。</span>
+        <span class="ko">세트로요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">たんぴんで。</span>
+        <span class="ko">단품으로요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">てんないで。</span>
+        <span class="ko">매장에서요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">もちかえりで。</span>
+        <span class="ko">포장으로요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">あと、これもおねがいします。</span>
+        <span class="ko">그리고 이것도 부탁합니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">いじょうです。</span>
+        <span class="ko">이상입니다.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">말 바꿔보기</h2>
+
+    <div class="practice-box">
+      <h3 class="practice-title">손님 역할</h3>
+      <ul>
+        <li>포장으로 버거 세트 하나를 주문해보세요.</li>
+        <li>음료를 콜라 대신 아이스커피로 선택해보세요.</li>
+        <li>소스를 하나 더 달라고 말해보세요.</li>
+        <li>세트 주문을 단품으로 바꿔보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">직원 역할</h3>
+      <ul>
+        <li>매장에서 먹을지 포장할지 물어보세요.</li>
+        <li>음료를 무엇으로 할지 물어보세요.</li>
+        <li>주문이 이상으로 끝인지 확인해보세요.</li>
+        <li>세트인지 단품인지 확인해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="course-note">
+      직원의 공손한 표현을 직접 만들 필요는 없습니다.
+      핵심 단어를 듣고 상황을 이해한 뒤,
+      <strong>セットで</strong>,
+      <strong>コーラで</strong>처럼 짧게 대답하는 것을 연습합니다.
+    </div>
+  </section>
+
+</div>
+
+<div class="travel-japanese">
+
+  <header class="lesson-header">
+    <div class="lesson-number">TRAVEL JAPANESE 03</div>
+    <h1 class="lesson-title">호텔에서 말하기</h1>
+    <p class="lesson-subtitle">
+      체크인과 체크아웃을 하고, 짐 보관과 객실 문제를 이야기해 봅니다.
+    </p>
+  </header>
+
+  <div class="goal-box">
+    <strong>오늘의 목표</strong>
+    <ul>
+      <li>예약자 이름을 말하고 체크인하기</li>
+      <li>조식과 체크아웃 시간 묻기</li>
+      <li>체크인 전후에 짐 맡기기</li>
+      <li>객실에 문제가 있을 때 도움 요청하기</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">먼저 알아둘 단어</h2>
+
+    <div class="word-grid">
+
+      <div class="word-card">
+        <span class="word-kana">よやく</span>
+        <span class="word-kanji">
+          <ruby>予約<rt>よやく</rt></ruby>
+        </span>
+        <span class="word-meaning">예약</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">なまえ</span>
+        <span class="word-kanji">
+          <ruby>名前<rt>なまえ</rt></ruby>
+        </span>
+        <span class="word-meaning">이름</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">にもつ</span>
+        <span class="word-kanji">
+          <ruby>荷物<rt>にもつ</rt></ruby>
+        </span>
+        <span class="word-meaning">짐</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">あずかり</span>
+        <span class="word-kanji">
+          <ruby>預<rt>あず</rt></ruby>かり
+        </span>
+        <span class="word-meaning">보관, 맡아둠</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ちょうしょく</span>
+        <span class="word-kanji">
+          <ruby>朝食<rt>ちょうしょく</rt></ruby>
+        </span>
+        <span class="word-meaning">조식</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">へや</span>
+        <span class="word-kanji">
+          <ruby>部屋<rt>へや</rt></ruby>
+        </span>
+        <span class="word-meaning">객실, 방</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 1. 체크인하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          チェックイン、おねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          チェックイン、お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          체크인 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            호텔 프런트에서는 긴 문장 없이
+            <strong>チェックイン、おねがいします</strong>라고 말해도 자연스럽습니다.
+          </p>
+          <p>
+            예약 확인 화면이나 여권을 함께 보여주면 더 빠르게 진행됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          ごよやくのおなまえをおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          ご<ruby>予約<rt>よやく</rt></ruby>の
+          お<ruby>名前<rt>なまえ</rt></ruby>を
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          예약자 성함 부탁드립니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>よやく</strong>은 예약,
+            <strong>おなまえ</strong>는 성함이라는 뜻입니다.
+          </p>
+          <p>
+            두 단어가 들리면 예약한 사람의 이름을 묻는 상황입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          イ・ボムソクです。
+        </p>
+
+        <p class="jp-kanji">
+          イ・ボムソクです。
+        </p>
+
+        <p class="ko-meaning">
+          이범석입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            자신의 이름 뒤에 <strong>です</strong>만 붙이면 됩니다.
+          </p>
+          <p>
+            잘 전달되지 않으면 여권이나 예약 화면을 보여주며
+            <strong>こちらです</strong>라고 말할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          パスポートをみせていただけますか？
+        </p>
+
+        <p class="jp-kanji">
+          パスポートを
+          <ruby>見<rt>み</rt></ruby>せていただけますか？
+        </p>
+
+        <p class="ko-meaning">
+          여권을 보여주시겠어요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>パスポート</strong>가 들리면 여권을 요청하는 상황입니다.
+          </p>
+          <p>
+            직접 같은 표현을 만들 필요 없이 여권을 건네면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          はい、どうぞ。
+        </p>
+
+        <p class="jp-kanji">
+          はい、どうぞ。
+        </p>
+
+        <p class="ko-meaning">
+          네, 여기 있습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            물건을 건네면서 <strong>どうぞ</strong>라고 말하면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 2. 시간과 조식 묻기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          チェックアウトはなんじですか？
+        </p>
+
+        <p class="jp-kanji">
+          チェックアウトは
+          <ruby>何時<rt>なんじ</rt></ruby>ですか？
+        </p>
+
+        <p class="ko-meaning">
+          체크아웃은 몇 시예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>なんじですか</strong>는 “몇 시예요?”라는 뜻입니다.
+          </p>
+          <p>
+            앞의 단어만 바꾸면 여러 장소에서 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          ごぜんじゅうじまでです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>午前十時<rt>ごぜんじゅうじ</rt></ruby>までです。
+        </p>
+
+        <p class="ko-meaning">
+          오전 10시까지입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ごぜん</strong>은 오전,
+            <strong>まで</strong>는 “~까지”라는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ちょうしょくはなんじからですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>朝食<rt>ちょうしょく</rt></ruby>は
+          <ruby>何時<rt>なんじ</rt></ruby>からですか？
+        </p>
+
+        <p class="ko-meaning">
+          조식은 몇 시부터예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ちょうしょく</strong>은 조식입니다.
+          </p>
+          <p>
+            <strong>なんじから</strong>는 “몇 시부터”라는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ちょうしょくはどこですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>朝食<rt>ちょうしょく</rt></ruby>はどこですか？
+        </p>
+
+        <p class="ko-meaning">
+          조식은 어디에서 먹나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            장소를 물을 때는 대상 뒤에
+            <strong>どこですか</strong>를 붙이면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">なんじまでですか？</span>
+        <span class="ko">몇 시까지예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">なんじからですか？</span>
+        <span class="ko">몇 시부터예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">どこですか？</span>
+        <span class="ko">어디예요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 3. 짐 맡기기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          にもつをあずかってもらえますか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>荷物<rt>にもつ</rt></ruby>を
+          <ruby>預<rt>あず</rt></ruby>かってもらえますか？
+        </p>
+
+        <p class="ko-meaning">
+          짐을 맡아주실 수 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>にもつ</strong>는 짐입니다.
+          </p>
+          <p>
+            <strong>あずかってもらえますか</strong>는
+            “맡아주실 수 있나요?”라는 표현입니다.
+          </p>
+          <p>
+            문법을 분석하지 않고 문장 전체를 하나로 익히면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          チェックインまえのおあずかりですか？
+        </p>
+
+        <p class="jp-kanji">
+          チェックイン<ruby>前<rt>まえ</rt></ruby>の
+          お<ruby>預<rt>あず</rt></ruby>かりですか？
+        </p>
+
+        <p class="ko-meaning">
+          체크인 전 짐 보관이신가요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>まえ</strong>는 전, 이전이라는 뜻입니다.
+          </p>
+          <p>
+            체크인 전에 짐을 맡기려는지 확인하는 말입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          はい、おねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          はい、お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          네, 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            상황이 이미 정해져 있으므로
+            <strong>はい、おねがいします</strong>만 말해도 충분합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          チェックアウトのあともだいじょうぶですか？
+        </p>
+
+        <p class="jp-kanji">
+          チェックアウトの<ruby>後<rt>あと</rt></ruby>も
+          <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですか？
+        </p>
+
+        <p class="ko-meaning">
+          체크아웃 후에도 괜찮나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>あと</strong>는 이후, 뒤라는 뜻입니다.
+          </p>
+          <p>
+            체크아웃 후에도 짐을 맡길 수 있는지 묻는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 4. 객실 문제 말하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、エアコンがうごきません。
+        </p>
+
+        <p class="jp-kanji">
+          すみません、エアコンが
+          <ruby>動<rt>うご</rt></ruby>きません。
+        </p>
+
+        <p class="ko-meaning">
+          죄송하지만 에어컨이 작동하지 않아요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>うごきません</strong>은 기계가 움직이거나 작동하지 않는다는 뜻입니다.
+          </p>
+          <p>
+            에어컨, 냉장고, TV 같은 기계 문제에 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          おゆがでません。
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>湯<rt>ゆ</rt></ruby>が
+          <ruby>出<rt>で</rt></ruby>ません。
+        </p>
+
+        <p class="ko-meaning">
+          뜨거운 물이 나오지 않아요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>おゆ</strong>는 뜨거운 물입니다.
+          </p>
+          <p>
+            <strong>でません</strong>은 나오지 않는다는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          タオルをもうひとつもらえますか？
+        </p>
+
+        <p class="jp-kanji">
+          タオルをもう
+          <ruby>一<rt>ひと</rt></ruby>つもらえますか？
+        </p>
+
+        <p class="ko-meaning">
+          수건 하나 더 받을 수 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>もうひとつ</strong>는 하나 더라는 뜻입니다.
+          </p>
+          <p>
+            필요한 물건 이름만 바꾸면 여러 상황에 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          すぐにかくにんいたします。
+        </p>
+
+        <p class="jp-kanji">
+          すぐに<ruby>確認<rt>かくにん</rt></ruby>いたします。
+        </p>
+
+        <p class="ko-meaning">
+          바로 확인하겠습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>すぐに</strong>는 바로,
+            <strong>かくにん</strong>은 확인이라는 뜻입니다.
+          </p>
+          <p>
+            직원이 문제를 확인하겠다는 말로 알아들으면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      객실 문제를 길게 설명하기 어렵다면
+      문제가 있는 물건을 먼저 말한 뒤
+      <strong>うごきません</strong>,
+      <strong>でません</strong>을 붙이면 됩니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 5. 체크아웃하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          チェックアウト、おねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          チェックアウト、お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          체크아웃 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            객실 카드키를 건네면서 말하면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          おへやばんごうをおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>部屋番号<rt>へやばんごう</rt></ruby>を
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          객실 번호 부탁드립니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>へやばんごう</strong>는 객실 번호입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ごひゃくにごうしつです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>五〇二号室<rt>ごひゃくにごうしつ</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          502호실입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            객실 번호 뒤에 <strong>ごうしつ</strong>를 붙여 말합니다.
+          </p>
+          <p>
+            숫자가 어렵다면 카드키를 보여주는 것만으로도 충분합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">바로 쓰는 호텔 표현</h2>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">よやくしてます。</span>
+        <span class="ko">예약했습니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">こちらです。</span>
+        <span class="ko">여기 있습니다. · 화면이나 서류를 보여줄 때</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">にもつをあずけたいんですが。</span>
+        <span class="ko">짐을 맡기고 싶은데요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">なんじまでですか？</span>
+        <span class="ko">몇 시까지예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">Wi-Fiのパスワードはどこですか？</span>
+        <span class="ko">와이파이 비밀번호는 어디에 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">カードキーをなくしました。</span>
+        <span class="ko">카드키를 잃어버렸어요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">말 바꿔보기</h2>
+
+    <div class="practice-box">
+      <h3 class="practice-title">손님 역할</h3>
+      <ul>
+        <li>예약자 이름을 말하고 체크인해보세요.</li>
+        <li>체크아웃 시간을 물어보세요.</li>
+        <li>체크인 전에 짐을 맡겨보세요.</li>
+        <li>객실 에어컨이 작동하지 않는다고 말해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">직원 역할</h3>
+      <ul>
+        <li>예약자 이름과 여권을 요청해보세요.</li>
+        <li>조식 시간과 장소를 안내해보세요.</li>
+        <li>객실 번호를 물어보세요.</li>
+        <li>객실 문제를 바로 확인하겠다고 말해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="course-note">
+      호텔 직원의 공손한 표현은 알아듣는 것을 목표로 합니다.
+      손님은 <strong>チェックイン、おねがいします</strong>,
+      <strong>なんじですか</strong>,
+      <strong>うごきません</strong>처럼 짧은 표현부터 사용합니다.
+    </div>
+  </section>
+
+</div>
+
+<div class="travel-japanese">
+
+  <header class="lesson-header">
+    <div class="lesson-number">TRAVEL JAPANESE 04</div>
+    <h1 class="lesson-title">드럭스토어에서 말하기</h1>
+    <p class="lesson-subtitle">
+      면세 여부를 확인하고, 필요한 약과 상품을 직원에게 물어봅니다.
+    </p>
+  </header>
+
+  <div class="goal-box">
+    <strong>오늘의 목표</strong>
+    <ul>
+      <li>면세가 가능한지 물어보기</li>
+      <li>소화제·두통약·감기약 찾기</li>
+      <li>증상을 간단하게 설명하기</li>
+      <li>복용 방법과 졸음 여부 확인하기</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">먼저 알아둘 단어</h2>
+
+    <div class="word-grid">
+
+      <div class="word-card">
+        <span class="word-kana">めんぜい</span>
+        <span class="word-kanji">
+          <ruby>免税<rt>めんぜい</rt></ruby>
+        </span>
+        <span class="word-meaning">면세</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">くすり</span>
+        <span class="word-kanji">
+          <ruby>薬<rt>くすり</rt></ruby>
+        </span>
+        <span class="word-meaning">약</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">いぐすり</span>
+        <span class="word-kanji">
+          <ruby>胃薬<rt>いぐすり</rt></ruby>
+        </span>
+        <span class="word-meaning">위장약, 소화제</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ずつうやく</span>
+        <span class="word-kanji">
+          <ruby>頭痛薬<rt>ずつうやく</rt></ruby>
+        </span>
+        <span class="word-meaning">두통약</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">かぜぐすり</span>
+        <span class="word-kanji">
+          <ruby>風邪薬<rt>かぜぐすり</rt></ruby>
+        </span>
+        <span class="word-meaning">감기약</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ねむくなる</span>
+        <span class="word-kanji">
+          <ruby>眠<rt>ねむ</rt></ruby>くなる
+        </span>
+        <span class="word-meaning">졸리게 되다</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 1. 면세 가능한지 묻기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、めんぜいできますか？
+        </p>
+
+        <p class="jp-kanji">
+          すみません、<ruby>免税<rt>めんぜい</rt></ruby>できますか？
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 면세 가능한가요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>めんぜい</strong>는 세금을 면제해주는 면세라는 뜻입니다.
+          </p>
+          <p>
+            <strong>できますか</strong>는 여기서
+            “가능한가요?”라는 뜻으로 사용합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          はい、パスポートをおもちですか？
+        </p>
+
+        <p class="jp-kanji">
+          はい、パスポートを
+          お<ruby>持<rt>も</rt></ruby>ちですか？
+        </p>
+
+        <p class="ko-meaning">
+          네, 여권을 가지고 계신가요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>パスポート</strong>가 들리면 여권을 보여달라는 상황입니다.
+          </p>
+          <p>
+            <strong>おもちですか</strong>는 여기서
+            “가지고 계신가요?”라는 공손한 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          はい、あります。
+        </p>
+
+        <p class="jp-kanji">
+          はい、あります。
+        </p>
+
+        <p class="ko-meaning">
+          네, 있습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            여권을 꺼내면서 <strong>はい、あります</strong>라고 말하면 됩니다.
+          </p>
+          <p>
+            바로 건넬 때는 <strong>はい、どうぞ</strong>라고 해도 자연스럽습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          めんぜいカウンターはにかいです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>免税<rt>めんぜい</rt></ruby>カウンターは
+          <ruby>二階<rt>にかい</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          면세 카운터는 2층입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>カウンター</strong>는 업무를 처리하는 창구입니다.
+          </p>
+          <p>
+            <strong>にかい</strong>는 2층이라는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">めんぜい、おねがいします。</span>
+        <span class="ko">면세 부탁합니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">パスポートはこちらです。</span>
+        <span class="ko">여권은 여기 있습니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">めんぜいカウンターはどこですか？</span>
+        <span class="ko">면세 카운터는 어디예요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 2. 필요한 약 찾기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、いぐすりはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          すみません、<ruby>胃薬<rt>いぐすり</rt></ruby>はありますか？
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 소화제 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>い</strong>는 위,
+            <strong>くすり</strong>는 약입니다.
+          </p>
+          <p>
+            합치면 위장약이나 소화제를 가리키는
+            <strong>いぐすり</strong>가 됩니다.
+          </p>
+          <p>
+            찾는 물건 뒤에 <strong>はありますか</strong>를 붙이면
+            “~는 있나요?”라고 물을 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          どのようなしょうじょうですか？
+        </p>
+
+        <p class="jp-kanji">
+          どのような<ruby>症状<rt>しょうじょう</rt></ruby>ですか？
+        </p>
+
+        <p class="ko-meaning">
+          어떤 증상이신가요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>しょうじょう</strong>은 증상이라는 뜻입니다.
+          </p>
+          <p>
+            직원이 어떤 문제가 있는지 구체적으로 묻는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          たべすぎて、おなかがもたれます。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>食<rt>た</rt></ruby>べすぎて、
+          お<ruby>腹<rt>なか</rt></ruby>がもたれます。
+        </p>
+
+        <p class="ko-meaning">
+          너무 많이 먹어서 속이 더부룩해요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>たべすぎ</strong>는 너무 많이 먹었다는 뜻입니다.
+          </p>
+          <p>
+            <strong>おなかがもたれます</strong>는
+            속이 무겁고 더부룩하다는 표현입니다.
+          </p>
+          <p>
+            어렵다면 배를 가리키며
+            <strong>おなかがいたいです</strong>라고 말해도 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ずつうやくはどこですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>頭痛薬<rt>ずつうやく</rt></ruby>はどこですか？
+        </p>
+
+        <p class="ko-meaning">
+          두통약은 어디에 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ずつう</strong>는 두통,
+            <strong>やく</strong>은 약이라는 뜻입니다.
+          </p>
+          <p>
+            상품 위치만 알고 싶다면
+            <strong>どこですか</strong>를 붙이면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">かぜぐすりはありますか？</span>
+        <span class="ko">감기약 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ずつうやくをさがしています。</span>
+        <span class="ko">두통약을 찾고 있습니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">おなかがいたいです。</span>
+        <span class="ko">배가 아파요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">あたまがいたいです。</span>
+        <span class="ko">머리가 아파요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">のどがいたいです。</span>
+        <span class="ko">목이 아파요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 3. 약의 특징 물어보기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ねむくならないくすりはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>眠<rt>ねむ</rt></ruby>くならない
+          <ruby>薬<rt>くすり</rt></ruby>はありますか？
+        </p>
+
+        <p class="ko-meaning">
+          졸리지 않는 약이 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ねむくなる</strong>는 졸리게 된다는 뜻입니다.
+          </p>
+          <p>
+            <strong>ねむくならない</strong>는
+            졸리지 않는다는 뜻으로 알아두면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          こちらはねむくなりにくいタイプです。
+        </p>
+
+        <p class="jp-kanji">
+          こちらは<ruby>眠<rt>ねむ</rt></ruby>くなりにくい
+          タイプです。
+        </p>
+
+        <p class="ko-meaning">
+          이쪽은 비교적 졸리기 어려운 유형입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>こちら</strong>는 직원 가까이에 있는 상품을 가리키는
+            “이쪽”이라는 표현입니다.
+          </p>
+          <p>
+            <strong>なりにくい</strong>는
+            “그렇게 되기 어렵다”는 느낌입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          いちにちなんかいのみますか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>一日<rt>いちにち</rt></ruby>
+          <ruby>何回<rt>なんかい</rt></ruby>
+          <ruby>飲<rt>の</rt></ruby>みますか？
+        </p>
+
+        <p class="ko-meaning">
+          하루에 몇 번 먹나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>いちにち</strong>는 하루,
+            <strong>なんかい</strong>는 몇 번이라는 뜻입니다.
+          </p>
+          <p>
+            약을 먹는다는 뜻으로도
+            <strong>のみます</strong>를 사용합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          しょくごに、いっかいにじょうです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>食後<rt>しょくご</rt></ruby>に、
+          <ruby>一回<rt>いっかい</rt></ruby>
+          <ruby>二錠<rt>にじょう</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          식후에 한 번에 두 알입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>しょくご</strong>는 식사 후라는 뜻입니다.
+          </p>
+          <p>
+            <strong>にじょう</strong>는 알약 두 알이라는 뜻입니다.
+          </p>
+          <p>
+            숫자가 어렵다면 상품 설명을 가리키며 다시 확인해도 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      약 이름을 정확히 모르더라도 증상을 말하거나
+      휴대전화로 원하는 상품 사진을 보여주며
+      <strong>これ、ありますか？</strong>라고 물으면 됩니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 4. 같은 상품과 다른 제품 찾기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          これとおなじものはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          これと<ruby>同<rt>おな</rt></ruby>じものはありますか？
+        </p>
+
+        <p class="ko-meaning">
+          이것과 같은 제품이 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>おなじ</strong>는 같다는 뜻입니다.
+          </p>
+          <p>
+            사진이나 기존 상품을 보여주면서 사용하기 좋은 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          こちらはうりきれです。
+        </p>
+
+        <p class="jp-kanji">
+          こちらは<ruby>売<rt>う</rt></ruby>り<ruby>切<rt>き</rt></ruby>れです。
+        </p>
+
+        <p class="ko-meaning">
+          이 상품은 품절입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>うりきれ</strong>는 모두 팔려서 재고가 없다는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          にたものはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>似<rt>に</rt></ruby>たものはありますか？
+        </p>
+
+        <p class="ko-meaning">
+          비슷한 제품이 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>にたもの</strong>는 비슷한 물건이나 제품이라는 뜻입니다.
+          </p>
+          <p>
+            원하는 상품이 품절일 때 대체품을 찾는 데 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          いちばんにんきなのはどれですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>一番<rt>いちばん</rt></ruby>
+          <ruby>人気<rt>にんき</rt></ruby>なのはどれですか？
+        </p>
+
+        <p class="ko-meaning">
+          가장 인기 있는 것은 어느 건가요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>いちばん</strong>은 가장,
+            <strong>にんき</strong>는 인기라는 뜻입니다.
+          </p>
+          <p>
+            여러 상품 중 추천을 받고 싶을 때 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">바로 쓰는 드럭스토어 표현</h2>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">これ、ありますか？</span>
+        <span class="ko">이거 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">これはなんのくすりですか？</span>
+        <span class="ko">이건 무슨 약인가요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">かんこくごのせつめいはありますか？</span>
+        <span class="ko">한국어 설명이 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">いつのみますか？</span>
+        <span class="ko">언제 먹나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ねむくなりますか？</span>
+        <span class="ko">졸리게 되나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">もっとやすいものはありますか？</span>
+        <span class="ko">더 저렴한 제품이 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">めんぜい、おねがいします。</span>
+        <span class="ko">면세 부탁합니다.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">말 바꿔보기</h2>
+
+    <div class="practice-box">
+      <h3 class="practice-title">손님 역할</h3>
+      <ul>
+        <li>두통약이 어디 있는지 물어보세요.</li>
+        <li>속이 더부룩하다고 설명해보세요.</li>
+        <li>졸리지 않는 감기약이 있는지 물어보세요.</li>
+        <li>면세가 가능한지 물어보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">직원 역할</h3>
+      <ul>
+        <li>어떤 증상인지 물어보세요.</li>
+        <li>상품이 품절이라고 안내해보세요.</li>
+        <li>비슷한 제품을 추천해보세요.</li>
+        <li>여권을 가지고 있는지 물어보세요.</li>
+      </ul>
+    </div>
+
+    <div class="course-note">
+      약의 전문적인 이름을 외우는 것보다
+      <strong>おなかがいたいです</strong>,
+      <strong>ずつうやくはありますか</strong>처럼
+      증상과 필요한 약을 짧게 전달하는 연습을 합니다.
+    </div>
+  </section>
+
+</div>
+
+<div class="travel-japanese">
+
+  <header class="lesson-header">
+    <div class="lesson-number">TRAVEL JAPANESE 05</div>
+    <h1 class="lesson-title">옷가게에서 말하기</h1>
+    <p class="lesson-subtitle">
+      피팅룸을 찾고, 다른 사이즈와 색상을 요청한 뒤 옷을 구매해 봅니다.
+    </p>
+  </header>
+
+  <div class="goal-box">
+    <strong>오늘의 목표</strong>
+    <ul>
+      <li>옷을 입어봐도 되는지 묻기</li>
+      <li>피팅룸 위치 확인하기</li>
+      <li>다른 사이즈와 색상 요청하기</li>
+      <li>재고를 확인하고 구매하기</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">먼저 알아둘 단어</h2>
+
+    <div class="word-grid">
+
+      <div class="word-card">
+        <span class="word-kana">しちゃく</span>
+        <span class="word-kanji">
+          <ruby>試着<rt>しちゃく</rt></ruby>
+        </span>
+        <span class="word-meaning">옷을 입어봄, 피팅</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">しちゃくしつ</span>
+        <span class="word-kanji">
+          <ruby>試着室<rt>しちゃくしつ</rt></ruby>
+        </span>
+        <span class="word-meaning">피팅룸</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">サイズ</span>
+        <span class="word-kanji">
+          サイズ
+        </span>
+        <span class="word-meaning">사이즈</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">いろちがい</span>
+        <span class="word-kanji">
+          <ruby>色違<rt>いろちが</rt></ruby>い
+        </span>
+        <span class="word-meaning">다른 색상</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ざいこ</span>
+        <span class="word-kanji">
+          <ruby>在庫<rt>ざいこ</rt></ruby>
+        </span>
+        <span class="word-meaning">재고</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ちょうどいい</span>
+        <span class="word-kanji">
+          ちょうどいい
+        </span>
+        <span class="word-meaning">딱 맞다, 적당하다</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 1. 옷 입어보기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、これ、しちゃくしてもいいですか？
+        </p>
+
+        <p class="jp-kanji">
+          すみません、これ、
+          <ruby>試着<rt>しちゃく</rt></ruby>してもいいですか？
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 이거 입어봐도 될까요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>しちゃく</strong>은 옷을 입어보는 것을 뜻합니다.
+          </p>
+          <p>
+            옷을 보여주면서
+            <strong>これ、しちゃくしてもいいですか</strong>라고 말하면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          はい、しちゃくしつへどうぞ。
+        </p>
+
+        <p class="jp-kanji">
+          はい、<ruby>試着室<rt>しちゃくしつ</rt></ruby>へどうぞ。
+        </p>
+
+        <p class="ko-meaning">
+          네, 피팅룸으로 들어가세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>しちゃくしつ</strong>는 피팅룸입니다.
+          </p>
+          <p>
+            <strong>どうぞ</strong>는 여기서 “들어가세요”라는 느낌입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          しちゃくしつはどこですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>試着室<rt>しちゃくしつ</rt></ruby>はどこですか？
+        </p>
+
+        <p class="ko-meaning">
+          피팅룸은 어디예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            찾는 장소 뒤에 <strong>どこですか</strong>를 붙이면 됩니다.
+          </p>
+          <p>
+            가게 안에서 화장실이나 계산대 위치를 물을 때도 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">これ、きてみてもいいですか？</span>
+        <span class="ko">이거 입어봐도 될까요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ふたつ、しちゃくしてもいいですか？</span>
+        <span class="ko">두 개 입어봐도 될까요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">しちゃくだけでもだいじょうぶですか？</span>
+        <span class="ko">입어보기만 해도 괜찮나요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 2. 다른 사이즈 찾기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、もうすこしおおきいサイズはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          すみません、もう<ruby>少<rt>すこ</rt></ruby>し
+          <ruby>大<rt>おお</rt></ruby>きいサイズはありますか？
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 조금 더 큰 사이즈가 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>もうすこし</strong>는 조금 더라는 뜻입니다.
+          </p>
+          <p>
+            <strong>おおきい</strong>는 크다,
+            <strong>ちいさい</strong>는 작다는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          エルサイズをおもちします。
+        </p>
+
+        <p class="jp-kanji">
+          エルサイズをお<ruby>持<rt>も</rt></ruby>ちします。
+        </p>
+
+        <p class="ko-meaning">
+          L 사이즈를 가져다드리겠습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            직원이 다른 사이즈를 가져오겠다는 말입니다.
+          </p>
+          <p>
+            여기서 <strong>おもちします</strong>는
+            “가져다드리겠습니다”라는 공손한 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          サイズはいかがですか？
+        </p>
+
+        <p class="jp-kanji">
+          サイズはいかがですか？
+        </p>
+
+        <p class="ko-meaning">
+          사이즈는 어떠세요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>いかがですか</strong>는
+            직원이 “어떠세요?”라고 공손하게 묻는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          ちょうどいいです。
+        </p>
+
+        <p class="jp-kanji">
+          ちょうどいいです。
+        </p>
+
+        <p class="ko-meaning">
+          딱 좋아요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            옷이나 신발의 크기가 잘 맞을 때 사용하는 표현입니다.
+          </p>
+          <p>
+            너무 크면 <strong>ちょっとおおきいです</strong>,
+            작으면 <strong>ちょっとちいさいです</strong>라고 합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">エムサイズはありますか？</span>
+        <span class="ko">M 사이즈 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">もうすこしちいさいものはありますか？</span>
+        <span class="ko">조금 더 작은 것이 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ちょっときついです。</span>
+        <span class="ko">조금 꽉 껴요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ちょっとゆるいです。</span>
+        <span class="ko">조금 헐렁해요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 3. 다른 색상과 재고 묻기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          これのいろちがいはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          これの<ruby>色違<rt>いろちが</rt></ruby>いはありますか？
+        </p>
+
+        <p class="ko-meaning">
+          이것의 다른 색상이 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>いろ</strong>는 색,
+            <strong>ちがい</strong>는 다름이라는 뜻입니다.
+          </p>
+          <p>
+            합치면 같은 제품의 다른 색상을 의미합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          くろとベージュがございます。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>黒<rt>くろ</rt></ruby>とベージュがございます。
+        </p>
+
+        <p class="ko-meaning">
+          검은색과 베이지색이 있습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>くろ</strong>는 검은색입니다.
+          </p>
+          <p>
+            <strong>ございます</strong>는
+            직원이 사용하는 공손한 “있습니다”입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          くろのエムサイズはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>黒<rt>くろ</rt></ruby>のエムサイズはありますか？
+        </p>
+
+        <p class="ko-meaning">
+          검은색 M 사이즈가 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            색상 뒤에 <strong>の</strong>를 붙이고 사이즈를 말하면 됩니다.
+          </p>
+          <p>
+            <strong>くろのエムサイズ</strong>는
+            검은색 M 사이즈라는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          ざいこをかくにんします。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>在庫<rt>ざいこ</rt></ruby>を
+          <ruby>確認<rt>かくにん</rt></ruby>します。
+        </p>
+
+        <p class="ko-meaning">
+          재고를 확인하겠습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ざいこ</strong>는 가게에 남아 있는 상품을 뜻합니다.
+          </p>
+          <p>
+            직원이 창고나 전산에서 재고를 확인하겠다는 말입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          もうしわけありません。こちらはうりきれです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ありません。
+          こちらは<ruby>売<rt>う</rt></ruby>り<ruby>切<rt>き</rt></ruby>れです。
+        </p>
+
+        <p class="ko-meaning">
+          죄송합니다. 이 상품은 품절입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>うりきれ</strong>는 모두 팔려서 재고가 없는 상태입니다.
+          </p>
+          <p>
+            <strong>もうしわけありません</strong>은
+            직원이 사용하는 매우 공손한 사과입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">ほかのいろはありますか？</span>
+        <span class="ko">다른 색은 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">しろはありますか？</span>
+        <span class="ko">흰색은 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ざいこはありますか？</span>
+        <span class="ko">재고가 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">おなじものはありますか？</span>
+        <span class="ko">같은 제품이 있나요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 4. 구매하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line staff">
+        <span class="speaker">직원 · 듣기</span>
+
+        <p class="jp-kana">
+          こちらはいかがでしたか？
+        </p>
+
+        <p class="jp-kanji">
+          こちらはいかがでしたか？
+        </p>
+
+        <p class="ko-meaning">
+          이 옷은 어떠셨나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            피팅룸에서 나온 손님에게 직원이 자주 묻는 표현입니다.
+          </p>
+          <p>
+            구매할지, 다른 사이즈가 필요한지 확인하는 상황입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          これにします。
+        </p>
+
+        <p class="jp-kanji">
+          これにします。
+        </p>
+
+        <p class="ko-meaning">
+          이걸로 할게요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            여러 상품 중 하나를 결정했을 때 사용하는 표현입니다.
+          </p>
+          <p>
+            옷가게뿐 아니라 음식점이나 기념품점에서도 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          これはもどします。
+        </p>
+
+        <p class="jp-kanji">
+          これは<ruby>戻<rt>もど</rt></ruby>します。
+        </p>
+
+        <p class="ko-meaning">
+          이건 돌려놓을게요. 이건 안 살게요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            여러 벌을 입어본 뒤 구매하지 않을 옷을 직원에게 돌려줄 때 쓸 수 있습니다.
+          </p>
+          <p>
+            더 간단히 <strong>これはだいじょうぶです</strong>라고 해도 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          カードでおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          カードでお<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          카드로 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            실제 계산에서는 <strong>カードで</strong>라고만 말해도 충분합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      옷 이름을 정확히 몰라도 상품을 보여주며
+      <strong>これのエムサイズ</strong>,
+      <strong>これのいろちがい</strong>처럼 말하면 대부분 전달됩니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">바로 쓰는 옷가게 표현</h2>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">これ、しちゃくしてもいいですか？</span>
+        <span class="ko">이거 입어봐도 될까요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">しちゃくしつはどこですか？</span>
+        <span class="ko">피팅룸은 어디예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ほかのサイズはありますか？</span>
+        <span class="ko">다른 사이즈가 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ほかのいろはありますか？</span>
+        <span class="ko">다른 색이 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ちょっとおおきいです。</span>
+        <span class="ko">조금 커요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ちょっとちいさいです。</span>
+        <span class="ko">조금 작아요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">これにします。</span>
+        <span class="ko">이걸로 할게요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">말 바꿔보기</h2>
+
+    <div class="practice-box">
+      <h3 class="practice-title">손님 역할</h3>
+      <ul>
+        <li>옷을 입어봐도 되는지 물어보세요.</li>
+        <li>조금 더 큰 사이즈를 요청해보세요.</li>
+        <li>같은 옷의 검은색이 있는지 물어보세요.</li>
+        <li>입어본 옷을 구매하겠다고 말해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">직원 역할</h3>
+      <ul>
+        <li>피팅룸 위치를 안내해보세요.</li>
+        <li>사이즈가 어떤지 물어보세요.</li>
+        <li>재고를 확인하겠다고 말해보세요.</li>
+        <li>원하는 색상이 품절이라고 안내해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="course-note">
+      옷의 종류를 전부 외우지 않아도 됩니다.
+      옷을 가리키며 <strong>これ</strong>라고 말하고,
+      <strong>サイズ</strong>, <strong>いろ</strong>,
+      <strong>ありますか</strong>를 조합해 필요한 내용을 전달합니다.
+    </div>
+  </section>
+
+</div>
+
+<div class="travel-japanese">
+
+  <header class="lesson-header">
+    <div class="lesson-number">TRAVEL JAPANESE 06</div>
+    <h1 class="lesson-title">지하철에서 길 묻기</h1>
+    <p class="lesson-subtitle">
+      화장실과 승강장 위치를 묻고, 환승하거나 교통카드를 충전해 봅니다.
+    </p>
+  </header>
+
+  <div class="goal-box">
+    <strong>오늘의 목표</strong>
+    <ul>
+      <li>역 안에서 화장실과 개찰구 찾기</li>
+      <li>목적지로 가는 전철이 맞는지 확인하기</li>
+      <li>환승역과 승강장 번호 묻기</li>
+      <li>교통카드 잔액이 부족할 때 충전하기</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">먼저 알아둘 단어</h2>
+
+    <div class="word-grid">
+
+      <div class="word-card">
+        <span class="word-kana">かいさつ</span>
+        <span class="word-kanji">
+          <ruby>改札<rt>かいさつ</rt></ruby>
+        </span>
+        <span class="word-meaning">개찰구</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">のりば</span>
+        <span class="word-kanji">
+          <ruby>乗<rt>の</rt></ruby>り<ruby>場<rt>ば</rt></ruby>
+        </span>
+        <span class="word-meaning">타는 곳, 승강장</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">のりかえ</span>
+        <span class="word-kanji">
+          <ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>え
+        </span>
+        <span class="word-meaning">환승</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">なんばんせん</span>
+        <span class="word-kanji">
+          <ruby>何番線<rt>なんばんせん</rt></ruby>
+        </span>
+        <span class="word-meaning">몇 번 승강장</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ざんだか</span>
+        <span class="word-kanji">
+          <ruby>残高<rt>ざんだか</rt></ruby>
+        </span>
+        <span class="word-meaning">잔액</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">チャージ</span>
+        <span class="word-kanji">
+          チャージ
+        </span>
+        <span class="word-meaning">교통카드 충전</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 1. 화장실과 개찰구 찾기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、トイレはどこですか？
+        </p>
+
+        <p class="jp-kanji">
+          すみません、トイレはどこですか？
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 화장실은 어디예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            장소 이름 뒤에 <strong>どこですか</strong>를 붙이면
+            “어디예요?”라고 물을 수 있습니다.
+          </p>
+          <p>
+            역무원뿐 아니라 주변 사람에게 물을 때도 자연스럽습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">역무원 · 듣기</span>
+
+        <p class="jp-kana">
+          かいさつをでて、みぎがわにあります。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>改札<rt>かいさつ</rt></ruby>を
+          <ruby>出<rt>で</rt></ruby>て、
+          <ruby>右側<rt>みぎがわ</rt></ruby>にあります。
+        </p>
+
+        <p class="ko-meaning">
+          개찰구를 나가서 오른쪽에 있습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>かいさつ</strong>는 개찰구,
+            <strong>みぎ</strong>는 오른쪽입니다.
+          </p>
+          <p>
+            반대쪽인 왼쪽은 <strong>ひだり</strong>라고 합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          かいさつのなかにはありませんか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>改札<rt>かいさつ</rt></ruby>の
+          <ruby>中<rt>なか</rt></ruby>にはありませんか？
+        </p>
+
+        <p class="ko-meaning">
+          개찰구 안에는 없나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>なか</strong>는 안쪽이라는 뜻입니다.
+          </p>
+          <p>
+            개찰구 밖으로 나가기 어려울 때 사용할 수 있는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">かいさつはどこですか？</span>
+        <span class="ko">개찰구는 어디예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">でぐちはどこですか？</span>
+        <span class="ko">출구는 어디예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">エレベーターはありますか？</span>
+        <span class="ko">엘리베이터가 있나요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 2. 이 전철이 맞는지 확인하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、このでんしゃはしぶやにいきますか？
+        </p>
+
+        <p class="jp-kanji">
+          すみません、この
+          <ruby>電車<rt>でんしゃ</rt></ruby>は
+          <ruby>渋谷<rt>しぶや</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きますか？
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 이 전철은 시부야에 가나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>このでんしゃ</strong>는 이 전철이라는 뜻입니다.
+          </p>
+          <p>
+            목적지 뒤에 <strong>にいきますか</strong>를 붙이면
+            그곳으로 가는지 확인할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">역무원 · 듣기</span>
+
+        <p class="jp-kana">
+          はい、しぶやにとまります。
+        </p>
+
+        <p class="jp-kanji">
+          はい、<ruby>渋谷<rt>しぶや</rt></ruby>に
+          <ruby>止<rt>と</rt></ruby>まります。
+        </p>
+
+        <p class="ko-meaning">
+          네, 시부야에 정차합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>とまります</strong>는 역에 정차한다는 뜻입니다.
+          </p>
+          <p>
+            <strong>とまりません</strong>이라고 들리면
+            그 역에는 서지 않는다는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">역무원 · 듣기</span>
+
+        <p class="jp-kana">
+          これはきゅうこうなので、つぎのえきにはとまりません。
+        </p>
+
+        <p class="jp-kanji">
+          これは<ruby>急行<rt>きゅうこう</rt></ruby>なので、
+          <ruby>次<rt>つぎ</rt></ruby>の
+          <ruby>駅<rt>えき</rt></ruby>には
+          <ruby>止<rt>と</rt></ruby>まりません。
+        </p>
+
+        <p class="ko-meaning">
+          이건 급행이라서 다음 역에는 정차하지 않습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>きゅうこう</strong>은 일부 역을 건너뛰는 급행입니다.
+          </p>
+          <p>
+            모든 역에 정차하는 전철은
+            <strong>かくえきていしゃ</strong>라고 합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          じゃあ、どれにのればいいですか？
+        </p>
+
+        <p class="jp-kanji">
+          じゃあ、どれに
+          <ruby>乗<rt>の</rt></ruby>ればいいですか？
+        </p>
+
+        <p class="ko-meaning">
+          그러면 어느 것을 타면 되나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>どれ</strong>는 여러 개 중 어느 것이라는 뜻입니다.
+          </p>
+          <p>
+            어떤 전철을 타야 할지 모를 때 문장 전체로 익혀두면 편리합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      노선이나 전철 이름을 말하기 어렵다면
+      지도 화면을 보여주며
+      <strong>ここにいきたいです</strong>라고 말해도 충분히 통합니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 3. 승강장과 환승 묻기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          しんじゅくいきは、なんばんせんですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>新宿行<rt>しんじゅくゆ</rt></ruby>きは、
+          <ruby>何番線<rt>なんばんせん</rt></ruby>ですか？
+        </p>
+
+        <p class="ko-meaning">
+          신주쿠행은 몇 번 승강장이에요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            목적지 뒤의 <strong>いき</strong>는 “~행”이라는 뜻입니다.
+          </p>
+          <p>
+            <strong>なんばんせん</strong>은 몇 번 승강장인지 묻는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">역무원 · 듣기</span>
+
+        <p class="jp-kana">
+          さんばんせんです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>三番線<rt>さんばんせん</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          3번 승강장입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ばんせん</strong> 앞의 숫자를 듣거나
+            안내판에서 확인하면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          どこでのりかえますか？
+        </p>
+
+        <p class="jp-kanji">
+          どこで
+          <ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えますか？
+        </p>
+
+        <p class="ko-meaning">
+          어디에서 갈아타나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>のりかえ</strong>는 다른 노선이나 전철로 갈아타는 환승입니다.
+          </p>
+          <p>
+            환승역 이름을 알고 싶을 때 사용하는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">역무원 · 듣기</span>
+
+        <p class="jp-kana">
+          よよぎでやまのてせんにのりかえてください。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>代々木<rt>よよぎ</rt></ruby>で
+          <ruby>山手線<rt>やまのてせん</rt></ruby>に
+          <ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えてください。
+        </p>
+
+        <p class="ko-meaning">
+          요요기에서 야마노테선으로 갈아타세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            앞에 나오는 역이 환승할 장소이고,
+            뒤에 나오는 노선이 갈아탈 전철입니다.
+          </p>
+          <p>
+            전부 알아듣지 못했다면 노선도에서 역 이름을 가리켜달라고 해도 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">こののりばであっていますか？</span>
+        <span class="ko">이 승강장이 맞나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">のりかえはありますか？</span>
+        <span class="ko">환승이 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">しぶやまでなんぷんですか？</span>
+        <span class="ko">시부야까지 몇 분 걸려요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 4. 교통카드 잔액이 부족할 때</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line staff">
+        <span class="speaker">기계 표시 · 읽기</span>
+
+        <p class="jp-kana">
+          ざんがくぶそくです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>残額不足<rt>ざんがくぶそく</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          잔액이 부족합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            개찰구 화면에 자주 나타나는 표현입니다.
+          </p>
+          <p>
+            <strong>ぶそく</strong>은 부족하다는 뜻입니다.
+          </p>
+          <p>
+            이 표시가 나오면 카드에 돈을 충전하거나 정산해야 합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、ざんだかがたりないみたいです。
+        </p>
+
+        <p class="jp-kanji">
+          すみません、<ruby>残高<rt>ざんだか</rt></ruby>が
+          <ruby>足<rt>た</rt></ruby>りないみたいです。
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 잔액이 부족한 것 같아요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>ざんだか</strong>는 카드에 남아 있는 금액입니다.
+          </p>
+          <p>
+            어렵다면 카드를 보여주며
+            <strong>でられません</strong>이라고 말해도 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">역무원 · 듣기</span>
+
+        <p class="jp-kana">
+          せいさんきでチャージしてください。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>精算機<rt>せいさんき</rt></ruby>で
+          チャージしてください。
+        </p>
+
+        <p class="ko-meaning">
+          정산기에서 충전해 주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>せいさんき</strong>는 부족한 운임을 정산하는 기계입니다.
+          </p>
+          <p>
+            <strong>チャージ</strong>는 교통카드에 돈을 충전하는 것입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          チャージはどこでできますか？
+        </p>
+
+        <p class="jp-kanji">
+          チャージはどこでできますか？
+        </p>
+
+        <p class="ko-meaning">
+          충전은 어디에서 할 수 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>どこでできますか</strong>는
+            어디에서 가능한지 묻는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          せんえん、チャージしたいです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>千円<rt>せんえん</rt></ruby>、
+          チャージしたいです。
+        </p>
+
+        <p class="ko-meaning">
+          1,000엔 충전하고 싶어요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            원하는 금액을 먼저 말하고
+            <strong>チャージしたいです</strong>를 붙이면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">상황 5. 잘못 탔을 때</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、でんしゃをまちがえました。
+        </p>
+
+        <p class="jp-kanji">
+          すみません、<ruby>電車<rt>でんしゃ</rt></ruby>を
+          <ruby>間違<rt>まちが</rt></ruby>えました。
+        </p>
+
+        <p class="ko-meaning">
+          저기요, 전철을 잘못 탔어요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>まちがえました</strong>는 잘못 선택하거나 틀렸다는 뜻입니다.
+          </p>
+          <p>
+            역무원에게 현재 위치와 목적지를 보여주며 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">손님 · 말하기</span>
+
+        <p class="jp-kana">
+          しんじゅくにいきたいんですが、どうすればいいですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>新宿<rt>しんじゅく</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きたいんですが、
+          どうすればいいですか？
+        </p>
+
+        <p class="ko-meaning">
+          신주쿠에 가고 싶은데, 어떻게 하면 되나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            목적지 뒤에 <strong>にいきたいんですが</strong>를 붙이면
+            “~에 가고 싶은데요”라는 뜻입니다.
+          </p>
+          <p>
+            <strong>どうすればいいですか</strong>는
+            어떻게 해야 하는지 도움을 요청하는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line staff">
+        <span class="speaker">역무원 · 듣기</span>
+
+        <p class="jp-kana">
+          つぎのえきでおりて、はんたいがわのホームにいってください。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>次<rt>つぎ</rt></ruby>の
+          <ruby>駅<rt>えき</rt></ruby>で
+          <ruby>降<rt>お</rt></ruby>りて、
+          <ruby>反対側<rt>はんたいがわ</rt></ruby>のホームに
+          <ruby>行<rt>い</rt></ruby>ってください。
+        </p>
+
+        <p class="ko-meaning">
+          다음 역에서 내려서 반대편 승강장으로 가세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            <strong>つぎのえき</strong>는 다음 역,
+            <strong>はんたいがわ</strong>는 반대편입니다.
+          </p>
+          <p>
+            세부 내용을 놓쳐도 다음 역에서 내려야 한다는 핵심을 들으면 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      길을 완전히 잃었을 때는 휴대전화 지도를 보여주며
+      <strong>ここにいきたいです</strong>라고 말하는 것이 가장 빠르고 현실적입니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">바로 쓰는 지하철 표현</h2>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">トイレはどこですか？</span>
+        <span class="ko">화장실은 어디예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">このでんしゃであっていますか？</span>
+        <span class="ko">이 전철이 맞나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">なんばんせんですか？</span>
+        <span class="ko">몇 번 승강장이에요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">どこでのりかえますか？</span>
+        <span class="ko">어디에서 갈아타나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ここにいきたいです。</span>
+        <span class="ko">여기에 가고 싶어요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">カードにチャージしたいです。</span>
+        <span class="ko">카드에 충전하고 싶어요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">かいさつからでられません。</span>
+        <span class="ko">개찰구에서 나갈 수 없어요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">말 바꿔보기</h2>
+
+    <div class="practice-box">
+      <h3 class="practice-title">여행자 역할</h3>
+      <ul>
+        <li>역 안에서 화장실 위치를 물어보세요.</li>
+        <li>이 전철이 시부야에 가는지 확인해보세요.</li>
+        <li>어디에서 환승하는지 물어보세요.</li>
+        <li>교통카드에 1,000엔을 충전하고 싶다고 말해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">역무원 역할</h3>
+      <ul>
+        <li>화장실이 개찰구 오른쪽에 있다고 안내해보세요.</li>
+        <li>목적지에 가려면 몇 번 승강장을 이용해야 하는지 말해보세요.</li>
+        <li>어느 역에서 환승해야 하는지 안내해보세요.</li>
+        <li>정산기에서 카드를 충전하라고 말해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="course-note">
+      역 안내를 전부 알아듣지 못해도 괜찮습니다.
+      <strong>목적지 이름</strong>,
+      <strong>なんばんせん</strong>,
+      <strong>のりかえ</strong> 같은 핵심 단어를 듣고
+      안내판이나 지도와 함께 확인합니다.
+    </div>
+  </section>
+
+</div>
+
+<div class="travel-japanese">
+
+  <header class="lesson-header">
+    <div class="lesson-number">TRAVEL JAPANESE 09</div>
+    <h1 class="lesson-title">여행 일본어 종합 표현</h1>
+    <p class="lesson-subtitle">
+      식당·쇼핑·호텔·교통에서 공통으로 사용하는 핵심 표현을 정리합니다.
+    </p>
+  </header>
+
+  <div class="goal-box">
+    <strong>오늘의 목표</strong>
+    <ul>
+      <li>여행 중 가장 자주 사용하는 표현 복습하기</li>
+      <li>모르는 말을 다시 요청하기</li>
+      <li>물건·장소·가격을 간단하게 묻기</li>
+      <li>문제가 생겼을 때 도움 요청하기</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">가장 중요한 여행 단어</h2>
+
+    <div class="word-grid">
+
+      <div class="word-card">
+        <span class="word-kana">これ</span>
+        <span class="word-kanji">これ</span>
+        <span class="word-meaning">이것</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ここ</span>
+        <span class="word-kanji">ここ</span>
+        <span class="word-meaning">여기</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">どこ</span>
+        <span class="word-kanji">どこ</span>
+        <span class="word-meaning">어디</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">いくら</span>
+        <span class="word-kanji">いくら</span>
+        <span class="word-meaning">얼마</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">ひとつ</span>
+        <span class="word-kanji">
+          <ruby>一<rt>ひと</rt></ruby>つ
+        </span>
+        <span class="word-meaning">하나</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">もうひとつ</span>
+        <span class="word-kanji">
+          もう<ruby>一<rt>ひと</rt></ruby>つ
+        </span>
+        <span class="word-meaning">하나 더</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">いっしょ</span>
+        <span class="word-kanji">
+          <ruby>一緒<rt>いっしょ</rt></ruby>
+        </span>
+        <span class="word-meaning">같이, 함께</span>
+      </div>
+
+      <div class="word-card">
+        <span class="word-kana">べつべつ</span>
+        <span class="word-kanji">
+          <ruby>別々<rt>べつべつ</rt></ruby>
+        </span>
+        <span class="word-meaning">각자, 따로따로</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">1. 말을 시작할 때</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません。
+        </p>
+
+        <p class="jp-kanji">
+          すみません。
+        </p>
+
+        <p class="ko-meaning">
+          저기요. / 죄송합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            직원을 부르거나 주변 사람에게 질문을 시작할 때 사용합니다.
+          </p>
+          <p>
+            여행 중 가장 활용도가 높은 표현 중 하나입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          おねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            물건이나 서비스를 요청할 때 사용할 수 있습니다.
+          </p>
+          <p>
+            필요한 단어 뒤에 붙이면 간단한 요청이 완성됩니다.
+          </p>
+        </div>
+
+        <div class="breakdown">
+          <span class="breakdown-item">
+            <b>ふくろ、おねがいします</b> → 봉투 주세요
+          </span>
+          <span class="breakdown-item">
+            <b>おかいけい、おねがいします</b> → 계산 부탁합니다
+          </span>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          だいじょうぶです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          괜찮습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            문제가 없다는 뜻으로도 사용하고, 필요 없다는 뜻으로도 사용합니다.
+          </p>
+          <p>
+            봉투나 영수증을 권유받았을 때 거절하는 표현으로도 자주 씁니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      먼저 <strong>すみません</strong>으로 상대를 부른 뒤,
+      필요한 단어와 <strong>おねがいします</strong>를 연결하면
+      대부분의 기본 요청을 전달할 수 있습니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">2. 물건을 가리키며 말하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          これ、ください。
+        </p>
+
+        <p class="jp-kanji">
+          これ、ください。
+        </p>
+
+        <p class="ko-meaning">
+          이거 주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            상품이나 메뉴 이름을 몰라도 손으로 가리키며 사용할 수 있습니다.
+          </p>
+          <p>
+            조금 더 부드럽게 말하려면
+            <strong>これ、おねがいします</strong>라고 합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          これ、ひとつおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          これ、<ruby>一<rt>ひと</rt></ruby>つ
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          이거 하나 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            음식점·편의점·옷가게 등에서 공통으로 사용할 수 있습니다.
+          </p>
+          <p>
+            두 개는 <strong>ふたつ</strong>, 세 개는 <strong>みっつ</strong>입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          これ、ありますか？
+        </p>
+
+        <p class="jp-kanji">
+          これ、ありますか？
+        </p>
+
+        <p class="ko-meaning">
+          이거 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            상품 사진이나 휴대전화 화면을 보여주면서 사용할 수 있습니다.
+          </p>
+          <p>
+            원하는 물건 이름을 몰라도 가장 쉽게 재고를 물을 수 있는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          これとおなじものはありますか？
+        </p>
+
+        <p class="jp-kanji">
+          これと<ruby>同<rt>おな</rt></ruby>じものはありますか？
+        </p>
+
+        <p class="ko-meaning">
+          이것과 같은 것이 있나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            같은 상품이나 같은 디자인을 찾을 때 사용합니다.
+          </p>
+          <p>
+            비슷한 상품은 <strong>にたもの</strong>라고 합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">これをもうひとつください。</span>
+        <span class="ko">이거 하나 더 주세요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ほかのものはありますか？</span>
+        <span class="ko">다른 것은 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">もっとやすいものはありますか？</span>
+        <span class="ko">더 저렴한 것이 있나요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">3. 장소와 이동 묻기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          トイレはどこですか？
+        </p>
+
+        <p class="jp-kanji">
+          トイレはどこですか？
+        </p>
+
+        <p class="ko-meaning">
+          화장실은 어디예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            찾는 장소 뒤에 <strong>どこですか</strong>를 붙이면 됩니다.
+          </p>
+          <p>
+            화장실 대신 역, 출구, 계산대 등으로 바꿔 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          ここにいきたいです。
+        </p>
+
+        <p class="jp-kanji">
+          ここに<ruby>行<rt>い</rt></ruby>きたいです。
+        </p>
+
+        <p class="ko-meaning">
+          여기에 가고 싶어요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            지도나 주소를 보여주며 사용하는 표현입니다.
+          </p>
+          <p>
+            장소 이름을 읽지 못해도 목적지를 정확히 전달할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          このでんしゃであっていますか？
+        </p>
+
+        <p class="jp-kanji">
+          この<ruby>電車<rt>でんしゃ</rt></ruby>で
+          <ruby>合<rt>あ</rt></ruby>っていますか？
+        </p>
+
+        <p class="ko-meaning">
+          이 전철이 맞나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            목적지로 가는 전철이나 승강장이 맞는지 확인할 때 사용합니다.
+          </p>
+          <p>
+            전철 대신 <strong>のりば</strong>를 넣으면
+            “이 승강장이 맞나요?”가 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          どこでのりかえますか？
+        </p>
+
+        <p class="jp-kanji">
+          どこで
+          <ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えますか？
+        </p>
+
+        <p class="ko-meaning">
+          어디에서 갈아타나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            전철이나 버스를 갈아타야 하는 장소를 묻는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">えきはどこですか？</span>
+        <span class="ko">역은 어디예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">でぐちはどこですか？</span>
+        <span class="ko">출구는 어디예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ここからとおいですか？</span>
+        <span class="ko">여기에서 먼가요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">あるいていけますか？</span>
+        <span class="ko">걸어서 갈 수 있나요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">4. 가격·시간·수량 묻기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          これはいくらですか？
+        </p>
+
+        <p class="jp-kanji">
+          これはいくらですか？
+        </p>
+
+        <p class="ko-meaning">
+          이것은 얼마예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            가격표가 없거나 할인 가격을 확인할 때 사용합니다.
+          </p>
+          <p>
+            정확한 금액을 못 알아들으면 계산대 화면을 확인하면 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          なんじからですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>何時<rt>なんじ</rt></ruby>からですか？
+        </p>
+
+        <p class="ko-meaning">
+          몇 시부터예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            영업 시작 시간, 조식 시작 시간 등을 물을 때 사용합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          なんじまでですか？
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>何時<rt>なんじ</rt></ruby>までですか？
+        </p>
+
+        <p class="ko-meaning">
+          몇 시까지예요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            영업 종료 시간이나 체크아웃 시간을 묻는 데 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          どのくらいかかりますか？
+        </p>
+
+        <p class="jp-kanji">
+          どのくらいかかりますか？
+        </p>
+
+        <p class="ko-meaning">
+          어느 정도 걸리나요?
+        </p>
+
+        <div class="explanation">
+          <p>
+            이동 시간, 음식 준비 시간, 대기 시간을 물을 수 있는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">なんぷんですか？</span>
+        <span class="ko">몇 분인가요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">なんにんまえですか？</span>
+        <span class="ko">몇 인분인가요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">あとどのくらいですか？</span>
+        <span class="ko">앞으로 얼마나 더 걸리나요?</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">5. 주문하고 계산하기</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          これをひとつおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          これを<ruby>一<rt>ひと</rt></ruby>つ
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          이거 하나 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            메뉴판을 가리키며 주문할 때 가장 쉽게 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          あと、これもおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          あと、これも
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          그리고 이것도 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            메뉴나 상품을 추가할 때 사용합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          いじょうです。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>以上<rt>いじょう</rt></ruby>です。
+        </p>
+
+        <p class="ko-meaning">
+          이상입니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            주문을 모두 마쳤다는 뜻입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          おかいけい、おねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          お<ruby>会計<rt>かいけい</rt></ruby>、
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          계산 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            음식점이나 술집에서 계산을 요청할 때 사용합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">カードで。</span>
+        <span class="ko">카드로요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">げんきんで。</span>
+        <span class="ko">현금으로요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">いっしょで。</span>
+        <span class="ko">같이 계산할게요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">べつべつで。</span>
+        <span class="ko">따로 계산할게요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">レシート、おねがいします。</span>
+        <span class="ko">영수증 주세요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">6. 상대방의 말을 이해하지 못했을 때</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          すみません、わかりません。
+        </p>
+
+        <p class="jp-kanji">
+          すみません、<ruby>分<rt>わ</rt></ruby>かりません。
+        </p>
+
+        <p class="ko-meaning">
+          죄송하지만 모르겠습니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            상대방의 설명을 이해하지 못했을 때 솔직하게 말하는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          もういちどおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          もう<ruby>一度<rt>いちど</rt></ruby>
+          お<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          한 번 더 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            상대방의 말을 다시 듣고 싶을 때 사용합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          ゆっくりおねがいします。
+        </p>
+
+        <p class="jp-kanji">
+          ゆっくりお<ruby>願<rt>ねが</rt></ruby>いします。
+        </p>
+
+        <p class="ko-meaning">
+          천천히 부탁합니다.
+        </p>
+
+        <div class="explanation">
+          <p>
+            상대방이 너무 빠르게 말할 때 사용합니다.
+          </p>
+          <p>
+            더 완전하게는
+            <strong>ゆっくりはなしてください</strong>라고 할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          ここにかいてください。
+        </p>
+
+        <p class="jp-kanji">
+          ここに<ruby>書<rt>か</rt></ruby>いてください。
+        </p>
+
+        <p class="ko-meaning">
+          여기에 적어주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            가격, 시간, 장소 이름을 듣기 어려울 때 적어달라고 요청할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box">
+      전부 알아듣는 것보다
+      <strong>もういちど</strong>,
+      <strong>ゆっくり</strong>,
+      <strong>かいてください</strong>를 사용해
+      필요한 정보를 다시 확인하는 것이 중요합니다.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">7. 문제가 생겼을 때</h2>
+
+    <div class="dialogue">
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          たすけてください。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>助<rt>たす</rt></ruby>けてください。
+        </p>
+
+        <p class="ko-meaning">
+          도와주세요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            혼자 해결하기 어려운 문제가 생겼을 때 사용하는 표현입니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          なくしました。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>無<rt>な</rt></ruby>くしました。
+        </p>
+
+        <p class="ko-meaning">
+          잃어버렸어요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            잃어버린 물건을 먼저 말하면 됩니다.
+          </p>
+        </div>
+
+        <div class="breakdown">
+          <span class="breakdown-item">
+            <b>さいふをなくしました</b> → 지갑을 잃어버렸어요
+          </span>
+          <span class="breakdown-item">
+            <b>パスポートをなくしました</b> → 여권을 잃어버렸어요
+          </span>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          うごきません。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>動<rt>うご</rt></ruby>きません。
+        </p>
+
+        <p class="ko-meaning">
+          작동하지 않아요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            에어컨, 기계, 카드키 등이 작동하지 않을 때 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="dialogue-line customer">
+        <span class="speaker">여행자 · 말하기</span>
+
+        <p class="jp-kana">
+          まちがえました。
+        </p>
+
+        <p class="jp-kanji">
+          <ruby>間違<rt>まちが</rt></ruby>えました。
+        </p>
+
+        <p class="ko-meaning">
+          잘못했어요. / 잘못 선택했어요.
+        </p>
+
+        <div class="explanation">
+          <p>
+            주문이나 전철을 잘못 선택했을 때 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">でられません。</span>
+        <span class="ko">나갈 수 없어요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">まだきていません。</span>
+        <span class="ko">아직 나오지 않았어요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ちがうものがきました。</span>
+        <span class="ko">다른 것이 나왔어요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">びょういんはどこですか？</span>
+        <span class="ko">병원은 어디예요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">けいさつをよんでください。</span>
+        <span class="ko">경찰을 불러주세요.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">8. 장소별 한마디 복습</h2>
+
+    <div class="quick-replies">
+
+      <div class="quick-reply">
+        <span class="jp">あたためてください。</span>
+        <span class="ko">편의점 · 데워주세요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">てんないで。</span>
+        <span class="ko">패스트푸드점 · 매장에서요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">もちかえりで。</span>
+        <span class="ko">패스트푸드점 · 포장으로요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">よやくしてます。</span>
+        <span class="ko">호텔 · 예약했습니다.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">にもつをあずけたいんですが。</span>
+        <span class="ko">호텔 · 짐을 맡기고 싶은데요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">めんぜいできますか？</span>
+        <span class="ko">드럭스토어 · 면세 가능한가요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">ほかのサイズはありますか？</span>
+        <span class="ko">옷가게 · 다른 사이즈가 있나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">どこでのりかえますか？</span>
+        <span class="ko">지하철 · 어디에서 갈아타나요?</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">なまビール、ひとつで。</span>
+        <span class="ko">이자카야 · 생맥주 하나요.</span>
+      </div>
+
+      <div class="quick-reply">
+        <span class="jp">あみこうかん、おねがいします。</span>
+        <span class="ko">야키니쿠 · 불판 교체 부탁합니다.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">종합 역할 연습</h2>
+
+    <div class="practice-box">
+      <h3 class="practice-title">여행 미션 1</h3>
+      <ul>
+        <li>직원에게 말을 걸어보세요.</li>
+        <li>휴대전화 속 상품 사진을 보여주세요.</li>
+        <li>같은 상품이 있는지 물어보세요.</li>
+        <li>가격을 묻고 카드로 계산해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">여행 미션 2</h3>
+      <ul>
+        <li>지도 화면을 보여주며 목적지를 말해보세요.</li>
+        <li>이 전철이 맞는지 확인해보세요.</li>
+        <li>설명을 이해하지 못했다고 말해보세요.</li>
+        <li>천천히 한 번 더 말해달라고 요청해보세요.</li>
+      </ul>
+    </div>
+
+    <div class="practice-box">
+      <h3 class="practice-title">여행 미션 3</h3>
+      <ul>
+        <li>메뉴판을 가리키며 음식 하나를 주문해보세요.</li>
+        <li>같은 음료를 하나 더 요청해보세요.</li>
+        <li>주문이 이상이라고 말해보세요.</li>
+        <li>계산을 요청하고 따로 계산할 수 있는지 물어보세요.</li>
+      </ul>
+    </div>
+
+    <div class="course-note">
+      완전한 문장을 길게 만드는 것보다
+      <strong>これ</strong>, <strong>どこ</strong>,
+      <strong>おねがいします</strong>,
+      <strong>だいじょうぶです</strong> 같은 핵심 표현을
+      실제 상황에 맞게 짧게 사용하는 것을 목표로 합니다.
+    </div>
+  </section>
+
+</div>
