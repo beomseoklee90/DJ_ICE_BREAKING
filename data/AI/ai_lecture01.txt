@@ -552,567 +552,3182 @@
 }
 </style>
 <section class="pe-section">
-  <span class="pe-kicker">01 · TASK TYPES</span>
-  <h2 class="pe-title">단타성 명령어와 맥락형 명령어</h2>
+  <span class="pe-kicker">INTRODUCTION</span>
+  <h2 class="pe-title">프롬프트를 외우지 말고, AI와 일하는 방법을 이해하세요</h2>
+
   <p class="pe-subtitle">
-    AI를 사용할 때 모든 업무를 한 번에 끝내려고 할 필요는 없습니다.
-    직접적인 작업은 단타성 명령어로 처리하고, 전체 업무는 하나의 채팅방에서 맥락을 유지하며 단계적으로 해결할 수 있습니다.
+    이 강의는 특정한 프롬프트 공식을 외우는 강의가 아닙니다.
+    AI에게 실제 업무를 어떻게 전달하고,
+    복잡한 문제를 어떻게 여러 단계로 나누어 해결할 수 있는지를
+    최대한 쉽게 설명하는 것을 목표로 합니다.
+  </p>
+
+  <div class="pe-card-blue">
+    <h3 class="pe-small-heading">강사 소개</h3>
+
+    <ul class="pe-list">
+      <li>연세대학교 컴퓨터과학과 졸업</li>
+      <li>개발자 경력 6년</li>
+      <li>현재 1인 사업 운영</li>
+    </ul>
+  </div>
+
+  <div class="pe-card-soft">
+    <h3 class="pe-small-heading">이 강의를 만든 이유</h3>
+
+    <p class="pe-text">
+      생성형 AI가 빠르게 대중화되면서
+      프롬프트 엔지니어링에 대한 수많은 정보와 방법론이 등장했습니다.
+    </p>
+
+    <p class="pe-text">
+      하지만 처음 AI를 사용하는 사람의 입장에서는
+      무엇이 정말 중요한지,
+      어떤 방법을 실제 업무에서 사용해야 하는지
+      오히려 혼란스러울 수 있습니다.
+    </p>
+
+    <p class="pe-text">
+      이 강의의 목적은 누구나
+      <strong>프롬프트 엔지니어링과 AI 업무 활용의 핵심을 정확하게 이해할 수 있도록</strong>
+      내용을 정리해 무료로 제공하는 것입니다.
+    </p>
+
+    <p class="pe-text">
+      강의는 YouTube를 통해 무료로 공개합니다.
+      강의와 관련된 문의사항이 있다면 이메일로 문의해 주세요: brianfury90@naver.com
+    </p>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">COURSE GOAL</span>
+    어려운 용어나 복잡한 공식을 외우는 것이 아니라,
+    <strong>“이 업무를 AI에게 어떻게 맡길 것인가?”</strong>를 판단할 수 있게 되는 것이
+    이 강의의 목표입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">01 · THE BIG PICTURE</span>
+  <h2 class="pe-title">2026년의 프롬프트 엔지니어링을 어떻게 이해해야 할까?</h2>
+
+  <p class="pe-subtitle">
+    생성형 AI가 처음 대중화되었을 때는
+    어떤 문장을 입력해야 더 좋은 답을 얻을 수 있는지가 큰 관심사였습니다.
+    지금도 좋은 업무지시는 중요하지만,
+    최신 AI를 활용할 때는 프롬프트 한 문장만큼
+    <strong>Task, Context, Workflow</strong>를 함께 설계하는 것이 중요합니다.
   </p>
 
   <div class="pe-compare">
     <div class="pe-compare-item">
-      <span class="pe-compare-label pe-label-shot">단타성 명령어</span>
-      <h3 class="pe-small-heading">지금 해야 할 일이 명확할 때</h3>
+      <span class="pe-compare-label pe-label-shot">PROMPT 중심</span>
+      <h3 class="pe-small-heading">“어떻게 질문해야 좋은 답이 나올까?”</h3>
+
+      <ul class="pe-list-plain">
+        <li>역할을 어떻게 설정할까?</li>
+        <li>어떤 표현을 넣을까?</li>
+        <li>어떤 형식을 사용할까?</li>
+        <li>프롬프트를 얼마나 자세하게 쓸까?</li>
+      </ul>
+    </div>
+
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-context">WORKFLOW 중심</span>
+      <h3 class="pe-small-heading">“이 일을 AI에게 어떻게 맡길까?”</h3>
+
+      <ul class="pe-list-plain">
+        <li>지금 해야 하는 Task는 무엇인가?</li>
+        <li>AI에게 어떤 Context가 필요한가?</li>
+        <li>어떤 기준으로 결과를 판단할 것인가?</li>
+        <li>한 번에 끝낼 일인가, 여러 단계가 필요한가?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pe-core">
+    프롬프트 엔지니어링을 단순한
+    <strong>“문장 작성 기술”</strong>로만 생각하기보다,
+    <strong>AI에게 업무를 전달하고 진행하는 방법</strong>으로 이해하면
+    훨씬 다양한 업무에 적용할 수 있습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">02 · FIRST PRINCIPLE</span>
+  <h2 class="pe-title">AI에게 프롬프트를 쓰지 말고, 업무를 맡긴다고 생각하세요</h2>
+
+  <p class="pe-subtitle">
+    AI에게 일을 시킬 때 가장 이해하기 쉬운 방법은
+    새로운 프롬프트 문법을 외우는 것이 아니라,
+    회사에서 다른 사람에게 업무를 전달하는 상황을 떠올리는 것입니다.
+  </p>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">예를 들어 후배 직원에게 일을 맡긴다면?</h3>
+
+    <p class="pe-text">
+      단순히
+      <strong>“매출 분석 좀 해주세요.”</strong>
+      라고만 이야기하기보다는,
+    </p>
+
+    <ul class="pe-list">
+      <li>왜 이 분석이 필요한지</li>
+      <li>어떤 데이터를 봐야 하는지</li>
+      <li>무엇을 확인해야 하는지</li>
+      <li>중요한 제약조건이 무엇인지</li>
+      <li>결과를 어떤 형태로 받고 싶은지</li>
+    </ul>
+
+    <p class="pe-text">
+      필요한 정보를 함께 전달할 것입니다.
+    </p>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">KEY IDEA</span>
+    좋은 프롬프트의 핵심은
+    특별한 주문이나 마법 같은 문장을 만드는 것이 아니라,
+    <strong>AI가 일을 수행하는 데 필요한 정보를 정확하게 전달하는 것</strong>입니다.
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">IMPORTANT</span>
+    그렇다고 모든 정보를 최대한 길게 입력하는 것이 좋은 것은 아닙니다.
+    현재 업무를 수행하는 데 필요한 정보가 무엇인지 판단하고,
+    <strong>관련 있는 Context를 중심으로 전달하는 것</strong>이 중요합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">03 · TASK FIRST</span>
+  <h2 class="pe-title">프롬프트보다 먼저 판단해야 하는 것</h2>
+
+  <p class="pe-subtitle">
+    AI에게 무엇을 입력할지 고민하기 전에
+    먼저 현재 업무가 어떤 종류의 업무인지 판단해보겠습니다.
+  </p>
+
+  <div class="pe-core">
+    가장 먼저 할 질문은 이것입니다.
+    <br><br>
+    <strong>
+      “나는 지금 이 일을 바로 시킬 수 있을 만큼
+      문제와 필요한 정보를 알고 있는가?”
+    </strong>
+  </div>
+
+  <p class="pe-text">
+    이 질문에 대한 답에 따라 AI와 일하는 방식이 달라집니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-shot">단타형 Task</span>
+
+      <h3 class="pe-small-heading">지금 바로 업무를 지시할 수 있습니다</h3>
+
       <p class="pe-text pe-muted">
-        분석, 정리, 비교, 문서 작성처럼 결과물이 명확한 하나의 Task를 AI에게 직접 지시합니다.
+        해야 할 일, 필요한 자료, 원하는 결과가
+        현재 시점에서 충분히 명확합니다.
       </p>
+
       <p class="pe-text">
-        예: <strong>“지난달 캠페인 데이터를 분석해서 성과가 낮은 채널 3개를 찾아줘.”</strong>
+        예:
+        <strong>
+          “이 고객 피드백을 5가지 유형으로 분류하고,
+          유형별 빈도를 표로 정리해줘.”
+        </strong>
       </p>
     </div>
 
     <div class="pe-compare-item">
-      <span class="pe-compare-label pe-label-context">맥락형 명령어</span>
-      <h3 class="pe-small-heading">전체 문제를 아직 다 알 수 없을 때</h3>
+      <span class="pe-compare-label pe-label-context">빌드업형 Workflow</span>
+
+      <h3 class="pe-small-heading">여러 단계의 작업이 필요합니다</h3>
+
       <p class="pe-text pe-muted">
-        하나의 채팅방에서 중간 결과와 새로운 정보를 계속 공유하며 문제를 구체화합니다.
+        최종 목표는 알고 있지만,
+        중간 분석이나 새로운 정보가 있어야
+        다음 판단을 할 수 있습니다.
       </p>
+
       <p class="pe-text">
-        예: <strong>“매출이 왜 감소했는지 하나씩 확인해보자. 먼저 어떤 지표부터 봐야 할까?”</strong>
+        예:
+        <strong>
+          “최근 매출이 떨어지고 있는데
+          원인을 찾아서 개선안을 만들어야 해.”
+        </strong>
       </p>
     </div>
   </div>
 
-  <div class="pe-core">
-    <strong>핵심</strong><br>
-    맥락형 명령어는 단타성 명령어와 반대되는 방식이 아닙니다.
-    <strong>여러 개의 단타성 Task를 하나의 맥락 안에서 연결하는 방식</strong>이라고 이해하면 쉽습니다.
-  </div>
-</section>
-
-
-<section class="pe-section">
-  <span class="pe-kicker">02 · WORKFLOW</span>
-  <h2 class="pe-title">두 방식은 실제 업무에서 함께 사용됩니다</h2>
-  <p class="pe-subtitle">
-    큰 업무를 작은 Task로 나누고, 각각은 명확한 단타성 명령어로 처리합니다.
-    그 결과를 다음 Task의 맥락으로 사용하면서 전체 문제를 해결합니다.
-  </p>
-
-  <div class="pe-flow">
-    <div class="pe-flow-step">전체 업무 확인</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">Task 분해</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">단타성 명령 실행</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">중간 결과 확인</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">새로운 조건 발견</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">다음 Task 실행</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">최종 결과물</div>
-  </div>
-
-  <div class="pe-insight">
-    <span class="pe-insight-label">BUSINESS INSIGHT</span>
-    맥락이 쌓이면서 처음에는 알 수 없었던 사실이 발견되고,
-    <strong>애매했던 문제가 점점 구체적인 문제로 바뀔 수 있습니다.</strong>
-  </div>
-
-  <p class="pe-text">
-    예를 들어 처음에는 <strong>“20대 고객 매출이 감소했다”</strong>는 사실만 알고 있었지만,
-    분석을 이어가면서 <strong>“신규 유입이 아니라 기존 고객의 재구매율이 문제”</strong>라는 사실을 발견할 수 있습니다.
-  </p>
-</section>
-
-
-<section class="pe-section">
-  <span class="pe-kicker">03 · ONE-SHOT PROMPT</span>
-  <h2 class="pe-title">단타성 명령어의 기본 구조</h2>
-  <p class="pe-subtitle">
-    단타성 Task에서는 AI가 일을 수행하는 데 필요한 조건을 가능한 한 명확하게 전달합니다.
-    모든 항목을 반드시 사용할 필요는 없으며, 필요한 것만 선택하면 됩니다.
-  </p>
-
-  <table class="pe-table">
-    <thead>
-      <tr>
-        <th>항목</th>
-        <th>설명</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Role</td>
-        <td>어떤 전문성과 관점으로 판단할지</td>
-      </tr>
-      <tr>
-        <td>Objective</td>
-        <td>이 업무를 수행하는 목적</td>
-      </tr>
-      <tr>
-        <td>Task</td>
-        <td>AI가 실제로 해야 할 작업</td>
-      </tr>
-      <tr>
-        <td>Context</td>
-        <td>현재 상황과 관련 정보</td>
-      </tr>
-      <tr>
-        <td>Target</td>
-        <td>결과물을 사용할 대상</td>
-      </tr>
-      <tr>
-        <td>Constraints</td>
-        <td>예산, 기간, 금지사항 등 반드시 지켜야 할 조건</td>
-      </tr>
-      <tr>
-        <td>Criteria</td>
-        <td>좋은 결과를 판단하는 기준과 우선순위</td>
-      </tr>
-    </tbody>
-  </table>
-
   <div class="pe-note">
-    <span class="pe-note-label">TIP</span>
-    프롬프트를 복잡하게 만드는 것이 목적이 아닙니다.
-    <strong>후배 직원에게 업무를 인수인계하고 구체적으로 지시한다고 생각하면 됩니다.</strong>
+    <span class="pe-note-label">주의</span>
+    단타형이라고 해서 Context가 필요하지 않은 것은 아닙니다.
+    두 방식의 차이는
+    <strong>Context의 유무가 아니라,
+    필요한 Context와 업무 방향이 현재 충분히 정해져 있는가</strong>에 있습니다.
   </div>
 </section>
 
 
 <section class="pe-section">
-  <span class="pe-kicker">04 · PRACTICAL EXAMPLE</span>
-  <h2 class="pe-title">실무 수준의 단타성 명령어 예제</h2>
+  <span class="pe-kicker">04 · THREE WORK MODES</span>
+  <h2 class="pe-title">이 강의에서는 AI 업무를 세 가지 방식으로 나눕니다</h2>
 
-  <div class="pe-card-soft">
-    <h3 class="pe-small-heading">상황</h3>
-    <p class="pe-text">
-      온라인 교육 서비스를 운영하는 회사에서 지난 3개월간 무료 체험 가입자는 증가했지만,
-      유료 전환율은 8.2%에서 5.4%로 감소했습니다.
-      팀장은 마케팅 담당자에게 다음 분기 전환율 개선안을 요청했습니다.
-    </p>
-  </div>
-
-  <div class="pe-prompt">
-    <span class="pe-prompt-label">PROMPT</span>
-    <p class="pe-prompt-text">당신은 B2C 구독형 서비스의 전환율 개선 경험이 있는 그로스 마케터입니다.
-
-[목적]
-다음 분기 무료 체험 고객의 유료 전환율을 개선하기 위한 우선 실행안을 결정하려고 합니다.
-
-[업무]
-아래 상황을 분석하고 전환율 하락의 가능한 원인을 분류한 뒤,
-우선 확인해야 할 가설 5개를 제시해주세요.
-
-[상황]
-- 온라인 교육 구독 서비스
-- 최근 3개월 무료 체험 가입자 수: 약 30% 증가
-- 무료 → 유료 전환율: 8.2% → 5.4% 감소
-- 광고 예산과 무료 체험 기간에는 변화 없음
-- 최근 신규 강의 카테고리 3개 추가
-- 모바일 가입자 비중 증가
-
-[대상]
-마케팅팀장과 서비스기획팀이 함께 검토할 자료입니다.
-
-[제약조건]
-- 아직 원인이 확인되지 않았으므로 단정하지 말 것
-- 추가 조사가 필요한 데이터도 함께 제시할 것
-- 개발이 필요한 개선안보다 먼저 원인 분석에 집중할 것
-
-[판단기준]
-1. 전환율 하락에 미칠 가능성
-2. 데이터로 검증하기 쉬운 정도
-3. 검증 비용과 시간
-
-가설별로
-① 가능한 원인
-② 확인해야 할 데이터
-③ 우선순위
-형태로 정리해주세요.</p>
-  </div>
-
-  <div class="pe-result">
-    <span class="pe-result-label">AI가 수행해야 하는 결과</span>
-    <p class="pe-text">
-      단순히 “전환율을 높이는 아이디어”를 만드는 것이 아니라,
-      현재 상황과 판단기준을 바탕으로 <strong>확인해야 할 원인과 데이터의 우선순위</strong>를 정리합니다.
-    </p>
-  </div>
-
-  <div class="pe-core">
-    단타성 명령어의 핵심은 <strong>길게 쓰는 것</strong>이 아니라,
-    AI가 업무를 수행하는 데 필요한 <strong>목적·상황·조건·판단기준을 빠뜨리지 않는 것</strong>입니다.
-  </div>
-</section>
-
-<section class="pe-section">
-  <span class="pe-kicker">05 · CONTEXT PROMPT</span>
-  <h2 class="pe-title">맥락형 명령어의 기본 구조</h2>
   <p class="pe-subtitle">
-    맥락형 명령어는 처음부터 완성된 답을 요구하기보다,
-    하나의 큰 업무를 여러 Task로 나누고 이전 결과를 다음 판단의 맥락으로 사용합니다.
+    실제 업무 사례를 살펴보면
+    AI에게 일을 맡기는 방식은 크게 다음 세 가지 형태로 정리할 수 있습니다.
   </p>
-
-  <div class="pe-flow">
-    <div class="pe-flow-step">큰 문제 제시</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">첫 Task 실행</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">결과 확인</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">새로운 사실 발견</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">다음 Task 결정</div>
-    <div class="pe-flow-arrow">→</div>
-    <div class="pe-flow-step">문제 구체화</div>
-  </div>
 
   <div class="pe-step">
     <span class="pe-step-number">1</span>
-    <h3 class="pe-small-heading">전체 업무와 현재 상황을 설명합니다</h3>
-    <p class="pe-text pe-muted">
-      무엇을 해결하려는지, 현재 알고 있는 사실과 아직 모르는 부분을 AI에게 전달합니다.
+
+    <h3 class="pe-small-heading">단타형 Task</h3>
+
+    <p class="pe-text">
+      해야 할 일이 충분히 정의되어 있기 때문에
+      하나의 명확한 업무지시를 통해 하나의 결과물을 만듭니다.
     </p>
+
+    <div class="pe-flow">
+      <div class="pe-flow-step">업무 정의</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">명확한 지시</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">결과물</div>
+    </div>
   </div>
 
   <div class="pe-step">
     <span class="pe-step-number">2</span>
-    <h3 class="pe-small-heading">지금 필요한 하나의 Task를 실행합니다</h3>
+
+    <h3 class="pe-small-heading">고정형 빌드업</h3>
+
+    <p class="pe-text">
+      하나의 업무를 여러 단계로 나누어야 하지만
+      어떤 순서로 진행해야 하는지는 처음부터 비교적 명확합니다.
+    </p>
+
+    <div class="pe-flow">
+      <div class="pe-flow-step">Task A</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">결과 A</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">Task B</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">결과 B</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">최종 결과</div>
+    </div>
+
     <p class="pe-text pe-muted">
-      분석, 비교, 가설 정리, 데이터 검토처럼 현재 단계에서 필요한 작업만 요청합니다.
+      예: 자료 수집 → 분류 → 분석 → 보고서 작성
     </p>
   </div>
 
   <div class="pe-step">
     <span class="pe-step-number">3</span>
-    <h3 class="pe-small-heading">중간 결과를 보고 다음 질문을 결정합니다</h3>
-    <p class="pe-text pe-muted">
-      결과에서 새롭게 발견된 사실이나 애매한 부분을 다음 Task의 조건으로 사용합니다.
-    </p>
-  </div>
 
-  <div class="pe-step">
-    <span class="pe-step-number">4</span>
-    <h3 class="pe-small-heading">문제가 충분히 구체화되면 최종 결과물을 만듭니다</h3>
+    <h3 class="pe-small-heading">탐색형 빌드업</h3>
+
+    <p class="pe-text">
+      최종 목표는 있지만
+      중간 결과를 확인하기 전에는
+      다음 Task를 정확하게 결정하기 어렵습니다.
+    </p>
+
+    <div class="pe-flow">
+      <div class="pe-flow-step">첫 Task</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">새로운 사실 발견</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">문제 수정</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">다음 Task</div>
+      <div class="pe-flow-arrow">→</div>
+      <div class="pe-flow-step">방향 결정</div>
+    </div>
+
     <p class="pe-text pe-muted">
-      앞에서 축적된 분석과 판단을 바탕으로 실행안, 보고서, 기획안 등의 결과물을 생성합니다.
+      예: 매출 감소 → 원인 분석 → 특정 고객군 문제 발견 →
+      행동 데이터 분석 → 실제 병목 발견 → 해결책 결정
     </p>
   </div>
 
   <div class="pe-core">
-    맥락형 명령어의 목적은 <strong>AI와 오래 대화하는 것</strong>이 아닙니다.
-    <strong>중간 결과를 이용해 처음에는 알 수 없었던 문제와 조건을 하나씩 발견하는 것</strong>입니다.
+    앞으로 이 강의에서는
+    <strong>단타형 Task → 고정형 빌드업 → 탐색형 빌드업</strong>
+    순서로 하나씩 살펴보겠습니다.
   </div>
 </section>
 
 
 <section class="pe-section">
-  <span class="pe-kicker">06 · PRACTICAL EXAMPLE</span>
-  <h2 class="pe-title">실무 수준의 맥락형 명령어 예제</h2>
+  <span class="pe-kicker">05 · WHY THIS MATTERS</span>
+  <h2 class="pe-title">왜 이 구분이 중요한가?</h2>
+
   <p class="pe-subtitle">
-    앞의 온라인 교육 서비스 사례를 그대로 이어서 살펴보겠습니다.
-    처음에는 단순히 “유료 전환율이 떨어졌다”는 사실만 알고 있는 상태입니다.
+    모든 업무를 긴 대화로 처리할 필요도 없고,
+    모든 업무를 하나의 거대한 프롬프트로 해결할 필요도 없습니다.
+  </p>
+
+  <div class="pe-card-green">
+    <h3 class="pe-small-heading">일이 명확하다면</h3>
+
+    <p class="pe-text">
+      필요한 정보와 조건을 전달하고
+      <strong>한 번에 명확하게 일을 시키는 편이 효율적</strong>입니다.
+    </p>
+  </div>
+
+  <div class="pe-card-purple">
+    <h3 class="pe-small-heading">과정이 여러 단계라면</h3>
+
+    <p class="pe-text">
+      큰 일을 여러 Task로 나누고
+      <strong>앞 단계의 결과를 다음 단계의 입력으로 연결</strong>할 수 있습니다.
+    </p>
+  </div>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">문제 자체가 아직 애매하다면</h3>
+
+    <p class="pe-text">
+      중간 결과를 확인하면서
+      <strong>새로운 사실을 발견하고,
+      다음 Task와 문제 정의 자체를 계속 수정</strong>할 수 있습니다.
+    </p>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">COURSE PRINCIPLE</span>
+    중요한 것은 가장 복잡한 프롬프트를 만드는 것이 아닙니다.
+    <strong>현재 업무에 맞는 AI 사용 방식을 선택하는 것</strong>입니다.
+  </div>
+</section>
+<section class="pe-section">
+  <span class="pe-kicker">06 · DIRECT TASK</span>
+  <h2 class="pe-title">단타형 Task란 무엇인가?</h2>
+
+  <p class="pe-subtitle">
+    단타형 Task는 현재 시점에서
+    <strong>무엇을 해야 하는지와 필요한 정보가 충분히 정해져 있는 업무</strong>입니다.
+    이런 업무에서는 긴 대화를 만들기보다,
+    현재 필요한 정보를 모아 하나의 명확한 업무지시를 만드는 것이 효율적입니다.
+  </p>
+
+  <div class="pe-card-blue">
+    <h3 class="pe-small-heading">예시</h3>
+
+    <ul class="pe-list">
+      <li>회의록을 핵심 내용만 요약하기</li>
+      <li>고객 리뷰를 유형별로 분류하기</li>
+      <li>주어진 기준으로 세 가지 상품 비교하기</li>
+      <li>보고서 초안 작성하기</li>
+      <li>이메일을 특정 대상에 맞게 수정하기</li>
+      <li>정해진 데이터에서 특정 지표 분석하기</li>
+    </ul>
+  </div>
+
+  <div class="pe-core">
+    단타형의 핵심은
+    <strong>“한 번만 질문한다”</strong>가 아닙니다.
+    <br><br>
+    핵심은
+    <strong>현재 Task를 수행하는 데 필요한 조건을 이미 충분히 알고 있다는 것</strong>입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">07 · PROMPT COMPONENTS</span>
+  <h2 class="pe-title">좋은 단타형 프롬프트를 만드는 기본 부품</h2>
+
+  <p class="pe-subtitle">
+    프롬프트에는 반드시 따라야 하는 하나의 공식이 있는 것이 아닙니다.
+    업무에 따라 필요한 정보를 선택해서 조합하면 됩니다.
   </p>
 
   <div class="pe-card-soft">
-    <h3 class="pe-small-heading">전체 업무</h3>
-    <p class="pe-text">
-      무료 체험 가입자는 증가했지만 유료 전환율은 8.2%에서 5.4%로 감소했습니다.
-      마케팅팀은 원인을 파악하고 다음 분기 개선안을 만들어야 합니다.
-    </p>
-  </div>
+    <h3 class="pe-small-heading">먼저 기억할 네 가지</h3>
 
-  <h3 class="pe-heading">STEP 1. 문제를 먼저 분해합니다</h3>
+    <div class="pe-step">
+      <span class="pe-step-number">1</span>
+      <h3 class="pe-small-heading">Goal & Task — 무엇을 해야 하는가?</h3>
 
-  <div class="pe-chat">
-    <div class="pe-chat-user">
-      <span class="pe-chat-role">USER</span>
-      무료 체험 가입자는 늘었는데 유료 전환율이 8.2%에서 5.4%로 떨어졌어.
-      아직 원인을 모르겠어. 원인을 찾으려면 어떤 지표부터 나눠서 확인해야 할까?
+      <p class="pe-text">
+        AI가 수행해야 할 실제 업무와
+        그 업무를 수행하는 목적을 설명합니다.
+      </p>
+
+      <p class="pe-text pe-muted">
+        예: 다음 분기 광고 예산을 조정하기 위해
+        지난 3개월의 채널별 성과를 비교해주세요.
+      </p>
     </div>
 
-    <div class="pe-chat-ai">
-      <span class="pe-chat-role">AI</span>
-      우선 가입 채널, 디바이스, 신규 강의 카테고리, 체험 기간 내 이용률,
-      핵심 기능 사용 여부, 체험 종료 시점별 이탈률 등을 나눠 비교하는 것이 좋습니다.
-    </div>
-  </div>
+    <div class="pe-step">
+      <span class="pe-step-number">2</span>
+      <h3 class="pe-small-heading">Context & Source — 무엇을 알고 있어야 하는가?</h3>
 
-  <div class="pe-insight">
-    <span class="pe-insight-label">NEXT TASK</span>
-    전체 평균만 보지 않고 <strong>어떤 고객군에서 전환율이 크게 떨어졌는지</strong> 확인하기로 합니다.
-  </div>
+      <p class="pe-text">
+        현재 상황, 관련 자료, 데이터,
+        이미 확인된 사실 등 판단에 필요한 정보를 제공합니다.
+      </p>
 
-
-  <h3 class="pe-heading">STEP 2. 실제 데이터를 넣어 비교합니다</h3>
-
-  <div class="pe-chat">
-    <div class="pe-chat-user">
-      <span class="pe-chat-role">USER</span>
-      데이터를 나눠보니 PC 가입자의 전환율은 거의 그대로인데,
-      모바일 가입자는 7.9%에서 3.8%까지 떨어졌어.
-      모바일 가입자 비중도 최근 크게 늘었고.
-      이 결과를 어떻게 해석할 수 있을까?
+      <p class="pe-text pe-muted">
+        예: 검색광고, SNS광고, 제휴광고의
+        비용·신규고객·매출·재구매 데이터를 제공합니다.
+      </p>
     </div>
 
-    <div class="pe-chat-ai">
-      <span class="pe-chat-role">AI</span>
-      전체 전환율 하락의 상당 부분이 모바일 신규 가입자 증가와 연결되어 있을 가능성이 있습니다.
-      이제 모바일 사용자의 체험 과정에서 어디에서 이탈하는지 확인하는 것이 우선입니다.
-    </div>
-  </div>
+    <div class="pe-step">
+      <span class="pe-step-number">3</span>
+      <h3 class="pe-small-heading">Constraints & Criteria — 무엇을 지켜야 하는가?</h3>
 
-  <div class="pe-insight">
-    <span class="pe-insight-label">DISCOVERY</span>
-    문제가 <strong>“전체 고객의 전환율 하락”</strong>에서
-    <strong>“모바일 체험 고객의 전환율 하락”</strong>으로 구체화되었습니다.
-  </div>
+      <p class="pe-text">
+        예산, 기간, 금지사항 같은 현실적인 제약과
+        결과를 판단할 기준을 알려줍니다.
+      </p>
 
-
-  <h3 class="pe-heading">STEP 3. 모바일 사용자의 행동을 다시 분석합니다</h3>
-
-  <div class="pe-chat">
-    <div class="pe-chat-user">
-      <span class="pe-chat-role">USER</span>
-      모바일 데이터를 더 확인했어.
-      가입 완료율은 PC와 비슷한데 첫 강의 재생률이 낮고,
-      첫 강의를 재생한 사용자들의 유료 전환율은 PC와 큰 차이가 없어.
-      그러면 어디가 핵심 문제라고 볼 수 있을까?
+      <p class="pe-text pe-muted">
+        예: 신규 예산 증액은 불가능하며,
+        ROAS와 신규고객 획득비용을 우선적으로 평가합니다.
+      </p>
     </div>
 
-    <div class="pe-chat-ai">
-      <span class="pe-chat-role">AI</span>
-      결제 설득보다 그 이전 단계인 첫 콘텐츠 진입 과정이 병목일 가능성이 높습니다.
-      모바일 가입 후 첫 강의까지 도달하는 UX와 온보딩 과정을 우선 확인하는 것이 좋습니다.
+    <div class="pe-step">
+      <span class="pe-step-number">4</span>
+      <h3 class="pe-small-heading">Output — 결과를 어떻게 받을 것인가?</h3>
+
+      <p class="pe-text">
+        표, 보고서, 요약, JSON, 체크리스트 등
+        실제로 사용할 결과물의 형태를 지정할 수 있습니다.
+      </p>
+
+      <p class="pe-text pe-muted">
+        예: 채널별 평가표와 함께
+        예산 확대·유지·축소 의견을 한 줄씩 작성해주세요.
+      </p>
     </div>
   </div>
 
   <div class="pe-insight">
-    <span class="pe-insight-label">BUSINESS INSIGHT</span>
-    처음에는 가격이나 콘텐츠 경쟁력 문제일 수도 있었지만,
-    분석 결과 <strong>모바일 가입 후 첫 강의까지 도달하지 못하는 과정</strong>이 핵심 후보로 좁혀졌습니다.
+    <span class="pe-insight-label">SIMPLE RULE</span>
+    처음에는 어렵게 생각하지 않아도 됩니다.
+    <br><br>
+    <strong>
+      무엇을 할지 + 무엇을 보고 판단할지 +
+      어떤 조건을 지킬지 + 무엇을 만들어낼지
+    </strong>
+    <br><br>
+    이 네 가지부터 생각하면 대부분의 단타형 업무를 시작할 수 있습니다.
   </div>
+</section>
 
 
-  <h3 class="pe-heading">STEP 4. 이제 해결책을 비교합니다</h3>
+<section class="pe-section">
+  <span class="pe-kicker">08 · EXTENDED CHECKLIST</span>
+  <h2 class="pe-title">업무가 복잡하다면 더 많은 정보를 추가할 수 있습니다</h2>
 
-  <div class="pe-chat">
-    <div class="pe-chat-user">
-      <span class="pe-chat-role">USER</span>
-      현재 개발 인력은 많지 않아.
-      모바일 첫 강의 진입률을 높이기 위해
-      온보딩 화면 개선, 가입 직후 강의 추천, 푸시 알림 강화 세 가지를 검토하고 있어.
-      개발 난이도, 기대효과, 검증 속도를 기준으로 비교해줘.
+  <p class="pe-subtitle">
+    복잡한 업무에서는 네 가지 기본 요소만으로 부족할 수 있습니다.
+    이때 다음 요소들을 필요한 만큼 추가할 수 있습니다.
+  </p>
+
+  <table class="pe-table">
+    <thead>
+      <tr>
+        <th>요소</th>
+        <th>질문</th>
+        <th>사용 예</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>Role</strong></td>
+        <td>어떤 전문성과 관점에서 판단할 것인가?</td>
+        <td>B2C 그로스 마케터 관점</td>
+      </tr>
+
+      <tr>
+        <td><strong>Objective</strong></td>
+        <td>왜 이 일을 하는가?</td>
+        <td>다음 분기 예산 재배분</td>
+      </tr>
+
+      <tr>
+        <td><strong>Task</strong></td>
+        <td>구체적으로 무엇을 해야 하는가?</td>
+        <td>채널별 성과 비교</td>
+      </tr>
+
+      <tr>
+        <td><strong>Context</strong></td>
+        <td>현재 어떤 상황인가?</td>
+        <td>SNS 광고비 증가, 전환율 하락</td>
+      </tr>
+
+      <tr>
+        <td><strong>Target</strong></td>
+        <td>누가 이 결과를 사용하는가?</td>
+        <td>마케팅팀장</td>
+      </tr>
+
+      <tr>
+        <td><strong>Constraints</strong></td>
+        <td>반드시 지켜야 하는 조건은 무엇인가?</td>
+        <td>전체 예산 증액 불가</td>
+      </tr>
+
+      <tr>
+        <td><strong>Criteria</strong></td>
+        <td>무엇을 좋은 결과라고 판단할 것인가?</td>
+        <td>ROAS, CAC, 재구매율</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pe-note">
+    <span class="pe-note-label">IMPORTANT</span>
+    이 일곱 가지는
+    <strong>매번 전부 입력해야 하는 공식이 아닙니다.</strong>
+    <br><br>
+    업무지시를 만들 때
+    어떤 정보가 빠져 있는지 확인하는
+    <strong>확장 체크리스트</strong>라고 생각하면 됩니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">09 · ROLE</span>
+  <h2 class="pe-title">Role과 Persona는 언제 필요한가?</h2>
+
+  <p class="pe-subtitle">
+    프롬프트에서 역할을 설정하는 방법은 여전히 사용할 수 있습니다.
+    다만 모든 업무에서 반드시 필요한 요소는 아닙니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-shot">ROLE이 크게 필요하지 않은 경우</span>
+
+      <h3 class="pe-small-heading">Task 자체가 명확할 때</h3>
+
+      <div class="pe-prompt">
+        <span class="pe-prompt-label">PROMPT</span>
+
+        <p class="pe-prompt-text">
+이 회의록을
+① 결정사항
+② 담당자
+③ 마감일
+세 항목으로 정리해주세요.
+        </p>
+      </div>
+
+      <p class="pe-text pe-muted">
+        해야 할 일이 충분히 명확하기 때문에
+        굳이 전문가 역할을 추가하지 않아도 됩니다.
+      </p>
     </div>
 
-    <div class="pe-chat-ai">
-      <span class="pe-chat-role">AI</span>
-      빠른 검증이 목적이라면 대규모 온보딩 개편보다
-      가입 직후 강의 추천과 메시지 개선을 먼저 테스트하는 것이 적합합니다.
-      이후 효과가 확인되면 온보딩 구조 개편으로 확대할 수 있습니다.
-    </div>
-  </div>
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-context">ROLE이 유용한 경우</span>
 
-  <div class="pe-result">
-    <span class="pe-result-label">문제가 구체화된 과정</span>
+      <h3 class="pe-small-heading">전문적인 판단 관점이 중요할 때</h3>
 
-    <div class="pe-flow">
-      <div class="pe-flow-step">유료 전환율 하락</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">모바일 고객 문제 발견</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">첫 강의 진입률 문제 발견</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">온보딩 병목으로 구체화</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">우선 테스트 결정</div>
+      <div class="pe-prompt">
+        <span class="pe-prompt-label">PROMPT</span>
+
+        <p class="pe-prompt-text">
+B2C 구독 서비스의 CRM 마케터 관점에서
+다음 고객 행동 데이터를 분석해주세요.
+
+특히 재구매율을 떨어뜨리는
+고객 행동 패턴을 찾아주세요.
+        </p>
+      </div>
+
+      <p class="pe-text pe-muted">
+        어떤 전문적인 관점에서 문제를 볼 것인지가
+        결과에 영향을 줄 수 있습니다.
+      </p>
     </div>
   </div>
 
   <div class="pe-core">
-    처음부터 <strong>“모바일 온보딩을 개선해야 한다”</strong>고 알고 있었던 것이 아닙니다.
-    여러 개의 Task를 수행하면서 결과가 맥락으로 쌓였고,
-    그 과정에서 <strong>처음에는 보이지 않았던 문제와 비즈니스 인사이트가 발견된 것</strong>입니다.
+    Role의 목적은
+    AI에게 화려한 캐릭터를 부여하는 것이 아닙니다.
+    <br><br>
+    <strong>
+      “이 문제를 어떤 전문성과 관점에서 판단해야 하는가?”
+    </strong>
+    를 알려주는 것입니다.
+  </div>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">과도한 Persona 사용</h3>
+
+    <p class="pe-text">
+      “당신은 세계 최고의 천재 마케터이며
+      모든 시장을 완벽하게 예측할 수 있습니다.”
+    </p>
+
+    <p class="pe-text pe-muted">
+      이런 과장된 설정을 만드는 것보다
+      실제 업무에 필요한 관점을 구체적으로 지정하는 편이 이해하기 쉽습니다.
+    </p>
+  </div>
+
+  <div class="pe-card-green">
+    <h3 class="pe-small-heading">업무 중심 Role</h3>
+
+    <p class="pe-text">
+      “B2C 모바일 구독 서비스에서
+      고객 유지율을 분석하는 CRM 마케터 관점에서 검토해주세요.”
+    </p>
+
+    <p class="pe-text pe-muted">
+      무엇을 판단해야 하는지가 훨씬 명확합니다.
+    </p>
   </div>
 </section>
 
+
 <section class="pe-section">
-  <span class="pe-kicker">07 · INTEGRATED WORKFLOW</span>
-  <h2 class="pe-title">단타성 + 맥락형 명령어를 함께 사용하기</h2>
+  <span class="pe-kicker">10 · TARGET</span>
+  <h2 class="pe-title">같은 내용도 누가 사용하는지에 따라 달라집니다</h2>
 
   <p class="pe-subtitle">
-    실제 업무에서는 두 방식을 따로 사용하기보다,
-    <strong>전체 업무의 맥락을 유지하면서 필요한 순간마다 단타성 Task를 실행</strong>하는 경우가 많습니다.
+    결과물의 대상이 중요하다면
+    Target 또는 Audience 정보를 함께 제공할 수 있습니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <h3 class="pe-small-heading">개발팀 대상</h3>
+
+      <p class="pe-text">
+        기술적인 원인,
+        API 구조,
+        구현 난이도,
+        예상 작업량 등을 자세히 설명할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="pe-compare-item">
+      <h3 class="pe-small-heading">경영진 대상</h3>
+
+      <p class="pe-text">
+        기술 세부사항보다
+        비용, 일정, 위험,
+        사업에 미치는 영향을 우선적으로 정리할 수 있습니다.
+      </p>
+    </div>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">TIP</span>
+    결과물을 실제로 누군가에게 전달해야 한다면
+    <strong>“누가 이 결과를 읽는가?”</strong>를 알려주는 것이 유용합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">11 · CRITERIA</span>
+  <h2 class="pe-title">AI에게 판단을 맡긴다면 기준을 알려주세요</h2>
+
+  <p class="pe-subtitle">
+    분석이나 의사결정 지원에서는
+    단순히 “가장 좋은 것을 추천해주세요”라고 요청하기보다
+    무엇을 중요하게 볼 것인지 알려주는 것이 좋습니다.
+  </p>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">예: 새로운 업무 도구 선택</h3>
+
+    <div class="pe-prompt">
+      <span class="pe-prompt-label">모호한 요청</span>
+
+      <p class="pe-prompt-text">
+세 가지 서비스를 비교해서
+가장 좋은 것을 추천해주세요.
+      </p>
+    </div>
+
+    <div class="pe-prompt">
+      <span class="pe-prompt-label">판단기준이 있는 요청</span>
+
+      <p class="pe-prompt-text">
+세 가지 서비스를 비교해주세요.
+
+우리 팀은 10명이고
+별도의 시스템 관리자가 없습니다.
+
+다음 순서로 중요하게 평가해주세요.
+
+1. 사용 편의성
+2. 기존 업무 도구와의 연동
+3. 월 이용비용
+4. 관리자 유지보수 부담
+
+각 항목의 장단점을 비교한 뒤
+우리 팀에 가장 적합한 서비스를 추천해주세요.
+      </p>
+    </div>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">KEY IDEA</span>
+    AI에게 판단을 맡길수록
+    <strong>무엇을 중요하게 판단해야 하는지</strong>를 알려주는 것이 중요합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">12 · EXAMPLES</span>
+  <h2 class="pe-title">결과를 설명하기 어렵다면 예시를 보여줄 수 있습니다</h2>
+
+  <p class="pe-subtitle">
+    원하는 결과의 패턴을 문장으로 설명하기 어려울 때는
+    하나 이상의 Example을 제공하는 방법도 사용할 수 있습니다.
+  </p>
+
+  <div class="pe-card-purple">
+    <h3 class="pe-small-heading">Few-shot Example</h3>
+
+    <p class="pe-text">
+      AI에게 몇 개의 입력과 원하는 결과의 예시를 제공해
+      형식이나 분류 기준,
+      문체 등의 패턴을 보여주는 방법입니다.
+    </p>
+  </div>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">EXAMPLE</span>
+
+    <p class="pe-prompt-text">
+다음 고객 문의를
+[결제 / 배송 / 제품 / 환불 / 기타]
+중 하나로 분류해주세요.
+
+예시:
+
+입력: 결제는 됐는데 주문내역에 안 보여요.
+결과: 결제
+
+입력: 배송이 언제 도착하나요?
+결과: 배송
+
+입력: 받은 제품 색상이 주문한 것과 달라요.
+결과: 제품
+
+이제 아래 문의를 같은 기준으로 분류해주세요.
+
+입력: 카드 취소가 됐는지 확인하고 싶어요.
+    </p>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">WHEN TO USE</span>
+    Example은 특히
+    <strong>분류 기준, 출력 패턴, 문체, 형식</strong>을
+    정확하게 맞춰야 할 때 유용할 수 있습니다.
+    <br><br>
+    하지만 간단한 업무마다 반드시 Example을 넣어야 한다고
+    생각할 필요는 없습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">13 · PRACTICAL PROMPT</span>
+  <h2 class="pe-title">실제 비즈니스 단타형 Task</h2>
+
+  <div class="pe-card-soft">
+    <h3 class="pe-small-heading">상황</h3>
+
+    <p class="pe-text">
+      온라인 구독 서비스를 운영하는 회사가 있습니다.
+      다음 분기 광고 예산을 재배분하기 위해
+      지난 3개월의 채널별 성과를 분석해야 합니다.
+    </p>
+  </div>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">PROMPT</span>
+
+    <p class="pe-prompt-text">
+B2C 구독 서비스의 그로스 마케팅 관점에서
+아래 세 광고 채널의 지난 3개월 성과를 비교해주세요.
+
+[목적]
+다음 분기 광고 예산을 재배분하려고 합니다.
+
+[데이터]
+
+검색광고
+- 비용: 3,000만원
+- 신규 유료고객: 1,200명
+- 발생 매출: 6,000만원
+- 3개월 재구매율: 34%
+
+SNS 광고
+- 비용: 2,500만원
+- 신규 유료고객: 1,400명
+- 발생 매출: 4,200만원
+- 3개월 재구매율: 18%
+
+제휴광고
+- 비용: 1,500만원
+- 신규 유료고객: 600명
+- 발생 매출: 3,300만원
+- 3개월 재구매율: 38%
+
+[조건]
+전체 광고예산은 늘릴 수 없습니다.
+
+[판단기준]
+1. 광고비 대비 매출
+2. 신규 고객 확보 효율
+3. 재구매율
+
+단순히 신규고객 수만 비교하지 말고
+세 기준을 종합해서 평가해주세요.
+
+[결과 형식]
+1. 채널별 핵심 평가
+2. 확대 / 유지 / 축소 의견
+3. 판단 근거
+4. 추가로 확인해야 할 데이터
+
+순서로 정리해주세요.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">왜 단타형인가?</span>
+
+    <p class="pe-text">
+      이 업무는 분석 대상,
+      데이터,
+      목적,
+      현실적인 제약,
+      판단기준,
+      필요한 결과물이 이미 정해져 있습니다.
+    </p>
+
+    <p class="pe-text">
+      따라서 지금 단계에서는
+      추가적인 문제 탐색 없이
+      <strong>하나의 명확한 분석 Task로 실행할 수 있습니다.</strong>
+    </p>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">14 · DON'T OVERENGINEER</span>
+  <h2 class="pe-title">프롬프트를 필요 이상으로 복잡하게 만들지 마세요</h2>
+
+  <p class="pe-subtitle">
+    프롬프트 엔지니어링을 배우기 시작하면
+    모든 요청에 수많은 항목을 넣어야 한다고 생각하기 쉽습니다.
+    하지만 업무가 단순하면 프롬프트도 단순할 수 있습니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-shot">간단한 업무</span>
+
+      <div class="pe-prompt">
+        <span class="pe-prompt-label">PROMPT</span>
+
+        <p class="pe-prompt-text">
+이 이메일을 고객에게 보내기 적합하도록
+정중하고 간결하게 수정해주세요.
+        </p>
+      </div>
+    </div>
+
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-context">복잡한 업무</span>
+
+      <div class="pe-prompt">
+        <span class="pe-prompt-label">PROMPT</span>
+
+        <p class="pe-prompt-text">
+첨부한 고객 이탈 데이터를 분석해서
+다음 분기 유지율 개선 우선순위를 정해주세요.
+
+현재 개발 인력은 2명이고
+신규 기능 개발보다 기존 기능 개선을 우선합니다.
+
+영향도, 구현 난이도, 검증 속도를 기준으로
+세 가지 우선 실행안을 제안해주세요.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pe-core">
+    프롬프트의 수준은
+    <strong>글자 수로 결정되지 않습니다.</strong>
+    <br><br>
+    현재 Task를 수행하는 데
+    필요한 정보가 충분하면서
+    불필요한 정보가 적다면
+    좋은 업무지시가 될 수 있습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">15 · DIRECT TASK SUMMARY</span>
+  <h2 class="pe-title">단타형 Task 정리</h2>
+
+  <div class="pe-flow">
+    <div class="pe-flow-step">Task 확인</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">필요한 Context 제공</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">조건과 판단기준 설정</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">원하는 결과 지정</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">실행</div>
+  </div>
+
+  <div class="pe-core">
+    <strong>단타형 Task의 핵심</strong>
+    <br><br>
+
+    프롬프트 공식을 외우는 것이 아니라,
+    사람에게 업무를 맡기듯
+    <strong>현재 일을 수행하는 데 필요한 정보를 골라서 전달합니다.</strong>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">NEXT</span>
+    하지만 모든 업무가 이렇게 명확하지는 않습니다.
+    <br><br>
+    다음 단계에서는
+    <strong>여러 개의 단타형 Task를 순서대로 연결해서
+    하나의 큰 업무를 처리하는 고정형 빌드업</strong>을 살펴보겠습니다.
+  </div>
+</section>
+<section class="pe-section">
+  <span class="pe-kicker">16 · FIXED BUILD-UP</span>
+  <h2 class="pe-title">고정형 빌드업이란 무엇인가?</h2>
+
+  <p class="pe-subtitle">
+    모든 업무가 하나의 Task로 끝나는 것은 아닙니다.
+    하나의 최종 결과물을 만들기 위해
+    여러 개의 작업을 순서대로 진행해야 하는 경우도 있습니다.
+  </p>
+
+  <div class="pe-card-blue">
+    <h3 class="pe-small-heading">예를 들어 이런 업무입니다</h3>
+
+    <p class="pe-text">
+      고객 피드백을 분석해서
+      다음 분기 서비스 개선 보고서를 만든다고 생각해보겠습니다.
+    </p>
+
+    <div class="pe-flow">
+      <div class="pe-flow-step">고객 의견 정리</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">문제 유형 분류</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">우선순위 평가</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">개선안 작성</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">최종 보고서</div>
+    </div>
+  </div>
+
+  <p class="pe-text">
+    이런 업무는 여러 단계가 필요하지만,
+    <strong>어떤 순서로 진행해야 하는지는 처음부터 어느 정도 예상할 수 있습니다.</strong>
+  </p>
+
+  <div class="pe-core">
+    이 강의에서는 이런 방식을
+    <strong>고정형 빌드업</strong>이라고 부르겠습니다.
+    <br><br>
+    각각의 Task는 단타형으로 수행하고,
+    <strong>앞 단계의 결과를 다음 Task의 입력과 Context로 연결</strong>합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">17 · PROMPT CHAINING</span>
+  <h2 class="pe-title">여러 Prompt를 연결해서 하나의 업무를 처리하기</h2>
+
+  <p class="pe-subtitle">
+    한 단계의 결과를 다음 단계의 입력으로 연결하는 방식을
+    일반적으로 <strong>Prompt Chaining</strong>이라고 표현합니다.
+  </p>
+
+  <div class="pe-flow">
+    <div class="pe-flow-step">Prompt A</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">Output A</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">Prompt B + Output A</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">Output B</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">Prompt C + 이전 결과</div>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">IMPORTANT</span>
+    중요한 것은 Prompt의 개수가 아닙니다.
+    <br><br>
+    <strong>
+      이전 단계에서 만들어진 결과가
+      다음 단계의 판단에 실제로 사용되는가?
+    </strong>
+    <br><br>
+    이것이 핵심입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">18 · WHEN TO SPLIT</span>
+  <h2 class="pe-title">언제 하나의 업무를 여러 Task로 나누어야 할까?</h2>
+
+  <p class="pe-subtitle">
+    복잡해 보인다고 무조건 업무를 나눌 필요는 없습니다.
+    다음과 같은 경우에는 여러 단계로 분리하는 것이 특히 유용할 수 있습니다.
+  </p>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">1. 중간 결과를 확인해야 할 때</h3>
+
+    <p class="pe-text">
+      첫 번째 분석이 제대로 되었는지 확인한 뒤
+      다음 작업으로 넘어가야 하는 경우입니다.
+    </p>
+
+    <p class="pe-text pe-muted">
+      예: 고객 리뷰 분류가 적절한지 확인한 뒤
+      그 분류 결과를 기반으로 개선안을 만듭니다.
+    </p>
+  </div>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">2. 단계마다 판단기준이 다를 때</h3>
+
+    <p class="pe-text">
+      데이터 정리 단계와
+      해결책 평가 단계는
+      서로 다른 기준을 사용할 수 있습니다.
+    </p>
+
+    <p class="pe-text pe-muted">
+      예: 고객 의견은 내용 중심으로 분류하지만,
+      개선안은 영향도·개발 난이도·비용을 기준으로 평가합니다.
+    </p>
+  </div>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">3. 최종 결과가 여러 중간 결과에 의존할 때</h3>
+
+    <p class="pe-text">
+      최종 보고서가 단순한 생성 작업이 아니라
+      여러 분석 결과를 종합해야 하는 경우입니다.
+    </p>
+  </div>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">4. 오류가 어디에서 발생했는지 확인해야 할 때</h3>
+
+    <p class="pe-text">
+      하나의 거대한 요청으로 모든 작업을 처리하면
+      잘못된 결과가 나왔을 때
+      어느 단계에서 문제가 생겼는지 확인하기 어려울 수 있습니다.
+    </p>
+
+    <p class="pe-text">
+      Task를 나누면
+      <strong>중간 결과를 단계별로 검토하고 수정</strong>할 수 있습니다.
+    </p>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">19 · ONE-SHOT OR CHAIN?</span>
+  <h2 class="pe-title">그렇다고 항상 여러 번 나눠야 하는 것은 아닙니다</h2>
+
+  <p class="pe-subtitle">
+    최신 AI는 하나의 요청 안에서도
+    여러 단계의 분석과 작업을 수행할 수 있습니다.
+    따라서 단순히 단계가 여러 개라는 이유만으로
+    모든 업무를 반드시 여러 Prompt로 분리할 필요는 없습니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-shot">한 번에 처리하기</span>
+
+      <h3 class="pe-small-heading">중간 검토가 크게 필요하지 않을 때</h3>
+
+      <ul class="pe-list-plain">
+        <li>업무 범위가 명확함</li>
+        <li>필요한 자료가 모두 준비됨</li>
+        <li>중간 결과를 별도로 확인할 필요가 적음</li>
+        <li>최종 결과를 바로 받아도 됨</li>
+      </ul>
+    </div>
+
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-context">여러 단계로 처리하기</span>
+
+      <h3 class="pe-small-heading">과정을 확인하고 통제해야 할 때</h3>
+
+      <ul class="pe-list-plain">
+        <li>중간 분석을 검토해야 함</li>
+        <li>단계별 판단기준이 다름</li>
+        <li>오류를 쉽게 찾아야 함</li>
+        <li>중간 결과를 수정한 뒤 다음 작업을 해야 함</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pe-core">
+    핵심은
+    <strong>“무조건 쪼개라”</strong>가 아닙니다.
+    <br><br>
+    사람이 중간 결과를 확인하고
+    다음 단계에 개입할 가치가 있다면
+    업무를 나누는 것이 유용합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">20 · BUSINESS CASE</span>
+  <h2 class="pe-title">실제 비즈니스 사례: 고객 피드백에서 개선 보고서까지</h2>
+
+  <p class="pe-subtitle">
+    이번에는 하나의 큰 업무를
+    여러 개의 단타형 Task로 나누어 처리해보겠습니다.
   </p>
 
   <div class="pe-card-soft">
     <h3 class="pe-small-heading">팀장에게 받은 업무</h3>
+
     <p class="pe-text">
-      “무료 체험 가입자는 계속 늘고 있는데 유료 전환율이 떨어지고 있습니다.
-      원인을 분석해서 다음 분기 개선안을 만들어주세요.”
+      “최근 고객 불만이 늘고 있습니다.
+      고객 의견을 분석해서
+      다음 분기에 어떤 부분을 먼저 개선해야 하는지 정리해주세요.”
     </p>
-  </div>
-
-
-  <h3 class="pe-heading">1. 먼저 전체 문제를 나눕니다</h3>
-
-  <div class="pe-chat">
-    <div class="pe-chat-user">
-      <span class="pe-chat-role">USER</span>
-      무료 체험 가입자는 증가하고 있는데 유료 전환율은 계속 떨어지고 있어.
-      최종적으로 원인 분석과 다음 분기 개선안을 만들어야 해.
-      먼저 이 업무를 어떤 Task로 나눠서 진행하면 좋을까?
-    </div>
-
-    <div class="pe-chat-ai">
-      <span class="pe-chat-role">AI</span>
-      ① 전환율 하락 구간 확인<br>
-      ② 고객군별 차이 분석<br>
-      ③ 핵심 원인 후보 검증<br>
-      ④ 해결방안 비교<br>
-      ⑤ 최종 실행안 작성 순으로 진행할 수 있습니다.
-    </div>
   </div>
 
   <div class="pe-core">
-    여기서부터 <strong>전체 업무의 맥락은 같은 채팅방에 유지</strong>하고,
-    각각의 직접적인 작업은 하나의 단타성 Task로 실행합니다.
+    최종 목표는
+    <strong>서비스 개선 우선순위 보고서</strong>입니다.
+    <br><br>
+    하지만 보고서를 바로 작성하기보다
+    업무를 여러 단계로 나누어보겠습니다.
   </div>
+</section>
 
 
-  <h3 class="pe-heading">2. 필요한 분석은 단타성 명령어로 실행합니다</h3>
+<section class="pe-section">
+  <span class="pe-kicker">21 · STEP 1</span>
+  <h2 class="pe-title">첫 번째 Task: 고객 의견에서 문제를 추출합니다</h2>
 
   <div class="pe-prompt">
-    <span class="pe-prompt-label">ONE-SHOT TASK · 데이터 비교</span>
-    <p class="pe-prompt-text">PC와 모바일 무료 체험 고객의 데이터를 비교해서
-전체 전환율 하락에 가장 크게 영향을 준 고객군을 찾아줘.
+    <span class="pe-prompt-label">TASK 1 · ISSUE EXTRACTION</span>
 
-특히
-- 가입자 증가율
-- 첫 강의 재생률
-- 무료 → 유료 전환율
+    <p class="pe-prompt-text">
+아래 고객 피드백에서
+고객이 실제로 불편을 표현한 부분만 추출해주세요.
 
-세 가지를 중심으로 분석해줘.</p>
-  </div>
+아직 해결책을 제안하거나
+중요도를 판단하지 마세요.
 
-  <div class="pe-result">
-    <span class="pe-result-label">중간 결과</span>
-    <p class="pe-text">
-      PC 고객의 지표에는 큰 변화가 없지만,
-      <strong>모바일 고객의 첫 강의 재생률과 유료 전환율이 크게 하락</strong>한 것으로 나타났습니다.
+각 피드백마다
+
+1. 핵심 불편
+2. 관련 기능
+3. 고객이 원하는 결과
+
+세 항목으로 정리해주세요.
     </p>
   </div>
 
+  <div class="pe-result">
+    <span class="pe-result-label">OUTPUT 1</span>
 
-  <h3 class="pe-heading">3. 중간 결과가 다음 Task의 맥락이 됩니다</h3>
+    <ul class="pe-list">
+      <li>검색 결과가 원하는 내용과 맞지 않음</li>
+      <li>결제 취소 절차를 찾기 어려움</li>
+      <li>모바일 앱 실행 속도가 느림</li>
+      <li>알림이 너무 자주 발송됨</li>
+      <li>고객센터 답변 시간이 길음</li>
+    </ul>
+  </div>
 
-  <div class="pe-chat">
-    <div class="pe-chat-user">
-      <span class="pe-chat-role">USER</span>
-      그러면 전체 고객 문제가 아니라 모바일 고객 문제일 가능성이 높겠네.
-      그런데 모바일에서도 가입 완료율은 그대로고,
-      첫 강의를 실제로 재생한 고객의 유료 전환율도 예전과 비슷해.
-      이 상황이면 문제를 어떻게 좁혀볼 수 있을까?
+  <div class="pe-note">
+    <span class="pe-note-label">왜 여기서 멈출까?</span>
+    아직은 문제를 정확하게 추출하는 단계입니다.
+    <strong>분류와 해결책 생성을 동시에 하지 않습니다.</strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">22 · STEP 2</span>
+  <h2 class="pe-title">두 번째 Task: 비슷한 문제를 묶습니다</h2>
+
+  <p class="pe-text">
+    이제 첫 번째 Task에서 정리한 결과를
+    다음 Prompt의 Context로 사용합니다.
+  </p>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">TASK 2 · CLASSIFICATION</span>
+
+    <p class="pe-prompt-text">
+앞에서 추출한 고객 불편사항을 바탕으로
+비슷한 문제를 하나의 유형으로 묶어주세요.
+
+각 유형마다
+
+1. 유형 이름
+2. 포함되는 문제
+3. 해당 불만의 개수
+4. 대표적인 고객 불편
+
+을 정리해주세요.
+
+유형을 지나치게 세분화하지 말고
+실제 서비스 개선 담당자가 관리하기 쉬운 수준으로 묶어주세요.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">OUTPUT 2</span>
+
+    <ul class="pe-list">
+      <li>서비스 탐색 문제</li>
+      <li>결제 및 환불 문제</li>
+      <li>모바일 성능 문제</li>
+      <li>알림 경험 문제</li>
+      <li>고객지원 문제</li>
+    </ul>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">CONTEXT BUILD-UP</span>
+    첫 번째 결과가 사라진 것이 아닙니다.
+    <br><br>
+    <strong>Output 1이 Task 2의 Context가 되었습니다.</strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">23 · STEP 3</span>
+  <h2 class="pe-title">세 번째 Task: 개선 우선순위를 판단합니다</h2>
+
+  <p class="pe-text">
+    이제 문제 유형까지 정리되었습니다.
+    다음 단계에서는 단순 빈도만 보는 것이 아니라
+    실제 사업 관점에서 우선순위를 평가합니다.
+  </p>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">TASK 3 · PRIORITIZATION</span>
+
+    <p class="pe-prompt-text">
+앞에서 분류한 고객 문제를
+아래 기준으로 평가해주세요.
+
+1. 고객 경험에 미치는 영향
+2. 문제 발생 빈도
+3. 매출 또는 이탈에 미칠 가능성
+4. 개선 난이도
+
+각 항목을 5점 기준으로 평가하되,
+점수만 제시하지 말고
+판단 근거를 함께 설명해주세요.
+
+현재 개발 인력은 제한되어 있으므로
+낮은 개발비용으로 빠르게 개선 가능한 문제도
+우선순위 판단에 반영해주세요.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">OUTPUT 3</span>
+
+    <p class="pe-text">
+      고객 문제들이 단순한 목록에서
+      <strong>사업적 우선순위를 가진 개선 후보</strong>로 바뀝니다.
+    </p>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">변화한 판단기준</span>
+    Task 1에서는
+    <strong>“무슨 불만인가?”</strong>만 확인했습니다.
+    <br><br>
+    Task 3에서는
+    <strong>“어떤 문제부터 해결해야 하는가?”</strong>를 판단합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">24 · STEP 4</span>
+  <h2 class="pe-title">네 번째 Task: 현실적인 개선안을 만듭니다</h2>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">TASK 4 · SOLUTION</span>
+
+    <p class="pe-prompt-text">
+앞에서 평가한 우선순위를 바탕으로
+상위 세 가지 문제에 대한 개선안을 만들어주세요.
+
+조건:
+
+- 다음 분기 안에 실행 가능해야 합니다.
+- 대규모 신규 시스템 개발은 어렵습니다.
+- 기존 기능 개선을 우선합니다.
+- 각 문제마다 최소 두 가지 대안을 비교해주세요.
+
+각 대안마다
+
+1. 해결하려는 문제
+2. 구체적인 실행 방법
+3. 기대효과
+4. 필요한 작업
+5. 위험요소
+6. 검증 방법
+
+을 정리해주세요.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">OUTPUT 4</span>
+
+    <p class="pe-text">
+      이제 고객의 원래 의견이
+      <strong>실행 가능한 개선 후보</strong>로 변환됩니다.
+    </p>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">25 · STEP 5</span>
+  <h2 class="pe-title">마지막 Task: 지금까지의 결과를 하나의 보고서로 만듭니다</h2>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">TASK 5 · FINAL OUTPUT</span>
+
+    <p class="pe-prompt-text">
+지금까지 진행한
+
+- 고객 불편사항 추출
+- 문제 유형 분류
+- 우선순위 평가
+- 개선안 비교
+
+결과를 바탕으로
+서비스기획팀장에게 보고할
+다음 분기 서비스 개선안을 작성해주세요.
+
+보고서는 다음 순서로 작성해주세요.
+
+1. 현재 고객 불만 현황
+2. 핵심 문제 유형
+3. 우선순위
+4. 우선 개선안 3개
+5. 각 개선안의 기대효과
+6. 검증할 KPI
+7. 다음 분기 실행 순서
+
+세부 고객 의견을 모두 나열하기보다
+의사결정에 필요한 핵심 내용을 중심으로 정리해주세요.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">FINAL OUTPUT</span>
+
+    <p class="pe-text">
+      하나의 거대한 Prompt로 결과를 만들기보다
+      각 단계의 결과를 확인하고 연결하면서
+      최종 보고서가 만들어졌습니다.
+    </p>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">26 · THE WHOLE CHAIN</span>
+  <h2 class="pe-title">전체 업무를 다시 보면</h2>
+
+  <div class="pe-flow">
+    <div class="pe-flow-step">고객 피드백</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">문제 추출</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">유형 분류</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">우선순위 평가</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">개선안 비교</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">최종 보고서</div>
+  </div>
+
+  <div class="pe-core">
+    하나의 큰 업무 안에
+    <strong>여러 개의 단타형 Task가 들어 있습니다.</strong>
+    <br><br>
+    그리고 각각의 결과가
+    다음 Task의 Context가 되면서
+    전체 업무가 완성됩니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">27 · CHECKPOINT</span>
+  <h2 class="pe-title">중간 결과를 그냥 통과시키지 마세요</h2>
+
+  <p class="pe-subtitle">
+    여러 Task를 연결할 때 중요한 것은
+    AI가 만든 결과를 자동으로 모두 맞다고 가정하지 않는 것입니다.
+  </p>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">각 단계에서 확인할 것</h3>
+
+    <ul class="pe-list">
+      <li>원래 자료와 맞지 않는 내용은 없는가?</li>
+      <li>중요한 정보가 누락되지 않았는가?</li>
+      <li>분류 기준이 지나치게 자의적이지 않은가?</li>
+      <li>판단 근거가 실제 데이터와 연결되어 있는가?</li>
+      <li>다음 Task에 넘겨도 될 만큼 결과가 충분한가?</li>
+    </ul>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">CHECKPOINT</span>
+    <strong>
+      Output → 확인 → 필요하면 수정 → 다음 Task
+    </strong>
+    <br><br>
+    이 과정이 있으면
+    잘못된 중간 결과가 뒤의 모든 작업에 계속 전달되는 것을 줄일 수 있습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">28 · FIXED BUILD-UP SUMMARY</span>
+  <h2 class="pe-title">고정형 빌드업 정리</h2>
+
+  <div class="pe-card-green">
+    <h3 class="pe-small-heading">고정형 빌드업을 사용하기 좋은 경우</h3>
+
+    <ul class="pe-list">
+      <li>최종 목표가 명확합니다.</li>
+      <li>필요한 작업 순서를 어느 정도 알고 있습니다.</li>
+      <li>각 단계의 결과를 다음 단계에서 사용합니다.</li>
+      <li>중간 결과를 검토할 필요가 있습니다.</li>
+      <li>각 단계에 서로 다른 조건과 판단기준을 적용할 수 있습니다.</li>
+    </ul>
+  </div>
+
+  <div class="pe-core">
+    <strong>고정형 빌드업</strong>
+    <br><br>
+
+    큰 업무를 여러 개의
+    <strong>명확한 단타형 Task</strong>로 나누고,
+    <br>
+    앞 단계의 결과를
+    <strong>다음 Task의 Context로 연결하는 방식</strong>입니다.
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">NEXT</span>
+    그런데 실제 업무에서는
+    처음부터 이렇게 깔끔하게 순서를 알 수 없는 경우도 많습니다.
+    <br><br>
+    다음 단계에서는
+    <strong>
+      중간 결과를 보고 문제 자체와 다음 Task가 달라지는
+      탐색형 빌드업
+    </strong>
+    을 살펴보겠습니다.
+  </div>
+</section>
+<section class="pe-section">
+  <span class="pe-kicker">29 · EXPLORATORY BUILD-UP</span>
+  <h2 class="pe-title">탐색형 빌드업이란 무엇인가?</h2>
+
+  <p class="pe-subtitle">
+    어떤 업무는 최종 목표는 알고 있지만,
+    처음부터 무엇을 조사해야 하는지,
+    어떤 문제가 핵심인지,
+    어떤 해결책이 필요한지 알 수 없습니다.
+  </p>
+
+  <div class="pe-card-blue">
+    <h3 class="pe-small-heading">예를 들어 이런 업무입니다</h3>
+
+    <p class="pe-text">
+      “최근 무료 체험 가입자는 늘고 있는데
+      유료 전환율이 계속 떨어지고 있습니다.
+      원인을 찾아서 다음 분기 개선안을 만들어주세요.”
+    </p>
+  </div>
+
+  <p class="pe-text">
+    이 상태에서는 바로 해결책을 만드는 것이 어렵습니다.
+  </p>
+
+  <p class="pe-text">
+    가격이 문제인지,
+    콘텐츠가 문제인지,
+    특정 고객군이 문제인지,
+    서비스 이용 과정에서 문제가 생긴 것인지
+    아직 알 수 없기 때문입니다.
+  </p>
+
+  <div class="pe-core">
+    탐색형 빌드업의 특징은
+    <strong>
+      중간 결과를 보기 전에는
+      다음 Task를 완전히 결정할 수 없다는 것
+    </strong>입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">30 · FIXED VS EXPLORATORY</span>
+  <h2 class="pe-title">고정형 빌드업과 무엇이 다른가?</h2>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-shot">고정형 빌드업</span>
+
+      <h3 class="pe-small-heading">진행 순서를 미리 알고 있습니다</h3>
+
+      <div class="pe-flow">
+        <div class="pe-flow-step">자료 추출</div>
+        <div class="pe-flow-arrow">→</div>
+
+        <div class="pe-flow-step">분류</div>
+        <div class="pe-flow-arrow">→</div>
+
+        <div class="pe-flow-step">평가</div>
+        <div class="pe-flow-arrow">→</div>
+
+        <div class="pe-flow-step">보고서</div>
+      </div>
+
+      <p class="pe-text pe-muted">
+        중간 결과를 확인하지만
+        전체 작업 순서는 처음부터 비교적 명확합니다.
+      </p>
     </div>
 
-    <div class="pe-chat-ai">
-      <span class="pe-chat-role">AI</span>
-      결제 단계보다 그 이전의
-      <strong>가입 완료 → 첫 강의 재생</strong> 구간이 핵심 병목일 가능성이 높습니다.
-      모바일 가입 직후 화면과 강의 진입 과정을 우선 확인하는 것이 좋습니다.
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-context">탐색형 빌드업</span>
+
+      <h3 class="pe-small-heading">결과에 따라 다음 Task가 달라집니다</h3>
+
+      <div class="pe-flow">
+        <div class="pe-flow-step">첫 분석</div>
+        <div class="pe-flow-arrow">→</div>
+
+        <div class="pe-flow-step">새로운 사실</div>
+        <div class="pe-flow-arrow">→</div>
+
+        <div class="pe-flow-step">문제 수정</div>
+        <div class="pe-flow-arrow">→</div>
+
+        <div class="pe-flow-step">다음 분석 결정</div>
+      </div>
+
+      <p class="pe-text pe-muted">
+        다음에 무엇을 해야 하는지가
+        중간 결과에 따라 달라질 수 있습니다.
+      </p>
     </div>
   </div>
 
   <div class="pe-insight">
-    <span class="pe-insight-label">문제 구체화</span>
-    처음의 <strong>“유료 전환율이 떨어졌다”</strong>는 애매한 문제에서
-    <strong>“모바일 신규 고객이 가입 후 첫 강의까지 진입하지 않는다”</strong>는
-    구체적인 문제로 좁혀졌습니다.
+    <span class="pe-insight-label">CORE DIFFERENCE</span>
+    고정형에서는
+    <strong>결과가 다음 단계의 재료</strong>가 됩니다.
+    <br><br>
+    탐색형에서는 결과가
+    <strong>다음 단계 자체를 결정하는 근거</strong>가 됩니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">31 · BUSINESS CASE</span>
+  <h2 class="pe-title">실제 비즈니스 사례: 전환율 하락의 원인을 찾아라</h2>
+
+  <div class="pe-card-soft">
+    <h3 class="pe-small-heading">현재 상황</h3>
+
+    <ul class="pe-list">
+      <li>온라인 교육 구독 서비스</li>
+      <li>무료 체험 가입자 수는 최근 3개월간 증가</li>
+      <li>무료 체험 → 유료 전환율은 8.2%에서 5.4%로 하락</li>
+      <li>다음 분기 개선안이 필요함</li>
+      <li>정확한 원인은 아직 모름</li>
+    </ul>
   </div>
 
-
-  <h3 class="pe-heading">4. 구체화된 문제에 다시 단타성 Task를 사용합니다</h3>
-
-  <div class="pe-prompt">
-    <span class="pe-prompt-label">ONE-SHOT TASK · 대안 비교</span>
-    <p class="pe-prompt-text">지금까지 분석한 결과를 기준으로 아래 세 가지 개선안을 비교해줘.
-
-1. 모바일 온보딩 전체 개편
-2. 가입 직후 개인화 강의 추천
-3. 첫 강의 미재생 고객 푸시 알림
-
-현재 개발 인력이 부족하므로
-- 기대효과
-- 개발 난이도
-- 검증 속도
-
-세 가지 기준으로 평가하고,
-가장 먼저 테스트할 방법을 추천해줘.</p>
+  <div class="pe-core">
+    지금 필요한 것은
+    <strong>바로 해결책을 만드는 것</strong>이 아니라,
+    먼저 <strong>문제가 어디에서 발생하고 있는지 찾는 것</strong>입니다.
   </div>
-
-  <div class="pe-result">
-    <span class="pe-result-label">의사결정</span>
-    <p class="pe-text">
-      대규모 온보딩 개편 전에
-      <strong>가입 직후 강의 추천을 먼저 테스트</strong>하고,
-      미재생 고객 대상 푸시 알림을 보조 실험으로 진행하기로 결정합니다.
-    </p>
-  </div>
+</section>
 
 
-  <h3 class="pe-heading">5. 마지막으로 최종 결과물을 생성합니다</h3>
+<section class="pe-section">
+  <span class="pe-kicker">32 · STEP 1</span>
+  <h2 class="pe-title">첫 번째 Task: 문제를 나누어 봅니다</h2>
 
-  <div class="pe-prompt">
-    <span class="pe-prompt-label">ONE-SHOT TASK · 최종 산출물</span>
-    <p class="pe-prompt-text">지금까지 확인한 분석 결과와 결정사항을 바탕으로
-마케팅팀장과 서비스기획팀에 보고할 다음 분기 전환율 개선안을 작성해줘.
+  <div class="pe-chat">
+    <div class="pe-chat-user">
+      <span class="pe-chat-role">USER</span>
 
-구성:
-1. 현황
-2. 핵심 문제
-3. 분석 근거
-4. 우선 실행안
-5. 검증할 KPI
-6. 후속 계획
+      무료 체험 가입자는 증가했는데
+      유료 전환율이 8.2%에서 5.4%까지 떨어졌어.
 
-한 페이지 분량의 실무 보고서 형태로 정리해줘.</p>
-  </div>
+      아직 정확한 원인을 모르겠어.
 
+      원인을 찾으려면
+      어떤 기준으로 데이터를 나누어 보는 것이 좋을까?
+    </div>
 
-  <div class="pe-result">
-    <span class="pe-result-label">전체 업무 Flow</span>
+    <div class="pe-chat-ai">
+      <span class="pe-chat-role">AI</span>
 
-    <div class="pe-flow">
-      <div class="pe-flow-step">애매한 업무 지시</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">Task 분해</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">단타 분석</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">맥락 축적</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">문제 구체화</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">단타 비교</div>
-      <div class="pe-flow-arrow">→</div>
-      <div class="pe-flow-step">최종 결과물</div>
+      우선 가입 채널, 디바이스,
+      신규·기존 고객,
+      체험 기간 내 서비스 이용량,
+      첫 콘텐츠 이용 여부,
+      주요 행동 단계별 이탈률 등을 나누어 비교할 수 있습니다.
+
+      전체 평균보다
+      어느 고객군 또는 어느 단계에서 변화가 발생했는지
+      먼저 확인하는 것이 좋습니다.
     </div>
   </div>
 
+  <div class="pe-note">
+    <span class="pe-note-label">POINT</span>
+    첫 번째 질문의 결과는
+    최종 해결책이 아닙니다.
+    <br><br>
+    <strong>무엇을 조사할지 결정하기 위한 결과</strong>입니다.
+  </div>
+</section>
 
-  <div class="pe-core">
-    <strong>정리하면</strong><br><br>
 
-    단타성 명령어는 <strong>하나의 명확한 Task를 실행하는 기술</strong>이고,
-    맥락형 명령어는 <strong>그 Task들을 연결해 전체 문제를 해결하는 방식</strong>입니다.
+<section class="pe-section">
+  <span class="pe-kicker">33 · STEP 2</span>
+  <h2 class="pe-title">두 번째 Task: 고객군별 데이터를 비교합니다</h2>
+
+  <div class="pe-chat">
+    <div class="pe-chat-user">
+      <span class="pe-chat-role">USER</span>
+
+      데이터를 나눠봤어.
+
+      PC 가입자의 유료 전환율은 거의 변하지 않았는데,
+      모바일 가입자는 7.9%에서 3.8%로 떨어졌어.
+
+      그리고 최근 모바일 가입자의 비중이 크게 증가했어.
+
+      이 결과에서 어떤 가능성을 먼저 볼 수 있을까?
+    </div>
+
+    <div class="pe-chat-ai">
+      <span class="pe-chat-role">AI</span>
+
+      전체 전환율 하락이
+      모든 고객에게 동일하게 발생한 문제라기보다
+      모바일 신규 가입자의 변화와 연결되어 있을 가능성이 높습니다.
+
+      다음에는 모바일 사용자가
+      가입 이후 어느 단계에서 이탈하는지 확인하는 것이 좋습니다.
+    </div>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">DISCOVERY 1</span>
+
+    문제 정의가 바뀌었습니다.
     <br><br>
 
-    업무를 진행하면서 맥락이 쌓이면,
-    처음에는 알 수 없었던 <strong>비즈니스 인사이트와 숨겨진 문제를 발견</strong>할 수 있고,
-    그 결과 다음 Task도 더 구체적으로 지시할 수 있습니다.
+    <strong>
+      전체 유료 전환율 하락
+      <br>↓<br>
+      모바일 고객의 유료 전환율 하락
+    </strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">34 · STEP 3</span>
+  <h2 class="pe-title">세 번째 Task: 모바일 고객의 이용 과정을 확인합니다</h2>
+
+  <div class="pe-chat">
+    <div class="pe-chat-user">
+      <span class="pe-chat-role">USER</span>
+
+      모바일 고객 행동을 더 확인했어.
+
+      가입 완료율은 예전과 비슷해.
+
+      그런데 가입 후 첫 강의를 재생하는 비율이 많이 떨어졌어.
+
+      반면 첫 강의를 한 번이라도 재생한 고객은
+      이후 유료 전환율이 예전과 거의 비슷해.
+
+      이 결과는 어떻게 해석할 수 있을까?
+    </div>
+
+    <div class="pe-chat-ai">
+      <span class="pe-chat-role">AI</span>
+
+      결제 단계보다
+      가입 완료 이후 첫 콘텐츠를 경험하기 전까지의 과정이
+      주요 병목일 가능성이 높습니다.
+
+      모바일 가입 직후의 화면,
+      강의 추천 방식,
+      첫 강의 진입 경로 등을 우선 확인할 수 있습니다.
+    </div>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">DISCOVERY 2</span>
+
+    문제가 다시 구체화됩니다.
+    <br><br>
+
+    <strong>
+      모바일 고객 전환율 하락
+      <br>↓<br>
+      모바일 가입 후 첫 강의 진입률 하락
+    </strong>
+  </div>
+
+  <div class="pe-core">
+    처음부터
+    <strong>“모바일 첫 강의 진입이 문제다”</strong>
+    라고 알고 있었던 것이 아닙니다.
+    <br><br>
+    앞 단계의 결과가
+    다음 조사 방향을 결정하면서
+    문제가 점점 구체화되었습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">35 · STEP 4</span>
+  <h2 class="pe-title">네 번째 Task: 실제 병목을 더 확인합니다</h2>
+
+  <div class="pe-chat">
+    <div class="pe-chat-user">
+      <span class="pe-chat-role">USER</span>
+
+      가입 직후 화면 데이터를 확인했어.
+
+      최근 모바일 화면 개편 이후
+      첫 화면에서 추천 강의가 바로 보이지 않고,
+      카테고리를 한 번 더 선택해야 강의 목록이 보여.
+
+      개편 전후 데이터를 비교하면
+      첫 강의 진입률 하락 시점도 화면 개편 시점과 비슷해.
+
+      이 정도면 무엇을 추가로 검증하는 게 좋을까?
+    </div>
+
+    <div class="pe-chat-ai">
+      <span class="pe-chat-role">AI</span>
+
+      화면 개편과 첫 강의 진입률 하락 사이의 연관성을
+      우선 검증할 가치가 있습니다.
+
+      앱 버전별 첫 강의 진입률,
+      화면 개편 전후 동일 고객군 비교,
+      카테고리 선택 단계의 이탈률 등을 추가로 확인하면
+      원인 가능성을 더 좁힐 수 있습니다.
+    </div>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">IMPORTANT</span>
+    AI가
+    <strong>“이것이 원인입니다”</strong>
+    라고 이야기했다고 바로 확정하지 않습니다.
+    <br><br>
+    데이터로 추가 확인할 수 있다면
+    가능한 원인과 확인된 사실을 구분합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">36 · FACT VS HYPOTHESIS</span>
+  <h2 class="pe-title">확인된 사실과 가설을 구분하세요</h2>
+
+  <p class="pe-subtitle">
+    탐색형 업무에서는
+    분석 과정에서 여러 가능성이 등장합니다.
+    이때 AI가 제시한 설명을 실제 사실과 혼동하지 않는 것이 중요합니다.
+  </p>
+
+  <table class="pe-table">
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>현재 알 수 있는 내용</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>확인된 사실</strong></td>
+        <td>모바일 고객의 전환율이 크게 하락함</td>
+      </tr>
+
+      <tr>
+        <td><strong>확인된 사실</strong></td>
+        <td>첫 강의 재생률이 함께 하락함</td>
+      </tr>
+
+      <tr>
+        <td><strong>확인된 사실</strong></td>
+        <td>화면 개편 이후 강의 진입 단계가 하나 증가함</td>
+      </tr>
+
+      <tr>
+        <td><strong>가설</strong></td>
+        <td>추가된 탐색 단계가 첫 강의 진입률을 낮췄을 가능성</td>
+      </tr>
+
+      <tr>
+        <td><strong>추가 검증</strong></td>
+        <td>버전별·고객군별 이탈 데이터를 비교해 영향 확인</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pe-core">
+    탐색형 빌드업에서는
+    <strong>
+      사실 → 해석 → 가설 → 검증
+    </strong>
+    을 구분하면
+    잘못된 추론이 다음 Task로 계속 전달되는 것을 줄일 수 있습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">37 · STEP 5</span>
+  <h2 class="pe-title">다섯 번째 Task: 이제 해결책을 비교합니다</h2>
+
+  <p class="pe-text">
+    추가 데이터를 통해
+    모바일 가입 이후 첫 강의 진입 과정이
+    주요 개선 후보라고 판단했다고 가정하겠습니다.
+  </p>
+
+  <div class="pe-chat">
+    <div class="pe-chat-user">
+      <span class="pe-chat-role">USER</span>
+
+      지금까지 분석한 결과를 보면
+      가입 직후 첫 강의 진입 과정이 핵심 개선 후보로 보여.
+
+      현재 생각하는 방법은
+
+      1. 모바일 온보딩 화면 전체 개편
+      2. 가입 직후 추천 강의를 바로 노출
+      3. 첫 강의 미재생 고객에게 푸시 알림 발송
+
+      세 가지야.
+
+      현재 개발 인력이 부족하다는 조건에서
+      기대효과, 구현 난이도, 검증 속도를 기준으로 비교해줘.
+    </div>
+
+    <div class="pe-chat-ai">
+      <span class="pe-chat-role">AI</span>
+
+      빠른 검증이 목적이라면
+      전체 온보딩 개편보다
+      가입 직후 추천 강의 노출을 먼저 실험하는 방법이
+      상대적으로 빠르게 검증하기 쉽습니다.
+
+      푸시 알림은 보조 실험으로 운영하고,
+      효과가 확인된 이후 구조적인 온보딩 개선을 검토할 수 있습니다.
+    </div>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">현재까지의 변화</span>
+
+    <div class="pe-flow">
+      <div class="pe-flow-step">전환율 하락</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">모바일 문제</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">첫 강의 진입 문제</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">화면 탐색 병목 후보</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">우선 실험 결정</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">38 · PROBLEM REDEFINITION</span>
+  <h2 class="pe-title">탐색형 빌드업의 핵심: 문제는 바뀔 수 있습니다</h2>
+
+  <p class="pe-subtitle">
+    실제 업무에서는 처음 받은 문제와
+    분석 후 발견한 실제 문제가 서로 다를 수 있습니다.
+  </p>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">처음 받은 문제</h3>
+
+    <p class="pe-text">
+      “유료 전환율이 떨어지고 있다.”
+    </p>
+  </div>
+
+  <div class="pe-card-purple">
+    <h3 class="pe-small-heading">분석 과정에서 발견된 문제</h3>
+
+    <p class="pe-text">
+      “모바일 신규 가입자가
+      가입 이후 첫 콘텐츠까지 도달하지 못하고 있다.”
+    </p>
+  </div>
+
+  <div class="pe-card-green">
+    <h3 class="pe-small-heading">실행 가능한 문제</h3>
+
+    <p class="pe-text">
+      “가입 직후 첫 강의 접근 과정을 단순화하면
+      첫 콘텐츠 진입률이 회복되는지 실험한다.”
+    </p>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">BUSINESS INSIGHT</span>
+    탐색형 빌드업에서는
+    답을 만드는 것만큼
+    <strong>무엇이 진짜 문제인지 발견하는 과정</strong>이 중요합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">39 · DON'T ASK VAGUELY</span>
+  <h2 class="pe-title">대화를 많이 하는 것과 빌드업은 다릅니다</h2>
+
+  <p class="pe-subtitle">
+    같은 채팅방에서 계속 질문한다고 해서
+    자동으로 좋은 빌드업이 만들어지는 것은 아닙니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-shot">막연한 반복</span>
+
+      <div class="pe-chat">
+        <div class="pe-chat-user">
+          <span class="pe-chat-role">USER</span>
+          더 좋은 아이디어 없어?
+        </div>
+
+        <div class="pe-chat-user">
+          <span class="pe-chat-role">USER</span>
+          다른 것도 알려줘.
+        </div>
+
+        <div class="pe-chat-user">
+          <span class="pe-chat-role">USER</span>
+          좀 더 창의적으로 해줘.
+        </div>
+      </div>
+
+      <p class="pe-text pe-muted">
+        새로운 판단 근거나 정보가 거의 추가되지 않습니다.
+      </p>
+    </div>
+
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-context">의미 있는 빌드업</span>
+
+      <div class="pe-chat">
+        <div class="pe-chat-user">
+          <span class="pe-chat-role">USER</span>
+          모바일만 전환율이 떨어졌어.
+          다음에는 어느 구간을 봐야 할까?
+        </div>
+
+        <div class="pe-chat-user">
+          <span class="pe-chat-role">USER</span>
+          첫 강의 재생률만 하락했어.
+          그러면 어떤 가설을 우선 확인할까?
+        </div>
+      </div>
+
+      <p class="pe-text pe-muted">
+        앞 단계에서 발견한 사실이
+        다음 질문의 근거가 됩니다.
+      </p>
+    </div>
+  </div>
+
+  <div class="pe-core">
+    좋은 빌드업은
+    <strong>질문의 개수</strong>가 아니라
+    <strong>새로운 정보가 다음 Task를 얼마나 바꾸는가</strong>로 판단할 수 있습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">40 · CONTEXT MANAGEMENT</span>
+  <h2 class="pe-title">Context는 많이 쌓는 것보다 잘 관리하는 것이 중요합니다</h2>
+
+  <p class="pe-subtitle">
+    긴 대화를 이어갈수록
+    이전의 수많은 정보와 중간 결과가 채팅에 쌓입니다.
+    하지만 모든 정보가 현재 Task에 똑같이 중요한 것은 아닙니다.
+  </p>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">현재 Task에 특히 중요한 Context</h3>
+
+    <ul class="pe-list">
+      <li>최종적으로 해결해야 하는 목표</li>
+      <li>이미 확인된 핵심 사실</li>
+      <li>현재 살아 있는 가설</li>
+      <li>제외된 가설 또는 이미 확인한 사항</li>
+      <li>중요한 제약조건</li>
+      <li>현재 단계에서 내려야 할 결정</li>
+    </ul>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">CONTEXT ≠ HISTORY</span>
+    Context는 단순히
+    <strong>지금까지 나눈 모든 대화</strong>를 의미하지 않습니다.
+    <br><br>
+    현재 업무를 수행하는 데
+    <strong>실제로 필요한 정보</strong>가 중요합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">41 · CONTEXT SUMMARY</span>
+  <h2 class="pe-title">대화가 길어지면 핵심 상태를 정리할 수 있습니다</h2>
+
+  <p class="pe-subtitle">
+    긴 프로젝트를 진행한다면
+    일정한 시점에서 지금까지 확인된 내용을
+    간단하게 정리해두는 방법도 유용합니다.
+  </p>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">CONTEXT CHECKPOINT</span>
+
+    <p class="pe-prompt-text">
+지금까지 분석한 내용을
+다음 기준으로 정리해줘.
+
+1. 최종 목표
+2. 확인된 사실
+3. 아직 검증되지 않은 가설
+4. 이미 제외한 가능성
+5. 현재 가장 중요한 문제
+6. 다음에 확인해야 할 사항
+7. 현재 제약조건
+
+불필요한 대화 과정은 제외하고
+앞으로의 작업에 필요한 정보만 남겨줘.
+    </p>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">WHY?</span>
+    이런 정리는
+    긴 대화에서 핵심 상태를 다시 확인하고,
+    <strong>다음 Task에 필요한 Context를 선명하게 만드는 용도</strong>로 사용할 수 있습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">42 · DON'T OVERLOAD CONTEXT</span>
+  <h2 class="pe-title">관련 없는 정보를 계속 쌓지 마세요</h2>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <h3 class="pe-small-heading">Context가 과도한 경우</h3>
+
+      <ul class="pe-list-plain">
+        <li>이미 필요 없어진 초기 가설</li>
+        <li>현재 Task와 관련 없는 아이디어</li>
+        <li>중복된 설명</li>
+        <li>오래전에 수정된 조건</li>
+        <li>중요하지 않은 대화 과정</li>
+      </ul>
+    </div>
+
+    <div class="pe-compare-item">
+      <h3 class="pe-small-heading">현재 필요한 Context</h3>
+
+      <ul class="pe-list-plain">
+        <li>현재 목표</li>
+        <li>최종적으로 확인된 사실</li>
+        <li>현재 판단기준</li>
+        <li>유효한 제약조건</li>
+        <li>이번 Task와 직접 연결되는 자료</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pe-core">
+    좋은 Context 관리의 목적은
+    AI에게 최대한 많은 것을 알려주는 것이 아니라,
+    <strong>지금 판단해야 하는 일에 필요한 정보를 선명하게 유지하는 것</strong>입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">43 · BRANCHING</span>
+  <h2 class="pe-title">중간 결과에 따라 경로가 달라질 수 있습니다</h2>
+
+  <p class="pe-subtitle">
+    탐색형 빌드업에서는
+    같은 출발점이라도 분석 결과에 따라
+    완전히 다른 업무 경로로 갈 수 있습니다.
+  </p>
+
+  <div class="pe-card-soft">
+    <h3 class="pe-small-heading">예: 전환율 하락</h3>
+
+    <p class="pe-text">
+      데이터를 분석했을 때 결과가 무엇이냐에 따라
+      다음 Task가 달라집니다.
+    </p>
+  </div>
+
+  <table class="pe-table">
+    <thead>
+      <tr>
+        <th>발견된 사실</th>
+        <th>다음 Task</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>신규 방문자가 크게 감소</td>
+        <td>유입 채널과 광고 성과 분석</td>
+      </tr>
+
+      <tr>
+        <td>상품 페이지 전환율 하락</td>
+        <td>상품·가격·페이지 행동 분석</td>
+      </tr>
+
+      <tr>
+        <td>결제 단계에서 이탈 증가</td>
+        <td>결제 UX 및 오류 데이터 분석</td>
+      </tr>
+
+      <tr>
+        <td>모바일 첫 콘텐츠 진입률 하락</td>
+        <td>모바일 온보딩과 탐색 경로 분석</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">ADAPTIVE WORKFLOW</span>
+    탐색형 빌드업은
+    처음부터 정해진 한 개의 길을 따라가는 것이 아니라,
+    <strong>중간 결과에 따라 다음 경로를 선택하는 방식</strong>입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">44 · HUMAN JUDGMENT</span>
+  <h2 class="pe-title">AI가 다음 Task를 제안해도 최종 판단은 사용자가 합니다</h2>
+
+  <p class="pe-subtitle">
+    AI는 다음에 확인할 데이터,
+    가능한 원인,
+    비교할 해결책을 제안할 수 있습니다.
+    하지만 실제 회사의 상황을 모두 알고 있는 것은 아닐 수 있습니다.
+  </p>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">사용자가 확인해야 할 것</h3>
+
+    <ul class="pe-list">
+      <li>AI가 놓친 회사 내부 정보는 없는가?</li>
+      <li>실제로 확보할 수 있는 데이터인가?</li>
+      <li>현실적인 예산과 일정에 맞는가?</li>
+      <li>분석 결과가 실제 데이터와 일치하는가?</li>
+      <li>중요한 이해관계자 또는 업무 조건이 빠지지 않았는가?</li>
+    </ul>
+  </div>
+
+  <div class="pe-core">
+    AI를 사용하는 목적은
+    <strong>판단을 포기하는 것</strong>이 아니라,
+    <br><br>
+    조사와 분석의 속도를 높이고
+    <strong>더 나은 판단을 할 수 있는 재료를 만드는 것</strong>입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">45 · EXPLORATORY FLOW</span>
+  <h2 class="pe-title">탐색형 빌드업의 전체 흐름</h2>
+
+  <div class="pe-flow">
+    <div class="pe-flow-step">애매한 문제</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">첫 Task</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">사실 발견</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">가설 생성</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">추가 검증</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">문제 구체화</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">해결책 비교</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">실행 결정</div>
+  </div>
+
+  <div class="pe-core">
+    <strong>탐색형 빌드업의 핵심</strong>
+    <br><br>
+
+    한 번에 정답을 만들어내는 것이 아니라,
+    <strong>
+      결과를 다음 사고와 Task의 입력으로 사용하면서
+      처음에는 알 수 없었던 문제를 발견하고 구체화합니다.
+    </strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">46 · THREE MODES AGAIN</span>
+  <h2 class="pe-title">지금까지 세 가지 방식을 다시 비교하면</h2>
+
+  <table class="pe-table">
+    <thead>
+      <tr>
+        <th>방식</th>
+        <th>현재 상태</th>
+        <th>AI 활용 방식</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>단타형 Task</strong></td>
+        <td>무엇을 해야 하는지 충분히 알고 있음</td>
+        <td>하나의 명확한 업무지시</td>
+      </tr>
+
+      <tr>
+        <td><strong>고정형 빌드업</strong></td>
+        <td>여러 단계가 필요하지만 순서를 알고 있음</td>
+        <td>여러 단타형 Task를 순서대로 연결</td>
+      </tr>
+
+      <tr>
+        <td><strong>탐색형 빌드업</strong></td>
+        <td>목표는 있지만 실제 문제와 경로가 아직 불명확함</td>
+        <td>중간 결과에 따라 다음 Task를 계속 결정</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">THE QUESTION</span>
+
+    프롬프트를 작성하기 전에
+    이렇게 생각해보세요.
+    <br><br>
+
+    <strong>
+      “이 일은 지금 바로 시킬 수 있는가?”
+      <br><br>
+      “순서대로 나누면 되는가?”
+      <br><br>
+      “아니면 결과를 보면서 다음 일을 찾아가야 하는가?”
+    </strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">47 · EXPLORATORY SUMMARY</span>
+  <h2 class="pe-title">탐색형 빌드업 정리</h2>
+
+  <div class="pe-card-green">
+    <ul class="pe-list">
+      <li>처음부터 모든 조건을 알 필요는 없습니다.</li>
+      <li>현재 필요한 하나의 Task부터 시작합니다.</li>
+      <li>중간 결과에서 새로운 사실을 찾습니다.</li>
+      <li>사실과 가설을 구분합니다.</li>
+      <li>필요한 데이터로 가설을 검증합니다.</li>
+      <li>결과에 따라 문제 정의와 다음 Task를 바꿉니다.</li>
+      <li>중요한 Context만 유지합니다.</li>
+      <li>문제가 충분히 구체화된 뒤 해결책을 비교합니다.</li>
+    </ul>
+  </div>
+
+  <div class="pe-core">
+    탐색형 빌드업을 한 문장으로 정리하면
+    <br><br>
+
+    <strong>
+      “현재 알고 있는 것부터 시작해서,
+      결과를 보며 다음에 알아야 할 것을 결정하는 방식”
+    </strong>
+    입니다.
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">NEXT</span>
+    마지막 파트에서는
+    <strong>
+      최신 Reasoning 모델을 이런 업무에 어떻게 활용할지,
+      추론 강도는 언제 높일지,
+      세 가지 방식을 실제 프로젝트에서 어떻게 함께 사용할지
+    </strong>
+    정리하겠습니다.
+  </div>
+</section>
+<section class="pe-section">
+  <span class="pe-kicker">48 · REASONING MODELS</span>
+  <h2 class="pe-title">Reasoning 모델은 무엇이 다른가?</h2>
+
+  <p class="pe-subtitle">
+    최근의 AI 모델 중에는
+    단순히 다음 문장을 생성하는 것을 넘어,
+    복잡한 문제를 해결하기 위해
+    더 많은 계산과 추론 자원을 사용할 수 있는 모델들이 있습니다.
+  </p>
+
+  <div class="pe-card-blue">
+    <h3 class="pe-small-heading">Reasoning이 특히 유용한 업무</h3>
+
+    <ul class="pe-list">
+      <li>여러 자료를 비교해서 결론을 내려야 하는 업무</li>
+      <li>복잡한 원인을 분석해야 하는 업무</li>
+      <li>여러 조건을 동시에 고려해야 하는 의사결정</li>
+      <li>긴 문서나 많은 자료를 조사하고 종합하는 업무</li>
+      <li>여러 단계의 계획을 세워야 하는 업무</li>
+      <li>코드, 논리, 수치 등을 검토해야 하는 업무</li>
+    </ul>
+  </div>
+
+  <div class="pe-core">
+    중요한 것은
+    <strong>복잡한 Prompt를 만들어서 AI에게 억지로 생각시키는 것</strong>이 아닙니다.
+    <br><br>
+    복잡한 문제라면
+    <strong>문제, 자료, 조건, 목표를 명확하게 제공하고
+    모델이 충분히 분석할 수 있도록 하는 것</strong>이 중요합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">49 · REASONING EFFORT</span>
+  <h2 class="pe-title">모든 업무에 높은 추론 강도가 필요한 것은 아닙니다</h2>
+
+  <p class="pe-subtitle">
+    사용하는 서비스나 모델에 따라
+    추론에 사용하는 자원의 수준을 조절할 수 있는 경우가 있습니다.
+    이때도 업무의 난이도에 맞게 선택하는 것이 좋습니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-shot">낮거나 보통 수준으로 충분한 업무</span>
+
+      <ul class="pe-list-plain">
+        <li>문장 다듬기</li>
+        <li>간단한 요약</li>
+        <li>형식 변환</li>
+        <li>명확한 기준의 분류</li>
+        <li>간단한 이메일 작성</li>
+      </ul>
+    </div>
+
+    <div class="pe-compare-item">
+      <span class="pe-compare-label pe-label-context">높은 추론이 유용할 수 있는 업무</span>
+
+      <ul class="pe-list-plain">
+        <li>시장 자료 조사와 종합</li>
+        <li>복수의 가설 비교</li>
+        <li>원인 분석</li>
+        <li>복잡한 전략 검토</li>
+        <li>기술 구조 검토</li>
+        <li>여러 조건이 충돌하는 의사결정</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">SIMPLE RULE</span>
+    단순한 업무에 필요 이상으로 많은 추론 자원을 사용할 필요는 없습니다.
+    <br><br>
+    반대로
+    <strong>조사·분석·판단의 깊이가 중요한 업무</strong>라면
+    더 많은 추론 자원을 사용하는 것이 도움이 될 수 있습니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">50 · DON'T FORCE REASONING</span>
+  <h2 class="pe-title">AI의 사고 과정을 억지로 설계하려고 하지 마세요</h2>
+
+  <p class="pe-subtitle">
+    과거에는 복잡한 문제를 풀 때
+    AI에게 매우 세세한 사고 순서를 직접 지시하는 방법이 자주 사용되었습니다.
+  </p>
+
+  <p class="pe-text">
+    하지만 최신 Reasoning 모델에서는
+    사용자가 내부 사고 과정을 지나치게 설계하기보다
+    <strong>목표와 조건을 명확하게 전달하는 접근</strong>이 더 단순하고 실용적일 수 있습니다.
+  </p>
+
+  <div class="pe-compare">
+    <div class="pe-compare-item">
+      <h3 class="pe-small-heading">과도하게 사고 방식을 지정하기</h3>
+
+      <div class="pe-prompt">
+        <span class="pe-prompt-label">EXAMPLE</span>
+
+        <p class="pe-prompt-text">
+먼저 1단계에서 A를 생각하고,
+2단계에서는 B를 생각하고,
+3단계에서는 다시 반론을 만들고,
+4단계에서는...
+        </p>
+      </div>
+    </div>
+
+    <div class="pe-compare-item">
+      <h3 class="pe-small-heading">업무 자체를 명확하게 정의하기</h3>
+
+      <div class="pe-prompt">
+        <span class="pe-prompt-label">EXAMPLE</span>
+
+        <p class="pe-prompt-text">
+다음 세 가지 시장 진입안을 비교해주세요.
+
+목적은 첫 1년의 손실 위험을 낮추는 것입니다.
+
+비교 기준:
+- 초기 투자비용
+- 시장 진입 속도
+- 운영 복잡도
+- 고객 확보 가능성
+
+근거가 부족한 부분은
+가정과 확인된 사실을 구분해주세요.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">KEY IDEA</span>
+    사용자가 설계해야 하는 것은
+    <strong>AI의 머릿속 사고 순서</strong>보다
+    <strong>AI가 해결해야 하는 업무와 판단조건</strong>입니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">51 · RESEARCH TASK</span>
+  <h2 class="pe-title">자료 조사는 빌드업과 특히 잘 맞습니다</h2>
+
+  <p class="pe-subtitle">
+    조사 업무에서는 처음부터 필요한 모든 정보를 알고 있는 경우가 드뭅니다.
+    따라서 자료를 찾고,
+    새로운 사실을 확인하면서
+    조사 방향 자체를 수정하는 방식이 유용합니다.
+  </p>
+
+  <div class="pe-flow">
+    <div class="pe-flow-step">조사 목적</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">첫 자료 조사</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">핵심 사실 발견</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">추가 질문</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">반대 근거 확인</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">결론 정리</div>
+  </div>
+
+  <div class="pe-card-purple">
+    <h3 class="pe-small-heading">예: 새로운 시장 진출 조사</h3>
+
+    <p class="pe-text">
+      처음에는
+      “일본 시장에 진출할 수 있을까?”
+      정도의 질문으로 시작할 수 있습니다.
+    </p>
+
+    <p class="pe-text">
+      조사 과정에서
+      시장 규모보다 특정 고객층의 구매 행동,
+      유통구조,
+      경쟁사의 가격전략 등이
+      더 중요한 문제라는 사실을 발견할 수도 있습니다.
+    </p>
+  </div>
+
+  <div class="pe-core">
+    좋은 조사에서는
+    처음 만든 질문을 끝까지 고집하는 것이 아니라,
+    <strong>새로운 사실에 따라 조사 질문 자체도 바뀔 수 있습니다.</strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">52 · SOURCE QUALITY</span>
+  <h2 class="pe-title">조사 결과는 출처와 함께 확인하세요</h2>
+
+  <p class="pe-subtitle">
+    AI가 외부 자료를 조사할 수 있는 환경이라면
+    단순한 답변보다
+    어떤 자료를 근거로 판단했는지 확인하는 것이 중요합니다.
+  </p>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">조사할 때 확인할 것</h3>
+
+    <ul class="pe-list">
+      <li>자료가 최근 자료인가?</li>
+      <li>공식 기관이나 원자료를 확인할 수 있는가?</li>
+      <li>여러 출처가 같은 내용을 뒷받침하는가?</li>
+      <li>사실과 해석이 구분되어 있는가?</li>
+      <li>서로 다른 주장이나 반대 근거는 없는가?</li>
+      <li>현재 시점에서도 유효한 정보인가?</li>
+    </ul>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">IMPORTANT</span>
+    AI가 자신 있게 말한다는 이유만으로
+    사실이라고 판단하지 않습니다.
+    <br><br>
+    특히
+    <strong>법률, 금융, 의료, 정책, 가격, 시장정보처럼
+    변경될 수 있는 정보</strong>는
+    최신 출처를 다시 확인하는 것이 중요합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">53 · MIXING THE MODES</span>
+  <h2 class="pe-title">실제 업무에서는 세 가지 방식을 섞어서 사용합니다</h2>
+
+  <p class="pe-subtitle">
+    단타형, 고정형 빌드업, 탐색형 빌드업은
+    서로 경쟁하는 방법이 아닙니다.
+  </p>
+
+  <p class="pe-text">
+    실제 프로젝트에서는
+    문제를 탐색하다가
+    어느 순간 필요한 Task가 명확해지고,
+    그때 다시 단타형 업무를 사용할 수 있습니다.
+  </p>
+
+  <div class="pe-flow">
+    <div class="pe-flow-step">탐색형</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">문제 발견</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">단타형 분석</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">새 사실 발견</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">고정형 실행</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">최종 단타형 결과물</div>
+  </div>
+
+  <div class="pe-core">
+    중요한 것은
+    <strong>한 가지 Prompt 방식만 고집하는 것이 아닙니다.</strong>
+    <br><br>
+    현재 업무 상태에 맞춰
+    가장 적절한 방식을 계속 선택하면 됩니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">54 · INTEGRATED BUSINESS CASE</span>
+  <h2 class="pe-title">전체 통합 사례: 매출 하락에서 실행계획까지</h2>
+
+  <div class="pe-card-soft">
+    <h3 class="pe-small-heading">상사에게 받은 업무</h3>
+
+    <p class="pe-text">
+      “최근 20대 고객 매출이 떨어지고 있습니다.
+      원인을 분석하고
+      다음 달부터 실행할 개선안을 만들어주세요.”
+    </p>
+  </div>
+
+  <div class="pe-note">
+    <span class="pe-note-label">현재 상태</span>
+    목표는 있지만
+    무엇이 문제인지 아직 정확하게 모릅니다.
+    <br><br>
+    따라서
+    <strong>탐색형 빌드업</strong>으로 시작합니다.
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">55 · INTEGRATED STEP 1</span>
+  <h2 class="pe-title">먼저 큰 문제를 나눕니다</h2>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">EXPLORATORY TASK</span>
+
+    <p class="pe-prompt-text">
+20대 고객 매출이 최근 하락하고 있어.
+
+아직 원인을 모르기 때문에
+먼저 매출 감소 원인을 찾으려면
+어떤 지표와 고객 행동을 나누어 확인해야 하는지 정리해줘.
+
+바로 해결책을 제안하지 말고
+문제를 좁히기 위한 분석 순서를 제안해줘.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">다음 분석 후보</span>
+
+    <ul class="pe-list">
+      <li>신규 고객 수</li>
+      <li>구매 전환율</li>
+      <li>평균 주문금액</li>
+      <li>재구매율</li>
+      <li>상품군별 매출</li>
+      <li>유입 채널별 변화</li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">56 · INTEGRATED STEP 2</span>
+  <h2 class="pe-title">명확해진 분석은 단타형으로 처리합니다</h2>
+
+  <p class="pe-text">
+    이제 무엇을 비교해야 하는지 알게 되었습니다.
+    이 단계의 업무는 단타형입니다.
+  </p>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">DIRECT TASK</span>
+
+    <p class="pe-prompt-text">
+아래 20대 고객 데이터를
+전년 동기와 비교해주세요.
+
+비교 항목:
+- 신규 고객 수
+- 첫 구매 전환율
+- 평균 주문금액
+- 90일 재구매율
+
+가장 크게 변한 지표를 찾고
+전체 매출 하락에 영향을 줄 가능성이 높은 순서로 정리해주세요.
+
+확인할 수 없는 원인은 추측하지 마세요.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">DISCOVERY</span>
+
+    <p class="pe-text">
+      신규 고객과 평균 주문금액은 큰 변화가 없지만
+      <strong>90일 재구매율이 크게 하락했다</strong>고 가정하겠습니다.
+    </p>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">PROBLEM UPDATE</span>
+
+    <strong>
+      20대 매출 감소
+      <br>↓<br>
+      20대 기존 고객의 재구매 감소
+    </strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">57 · INTEGRATED STEP 3</span>
+  <h2 class="pe-title">다시 탐색형으로 돌아갑니다</h2>
+
+  <div class="pe-chat">
+    <div class="pe-chat-user">
+      <span class="pe-chat-role">USER</span>
+
+      신규 고객 수와 객단가는 거의 그대로인데
+      90일 재구매율이 크게 떨어졌어.
+
+      재구매 감소 원인을 더 좁히려면
+      다음에는 무엇을 확인해야 할까?
+    </div>
+
+    <div class="pe-chat-ai">
+      <span class="pe-chat-role">AI</span>
+
+      상품군별 재구매율,
+      첫 구매 상품,
+      할인 사용 여부,
+      구매 간격,
+      경쟁상품 이동 가능성,
+      고객 리뷰와 VOC 등을 추가로 확인할 수 있습니다.
+    </div>
+  </div>
+
+  <p class="pe-text">
+    이후 데이터를 분석한 결과,
+    가격 불만보다
+    <strong>“상품 구성이 비슷해서 다시 구매할 이유가 적다”</strong>는
+    고객 의견이 크게 증가했다고 가정하겠습니다.
+  </p>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">PROBLEM UPDATE</span>
+
+    <strong>
+      20대 재구매 감소
+      <br>↓<br>
+      반복 구매를 유도할 상품 경험 부족 가능성
+    </strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">58 · INTEGRATED STEP 4</span>
+  <h2 class="pe-title">해결 방향이 보이면 고정형으로 전환합니다</h2>
+
+  <p class="pe-subtitle">
+    이제 핵심 문제 후보가 충분히 구체화되었습니다.
+    이 시점부터는 비교적 정해진 순서로 해결책을 평가할 수 있습니다.
+  </p>
+
+  <div class="pe-flow">
+    <div class="pe-flow-step">해결책 후보 생성</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">비용·효과 비교</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">우선순위</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">실험 설계</div>
+    <div class="pe-flow-arrow">→</div>
+
+    <div class="pe-flow-step">실행계획</div>
+  </div>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">SOLUTION COMPARISON</span>
+
+    <p class="pe-prompt-text">
+지금까지 확인한 내용을 기준으로
+20대 고객 재구매율을 높이기 위한 다음 네 가지 방법을 비교해주세요.
+
+1. 신규 상품군 확대
+2. 기존 고객 할인 강화
+3. 개인화 상품 추천 강화
+4. 재구매 고객 전용 혜택 구성
+
+현재 조건:
+- 다음 달부터 일부 실행해야 함
+- 대규모 시스템 개발은 어려움
+- 할인율을 크게 높이는 것은 수익성 때문에 제한적임
+
+판단기준:
+- 예상 효과
+- 실행 속도
+- 비용
+- 검증 가능성
+
+우선 테스트할 두 가지 방법을 추천해주세요.
+    </p>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">59 · INTEGRATED STEP 5</span>
+  <h2 class="pe-title">마지막 결과물은 다시 단타형입니다</h2>
+
+  <div class="pe-prompt">
+    <span class="pe-prompt-label">FINAL DIRECT TASK</span>
+
+    <p class="pe-prompt-text">
+지금까지 분석한 결과를 바탕으로
+부서장 보고용 1페이지 실행계획을 작성해주세요.
+
+구성:
+
+1. 처음 제기된 문제
+2. 분석 과정에서 확인된 핵심 사실
+3. 최종적으로 정의한 문제
+4. 우선 실행안
+5. 실행 이유
+6. 확인할 KPI
+7. 한 달 후 재검토할 항목
+
+사실과 가설을 구분하고,
+확인되지 않은 원인은 확정적으로 표현하지 마세요.
+    </p>
+  </div>
+
+  <div class="pe-result">
+    <span class="pe-result-label">FULL WORKFLOW</span>
+
+    <div class="pe-flow">
+      <div class="pe-flow-step">탐색형</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">단타 분석</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">탐색형</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">고정형 비교</div>
+      <div class="pe-flow-arrow">→</div>
+
+      <div class="pe-flow-step">최종 단타형</div>
+    </div>
+  </div>
+
+  <div class="pe-core">
+    실제 업무에서는
+    <strong>세 가지 방식을 자유롭게 오가면서 사용합니다.</strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">60 · PRACTICAL CHECKLIST</span>
+  <h2 class="pe-title">AI에게 일을 맡기기 전 체크리스트</h2>
+
+  <div class="pe-card">
+    <h3 class="pe-small-heading">먼저 업무 상태를 확인합니다</h3>
+
+    <ul class="pe-list">
+      <li>내가 원하는 결과는 무엇인가?</li>
+      <li>문제가 이미 충분히 구체적인가?</li>
+      <li>현재 필요한 자료를 가지고 있는가?</li>
+      <li>판단기준을 알고 있는가?</li>
+      <li>한 번에 결과를 받아도 되는가?</li>
+      <li>중간 결과를 확인해야 하는가?</li>
+      <li>결과에 따라 다음 Task가 달라질 가능성이 있는가?</li>
+    </ul>
+  </div>
+
+  <div class="pe-card-green">
+    <h3 class="pe-small-heading">그 다음 방식을 선택합니다</h3>
+
+    <p class="pe-text">
+      문제가 명확하다
+      <br>
+      → <strong>단타형 Task</strong>
+    </p>
+
+    <p class="pe-text">
+      여러 단계가 필요하고 순서를 알고 있다
+      <br>
+      → <strong>고정형 빌드업</strong>
+    </p>
+
+    <p class="pe-text">
+      결과를 보기 전에는 다음 방향을 모른다
+      <br>
+      → <strong>탐색형 빌드업</strong>
+    </p>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">61 · COMMON MISTAKES</span>
+  <h2 class="pe-title">자주 발생하는 실수</h2>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">1. 프롬프트를 길게 쓰는 것이 목적이 되는 것</h3>
+
+    <p class="pe-text">
+      필요한 정보보다
+      프롬프트 형식 자체에 집중하면
+      오히려 업무의 핵심이 흐려질 수 있습니다.
+    </p>
+  </div>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">2. 모든 Task에 Persona를 넣는 것</h3>
+
+    <p class="pe-text">
+      전문적인 관점이 필요할 때는 Role이 유용하지만,
+      단순한 작업에는 생략할 수 있습니다.
+    </p>
+  </div>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">3. AI가 제시한 가설을 사실처럼 사용하는 것</h3>
+
+    <p class="pe-text">
+      확인된 데이터와
+      가능한 설명을 분리해야 합니다.
+    </p>
+  </div>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">4. 계속 대화하면 자동으로 Context가 좋아진다고 생각하는 것</h3>
+
+    <p class="pe-text">
+      오래된 정보,
+      잘못된 가설,
+      중복된 설명이 계속 쌓이면
+      오히려 현재 Task가 흐려질 수 있습니다.
+    </p>
+  </div>
+
+  <div class="pe-card-orange">
+    <h3 class="pe-small-heading">5. 복잡한 업무를 무조건 한 번에 끝내려고 하는 것</h3>
+
+    <p class="pe-text">
+      중간 결과를 확인할 가치가 있다면
+      여러 Task로 나누는 편이 관리하기 쉽습니다.
+    </p>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">62 · THE SIMPLE MODEL</span>
+  <h2 class="pe-title">결국 이것만 기억해도 됩니다</h2>
+
+  <div class="pe-core">
+    <strong>
+      1. 지금 해야 할 일을 확인합니다.
+      <br><br>
+      2. 필요한 정보와 조건을 AI에게 전달합니다.
+      <br><br>
+      3. 일이 명확하면 바로 시킵니다.
+      <br><br>
+      4. 일이 크면 여러 Task로 나눕니다.
+      <br><br>
+      5. 결과를 보고 새로운 사실이 생기면 다음 Task를 바꿉니다.
+      <br><br>
+      6. 중요한 결과는 다시 확인합니다.
+    </strong>
+  </div>
+
+  <div class="pe-insight">
+    <span class="pe-insight-label">ONE SENTENCE</span>
+
+    <strong>
+      큰 업무는 나누고,
+      각각의 Task는 명확하게 시키고,
+      결과는 다음 Task의 Context로 사용하세요.
+    </strong>
+  </div>
+</section>
+
+
+<section class="pe-section">
+  <span class="pe-kicker">63 · FINAL MESSAGE</span>
+  <h2 class="pe-title">프롬프트 엔지니어링의 목적은 좋은 문장을 만드는 것이 아닙니다</h2>
+
+  <p class="pe-subtitle">
+    프롬프트를 공부하다 보면
+    더 정교한 문장,
+    더 많은 조건,
+    더 복잡한 기법을 사용해야
+    AI를 잘 쓰는 것처럼 느낄 수 있습니다.
+  </p>
+
+  <p class="pe-text">
+    하지만 실제 업무에서 중요한 것은
+    프롬프트 자체를 멋지게 만드는 것이 아닙니다.
+  </p>
+
+  <div class="pe-core">
+    <strong>
+      AI가 해야 할 일을 이해할 수 있도록 정보를 전달하고,
+      <br><br>
+      복잡한 일은 관리 가능한 Task로 나누고,
+      <br><br>
+      중간 결과에서 새로운 사실을 발견하면
+      다음 업무에 반영하는 것.
+    </strong>
+  </div>
+
+  <p class="pe-text">
+    이것이 AI를 단순한 질문·답변 도구가 아니라
+    실제 업무에 활용하는 가장 기본적인 방법입니다.
+  </p>
+
+  <div class="pe-card-green">
+    <h3 class="pe-small-heading">마지막으로</h3>
+
+    <p class="pe-text">
+      프롬프트 공식을 외우려고 하지 않아도 됩니다.
+    </p>
+
+    <p class="pe-text">
+      대신 사람에게 일을 맡길 때처럼 생각해보세요.
+    </p>
+
+    <p class="pe-text">
+      <strong>
+        무엇을 해야 하는가?
+        <br>
+        무엇을 알고 있어야 하는가?
+        <br>
+        어떤 조건을 지켜야 하는가?
+        <br>
+        그리고 지금 바로 시킬 수 있는 일인가?
+      </strong>
+    </p>
+
+    <p class="pe-text">
+      이 질문들에 답할 수 있다면
+      프롬프트 엔지니어링의 핵심은 이미 이해한 것입니다.
+    </p>
   </div>
 </section>
