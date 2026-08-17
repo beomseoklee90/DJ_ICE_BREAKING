@@ -1,0 +1,2812 @@
+파이썬 15분 시강
+<style>
+/* ============================================================
+   PYTHON FUNCTION & LOOP LESSON
+   기존 HTML 클래스명 그대로 사용
+   ============================================================ */
+
+.python-lesson-root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --line: #dfe5ef;
+  --text: #172033;
+  --muted: #667085;
+
+  --purple: #7147e8;
+  --purple-soft: #f1edff;
+
+  --blue: #246bfd;
+  --blue-soft: #edf4ff;
+
+  --green: #16824d;
+  --green-soft: #eaf8f0;
+
+  --orange: #ad5700;
+  --orange-soft: #fff2e3;
+
+  --yellow: #8a6500;
+  --yellow-soft: #fff9df;
+
+  --red: #c53f48;
+  --red-soft: #fff0f1;
+
+  --code-bg: #151a27;
+  --code-head: #202638;
+  --code-text: #edf2ff;
+
+  /* 하단 실행기 높이 */
+  --runner-height: 330px;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family:
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans KR",
+    sans-serif;
+
+  line-height: 1.65;
+
+  overflow-x: hidden;
+}
+
+.python-lesson-root *,
+.python-lesson-root *::before,
+.python-lesson-root *::after {
+  box-sizing: border-box;
+}
+
+.python-lesson-root code,
+.python-lesson-root pre,
+.python-lesson-root textarea {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace;
+}
+
+
+/* ============================================================
+   WHITE CONTENT AREA
+   ============================================================ */
+
+.python-lesson-shell {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 0;
+
+  margin: 0 auto;
+
+  /*
+    fixed 실행기가 콘텐츠 마지막을 가리지 않도록
+    아래쪽 공간 확보
+  */
+  padding:
+    28px
+    24px
+    calc(var(--runner-height) + 45px);
+
+  background: #ffffff;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.python-hero {
+  width: 100%;
+
+  padding: 32px 34px;
+  margin-bottom: 24px;
+
+  border: 1px solid var(--line);
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(113, 71, 232, 0.17),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #faf8ff
+    );
+}
+
+.python-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 12px;
+  margin-bottom: 12px;
+
+  border-radius: 999px;
+
+  background: var(--purple-soft);
+  color: var(--purple);
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.python-hero h1 {
+  margin: 0 0 10px;
+
+  font-size: clamp(30px, 3.5vw, 48px);
+  line-height: 1.18;
+
+  letter-spacing: -0.045em;
+
+  word-break: keep-all;
+}
+
+.python-hero-description {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 17px;
+
+  word-break: keep-all;
+}
+
+.python-hero-description strong {
+  color: var(--text);
+}
+
+.python-goals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+.python-goal {
+  padding: 8px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.python-time-plan {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.python-time-box {
+  min-width: 0;
+
+  padding: 14px 16px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.python-time-box strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--purple);
+
+  font-size: 15px;
+}
+
+.python-time-box span {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  word-break: keep-all;
+}
+
+
+/* ============================================================
+   MAIN
+
+   기존 2열 구조 제거.
+   교재가 전체 흰색 영역을 사용한다.
+   실행기는 fixed.
+   ============================================================ */
+
+.python-main-layout {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.python-lessons {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.python-section {
+  width: 100%;
+  min-width: 0;
+
+  margin-bottom: 22px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+  border-radius: 20px;
+
+  background: var(--card);
+}
+
+.python-section-header {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 22px 24px 16px;
+}
+
+.python-section-number {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 48px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 14px;
+
+  background: var(--purple);
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.python-section-title-wrap {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.python-section-title {
+  margin: 0 0 4px;
+
+  font-size: 23px;
+  line-height: 1.35;
+
+  letter-spacing: -0.03em;
+
+  word-break: keep-all;
+}
+
+.python-section-subtitle {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  word-break: keep-all;
+}
+
+.python-section-time {
+  flex: 0 0 auto;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: var(--purple-soft);
+  color: var(--purple);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+.python-section-body {
+  min-width: 0;
+
+  padding:
+    0
+    24px
+    26px;
+}
+
+.python-section-body > p:first-child {
+  margin-top: 0;
+}
+
+
+/* ============================================================
+   FUNCTION CONCEPT
+   ============================================================ */
+
+.function-definition {
+  padding: 16px 18px;
+  margin: 14px 0;
+
+  border-left: 4px solid var(--purple);
+  border-radius: 0 14px 14px 0;
+
+  background: var(--purple-soft);
+
+  font-size: 16px;
+
+  word-break: keep-all;
+}
+
+.function-definition strong {
+  color: #5132b6;
+}
+
+.function-flow {
+  display: grid;
+
+  grid-template-columns:
+    minmax(120px, 1fr)
+    auto
+    minmax(160px, 1.35fr)
+    auto
+    minmax(120px, 1fr);
+
+  gap: 11px;
+
+  align-items: center;
+
+  margin: 22px 0;
+}
+
+.flow-box {
+  min-width: 0;
+  min-height: 105px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px;
+
+  border: 2px solid var(--line);
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.flow-box strong {
+  margin-bottom: 4px;
+
+  font-size: 19px;
+}
+
+.flow-box span {
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+.flow-box.function {
+  border-color: var(--purple);
+
+  background: var(--purple-soft);
+}
+
+.flow-arrow {
+  color: var(--purple);
+
+  font-size: 28px;
+  font-weight: 900;
+}
+
+
+/* ============================================================
+   CALLOUT
+   ============================================================ */
+
+.python-callout {
+  padding: 14px 16px;
+  margin: 15px 0;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+
+  word-break: keep-all;
+}
+
+.python-callout strong {
+  font-weight: 900;
+}
+
+.python-callout.purple {
+  background: var(--purple-soft);
+  color: #5132b6;
+}
+
+.python-callout.blue {
+  background: var(--blue-soft);
+  color: #174da8;
+}
+
+.python-callout.green {
+  background: var(--green-soft);
+  color: #11623b;
+}
+
+.python-callout.orange {
+  background: var(--orange-soft);
+  color: #854300;
+}
+
+.python-callout.yellow {
+  background: var(--yellow-soft);
+  color: #745500;
+}
+
+.python-callout.red {
+  background: var(--red-soft);
+  color: #9e3038;
+}
+
+
+/* ============================================================
+   CODE
+   ============================================================ */
+
+.code-card {
+  width: 100%;
+  min-width: 0;
+
+  margin: 15px 0;
+
+  overflow: hidden;
+
+  border: 1px solid #282f42;
+  border-radius: 16px;
+
+  background: var(--code-bg);
+}
+
+.code-card-title {
+  padding: 9px 14px;
+
+  border-bottom: 1px solid #32394c;
+
+  background: var(--code-head);
+  color: #b4bdd0;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.lesson-code {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 17px 18px;
+
+  overflow-x: auto;
+
+  background: transparent;
+  color: var(--code-text);
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  white-space: pre;
+
+  tab-size: 4;
+}
+
+.blank {
+  padding: 0 2px;
+
+  border-bottom: 2px dashed #ffe16f;
+
+  color: #ffe16f;
+
+  font-weight: 900;
+}
+
+.comment {
+  color: #83cf9b;
+}
+
+.important-code {
+  color: #8fc7ff;
+}
+
+
+/* ============================================================
+   EXERCISE
+   ============================================================ */
+
+.exercise {
+  padding: 17px 18px;
+  margin: 18px 0 10px;
+
+  border: 2px solid #e2d9ff;
+  border-radius: 16px;
+
+  background: #fbfaff;
+
+  word-break: keep-all;
+}
+
+.exercise-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 7px;
+
+  color: var(--purple);
+
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.exercise p {
+  margin: 0;
+}
+
+
+/* ============================================================
+   EXPECTED OUTPUT
+   ============================================================ */
+
+.expected-output {
+  width: 100%;
+  min-width: 0;
+
+  margin: 12px 0;
+  padding: 13px 15px;
+
+  overflow-x: auto;
+
+  border: 1px solid #cbddff;
+  border-radius: 13px;
+
+  background: #f7faff;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  white-space: pre-wrap;
+}
+
+.expected-output-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--blue);
+
+  font-family:
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+/* ============================================================
+   HINT
+   ============================================================ */
+
+.hint-list {
+  display: grid;
+  gap: 8px;
+
+  margin-top: 13px;
+}
+
+.hint {
+  padding: 10px 13px;
+
+  border: 1px dashed #cbbdff;
+  border-radius: 11px;
+
+  background: #faf8ff;
+
+  font-size: 13px;
+
+  word-break: keep-all;
+}
+
+.hint strong {
+  color: var(--purple);
+}
+
+.python-lesson-root details {
+  margin-top: 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 11px;
+
+  background: #fafbfc;
+}
+
+.python-lesson-root summary {
+  padding: 10px 13px;
+
+  cursor: pointer;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.answer-content {
+  padding:
+    0
+    13px
+    13px;
+
+  color: var(--text);
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   MINI GRID
+   ============================================================ */
+
+.mini-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 11px;
+
+  margin: 15px 0;
+}
+
+.mini-card {
+  min-width: 0;
+
+  padding: 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 13px;
+
+  background: #fafbfe;
+}
+
+.mini-card h4 {
+  margin: 0 0 5px;
+
+  font-size: 14px;
+}
+
+.mini-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  word-break: keep-all;
+}
+
+
+/* ============================================================
+   VALUE TRACE
+   ============================================================ */
+
+.trace-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 7px;
+
+  margin: 15px 0;
+}
+
+.trace-box {
+  min-width: 0;
+
+  padding: 11px 6px;
+
+  border-radius: 11px;
+
+  background: var(--blue-soft);
+
+  text-align: center;
+}
+
+.trace-box strong {
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 14px;
+}
+
+.trace-box span {
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.final-section {
+  border: 2px solid var(--purple);
+
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      rgba(113, 71, 232, 0.15),
+      transparent 32%
+    ),
+    #ffffff;
+}
+
+.final-checklist {
+  display: grid;
+  gap: 9px;
+
+  list-style: none;
+
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.final-checklist li {
+  padding: 11px 14px;
+
+  border-radius: 11px;
+
+  background: var(--purple-soft);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   BOTTOM PYTHON RUNNER
+
+   JS가 실제 .python-lesson-shell의
+   left와 width를 측정해서 inline style로 덮어쓴다.
+
+   JS가 아직 실행되지 않았어도
+   창이 사라지지 않도록 fallback도 둔다.
+   ============================================================ */
+
+.python-runner-column {
+  position: fixed !important;
+
+  z-index: 9999;
+
+  bottom: 10px;
+
+  /*
+    JS 로딩 전 fallback
+  */
+  left: 50%;
+  width: min(calc(100vw - 30px), 1040px);
+
+  transform: translateX(-50%);
+
+  margin: 0 !important;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+
+/* ============================================================
+   RUNNER
+   ============================================================ */
+
+.python-runner {
+  display: grid;
+
+  /*
+    왼쪽: 코드
+    오른쪽: 결과
+  */
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(250px, 0.75fr);
+
+  grid-template-rows:
+    auto
+    auto
+    minmax(0, 1fr)
+    auto;
+
+  width: 100%;
+  height: var(--runner-height);
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #30384c;
+  border-radius: 17px;
+
+  background: #111621;
+  color: #ffffff;
+
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.26);
+}
+
+
+/* ============================================================
+   RUNNER HEADER
+   ============================================================ */
+
+.runner-header {
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  min-width: 0;
+
+  padding: 11px 16px;
+
+  border-bottom: 1px solid #2d3445;
+
+  background: #171d29;
+}
+
+.runner-title {
+  min-width: 0;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+.runner-status {
+  display: inline-flex;
+  align-items: center;
+
+  flex: 0 0 auto;
+
+  gap: 6px;
+
+  color: #b3bdd2;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+.runner-status-dot {
+  width: 8px;
+  height: 8px;
+
+  flex: 0 0 8px;
+
+  border-radius: 50%;
+
+  background: #e4ae3e;
+}
+
+.runner-status.ready .runner-status-dot {
+  background: #49d181;
+}
+
+.runner-status.error .runner-status-dot {
+  background: #f36169;
+}
+
+
+/* ============================================================
+   GUIDE
+   ============================================================ */
+
+.runner-guide {
+  grid-column: 1 / -1;
+  grid-row: 2;
+
+  min-width: 0;
+
+  padding: 8px 16px;
+
+  border-bottom: 1px solid #2d3445;
+
+  background: #202636;
+  color: #c5cede;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.runner-guide strong {
+  color: #ffffff;
+}
+
+.runner-guide .runner-warning {
+  display: inline;
+
+  margin-left: 10px;
+
+  color: #ffd788;
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   EDITOR
+   ============================================================ */
+
+.editor-wrap {
+  position: relative;
+
+  grid-column: 1;
+  grid-row: 3;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  border-right: 1px solid #2d3445;
+}
+
+.editor-language {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 9px;
+  right: 12px;
+
+  color: #647087;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  pointer-events: none;
+}
+
+.python-editor {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  resize: none;
+
+  margin: 0;
+  padding: 15px;
+
+  border: 0;
+  outline: none;
+
+  background: #111621;
+  color: #f1f4ff;
+  caret-color: #ffffff;
+
+  font-size: 14px;
+  line-height: 1.55;
+
+  tab-size: 4;
+}
+
+.python-editor::placeholder {
+  color: #59647a;
+}
+
+
+/* ============================================================
+   CONSOLE
+   ============================================================ */
+
+.console-wrap {
+  grid-column: 2;
+  grid-row: 3 / 5;
+
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #090d15;
+}
+
+.console-title {
+  flex: 0 0 auto;
+
+  padding: 8px 13px;
+
+  border-bottom: 1px solid #1c2230;
+
+  color: #8490a7;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.python-console {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: auto;
+
+  margin: 0;
+  padding: 13px;
+
+  background: #090d15;
+  color: #dce6ff;
+
+  font-size: 12px;
+  line-height: 1.55;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.python-console.error {
+  color: #ff9da3;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.runner-buttons {
+  grid-column: 1;
+  grid-row: 4;
+
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  min-width: 0;
+
+  padding: 9px 12px;
+
+  border-top: 1px solid #2d3445;
+
+  background: #171d29;
+}
+
+.runner-button {
+  appearance: none;
+
+  flex: 0 0 auto;
+
+  padding: 8px 12px;
+
+  border: 0;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font: inherit;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+.runner-button.run {
+  background: var(--purple);
+  color: #ffffff;
+}
+
+.runner-button.secondary {
+  background: #2a3243;
+  color: #d8deea;
+}
+
+.runner-button:disabled {
+  opacity: 0.55;
+
+  cursor: wait;
+}
+
+.runner-shortcut {
+  display: none !important;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .python-lesson-root {
+    --runner-height: 320px;
+  }
+
+  .python-lesson-shell {
+    padding:
+      18px
+      16px
+      calc(var(--runner-height) + 28px);
+  }
+
+  .python-time-plan {
+    grid-template-columns: 1fr;
+  }
+
+  .function-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+
+    text-align: center;
+  }
+
+  .trace-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .python-runner-column {
+    bottom: 6px;
+  }
+
+  .python-runner {
+    grid-template-columns:
+      minmax(0, 1.35fr)
+      minmax(200px, 0.8fr);
+
+    border-radius: 14px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .python-lesson-root {
+    --runner-height: 320px;
+  }
+
+  .python-lesson-shell {
+    padding:
+      10px
+      10px
+      calc(var(--runner-height) + 18px);
+  }
+
+  .python-hero {
+    padding: 20px 17px;
+
+    border-radius: 17px;
+  }
+
+  .python-hero h1 {
+    font-size: 27px;
+  }
+
+  .python-hero-description {
+    font-size: 14px;
+  }
+
+  .python-section {
+    border-radius: 15px;
+  }
+
+  .python-section-header {
+    gap: 10px;
+
+    padding: 17px 15px 12px;
+  }
+
+  .python-section-number {
+    flex-basis: 40px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+  }
+
+  .python-section-title {
+    font-size: 19px;
+  }
+
+  .python-section-subtitle {
+    font-size: 12px;
+  }
+
+  .python-section-time {
+    padding: 4px 7px;
+
+    font-size: 9px;
+  }
+
+  .python-section-body {
+    padding:
+      0
+      15px
+      18px;
+  }
+
+  .mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trace-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .lesson-code {
+    padding: 14px;
+
+    font-size: 12px;
+  }
+
+
+  /* 모바일에서는 코드 위 / 결과 아래 */
+
+  .python-runner-column {
+    bottom: 4px;
+  }
+
+  .python-runner {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows:
+      auto
+      minmax(0, 1fr)
+      auto
+      88px;
+
+    border-radius: 12px;
+  }
+
+  .runner-guide {
+    display: none;
+  }
+
+  .runner-header {
+    grid-column: 1;
+    grid-row: 1;
+
+    padding: 8px 10px;
+  }
+
+  .runner-title {
+    font-size: 11px;
+  }
+
+  .runner-status {
+    font-size: 9px;
+  }
+
+  .editor-wrap {
+    grid-column: 1;
+    grid-row: 2;
+
+    border-right: 0;
+    border-bottom: 1px solid #2d3445;
+  }
+
+  .python-editor {
+    padding: 11px;
+
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .runner-buttons {
+    grid-column: 1;
+    grid-row: 3;
+
+    flex-wrap: nowrap;
+
+    padding: 6px 8px;
+  }
+
+  .runner-button {
+    flex: 1;
+
+    padding: 7px 3px;
+
+    font-size: 9px;
+  }
+
+  .console-wrap {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .console-title {
+    padding: 4px 9px;
+
+    font-size: 8px;
+  }
+
+  .python-console {
+    padding: 7px 9px;
+
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 390px) {
+
+  .python-lesson-root {
+    --runner-height: 305px;
+  }
+
+  .python-section-time {
+    display: none;
+  }
+
+  .python-hero h1 {
+    font-size: 24px;
+  }
+
+  .python-goal {
+    font-size: 11px;
+  }
+
+  .trace-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+</style>
+
+<!-- 필기 이미지 컨테이너 (width 100% 반응형) -->
+<div style="width: 100%; margin-bottom: 22px; overflow: hidden; border: 1px solid var(--line, #dfe5ef); border-radius: 20px; background: #ffffff; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);">
+  <img 
+    src="function.png" 
+    alt="함수 개념 필기 노선도" 
+    style="display: block; width: 100%; height: auto; object-fit: contain;"
+  />
+</div>
+
+<section class="python-lesson-root" id="pythonLessonRoot">
+
+  <div class="python-lesson-shell">
+
+    <!-- ========================================================
+         HERO
+         ======================================================== -->
+
+    <header class="python-hero">
+
+      <div class="python-eyebrow">
+        🐍 PYTHON CODING
+      </div>
+
+      <h1>
+        함수와 반복문으로<br>
+        구구단 프로그램 만들기
+      </h1>
+
+      <p class="python-hero-description">
+        왼쪽의 문제에는 일부 코드만 보여드립니다.
+        오른쪽 Python 실행기에는
+        <strong>
+          def부터 print까지 코드를 처음부터 직접 입력
+        </strong>
+        하며 연습합니다.
+      </p>
+
+      <div class="python-goals">
+        <div class="python-goal">함수 이해</div>
+        <div class="python-goal">함수 직접 작성</div>
+        <div class="python-goal">for문 이해</div>
+        <div class="python-goal">i 값 변화 확인</div>
+        <div class="python-goal">2중 for문</div>
+        <div class="python-goal">구구단 완성</div>
+      </div>
+
+      <div class="python-time-plan">
+
+        <div class="python-time-box">
+          <strong>⏱ 처음 10분</strong>
+          <span>
+            설명 → 빈칸 문제 → 전체 코드 직접 입력 → 실행 결과 확인
+          </span>
+        </div>
+
+        <div class="python-time-box">
+          <strong>🚀 마지막 5분</strong>
+          <span>
+            화면을 보지 않고 개발환경에서 구구단을 처음부터 작성
+          </span>
+        </div>
+
+      </div>
+
+    </header>
+
+
+
+    <div class="python-main-layout">
+
+
+      <!-- ======================================================
+           LEFT
+           ====================================================== -->
+
+      <main class="python-lessons">
+
+        <!-- ====================================================
+             0. FUNCTION CONCEPT
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              0
+            </div>
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                함수란 무엇일까요?
+              </h2>
+
+              <p class="python-section-subtitle">
+                코드부터 외우지 말고 먼저 구조를 이해해 봅시다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              1분
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <div class="function-definition">
+              <strong>함수(Function)</strong>는
+              우리가 여러 번 사용할 코드를
+              <strong>하나의 이름으로 묶어 놓은 것</strong>입니다.
+
+              필요하다면 값을 입력받을 수도 있고,
+              계산한 결과를 다시 돌려줄 수도 있습니다.
+            </div>
+
+            <div class="function-flow">
+
+              <div class="flow-box">
+                <strong>입력</strong>
+                <span>3, 5</span>
+              </div>
+
+              <div class="flow-arrow">
+                →
+              </div>
+
+              <div class="flow-box function">
+                <strong>add 함수</strong>
+                <span>두 숫자를 더한다</span>
+              </div>
+
+              <div class="flow-arrow">
+                →
+              </div>
+
+              <div class="flow-box">
+                <strong>결과</strong>
+                <span>8</span>
+              </div>
+
+            </div>
+
+            <div class="python-callout purple">
+              💡 함수의 핵심 질문은 이것입니다.<br>
+              <strong>
+                “이 함수는 무엇을 받아서, 안에서 무슨 일을 하는가?”
+              </strong>
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                Python 함수의 기본 모습
+              </div>
+
+              <pre class="lesson-code"><code>def 함수이름(입력값):
+    함수가 할 일</code></pre>
+
+            </div>
+
+            <div class="python-callout blue">
+              <strong>def</strong>는
+              “지금부터 함수를 하나 정의하겠습니다.”
+              라고 Python에게 알려주는 문법입니다.
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             1. ADD
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              1
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                함수로 덧셈하기
+              </h2>
+
+              <p class="python-section-subtitle">
+                가장 간단한 함수부터 직접 타이핑합니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              1분
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🧩 문제 1
+              </div>
+
+              <p>
+                두 숫자를 입력하면 두 숫자의 합을 돌려주는
+                <strong>add 함수</strong>를 만들어 봅시다.
+              </p>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                왼쪽에서 답을 생각하고 → 오른쪽에는 전체 코드를 직접 입력하세요
+              </div>
+
+              <pre class="lesson-code"><code>def add(a, b):
+    return <span class="blank">________</span>
+
+print(add(3, 5))</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">목표 실행 결과</span>8</div>
+
+            <div class="hint-list">
+
+              <div class="hint">
+                <strong>힌트 1.</strong>
+                add(3, 5)를 호출하면 a에는 3,
+                b에는 5가 들어갑니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 2.</strong>
+                Python의 덧셈 기호는
+                <code>+</code> 입니다.
+              </div>
+
+              <div class="hint">
+                <strong>중요.</strong>
+                오른쪽에는
+                <code>a + b</code>만 적지 않습니다.
+                <strong>
+                  def부터 print까지 전체 코드를 직접 작성합니다.
+                </strong>
+              </div>
+
+            </div>
+
+            <details>
+              <summary>
+                정답 확인
+              </summary>
+
+              <div class="answer-content">
+                <code>return a + b</code>
+              </div>
+            </details>
+
+            <div class="python-callout green">
+              add(3, 5)
+              → a = 3, b = 5
+              → 3 + 5
+              → return 8
+              → print가 8을 출력합니다.
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             2. FUNCTION EXAMPLES
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              2
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                함수 안에서는 무엇을 할 수 있을까요?
+              </h2>
+
+              <p class="python-section-subtitle">
+                함수는 단순히 숫자 하나를 계산하는 기능만이 아닙니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              2분
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <p>
+              함수 안에는
+              <strong>
+                여러 줄의 코드를 넣을 수 있습니다.
+              </strong>
+
+              출력도 할 수 있고,
+              계산도 할 수 있고,
+              나중에는 반복문도 넣을 수 있습니다.
+            </p>
+
+            <div class="mini-grid">
+
+              <div class="mini-card">
+                <h4>🧮 계산하기</h4>
+                <p>
+                  더하기, 빼기, 곱하기 등 계산 가능
+                </p>
+              </div>
+
+              <div class="mini-card">
+                <h4>🖨 여러 번 출력하기</h4>
+                <p>
+                  print를 여러 줄 사용할 수 있음
+                </p>
+              </div>
+
+              <div class="mini-card">
+                <h4>📦 여러 작업 묶기</h4>
+                <p>
+                  여러 코드를 하나의 기능으로 만들 수 있음
+                </p>
+              </div>
+
+              <div class="mini-card">
+                <h4>🔁 반복하기</h4>
+                <p>
+                  뒤에서 배우는 for문도 함수 안에 사용 가능
+                </p>
+              </div>
+
+            </div>
+
+            <!-- EX 2-1 -->
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🧩 문제 2-1 · 숫자 세 개 출력하기
+              </div>
+
+              <p>
+                <code>show_numbers()</code>를 실행했을 때
+                10, 20, 30이 차례대로 출력되게 만들어 봅시다.
+              </p>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                여러 줄의 코드도 함수 안에 들어갈 수 있습니다
+              </div>
+
+              <pre class="lesson-code"><code>def show_numbers():
+    print(<span class="blank">____</span>)
+    print(<span class="blank">____</span>)
+    print(<span class="blank">____</span>)
+
+show_numbers()</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">목표 실행 결과</span>10
+20
+30</div>
+
+            <!-- EX 2-2 -->
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🧩 문제 2-2 · 입력받은 이름 여러 번 사용하기
+              </div>
+
+              <p>
+                함수에 전달한 이름을 여러 줄에서 사용할 수도 있습니다.
+              </p>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                name에는 "민수"가 들어갑니다
+              </div>
+
+              <pre class="lesson-code"><code>def greeting(name):
+    print("안녕하세요,", <span class="blank">______</span>)
+    print(<span class="blank">______</span>, "님을 환영합니다.")
+    print("오늘도 즐겁게 코딩해 봅시다!")
+
+greeting("민수")</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">목표 실행 결과</span>안녕하세요, 민수
+민수 님을 환영합니다.
+오늘도 즐겁게 코딩해 봅시다!</div>
+
+            <!-- EX 2-3 -->
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🧩 문제 2-3 · 함수 안에서 여러 계산하기
+              </div>
+
+              <p>
+                두 숫자의 합과 곱을 한 함수에서 모두 출력해 봅시다.
+              </p>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                a = 3, b = 4
+              </div>
+
+              <pre class="lesson-code"><code>def calculate(a, b):
+    print("더하기:", <span class="blank">________</span>)
+    print("곱하기:", <span class="blank">________</span>)
+
+calculate(3, 4)</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">목표 실행 결과</span>더하기: 7
+곱하기: 12</div>
+
+            <div class="python-callout purple">
+              함수는 결국
+              <strong>
+                “여러 줄의 코드를 하나의 기능으로 묶는 방법”
+              </strong>
+              입니다.
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             3. FOR
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              3
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                같은 일을 여러 번 해야 한다면?
+              </h2>
+
+              <p class="python-section-subtitle">
+                for문을 이용해 반복합니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              2분
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <p>
+              1부터 5까지 출력하려면 이렇게 작성할 수도 있습니다.
+            </p>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                반복문을 사용하지 않는 경우
+              </div>
+
+              <pre class="lesson-code"><code>print(1)
+print(2)
+print(3)
+print(4)
+print(5)</code></pre>
+
+            </div>
+
+            <div class="python-callout orange">
+              5번 정도는 직접 쓸 수 있습니다.<br>
+              그런데 1부터 1000까지 출력해야 한다면
+              print를 1000번 작성해야 할까요?
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                같은 작업을 반복하는 for문
+              </div>
+
+              <pre class="lesson-code"><code>for i in range(1, 6):
+    print(i)</code></pre>
+
+            </div>
+
+            <div class="python-callout blue">
+              <code>range(1, 6)</code>은
+              <strong>
+                1, 2, 3, 4, 5
+              </strong>
+              를 차례대로 만들어 줍니다.
+
+              마지막 숫자인 6은 포함되지 않습니다.
+            </div>
+
+            <div class="trace-grid">
+
+              <div class="trace-box">
+                <strong>i = 1</strong>
+                <span>1 출력</span>
+              </div>
+
+              <div class="trace-box">
+                <strong>i = 2</strong>
+                <span>2 출력</span>
+              </div>
+
+              <div class="trace-box">
+                <strong>i = 3</strong>
+                <span>3 출력</span>
+              </div>
+
+              <div class="trace-box">
+                <strong>i = 4</strong>
+                <span>4 출력</span>
+              </div>
+
+              <div class="trace-box">
+                <strong>i = 5</strong>
+                <span>5 출력</span>
+              </div>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                i 값이 바뀌는 과정을 주석으로 따라가 봅시다
+              </div>
+
+              <pre class="lesson-code"><code><span class="comment"># range(1, 6)</span>
+<span class="comment"># → 1, 2, 3, 4, 5가 차례대로 i에 들어갑니다.</span>
+
+for i in range(1, 6):
+    print(i)
+
+
+<span class="comment"># 첫 번째 반복</span>
+<span class="comment"># i = 1</span>
+<span class="comment"># print(i) → 1</span>
+
+<span class="comment"># 두 번째 반복</span>
+<span class="comment"># i = 2</span>
+<span class="comment"># print(i) → 2</span>
+
+<span class="comment"># 세 번째 반복</span>
+<span class="comment"># i = 3</span>
+<span class="comment"># print(i) → 3</span>
+
+<span class="comment"># 네 번째 반복</span>
+<span class="comment"># i = 4</span>
+<span class="comment"># print(i) → 4</span>
+
+<span class="comment"># 다섯 번째 반복</span>
+<span class="comment"># i = 5</span>
+<span class="comment"># print(i) → 5</span></code></pre>
+
+            </div>
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🧩 문제 3
+              </div>
+
+              <p>
+                오른쪽에 전체 코드를 직접 작성해서
+                1부터 5까지 출력해 봅시다.
+              </p>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                빈칸을 생각한 뒤 전체 문법을 직접 입력하세요
+              </div>
+
+              <pre class="lesson-code"><code>for i in range(<span class="blank">___</span>, <span class="blank">___</span>):
+    print(<span class="blank">___</span>)</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">목표 실행 결과</span>1
+2
+3
+4
+5</div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             4. FOR CALCULATION
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              4
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                i가 바뀌면 계산 결과도 바뀝니다
+              </h2>
+
+              <p class="python-section-subtitle">
+                이제 반복문을 구구단과 연결해 봅니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              1분
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                i에 2를 곱해 봅시다
+              </div>
+
+              <pre class="lesson-code"><code>for i in range(1, 6):
+    print(i * 2)
+
+<span class="comment"># i = 1 → 1 × 2 → 2</span>
+<span class="comment"># i = 2 → 2 × 2 → 4</span>
+<span class="comment"># i = 3 → 3 × 2 → 6</span>
+<span class="comment"># i = 4 → 4 × 2 → 8</span>
+<span class="comment"># i = 5 → 5 × 2 → 10</span></code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">실행 결과</span>2
+4
+6
+8
+10</div>
+
+            <div class="python-callout purple">
+              반복문 안에서는 단순히 i를 출력하는 것뿐 아니라
+              <strong>
+                i를 사용해서 매번 다른 계산
+              </strong>
+              을 할 수 있습니다.
+            </div>
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🧩 짧은 도전
+              </div>
+
+              <p>
+                3, 6, 9, 12, 15가 출력되게 하려면
+                <code>print()</code> 안을 어떻게 바꾸면 될까요?
+              </p>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                빈칸
+              </div>
+
+              <pre class="lesson-code"><code>for i in range(1, 6):
+    print(<span class="blank">________</span>)</code></pre>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             5. N DAN
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              5
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                n단을 출력해 봅시다
+              </h2>
+
+              <p class="python-section-subtitle">
+                하나의 for문으로 하나의 구구단을 완성합니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              1분
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <p>
+              이번에는
+              <code>n</code>에 몇 단인지 저장하고,
+              <code>i</code>를 1부터 9까지 변화시키겠습니다.
+            </p>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                문제 5 · 3단 만들기
+              </div>
+
+              <pre class="lesson-code"><code>n = 3
+
+for i in range(<span class="blank">___</span>, <span class="blank">___</span>):
+    print(
+        n,
+        "x",
+        i,
+        "=",
+        <span class="blank">________</span>
+    )</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">목표 실행 결과</span>3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27</div>
+
+            <div class="hint-list">
+
+              <div class="hint">
+                <strong>힌트 1.</strong>
+                i는 1부터 9까지 필요합니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 2.</strong>
+                range에서 마지막 숫자는 포함되지 않습니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 3.</strong>
+                3단에서 계산해야 하는 값은
+                <code>n × i</code>입니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 4.</strong>
+                Python의 곱셈 기호는
+                <code>*</code>입니다.
+              </div>
+
+            </div>
+
+            <details>
+              <summary>
+                아주 작은 추가 힌트
+              </summary>
+
+              <div class="answer-content">
+                1부터 9까지라면
+                <code>range(1, 10)</code>을 생각해 보세요.
+              </div>
+            </details>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             6. NESTED FOR
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              6
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                반복문 안에 반복문을 넣으면?
+              </h2>
+
+              <p class="python-section-subtitle">
+                2중 for문의 움직임을 먼저 작은 숫자로 확인합니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              1분 30초
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <div class="python-callout yellow">
+              2중 for문은 처음부터 구구단 81개를 보면 복잡해 보일 수 있습니다.
+              먼저 숫자를 작게 줄여서
+              <strong>i와 j가 어떻게 움직이는지만</strong>
+              확인해 봅시다.
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                아주 작은 2중 for문
+              </div>
+
+              <pre class="lesson-code"><code>for i in range(1, 4):
+
+    for j in range(1, 4):
+
+        print(i, j)</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">실행 결과</span>1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3</div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                실제 반복 순서를 주석으로 따라가 봅시다
+              </div>
+
+              <pre class="lesson-code"><code><span class="comment"># 바깥쪽 첫 번째 반복</span>
+<span class="comment"># i = 1</span>
+
+<span class="comment">#   j = 1 → print(1, 1)</span>
+<span class="comment">#   j = 2 → print(1, 2)</span>
+<span class="comment">#   j = 3 → print(1, 3)</span>
+
+
+<span class="comment"># j의 반복이 전부 끝났습니다.</span>
+<span class="comment"># 이제 바깥쪽 i가 다음 값으로 바뀝니다.</span>
+
+
+<span class="comment"># 바깥쪽 두 번째 반복</span>
+<span class="comment"># i = 2</span>
+
+<span class="comment">#   j = 1 → print(2, 1)</span>
+<span class="comment">#   j = 2 → print(2, 2)</span>
+<span class="comment">#   j = 3 → print(2, 3)</span>
+
+
+<span class="comment"># 다시 j의 반복이 전부 끝났습니다.</span>
+
+
+<span class="comment"># 바깥쪽 세 번째 반복</span>
+<span class="comment"># i = 3</span>
+
+<span class="comment">#   j = 1 → print(3, 1)</span>
+<span class="comment">#   j = 2 → print(3, 2)</span>
+<span class="comment">#   j = 3 → print(3, 3)</span></code></pre>
+
+            </div>
+
+            <div class="python-callout blue">
+              <strong>핵심</strong><br><br>
+
+              바깥쪽 i가 하나 정해지면<br>
+              ↓<br>
+              안쪽 j가 처음부터 끝까지 전부 반복<br>
+              ↓<br>
+              j가 모두 끝나면<br>
+              ↓<br>
+              바깥쪽 i가 다음 숫자로 변경됩니다.
+            </div>
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                👀 구구단과 연결
+              </div>
+
+              <p>
+                바깥쪽 숫자를 <strong>몇 단인지</strong>로 사용하고,
+                안쪽 숫자를 <strong>몇을 곱할지</strong>로 사용하면
+                어떤 프로그램을 만들 수 있을까요?
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             7. FULL GUGUDAN
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              7
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                도전! 1단부터 9단까지
+              </h2>
+
+              <p class="python-section-subtitle">
+                지금까지의 내용을 하나로 연결합니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              1분 30초
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <p>
+              이제 바깥쪽 반복문은
+              <strong>
+                몇 단인지
+              </strong>
+              를 결정하고,
+
+              안쪽 반복문은
+              <strong>
+                그 단에서 1부터 9까지 무엇을 곱할지
+              </strong>
+              를 결정합니다.
+            </p>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                문제 7 · 일부러 빈칸을 많이 만들었습니다
+              </div>
+
+              <pre class="lesson-code"><code>for dan in range(<span class="blank">___</span>, <span class="blank">___</span>):
+
+    print("======", <span class="blank">______</span>, "단 ======")
+
+
+    for i in range(<span class="blank">___</span>, <span class="blank">___</span>):
+
+        print(
+            <span class="blank">______</span>,
+            "x",
+            <span class="blank">______</span>,
+            "=",
+            <span class="blank">____________</span>
+        )</code></pre>
+
+            </div>
+
+            <div class="hint-list">
+
+              <div class="hint">
+                <strong>힌트 1.</strong>
+                dan은 몇 단인지 나타냅니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 2.</strong>
+                dan도 1부터 9까지 바뀌어야 합니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 3.</strong>
+                i 역시 각 단마다 1부터 9까지 바뀝니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 4.</strong>
+                첫 번째 계산은
+                <code>1 × 1</code>입니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 5.</strong>
+                마지막 계산은
+                <code>9 × 9</code>입니다.
+              </div>
+
+              <div class="hint">
+                <strong>힌트 6.</strong>
+                결과값은
+                <code>dan</code>과
+                <code>i</code>를 곱한 값입니다.
+              </div>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">실행 결과 일부</span>====== 1 단 ======
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3
+...
+1 x 9 = 9
+
+====== 2 단 ======
+2 x 1 = 2
+2 x 2 = 4
+...
+2 x 9 = 18
+
+...
+
+====== 9 단 ======
+9 x 1 = 9
+...
+9 x 9 = 81</div>
+
+            <div class="python-callout green">
+              여기까지 성공했다면
+              함수와 반복문을 단순히 읽은 것이 아니라
+              <strong>
+                직접 Python 문법으로 작성하고 실행해 본 것
+              </strong>
+              입니다.
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             BONUS FUNCTION + LOOP
+             ==================================================== -->
+
+        <section class="python-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              +
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                BONUS · 함수 안에 for문 넣기
+              </h2>
+
+              <p class="python-section-subtitle">
+                시간이 남을 때 사용하는 추가 예제입니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              선택
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <p>
+              앞에서 배운 함수와 반복문은
+              서로 따로 사용하는 문법이 아닙니다.
+
+              <strong>
+                함수 안에도 for문을 넣을 수 있습니다.
+              </strong>
+            </p>
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🧩 원하는 단을 출력하는 함수
+              </div>
+
+              <p>
+                <code>gugudan(5)</code>라고 호출하면
+                5단 전체가 출력되도록 만들어 봅시다.
+              </p>
+
+            </div>
+
+            <div class="code-card">
+
+              <div class="code-card-title">
+                빈칸 문제
+              </div>
+
+              <pre class="lesson-code"><code>def gugudan(n):
+
+    for i in range(<span class="blank">___</span>, <span class="blank">___</span>):
+
+        print(
+            n,
+            "x",
+            <span class="blank">______</span>,
+            "=",
+            <span class="blank">____________</span>
+        )
+
+
+gugudan(<span class="blank">___</span>)</code></pre>
+
+            </div>
+
+            <div class="expected-output"><span class="expected-output-label">gugudan(5)의 결과</span>5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45</div>
+
+            <div class="python-callout purple">
+              결국 실제 프로그램은
+              함수, 반복문, 조건문처럼
+              <strong>
+                여러 문법을 조합해서 하나의 기능을 만드는 과정
+              </strong>
+              입니다.
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             FINAL 5 MIN
+             ==================================================== -->
+
+        <section class="python-section final-section">
+
+          <div class="python-section-header">
+
+            <div class="python-section-number">
+              ★
+            </div>
+
+            <div class="python-section-title-wrap">
+              <h2 class="python-section-title">
+                마지막 5분
+              </h2>
+
+              <p class="python-section-subtitle">
+                이제 교재 화면을 보지 않습니다.
+              </p>
+            </div>
+
+            <div class="python-section-time">
+              5분
+            </div>
+
+          </div>
+
+          <div class="python-section-body">
+
+            <div class="python-callout purple">
+              지금까지는 문제와 힌트를 보며 연습했습니다.<br><br>
+
+              이제 이 화면을 보지 않고
+              <strong>
+                실제 Python 개발환경에서
+                구구단을 처음부터 함께 만들어 봅시다.
+              </strong>
+            </div>
+
+            <ul class="final-checklist">
+
+              <li>
+                ① 몇 단인지 나타내는 숫자가 1부터 9까지 바뀌어야 합니다.
+              </li>
+
+              <li>
+                ② 한 단 안에서도 곱하는 숫자가 1부터 9까지 바뀌어야 합니다.
+              </li>
+
+              <li>
+                ③ 따라서 반복문이 하나가 아니라 두 개 필요합니다.
+              </li>
+
+              <li>
+                ④ 각 반복에서
+                <code>dan × i</code>
+                를 계산합니다.
+              </li>
+
+              <li>
+                ⑤ 실행해서 1 × 1부터 9 × 9까지 나오는지 확인합니다.
+              </li>
+
+              <li>
+                ⑥ 오류가 나면 답부터 보지 않고
+                어느 줄이 잘못되었는지 함께 찾아봅니다.
+              </li>
+
+            </ul>
+
+            <div class="exercise">
+
+              <div class="exercise-title">
+                🚀 최종 목표
+              </div>
+
+              <p>
+                <strong>
+                  예제를 따라 쓰는 것에서 끝나는 것이 아니라,
+                  배운 구조를 떠올려 직접 프로그램을 작성합니다.
+                </strong>
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- ======================================================
+           RIGHT PYTHON RUNNER (Trinket 삽입)
+           ====================================================== -->
+
+      <aside class="python-runner-column">
+
+        <!-- 기존의 예쁜 테두리와 그림자 효과를 내는 컨테이너를 살립니다 -->
+        <!-- display: block으로 덮어씌워 내부 iframe이 꽉 차게 만듭니다 -->
+        <div class="python-runner" style="display: block; padding: 0; border-radius: 17px; overflow: hidden;">
+          <iframe 
+              src="https://trinket.io/embed/python3?runOption=run" 
+              width="100%" 
+              height="100%" 
+              frameborder="0" 
+              marginwidth="0" 
+              marginheight="0" 
+              style="border: none; width: 100%; height: 100%; display: block;"
+              allowfullscreen>
+          </iframe>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ============================================================
+     UI LAYOUT SCRIPT
+     파이썬 로딩/실행 코드는 모두 지우고, 
+     우측 실행기가 화면 크기에 맞춰 예쁘게 따라다니는 '위치 계산' JS만 남겼습니다.
+     ============================================================ -->
+<script>
+(function () {
+  const root = document.getElementById("pythonLessonRoot");
+  if (!root) return;
+
+  const shell = root.querySelector(".python-lesson-shell");
+  const runnerColumn = root.querySelector(".python-runner-column");
+
+  if (!shell || !runnerColumn) return;
+
+  function positionRunner() {
+    if (!shell.isConnected || !runnerColumn.isConnected) return;
+
+    const rect = shell.getBoundingClientRect();
+    const viewportWidth = document.documentElement.clientWidth;
+    const inset = viewportWidth <= 600 ? 6 : 16;
+
+    let left = Math.max(6, rect.left + inset);
+    let right = Math.min(viewportWidth - 6, rect.right - inset);
+    let width = right - left;
+
+    if (width < 260) {
+      left = 6;
+      width = viewportWidth - 12;
+    }
+
+    runnerColumn.style.left = Math.round(left) + "px";
+    runnerColumn.style.width = Math.round(width) + "px";
+    runnerColumn.style.transform = "none";
+  }
+
+  // 렌더링 후 최초 위치 잡기
+  requestAnimationFrame(positionRunner);
+
+  // 브라우저 크기 변경 시 대응
+  const resizeHandler = () => positionRunner();
+  window.addEventListener("resize", resizeHandler, { passive: true });
+
+  let resizeObserver = null;
+  if (typeof ResizeObserver !== "undefined") {
+    resizeObserver = new ResizeObserver(() => positionRunner());
+    resizeObserver.observe(shell);
+  }
+})();
+</script>
