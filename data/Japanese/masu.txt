@@ -1,0 +1,3493 @@
+ます형
+<style>
+  :root {
+    --masu-bg: #f8fafc;
+    --masu-card: #ffffff;
+    --masu-text: #20242a;
+    --masu-sub: #6b7280;
+    --masu-line: #e5e7eb;
+
+    --masu-main: #3b82f6;
+    --masu-main-soft: #eff6ff;
+
+    --masu-accent: #10b981;
+    --masu-accent-soft: #ecfdf5;
+
+    --masu-example: #fffaf0;
+    --masu-example-line: #ead9a8;
+
+    --masu-practice: #f5f3ff;
+    --masu-practice-line: #a78bfa;
+
+    --masu-answer: #f0fdf4;
+    --masu-answer-line: #86c89d;
+
+    --masu-warning: #fff7ed;
+    --masu-warning-line: #f0a76b;
+
+    --masu-radius: 16px;
+    --masu-small-radius: 10px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .masu-lesson {
+    width: min(100%, 820px);
+    margin: 0 auto;
+    padding: 18px 12px 44px;
+    color: var(--masu-text);
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Pretendard",
+      "Noto Sans KR",
+      "Noto Sans JP",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  .masu-title-box {
+    padding: 22px 20px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #4f8ff7, #3374db);
+    border-radius: var(--masu-radius);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(35, 80, 150, 0.12);
+  }
+
+  .masu-title-label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    opacity: 0.86;
+  }
+
+  .masu-title {
+    margin: 0;
+    font-size: clamp(26px, 5vw, 36px);
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+  }
+
+  .masu-title-sub {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.94;
+  }
+
+  .masu-section {
+    margin-top: 16px;
+    padding: 18px 16px;
+    background: var(--masu-card);
+    border: 1px solid var(--masu-line);
+    border-radius: var(--masu-radius);
+    box-shadow: 0 3px 12px rgba(20, 30, 40, 0.04);
+  }
+
+  .masu-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+  }
+
+  .masu-section-title::before {
+    content: "";
+    width: 5px;
+    height: 23px;
+    flex: 0 0 auto;
+    background: var(--masu-main);
+    border-radius: 999px;
+  }
+
+  .masu-section-desc {
+    margin: -2px 0 14px;
+    color: var(--masu-sub);
+    font-size: 14px;
+  }
+
+  .masu-level {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: var(--masu-main-soft);
+    color: var(--masu-main);
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 0.04em;
+  }
+
+  .masu-concept {
+    margin-top: 12px;
+    padding: 15px 16px;
+    background: var(--masu-main-soft);
+    border: 1px solid #bfdbfe;
+    border-left: 5px solid var(--masu-main);
+    border-radius: var(--masu-small-radius);
+  }
+
+  .masu-concept-title {
+    margin: 0 0 7px;
+    color: #245db4;
+    font-size: 16px;
+    font-weight: 850;
+  }
+
+  .masu-concept p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .masu-concept p + p {
+    margin-top: 6px;
+  }
+
+  .masu-rule {
+    margin-top: 10px;
+    padding: 13px 14px;
+    background: #f7f9fc;
+    border: 1px solid #dce2ea;
+    border-radius: var(--masu-small-radius);
+  }
+
+  .masu-rule-main {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 850;
+  }
+
+  .masu-rule-sub {
+    color: var(--masu-sub);
+    font-size: 13px;
+  }
+
+  .masu-flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+  }
+
+  .masu-flow-item {
+    padding: 7px 10px;
+    background: #fff;
+    border: 1px solid var(--masu-line);
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .masu-flow-arrow {
+    color: #9299a3;
+    font-weight: 800;
+  }
+
+  .masu-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 12px;
+  }
+
+  .masu-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  .masu-table th,
+  .masu-table td {
+    padding: 10px 11px;
+    border: 1px solid var(--masu-line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .masu-table th {
+    background: #f3f6fa;
+    font-weight: 800;
+  }
+
+  .masu-table td strong {
+    color: var(--masu-main);
+  }
+
+  .masu-example-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .masu-example {
+    padding: 13px 14px;
+    background: var(--masu-example);
+    border: 1px solid var(--masu-example-line);
+    border-radius: var(--masu-small-radius);
+  }
+
+  .masu-example-label {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 2px 7px;
+    background: #f1dfa9;
+    border-radius: 999px;
+    color: #5f4f26;
+    font-size: 11px;
+    font-weight: 850;
+  }
+
+  .masu-sentence {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 2;
+    word-break: normal;
+  }
+
+  .masu-hiragana {
+    margin: 2px 0 0;
+    color: #5b6470;
+    font-size: 14px;
+    line-height: 1.8;
+    word-break: normal;
+  }
+
+  .masu-meaning {
+    margin: 6px 0 0;
+    padding-top: 7px;
+    border-top: 1px dashed rgba(100, 90, 60, 0.25);
+    font-size: 14px;
+    font-weight: 650;
+  }
+
+  .masu-note {
+    margin: 7px 0 0;
+    color: var(--masu-sub);
+    font-size: 13px;
+  }
+
+  ruby {
+    ruby-position: over;
+    ruby-align: center;
+  }
+
+  rt {
+    color: #6e7681;
+    font-size: 0.56em;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  .masu-warning {
+    margin-top: 12px;
+    padding: 13px 14px;
+    background: var(--masu-warning);
+    border: 1px solid var(--masu-warning-line);
+    border-left: 5px solid #e88b48;
+    border-radius: var(--masu-small-radius);
+    font-size: 14px;
+  }
+
+  .masu-warning strong {
+    color: #b35c1c;
+  }
+
+  .masu-practice {
+    margin-top: 14px;
+    padding: 15px;
+    background: var(--masu-practice);
+    border: 1px solid var(--masu-practice-line);
+    border-left: 5px solid #8b5cf6;
+    border-radius: var(--masu-small-radius);
+  }
+
+  .masu-practice-title {
+    margin: 0 0 8px;
+    color: #6d43c5;
+    font-size: 16px;
+    font-weight: 850;
+  }
+
+  .masu-practice ol,
+  .masu-practice ul {
+    margin: 0;
+    padding-left: 21px;
+  }
+
+  .masu-practice li + li {
+    margin-top: 7px;
+  }
+
+  .masu-question {
+    margin-top: 9px;
+    padding: 10px 11px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .masu-answer {
+    margin-top: 10px;
+    padding: 13px 14px;
+    background: var(--masu-answer);
+    border: 1px solid var(--masu-answer-line);
+    border-radius: var(--masu-small-radius);
+  }
+
+  .masu-answer-title {
+    margin: 0 0 7px;
+    color: #39764d;
+    font-size: 15px;
+    font-weight: 850;
+  }
+
+  .masu-answer p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .masu-answer p + p {
+    margin-top: 5px;
+  }
+
+  .masu-speaking {
+    margin-top: 14px;
+    padding: 15px;
+    background: var(--masu-accent-soft);
+    border: 1px solid #a7e3ca;
+    border-left: 5px solid var(--masu-accent);
+    border-radius: var(--masu-small-radius);
+  }
+
+  .masu-speaking-title {
+    margin: 0 0 8px;
+    color: #237a59;
+    font-size: 16px;
+    font-weight: 850;
+  }
+
+  .masu-speaking p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .masu-speaking p + p {
+    margin-top: 6px;
+  }
+
+  .masu-subtitle {
+    margin: 20px 0 9px;
+    font-size: 18px;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+  }
+
+  .masu-subtitle:first-child {
+    margin-top: 0;
+  }
+
+  .masu-summary {
+    margin-top: 12px;
+    padding: 13px 14px;
+    background: #f8fafc;
+    border: 1px dashed #b9c2cf;
+    border-radius: var(--masu-small-radius);
+    color: #4f5660;
+    font-size: 13px;
+  }
+
+  .masu-summary strong {
+    color: #2f3742;
+  }
+
+  @media (max-width: 600px) {
+    .masu-lesson {
+      padding: 12px 8px 32px;
+    }
+
+    .masu-title-box {
+      padding: 18px 15px;
+      border-radius: 14px;
+    }
+
+    .masu-section {
+      margin-top: 12px;
+      padding: 15px 12px;
+      border-radius: 14px;
+    }
+
+    .masu-sentence {
+      font-size: 17px;
+    }
+
+    .masu-table {
+      min-width: 520px;
+    }
+  }
+
+  @media print {
+    .masu-lesson {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    .masu-title-box,
+    .masu-section,
+    .masu-example,
+    .masu-practice,
+    .masu-answer,
+    .masu-speaking,
+    .masu-warning {
+      box-shadow: none;
+      break-inside: avoid;
+    }
+
+    .masu-title-box {
+      background: #fff;
+      color: #000;
+      border: 2px solid #333;
+    }
+  }
+</style>
+<div class="masu-lesson">
+
+  <div class="masu-title-box">
+    <div class="masu-title-label">ます形 STEP 1</div>
+    <h1 class="masu-title">ます형 완전 기초</h1>
+    <p class="masu-title-sub">
+      이번 파트에서는 ます형이 무엇인지부터 시작해서,
+      동사 그룹별로 ます형을 만드는 방법을 자세히 익힙니다.
+      모든 예문에는 히라가나와 한국어 뜻을 함께 적었습니다.
+    </p>
+  </div>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">1. ます형이란?</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">동사를 정중하게 말하는 기본 형태</h3>
+      <p>
+        일본어에서 동작을 나타내는 말을 <strong>동사</strong>라고 합니다.
+      </p>
+      <p>
+        예를 들어 食べる는 “먹다”, 行く는 “가다”, 飲む는 “마시다”라는 뜻입니다.
+      </p>
+      <p>
+        이런 동사를 상대방에게 정중하게 말할 때
+        <strong>ます형</strong>을 매우 자주 사용합니다.
+      </p>
+    </div>
+
+    <div class="masu-flow">
+      <div class="masu-flow-item">食べる</div>
+      <div class="masu-flow-arrow">→</div>
+      <div class="masu-flow-item">食べます</div>
+    </div>
+
+    <div class="masu-flow">
+      <div class="masu-flow-item">行く</div>
+      <div class="masu-flow-arrow">→</div>
+      <div class="masu-flow-item">行きます</div>
+    </div>
+
+    <div class="masu-flow">
+      <div class="masu-flow-item">飲む</div>
+      <div class="masu-flow-arrow">→</div>
+      <div class="masu-flow-item">飲みます</div>
+    </div>
+
+    <h3 class="masu-subtitle">문장에서 비교하기</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <span class="masu-example-label">기본형</span>
+        <p class="masu-sentence">
+          <ruby>食<rt>た</rt></ruby>べる。
+        </p>
+        <p class="masu-hiragana">
+          たべる。
+        </p>
+        <p class="masu-meaning">
+          먹는다 / 먹다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">정중한 표현</span>
+        <p class="masu-sentence">
+          <ruby>食<rt>た</rt></ruby>べます。
+        </p>
+        <p class="masu-hiragana">
+          たべます。
+        </p>
+        <p class="masu-meaning">
+          먹습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">기본형</span>
+        <p class="masu-sentence">
+          <ruby>学校<rt>がっこう</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>く。
+        </p>
+        <p class="masu-hiragana">
+          がっこうに いく。
+        </p>
+        <p class="masu-meaning">
+          학교에 간다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">정중한 표현</span>
+        <p class="masu-sentence">
+          <ruby>学校<rt>がっこう</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きます。
+        </p>
+        <p class="masu-hiragana">
+          がっこうに いきます。
+        </p>
+        <p class="masu-meaning">
+          학교에 갑니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="masu-summary">
+      <strong>이번 파트에서 기억할 것:</strong>
+      기본형 자체를 외우는 것보다
+      “동사의 모양을 바꾸어서 정중하게 말할 수 있다”는 개념부터 이해하면 됩니다.
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">2. 동사는 크게 세 그룹으로 나눌 수 있습니다</h2>
+
+    <p class="masu-section-desc">
+      ます형을 만드는 방법은 동사 그룹에 따라 달라집니다.
+    </p>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>그룹</th>
+            <th>기본적인 변환 방법</th>
+            <th>예제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1그룹</td>
+            <td>마지막 う단을 い단으로 바꾸고 ます</td>
+            <td>書く → 書きます</td>
+          </tr>
+          <tr>
+            <td>2그룹</td>
+            <td>마지막 る를 빼고 ます</td>
+            <td>食べる → 食べます</td>
+          </tr>
+          <tr>
+            <td>3그룹</td>
+            <td>불규칙 변화</td>
+            <td>する → します / 来る → 来ます</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="masu-warning">
+      <strong>처음부터 그룹 이름을 완벽하게 외울 필요는 없습니다.</strong>
+      실제 동사를 여러 번 바꾸어보면서 규칙에 익숙해지는 것이 더 중요합니다.
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">3. 1그룹 동사</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">마지막 글자를 う단 → い단으로 바꿉니다</h3>
+      <p>
+        1그룹 동사는 마지막 글자를 같은 행의 <strong>い단</strong>으로 바꾼 뒤
+        ます를 붙입니다.
+      </p>
+    </div>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>기본형 끝</th>
+            <th>ます 앞의 형태</th>
+            <th>예제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>う</td>
+            <td>い</td>
+            <td>買う → 買います</td>
+          </tr>
+          <tr>
+            <td>く</td>
+            <td>き</td>
+            <td>書く → 書きます</td>
+          </tr>
+          <tr>
+            <td>ぐ</td>
+            <td>ぎ</td>
+            <td>泳ぐ → 泳ぎます</td>
+          </tr>
+          <tr>
+            <td>す</td>
+            <td>し</td>
+            <td>話す → 話します</td>
+          </tr>
+          <tr>
+            <td>つ</td>
+            <td>ち</td>
+            <td>待つ → 待ちます</td>
+          </tr>
+          <tr>
+            <td>ぬ</td>
+            <td>に</td>
+            <td>死ぬ → 死にます</td>
+          </tr>
+          <tr>
+            <td>ぶ</td>
+            <td>び</td>
+            <td>遊ぶ → 遊びます</td>
+          </tr>
+          <tr>
+            <td>む</td>
+            <td>み</td>
+            <td>飲む → 飲みます</td>
+          </tr>
+          <tr>
+            <td>る</td>
+            <td>り</td>
+            <td>帰る → 帰ります</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="masu-subtitle">う → います</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>買<rt>か</rt></ruby>う →
+          <ruby>買<rt>か</rt></ruby>います
+        </p>
+        <p class="masu-hiragana">
+          かう → かいます
+        </p>
+        <p class="masu-meaning">
+          사다 → 삽니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>会<rt>あ</rt></ruby>う →
+          <ruby>会<rt>あ</rt></ruby>います
+        </p>
+        <p class="masu-hiragana">
+          あう → あいます
+        </p>
+        <p class="masu-meaning">
+          만나다 → 만납니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>使<rt>つか</rt></ruby>う →
+          <ruby>使<rt>つか</rt></ruby>います
+        </p>
+        <p class="masu-hiragana">
+          つかう → つかいます
+        </p>
+        <p class="masu-meaning">
+          사용하다 → 사용합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          コンビニで<ruby>水<rt>みず</rt></ruby>を
+          <ruby>買<rt>か</rt></ruby>います。
+        </p>
+        <p class="masu-hiragana">
+          コンビニで みずを かいます。
+        </p>
+        <p class="masu-meaning">
+          편의점에서 물을 삽니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>明日<rt>あした</rt></ruby>、
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>会<rt>あ</rt></ruby>います。
+        </p>
+        <p class="masu-hiragana">
+          あした、ともだちに あいます。
+        </p>
+        <p class="masu-meaning">
+          내일 친구를 만납니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">く → きます</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>書<rt>か</rt></ruby>く →
+          <ruby>書<rt>か</rt></ruby>きます
+        </p>
+        <p class="masu-hiragana">
+          かく → かきます
+        </p>
+        <p class="masu-meaning">
+          쓰다 → 씁니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>聞<rt>き</rt></ruby>く →
+          <ruby>聞<rt>き</rt></ruby>きます
+        </p>
+        <p class="masu-hiragana">
+          きく → ききます
+        </p>
+        <p class="masu-meaning">
+          듣다 / 묻다 → 듣습니다 / 묻습니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>働<rt>はたら</rt></ruby>く →
+          <ruby>働<rt>はたら</rt></ruby>きます
+        </p>
+        <p class="masu-hiragana">
+          はたらく → はたらきます
+        </p>
+        <p class="masu-meaning">
+          일하다 → 일합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>毎日<rt>まいにち</rt></ruby>
+          <ruby>日記<rt>にっき</rt></ruby>を
+          <ruby>書<rt>か</rt></ruby>きます。
+        </p>
+        <p class="masu-hiragana">
+          まいにち にっきを かきます。
+        </p>
+        <p class="masu-meaning">
+          매일 일기를 씁니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>音楽<rt>おんがく</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>きます。
+        </p>
+        <p class="masu-hiragana">
+          おんがくを ききます。
+        </p>
+        <p class="masu-meaning">
+          음악을 듣습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">ぐ → ぎます</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>泳<rt>およ</rt></ruby>ぐ →
+          <ruby>泳<rt>およ</rt></ruby>ぎます
+        </p>
+        <p class="masu-hiragana">
+          およぐ → およぎます
+        </p>
+        <p class="masu-meaning">
+          수영하다 → 수영합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>急<rt>いそ</rt></ruby>ぐ →
+          <ruby>急<rt>いそ</rt></ruby>ぎます
+        </p>
+        <p class="masu-hiragana">
+          いそぐ → いそぎます
+        </p>
+        <p class="masu-meaning">
+          서두르다 → 서두릅니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>夏<rt>なつ</rt></ruby>に
+          プールで<ruby>泳<rt>およ</rt></ruby>ぎます。
+        </p>
+        <p class="masu-hiragana">
+          なつに プールで およぎます。
+        </p>
+        <p class="masu-meaning">
+          여름에 수영장에서 수영합니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">す → します</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>話<rt>はな</rt></ruby>す →
+          <ruby>話<rt>はな</rt></ruby>します
+        </p>
+        <p class="masu-hiragana">
+          はなす → はなします
+        </p>
+        <p class="masu-meaning">
+          말하다 → 말합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>貸<rt>か</rt></ruby>す →
+          <ruby>貸<rt>か</rt></ruby>します
+        </p>
+        <p class="masu-hiragana">
+          かす → かします
+        </p>
+        <p class="masu-meaning">
+          빌려주다 → 빌려줍니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>日本語<rt>にほんご</rt></ruby>で
+          <ruby>話<rt>はな</rt></ruby>します。
+        </p>
+        <p class="masu-hiragana">
+          にほんごで はなします。
+        </p>
+        <p class="masu-meaning">
+          일본어로 말합니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">つ → ちます</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>待<rt>ま</rt></ruby>つ →
+          <ruby>待<rt>ま</rt></ruby>ちます
+        </p>
+        <p class="masu-hiragana">
+          まつ → まちます
+        </p>
+        <p class="masu-meaning">
+          기다리다 → 기다립니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>持<rt>も</rt></ruby>つ →
+          <ruby>持<rt>も</rt></ruby>ちます
+        </p>
+        <p class="masu-hiragana">
+          もつ → もちます
+        </p>
+        <p class="masu-meaning">
+          가지다 / 들다 → 가집니다 / 듭니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>駅<rt>えき</rt></ruby>で
+          <ruby>友達<rt>ともだち</rt></ruby>を
+          <ruby>待<rt>ま</rt></ruby>ちます。
+        </p>
+        <p class="masu-hiragana">
+          えきで ともだちを まちます。
+        </p>
+        <p class="masu-meaning">
+          역에서 친구를 기다립니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">む → みます</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>飲<rt>の</rt></ruby>む →
+          <ruby>飲<rt>の</rt></ruby>みます
+        </p>
+        <p class="masu-hiragana">
+          のむ → のみます
+        </p>
+        <p class="masu-meaning">
+          마시다 → 마십니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>読<rt>よ</rt></ruby>む →
+          <ruby>読<rt>よ</rt></ruby>みます
+        </p>
+        <p class="masu-hiragana">
+          よむ → よみます
+        </p>
+        <p class="masu-meaning">
+          읽다 → 읽습니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>休<rt>やす</rt></ruby>む →
+          <ruby>休<rt>やす</rt></ruby>みます
+        </p>
+        <p class="masu-hiragana">
+          やすむ → やすみます
+        </p>
+        <p class="masu-meaning">
+          쉬다 → 쉽니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>朝<rt>あさ</rt></ruby>、
+          コーヒーを<ruby>飲<rt>の</rt></ruby>みます。
+        </p>
+        <p class="masu-hiragana">
+          あさ、コーヒーを のみます。
+        </p>
+        <p class="masu-meaning">
+          아침에 커피를 마십니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>夜<rt>よる</rt></ruby>、
+          <ruby>本<rt>ほん</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>みます。
+        </p>
+        <p class="masu-hiragana">
+          よる、ほんを よみます。
+        </p>
+        <p class="masu-meaning">
+          밤에 책을 읽습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">ぶ → びます</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>遊<rt>あそ</rt></ruby>ぶ →
+          <ruby>遊<rt>あそ</rt></ruby>びます
+        </p>
+        <p class="masu-hiragana">
+          あそぶ → あそびます
+        </p>
+        <p class="masu-meaning">
+          놀다 → 놉니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>選<rt>えら</rt></ruby>ぶ →
+          <ruby>選<rt>えら</rt></ruby>びます
+        </p>
+        <p class="masu-hiragana">
+          えらぶ → えらびます
+        </p>
+        <p class="masu-meaning">
+          고르다 → 고릅니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>週末<rt>しゅうまつ</rt></ruby>、
+          <ruby>友達<rt>ともだち</rt></ruby>と
+          <ruby>遊<rt>あそ</rt></ruby>びます。
+        </p>
+        <p class="masu-hiragana">
+          しゅうまつ、ともだちと あそびます。
+        </p>
+        <p class="masu-meaning">
+          주말에 친구와 놉니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">ぬ → にます</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>死<rt>し</rt></ruby>ぬ →
+          <ruby>死<rt>し</rt></ruby>にます
+        </p>
+        <p class="masu-hiragana">
+          しぬ → しにます
+        </p>
+        <p class="masu-meaning">
+          죽다 → 죽습니다
+        </p>
+        <p class="masu-note">
+          현대 일본어에서 ぬ로 끝나는 대표적인 기본 동사로 자주 사용되는 예입니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">る → ります</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>帰<rt>かえ</rt></ruby>る →
+          <ruby>帰<rt>かえ</rt></ruby>ります
+        </p>
+        <p class="masu-hiragana">
+          かえる → かえります
+        </p>
+        <p class="masu-meaning">
+          돌아가다 → 돌아갑니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>走<rt>はし</rt></ruby>る →
+          <ruby>走<rt>はし</rt></ruby>ります
+        </p>
+        <p class="masu-hiragana">
+          はしる → はしります
+        </p>
+        <p class="masu-meaning">
+          달리다 → 달립니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>入<rt>はい</rt></ruby>る →
+          <ruby>入<rt>はい</rt></ruby>ります
+        </p>
+        <p class="masu-hiragana">
+          はいる → はいります
+        </p>
+        <p class="masu-meaning">
+          들어가다 → 들어갑니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>六時<rt>ろくじ</rt></ruby>に
+          <ruby>家<rt>いえ</rt></ruby>に
+          <ruby>帰<rt>かえ</rt></ruby>ります。
+        </p>
+        <p class="masu-hiragana">
+          ろくじに いえに かえります。
+        </p>
+        <p class="masu-meaning">
+          6시에 집에 돌아갑니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="masu-warning">
+      <strong>중요:</strong>
+      る로 끝난다고 해서 모두 같은 그룹은 아닙니다.
+      帰る → 帰ります처럼 1그룹인 동사도 있고,
+      食べる → 食べます처럼 2그룹인 동사도 있습니다.
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">4. 2그룹 동사</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">마지막 る를 빼고 ます</h3>
+      <p>
+        2그룹 동사는 변환이 비교적 간단합니다.
+      </p>
+      <p>
+        기본형의 마지막 <strong>る</strong>를 빼고 바로 <strong>ます</strong>를 붙입니다.
+      </p>
+    </div>
+
+    <div class="masu-rule">
+      <span class="masu-rule-main">る 제거 + ます</span>
+      <span class="masu-rule-sub">
+        食べる → 食べます
+      </span>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>食<rt>た</rt></ruby>べる →
+          <ruby>食<rt>た</rt></ruby>べます
+        </p>
+        <p class="masu-hiragana">
+          たべる → たべます
+        </p>
+        <p class="masu-meaning">
+          먹다 → 먹습니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>見<rt>み</rt></ruby>る →
+          <ruby>見<rt>み</rt></ruby>ます
+        </p>
+        <p class="masu-hiragana">
+          みる → みます
+        </p>
+        <p class="masu-meaning">
+          보다 → 봅니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>起<rt>お</rt></ruby>きる →
+          <ruby>起<rt>お</rt></ruby>きます
+        </p>
+        <p class="masu-hiragana">
+          おきる → おきます
+        </p>
+        <p class="masu-meaning">
+          일어나다 → 일어납니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>寝<rt>ね</rt></ruby>る →
+          <ruby>寝<rt>ね</rt></ruby>ます
+        </p>
+        <p class="masu-hiragana">
+          ねる → ねます
+        </p>
+        <p class="masu-meaning">
+          자다 → 잡니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>教<rt>おし</rt></ruby>える →
+          <ruby>教<rt>おし</rt></ruby>えます
+        </p>
+        <p class="masu-hiragana">
+          おしえる → おしえます
+        </p>
+        <p class="masu-meaning">
+          가르치다 / 알려주다 → 가르칩니다 / 알려줍니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>開<rt>あ</rt></ruby>ける →
+          <ruby>開<rt>あ</rt></ruby>けます
+        </p>
+        <p class="masu-hiragana">
+          あける → あけます
+        </p>
+        <p class="masu-meaning">
+          열다 → 엽니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>閉<rt>し</rt></ruby>める →
+          <ruby>閉<rt>し</rt></ruby>めます
+        </p>
+        <p class="masu-hiragana">
+          しめる → しめます
+        </p>
+        <p class="masu-meaning">
+          닫다 → 닫습니다
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">문장으로 연습하기</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べます。
+        </p>
+        <p class="masu-hiragana">
+          あさごはんを たべます。
+        </p>
+        <p class="masu-meaning">
+          아침밥을 먹습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>映画<rt>えいが</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>ます。
+        </p>
+        <p class="masu-hiragana">
+          えいがを みます。
+        </p>
+        <p class="masu-meaning">
+          영화를 봅니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>毎朝<rt>まいあさ</rt></ruby>
+          <ruby>七時<rt>しちじ</rt></ruby>に
+          <ruby>起<rt>お</rt></ruby>きます。
+        </p>
+        <p class="masu-hiragana">
+          まいあさ しちじに おきます。
+        </p>
+        <p class="masu-meaning">
+          매일 아침 7시에 일어납니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>十一時<rt>じゅういちじ</rt></ruby>に
+          <ruby>寝<rt>ね</rt></ruby>ます。
+        </p>
+        <p class="masu-hiragana">
+          じゅういちじに ねます。
+        </p>
+        <p class="masu-meaning">
+          11시에 잡니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby>が
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えます。
+        </p>
+        <p class="masu-hiragana">
+          せんせいが にほんごを おしえます。
+        </p>
+        <p class="masu-meaning">
+          선생님이 일본어를 가르칩니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">5. 3그룹 동사</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">する와 来る는 따로 기억합니다</h3>
+      <p>
+        3그룹은 기본적으로 불규칙 변화입니다.
+      </p>
+      <p>
+        초급 단계에서는 대표적인 두 형태를 그대로 기억하면 됩니다.
+      </p>
+    </div>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>기본형</th>
+            <th>ます형</th>
+            <th>뜻</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>する</td>
+            <td><strong>します</strong></td>
+            <td>하다 → 합니다</td>
+          </tr>
+          <tr>
+            <td>
+              <ruby>来<rt>く</rt></ruby>る
+            </td>
+            <td>
+              <strong><ruby>来<rt>き</rt></ruby>ます</strong>
+            </td>
+            <td>오다 → 옵니다</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="masu-subtitle">する → します</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          する → します
+        </p>
+        <p class="masu-hiragana">
+          する → します
+        </p>
+        <p class="masu-meaning">
+          하다 → 합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>勉強<rt>べんきょう</rt></ruby>する →
+          <ruby>勉強<rt>べんきょう</rt></ruby>します
+        </p>
+        <p class="masu-hiragana">
+          べんきょうする → べんきょうします
+        </p>
+        <p class="masu-meaning">
+          공부하다 → 공부합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>運動<rt>うんどう</rt></ruby>する →
+          <ruby>運動<rt>うんどう</rt></ruby>します
+        </p>
+        <p class="masu-hiragana">
+          うんどうする → うんどうします
+        </p>
+        <p class="masu-meaning">
+          운동하다 → 운동합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>料理<rt>りょうり</rt></ruby>する →
+          <ruby>料理<rt>りょうり</rt></ruby>します
+        </p>
+        <p class="masu-hiragana">
+          りょうりする → りょうりします
+        </p>
+        <p class="masu-meaning">
+          요리하다 → 요리합니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>毎日<rt>まいにち</rt></ruby>
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>します。
+        </p>
+        <p class="masu-hiragana">
+          まいにち にほんごを べんきょうします。
+        </p>
+        <p class="masu-meaning">
+          매일 일본어를 공부합니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>週末<rt>しゅうまつ</rt></ruby>に
+          <ruby>運動<rt>うんどう</rt></ruby>します。
+        </p>
+        <p class="masu-hiragana">
+          しゅうまつに うんどうします。
+        </p>
+        <p class="masu-meaning">
+          주말에 운동합니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">来る → 来ます</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>来<rt>く</rt></ruby>る →
+          <ruby>来<rt>き</rt></ruby>ます
+        </p>
+        <p class="masu-hiragana">
+          くる → きます
+        </p>
+        <p class="masu-meaning">
+          오다 → 옵니다
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>家<rt>いえ</rt></ruby>に
+          <ruby>来<rt>き</rt></ruby>ます。
+        </p>
+        <p class="masu-hiragana">
+          ともだちが いえに きます。
+        </p>
+        <p class="masu-meaning">
+          친구가 집에 옵니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>明日<rt>あした</rt></ruby>、
+          <ruby>先生<rt>せんせい</rt></ruby>が
+          <ruby>来<rt>き</rt></ruby>ます。
+        </p>
+        <p class="masu-hiragana">
+          あした、せんせいが きます。
+        </p>
+        <p class="masu-meaning">
+          내일 선생님이 옵니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">중요</span>
+    <h2 class="masu-section-title">6. る로 끝나는 동사는 특히 주의</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">같은 る라도 변환 방식이 다릅니다</h3>
+      <p>
+        초급자가 가장 많이 헷갈리는 부분입니다.
+      </p>
+      <p>
+        <strong>食べる</strong>는 る를 빼서 食べます가 되지만,
+        <strong>帰る</strong>는 帰ります가 됩니다.
+      </p>
+    </div>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>기본형</th>
+            <th>ます형</th>
+            <th>그룹</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>食べる</td>
+            <td>食べます</td>
+            <td>2그룹</td>
+          </tr>
+          <tr>
+            <td>見る</td>
+            <td>見ます</td>
+            <td>2그룹</td>
+          </tr>
+          <tr>
+            <td>起きる</td>
+            <td>起きます</td>
+            <td>2그룹</td>
+          </tr>
+          <tr>
+            <td>帰る</td>
+            <td>帰ります</td>
+            <td>1그룹</td>
+          </tr>
+          <tr>
+            <td>走る</td>
+            <td>走ります</td>
+            <td>1그룹</td>
+          </tr>
+          <tr>
+            <td>入る</td>
+            <td>入ります</td>
+            <td>1그룹</td>
+          </tr>
+          <tr>
+            <td>知る</td>
+            <td>知ります</td>
+            <td>1그룹</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="masu-warning">
+      <strong>초급 단계에서는:</strong>
+      る동사를 볼 때마다 무조건 “る를 빼면 된다”고 생각하지 말고,
+      자주 쓰는 예외 동사를 문장과 함께 익히는 것이 안전합니다.
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">복습</span>
+    <h2 class="masu-section-title">7. 변환 규칙 한 번에 보기</h2>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>기본형</th>
+            <th>ます형</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>買う</td><td>買います</td></tr>
+          <tr><td>書く</td><td>書きます</td></tr>
+          <tr><td>泳ぐ</td><td>泳ぎます</td></tr>
+          <tr><td>話す</td><td>話します</td></tr>
+          <tr><td>待つ</td><td>待ちます</td></tr>
+          <tr><td>死ぬ</td><td>死にます</td></tr>
+          <tr><td>遊ぶ</td><td>遊びます</td></tr>
+          <tr><td>飲む</td><td>飲みます</td></tr>
+          <tr><td>帰る</td><td>帰ります</td></tr>
+          <tr><td>食べる</td><td>食べます</td></tr>
+          <tr><td>見る</td><td>見ます</td></tr>
+          <tr><td>起きる</td><td>起きます</td></tr>
+          <tr><td>する</td><td>します</td></tr>
+          <tr><td>来る</td><td>来ます</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">연습</span>
+    <h2 class="masu-section-title">8. 기본형 → ます형</h2>
+
+    <div class="masu-practice">
+      <h3 class="masu-practice-title">다음 동사를 ます형으로 바꿔보세요</h3>
+
+      <div class="masu-question">1. 買う</div>
+      <div class="masu-question">2. 書く</div>
+      <div class="masu-question">3. 聞く</div>
+      <div class="masu-question">4. 泳ぐ</div>
+      <div class="masu-question">5. 話す</div>
+      <div class="masu-question">6. 待つ</div>
+      <div class="masu-question">7. 持つ</div>
+      <div class="masu-question">8. 飲む</div>
+      <div class="masu-question">9. 読む</div>
+      <div class="masu-question">10. 遊ぶ</div>
+      <div class="masu-question">11. 帰る</div>
+      <div class="masu-question">12. 入る</div>
+      <div class="masu-question">13. 食べる</div>
+      <div class="masu-question">14. 見る</div>
+      <div class="masu-question">15. 起きる</div>
+      <div class="masu-question">16. 寝る</div>
+      <div class="masu-question">17. 教える</div>
+      <div class="masu-question">18. する</div>
+      <div class="masu-question">19. 勉強する</div>
+      <div class="masu-question">20. 来る</div>
+    </div>
+
+    <div class="masu-answer">
+      <h3 class="masu-answer-title">정답</h3>
+
+      <p>1. 買います（かいます）</p>
+      <p>2. 書きます（かきます）</p>
+      <p>3. 聞きます（ききます）</p>
+      <p>4. 泳ぎます（およぎます）</p>
+      <p>5. 話します（はなします）</p>
+      <p>6. 待ちます（まちます）</p>
+      <p>7. 持ちます（もちます）</p>
+      <p>8. 飲みます（のみます）</p>
+      <p>9. 読みます（よみます）</p>
+      <p>10. 遊びます（あそびます）</p>
+      <p>11. 帰ります（かえります）</p>
+      <p>12. 入ります（はいります）</p>
+      <p>13. 食べます（たべます）</p>
+      <p>14. 見ます（みます）</p>
+      <p>15. 起きます（おきます）</p>
+      <p>16. 寝ます（ねます）</p>
+      <p>17. 教えます（おしえます）</p>
+      <p>18. します</p>
+      <p>19. 勉強します（べんきょうします）</p>
+      <p>20. 来ます（きます）</p>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">연습</span>
+    <h2 class="masu-section-title">9. 문장 속에서 ます형 만들기</h2>
+
+    <div class="masu-practice">
+      <h3 class="masu-practice-title">괄호 속 동사를 ます형으로 바꿔보세요</h3>
+
+      <div class="masu-question">
+        1. 毎日、日本語を（勉強する）。
+      </div>
+
+      <div class="masu-question">
+        2. 朝、コーヒーを（飲む）。
+      </div>
+
+      <div class="masu-question">
+        3. 夜、本を（読む）。
+      </div>
+
+      <div class="masu-question">
+        4. 明日、友達に（会う）。
+      </div>
+
+      <div class="masu-question">
+        5. 学校に（行く）。
+      </div>
+
+      <div class="masu-question">
+        6. 七時に（起きる）。
+      </div>
+
+      <div class="masu-question">
+        7. 十二時に（寝る）。
+      </div>
+
+      <div class="masu-question">
+        8. 週末、友達と（遊ぶ）。
+      </div>
+
+      <div class="masu-question">
+        9. 日本語で（話す）。
+      </div>
+
+      <div class="masu-question">
+        10. 六時に家に（帰る）。
+      </div>
+
+      <div class="masu-question">
+        11. 映画を（見る）。
+      </div>
+
+      <div class="masu-question">
+        12. 名前を（書く）。
+      </div>
+
+      <div class="masu-question">
+        13. 先生に（聞く）。
+      </div>
+
+      <div class="masu-question">
+        14. 友達が家に（来る）。
+      </div>
+
+      <div class="masu-question">
+        15. コンビニで水を（買う）。
+      </div>
+    </div>
+
+    <div class="masu-answer">
+      <h3 class="masu-answer-title">정답</h3>
+
+      <p>1. 毎日、日本語を勉強します。</p>
+      <p class="masu-hiragana">まいにち、にほんごを べんきょうします。</p>
+
+      <p>2. 朝、コーヒーを飲みます。</p>
+      <p class="masu-hiragana">あさ、コーヒーを のみます。</p>
+
+      <p>3. 夜、本を読みます。</p>
+      <p class="masu-hiragana">よる、ほんを よみます。</p>
+
+      <p>4. 明日、友達に会います。</p>
+      <p class="masu-hiragana">あした、ともだちに あいます。</p>
+
+      <p>5. 学校に行きます。</p>
+      <p class="masu-hiragana">がっこうに いきます。</p>
+
+      <p>6. 七時に起きます。</p>
+      <p class="masu-hiragana">しちじに おきます。</p>
+
+      <p>7. 十二時に寝ます。</p>
+      <p class="masu-hiragana">じゅうにじに ねます。</p>
+
+      <p>8. 週末、友達と遊びます。</p>
+      <p class="masu-hiragana">しゅうまつ、ともだちと あそびます。</p>
+
+      <p>9. 日本語で話します。</p>
+      <p class="masu-hiragana">にほんごで はなします。</p>
+
+      <p>10. 六時に家に帰ります。</p>
+      <p class="masu-hiragana">ろくじに いえに かえります。</p>
+
+      <p>11. 映画を見ます。</p>
+      <p class="masu-hiragana">えいがを みます。</p>
+
+      <p>12. 名前を書きます。</p>
+      <p class="masu-hiragana">なまえを かきます。</p>
+
+      <p>13. 先生に聞きます。</p>
+      <p class="masu-hiragana">せんせいに ききます。</p>
+
+      <p>14. 友達が家に来ます。</p>
+      <p class="masu-hiragana">ともだちが いえに きます。</p>
+
+      <p>15. コンビニで水を買います。</p>
+      <p class="masu-hiragana">コンビニで みずを かいます。</p>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">말하기</span>
+    <h2 class="masu-section-title">10. 내 생활을 ます형으로 말해보기</h2>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">① 아침에 무엇을 하나요?</h3>
+
+      <p class="masu-sentence">
+        <ruby>朝<rt>あさ</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>をしますか？
+      </p>
+
+      <p class="masu-hiragana">
+        あさ、なにを しますか？
+      </p>
+
+      <p>
+        아침에 무엇을 하나요?
+      </p>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <span class="masu-example-label">예시</span>
+        <p class="masu-sentence">
+          コーヒーを<ruby>飲<rt>の</rt></ruby>みます。
+        </p>
+        <p class="masu-hiragana">
+          コーヒーを のみます。
+        </p>
+        <p class="masu-meaning">
+          커피를 마십니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">예시</span>
+        <p class="masu-sentence">
+          <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べます。
+        </p>
+        <p class="masu-hiragana">
+          あさごはんを たべます。
+        </p>
+        <p class="masu-meaning">
+          아침밥을 먹습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">② 주말에 무엇을 하나요?</h3>
+
+      <p class="masu-sentence">
+        <ruby>週末<rt>しゅうまつ</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>をしますか？
+      </p>
+
+      <p class="masu-hiragana">
+        しゅうまつ、なにを しますか？
+      </p>
+
+      <p>
+        주말에 무엇을 하나요?
+      </p>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <span class="masu-example-label">예시</span>
+        <p class="masu-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>と
+          <ruby>遊<rt>あそ</rt></ruby>びます。
+        </p>
+        <p class="masu-hiragana">
+          ともだちと あそびます。
+        </p>
+        <p class="masu-meaning">
+          친구와 놉니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">예시</span>
+        <p class="masu-sentence">
+          <ruby>映画<rt>えいが</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>ます。
+        </p>
+        <p class="masu-hiragana">
+          えいがを みます。
+        </p>
+        <p class="masu-meaning">
+          영화를 봅니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="masu-summary">
+    <strong>다음 파트:</strong>
+    다음 턴에서는 ます형을 실제 문장에서 활용합니다.
+    <strong>～ます・～ません・～ました・～ませんでした・～ますか</strong>를
+    예문과 연습문제를 많이 넣어서 정리합니다.
+  </div>
+
+</div>
+<div class="masu-lesson">
+
+  <div class="masu-title-box">
+    <div class="masu-title-label">ます形 FINAL STEP</div>
+    <h1 class="masu-title">ます형 활용 완성</h1>
+    <p class="masu-title-sub">
+      이번 파트에서는 ます형을 실제 문장에서 어떻게 바꾸어 사용하는지 배웁니다.
+      현재·미래, 부정, 과거, 과거 부정, 질문까지 한 번에 정리합니다.
+      모든 예문에는 히라가나와 한국어 뜻을 함께 적었습니다.
+    </p>
+  </div>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">1. ～ます : 합니다 / 할 겁니다</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">현재의 습관과 미래의 행동을 모두 표현할 수 있습니다</h3>
+      <p>
+        일본어의 ～ます는 단순히 “지금 한다”만 뜻하지 않습니다.
+      </p>
+      <p>
+        평소에 반복적으로 하는 행동에도 사용할 수 있고,
+        앞으로 할 예정인 행동에도 사용할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="masu-rule">
+      <span class="masu-rule-main">동사 ます형</span>
+      <span class="masu-rule-sub">
+        의미: ~합니다 / ~할 겁니다
+      </span>
+    </div>
+
+    <h3 class="masu-subtitle">A. 평소의 습관</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>毎日<rt>まいにち</rt></ruby>
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>します。
+        </p>
+        <p class="masu-hiragana">
+          まいにち にほんごを べんきょうします。
+        </p>
+        <p class="masu-meaning">
+          매일 일본어를 공부합니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>朝<rt>あさ</rt></ruby>、
+          コーヒーを<ruby>飲<rt>の</rt></ruby>みます。
+        </p>
+        <p class="masu-hiragana">
+          あさ、コーヒーを のみます。
+        </p>
+        <p class="masu-meaning">
+          아침에 커피를 마십니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>夜<rt>よる</rt></ruby>、
+          <ruby>本<rt>ほん</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>みます。
+        </p>
+        <p class="masu-hiragana">
+          よる、ほんを よみます。
+        </p>
+        <p class="masu-meaning">
+          밤에 책을 읽습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>週末<rt>しゅうまつ</rt></ruby>は
+          <ruby>友達<rt>ともだち</rt></ruby>と
+          <ruby>遊<rt>あそ</rt></ruby>びます。
+        </p>
+        <p class="masu-hiragana">
+          しゅうまつは ともだちと あそびます。
+        </p>
+        <p class="masu-meaning">
+          주말에는 친구와 놉니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>毎朝<rt>まいあさ</rt></ruby>
+          <ruby>七時<rt>しちじ</rt></ruby>に
+          <ruby>起<rt>お</rt></ruby>きます。
+        </p>
+        <p class="masu-hiragana">
+          まいあさ しちじに おきます。
+        </p>
+        <p class="masu-meaning">
+          매일 아침 7시에 일어납니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>会社<rt>かいしゃ</rt></ruby>で
+          パソコンを<ruby>使<rt>つか</rt></ruby>います。
+        </p>
+        <p class="masu-hiragana">
+          かいしゃで パソコンを つかいます。
+        </p>
+        <p class="masu-meaning">
+          회사에서 컴퓨터를 사용합니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">B. 미래의 행동</h3>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">일본어에는 영어처럼 반드시 별도의 미래형이 필요한 것은 아닙니다</h3>
+      <p>
+        明日, 来週, 来年처럼 미래를 나타내는 말이 있으면
+        ～ます 형태 그대로 미래의 행동을 표현할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>明日<rt>あした</rt></ruby>、
+          <ruby>東京<rt>とうきょう</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きます。
+        </p>
+        <p class="masu-hiragana">
+          あした、とうきょうに いきます。
+        </p>
+        <p class="masu-meaning">
+          내일 도쿄에 갑니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>来週<rt>らいしゅう</rt></ruby>、
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>会<rt>あ</rt></ruby>います。
+        </p>
+        <p class="masu-hiragana">
+          らいしゅう、ともだちに あいます。
+        </p>
+        <p class="masu-meaning">
+          다음 주에 친구를 만납니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>今晩<rt>こんばん</rt></ruby>、
+          <ruby>映画<rt>えいが</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>ます。
+        </p>
+        <p class="masu-hiragana">
+          こんばん、えいがを みます。
+        </p>
+        <p class="masu-meaning">
+          오늘 밤 영화를 봅니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>明日<rt>あした</rt></ruby>、
+          ホテルを<ruby>予約<rt>よやく</rt></ruby>します。
+        </p>
+        <p class="masu-hiragana">
+          あした、ホテルを よやくします。
+        </p>
+        <p class="masu-meaning">
+          내일 호텔을 예약합니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>来年<rt>らいねん</rt></ruby>、
+          <ruby>日本<rt>にほん</rt></ruby>へ
+          <ruby>旅行<rt>りょこう</rt></ruby>します。
+        </p>
+        <p class="masu-hiragana">
+          らいねん、にほんへ りょこうします。
+        </p>
+        <p class="masu-meaning">
+          내년에 일본으로 여행합니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="masu-warning">
+      <strong>핵심:</strong>
+      毎日勉強します는 “매일 공부합니다”,
+      明日勉強します는 “내일 공부합니다”입니다.
+      동사의 형태는 같고, 시간 표현과 문맥으로 현재의 습관인지 미래인지 판단합니다.
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">2. ～ません : 하지 않습니다</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">ます를 ません으로 바꾸면 부정</h3>
+      <p>
+        어떤 행동을 하지 않는다고 정중하게 말할 때 사용합니다.
+      </p>
+    </div>
+
+    <div class="masu-rule">
+      <span class="masu-rule-main">～ます → ～ません</span>
+      <span class="masu-rule-sub">
+        의미: ~하지 않습니다
+      </span>
+    </div>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>긍정</th>
+            <th>부정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>食べます</td>
+            <td><strong>食べません</strong></td>
+          </tr>
+          <tr>
+            <td>飲みます</td>
+            <td><strong>飲みません</strong></td>
+          </tr>
+          <tr>
+            <td>行きます</td>
+            <td><strong>行きません</strong></td>
+          </tr>
+          <tr>
+            <td>見ます</td>
+            <td><strong>見ません</strong></td>
+          </tr>
+          <tr>
+            <td>します</td>
+            <td><strong>しません</strong></td>
+          </tr>
+          <tr>
+            <td>来ます</td>
+            <td><strong>来ません</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>は
+          <ruby>食<rt>た</rt></ruby>べません。
+        </p>
+        <p class="masu-hiragana">
+          あさごはんは たべません。
+        </p>
+        <p class="masu-meaning">
+          아침밥은 먹지 않습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          コーヒーは<ruby>飲<rt>の</rt></ruby>みません。
+        </p>
+        <p class="masu-hiragana">
+          コーヒーは のみません。
+        </p>
+        <p class="masu-meaning">
+          커피는 마시지 않습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>今日<rt>きょう</rt></ruby>は
+          <ruby>会社<rt>かいしゃ</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きません。
+        </p>
+        <p class="masu-hiragana">
+          きょうは かいしゃに いきません。
+        </p>
+        <p class="masu-meaning">
+          오늘은 회사에 가지 않습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>夜<rt>よる</rt></ruby>は
+          テレビを<ruby>見<rt>み</rt></ruby>ません。
+        </p>
+        <p class="masu-hiragana">
+          よるは テレビを みません。
+        </p>
+        <p class="masu-meaning">
+          밤에는 TV를 보지 않습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>日曜日<rt>にちようび</rt></ruby>は
+          <ruby>仕事<rt>しごと</rt></ruby>をしません。
+        </p>
+        <p class="masu-hiragana">
+          にちようびは しごとを しません。
+        </p>
+        <p class="masu-meaning">
+          일요일에는 일을 하지 않습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>明日<rt>あした</rt></ruby>は
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>来<rt>き</rt></ruby>ません。
+        </p>
+        <p class="masu-hiragana">
+          あしたは ともだちが きません。
+        </p>
+        <p class="masu-meaning">
+          내일은 친구가 오지 않습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="masu-practice">
+      <h3 class="masu-practice-title">긍정 → 부정</h3>
+
+      <div class="masu-question">1. 食べます → ?</div>
+      <div class="masu-question">2. 飲みます → ?</div>
+      <div class="masu-question">3. 行きます → ?</div>
+      <div class="masu-question">4. 話します → ?</div>
+      <div class="masu-question">5. 見ます → ?</div>
+      <div class="masu-question">6. 勉強します → ?</div>
+      <div class="masu-question">7. 来ます → ?</div>
+    </div>
+
+    <div class="masu-answer">
+      <h3 class="masu-answer-title">정답</h3>
+
+      <p>1. 食べません（たべません）</p>
+      <p>2. 飲みません（のみません）</p>
+      <p>3. 行きません（いきません）</p>
+      <p>4. 話しません（はなしません）</p>
+      <p>5. 見ません（みません）</p>
+      <p>6. 勉強しません（べんきょうしません）</p>
+      <p>7. 来ません（きません）</p>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">3. ～ました : 했습니다</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">과거에 한 행동</h3>
+      <p>
+        이미 끝난 행동을 정중하게 말할 때
+        ます를 <strong>ました</strong>로 바꿉니다.
+      </p>
+    </div>
+
+    <div class="masu-rule">
+      <span class="masu-rule-main">～ます → ～ました</span>
+      <span class="masu-rule-sub">
+        의미: ~했습니다
+      </span>
+    </div>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>현재·미래</th>
+            <th>과거</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>食べます</td>
+            <td><strong>食べました</strong></td>
+          </tr>
+          <tr>
+            <td>飲みます</td>
+            <td><strong>飲みました</strong></td>
+          </tr>
+          <tr>
+            <td>行きます</td>
+            <td><strong>行きました</strong></td>
+          </tr>
+          <tr>
+            <td>見ます</td>
+            <td><strong>見ました</strong></td>
+          </tr>
+          <tr>
+            <td>します</td>
+            <td><strong>しました</strong></td>
+          </tr>
+          <tr>
+            <td>来ます</td>
+            <td><strong>来ました</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>、
+          ラーメンを<ruby>食<rt>た</rt></ruby>べました。
+        </p>
+        <p class="masu-hiragana">
+          きのう、ラーメンを たべました。
+        </p>
+        <p class="masu-meaning">
+          어제 라면을 먹었습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>、
+          コーヒーを<ruby>飲<rt>の</rt></ruby>みました。
+        </p>
+        <p class="masu-hiragana">
+          きのう、コーヒーを のみました。
+        </p>
+        <p class="masu-meaning">
+          어제 커피를 마셨습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>先週<rt>せんしゅう</rt></ruby>、
+          <ruby>京都<rt>きょうと</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きました。
+        </p>
+        <p class="masu-hiragana">
+          せんしゅう、きょうとに いきました。
+        </p>
+        <p class="masu-meaning">
+          지난주에 교토에 갔습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>、
+          <ruby>映画<rt>えいが</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>ました。
+        </p>
+        <p class="masu-hiragana">
+          きのう、えいがを みました。
+        </p>
+        <p class="masu-meaning">
+          어제 영화를 봤습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>、
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>しました。
+        </p>
+        <p class="masu-hiragana">
+          きのう、にほんごを べんきょうしました。
+        </p>
+        <p class="masu-meaning">
+          어제 일본어를 공부했습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>家<rt>いえ</rt></ruby>に
+          <ruby>来<rt>き</rt></ruby>ました。
+        </p>
+        <p class="masu-hiragana">
+          ともだちが いえに きました。
+        </p>
+        <p class="masu-meaning">
+          친구가 집에 왔습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>駅<rt>えき</rt></ruby>で
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>会<rt>あ</rt></ruby>いました。
+        </p>
+        <p class="masu-hiragana">
+          えきで ともだちに あいました。
+        </p>
+        <p class="masu-meaning">
+          역에서 친구를 만났습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>夜<rt>よる</rt></ruby>、
+          <ruby>本<rt>ほん</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>みました。
+        </p>
+        <p class="masu-hiragana">
+          よる、ほんを よみました。
+        </p>
+        <p class="masu-meaning">
+          밤에 책을 읽었습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">4. ～ませんでした : 하지 않았습니다</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">과거의 부정</h3>
+      <p>
+        과거에 어떤 행동을 하지 않았다고 정중하게 말할 때 사용합니다.
+      </p>
+    </div>
+
+    <div class="masu-rule">
+      <span class="masu-rule-main">～ます → ～ませんでした</span>
+      <span class="masu-rule-sub">
+        의미: ~하지 않았습니다
+      </span>
+    </div>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>과거 긍정</th>
+            <th>과거 부정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>食べました</td>
+            <td><strong>食べませんでした</strong></td>
+          </tr>
+          <tr>
+            <td>飲みました</td>
+            <td><strong>飲みませんでした</strong></td>
+          </tr>
+          <tr>
+            <td>行きました</td>
+            <td><strong>行きませんでした</strong></td>
+          </tr>
+          <tr>
+            <td>見ました</td>
+            <td><strong>見ませんでした</strong></td>
+          </tr>
+          <tr>
+            <td>しました</td>
+            <td><strong>しませんでした</strong></td>
+          </tr>
+          <tr>
+            <td>来ました</td>
+            <td><strong>来ませんでした</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べませんでした。
+        </p>
+        <p class="masu-hiragana">
+          きのうは あさごはんを たべませんでした。
+        </p>
+        <p class="masu-meaning">
+          어제는 아침밥을 먹지 않았습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          コーヒーを<ruby>飲<rt>の</rt></ruby>みませんでした。
+        </p>
+        <p class="masu-hiragana">
+          きのうは コーヒーを のみませんでした。
+        </p>
+        <p class="masu-meaning">
+          어제는 커피를 마시지 않았습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>先週<rt>せんしゅう</rt></ruby>は
+          <ruby>学校<rt>がっこう</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きませんでした。
+        </p>
+        <p class="masu-hiragana">
+          せんしゅうは がっこうに いきませんでした。
+        </p>
+        <p class="masu-meaning">
+          지난주에는 학교에 가지 않았습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          テレビを<ruby>見<rt>み</rt></ruby>ませんでした。
+        </p>
+        <p class="masu-hiragana">
+          きのうは テレビを みませんでした。
+        </p>
+        <p class="masu-meaning">
+          어제는 TV를 보지 않았습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          <ruby>運動<rt>うんどう</rt></ruby>しませんでした。
+        </p>
+        <p class="masu-hiragana">
+          きのうは うんどうしませんでした。
+        </p>
+        <p class="masu-meaning">
+          어제는 운동하지 않았습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">핵심 정리</span>
+    <h2 class="masu-section-title">5. 네 가지 형태를 한 번에 보기</h2>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>긍정</th>
+            <th>부정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>현재·미래</td>
+            <td><strong>～ます</strong></td>
+            <td><strong>～ません</strong></td>
+          </tr>
+          <tr>
+            <td>과거</td>
+            <td><strong>～ました</strong></td>
+            <td><strong>～ませんでした</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="masu-subtitle">食べる로 비교</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <span class="masu-example-label">현재·미래 긍정</span>
+        <p class="masu-sentence">
+          <ruby>食<rt>た</rt></ruby>べます。
+        </p>
+        <p class="masu-hiragana">
+          たべます。
+        </p>
+        <p class="masu-meaning">
+          먹습니다 / 먹을 겁니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">현재·미래 부정</span>
+        <p class="masu-sentence">
+          <ruby>食<rt>た</rt></ruby>べません。
+        </p>
+        <p class="masu-hiragana">
+          たべません。
+        </p>
+        <p class="masu-meaning">
+          먹지 않습니다 / 먹지 않을 겁니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">과거 긍정</span>
+        <p class="masu-sentence">
+          <ruby>食<rt>た</rt></ruby>べました。
+        </p>
+        <p class="masu-hiragana">
+          たべました。
+        </p>
+        <p class="masu-meaning">
+          먹었습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <span class="masu-example-label">과거 부정</span>
+        <p class="masu-sentence">
+          <ruby>食<rt>た</rt></ruby>べませんでした。
+        </p>
+        <p class="masu-hiragana">
+          たべませんでした。
+        </p>
+        <p class="masu-meaning">
+          먹지 않았습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">行く로 비교</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>行<rt>い</rt></ruby>きます。
+        </p>
+        <p class="masu-hiragana">
+          いきます。
+        </p>
+        <p class="masu-meaning">
+          갑니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>行<rt>い</rt></ruby>きません。
+        </p>
+        <p class="masu-hiragana">
+          いきません。
+        </p>
+        <p class="masu-meaning">
+          가지 않습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>行<rt>い</rt></ruby>きました。
+        </p>
+        <p class="masu-hiragana">
+          いきました。
+        </p>
+        <p class="masu-meaning">
+          갔습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>行<rt>い</rt></ruby>きませんでした。
+        </p>
+        <p class="masu-hiragana">
+          いきませんでした。
+        </p>
+        <p class="masu-meaning">
+          가지 않았습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="masu-subtitle">する로 비교</h3>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>勉強<rt>べんきょう</rt></ruby>します。
+        </p>
+        <p class="masu-hiragana">
+          べんきょうします。
+        </p>
+        <p class="masu-meaning">
+          공부합니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>勉強<rt>べんきょう</rt></ruby>しません。
+        </p>
+        <p class="masu-hiragana">
+          べんきょうしません。
+        </p>
+        <p class="masu-meaning">
+          공부하지 않습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>勉強<rt>べんきょう</rt></ruby>しました。
+        </p>
+        <p class="masu-hiragana">
+          べんきょうしました。
+        </p>
+        <p class="masu-meaning">
+          공부했습니다.
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>勉強<rt>べんきょう</rt></ruby>しませんでした。
+        </p>
+        <p class="masu-hiragana">
+          べんきょうしませんでした。
+        </p>
+        <p class="masu-meaning">
+          공부하지 않았습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">기초</span>
+    <h2 class="masu-section-title">6. ～ますか？ : ~합니까?</h2>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">문장 끝에 か를 붙이면 질문</h3>
+      <p>
+        ます형 문장 끝에 <strong>か</strong>를 붙이면
+        상대방에게 정중하게 질문할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="masu-rule">
+      <span class="masu-rule-main">～ます + か？</span>
+      <span class="masu-rule-sub">
+        의미: ~합니까? / ~하나요?
+      </span>
+    </div>
+
+    <div class="masu-example-list">
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べますか？
+        </p>
+        <p class="masu-hiragana">
+          あさごはんを たべますか？
+        </p>
+        <p class="masu-meaning">
+          아침밥을 먹나요?
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          コーヒーを<ruby>飲<rt>の</rt></ruby>みますか？
+        </p>
+        <p class="masu-hiragana">
+          コーヒーを のみますか？
+        </p>
+        <p class="masu-meaning">
+          커피를 마시나요?
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>週末<rt>しゅうまつ</rt></ruby>、
+          <ruby>何<rt>なに</rt></ruby>をしますか？
+        </p>
+        <p class="masu-hiragana">
+          しゅうまつ、なにを しますか？
+        </p>
+        <p class="masu-meaning">
+          주말에 무엇을 하나요?
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>明日<rt>あした</rt></ruby>、
+          <ruby>学校<rt>がっこう</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>きますか？
+        </p>
+        <p class="masu-hiragana">
+          あした、がっこうに いきますか？
+        </p>
+        <p class="masu-meaning">
+          내일 학교에 가나요?
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>しますか？
+        </p>
+        <p class="masu-hiragana">
+          にほんごを べんきょうしますか？
+        </p>
+        <p class="masu-meaning">
+          일본어를 공부하나요?
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>何時<rt>なんじ</rt></ruby>に
+          <ruby>寝<rt>ね</rt></ruby>ますか？
+        </p>
+        <p class="masu-hiragana">
+          なんじに ねますか？
+        </p>
+        <p class="masu-meaning">
+          몇 시에 자나요?
+        </p>
+      </div>
+
+      <div class="masu-example">
+        <p class="masu-sentence">
+          <ruby>昨日<rt>きのう</rt></ruby>、
+          <ruby>何<rt>なに</rt></ruby>をしましたか？
+        </p>
+        <p class="masu-hiragana">
+          きのう、なにを しましたか？
+        </p>
+        <p class="masu-meaning">
+          어제 무엇을 했나요?
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">연습</span>
+    <h2 class="masu-section-title">7. 네 가지 형태로 바꾸기</h2>
+
+    <div class="masu-practice">
+      <h3 class="masu-practice-title">
+        각 동사를 ① ます ② ません ③ ました ④ ませんでした로 바꿔보세요
+      </h3>
+
+      <div class="masu-question">
+        1. 食べる
+      </div>
+
+      <div class="masu-question">
+        2. 飲む
+      </div>
+
+      <div class="masu-question">
+        3. 行く
+      </div>
+
+      <div class="masu-question">
+        4. 見る
+      </div>
+
+      <div class="masu-question">
+        5. 読む
+      </div>
+
+      <div class="masu-question">
+        6. 話す
+      </div>
+
+      <div class="masu-question">
+        7. 帰る
+      </div>
+
+      <div class="masu-question">
+        8. 勉強する
+      </div>
+
+      <div class="masu-question">
+        9. 来る
+      </div>
+    </div>
+
+    <div class="masu-answer">
+      <h3 class="masu-answer-title">정답</h3>
+
+      <p>
+        1. 食べます / 食べません / 食べました / 食べませんでした
+      </p>
+
+      <p>
+        2. 飲みます / 飲みません / 飲みました / 飲みませんでした
+      </p>
+
+      <p>
+        3. 行きます / 行きません / 行きました / 行きませんでした
+      </p>
+
+      <p>
+        4. 見ます / 見ません / 見ました / 見ませんでした
+      </p>
+
+      <p>
+        5. 読みます / 読みません / 読みました / 読みませんでした
+      </p>
+
+      <p>
+        6. 話します / 話しません / 話しました / 話しませんでした
+      </p>
+
+      <p>
+        7. 帰ります / 帰りません / 帰りました / 帰りませんでした
+      </p>
+
+      <p>
+        8. 勉強します / 勉強しません / 勉強しました / 勉強しませんでした
+      </p>
+
+      <p>
+        9. 来ます / 来ません / 来ました / 来ませんでした
+      </p>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">연습</span>
+    <h2 class="masu-section-title">8. 시간 표현을 보고 형태 선택하기</h2>
+
+    <div class="masu-practice">
+      <h3 class="masu-practice-title">
+        괄호 안의 동사를 상황에 맞게 바꾸세요
+      </h3>
+
+      <div class="masu-question">
+        1. 毎日、日本語を（勉強する）。
+      </div>
+
+      <div class="masu-question">
+        2. 昨日、日本語を（勉強する）。
+      </div>
+
+      <div class="masu-question">
+        3. 昨日は日本語を（勉強する・부정）。
+      </div>
+
+      <div class="masu-question">
+        4. 明日、東京に（行く）。
+      </div>
+
+      <div class="masu-question">
+        5. 昨日、東京に（行く）。
+      </div>
+
+      <div class="masu-question">
+        6. 昨日は東京に（行く・부정）。
+      </div>
+
+      <div class="masu-question">
+        7. 毎朝、コーヒーを（飲む）。
+      </div>
+
+      <div class="masu-question">
+        8. 昨日はコーヒーを（飲む・부정）。
+      </div>
+
+      <div class="masu-question">
+        9. 今晩、映画を（見る）。
+      </div>
+
+      <div class="masu-question">
+        10. 昨晩、映画を（見る）。
+      </div>
+    </div>
+
+    <div class="masu-answer">
+      <h3 class="masu-answer-title">정답</h3>
+
+      <p>1. 毎日、日本語を勉強します。</p>
+      <p class="masu-hiragana">
+        まいにち、にほんごを べんきょうします。
+      </p>
+
+      <p>2. 昨日、日本語を勉強しました。</p>
+      <p class="masu-hiragana">
+        きのう、にほんごを べんきょうしました。
+      </p>
+
+      <p>3. 昨日は日本語を勉強しませんでした。</p>
+      <p class="masu-hiragana">
+        きのうは にほんごを べんきょうしませんでした。
+      </p>
+
+      <p>4. 明日、東京に行きます。</p>
+      <p class="masu-hiragana">
+        あした、とうきょうに いきます。
+      </p>
+
+      <p>5. 昨日、東京に行きました。</p>
+      <p class="masu-hiragana">
+        きのう、とうきょうに いきました。
+      </p>
+
+      <p>6. 昨日は東京に行きませんでした。</p>
+      <p class="masu-hiragana">
+        きのうは とうきょうに いきませんでした。
+      </p>
+
+      <p>7. 毎朝、コーヒーを飲みます。</p>
+      <p class="masu-hiragana">
+        まいあさ、コーヒーを のみます。
+      </p>
+
+      <p>8. 昨日はコーヒーを飲みませんでした。</p>
+      <p class="masu-hiragana">
+        きのうは コーヒーを のみませんでした。
+      </p>
+
+      <p>9. 今晩、映画を見ます。</p>
+      <p class="masu-hiragana">
+        こんばん、えいがを みます。
+      </p>
+
+      <p>10. 昨晩、映画を見ました。</p>
+      <p class="masu-hiragana">
+        さくばん、えいがを みました。
+      </p>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">한국어 → 일본어</span>
+    <h2 class="masu-section-title">9. 직접 문장 만들어보기</h2>
+
+    <div class="masu-practice">
+      <h3 class="masu-practice-title">
+        일본어로 말해보세요
+      </h3>
+
+      <div class="masu-question">1. 매일 일본어를 공부합니다.</div>
+      <div class="masu-question">2. 아침에는 커피를 마시지 않습니다.</div>
+      <div class="masu-question">3. 어제 라면을 먹었습니다.</div>
+      <div class="masu-question">4. 어제는 운동하지 않았습니다.</div>
+      <div class="masu-question">5. 내일 친구를 만납니다.</div>
+      <div class="masu-question">6. 내일은 회사에 가지 않습니다.</div>
+      <div class="masu-question">7. 어제 영화를 봤습니다.</div>
+      <div class="masu-question">8. 어제는 책을 읽지 않았습니다.</div>
+      <div class="masu-question">9. 주말에는 친구와 놉니다.</div>
+      <div class="masu-question">10. 매일 7시에 일어납니다.</div>
+      <div class="masu-question">11. 어제 12시에 잤습니다.</div>
+      <div class="masu-question">12. 내일 선생님이 옵니다.</div>
+      <div class="masu-question">13. 어제는 선생님이 오지 않았습니다.</div>
+      <div class="masu-question">14. 일본어로 이야기합니다.</div>
+      <div class="masu-question">15. 어제는 일본어로 이야기하지 않았습니다.</div>
+    </div>
+
+    <div class="masu-answer">
+      <h3 class="masu-answer-title">예시 정답</h3>
+
+      <p>1. 毎日、日本語を勉強します。</p>
+      <p class="masu-hiragana">まいにち、にほんごを べんきょうします。</p>
+
+      <p>2. 朝はコーヒーを飲みません。</p>
+      <p class="masu-hiragana">あさは コーヒーを のみません。</p>
+
+      <p>3. 昨日、ラーメンを食べました。</p>
+      <p class="masu-hiragana">きのう、ラーメンを たべました。</p>
+
+      <p>4. 昨日は運動しませんでした。</p>
+      <p class="masu-hiragana">きのうは うんどうしませんでした。</p>
+
+      <p>5. 明日、友達に会います。</p>
+      <p class="masu-hiragana">あした、ともだちに あいます。</p>
+
+      <p>6. 明日は会社に行きません。</p>
+      <p class="masu-hiragana">あしたは かいしゃに いきません。</p>
+
+      <p>7. 昨日、映画を見ました。</p>
+      <p class="masu-hiragana">きのう、えいがを みました。</p>
+
+      <p>8. 昨日は本を読みませんでした。</p>
+      <p class="masu-hiragana">きのうは ほんを よみませんでした。</p>
+
+      <p>9. 週末は友達と遊びます。</p>
+      <p class="masu-hiragana">しゅうまつは ともだちと あそびます。</p>
+
+      <p>10. 毎日七時に起きます。</p>
+      <p class="masu-hiragana">まいにち しちじに おきます。</p>
+
+      <p>11. 昨日、十二時に寝ました。</p>
+      <p class="masu-hiragana">きのう、じゅうにじに ねました。</p>
+
+      <p>12. 明日、先生が来ます。</p>
+      <p class="masu-hiragana">あした、せんせいが きます。</p>
+
+      <p>13. 昨日は先生が来ませんでした。</p>
+      <p class="masu-hiragana">きのうは せんせいが きませんでした。</p>
+
+      <p>14. 日本語で話します。</p>
+      <p class="masu-hiragana">にほんごで はなします。</p>
+
+      <p>15. 昨日は日本語で話しませんでした。</p>
+      <p class="masu-hiragana">きのうは にほんごで はなしませんでした。</p>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">회화</span>
+    <h2 class="masu-section-title">10. 질문하고 답하기</h2>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">① 평소 생활</h3>
+
+      <p class="masu-sentence">
+        <ruby>毎朝<rt>まいあさ</rt></ruby>
+        <ruby>何時<rt>なんじ</rt></ruby>に
+        <ruby>起<rt>お</rt></ruby>きますか？
+      </p>
+
+      <p class="masu-hiragana">
+        まいあさ なんじに おきますか？
+      </p>
+
+      <p>
+        매일 아침 몇 시에 일어나나요?
+      </p>
+    </div>
+
+    <div class="masu-example">
+      <span class="masu-example-label">예시 답변</span>
+      <p class="masu-sentence">
+        <ruby>七時<rt>しちじ</rt></ruby>に
+        <ruby>起<rt>お</rt></ruby>きます。
+      </p>
+      <p class="masu-hiragana">
+        しちじに おきます。
+      </p>
+      <p class="masu-meaning">
+        7시에 일어납니다.
+      </p>
+    </div>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">② 아침 식사</h3>
+
+      <p class="masu-sentence">
+        <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を
+        <ruby>食<rt>た</rt></ruby>べますか？
+      </p>
+
+      <p class="masu-hiragana">
+        あさごはんを たべますか？
+      </p>
+
+      <p>
+        아침밥을 먹나요?
+      </p>
+    </div>
+
+    <div class="masu-example">
+      <span class="masu-example-label">예시 답변</span>
+      <p class="masu-sentence">
+        はい、<ruby>食<rt>た</rt></ruby>べます。
+      </p>
+      <p class="masu-hiragana">
+        はい、たべます。
+      </p>
+      <p class="masu-meaning">
+        네, 먹습니다.
+      </p>
+    </div>
+
+    <div class="masu-example">
+      <span class="masu-example-label">예시 답변</span>
+      <p class="masu-sentence">
+        いいえ、<ruby>食<rt>た</rt></ruby>べません。
+      </p>
+      <p class="masu-hiragana">
+        いいえ、たべません。
+      </p>
+      <p class="masu-meaning">
+        아니요, 먹지 않습니다.
+      </p>
+    </div>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">③ 주말</h3>
+
+      <p class="masu-sentence">
+        <ruby>週末<rt>しゅうまつ</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>をしますか？
+      </p>
+
+      <p class="masu-hiragana">
+        しゅうまつ、なにを しますか？
+      </p>
+
+      <p>
+        주말에 무엇을 하나요?
+      </p>
+    </div>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">④ 어제</h3>
+
+      <p class="masu-sentence">
+        <ruby>昨日<rt>きのう</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>をしましたか？
+      </p>
+
+      <p class="masu-hiragana">
+        きのう、なにを しましたか？
+      </p>
+
+      <p>
+        어제 무엇을 했나요?
+      </p>
+    </div>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">⑤ 내일</h3>
+
+      <p class="masu-sentence">
+        <ruby>明日<rt>あした</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>をしますか？
+      </p>
+
+      <p class="masu-hiragana">
+        あした、なにを しますか？
+      </p>
+
+      <p>
+        내일 무엇을 하나요?
+      </p>
+    </div>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">⑥ 일본어</h3>
+
+      <p class="masu-sentence">
+        <ruby>毎日<rt>まいにち</rt></ruby>
+        <ruby>日本語<rt>にほんご</rt></ruby>を
+        <ruby>勉強<rt>べんきょう</rt></ruby>しますか？
+      </p>
+
+      <p class="masu-hiragana">
+        まいにち にほんごを べんきょうしますか？
+      </p>
+
+      <p>
+        매일 일본어를 공부하나요?
+      </p>
+    </div>
+
+    <div class="masu-speaking">
+      <h3 class="masu-speaking-title">⑦ 최근 주말</h3>
+
+      <p class="masu-sentence">
+        <ruby>先週<rt>せんしゅう</rt></ruby>の
+        <ruby>週末<rt>しゅうまつ</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>をしましたか？
+      </p>
+
+      <p class="masu-hiragana">
+        せんしゅうの しゅうまつ、
+        なにを しましたか？
+      </p>
+
+      <p>
+        지난 주말에 무엇을 했나요?
+      </p>
+    </div>
+
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">종합 연습</span>
+    <h2 class="masu-section-title">11. 문장을 보고 시제와 긍정·부정 바꾸기</h2>
+
+    <div class="masu-practice">
+      <h3 class="masu-practice-title">지시에 맞게 문장을 바꿔보세요</h3>
+
+      <div class="masu-question">
+        1. 毎日、日本語を勉強します。<br>
+        → 부정으로
+      </div>
+
+      <div class="masu-question">
+        2. 毎日、コーヒーを飲みます。<br>
+        → 과거로
+      </div>
+
+      <div class="masu-question">
+        3. 学校に行きます。<br>
+        → 과거 부정으로
+      </div>
+
+      <div class="masu-question">
+        4. 映画を見ません。<br>
+        → 긍정으로
+      </div>
+
+      <div class="masu-question">
+        5. 本を読みました。<br>
+        → 과거 부정으로
+      </div>
+
+      <div class="masu-question">
+        6. 運動しませんでした。<br>
+        → 과거 긍정으로
+      </div>
+
+      <div class="masu-question">
+        7. 友達が来ました。<br>
+        → 과거 부정으로
+      </div>
+
+      <div class="masu-question">
+        8. ラーメンを食べます。<br>
+        → 질문으로
+      </div>
+    </div>
+
+    <div class="masu-answer">
+      <h3 class="masu-answer-title">정답</h3>
+
+      <p>1. 毎日、日本語を勉強しません。</p>
+      <p>2. 毎日、コーヒーを飲みました。</p>
+      <p>3. 学校に行きませんでした。</p>
+      <p>4. 映画を見ます。</p>
+      <p>5. 本を読みませんでした。</p>
+      <p>6. 運動しました。</p>
+      <p>7. 友達が来ませんでした。</p>
+      <p>8. ラーメンを食べますか？</p>
+    </div>
+  </section>
+
+  <section class="masu-section">
+    <span class="masu-level">최종 정리</span>
+    <h2 class="masu-section-title">ます형 전체 한눈에 보기</h2>
+
+    <div class="masu-table-wrap">
+      <table class="masu-table">
+        <thead>
+          <tr>
+            <th>형태</th>
+            <th>의미</th>
+            <th>예제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>～ます</td>
+            <td>합니다 / 할 겁니다</td>
+            <td>食べます。</td>
+          </tr>
+          <tr>
+            <td>～ません</td>
+            <td>하지 않습니다 / 하지 않을 겁니다</td>
+            <td>食べません。</td>
+          </tr>
+          <tr>
+            <td>～ました</td>
+            <td>했습니다</td>
+            <td>食べました。</td>
+          </tr>
+          <tr>
+            <td>～ませんでした</td>
+            <td>하지 않았습니다</td>
+            <td>食べませんでした。</td>
+          </tr>
+          <tr>
+            <td>～ますか</td>
+            <td>합니까? / 하나요?</td>
+            <td>食べますか？</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="masu-concept">
+      <h3 class="masu-concept-title">이 다섯 가지를 자유롭게 바꿀 수 있으면 됩니다</h3>
+
+      <p>
+        <strong>食べます</strong> — 먹습니다
+      </p>
+
+      <p>
+        <strong>食べません</strong> — 먹지 않습니다
+      </p>
+
+      <p>
+        <strong>食べました</strong> — 먹었습니다
+      </p>
+
+      <p>
+        <strong>食べませんでした</strong> — 먹지 않았습니다
+      </p>
+
+      <p>
+        <strong>食べますか？</strong> — 먹나요?
+      </p>
+    </div>
+
+    <div class="masu-summary">
+      <strong>ます형 교재 완료:</strong>
+      기본형에서 ます형으로 바꾸는 방법,
+      1·2·3그룹 변환,
+      ～ます・～ません・～ました・～ませんでした・～ますか,
+      현재·미래와 과거 표현,
+      문장 변환과 회화 연습까지 전체 과정이 끝났습니다.
+    </div>
+  </section>
+
+</div>

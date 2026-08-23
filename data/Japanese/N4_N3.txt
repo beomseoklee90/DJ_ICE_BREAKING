@@ -1,0 +1,7759 @@
+N4~N3 학습
+<style>
+  :root {
+    --jp-bg: #f7f8fb;
+    --jp-card: #ffffff;
+    --jp-text: #20242a;
+    --jp-sub: #68707a;
+    --jp-line: #e4e7ec;
+
+    --jp-main: #d85848;
+    --jp-main-soft: #fff1ee;
+
+    --jp-basic: #2f73bf;
+    --jp-basic-soft: #eef6ff;
+
+    --jp-n4: #2f8b62;
+    --jp-n4-soft: #eef9f3;
+
+    --jp-n3: #7a57b5;
+    --jp-n3-soft: #f5efff;
+
+    --jp-example: #fffaf0;
+    --jp-example-line: #ead9a8;
+
+    --jp-practice: #f1f6ff;
+    --jp-practice-line: #86aee5;
+
+    --jp-answer: #f3f9f5;
+    --jp-answer-line: #83b997;
+
+    --jp-danger: #fff1f1;
+    --jp-danger-line: #dd8a8a;
+
+    --jp-radius: 16px;
+    --jp-small-radius: 10px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .jp-lesson {
+    width: min(100%, 820px);
+    margin: 0 auto;
+    padding: 18px 12px 44px;
+    color: var(--jp-text);
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Pretendard",
+      "Noto Sans KR",
+      "Noto Sans JP",
+      "Hiragino Kaku Gothic ProN",
+      "Yu Gothic",
+      sans-serif;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  /* =========================
+     메인 타이틀
+     ========================= */
+
+  .jp-title-box {
+    padding: 22px 20px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #e76c5d, #c84b3e);
+    border-radius: var(--jp-radius);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(70, 30, 25, 0.12);
+  }
+
+  .jp-title-label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+  }
+
+  .jp-title {
+    margin: 0;
+    font-size: clamp(26px, 5vw, 36px);
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+  }
+
+  .jp-title-sub {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.92;
+  }
+
+  /* =========================
+     공통 섹션
+     ========================= */
+
+  .jp-section {
+    margin-top: 16px;
+    padding: 18px 16px;
+    background: var(--jp-card);
+    border: 1px solid var(--jp-line);
+    border-radius: var(--jp-radius);
+    box-shadow: 0 3px 12px rgba(20, 30, 40, 0.04);
+  }
+
+  .jp-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+  }
+
+  .jp-section-title::before {
+    content: "";
+    width: 5px;
+    height: 23px;
+    flex: 0 0 auto;
+    background: var(--jp-main);
+    border-radius: 999px;
+  }
+
+  .jp-section-desc {
+    margin: -2px 0 14px;
+    color: var(--jp-sub);
+    font-size: 14px;
+  }
+
+  /* =========================
+     레벨 표시
+     ========================= */
+
+  .jp-level {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 0.04em;
+  }
+
+  .jp-level.basic {
+    background: var(--jp-basic-soft);
+    color: var(--jp-basic);
+  }
+
+  .jp-level.n4 {
+    background: var(--jp-n4-soft);
+    color: var(--jp-n4);
+  }
+
+  .jp-level.n3 {
+    background: var(--jp-n3-soft);
+    color: var(--jp-n3);
+  }
+
+  /* =========================
+     핵심 개념 박스
+     ========================= */
+
+  .jp-concept {
+    margin-top: 12px;
+    padding: 15px 16px;
+    background: var(--jp-main-soft);
+    border: 1px solid #f2c8c2;
+    border-left: 5px solid var(--jp-main);
+    border-radius: var(--jp-small-radius);
+  }
+
+  .jp-concept-title {
+    margin: 0 0 7px;
+    color: #b54235;
+    font-size: 16px;
+    font-weight: 850;
+  }
+
+  .jp-concept p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .jp-concept p + p {
+    margin-top: 6px;
+  }
+
+  /* =========================
+     규칙 / 공식
+     ========================= */
+
+  .jp-rule {
+    margin-top: 10px;
+    padding: 13px 14px;
+    background: #f7f9fc;
+    border: 1px solid #dce2ea;
+    border-radius: var(--jp-small-radius);
+  }
+
+  .jp-rule-main {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 850;
+    letter-spacing: 0.01em;
+  }
+
+  .jp-rule-sub {
+    color: var(--jp-sub);
+    font-size: 13px;
+  }
+
+  /* =========================
+     표 / 변환표
+     ========================= */
+
+  .jp-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 12px;
+  }
+
+  .jp-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  .jp-table th,
+  .jp-table td {
+    padding: 10px 11px;
+    border: 1px solid var(--jp-line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .jp-table th {
+    background: #f3f5f8;
+    font-weight: 800;
+  }
+
+  .jp-table td strong {
+    color: var(--jp-main);
+  }
+
+  /* =========================
+     일본어 예문
+     ========================= */
+
+  .jp-example-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .jp-example {
+    padding: 13px 14px;
+    background: var(--jp-example);
+    border: 1px solid var(--jp-example-line);
+    border-radius: var(--jp-small-radius);
+  }
+
+  .jp-example-label {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 2px 7px;
+    background: #f0dca9;
+    border-radius: 999px;
+    color: #5d4b1f;
+    font-size: 11px;
+    font-weight: 850;
+  }
+
+  .jp-sentence {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 2;
+    word-break: normal;
+  }
+
+  .jp-hiragana {
+    margin: 2px 0 0;
+    color: #5b6470;
+    font-size: 14px;
+    line-height: 1.8;
+    word-break: normal;
+  }
+
+  .jp-meaning {
+    margin: 6px 0 0;
+    padding-top: 7px;
+    border-top: 1px dashed rgba(100, 90, 60, 0.25);
+    font-size: 14px;
+    font-weight: 650;
+  }
+
+  .jp-note {
+    margin: 7px 0 0;
+    color: var(--jp-sub);
+    font-size: 13px;
+  }
+
+  ruby {
+    ruby-position: over;
+    ruby-align: center;
+  }
+
+  rt {
+    color: #6e7681;
+    font-size: 0.56em;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  /* =========================
+     단어 단위 설명
+     ========================= */
+
+  .jp-breakdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 9px;
+  }
+
+  .jp-chip {
+    padding: 5px 8px;
+    background: #fff;
+    border: 1px solid var(--jp-line);
+    border-radius: 8px;
+    color: #434a53;
+    font-size: 13px;
+  }
+
+  .jp-chip strong {
+    color: var(--jp-main);
+  }
+
+  /* =========================
+     비교 박스
+     ========================= */
+
+  .jp-compare {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .jp-compare-card {
+    padding: 13px;
+    background: #fafbfc;
+    border: 1px solid var(--jp-line);
+    border-radius: var(--jp-small-radius);
+  }
+
+  .jp-compare-card h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+  }
+
+  .jp-compare-card p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .jp-compare-card p + p {
+    margin-top: 5px;
+  }
+
+  /* =========================
+     화살표 흐름
+     ========================= */
+
+  .jp-flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+  }
+
+  .jp-flow-item {
+    padding: 7px 10px;
+    background: #fff;
+    border: 1px solid var(--jp-line);
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .jp-flow-arrow {
+    color: #9299a3;
+    font-weight: 800;
+  }
+
+  /* =========================
+     주의 / 예외
+     ========================= */
+
+  .jp-warning {
+    margin-top: 12px;
+    padding: 13px 14px;
+    background: var(--jp-danger);
+    border: 1px solid var(--jp-danger-line);
+    border-left: 5px solid #cf6262;
+    border-radius: var(--jp-small-radius);
+    font-size: 14px;
+  }
+
+  .jp-warning strong {
+    color: #a13d3d;
+  }
+
+  /* =========================
+     연습 문제
+     ========================= */
+
+  .jp-practice {
+    margin-top: 14px;
+    padding: 15px;
+    background: var(--jp-practice);
+    border: 1px solid var(--jp-practice-line);
+    border-left: 5px solid #6397dc;
+    border-radius: var(--jp-small-radius);
+  }
+
+  .jp-practice-title {
+    margin: 0 0 8px;
+    color: #356aa9;
+    font-size: 16px;
+    font-weight: 850;
+  }
+
+  .jp-practice ol,
+  .jp-practice ul {
+    margin: 0;
+    padding-left: 21px;
+  }
+
+  .jp-practice li + li {
+    margin-top: 7px;
+  }
+
+  .jp-question {
+    margin-top: 9px;
+    padding: 10px 11px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  /* =========================
+     정답 / 해설
+     ========================= */
+
+  .jp-answer {
+    margin-top: 10px;
+    padding: 13px 14px;
+    background: var(--jp-answer);
+    border: 1px solid var(--jp-answer-line);
+    border-radius: var(--jp-small-radius);
+  }
+
+  .jp-answer-title {
+    margin: 0 0 7px;
+    color: #39764d;
+    font-size: 15px;
+    font-weight: 850;
+  }
+
+  .jp-answer p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .jp-answer p + p {
+    margin-top: 5px;
+  }
+
+  /* =========================
+     말하기 연습
+     ========================= */
+
+  .jp-speaking {
+    margin-top: 14px;
+    padding: 15px;
+    background: var(--jp-n3-soft);
+    border: 1px solid #d9caf0;
+    border-left: 5px solid var(--jp-n3);
+    border-radius: var(--jp-small-radius);
+  }
+
+  .jp-speaking-title {
+    margin: 0 0 8px;
+    color: #664496;
+    font-size: 16px;
+    font-weight: 850;
+  }
+
+  .jp-speaking p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .jp-speaking p + p {
+    margin-top: 6px;
+  }
+
+  /* =========================
+     스킵 가이드
+     ========================= */
+
+  .jp-skip {
+    margin-top: 12px;
+    padding: 11px 13px;
+    background: #f3f4f6;
+    border: 1px dashed #b9bec6;
+    border-radius: var(--jp-small-radius);
+    color: #5a616b;
+    font-size: 13px;
+  }
+
+  .jp-skip strong {
+    color: #343940;
+  }
+
+  /* =========================
+     소제목
+     ========================= */
+
+  .jp-subtitle {
+    margin: 20px 0 9px;
+    font-size: 18px;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+  }
+
+  .jp-subtitle:first-child {
+    margin-top: 0;
+  }
+
+  /* =========================
+     모바일 대응
+     ========================= */
+
+  @media (max-width: 600px) {
+    .jp-lesson {
+      padding: 12px 8px 32px;
+    }
+
+    .jp-title-box {
+      padding: 18px 15px;
+      border-radius: 14px;
+    }
+
+    .jp-section {
+      margin-top: 12px;
+      padding: 15px 12px;
+      border-radius: 14px;
+    }
+
+    .jp-compare {
+      grid-template-columns: 1fr;
+    }
+
+    .jp-sentence {
+      font-size: 17px;
+    }
+
+    .jp-table {
+      min-width: 520px;
+    }
+  }
+
+  /* =========================
+     인쇄
+     ========================= */
+
+  @media print {
+    .jp-lesson {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    .jp-title-box,
+    .jp-section,
+    .jp-example,
+    .jp-practice,
+    .jp-answer,
+    .jp-speaking,
+    .jp-warning {
+      box-shadow: none;
+      break-inside: avoid;
+    }
+
+    .jp-title-box {
+      background: #fff;
+      color: #000;
+      border: 2px solid #333;
+    }
+  }
+</style>
+<div class="jp-lesson">
+
+  <div class="jp-title-box">
+    <div class="jp-title-label">て形 STEP 1</div>
+    <h1 class="jp-title">て형 완전 기초</h1>
+    <p class="jp-title-sub">
+      て형이 무엇인지부터 시작해서, 동사별 변환 규칙을 하나씩 익힙니다.
+      이미 알고 있는 부분은 빠르게 넘어가도 됩니다.
+    </p>
+  </div>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">て형이란?</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">동사를 다른 표현과 연결하기 위한 형태</h3>
+      <p>
+        일본어 동사는 뒤에 다른 표현을 붙일 때 형태가 바뀌는 경우가 많습니다.
+        그중 아주 자주 사용하는 형태가 <strong>て형</strong>입니다.
+      </p>
+      <p>
+        て형 하나만으로 문장이 끝나는 경우도 있지만,
+        보통은 뒤에 다른 표현이 붙으면서 여러 의미를 만듭니다.
+      </p>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">食べる</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">食べて</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">食べてください</div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">예문</span>
+        <p class="jp-sentence">
+          ここで<ruby>待<rt>ま</rt></ruby>ってください。
+        </p>
+        <p class="jp-hiragana">
+          ここで まって ください。
+        </p>
+        <p class="jp-meaning">
+          여기에서 기다려 주세요.
+        </p>
+        <p class="jp-note">
+          待つ가 て형이 되어 待って가 되었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">예문</span>
+        <p class="jp-sentence">
+          <ruby>今<rt>いま</rt></ruby>、ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べています。
+        </p>
+        <p class="jp-hiragana">
+          いま、ごはんを たべています。
+        </p>
+        <p class="jp-meaning">
+          지금 밥을 먹고 있습니다.
+        </p>
+        <p class="jp-note">
+          食べる → 食べて → 食べています
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-skip">
+      <strong>이미 て형을 자유롭게 만들 수 있다면</strong>
+      이 파트는 빠르게 확인하고 다음 단계로 넘어가도 됩니다.
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">먼저 동사의 끝부분을 봅니다</h2>
+
+    <p class="jp-section-desc">
+      て형은 동사의 마지막 글자에 따라 변환 방법이 달라집니다.
+    </p>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">핵심은 마지막 글자</h3>
+      <p>
+        동사를 처음부터 전부 외우려고 하지 말고,
+        <strong>마지막 글자가 무엇인지</strong> 먼저 확인합니다.
+      </p>
+    </div>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>끝나는 글자</th>
+            <th>て형</th>
+            <th>기억법</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>う・つ・る</td>
+            <td><strong>って</strong></td>
+            <td>우츠루 → 떼</td>
+          </tr>
+          <tr>
+            <td>む・ぶ・ぬ</td>
+            <td><strong>んで</strong></td>
+            <td>무부누 → 은데</td>
+          </tr>
+          <tr>
+            <td>く</td>
+            <td><strong>いて</strong></td>
+            <td>쿠 → 이테</td>
+          </tr>
+          <tr>
+            <td>ぐ</td>
+            <td><strong>いで</strong></td>
+            <td>구 → 이데</td>
+          </tr>
+          <tr>
+            <td>す</td>
+            <td><strong>して</strong></td>
+            <td>스 → 시테</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jp-warning">
+      <strong>주의:</strong>
+      る로 끝난다고 무조건 って가 되는 것은 아닙니다.
+      食べる, 見る처럼 る를 빼고 て를 붙이는 동사도 있습니다.
+      이 차이는 아래에서 따로 설명합니다.
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">1. う・つ・る → って</h2>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">う・つ・る → って</span>
+      <span class="jp-rule-sub">
+        마지막 글자를 없애고 って를 붙입니다.
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby>って
+        </p>
+        <p class="jp-hiragana">
+          かう → かって
+        </p>
+        <p class="jp-meaning">
+          사다 → 사고 / 사서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>待<rt>ま</rt></ruby>つ → <ruby>待<rt>ま</rt></ruby>って
+        </p>
+        <p class="jp-hiragana">
+          まつ → まって
+        </p>
+        <p class="jp-meaning">
+          기다리다 → 기다리고 / 기다려서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>帰<rt>かえ</rt></ruby>る → <ruby>帰<rt>かえ</rt></ruby>って
+        </p>
+        <p class="jp-hiragana">
+          かえる → かえって
+        </p>
+        <p class="jp-meaning">
+          돌아가다 → 돌아가고 / 돌아가서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>取<rt>と</rt></ruby>る → <ruby>取<rt>と</rt></ruby>って
+        </p>
+        <p class="jp-hiragana">
+          とる → とって
+        </p>
+        <p class="jp-meaning">
+          잡다 / 취하다 → 잡고 / 취해서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>作<rt>つく</rt></ruby>る → <ruby>作<rt>つく</rt></ruby>って
+        </p>
+        <p class="jp-hiragana">
+          つくる → つくって
+        </p>
+        <p class="jp-meaning">
+          만들다 → 만들고 / 만들어서
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">문장으로 확인하기</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">買う</span>
+        <p class="jp-sentence">
+          コンビニで<ruby>水<rt>みず</rt></ruby>を
+          <ruby>買<rt>か</rt></ruby>ってください。
+        </p>
+        <p class="jp-hiragana">
+          コンビニで みずを かって ください。
+        </p>
+        <p class="jp-meaning">
+          편의점에서 물을 사 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">待つ</span>
+        <p class="jp-sentence">
+          ちょっと<ruby>待<rt>ま</rt></ruby>ってください。
+        </p>
+        <p class="jp-hiragana">
+          ちょっと まって ください。
+        </p>
+        <p class="jp-meaning">
+          잠깐 기다려 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">帰る</span>
+        <p class="jp-sentence">
+          <ruby>家<rt>いえ</rt></ruby>に
+          <ruby>帰<rt>かえ</rt></ruby>ってから、
+          ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。
+        </p>
+        <p class="jp-hiragana">
+          いえに かえってから、ごはんを たべます。
+        </p>
+        <p class="jp-meaning">
+          집에 돌아간 뒤 밥을 먹습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">作る</span>
+        <p class="jp-sentence">
+          <ruby>今日<rt>きょう</rt></ruby>は
+          カレーを<ruby>作<rt>つく</rt></ruby>ってみます。
+        </p>
+        <p class="jp-hiragana">
+          きょうは カレーを つくって みます。
+        </p>
+        <p class="jp-meaning">
+          오늘은 카레를 한번 만들어 보겠습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">2. む・ぶ・ぬ → んで</h2>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">む・ぶ・ぬ → んで</span>
+      <span class="jp-rule-sub">
+        세 글자는 모두 같은 방식으로 んで가 됩니다.
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby>んで
+        </p>
+        <p class="jp-hiragana">
+          よむ → よんで
+        </p>
+        <p class="jp-meaning">
+          읽다 → 읽고 / 읽어서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>飲<rt>の</rt></ruby>む → <ruby>飲<rt>の</rt></ruby>んで
+        </p>
+        <p class="jp-hiragana">
+          のむ → のんで
+        </p>
+        <p class="jp-meaning">
+          마시다 → 마시고 / 마셔서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>遊<rt>あそ</rt></ruby>ぶ → <ruby>遊<rt>あそ</rt></ruby>んで
+        </p>
+        <p class="jp-hiragana">
+          あそぶ → あそんで
+        </p>
+        <p class="jp-meaning">
+          놀다 → 놀고 / 놀아서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>呼<rt>よ</rt></ruby>ぶ → <ruby>呼<rt>よ</rt></ruby>んで
+        </p>
+        <p class="jp-hiragana">
+          よぶ → よんで
+        </p>
+        <p class="jp-meaning">
+          부르다 → 부르고 / 불러서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>死<rt>し</rt></ruby>ぬ → <ruby>死<rt>し</rt></ruby>んで
+        </p>
+        <p class="jp-hiragana">
+          しぬ → しんで
+        </p>
+        <p class="jp-meaning">
+          죽다 → 죽고 / 죽어서
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">문장으로 확인하기</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>本<rt>ほん</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>んでください。
+        </p>
+        <p class="jp-hiragana">
+          この ほんを よんで ください。
+        </p>
+        <p class="jp-meaning">
+          이 책을 읽어 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>薬<rt>くすり</rt></ruby>を
+          <ruby>飲<rt>の</rt></ruby>んでから、
+          <ruby>寝<rt>ね</rt></ruby>ます。
+        </p>
+        <p class="jp-hiragana">
+          くすりを のんでから、ねます。
+        </p>
+        <p class="jp-meaning">
+          약을 먹은 뒤 잡니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>と
+          <ruby>遊<rt>あそ</rt></ruby>んでいます。
+        </p>
+        <p class="jp-hiragana">
+          ともだちと あそんでいます。
+        </p>
+        <p class="jp-meaning">
+          친구와 놀고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          タクシーを<ruby>呼<rt>よ</rt></ruby>んでもらえますか？
+        </p>
+        <p class="jp-hiragana">
+          タクシーを よんで もらえますか？
+        </p>
+        <p class="jp-meaning">
+          택시를 불러 주실 수 있나요?
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">3. く → いて</h2>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">く → いて</span>
+      <span class="jp-rule-sub">
+        마지막 く를 없애고 いて를 붙입니다.
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby>いて
+        </p>
+        <p class="jp-hiragana">
+          かく → かいて
+        </p>
+        <p class="jp-meaning">
+          쓰다 → 쓰고 / 써서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>聞<rt>き</rt></ruby>く → <ruby>聞<rt>き</rt></ruby>いて
+        </p>
+        <p class="jp-hiragana">
+          きく → きいて
+        </p>
+        <p class="jp-meaning">
+          듣다 / 묻다 → 듣고 / 물어서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>歩<rt>ある</rt></ruby>く → <ruby>歩<rt>ある</rt></ruby>いて
+        </p>
+        <p class="jp-hiragana">
+          あるく → あるいて
+        </p>
+        <p class="jp-meaning">
+          걷다 → 걷고 / 걸어서
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">문장으로 확인하기</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここに<ruby>名前<rt>なまえ</rt></ruby>を
+          <ruby>書<rt>か</rt></ruby>いてください。
+        </p>
+        <p class="jp-hiragana">
+          ここに なまえを かいて ください。
+        </p>
+        <p class="jp-meaning">
+          여기에 이름을 적어 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby>に
+          <ruby>聞<rt>き</rt></ruby>いてみます。
+        </p>
+        <p class="jp-hiragana">
+          せんせいに きいて みます。
+        </p>
+        <p class="jp-meaning">
+          선생님에게 한번 물어보겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>駅<rt>えき</rt></ruby>まで
+          <ruby>歩<rt>ある</rt></ruby>いていきます。
+        </p>
+        <p class="jp-hiragana">
+          えきまで あるいて いきます。
+        </p>
+        <p class="jp-meaning">
+          역까지 걸어갑니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>중요한 예외:</strong>
+      <ruby>行<rt>い</rt></ruby>く는 규칙대로라면 行いて가 될 것 같지만,
+      실제로는 <strong>行って</strong>입니다.
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">4. ぐ → いで</h2>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">ぐ → いで</span>
+      <span class="jp-rule-sub">
+        く와 비슷하지만 마지막이 ぐ이므로 で가 붙습니다.
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>泳<rt>およ</rt></ruby>ぐ → <ruby>泳<rt>およ</rt></ruby>いで
+        </p>
+        <p class="jp-hiragana">
+          およぐ → およいで
+        </p>
+        <p class="jp-meaning">
+          수영하다 → 수영하고 / 수영해서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>急<rt>いそ</rt></ruby>ぐ → <ruby>急<rt>いそ</rt></ruby>いで
+        </p>
+        <p class="jp-hiragana">
+          いそぐ → いそいで
+        </p>
+        <p class="jp-meaning">
+          서두르다 → 서두르고 / 서둘러서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>注<rt>そそ</rt></ruby>ぐ → <ruby>注<rt>そそ</rt></ruby>いで
+        </p>
+        <p class="jp-hiragana">
+          そそぐ → そそいで
+        </p>
+        <p class="jp-meaning">
+          붓다 → 붓고 / 부어서
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">문장으로 확인하기</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          プールで<ruby>泳<rt>およ</rt></ruby>いでいます。
+        </p>
+        <p class="jp-hiragana">
+          プールで およいでいます。
+        </p>
+        <p class="jp-meaning">
+          수영장에서 수영하고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>急<rt>いそ</rt></ruby>いでください。
+        </p>
+        <p class="jp-hiragana">
+          いそいで ください。
+        </p>
+        <p class="jp-meaning">
+          서둘러 주세요.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">5. す → して</h2>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">す → して</span>
+      <span class="jp-rule-sub">
+        마지막 す를 없애고 して를 붙입니다.
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby>して
+        </p>
+        <p class="jp-hiragana">
+          はなす → はなして
+        </p>
+        <p class="jp-meaning">
+          말하다 → 말하고 / 말해서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>貸<rt>か</rt></ruby>す → <ruby>貸<rt>か</rt></ruby>して
+        </p>
+        <p class="jp-hiragana">
+          かす → かして
+        </p>
+        <p class="jp-meaning">
+          빌려주다 → 빌려주고 / 빌려줘서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>消<rt>け</rt></ruby>す → <ruby>消<rt>け</rt></ruby>して
+        </p>
+        <p class="jp-hiragana">
+          けす → けして
+        </p>
+        <p class="jp-meaning">
+          끄다 / 지우다 → 끄고 / 지워서
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">문장으로 확인하기</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          もう<ruby>一度<rt>いちど</rt></ruby>
+          <ruby>話<rt>はな</rt></ruby>してください。
+        </p>
+        <p class="jp-hiragana">
+          もう いちど はなして ください。
+        </p>
+        <p class="jp-meaning">
+          한 번 더 말해 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ちょっとペンを<ruby>貸<rt>か</rt></ruby>してもらえますか？
+        </p>
+        <p class="jp-hiragana">
+          ちょっと ペンを かして もらえますか？
+        </p>
+        <p class="jp-meaning">
+          잠깐 펜을 빌려주실 수 있나요?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>電気<rt>でんき</rt></ruby>を
+          <ruby>消<rt>け</rt></ruby>してください。
+        </p>
+        <p class="jp-hiragana">
+          でんきを けして ください。
+        </p>
+        <p class="jp-meaning">
+          불을 꺼 주세요.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">6. る동사: る를 빼고 て</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">모든 る동사가 帰る → 帰って가 되는 것은 아닙니다</h3>
+      <p>
+        食べる, 見る, 起きる처럼
+        <strong>る를 빼고 바로 て를 붙이는 동사</strong>도 있습니다.
+      </p>
+      <p>
+        초급 단계에서는 대표 동사를 많이 보면서 익히는 것이 가장 편합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">る → て</span>
+      <span class="jp-rule-sub">
+        대표적으로 食べる, 見る, 起きる, 寝る 등이 있습니다.
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べて
+        </p>
+        <p class="jp-hiragana">
+          たべる → たべて
+        </p>
+        <p class="jp-meaning">
+          먹다 → 먹고 / 먹어서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby>て
+        </p>
+        <p class="jp-hiragana">
+          みる → みて
+        </p>
+        <p class="jp-meaning">
+          보다 → 보고 / 봐서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>起<rt>お</rt></ruby>きる → <ruby>起<rt>お</rt></ruby>きて
+        </p>
+        <p class="jp-hiragana">
+          おきる → おきて
+        </p>
+        <p class="jp-meaning">
+          일어나다 → 일어나고 / 일어나서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>寝<rt>ね</rt></ruby>る → <ruby>寝<rt>ね</rt></ruby>て
+        </p>
+        <p class="jp-hiragana">
+          ねる → ねて
+        </p>
+        <p class="jp-meaning">
+          자다 → 자고 / 자서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>教<rt>おし</rt></ruby>える → <ruby>教<rt>おし</rt></ruby>えて
+        </p>
+        <p class="jp-hiragana">
+          おしえる → おしえて
+        </p>
+        <p class="jp-meaning">
+          가르치다 / 알려주다 → 가르치고 / 알려줘서
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">문장으로 확인하기</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          これを<ruby>食<rt>た</rt></ruby>べてみてください。
+        </p>
+        <p class="jp-hiragana">
+          これを たべて みて ください。
+        </p>
+        <p class="jp-meaning">
+          이걸 한번 먹어 보세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>てください。
+        </p>
+        <p class="jp-hiragana">
+          この しゃしんを みて ください。
+        </p>
+        <p class="jp-meaning">
+          이 사진을 봐 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>毎朝<rt>まいあさ</rt></ruby>
+          <ruby>六時<rt>ろくじ</rt></ruby>に
+          <ruby>起<rt>お</rt></ruby>きています。
+        </p>
+        <p class="jp-hiragana">
+          まいあさ ろくじに おきています。
+        </p>
+        <p class="jp-meaning">
+          매일 아침 6시에 일어나고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>駅<rt>えき</rt></ruby>までの
+          <ruby>行<rt>い</rt></ruby>き<ruby>方<rt>かた</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてください。
+        </p>
+        <p class="jp-hiragana">
+          えきまでの いきかたを おしえて ください。
+        </p>
+        <p class="jp-meaning">
+          역까지 가는 방법을 알려 주세요.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">7. する・来る・行く</h2>
+
+    <p class="jp-section-desc">
+      자주 쓰기 때문에 별도로 기억해 두는 것이 좋습니다.
+    </p>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>기본형</th>
+            <th>て형</th>
+            <th>뜻</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>する</td>
+            <td><strong>して</strong></td>
+            <td>하다</td>
+          </tr>
+          <tr>
+            <td>
+              <ruby>来<rt>く</rt></ruby>る
+            </td>
+            <td>
+              <strong><ruby>来<rt>き</rt></ruby>て</strong>
+            </td>
+            <td>오다</td>
+          </tr>
+          <tr>
+            <td>
+              <ruby>行<rt>い</rt></ruby>く
+            </td>
+            <td>
+              <strong><ruby>行<rt>い</rt></ruby>って</strong>
+            </td>
+            <td>가다</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>勉強<rt>べんきょう</rt></ruby>する →
+          <ruby>勉強<rt>べんきょう</rt></ruby>して
+        </p>
+        <p class="jp-hiragana">
+          べんきょうする → べんきょうして
+        </p>
+        <p class="jp-meaning">
+          공부하다 → 공부하고 / 공부해서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>来<rt>く</rt></ruby>る →
+          <ruby>来<rt>き</rt></ruby>て
+        </p>
+        <p class="jp-hiragana">
+          くる → きて
+        </p>
+        <p class="jp-meaning">
+          오다 → 오고 / 와서
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>行<rt>い</rt></ruby>く →
+          <ruby>行<rt>い</rt></ruby>って
+        </p>
+        <p class="jp-hiragana">
+          いく → いって
+        </p>
+        <p class="jp-meaning">
+          가다 → 가고 / 가서
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>行く는 반드시 기억:</strong>
+      行く → 行いて가 아니라 <strong>行って</strong>입니다.
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">변환 규칙 한 번에 정리</h2>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>형태</th>
+            <th>변환</th>
+            <th>예제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>う・つ・る</td>
+            <td>って</td>
+            <td>買う → 買って</td>
+          </tr>
+          <tr>
+            <td>む・ぶ・ぬ</td>
+            <td>んで</td>
+            <td>飲む → 飲んで</td>
+          </tr>
+          <tr>
+            <td>く</td>
+            <td>いて</td>
+            <td>書く → 書いて</td>
+          </tr>
+          <tr>
+            <td>ぐ</td>
+            <td>いで</td>
+            <td>泳ぐ → 泳いで</td>
+          </tr>
+          <tr>
+            <td>す</td>
+            <td>して</td>
+            <td>話す → 話して</td>
+          </tr>
+          <tr>
+            <td>일부 る동사</td>
+            <td>る를 빼고 て</td>
+            <td>食べる → 食べて</td>
+          </tr>
+          <tr>
+            <td>する</td>
+            <td>して</td>
+            <td>勉強する → 勉強して</td>
+          </tr>
+          <tr>
+            <td>来る</td>
+            <td>来て</td>
+            <td>来る → 来て</td>
+          </tr>
+          <tr>
+            <td>行く</td>
+            <td>行って</td>
+            <td>예외</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">연습</span>
+    <h2 class="jp-section-title">연습 1. て형으로 바꿔보기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">다음 동사를 て형으로 바꿔보세요</h3>
+
+      <ol>
+        <li>買う</li>
+        <li>待つ</li>
+        <li>帰る</li>
+        <li>飲む</li>
+        <li>読む</li>
+        <li>遊ぶ</li>
+        <li>書く</li>
+        <li>聞く</li>
+        <li>泳ぐ</li>
+        <li>急ぐ</li>
+        <li>話す</li>
+        <li>貸す</li>
+        <li>食べる</li>
+        <li>見る</li>
+        <li>起きる</li>
+        <li>する</li>
+        <li>来る</li>
+        <li>行く</li>
+      </ol>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+      <p>1. 買って</p>
+      <p>2. 待って</p>
+      <p>3. 帰って</p>
+      <p>4. 飲んで</p>
+      <p>5. 読んで</p>
+      <p>6. 遊んで</p>
+      <p>7. 書いて</p>
+      <p>8. 聞いて</p>
+      <p>9. 泳いで</p>
+      <p>10. 急いで</p>
+      <p>11. 話して</p>
+      <p>12. 貸して</p>
+      <p>13. 食べて</p>
+      <p>14. 見て</p>
+      <p>15. 起きて</p>
+      <p>16. して</p>
+      <p>17. 来て（きて）</p>
+      <p>18. 行って（いって）</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">연습</span>
+    <h2 class="jp-section-title">연습 2. 문장 안에서 바꿔보기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">괄호 안의 동사를 て형으로 바꿔보세요</h3>
+
+      <div class="jp-question">
+        1. ここで（待つ）ください。
+      </div>
+
+      <div class="jp-question">
+        2. この本を（読む）ください。
+      </div>
+
+      <div class="jp-question">
+        3. 名前を（書く）ください。
+      </div>
+
+      <div class="jp-question">
+        4. もう一度（話す）ください。
+      </div>
+
+      <div class="jp-question">
+        5. この料理を（食べる）みてください。
+      </div>
+
+      <div class="jp-question">
+        6. 先生に（聞く）みます。
+      </div>
+
+      <div class="jp-question">
+        7. 家に（帰る）から、勉強します。
+      </div>
+
+      <div class="jp-question">
+        8. 薬を（飲む）から、寝ます。
+      </div>
+
+      <div class="jp-question">
+        9. 明日ここに（来る）ください。
+      </div>
+
+      <div class="jp-question">
+        10. 駅まで（行く）ください。
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+
+      <p>1. 待ってください。</p>
+      <p>2. 読んでください。</p>
+      <p>3. 書いてください。</p>
+      <p>4. 話してください。</p>
+      <p>5. 食べてみてください。</p>
+      <p>6. 聞いてみます。</p>
+      <p>7. 帰ってから、勉強します。</p>
+      <p>8. 飲んでから、寝ます。</p>
+      <p>9. 来てください。</p>
+      <p>10. 行ってください。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">말하기</span>
+    <h2 class="jp-section-title">연습 3. 직접 말해보기</h2>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">다음 동사를 사용해서 짧은 문장을 만들어보세요</h3>
+
+      <p>
+        ① 食べる
+      </p>
+      <p>
+        ② 飲む
+      </p>
+      <p>
+        ③ 行く
+      </p>
+      <p>
+        ④ 帰る
+      </p>
+      <p>
+        ⑤ 話す
+      </p>
+      <p>
+        ⑥ 聞く
+      </p>
+      <p>
+        ⑦ 買う
+      </p>
+      <p>
+        ⑧ 見る
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">예시 답변</span>
+        <p class="jp-sentence">
+          このラーメンを<ruby>食<rt>た</rt></ruby>べてみます。
+        </p>
+        <p class="jp-hiragana">
+          この ラーメンを たべて みます。
+        </p>
+        <p class="jp-meaning">
+          이 라면을 한번 먹어보겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">예시 답변</span>
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>聞<rt>き</rt></ruby>いてみます。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに きいて みます。
+        </p>
+        <p class="jp-meaning">
+          친구에게 한번 물어보겠습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+<div class="jp-lesson">
+
+  <div class="jp-title-box">
+    <div class="jp-title-label">て形 STEP 2</div>
+    <h1 class="jp-title">て형 기본 활용</h1>
+    <p class="jp-title-sub">
+      て형을 만들 수 있다면, 이제 실제 문장에서 가장 자주 쓰는 기본 표현을 익힙니다.
+      이번 파트에서는 ～てください, ～ている, ～てもいい, ～てはいけない를 자세히 봅니다.
+    </p>
+  </div>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">1. ～てください</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">상대방에게 “~해 주세요”라고 부탁할 때</h3>
+      <p>
+        동사를 て형으로 만든 뒤 <strong>ください</strong>를 붙이면
+        상대방에게 어떤 행동을 부탁하는 표현이 됩니다.
+      </p>
+      <p>
+        가장 기본적인 부탁 표현 중 하나이며,
+        여행이나 일상생활에서도 매우 자주 사용합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + ください</span>
+      <span class="jp-rule-sub">
+        의미: ~해 주세요
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">待つ</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">待って</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">待ってください</div>
+    </div>
+
+    <h3 class="jp-subtitle">기본 예문</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ちょっと<ruby>待<rt>ま</rt></ruby>ってください。
+        </p>
+        <p class="jp-hiragana">
+          ちょっと まって ください。
+        </p>
+        <p class="jp-meaning">
+          잠깐 기다려 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここに<ruby>名前<rt>なまえ</rt></ruby>を
+          <ruby>書<rt>か</rt></ruby>いてください。
+        </p>
+        <p class="jp-hiragana">
+          ここに なまえを かいて ください。
+        </p>
+        <p class="jp-meaning">
+          여기에 이름을 써 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>本<rt>ほん</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>んでください。
+        </p>
+        <p class="jp-hiragana">
+          この ほんを よんで ください。
+        </p>
+        <p class="jp-meaning">
+          이 책을 읽어 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          もう<ruby>一度<rt>いちど</rt></ruby>
+          <ruby>言<rt>い</rt></ruby>ってください。
+        </p>
+        <p class="jp-hiragana">
+          もう いちど いって ください。
+        </p>
+        <p class="jp-meaning">
+          한 번 더 말해 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ゆっくり<ruby>話<rt>はな</rt></ruby>してください。
+        </p>
+        <p class="jp-hiragana">
+          ゆっくり はなして ください。
+        </p>
+        <p class="jp-meaning">
+          천천히 말해 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          こちらに<ruby>来<rt>き</rt></ruby>てください。
+        </p>
+        <p class="jp-hiragana">
+          こちらに きて ください。
+        </p>
+        <p class="jp-meaning">
+          이쪽으로 와 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>てください。
+        </p>
+        <p class="jp-hiragana">
+          この しゃしんを みて ください。
+        </p>
+        <p class="jp-meaning">
+          이 사진을 봐 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>電気<rt>でんき</rt></ruby>を
+          <ruby>消<rt>け</rt></ruby>してください。
+        </p>
+        <p class="jp-hiragana">
+          でんきを けして ください。
+        </p>
+        <p class="jp-meaning">
+          불을 꺼 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>少<rt>すこ</rt></ruby>し
+          <ruby>休<rt>やす</rt></ruby>んでください。
+        </p>
+        <p class="jp-hiragana">
+          すこし やすんで ください。
+        </p>
+        <p class="jp-meaning">
+          조금 쉬어 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>駅<rt>えき</rt></ruby>までの
+          <ruby>行<rt>い</rt></ruby>き<ruby>方<rt>かた</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてください。
+        </p>
+        <p class="jp-hiragana">
+          えきまでの いきかたを おしえて ください。
+        </p>
+        <p class="jp-meaning">
+          역까지 가는 방법을 알려 주세요.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>주의:</strong>
+      ～てください는 정중한 표현이지만,
+      상황에 따라서는 상대방에게 직접 행동을 요구하는 느낌이 날 수 있습니다.
+      더 정중한 부탁 표현은 뒤의 단계에서 따로 배울 수 있습니다.
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>다음 표현을 일본어로 말해 보세요.</p>
+
+      <div class="jp-question">1. 잠깐 기다려 주세요.</div>
+      <div class="jp-question">2. 이걸 봐 주세요.</div>
+      <div class="jp-question">3. 천천히 말해 주세요.</div>
+      <div class="jp-question">4. 여기에 써 주세요.</div>
+      <div class="jp-question">5. 조금 쉬어 주세요.</div>
+      <div class="jp-question">6. 다시 와 주세요.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. ちょっと待ってください。</p>
+      <p>2. これを見てください。</p>
+      <p>3. ゆっくり話してください。</p>
+      <p>4. ここに書いてください。</p>
+      <p>5. 少し休んでください。</p>
+      <p>6. また来てください。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">2. ～ている</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">“지금 ~하고 있다”가 가장 기본적인 의미</h3>
+      <p>
+        동사의 て형 뒤에 <strong>いる</strong>를 붙이면
+        진행 중인 동작이나 계속되는 상태를 나타낼 수 있습니다.
+      </p>
+      <p>
+        정중하게 말할 때는 <strong>～ています</strong>를 사용합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + いる / います</span>
+      <span class="jp-rule-sub">
+        기본 의미: ~하고 있다
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">食べる</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">食べて</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">食べています</div>
+    </div>
+
+    <h3 class="jp-subtitle">A. 지금 진행 중인 행동</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>今<rt>いま</rt></ruby>、ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べています。
+        </p>
+        <p class="jp-hiragana">
+          いま、ごはんを たべています。
+        </p>
+        <p class="jp-meaning">
+          지금 밥을 먹고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>今<rt>いま</rt></ruby>、
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>しています。
+        </p>
+        <p class="jp-hiragana">
+          いま、にほんごを べんきょうしています。
+        </p>
+        <p class="jp-meaning">
+          지금 일본어를 공부하고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>母<rt>はは</rt></ruby>は
+          <ruby>電話<rt>でんわ</rt></ruby>で
+          <ruby>話<rt>はな</rt></ruby>しています。
+        </p>
+        <p class="jp-hiragana">
+          ははは でんわで はなしています。
+        </p>
+        <p class="jp-meaning">
+          어머니는 전화로 이야기하고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>子供<rt>こども</rt></ruby>たちが
+          <ruby>公園<rt>こうえん</rt></ruby>で
+          <ruby>遊<rt>あそ</rt></ruby>んでいます。
+        </p>
+        <p class="jp-hiragana">
+          こどもたちが こうえんで あそんでいます。
+        </p>
+        <p class="jp-meaning">
+          아이들이 공원에서 놀고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>外<rt>そと</rt></ruby>で
+          <ruby>雨<rt>あめ</rt></ruby>が
+          <ruby>降<rt>ふ</rt></ruby>っています。
+        </p>
+        <p class="jp-hiragana">
+          そとで あめが ふっています。
+        </p>
+        <p class="jp-meaning">
+          밖에 비가 내리고 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">B. 반복적으로 하는 행동</h3>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">～ている는 “지금 이 순간”만 뜻하지 않습니다</h3>
+      <p>
+        평소에 반복적으로 하는 행동이나 습관도 ～ています로 표현할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>毎日<rt>まいにち</rt></ruby>
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>しています。
+        </p>
+        <p class="jp-hiragana">
+          まいにち にほんごを べんきょうしています。
+        </p>
+        <p class="jp-meaning">
+          매일 일본어를 공부하고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>毎朝<rt>まいあさ</rt></ruby>
+          コーヒーを<ruby>飲<rt>の</rt></ruby>んでいます。
+        </p>
+        <p class="jp-hiragana">
+          まいあさ コーヒーを のんでいます。
+        </p>
+        <p class="jp-meaning">
+          매일 아침 커피를 마십니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>週末<rt>しゅうまつ</rt></ruby>は
+          ジムに<ruby>行<rt>い</rt></ruby>っています。
+        </p>
+        <p class="jp-hiragana">
+          しゅうまつは ジムに いっています。
+        </p>
+        <p class="jp-meaning">
+          주말에는 헬스장에 다니고 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">C. 어떤 상태가 계속되고 있을 때</h3>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">이미 일어난 일이 만든 상태</h3>
+      <p>
+        일본어의 ～ている는 단순한 진행형보다 의미가 넓습니다.
+        어떤 일이 일어난 뒤 그 결과가 계속되고 있는 상태도 나타낼 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>結婚<rt>けっこん</rt></ruby>しています。
+        </p>
+        <p class="jp-hiragana">
+          けっこんしています。
+        </p>
+        <p class="jp-meaning">
+          결혼했습니다 / 결혼한 상태입니다.
+        </p>
+        <p class="jp-note">
+          “지금 결혼하는 중”이라는 뜻이 아니라,
+          결혼해서 현재 결혼한 상태라는 뜻입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>彼<rt>かれ</rt></ruby>を
+          <ruby>知<rt>し</rt></ruby>っています。
+        </p>
+        <p class="jp-hiragana">
+          かれを しっています。
+        </p>
+        <p class="jp-meaning">
+          그를 알고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>田中<rt>たなか</rt></ruby>さんは
+          <ruby>東京<rt>とうきょう</rt></ruby>に
+          <ruby>住<rt>す</rt></ruby>んでいます。
+        </p>
+        <p class="jp-hiragana">
+          たなかさんは とうきょうに すんでいます。
+        </p>
+        <p class="jp-meaning">
+          다나카 씨는 도쿄에 살고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ドアが<ruby>開<rt>あ</rt></ruby>いています。
+        </p>
+        <p class="jp-hiragana">
+          ドアが あいています。
+        </p>
+        <p class="jp-meaning">
+          문이 열려 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>중요:</strong>
+      한국어의 “~하고 있다”와 일본어의 ～ている가 항상 완전히 같은 것은 아닙니다.
+      일본어에서는 진행 중인 행동뿐 아니라 반복 행동, 지속 상태도 표현합니다.
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>괄호 안의 동사를 ～ています 형태로 바꿔보세요.</p>
+
+      <div class="jp-question">1. 今、ご飯を（食べる）。</div>
+      <div class="jp-question">2. 毎日、日本語を（勉強する）。</div>
+      <div class="jp-question">3. 東京に（住む）。</div>
+      <div class="jp-question">4. 電話で（話す）。</div>
+      <div class="jp-question">5. 公園で（遊ぶ）。</div>
+      <div class="jp-question">6. 雨が（降る）。</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+      <p>1. 食べています。</p>
+      <p>2. 勉強しています。</p>
+      <p>3. 住んでいます。</p>
+      <p>4. 話しています。</p>
+      <p>5. 遊んでいます。</p>
+      <p>6. 降っています。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">3. ～てもいい</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">“~해도 된다”라는 허가</h3>
+      <p>
+        동사의 て형 뒤에 <strong>もいい</strong>를 붙이면
+        어떤 행동을 해도 괜찮다는 뜻이 됩니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + もいい</span>
+      <span class="jp-rule-sub">
+        의미: ~해도 된다 / ~해도 괜찮다
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここに<ruby>座<rt>すわ</rt></ruby>ってもいいです。
+        </p>
+        <p class="jp-hiragana">
+          ここに すわっても いいです。
+        </p>
+        <p class="jp-meaning">
+          여기에 앉아도 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>本<rt>ほん</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>んでもいいです。
+        </p>
+        <p class="jp-hiragana">
+          この ほんを よんでも いいです。
+        </p>
+        <p class="jp-meaning">
+          이 책을 읽어도 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってもいいです。
+        </p>
+        <p class="jp-hiragana">
+          しゃしんを とっても いいです。
+        </p>
+        <p class="jp-meaning">
+          사진을 찍어도 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>今日<rt>きょう</rt></ruby>は
+          <ruby>早<rt>はや</rt></ruby>く
+          <ruby>帰<rt>かえ</rt></ruby>ってもいいです。
+        </p>
+        <p class="jp-hiragana">
+          きょうは はやく かえっても いいです。
+        </p>
+        <p class="jp-meaning">
+          오늘은 일찍 돌아가도 됩니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">상대방에게 허락을 구할 때</h3>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">～てもいいですか？</h3>
+      <p>
+        문장 끝을 질문으로 바꾸면
+        “~해도 될까요?”라는 허락을 구하는 표현이 됩니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここに<ruby>座<rt>すわ</rt></ruby>ってもいいですか？
+        </p>
+        <p class="jp-hiragana">
+          ここに すわっても いいですか？
+        </p>
+        <p class="jp-meaning">
+          여기에 앉아도 될까요?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってもいいですか？
+        </p>
+        <p class="jp-hiragana">
+          しゃしんを とっても いいですか？
+        </p>
+        <p class="jp-meaning">
+          사진을 찍어도 될까요?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここで<ruby>食<rt>た</rt></ruby>べてもいいですか？
+        </p>
+        <p class="jp-hiragana">
+          ここで たべても いいですか？
+        </p>
+        <p class="jp-meaning">
+          여기에서 먹어도 될까요?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>窓<rt>まど</rt></ruby>を
+          <ruby>開<rt>あ</rt></ruby>けてもいいですか？
+        </p>
+        <p class="jp-hiragana">
+          まどを あけても いいですか？
+        </p>
+        <p class="jp-meaning">
+          창문을 열어도 될까요?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先<rt>さき</rt></ruby>に
+          <ruby>帰<rt>かえ</rt></ruby>ってもいいですか？
+        </p>
+        <p class="jp-hiragana">
+          さきに かえっても いいですか？
+        </p>
+        <p class="jp-meaning">
+          먼저 돌아가도 될까요?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ちょっと<ruby>休<rt>やす</rt></ruby>んでもいいですか？
+        </p>
+        <p class="jp-hiragana">
+          ちょっと やすんでも いいですか？
+        </p>
+        <p class="jp-meaning">
+          잠깐 쉬어도 될까요?
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">말하기 연습</h3>
+      <p>다음 상황에서 허락을 구해보세요.</p>
+
+      <div class="jp-question">1. 사진을 찍고 싶습니다.</div>
+      <div class="jp-question">2. 이 자리에 앉고 싶습니다.</div>
+      <div class="jp-question">3. 창문을 열고 싶습니다.</div>
+      <div class="jp-question">4. 먼저 집에 가고 싶습니다.</div>
+      <div class="jp-question">5. 여기서 음식을 먹고 싶습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 写真を撮ってもいいですか？</p>
+      <p>2. ここに座ってもいいですか？</p>
+      <p>3. 窓を開けてもいいですか？</p>
+      <p>4. 先に帰ってもいいですか？</p>
+      <p>5. ここで食べてもいいですか？</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">기초</span>
+    <h2 class="jp-section-title">4. ～てはいけない</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">“~하면 안 된다”라는 금지</h3>
+      <p>
+        동사의 て형 뒤에 <strong>はいけない</strong>를 붙이면
+        어떤 행동을 하면 안 된다는 뜻이 됩니다.
+      </p>
+      <p>
+        규칙이나 금지사항을 설명할 때 자주 사용합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + はいけない</span>
+      <span class="jp-rule-sub">
+        의미: ~해서는 안 된다 / ~하면 안 된다
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここで<ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってはいけません。
+        </p>
+        <p class="jp-hiragana">
+          ここで しゃしんを とっては いけません。
+        </p>
+        <p class="jp-meaning">
+          여기에서 사진을 찍으면 안 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここで<ruby>食<rt>た</rt></ruby>べてはいけません。
+        </p>
+        <p class="jp-hiragana">
+          ここで たべては いけません。
+        </p>
+        <p class="jp-meaning">
+          여기에서 먹으면 안 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>部屋<rt>へや</rt></ruby>に
+          <ruby>入<rt>はい</rt></ruby>ってはいけません。
+        </p>
+        <p class="jp-hiragana">
+          この へやに はいっては いけません。
+        </p>
+        <p class="jp-meaning">
+          이 방에 들어가면 안 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>授業中<rt>じゅぎょうちゅう</rt></ruby>に
+          <ruby>寝<rt>ね</rt></ruby>てはいけません。
+        </p>
+        <p class="jp-hiragana">
+          じゅぎょうちゅうに ねては いけません。
+        </p>
+        <p class="jp-meaning">
+          수업 중에 자면 안 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>試験中<rt>しけんちゅう</rt></ruby>に
+          <ruby>話<rt>はな</rt></ruby>してはいけません。
+        </p>
+        <p class="jp-hiragana">
+          しけんちゅうに はなしては いけません。
+        </p>
+        <p class="jp-meaning">
+          시험 중에 이야기하면 안 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>危<rt>あぶ</rt></ruby>ないので、
+          ここで<ruby>遊<rt>あそ</rt></ruby>んではいけません。
+        </p>
+        <p class="jp-hiragana">
+          あぶないので、ここで あそんでは いけません。
+        </p>
+        <p class="jp-meaning">
+          위험하기 때문에 여기에서 놀면 안 됩니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">～てもいい와 비교</h3>
+
+    <div class="jp-compare">
+      <div class="jp-compare-card">
+        <h4>～てもいい</h4>
+        <p>허가</p>
+        <p>“~해도 된다”</p>
+      </div>
+
+      <div class="jp-compare-card">
+        <h4>～てはいけない</h4>
+        <p>금지</p>
+        <p>“~하면 안 된다”</p>
+      </div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここで<ruby>座<rt>すわ</rt></ruby>ってもいいです。
+        </p>
+        <p class="jp-hiragana">
+          ここで すわっても いいです。
+        </p>
+        <p class="jp-meaning">
+          여기에서 앉아도 됩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ここで<ruby>座<rt>すわ</rt></ruby>ってはいけません。
+        </p>
+        <p class="jp-hiragana">
+          ここで すわっては いけません。
+        </p>
+        <p class="jp-meaning">
+          여기에서 앉으면 안 됩니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>다음 상황을 ～てはいけません으로 만들어보세요.</p>
+
+      <div class="jp-question">1. 여기에서 담배를 피우면 안 됩니다.</div>
+      <div class="jp-question">2. 이 방에 들어가면 안 됩니다.</div>
+      <div class="jp-question">3. 시험 중에 이야기하면 안 됩니다.</div>
+      <div class="jp-question">4. 여기에서 사진을 찍으면 안 됩니다.</div>
+      <div class="jp-question">5. 이 컴퓨터를 사용하면 안 됩니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+
+      <p>
+        1.
+        ここで<ruby>煙草<rt>たばこ</rt></ruby>を
+        <ruby>吸<rt>す</rt></ruby>ってはいけません。
+      </p>
+
+      <p>
+        2.
+        この<ruby>部屋<rt>へや</rt></ruby>に
+        <ruby>入<rt>はい</rt></ruby>ってはいけません。
+      </p>
+
+      <p>
+        3.
+        <ruby>試験中<rt>しけんちゅう</rt></ruby>に
+        <ruby>話<rt>はな</rt></ruby>してはいけません。
+      </p>
+
+      <p>
+        4.
+        ここで<ruby>写真<rt>しゃしん</rt></ruby>を
+        <ruby>撮<rt>と</rt></ruby>ってはいけません。
+      </p>
+
+      <p>
+        5.
+        このコンピューターを
+        <ruby>使<rt>つか</rt></ruby>ってはいけません。
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">복습</span>
+    <h2 class="jp-section-title">이번 파트 한 번에 정리</h2>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>표현</th>
+            <th>기본 의미</th>
+            <th>예문</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>～てください</td>
+            <td>~해 주세요</td>
+            <td>待ってください。</td>
+          </tr>
+          <tr>
+            <td>～ている</td>
+            <td>~하고 있다 / 상태가 계속되다</td>
+            <td>勉強しています。</td>
+          </tr>
+          <tr>
+            <td>～てもいい</td>
+            <td>~해도 된다</td>
+            <td>座ってもいいです。</td>
+          </tr>
+          <tr>
+            <td>～てもいいですか</td>
+            <td>~해도 될까요?</td>
+            <td>写真を撮ってもいいですか？</td>
+          </tr>
+          <tr>
+            <td>～てはいけない</td>
+            <td>~하면 안 된다</td>
+            <td>入ってはいけません。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">종합 연습</span>
+    <h2 class="jp-section-title">표현을 골라 말해보기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">상황에 맞는 표현을 선택하세요</h3>
+
+      <div class="jp-question">
+        1. 친구에게 “이 사진을 봐 줘”라고 부탁하고 싶습니다.
+      </div>
+
+      <div class="jp-question">
+        2. 지금 일본어를 공부하고 있다고 말하고 싶습니다.
+      </div>
+
+      <div class="jp-question">
+        3. 카페에서 “여기에 앉아도 될까요?”라고 묻고 싶습니다.
+      </div>
+
+      <div class="jp-question">
+        4. “여기에서는 사진을 찍으면 안 됩니다”라고 설명하고 싶습니다.
+      </div>
+
+      <div class="jp-question">
+        5. “매일 운동하고 있습니다”라고 말하고 싶습니다.
+      </div>
+
+      <div class="jp-question">
+        6. “창문을 열어도 될까요?”라고 묻고 싶습니다.
+      </div>
+
+      <div class="jp-question">
+        7. “잠깐 기다려 주세요”라고 말하고 싶습니다.
+      </div>
+
+      <div class="jp-question">
+        8. “시험 중에는 말하면 안 됩니다”라고 설명하고 싶습니다.
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+
+      <p>1. この写真を見てください。</p>
+      <p>2. 今、日本語を勉強しています。</p>
+      <p>3. ここに座ってもいいですか？</p>
+      <p>4. ここでは写真を撮ってはいけません。</p>
+      <p>5. 毎日運動しています。</p>
+      <p>6. 窓を開けてもいいですか？</p>
+      <p>7. ちょっと待ってください。</p>
+      <p>8. 試験中は話してはいけません。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level basic">말하기</span>
+    <h2 class="jp-section-title">자기 이야기로 말해보기</h2>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">배운 문법을 사용해서 직접 답해보세요</h3>
+
+      <p>
+        ① <ruby>今<rt>いま</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>をしていますか？
+      </p>
+
+      <p class="jp-hiragana">
+        いま、なにを していますか？
+      </p>
+
+      <p>
+        지금 무엇을 하고 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <p>
+        ② <ruby>毎日<rt>まいにち</rt></ruby>
+        していることはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        まいにち していることは ありますか？
+      </p>
+
+      <p>
+        매일 하고 있는 일이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <p>
+        ③ あなたの<ruby>家<rt>いえ</rt></ruby>で
+        してもいいことは<ruby>何<rt>なん</rt></ruby>ですか？
+      </p>
+
+      <p class="jp-hiragana">
+        あなたの いえで しても いいことは なんですか？
+      </p>
+
+      <p>
+        당신의 집에서 해도 되는 것은 무엇인가요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <p>
+        ④ <ruby>学校<rt>がっこう</rt></ruby>や
+        <ruby>会社<rt>かいしゃ</rt></ruby>で
+        してはいけないことは<ruby>何<rt>なん</rt></ruby>ですか？
+      </p>
+
+      <p class="jp-hiragana">
+        がっこうや かいしゃで しては いけないことは なんですか？
+      </p>
+
+      <p>
+        학교나 회사에서 하면 안 되는 것은 무엇인가요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <p>
+        ⑤ <ruby>旅行<rt>りょこう</rt></ruby>するとき、
+        <ruby>写真<rt>しゃしん</rt></ruby>を
+        <ruby>撮<rt>と</rt></ruby>ってもいいか
+        <ruby>確認<rt>かくにん</rt></ruby>することがありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        りょこうするとき、しゃしんを とっても いいか
+        かくにんすることが ありますか？
+      </p>
+
+      <p>
+        여행할 때 사진을 찍어도 되는지 확인하는 경우가 있나요?
+      </p>
+    </div>
+  </section>
+
+  <div class="jp-skip">
+    <strong>다음 단계:</strong>
+    여기까지가 て형의 기본 활용입니다.
+    다음 파트에서는 관점이 달라져서 초급자들이 특히 많이 헷갈리는
+    <strong>～てあげる・～てくれる・～てもらう</strong>를 집중적으로 다룹니다.
+  </div>
+
+</div>
+<div class="jp-lesson">
+
+  <div class="jp-title-box">
+    <div class="jp-title-label">て形 STEP 3</div>
+    <h1 class="jp-title">～てあげる・～てくれる・～てもらう</h1>
+    <p class="jp-title-sub">
+      세 표현 모두 한국어로는 “~해 주다”, “~해 받다”처럼 비슷하게 느껴질 수 있습니다.
+      하지만 일본어에서는 <strong>누가 누구에게 행동하는지</strong>가 매우 중요합니다.
+      이번 파트에서는 행동의 방향을 중심으로 차근차근 정리합니다.
+    </p>
+  </div>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">먼저 あげる・くれる・もらう부터 이해하기</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">핵심은 “행동의 방향”입니다</h3>
+      <p>
+        세 표현의 차이를 한국어 번역만 보고 외우면 헷갈리기 쉽습니다.
+      </p>
+      <p>
+        누가 행동을 하고, 그 행동의 혜택이 누구에게 가는지를 보면 훨씬 쉽게 이해할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">나 → 상대방</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てあげる</div>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">상대방 → 나</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てくれる</div>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">나 ← 상대방</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てもらう</div>
+    </div>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>표현</th>
+            <th>행동 방향</th>
+            <th>기본 느낌</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>～てあげる</td>
+            <td>나/누군가 → 상대방</td>
+            <td>상대방을 위해 ~해 주다</td>
+          </tr>
+          <tr>
+            <td>～てくれる</td>
+            <td>상대방 → 나/내 편</td>
+            <td>상대방이 나를 위해 ~해 주다</td>
+          </tr>
+          <tr>
+            <td>～てもらう</td>
+            <td>나 ← 상대방</td>
+            <td>상대방에게 ~해 받다</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jp-warning">
+      <strong>중요:</strong>
+      ～てくれる와 ～てもらう는 같은 사건을 서로 다른 관점에서 표현할 수 있습니다.
+      아래에서 같은 상황을 여러 방식으로 바꿔보겠습니다.
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">1. ～てあげる</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">상대방을 위해 어떤 행동을 해 주다</h3>
+      <p>
+        내가 상대방을 위해 어떤 행동을 해 줄 때 사용할 수 있습니다.
+      </p>
+      <p>
+        꼭 “나”만 주어가 되는 것은 아닙니다.
+        어떤 사람이 다른 사람을 위해 행동하는 경우에도 사용할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">Aは Bに 동사 て형 + あげる</span>
+      <span class="jp-rule-sub">
+        A가 B를 위해 ~해 주다
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">私</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">友達</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てあげる</div>
+    </div>
+
+    <h3 class="jp-subtitle">기본 예문</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてあげました。
+        </p>
+        <p class="jp-hiragana">
+          わたしは ともだちに にほんごを おしえて あげました。
+        </p>
+        <p class="jp-meaning">
+          저는 친구에게 일본어를 가르쳐 주었습니다.
+        </p>
+        <p class="jp-note">
+          私 → 友達 방향으로 행동이 갑니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>妹<rt>いもうと</rt></ruby>に
+          <ruby>宿題<rt>しゅくだい</rt></ruby>を
+          <ruby>手伝<rt>てつだ</rt></ruby>ってあげました。
+        </p>
+        <p class="jp-hiragana">
+          いもうとに しゅくだいを てつだって あげました。
+        </p>
+        <p class="jp-meaning">
+          여동생의 숙제를 도와주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>駅<rt>えき</rt></ruby>までの
+          <ruby>道<rt>みち</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてあげました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに えきまでの みちを おしえて あげました。
+        </p>
+        <p class="jp-meaning">
+          친구에게 역까지 가는 길을 알려 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>弟<rt>おとうと</rt></ruby>の
+          <ruby>荷物<rt>にもつ</rt></ruby>を
+          <ruby>持<rt>も</rt></ruby>ってあげました。
+        </p>
+        <p class="jp-hiragana">
+          おとうとの にもつを もって あげました。
+        </p>
+        <p class="jp-meaning">
+          남동생의 짐을 들어 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>子供<rt>こども</rt></ruby>に
+          <ruby>本<rt>ほん</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>んであげました。
+        </p>
+        <p class="jp-hiragana">
+          こどもに ほんを よんで あげました。
+        </p>
+        <p class="jp-meaning">
+          아이에게 책을 읽어 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>の
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってあげました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちの しゃしんを とって あげました。
+        </p>
+        <p class="jp-meaning">
+          친구의 사진을 찍어 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>母<rt>はは</rt></ruby>のために
+          <ruby>料理<rt>りょうり</rt></ruby>を
+          <ruby>作<rt>つく</rt></ruby>ってあげました。
+        </p>
+        <p class="jp-hiragana">
+          ははの ために りょうりを つくって あげました。
+        </p>
+        <p class="jp-meaning">
+          어머니를 위해 요리를 만들어 드렸습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>彼<rt>かれ</rt></ruby>に
+          <ruby>傘<rt>かさ</rt></ruby>を
+          <ruby>貸<rt>か</rt></ruby>してあげました。
+        </p>
+        <p class="jp-hiragana">
+          かれに かさを かして あげました。
+        </p>
+        <p class="jp-meaning">
+          그에게 우산을 빌려 주었습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>뉘앙스 주의:</strong>
+      ～てあげる는 “내가 상대방을 위해 해 준다”라는 시점이 들어가기 때문에,
+      윗사람이나 별로 친하지 않은 사람에게 직접
+      「～てあげます」라고 말하면 생색을 내는 것처럼 느껴질 수 있습니다.
+      친한 관계나 객관적인 상황 설명에서는 자연스럽게 사용할 수 있습니다.
+    </div>
+
+    <h3 class="jp-subtitle">앞으로 해 주겠다고 말할 때</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>分<rt>わ</rt></ruby>からなかったら、
+          <ruby>教<rt>おし</rt></ruby>えてあげるよ。
+        </p>
+        <p class="jp-hiragana">
+          わからなかったら、おしえて あげるよ。
+        </p>
+        <p class="jp-meaning">
+          모르겠으면 내가 알려줄게.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>荷物<rt>にもつ</rt></ruby>、
+          <ruby>持<rt>も</rt></ruby>ってあげるよ。
+        </p>
+        <p class="jp-hiragana">
+          にもつ、もって あげるよ。
+        </p>
+        <p class="jp-meaning">
+          짐, 내가 들어줄게.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>写真<rt>しゃしん</rt></ruby>、
+          <ruby>撮<rt>と</rt></ruby>ってあげようか？
+        </p>
+        <p class="jp-hiragana">
+          しゃしん、とって あげようか？
+        </p>
+        <p class="jp-meaning">
+          사진 찍어줄까?
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>다음 문장을 ～てあげる를 사용해서 만들어보세요.</p>
+
+      <div class="jp-question">1. 친구에게 일본어를 가르쳐 주었습니다.</div>
+      <div class="jp-question">2. 여동생의 짐을 들어 주었습니다.</div>
+      <div class="jp-question">3. 친구에게 사진을 찍어 주었습니다.</div>
+      <div class="jp-question">4. 남동생에게 책을 읽어 주었습니다.</div>
+      <div class="jp-question">5. 친구에게 우산을 빌려 주었습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 友達に日本語を教えてあげました。</p>
+      <p>2. 妹の荷物を持ってあげました。</p>
+      <p>3. 友達の写真を撮ってあげました。</p>
+      <p>4. 弟に本を読んであげました。</p>
+      <p>5. 友達に傘を貸してあげました。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">2. ～てくれる</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">상대방이 나를 위해 어떤 행동을 해 주다</h3>
+      <p>
+        상대방이 나 또는 나와 가까운 사람을 위해 어떤 행동을 해 주었을 때 사용합니다.
+      </p>
+      <p>
+        말하는 사람의 입장에서는 “고맙게도 상대방이 나를 위해 해 주었다”라는 느낌이 들어갈 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">Aが 私に 동사 て형 + くれる</span>
+      <span class="jp-rule-sub">
+        A가 나를 위해 ~해 주다
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">友達</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">私</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てくれる</div>
+    </div>
+
+    <h3 class="jp-subtitle">기본 예문</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてくれました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちが にほんごを おしえて くれました。
+        </p>
+        <p class="jp-meaning">
+          친구가 저에게 일본어를 가르쳐 주었습니다.
+        </p>
+        <p class="jp-note">
+          友達 → 私 방향으로 행동이 옵니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>宿題<rt>しゅくだい</rt></ruby>を
+          <ruby>手伝<rt>てつだ</rt></ruby>ってくれました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちが しゅくだいを てつだって くれました。
+        </p>
+        <p class="jp-meaning">
+          친구가 숙제를 도와주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>母<rt>はは</rt></ruby>が
+          <ruby>晩<rt>ばん</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>作<rt>つく</rt></ruby>ってくれました。
+        </p>
+        <p class="jp-hiragana">
+          ははが ばんごはんを つくって くれました。
+        </p>
+        <p class="jp-meaning">
+          어머니가 저를 위해 저녁을 만들어 주셨습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>兄<rt>あに</rt></ruby>が
+          <ruby>駅<rt>えき</rt></ruby>まで
+          <ruby>送<rt>おく</rt></ruby>ってくれました。
+        </p>
+        <p class="jp-hiragana">
+          あにが えきまで おくって くれました。
+        </p>
+        <p class="jp-meaning">
+          형이 역까지 데려다주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby>が
+          <ruby>分<rt>わ</rt></ruby>かりやすく
+          <ruby>説明<rt>せつめい</rt></ruby>してくれました。
+        </p>
+        <p class="jp-hiragana">
+          せんせいが わかりやすく せつめいして くれました。
+        </p>
+        <p class="jp-meaning">
+          선생님이 이해하기 쉽게 설명해 주셨습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>店員<rt>てんいん</rt></ruby>さんが
+          <ruby>道<rt>みち</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてくれました。
+        </p>
+        <p class="jp-hiragana">
+          てんいんさんが みちを おしえて くれました。
+        </p>
+        <p class="jp-meaning">
+          점원이 길을 알려 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>空港<rt>くうこう</rt></ruby>まで
+          <ruby>迎<rt>むか</rt></ruby>えに
+          <ruby>来<rt>き</rt></ruby>てくれました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちが くうこうまで むかえに きて くれました。
+        </p>
+        <p class="jp-meaning">
+          친구가 공항까지 마중 나와 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>彼女<rt>かのじょ</rt></ruby>が
+          <ruby>私<rt>わたし</rt></ruby>の
+          <ruby>話<rt>はなし</rt></ruby>を
+          <ruby>聞<rt>き</rt></ruby>いてくれました。
+        </p>
+        <p class="jp-hiragana">
+          かのじょが わたしの はなしを きいて くれました。
+        </p>
+        <p class="jp-meaning">
+          그녀가 제 이야기를 들어주었습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">현재・미래 표현</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          いつも<ruby>助<rt>たす</rt></ruby>けてくれます。
+        </p>
+        <p class="jp-hiragana">
+          ともだちが いつも たすけて くれます。
+        </p>
+        <p class="jp-meaning">
+          친구가 항상 도와줍니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>明日<rt>あした</rt></ruby>、
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>車<rt>くるま</rt></ruby>で
+          <ruby>送<rt>おく</rt></ruby>ってくれます。
+        </p>
+        <p class="jp-hiragana">
+          あした、ともだちが くるまで おくって くれます。
+        </p>
+        <p class="jp-meaning">
+          내일 친구가 차로 데려다줄 겁니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>다음 문장을 ～てくれる를 사용해서 만들어보세요.</p>
+
+      <div class="jp-question">1. 친구가 일본어를 가르쳐 주었습니다.</div>
+      <div class="jp-question">2. 선생님이 설명해 주었습니다.</div>
+      <div class="jp-question">3. 어머니가 밥을 만들어 주었습니다.</div>
+      <div class="jp-question">4. 친구가 역까지 데려다 주었습니다.</div>
+      <div class="jp-question">5. 점원이 길을 알려 주었습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 友達が日本語を教えてくれました。</p>
+      <p>2. 先生が説明してくれました。</p>
+      <p>3. 母がご飯を作ってくれました。</p>
+      <p>4. 友達が駅まで送ってくれました。</p>
+      <p>5. 店員さんが道を教えてくれました。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">3. ～てもらう</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">상대방에게 어떤 행동을 해 받다</h3>
+      <p>
+        내가 상대방으로부터 어떤 행동이나 도움을 받았다는 관점에서 말할 때 사용합니다.
+      </p>
+      <p>
+        한국어로는 “~해 주었다”라고 번역되는 경우가 많지만,
+        일본어 문장 구조는 <strong>내가 행동을 받은 사람</strong>이라는 점이 중요합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">私は Aに 동사 て형 + もらう</span>
+      <span class="jp-rule-sub">
+        나는 A에게 ~해 받다
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">私</div>
+      <div class="jp-flow-arrow">←</div>
+      <div class="jp-flow-item">友達</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てもらう</div>
+    </div>
+
+    <h3 class="jp-subtitle">기본 예문</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてもらいました。
+        </p>
+        <p class="jp-hiragana">
+          わたしは ともだちに にほんごを おしえて もらいました。
+        </p>
+        <p class="jp-meaning">
+          저는 친구에게 일본어를 배웠습니다.
+        </p>
+        <p class="jp-note">
+          직역하면 “친구에게 일본어를 가르쳐 받았습니다”에 가깝습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby>に
+          <ruby>作文<rt>さくぶん</rt></ruby>を
+          <ruby>直<rt>なお</rt></ruby>してもらいました。
+        </p>
+        <p class="jp-hiragana">
+          せんせいに さくぶんを なおして もらいました。
+        </p>
+        <p class="jp-meaning">
+          선생님께 작문을 고쳐 받았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってもらいました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに しゃしんを とって もらいました。
+        </p>
+        <p class="jp-meaning">
+          친구에게 사진을 찍어 달라고 해서 찍어 받았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>父<rt>ちち</rt></ruby>に
+          <ruby>空港<rt>くうこう</rt></ruby>まで
+          <ruby>送<rt>おく</rt></ruby>ってもらいました。
+        </p>
+        <p class="jp-hiragana">
+          ちちに くうこうまで おくって もらいました。
+        </p>
+        <p class="jp-meaning">
+          아버지께 공항까지 데려다 달라고 해서 데려다 받았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>店員<rt>てんいん</rt></ruby>さんに
+          <ruby>道<rt>みち</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてもらいました。
+        </p>
+        <p class="jp-hiragana">
+          てんいんさんに みちを おしえて もらいました。
+        </p>
+        <p class="jp-meaning">
+          점원에게 길을 알려 받았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>荷物<rt>にもつ</rt></ruby>を
+          <ruby>持<rt>も</rt></ruby>ってもらいました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに にもつを もって もらいました。
+        </p>
+        <p class="jp-meaning">
+          친구에게 짐을 들어 달라고 해서 들어 받았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先輩<rt>せんぱい</rt></ruby>に
+          <ruby>仕事<rt>しごと</rt></ruby>を
+          <ruby>手伝<rt>てつだ</rt></ruby>ってもらいました。
+        </p>
+        <p class="jp-hiragana">
+          せんぱいに しごとを てつだって もらいました。
+        </p>
+        <p class="jp-meaning">
+          선배에게 일을 도와 받았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>予約<rt>よやく</rt></ruby>してもらいました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに よやくして もらいました。
+        </p>
+        <p class="jp-meaning">
+          친구에게 예약을 부탁해서 해 받았습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">한국어로 자연스럽게 번역하기</h3>
+
+    <div class="jp-warning">
+      <strong>직역에 너무 집착하지 않아도 됩니다.</strong>
+      ～てもらう를 한국어로 매번 “~해 받다”라고 번역하면 어색합니다.
+      구조를 이해하기 위한 직역일 뿐이고,
+      실제 한국어에서는 자연스럽게 “~해 주었다”, “~에게 부탁했다”, “~에게 도움을 받았다” 등으로 번역하면 됩니다.
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってもらいました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに しゃしんを とって もらいました。
+        </p>
+        <p class="jp-meaning">
+          친구에게 사진을 찍어 달라고 했습니다.
+        </p>
+        <p class="jp-note">
+          또는 “친구가 사진을 찍어 주었습니다”라고 자연스럽게 번역할 수 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>다음 문장을 ～てもらう를 사용해서 만들어보세요.</p>
+
+      <div class="jp-question">1. 친구에게 일본어를 가르쳐 받았습니다.</div>
+      <div class="jp-question">2. 선생님께 작문을 고쳐 받았습니다.</div>
+      <div class="jp-question">3. 친구에게 사진을 찍어 달라고 했습니다.</div>
+      <div class="jp-question">4. 아버지께 공항까지 데려다 달라고 했습니다.</div>
+      <div class="jp-question">5. 친구에게 예약을 부탁했습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 友達に日本語を教えてもらいました。</p>
+      <p>2. 先生に作文を直してもらいました。</p>
+      <p>3. 友達に写真を撮ってもらいました。</p>
+      <p>4. 父に空港まで送ってもらいました。</p>
+      <p>5. 友達に予約してもらいました。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">중요 비교</span>
+    <h2 class="jp-section-title">같은 상황을 3가지 관점으로 보기</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">사건은 같아도 바라보는 위치가 다릅니다</h3>
+      <p>
+        이 세 표현을 제대로 익히려면 각각 따로 외우기보다
+        같은 상황을 서로 다른 관점에서 표현해 보는 것이 좋습니다.
+      </p>
+    </div>
+
+    <h3 class="jp-subtitle">상황 1. 내가 친구에게 일본어를 가르쳐 주었다</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">～てあげる</span>
+        <p class="jp-sentence">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてあげました。
+        </p>
+        <p class="jp-hiragana">
+          わたしは ともだちに にほんごを おしえて あげました。
+        </p>
+        <p class="jp-meaning">
+          제가 친구에게 일본어를 가르쳐 주었습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">상황 2. 친구가 나에게 일본어를 가르쳐 주었다</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">～てくれる</span>
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>えてくれました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちが にほんごを おしえて くれました。
+        </p>
+        <p class="jp-meaning">
+          친구가 저에게 일본어를 가르쳐 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">～てもらう</span>
+        <p class="jp-sentence">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>教<rt>おし</rt></ruby>てもらいました。
+        </p>
+        <p class="jp-hiragana">
+          わたしは ともだちに にほんごを おしえて もらいました。
+        </p>
+        <p class="jp-meaning">
+          저는 친구에게 일본어를 가르쳐 받았습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-compare">
+      <div class="jp-compare-card">
+        <h4>友達が教えてくれました</h4>
+        <p>친구의 행동을 중심으로 봅니다.</p>
+        <p>“친구가 해 주었다.”</p>
+      </div>
+
+      <div class="jp-compare-card">
+        <h4>友達に教えてもらいました</h4>
+        <p>내가 도움을 받은 것을 중심으로 봅니다.</p>
+        <p>“친구에게 해 받았다.”</p>
+      </div>
+    </div>
+
+    <h3 class="jp-subtitle">상황 3. 친구가 내 사진을 찍어 주었다</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">친구 시점</span>
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>が
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってくれました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちが しゃしんを とって くれました。
+        </p>
+        <p class="jp-meaning">
+          친구가 사진을 찍어 주었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">내 시점</span>
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってもらいました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに しゃしんを とって もらいました。
+        </p>
+        <p class="jp-meaning">
+          친구에게 사진을 찍어 달라고 해서 찍어 받았습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">조사 포인트</span>
+    <h2 class="jp-section-title">が와 に가 왜 달라질까?</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">누가 행동의 주체인지 확인하세요</h3>
+      <p>
+        ～てくれる에서는 행동을 하는 사람이 주어이므로 보통 <strong>が</strong>가 옵니다.
+      </p>
+      <p>
+        ～てもらう에서는 내가 주어이고,
+        행동을 해 준 사람은 상대방이므로 보통 <strong>に</strong>를 사용합니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby><strong>が</strong>
+          <ruby>教<rt>おし</rt></ruby>えてくれました。
+        </p>
+        <p class="jp-hiragana">
+          せんせいが おしえて くれました。
+        </p>
+        <p class="jp-meaning">
+          선생님이 가르쳐 주었습니다.
+        </p>
+        <p class="jp-note">
+          행동하는 사람 = 先生
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby><strong>に</strong>
+          <ruby>教<rt>おし</rt></ruby>えてもらいました。
+        </p>
+        <p class="jp-hiragana">
+          せんせいに おしえて もらいました。
+        </p>
+        <p class="jp-meaning">
+          선생님께 가르쳐 받았습니다.
+        </p>
+        <p class="jp-note">
+          도움을 준 상대 = 先生
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">Aが ～てくれる</span>
+      <span class="jp-rule-sub">
+        A가 나에게 해 준다
+      </span>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">Aに ～てもらう</span>
+      <span class="jp-rule-sub">
+        A에게 해 받는다
+      </span>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">회화 확장</span>
+    <h2 class="jp-section-title">～てくれる？ / ～てもらえる？</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">실제 회화에서는 부탁 표현으로도 많이 사용합니다</h3>
+      <p>
+        친한 사람에게 무언가를 부탁할 때
+        ～てくれる？ 또는 ～てもらえる？를 자주 사용할 수 있습니다.
+      </p>
+    </div>
+
+    <h3 class="jp-subtitle">～てくれる？</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ちょっと<ruby>手伝<rt>てつだ</rt></ruby>ってくれる？
+        </p>
+        <p class="jp-hiragana">
+          ちょっと てつだって くれる？
+        </p>
+        <p class="jp-meaning">
+          잠깐 도와줄래?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってくれる？
+        </p>
+        <p class="jp-hiragana">
+          しゃしんを とって くれる？
+        </p>
+        <p class="jp-meaning">
+          사진 찍어줄래?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>駅<rt>えき</rt></ruby>まで
+          <ruby>送<rt>おく</rt></ruby>ってくれる？
+        </p>
+        <p class="jp-hiragana">
+          えきまで おくって くれる？
+        </p>
+        <p class="jp-meaning">
+          역까지 데려다줄래?
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">～てもらえる？</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ちょっと<ruby>手伝<rt>てつだ</rt></ruby>ってもらえる？
+        </p>
+        <p class="jp-hiragana">
+          ちょっと てつだって もらえる？
+        </p>
+        <p class="jp-meaning">
+          잠깐 도와줄 수 있어?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>写真<rt>しゃしん</rt></ruby>を
+          <ruby>撮<rt>と</rt></ruby>ってもらえる？
+        </p>
+        <p class="jp-hiragana">
+          しゃしんを とって もらえる？
+        </p>
+        <p class="jp-meaning">
+          사진 좀 찍어줄 수 있어?
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          これを<ruby>見<rt>み</rt></ruby>てもらえる？
+        </p>
+        <p class="jp-hiragana">
+          これを みて もらえる？
+        </p>
+        <p class="jp-meaning">
+          이것 좀 봐줄 수 있어?
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-note">
+      ※ 더 정중한 ～てもらえますか・～ていただけますか 등의 표현은 뒤의 응용 단계에서 확장할 수 있습니다.
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">종합 연습</span>
+    <h2 class="jp-section-title">어떤 표현을 써야 할까?</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">あげる・くれる・もらう 중 알맞은 것을 고르세요</h3>
+
+      <div class="jp-question">
+        1. 내가 친구에게 숙제를 도와주었습니다.<br>
+        友達に宿題を手伝って（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        2. 친구가 나에게 숙제를 도와주었습니다.<br>
+        友達が宿題を手伝って（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        3. 나는 친구에게 숙제를 도와 받았습니다.<br>
+        友達に宿題を手伝って（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        4. 어머니가 저녁밥을 만들어 주셨습니다.<br>
+        母が晩ご飯を作って（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        5. 나는 선생님께 일본어를 가르쳐 받았습니다.<br>
+        先生に日本語を教えて（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        6. 내가 여동생에게 책을 읽어 주었습니다.<br>
+        妹に本を読んで（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        7. 친구가 공항까지 마중 와 주었습니다.<br>
+        友達が空港まで迎えに来て（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        8. 나는 친구에게 사진을 찍어 달라고 했습니다.<br>
+        友達に写真を撮って（　　　　）。
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+      <p>1. あげました</p>
+      <p>2. くれました</p>
+      <p>3. もらいました</p>
+      <p>4. くれました</p>
+      <p>5. もらいました</p>
+      <p>6. あげました</p>
+      <p>7. くれました</p>
+      <p>8. もらいました</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">종합 연습</span>
+    <h2 class="jp-section-title">같은 사건을 바꿔 말하기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">～てくれる 문장을 ～てもらう 문장으로 바꿔보세요</h3>
+
+      <div class="jp-question">
+        1. 友達が日本語を教えてくれました。
+      </div>
+
+      <div class="jp-question">
+        2. 先生が作文を直してくれました。
+      </div>
+
+      <div class="jp-question">
+        3. 兄が駅まで送ってくれました。
+      </div>
+
+      <div class="jp-question">
+        4. 店員さんが道を教えてくれました。
+      </div>
+
+      <div class="jp-question">
+        5. 友達が写真を撮ってくれました。
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+
+      <p>
+        1. 友達に日本語を教えてもらいました。
+      </p>
+
+      <p>
+        2. 先生に作文を直してもらいました。
+      </p>
+
+      <p>
+        3. 兄に駅まで送ってもらいました。
+      </p>
+
+      <p>
+        4. 店員さんに道を教えてもらいました。
+      </p>
+
+      <p>
+        5. 友達に写真を撮ってもらいました。
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">실전 연습</span>
+    <h2 class="jp-section-title">한국어를 보고 일본어로 말하기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">가능하면 문장을 소리 내서 말해보세요</h3>
+
+      <div class="jp-question">1. 친구가 제 이야기를 들어주었습니다.</div>
+      <div class="jp-question">2. 선생님께 이 문장을 고쳐 받았습니다.</div>
+      <div class="jp-question">3. 내가 친구에게 짐을 들어주었습니다.</div>
+      <div class="jp-question">4. 친구가 역까지 데려다주었습니다.</div>
+      <div class="jp-question">5. 친구에게 호텔을 예약해 달라고 했습니다.</div>
+      <div class="jp-question">6. 어머니가 저를 위해 밥을 만들어 주셨습니다.</div>
+      <div class="jp-question">7. 내가 동생에게 컴퓨터 사용법을 알려주었습니다.</div>
+      <div class="jp-question">8. 점원에게 상품 위치를 알려 달라고 했습니다.</div>
+      <div class="jp-question">9. 친구가 우산을 빌려주었습니다.</div>
+      <div class="jp-question">10. 친구에게 제 사진을 찍어 달라고 했습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+
+      <p>
+        1. 友達が私の話を聞いてくれました。
+      </p>
+
+      <p>
+        2. 先生にこの文を直してもらいました。
+      </p>
+
+      <p>
+        3. 友達の荷物を持ってあげました。
+      </p>
+
+      <p>
+        4. 友達が駅まで送ってくれました。
+      </p>
+
+      <p>
+        5. 友達にホテルを予約してもらいました。
+      </p>
+
+      <p>
+        6. 母が私のためにご飯を作ってくれました。
+      </p>
+
+      <p>
+        7. 弟にコンピューターの使い方を教えてあげました。
+      </p>
+
+      <p>
+        8. 店員さんに商品の場所を教えてもらいました。
+      </p>
+
+      <p>
+        9. 友達が傘を貸してくれました。
+      </p>
+
+      <p>
+        10. 友達に写真を撮ってもらいました。
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">말하기</span>
+    <h2 class="jp-section-title">자기 경험으로 말하기</h2>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">① 최근 누군가가 나를 위해 해 준 일</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>誰<rt>だれ</rt></ruby>かが
+        あなたのためにしてくれたことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、だれかが あなたの ために
+        してくれたことは ありますか？
+      </p>
+
+      <p>
+        최근 누군가가 당신을 위해 해 준 일이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">② 최근 누군가에게 부탁한 일</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>誰<rt>だれ</rt></ruby>かに
+        <ruby>何<rt>なに</rt></ruby>かをしてもらいましたか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、だれかに なにかを
+        してもらいましたか？
+      </p>
+
+      <p>
+        최근 누군가에게 어떤 일을 부탁해서 도움을 받은 적이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">③ 내가 다른 사람에게 해 준 일</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>誰<rt>だれ</rt></ruby>かに
+        <ruby>何<rt>なに</rt></ruby>かをしてあげましたか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、だれかに なにかを
+        してあげましたか？
+      </p>
+
+      <p>
+        최근 누군가에게 무엇인가를 해 준 적이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">④ 일본 여행 상황</h3>
+
+      <p class="jp-sentence">
+        <ruby>日本<rt>にほん</rt></ruby>を
+        <ruby>旅行<rt>りょこう</rt></ruby>したとき、
+        <ruby>誰<rt>だれ</rt></ruby>かに
+        <ruby>助<rt>たす</rt></ruby>けてもらったことがありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        にほんを りょこうしたとき、
+        だれかに たすけてもらったことが ありますか？
+      </p>
+
+      <p>
+        일본을 여행했을 때 누군가에게 도움을 받은 적이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑤ 언어 공부 상황</h3>
+
+      <p class="jp-sentence">
+        <ruby>日本語<rt>にほんご</rt></ruby>を
+        <ruby>勉強<rt>べんきょう</rt></ruby>するとき、
+        <ruby>誰<rt>だれ</rt></ruby>かに
+        <ruby>教<rt>おし</rt></ruby>えてもらうことがありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        にほんごを べんきょうするとき、
+        だれかに おしえてもらうことが ありますか？
+      </p>
+
+      <p>
+        일본어를 공부할 때 누군가에게 가르침을 받는 경우가 있나요?
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">최종 정리</span>
+    <h2 class="jp-section-title">세 표현을 한 번에 구별하기</h2>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>표현</th>
+            <th>기준</th>
+            <th>대표 문장</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>～てあげる</td>
+            <td>내가 상대방에게</td>
+            <td>友達に教えてあげました。</td>
+          </tr>
+          <tr>
+            <td>～てくれる</td>
+            <td>상대방이 나에게</td>
+            <td>友達が教えてくれました。</td>
+          </tr>
+          <tr>
+            <td>～てもらう</td>
+            <td>내가 상대방에게 해 받음</td>
+            <td>友達に教えてもらいました。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">마지막으로 이것만 기억하세요</h3>
+      <p>
+        <strong>あげる = 밖으로 준다</strong>
+      </p>
+      <p>
+        <strong>くれる = 나에게 온다</strong>
+      </p>
+      <p>
+        <strong>もらう = 내가 받는다</strong>
+      </p>
+    </div>
+  </section>
+
+  <div class="jp-skip">
+    <strong>다음 단계:</strong>
+    다음 파트에서는 て형을 이용한 대표적인 N4 응용 표현인
+    <strong>～てみる・～ておく・～てしまう・～てある</strong>를
+    각각 충분한 예문과 함께 정리합니다.
+  </div>
+
+</div>
+<div class="jp-lesson">
+
+  <div class="jp-title-box">
+    <div class="jp-title-label">て形 STEP 4</div>
+    <h1 class="jp-title">て형 응용 ① ～てみる・～ておく・～てしまう・～てある</h1>
+    <p class="jp-title-sub">
+      이제 て형을 이용해 실제 회화에서 매우 자주 쓰는 응용 표현을 배웁니다.
+      이번 파트에서는 각각의 표현을 따로 이해한 뒤, 서로 어떻게 다른지도 비교합니다.
+    </p>
+  </div>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">1. ～てみる</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">직접 한번 해 보다</h3>
+      <p>
+        동사의 て형 뒤에 <strong>みる</strong>를 붙이면
+        어떤 행동을 실제로 시험 삼아 해 본다는 뜻이 됩니다.
+      </p>
+      <p>
+        여기의 みる는 단순히 “보다”라는 뜻이 아니라,
+        <strong>직접 해 보고 결과를 확인한다</strong>는 느낌입니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + みる</span>
+      <span class="jp-rule-sub">
+        의미: 한번 ~해 보다
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">食べる</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">食べて</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">食べてみる</div>
+    </div>
+
+    <h3 class="jp-subtitle">기본 예문</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          このラーメンを<ruby>食<rt>た</rt></ruby>べてみます。
+        </p>
+        <p class="jp-hiragana">
+          この ラーメンを たべて みます。
+        </p>
+        <p class="jp-meaning">
+          이 라면을 한번 먹어보겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>日本語<rt>にほんご</rt></ruby>で
+          <ruby>話<rt>はな</rt></ruby>してみます。
+        </p>
+        <p class="jp-hiragana">
+          にほんごで はなして みます。
+        </p>
+        <p class="jp-meaning">
+          일본어로 한번 말해보겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby>に
+          <ruby>聞<rt>き</rt></ruby>いてみます。
+        </p>
+        <p class="jp-hiragana">
+          せんせいに きいて みます。
+        </p>
+        <p class="jp-meaning">
+          선생님에게 한번 물어보겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>服<rt>ふく</rt></ruby>を
+          <ruby>着<rt>き</rt></ruby>てみます。
+        </p>
+        <p class="jp-hiragana">
+          この ふくを きて みます。
+        </p>
+        <p class="jp-meaning">
+          이 옷을 한번 입어보겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          このアプリを<ruby>使<rt>つか</rt></ruby>ってみます。
+        </p>
+        <p class="jp-hiragana">
+          この アプリを つかって みます。
+        </p>
+        <p class="jp-meaning">
+          이 앱을 한번 사용해보겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>一人<rt>ひとり</rt></ruby>で
+          <ruby>作<rt>つく</rt></ruby>ってみました。
+        </p>
+        <p class="jp-hiragana">
+          ひとりで つくって みました。
+        </p>
+        <p class="jp-meaning">
+          혼자서 한번 만들어봤습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>京都<rt>きょうと</rt></ruby>にも
+          <ruby>行<rt>い</rt></ruby>ってみたいです。
+        </p>
+        <p class="jp-hiragana">
+          きょうとにも いって みたいです。
+        </p>
+        <p class="jp-meaning">
+          교토에도 한번 가보고 싶습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>納豆<rt>なっとう</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べてみたことがあります。
+        </p>
+        <p class="jp-hiragana">
+          なっとうを たべて みたことが あります。
+        </p>
+        <p class="jp-meaning">
+          낫토를 한번 먹어본 적이 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">～てみたい</h3>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">“한번 ~해보고 싶다”</h3>
+      <p>
+        ～てみる에 희망 표현 たい가 붙으면
+        아직 해보지 않은 것을 직접 한번 경험해보고 싶다는 뜻이 됩니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>日本<rt>にほん</rt></ruby>で
+          <ruby>働<rt>はたら</rt></ruby>いてみたいです。
+        </p>
+        <p class="jp-hiragana">
+          にほんで はたらいて みたいです。
+        </p>
+        <p class="jp-meaning">
+          일본에서 한번 일해보고 싶습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>富士山<rt>ふじさん</rt></ruby>に
+          <ruby>登<rt>のぼ</rt></ruby>ってみたいです。
+        </p>
+        <p class="jp-hiragana">
+          ふじさんに のぼって みたいです。
+        </p>
+        <p class="jp-meaning">
+          후지산에 한번 올라가보고 싶습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>日本人<rt>にほんじん</rt></ruby>と
+          <ruby>日本語<rt>にほんご</rt></ruby>だけで
+          <ruby>話<rt>はな</rt></ruby>してみたいです。
+        </p>
+        <p class="jp-hiragana">
+          にほんじんと にほんごだけで はなして みたいです。
+        </p>
+        <p class="jp-meaning">
+          일본인과 일본어만으로 한번 이야기해보고 싶습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">～てみてください</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>一度<rt>いちど</rt></ruby>
+          <ruby>食<rt>た</rt></ruby>べてみてください。
+        </p>
+        <p class="jp-hiragana">
+          いちど たべて みて ください。
+        </p>
+        <p class="jp-meaning">
+          한번 먹어보세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>自分<rt>じぶん</rt></ruby>で
+          <ruby>考<rt>かんが</rt></ruby>えてみてください。
+        </p>
+        <p class="jp-hiragana">
+          じぶんで かんがえて みて ください。
+        </p>
+        <p class="jp-meaning">
+          스스로 한번 생각해보세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>方法<rt>ほうほう</rt></ruby>を
+          <ruby>試<rt>ため</rt></ruby>してみてください。
+        </p>
+        <p class="jp-hiragana">
+          この ほうほうを ためして みて ください。
+        </p>
+        <p class="jp-meaning">
+          이 방법을 한번 시도해보세요.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>다음 문장을 ～てみる를 사용해서 만들어보세요.</p>
+
+      <div class="jp-question">1. 이 음식을 한번 먹어보겠습니다.</div>
+      <div class="jp-question">2. 친구에게 한번 물어보겠습니다.</div>
+      <div class="jp-question">3. 일본에서 한번 살아보고 싶습니다.</div>
+      <div class="jp-question">4. 이 옷을 한번 입어보세요.</div>
+      <div class="jp-question">5. 혼자서 한번 해봤습니다.</div>
+      <div class="jp-question">6. 일본어로 한번 이야기해보고 싶습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. この料理を食べてみます。</p>
+      <p>2. 友達に聞いてみます。</p>
+      <p>3. 日本で住んでみたいです。</p>
+      <p>4. この服を着てみてください。</p>
+      <p>5. 一人でやってみました。</p>
+      <p>6. 日本語で話してみたいです。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">2. ～ておく</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">나중을 위해 미리 해 두다</h3>
+      <p>
+        어떤 미래의 상황에 대비해서 필요한 행동을 미리 해두는 표현입니다.
+      </p>
+      <p>
+        한국어의 “미리 ~해 두다”와 상당히 비슷합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + おく</span>
+      <span class="jp-rule-sub">
+        의미: 미리 ~해 두다
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ホテルを<ruby>予約<rt>よやく</rt></ruby>しておきます。
+        </p>
+        <p class="jp-hiragana">
+          ホテルを よやくして おきます。
+        </p>
+        <p class="jp-meaning">
+          호텔을 미리 예약해두겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>明日<rt>あした</rt></ruby>の
+          <ruby>会議<rt>かいぎ</rt></ruby>の
+          <ruby>資料<rt>しりょう</rt></ruby>を
+          <ruby>読<rt>よ</rt></ruby>んでおきます。
+        </p>
+        <p class="jp-hiragana">
+          あしたの かいぎの しりょうを よんで おきます。
+        </p>
+        <p class="jp-meaning">
+          내일 회의 자료를 미리 읽어두겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>旅行<rt>りょこう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に
+          <ruby>切符<rt>きっぷ</rt></ruby>を
+          <ruby>買<rt>か</rt></ruby>っておきます。
+        </p>
+        <p class="jp-hiragana">
+          りょこうの まえに きっぷを かって おきます。
+        </p>
+        <p class="jp-meaning">
+          여행 전에 표를 미리 사두겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>分<rt>わ</rt></ruby>からない
+          <ruby>単語<rt>たんご</rt></ruby>を
+          <ruby>調<rt>しら</rt></ruby>べておきます。
+        </p>
+        <p class="jp-hiragana">
+          わからない たんごを しらべて おきます。
+        </p>
+        <p class="jp-meaning">
+          모르는 단어를 미리 조사해두겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>に
+          <ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を
+          <ruby>入<rt>い</rt></ruby>れておきました。
+        </p>
+        <p class="jp-hiragana">
+          れいぞうこに のみものを いれて おきました。
+        </p>
+        <p class="jp-meaning">
+          냉장고에 음료를 미리 넣어두었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>念<rt>ねん</rt></ruby>のため、
+          <ruby>住所<rt>じゅうしょ</rt></ruby>を
+          メモしておきます。
+        </p>
+        <p class="jp-hiragana">
+          ねんのため、じゅうしょを メモして おきます。
+        </p>
+        <p class="jp-meaning">
+          만일을 위해 주소를 메모해두겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>に
+          <ruby>連絡<rt>れんらく</rt></ruby>しておきました。
+        </p>
+        <p class="jp-hiragana">
+          ともだちに れんらくして おきました。
+        </p>
+        <p class="jp-meaning">
+          친구에게 미리 연락해두었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>必要<rt>ひつよう</rt></ruby>な
+          <ruby>物<rt>もの</rt></ruby>を
+          <ruby>準備<rt>じゅんび</rt></ruby>しておいてください。
+        </p>
+        <p class="jp-hiragana">
+          ひつような ものを じゅんびして おいて ください。
+        </p>
+        <p class="jp-meaning">
+          필요한 물건을 미리 준비해두세요.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">회화에서는 ～とく</h3>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">～ておく → ～とく</h3>
+      <p>
+        일상적인 회화에서는 ～ておく가 줄어서
+        <strong>～とく</strong> 형태로 자주 들립니다.
+      </p>
+      <p>
+        뜻은 기본적으로 같습니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>予約<rt>よやく</rt></ruby>しとくね。
+        </p>
+        <p class="jp-hiragana">
+          よやく しとくね。
+        </p>
+        <p class="jp-meaning">
+          미리 예약해둘게.
+        </p>
+        <p class="jp-note">
+          予約しておくね → 予約しとくね
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>買<rt>か</rt></ruby>っとくよ。
+        </p>
+        <p class="jp-hiragana">
+          かっとくよ。
+        </p>
+        <p class="jp-meaning">
+          미리 사둘게.
+        </p>
+        <p class="jp-note">
+          買っておくよ → 買っとくよ
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          メモしといて。
+        </p>
+        <p class="jp-hiragana">
+          メモ しといて。
+        </p>
+        <p class="jp-meaning">
+          메모해둬.
+        </p>
+        <p class="jp-note">
+          メモしておいて → メモしといて
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>회화 포인트:</strong>
+      ～とく는 실제 대화에서 매우 자주 쓰지만,
+      시험 답안이나 정중한 문장에서는 기본형 ～ておく를 먼저 익히는 것이 좋습니다.
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+      <p>미리 준비한다는 느낌으로 문장을 만들어보세요.</p>
+
+      <div class="jp-question">1. 호텔을 미리 예약해두겠습니다.</div>
+      <div class="jp-question">2. 내일 쓸 자료를 미리 읽어두겠습니다.</div>
+      <div class="jp-question">3. 친구에게 미리 연락해두었습니다.</div>
+      <div class="jp-question">4. 표를 미리 사두세요.</div>
+      <div class="jp-question">5. 주소를 메모해두겠습니다.</div>
+      <div class="jp-question">6. 음료를 냉장고에 넣어두었습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. ホテルを予約しておきます。</p>
+      <p>2. 明日使う資料を読んでおきます。</p>
+      <p>3. 友達に連絡しておきました。</p>
+      <p>4. 切符を買っておいてください。</p>
+      <p>5. 住所をメモしておきます。</p>
+      <p>6. 飲み物を冷蔵庫に入れておきました。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">3. ～てしまう</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">크게 두 가지 의미가 있습니다</h3>
+      <p>
+        ～てしまう는 매우 자주 쓰이는 표현이고,
+        크게 <strong>완료</strong>와 <strong>아쉬움·후회·의도하지 않은 결과</strong>의 두 가지 느낌이 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + しまう</span>
+      <span class="jp-rule-sub">
+        ① 완전히 ~해버리다 ② 그만 ~하고 말다
+      </span>
+    </div>
+
+    <h3 class="jp-subtitle">A. 어떤 행동을 완전히 끝내다</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>本<rt>ほん</rt></ruby>を
+          <ruby>全部<rt>ぜんぶ</rt></ruby>
+          <ruby>読<rt>よ</rt></ruby>んでしまいました。
+        </p>
+        <p class="jp-hiragana">
+          この ほんを ぜんぶ よんで しまいました。
+        </p>
+        <p class="jp-meaning">
+          이 책을 전부 읽어버렸습니다.
+        </p>
+        <p class="jp-note">
+          끝까지 완전히 읽었다는 완료의 느낌입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ケーキを<ruby>全部<rt>ぜんぶ</rt></ruby>
+          <ruby>食<rt>た</rt></ruby>べてしまいました。
+        </p>
+        <p class="jp-hiragana">
+          ケーキを ぜんぶ たべて しまいました。
+        </p>
+        <p class="jp-meaning">
+          케이크를 전부 먹어버렸습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>仕事<rt>しごと</rt></ruby>を
+          <ruby>終<rt>お</rt></ruby>わらせてしまいました。
+        </p>
+        <p class="jp-hiragana">
+          しごとを おわらせて しまいました。
+        </p>
+        <p class="jp-meaning">
+          일을 완전히 끝내버렸습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">B. 실수・후회・예상하지 못한 결과</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>財布<rt>さいふ</rt></ruby>を
+          <ruby>忘<rt>わす</rt></ruby>れてしまいました。
+        </p>
+        <p class="jp-hiragana">
+          さいふを わすれて しまいました。
+        </p>
+        <p class="jp-meaning">
+          지갑을 그만 잊어버렸습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>電車<rt>でんしゃ</rt></ruby>で
+          <ruby>寝<rt>ね</rt></ruby>てしまいました。
+        </p>
+        <p class="jp-hiragana">
+          でんしゃで ねて しまいました。
+        </p>
+        <p class="jp-meaning">
+          전철에서 그만 잠들어버렸습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>間違<rt>まちが</rt></ruby>えて
+          <ruby>消<rt>け</rt></ruby>してしまいました。
+        </p>
+        <p class="jp-hiragana">
+          まちがえて けして しまいました。
+        </p>
+        <p class="jp-meaning">
+          실수로 지워버렸습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>約束<rt>やくそく</rt></ruby>を
+          <ruby>忘<rt>わす</rt></ruby>れてしまいました。
+        </p>
+        <p class="jp-hiragana">
+          やくそくを わすれて しまいました。
+        </p>
+        <p class="jp-meaning">
+          약속을 그만 잊어버렸습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          スマホを<ruby>落<rt>お</rt></ruby>としてしまいました。
+        </p>
+        <p class="jp-hiragana">
+          スマホを おとして しまいました。
+        </p>
+        <p class="jp-meaning">
+          스마트폰을 떨어뜨리고 말았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>終電<rt>しゅうでん</rt></ruby>を
+          <ruby>逃<rt>のが</rt></ruby>してしまいました。
+        </p>
+        <p class="jp-hiragana">
+          しゅうでんを のがして しまいました。
+        </p>
+        <p class="jp-meaning">
+          막차를 놓치고 말았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>大事<rt>だいじ</rt></ruby>な
+          ファイルを<ruby>削除<rt>さくじょ</rt></ruby>してしまいました。
+        </p>
+        <p class="jp-hiragana">
+          だいじな ファイルを さくじょして しまいました。
+        </p>
+        <p class="jp-meaning">
+          중요한 파일을 삭제해버렸습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">회화에서는 ～ちゃう・～じゃう</h3>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">～てしまう → ～ちゃう / ～でしまう → ～じゃう</h3>
+      <p>
+        친한 사람끼리의 일상회화에서는 매우 자주 줄여서 말합니다.
+      </p>
+    </div>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>기본형</th>
+            <th>회화형</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>食べてしまう</td>
+            <td><strong>食べちゃう</strong></td>
+          </tr>
+          <tr>
+            <td>忘れてしまう</td>
+            <td><strong>忘れちゃう</strong></td>
+          </tr>
+          <tr>
+            <td>読んでしまう</td>
+            <td><strong>読んじゃう</strong></td>
+          </tr>
+          <tr>
+            <td>飲んでしまう</td>
+            <td><strong>飲んじゃう</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>全部<rt>ぜんぶ</rt></ruby>
+          <ruby>食<rt>た</rt></ruby>べちゃった。
+        </p>
+        <p class="jp-hiragana">
+          ぜんぶ たべちゃった。
+        </p>
+        <p class="jp-meaning">
+          전부 먹어버렸어.
+        </p>
+        <p class="jp-note">
+          食べてしまった → 食べちゃった
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>忘<rt>わす</rt></ruby>れちゃった。
+        </p>
+        <p class="jp-hiragana">
+          わすれちゃった。
+        </p>
+        <p class="jp-meaning">
+          깜빡 잊어버렸어.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>飲<rt>の</rt></ruby>みすぎちゃった。
+        </p>
+        <p class="jp-hiragana">
+          のみすぎちゃった。
+        </p>
+        <p class="jp-meaning">
+          너무 많이 마셔버렸어.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>寝<rt>ね</rt></ruby>ちゃった。
+        </p>
+        <p class="jp-hiragana">
+          ねちゃった。
+        </p>
+        <p class="jp-meaning">
+          잠들어버렸어.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+
+      <div class="jp-question">1. 지갑을 잊어버렸습니다.</div>
+      <div class="jp-question">2. 케이크를 전부 먹어버렸습니다.</div>
+      <div class="jp-question">3. 전철에서 잠들어버렸습니다.</div>
+      <div class="jp-question">4. 파일을 지워버렸습니다.</div>
+      <div class="jp-question">5. 약속을 잊어버렸습니다.</div>
+      <div class="jp-question">6. 막차를 놓치고 말았습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 財布を忘れてしまいました。</p>
+      <p>2. ケーキを全部食べてしまいました。</p>
+      <p>3. 電車で寝てしまいました。</p>
+      <p>4. ファイルを消してしまいました。</p>
+      <p>5. 約束を忘れてしまいました。</p>
+      <p>6. 終電を逃してしまいました。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">N4 핵심</span>
+    <h2 class="jp-section-title">4. ～てある</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">누군가가 해 놓은 결과가 그대로 남아 있다</h3>
+      <p>
+        누군가가 어떤 목적을 가지고 행동했고,
+        그 행동의 결과가 현재까지 남아 있을 때 사용할 수 있습니다.
+      </p>
+      <p>
+        그래서 단순히 “상태”만 보는 ～ている와 달리,
+        <strong>누군가가 의도적으로 그렇게 해 두었다</strong>는 느낌이 중요합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">타동사 て형 + ある</span>
+      <span class="jp-rule-sub">
+        의미: ~해 놓여 있다 / ~해 두었다
+      </span>
+    </div>
+
+    <h3 class="jp-subtitle">기본 예문</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          テーブルの<ruby>上<rt>うえ</rt></ruby>に
+          <ruby>料理<rt>りょうり</rt></ruby>が
+          <ruby>並<rt>なら</rt></ruby>べてあります。
+        </p>
+        <p class="jp-hiragana">
+          テーブルの うえに りょうりが ならべて あります。
+        </p>
+        <p class="jp-meaning">
+          테이블 위에 요리가 차려져 있습니다.
+        </p>
+        <p class="jp-note">
+          누군가가 미리 요리를 늘어놓아 둔 결과가 현재 남아 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>壁<rt>かべ</rt></ruby>に
+          <ruby>写真<rt>しゃしん</rt></ruby>が
+          <ruby>貼<rt>は</rt></ruby>ってあります。
+        </p>
+        <p class="jp-hiragana">
+          かべに しゃしんが はって あります。
+        </p>
+        <p class="jp-meaning">
+          벽에 사진이 붙여져 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>窓<rt>まど</rt></ruby>が
+          <ruby>開<rt>あ</rt></ruby>けてあります。
+        </p>
+        <p class="jp-hiragana">
+          まどが あけて あります。
+        </p>
+        <p class="jp-meaning">
+          창문이 열어져 있습니다.
+        </p>
+        <p class="jp-note">
+          누군가가 일부러 창문을 열어둔 상태입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>資料<rt>しりょう</rt></ruby>は
+          <ruby>机<rt>つくえ</rt></ruby>の
+          <ruby>上<rt>うえ</rt></ruby>に
+          <ruby>置<rt>お</rt></ruby>いてあります。
+        </p>
+        <p class="jp-hiragana">
+          しりょうは つくえの うえに おいて あります。
+        </p>
+        <p class="jp-meaning">
+          자료는 책상 위에 놓아두었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ホテルはもう<ruby>予約<rt>よやく</rt></ruby>してあります。
+        </p>
+        <p class="jp-hiragana">
+          ホテルは もう よやくして あります。
+        </p>
+        <p class="jp-meaning">
+          호텔은 이미 예약해두었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>必要<rt>ひつよう</rt></ruby>な
+          <ruby>物<rt>もの</rt></ruby>は
+          <ruby>全部<rt>ぜんぶ</rt></ruby>
+          <ruby>買<rt>か</rt></ruby>ってあります。
+        </p>
+        <p class="jp-hiragana">
+          ひつような ものは ぜんぶ かって あります。
+        </p>
+        <p class="jp-meaning">
+          필요한 물건은 전부 사두었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>会議室<rt>かいぎしつ</rt></ruby>に
+          <ruby>椅子<rt>いす</rt></ruby>が
+          <ruby>用意<rt>ようい</rt></ruby>してあります。
+        </p>
+        <p class="jp-hiragana">
+          かいぎしつに いすが よういして あります。
+        </p>
+        <p class="jp-meaning">
+          회의실에 의자가 준비되어 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">～ている와 ～てある 비교</h3>
+
+    <div class="jp-compare">
+      <div class="jp-compare-card">
+        <h4>窓が開いています</h4>
+        <p>창문이 열려 있습니다.</p>
+        <p>현재의 상태 자체에 초점.</p>
+      </div>
+
+      <div class="jp-compare-card">
+        <h4>窓が開けてあります</h4>
+        <p>창문을 열어두었습니다.</p>
+        <p>누군가 의도적으로 열어둔 결과에 초점.</p>
+      </div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">상태</span>
+        <p class="jp-sentence">
+          ドアが<ruby>閉<rt>し</rt></ruby>まっています。
+        </p>
+        <p class="jp-hiragana">
+          ドアが しまっています。
+        </p>
+        <p class="jp-meaning">
+          문이 닫혀 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">의도된 결과</span>
+        <p class="jp-sentence">
+          ドアが<ruby>閉<rt>し</rt></ruby>めてあります。
+        </p>
+        <p class="jp-hiragana">
+          ドアが しめて あります。
+        </p>
+        <p class="jp-meaning">
+          문을 닫아두었습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">～ておく와 ～てある 비교</h3>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">행동을 할 때 vs 행동이 끝난 뒤의 결과</h3>
+      <p>
+        ～ておく는 <strong>미리 행동한다</strong>는 쪽에 초점이 있습니다.
+      </p>
+      <p>
+        ～てある는 그 행동을 해 놓은 뒤
+        <strong>결과가 현재 남아 있다</strong>는 쪽에 초점이 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">행동</span>
+        <p class="jp-sentence">
+          ホテルを<ruby>予約<rt>よやく</rt></ruby>しておきます。
+        </p>
+        <p class="jp-hiragana">
+          ホテルを よやくして おきます。
+        </p>
+        <p class="jp-meaning">
+          호텔을 미리 예약해두겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">결과 상태</span>
+        <p class="jp-sentence">
+          ホテルはもう<ruby>予約<rt>よやく</rt></ruby>してあります。
+        </p>
+        <p class="jp-hiragana">
+          ホテルは もう よやくして あります。
+        </p>
+        <p class="jp-meaning">
+          호텔은 이미 예약해둔 상태입니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+
+      <div class="jp-question">1. 벽에 사진이 붙여져 있습니다.</div>
+      <div class="jp-question">2. 호텔은 이미 예약해두었습니다.</div>
+      <div class="jp-question">3. 책상 위에 자료가 놓여 있습니다.</div>
+      <div class="jp-question">4. 창문을 열어두었습니다.</div>
+      <div class="jp-question">5. 필요한 것은 전부 준비되어 있습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 壁に写真が貼ってあります。</p>
+      <p>2. ホテルはもう予約してあります。</p>
+      <p>3. 机の上に資料が置いてあります。</p>
+      <p>4. 窓が開けてあります。</p>
+      <p>5. 必要な物は全部準備してあります。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">중요 비교</span>
+    <h2 class="jp-section-title">네 표현을 한 번에 구별하기</h2>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>표현</th>
+            <th>핵심 의미</th>
+            <th>기억 포인트</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>～てみる</td>
+            <td>한번 해보다</td>
+            <td>시험・경험</td>
+          </tr>
+          <tr>
+            <td>～ておく</td>
+            <td>미리 해두다</td>
+            <td>미래 대비 행동</td>
+          </tr>
+          <tr>
+            <td>～てしまう</td>
+            <td>해버리다 / 하고 말다</td>
+            <td>완료・후회・실수</td>
+          </tr>
+          <tr>
+            <td>～てある</td>
+            <td>해놓은 상태다</td>
+            <td>의도적인 행동의 결과</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">종합 연습</span>
+    <h2 class="jp-section-title">상황에 맞는 문법 고르기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">
+        ～てみる・～ておく・～てしまう・～てある 중 알맞은 표현을 선택하세요
+      </h3>
+
+      <div class="jp-question">
+        1. 처음 보는 음식이라 한번 먹어보려고 합니다.<br>
+        この料理を食べて（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        2. 여행 전에 호텔을 미리 예약합니다.<br>
+        ホテルを予約して（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        3. 실수로 지갑을 잊어버렸습니다.<br>
+        財布を忘れて（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        4. 회의실에 의자가 이미 준비되어 있습니다.<br>
+        会議室に椅子が用意して（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        5. 잘 모르겠으니 친구에게 한번 물어보겠습니다.<br>
+        友達に聞いて（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        6. 내일 필요하므로 오늘 자료를 읽어둡니다.<br>
+        今日、資料を読んで（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        7. 케이크를 전부 먹어버렸습니다.<br>
+        ケーキを全部食べて（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        8. 필요한 물건은 이미 사두었습니다.<br>
+        必要な物は買って（　　　　）。
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+      <p>1. みます</p>
+      <p>2. おきます</p>
+      <p>3. しまいました</p>
+      <p>4. あります</p>
+      <p>5. みます</p>
+      <p>6. おきます</p>
+      <p>7. しまいました</p>
+      <p>8. あります</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">한국어 → 일본어</span>
+    <h2 class="jp-section-title">문장 만들기 연습</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">직접 일본어 문장을 만들어보세요</h3>
+
+      <div class="jp-question">1. 일본에서 한번 일해보고 싶습니다.</div>
+      <div class="jp-question">2. 여행 전에 표를 미리 사두겠습니다.</div>
+      <div class="jp-question">3. 약속을 그만 잊어버렸습니다.</div>
+      <div class="jp-question">4. 벽에 사진이 붙여져 있습니다.</div>
+      <div class="jp-question">5. 친구에게 한번 물어보세요.</div>
+      <div class="jp-question">6. 주소를 미리 메모해두겠습니다.</div>
+      <div class="jp-question">7. 전철에서 잠들어버렸습니다.</div>
+      <div class="jp-question">8. 호텔은 이미 예약해두었습니다.</div>
+      <div class="jp-question">9. 이 옷을 한번 입어보겠습니다.</div>
+      <div class="jp-question">10. 필요한 자료를 미리 준비해두세요.</div>
+      <div class="jp-question">11. 중요한 파일을 지워버렸습니다.</div>
+      <div class="jp-question">12. 창문을 열어둔 상태입니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 日本で働いてみたいです。</p>
+      <p>2. 旅行の前に切符を買っておきます。</p>
+      <p>3. 約束を忘れてしまいました。</p>
+      <p>4. 壁に写真が貼ってあります。</p>
+      <p>5. 友達に聞いてみてください。</p>
+      <p>6. 住所をメモしておきます。</p>
+      <p>7. 電車で寝てしまいました。</p>
+      <p>8. ホテルはもう予約してあります。</p>
+      <p>9. この服を着てみます。</p>
+      <p>10. 必要な資料を準備しておいてください。</p>
+      <p>11. 大事なファイルを消してしまいました。</p>
+      <p>12. 窓が開けてあります。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n4">말하기</span>
+    <h2 class="jp-section-title">자기 경험으로 말하기</h2>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">① 한번 해보고 싶은 것</h3>
+      <p class="jp-sentence">
+        これから<ruby>何<rt>なに</rt></ruby>か
+        やってみたいことはありますか？
+      </p>
+      <p class="jp-hiragana">
+        これから なにか やって みたいことは ありますか？
+      </p>
+      <p>
+        앞으로 한번 해보고 싶은 일이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">② 여행 전에 미리 하는 것</h3>
+      <p class="jp-sentence">
+        <ruby>旅行<rt>りょこう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に
+        いつも<ruby>何<rt>なに</rt></ruby>をしておきますか？
+      </p>
+      <p class="jp-hiragana">
+        りょこうの まえに いつも なにを して おきますか？
+      </p>
+      <p>
+        여행 전에 항상 무엇을 미리 해두나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">③ 최근 실수</h3>
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>何<rt>なに</rt></ruby>か
+        してしまったことはありますか？
+      </p>
+      <p class="jp-hiragana">
+        さいきん、なにか してしまったことは ありますか？
+      </p>
+      <p>
+        최근 무언가를 해버리고 후회하거나 곤란했던 일이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">④ 평소 준비 습관</h3>
+      <p class="jp-sentence">
+        <ruby>大事<rt>だいじ</rt></ruby>な
+        <ruby>予定<rt>よてい</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、
+        <ruby>何<rt>なに</rt></ruby>を
+        <ruby>準備<rt>じゅんび</rt></ruby>しておきますか？
+      </p>
+      <p class="jp-hiragana">
+        だいじな よていの まえに、
+        なにを じゅんびして おきますか？
+      </p>
+      <p>
+        중요한 일정 전에 무엇을 미리 준비해두나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑤ 새로운 음식</h3>
+      <p class="jp-sentence">
+        <ruby>日本<rt>にほん</rt></ruby>で
+        <ruby>食<rt>た</rt></ruby>べてみたい
+        <ruby>料理<rt>りょうり</rt></ruby>はありますか？
+      </p>
+      <p class="jp-hiragana">
+        にほんで たべて みたい りょうりは ありますか？
+      </p>
+      <p>
+        일본에서 한번 먹어보고 싶은 음식이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑥ 실제 회화 축약형</h3>
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        「～ちゃった」と<ruby>言<rt>い</rt></ruby>いたくなるような
+        <ruby>失敗<rt>しっぱい</rt></ruby>はありましたか？
+      </p>
+      <p class="jp-hiragana">
+        さいきん、「～ちゃった」と いいたくなるような
+        しっぱいは ありましたか？
+      </p>
+      <p>
+        최근 “~해버렸어”라고 말하고 싶을 만한 실수가 있었나요?
+      </p>
+    </div>
+  </section>
+
+  <div class="jp-skip">
+    <strong>다음 단계:</strong>
+    다음 파트에서는 N3에서 중요하게 다룰 수 있는
+    <strong>～てくる・～ていく</strong>를 집중적으로 배웁니다.
+    단순히 “오다 / 가다”가 아니라,
+    과거부터 지금까지의 변화와 지금부터 미래로 이어지는 변화까지 자세히 다룹니다.
+  </div>
+
+</div>
+<div class="jp-lesson">
+
+  <div class="jp-title-box">
+    <div class="jp-title-label">て形 STEP 5</div>
+    <h1 class="jp-title">N3 핵심 ～てくる・～ていく</h1>
+    <p class="jp-title-sub">
+      ～てくる와 ～ていく는 단순히 “~해서 오다 / ~해서 가다”만 뜻하지 않습니다.
+      N3 수준에서는 시간의 흐름, 변화의 방향, 지금까지의 과정과 앞으로의 변화를 표현하는 것이 핵심입니다.
+    </p>
+  </div>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3 핵심</span>
+    <h2 class="jp-section-title">먼저 기본 이미지부터 이해하기</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">핵심은 “방향”입니다</h3>
+      <p>
+        ～てくる는 기본적으로 <strong>말하는 사람 쪽으로 다가오는 방향</strong>을 가집니다.
+      </p>
+      <p>
+        반대로 ～ていく는 <strong>말하는 사람에게서 멀어지는 방향</strong>을 가집니다.
+      </p>
+      <p>
+        이 공간적인 방향이 나중에는 시간과 변화에도 확장됩니다.
+      </p>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">밖</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">나</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てくる</div>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">나</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">밖</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～ていく</div>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3</span>
+    <h2 class="jp-section-title">1. ～てくる: ~해서 오다</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">어떤 행동을 한 뒤 이쪽으로 오다</h3>
+      <p>
+        가장 기본적인 의미입니다.
+        다른 장소에서 행동을 하고, 그 뒤에 말하는 사람 쪽으로 옵니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + くる</span>
+      <span class="jp-rule-sub">
+        의미: ~해서 오다 / ~하고 오다
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          コンビニで<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を
+          <ruby>買<rt>か</rt></ruby>ってきます。
+        </p>
+        <p class="jp-hiragana">
+          コンビニで のみものを かって きます。
+        </p>
+        <p class="jp-meaning">
+          편의점에서 음료를 사 오겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べてきました。
+        </p>
+        <p class="jp-hiragana">
+          ひるごはんを たべて きました。
+        </p>
+        <p class="jp-meaning">
+          점심을 먹고 왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>銀行<rt>ぎんこう</rt></ruby>に
+          <ruby>行<rt>い</rt></ruby>ってきます。
+        </p>
+        <p class="jp-hiragana">
+          ぎんこうに いって きます。
+        </p>
+        <p class="jp-meaning">
+          은행에 다녀오겠습니다.
+        </p>
+        <p class="jp-note">
+          行ってきます는 “갔다가 다시 돌아오다”라는 매우 자주 쓰는 표현입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          ちょっと<ruby>外<rt>そと</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>てきます。
+        </p>
+        <p class="jp-hiragana">
+          ちょっと そとを みて きます。
+        </p>
+        <p class="jp-meaning">
+          잠깐 밖을 보고 오겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>先生<rt>せんせい</rt></ruby>に
+          <ruby>聞<rt>き</rt></ruby>いてきました。
+        </p>
+        <p class="jp-hiragana">
+          せんせいに きいて きました。
+        </p>
+        <p class="jp-meaning">
+          선생님에게 물어보고 왔습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3</span>
+    <h2 class="jp-section-title">2. ～ていく: ~해서 가다</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">어떤 행동을 하면서 그쪽으로 가다</h3>
+      <p>
+        말하는 사람을 기준으로 멀어지는 방향을 나타냅니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + いく</span>
+      <span class="jp-rule-sub">
+        의미: ~해서 가다 / ~하면서 가다
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>駅<rt>えき</rt></ruby>まで
+          <ruby>歩<rt>ある</rt></ruby>いていきます。
+        </p>
+        <p class="jp-hiragana">
+          えきまで あるいて いきます。
+        </p>
+        <p class="jp-meaning">
+          역까지 걸어갑니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>傘<rt>かさ</rt></ruby>を
+          <ruby>持<rt>も</rt></ruby>っていきます。
+        </p>
+        <p class="jp-hiragana">
+          かさを もって いきます。
+        </p>
+        <p class="jp-meaning">
+          우산을 가지고 갑니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を
+          <ruby>買<rt>か</rt></ruby>っていきます。
+        </p>
+        <p class="jp-hiragana">
+          のみものを かって いきます。
+        </p>
+        <p class="jp-meaning">
+          음료를 사서 가져가겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>友達<rt>ともだち</rt></ruby>の
+          <ruby>家<rt>いえ</rt></ruby>まで
+          <ruby>自転車<rt>じてんしゃ</rt></ruby>で
+          <ruby>行<rt>い</rt></ruby>っていきます。
+        </p>
+        <p class="jp-hiragana">
+          ともだちの いえまで じてんしゃで いって いきます。
+        </p>
+        <p class="jp-meaning">
+          친구 집까지 자전거를 타고 가겠습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">중요</span>
+    <h2 class="jp-section-title">3. 과거부터 지금까지 ～てくる</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">과거 → 현재</h3>
+      <p>
+        여기서부터 N3에서 중요한 의미가 나옵니다.
+      </p>
+      <p>
+        어떤 행동이나 변화가 과거에 시작되어
+        <strong>지금 이 순간까지 이어져 왔다</strong>고 말할 때 ～てくる를 사용할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">과거</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">현재</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～てきた</div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>三年間<rt>さんねんかん</rt></ruby>
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>してきました。
+        </p>
+        <p class="jp-hiragana">
+          さんねんかん にほんごを べんきょうして きました。
+        </p>
+        <p class="jp-meaning">
+          3년 동안 일본어를 공부해 왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>今<rt>いま</rt></ruby>まで
+          <ruby>多<rt>おお</rt></ruby>くの
+          <ruby>人<rt>ひと</rt></ruby>に
+          <ruby>会<rt>あ</rt></ruby>ってきました。
+        </p>
+        <p class="jp-hiragana">
+          いままで おおくの ひとに あって きました。
+        </p>
+        <p class="jp-meaning">
+          지금까지 많은 사람을 만나왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>会社<rt>かいしゃ</rt></ruby>で
+          <ruby>十年<rt>じゅうねん</rt></ruby>
+          <ruby>働<rt>はたら</rt></ruby>いてきました。
+        </p>
+        <p class="jp-hiragana">
+          この かいしゃで じゅうねん はたらいて きました。
+        </p>
+        <p class="jp-meaning">
+          이 회사에서 10년 동안 일해 왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>子供<rt>こども</rt></ruby>のころから
+          <ruby>音楽<rt>おんがく</rt></ruby>を
+          <ruby>続<rt>つづ</rt></ruby>けてきました。
+        </p>
+        <p class="jp-hiragana">
+          こどもの ころから おんがくを つづけて きました。
+        </p>
+        <p class="jp-meaning">
+          어릴 때부터 음악을 계속해 왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>何度<rt>なんど</rt></ruby>も
+          <ruby>失敗<rt>しっぱい</rt></ruby>しながら
+          <ruby>頑張<rt>がんば</rt></ruby>ってきました。
+        </p>
+        <p class="jp-hiragana">
+          なんども しっぱいしながら がんばって きました。
+        </p>
+        <p class="jp-meaning">
+          몇 번이나 실패하면서 노력해 왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>少<rt>すこ</rt></ruby>しずつ
+          <ruby>経験<rt>けいけん</rt></ruby>を
+          <ruby>積<rt>つ</rt></ruby>んできました。
+        </p>
+        <p class="jp-hiragana">
+          すこしずつ けいけんを つんで きました。
+        </p>
+        <p class="jp-meaning">
+          조금씩 경험을 쌓아왔습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">중요</span>
+    <h2 class="jp-section-title">4. 현재부터 미래까지 ～ていく</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">현재 → 미래</h3>
+      <p>
+        지금을 출발점으로 해서 어떤 행동이나 변화가
+        <strong>앞으로 계속 이어질 것</strong>이라고 말할 때 ～ていく를 사용할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">현재</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">미래</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～ていく</div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          これからも
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>していきます。
+        </p>
+        <p class="jp-hiragana">
+          これからも にほんごを べんきょうして いきます。
+        </p>
+        <p class="jp-meaning">
+          앞으로도 일본어를 계속 공부해 나가겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          これから
+          <ruby>経験<rt>けいけん</rt></ruby>を
+          <ruby>増<rt>ふ</rt></ruby>やしていきたいです。
+        </p>
+        <p class="jp-hiragana">
+          これから けいけんを ふやして いきたいです。
+        </p>
+        <p class="jp-meaning">
+          앞으로 경험을 늘려가고 싶습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>今後<rt>こんご</rt></ruby>も
+          この<ruby>仕事<rt>しごと</rt></ruby>を
+          <ruby>続<rt>つづ</rt></ruby>けていくつもりです。
+        </p>
+        <p class="jp-hiragana">
+          こんごも この しごとを つづけて いく つもりです。
+        </p>
+        <p class="jp-meaning">
+          앞으로도 이 일을 계속해 나갈 생각입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>少<rt>すこ</rt></ruby>しずつ
+          <ruby>改善<rt>かいぜん</rt></ruby>していきます。
+        </p>
+        <p class="jp-hiragana">
+          すこしずつ かいぜんして いきます。
+        </p>
+        <p class="jp-meaning">
+          조금씩 개선해 나가겠습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          これから
+          <ruby>新<rt>あたら</rt></ruby>しい
+          <ruby>方法<rt>ほうほう</rt></ruby>を
+          <ruby>試<rt>ため</rt></ruby>していきたいです。
+        </p>
+        <p class="jp-hiragana">
+          これから あたらしい ほうほうを ためして いきたいです。
+        </p>
+        <p class="jp-meaning">
+          앞으로 새로운 방법들을 시도해 나가고 싶습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">핵심 비교</span>
+    <h2 class="jp-section-title">～てきた와 ～ていく 비교</h2>
+
+    <div class="jp-compare">
+      <div class="jp-compare-card">
+        <h4>～てきた</h4>
+        <p>과거 → 현재</p>
+        <p>지금까지 해왔다</p>
+      </div>
+
+      <div class="jp-compare-card">
+        <h4>～ていく</h4>
+        <p>현재 → 미래</p>
+        <p>앞으로 해나간다</p>
+      </div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">과거 → 현재</span>
+        <p class="jp-sentence">
+          <ruby>今<rt>いま</rt></ruby>まで
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>してきました。
+        </p>
+        <p class="jp-hiragana">
+          いままで にほんごを べんきょうして きました。
+        </p>
+        <p class="jp-meaning">
+          지금까지 일본어를 공부해 왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">현재 → 미래</span>
+        <p class="jp-sentence">
+          これからも
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>していきます。
+        </p>
+        <p class="jp-hiragana">
+          これからも にほんごを べんきょうして いきます。
+        </p>
+        <p class="jp-meaning">
+          앞으로도 일본어를 공부해 나가겠습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">한 문장으로 연결할 수도 있습니다</h3>
+      <p>
+        과거부터 지금까지 해온 일과,
+        앞으로 계속할 일을 한 번에 표현할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>今<rt>いま</rt></ruby>まで
+          <ruby>勉強<rt>べんきょう</rt></ruby>してきましたし、
+          これからも<ruby>続<rt>つづ</rt></ruby>けていきたいです。
+        </p>
+        <p class="jp-hiragana">
+          いままで べんきょうして きましたし、
+          これからも つづけて いきたいです。
+        </p>
+        <p class="jp-meaning">
+          지금까지 공부해왔고, 앞으로도 계속해 나가고 싶습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3 핵심</span>
+    <h2 class="jp-section-title">5. 변화가 점점 나타나다 ～てくる</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">변화가 지금 이쪽으로 다가오고 있다</h3>
+      <p>
+        ～てくる는 시간이 지나면서 어떤 변화가 생겨
+        <strong>지금 그 변화가 느껴지기 시작했다</strong>는 뜻으로도 사용합니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>最近<rt>さいきん</rt></ruby>、
+          <ruby>暑<rt>あつ</rt></ruby>くなってきました。
+        </p>
+        <p class="jp-hiragana">
+          さいきん、あつく なって きました。
+        </p>
+        <p class="jp-meaning">
+          최근 점점 더워지기 시작했습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>日本語<rt>にほんご</rt></ruby>が
+          <ruby>少<rt>すこ</rt></ruby>しずつ
+          <ruby>分<rt>わ</rt></ruby>かってきました。
+        </p>
+        <p class="jp-hiragana">
+          にほんごが すこしずつ わかって きました。
+        </p>
+        <p class="jp-meaning">
+          일본어를 조금씩 알게 되기 시작했습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>仕事<rt>しごと</rt></ruby>に
+          <ruby>慣<rt>な</rt></ruby>れてきました。
+        </p>
+        <p class="jp-hiragana">
+          しごとに なれて きました。
+        </p>
+        <p class="jp-meaning">
+          일에 점점 익숙해졌습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>空<rt>そら</rt></ruby>が
+          <ruby>暗<rt>くら</rt></ruby>くなってきました。
+        </p>
+        <p class="jp-hiragana">
+          そらが くらく なって きました。
+        </p>
+        <p class="jp-meaning">
+          하늘이 점점 어두워지기 시작했습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>人<rt>ひと</rt></ruby>が
+          <ruby>増<rt>ふ</rt></ruby>えてきました。
+        </p>
+        <p class="jp-hiragana">
+          ひとが ふえて きました。
+        </p>
+        <p class="jp-meaning">
+          사람들이 점점 늘어나기 시작했습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>少<rt>すこ</rt></ruby>し
+          <ruby>自信<rt>じしん</rt></ruby>が
+          <ruby>出<rt>で</rt></ruby>てきました。
+        </p>
+        <p class="jp-hiragana">
+          すこし じしんが でて きました。
+        </p>
+        <p class="jp-meaning">
+          조금 자신감이 생기기 시작했습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3 핵심</span>
+    <h2 class="jp-section-title">6. 변화가 앞으로 계속되다 ～ていく</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">변화가 현재에서 미래 방향으로 진행된다</h3>
+      <p>
+        지금 나타난 변화가 앞으로 계속 이어질 것이라고 말할 때 사용합니다.
+      </p>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          これからもっと
+          <ruby>暑<rt>あつ</rt></ruby>くなっていきます。
+        </p>
+        <p class="jp-hiragana">
+          これから もっと あつく なって いきます。
+        </p>
+        <p class="jp-meaning">
+          앞으로 더욱 더워질 것입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>人口<rt>じんこう</rt></ruby>は
+          これから<ruby>減<rt>へ</rt></ruby>っていくでしょう。
+        </p>
+        <p class="jp-hiragana">
+          じんこうは これから へって いくでしょう。
+        </p>
+        <p class="jp-meaning">
+          인구는 앞으로 감소해갈 것입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          AIはこれからもっと
+          <ruby>生活<rt>せいかつ</rt></ruby>の
+          <ruby>中<rt>なか</rt></ruby>に
+          <ruby>入<rt>はい</rt></ruby>っていくと
+          <ruby>思<rt>おも</rt></ruby>います。
+        </p>
+        <p class="jp-hiragana">
+          AIは これから もっと せいかつの なかに
+          はいって いくと おもいます。
+        </p>
+        <p class="jp-meaning">
+          AI는 앞으로 더 생활 속으로 들어오게 될 것이라고 생각합니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>町<rt>まち</rt></ruby>は
+          これからもっと<ruby>便利<rt>べんり</rt></ruby>に
+          なっていくでしょう。
+        </p>
+        <p class="jp-hiragana">
+          この まちは これから もっと べんりに なって いくでしょう。
+        </p>
+        <p class="jp-meaning">
+          이 도시는 앞으로 더욱 편리해질 것입니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>技術<rt>ぎじゅつ</rt></ruby>は
+          これからも<ruby>発展<rt>はってん</rt></ruby>していきます。
+        </p>
+        <p class="jp-hiragana">
+          ぎじゅつは これからも はってんして いきます。
+        </p>
+        <p class="jp-meaning">
+          기술은 앞으로도 발전해 나갈 것입니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">비교</span>
+    <h2 class="jp-section-title">변화 표현을 비교해보기</h2>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">현재까지 나타난 변화</span>
+        <p class="jp-sentence">
+          <ruby>最近<rt>さいきん</rt></ruby>、
+          <ruby>暖<rt>あたた</rt></ruby>かくなってきました。
+        </p>
+        <p class="jp-hiragana">
+          さいきん、あたたかく なって きました。
+        </p>
+        <p class="jp-meaning">
+          최근 따뜻해지기 시작했습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">앞으로 계속될 변화</span>
+        <p class="jp-sentence">
+          これからもっと
+          <ruby>暖<rt>あたた</rt></ruby>かくなっていきます。
+        </p>
+        <p class="jp-hiragana">
+          これから もっと あたたかく なって いきます。
+        </p>
+        <p class="jp-meaning">
+          앞으로 더욱 따뜻해질 것입니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">현재까지</span>
+        <p class="jp-sentence">
+          <ruby>外国人<rt>がいこくじん</rt></ruby>の
+          <ruby>観光客<rt>かんこうきゃく</rt></ruby>が
+          <ruby>増<rt>ふ</rt></ruby>えてきました。
+        </p>
+        <p class="jp-hiragana">
+          がいこくじんの かんこうきゃくが ふえて きました。
+        </p>
+        <p class="jp-meaning">
+          외국인 관광객이 점점 늘어나고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">앞으로</span>
+        <p class="jp-sentence">
+          これからも
+          <ruby>外国人<rt>がいこくじん</rt></ruby>の
+          <ruby>観光客<rt>かんこうきゃく</rt></ruby>が
+          <ruby>増<rt>ふ</rt></ruby>えていくと
+          <ruby>思<rt>おも</rt></ruby>います。
+        </p>
+        <p class="jp-hiragana">
+          これからも がいこくじんの かんこうきゃくが
+          ふえて いくと おもいます。
+        </p>
+        <p class="jp-meaning">
+          앞으로도 외국인 관광객이 계속 늘어날 것이라고 생각합니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">연습</span>
+    <h2 class="jp-section-title">～てくる・～ていく 선택하기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">문장의 시간 방향을 보고 알맞은 표현을 고르세요</h3>
+
+      <div class="jp-question">
+        1. 지금까지 5년 동안 일본어를 공부해 왔습니다.<br>
+        五年間、日本語を勉強して（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        2. 앞으로도 일본어를 계속 공부할 생각입니다.<br>
+        これからも日本語を勉強して（　　　　）つもりです。
+      </div>
+
+      <div class="jp-question">
+        3. 최근 날씨가 더워지기 시작했습니다.<br>
+        最近、暑くなって（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        4. 앞으로 더 더워질 것입니다.<br>
+        これからもっと暑くなって（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        5. 지금까지 많은 경험을 쌓아왔습니다.<br>
+        今まで多くの経験を積んで（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        6. 앞으로 경험을 더 쌓아가고 싶습니다.<br>
+        これからもっと経験を積んで（　　　　）たいです。
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+      <p>1. きました</p>
+      <p>2. いく</p>
+      <p>3. きました</p>
+      <p>4. いきます</p>
+      <p>5. きました</p>
+      <p>6. いき</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">한국어 → 일본어</span>
+    <h2 class="jp-section-title">문장 만들기 연습</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">직접 일본어로 만들어보세요</h3>
+
+      <div class="jp-question">1. 지금까지 일본어를 3년 동안 공부해 왔습니다.</div>
+      <div class="jp-question">2. 앞으로도 계속 공부해 나가겠습니다.</div>
+      <div class="jp-question">3. 최근 일에 익숙해지기 시작했습니다.</div>
+      <div class="jp-question">4. 앞으로 더 편리해질 것입니다.</div>
+      <div class="jp-question">5. 지금까지 많은 사람을 만나왔습니다.</div>
+      <div class="jp-question">6. 앞으로 새로운 것을 계속 시도하고 싶습니다.</div>
+      <div class="jp-question">7. 최근 사람이 늘어나기 시작했습니다.</div>
+      <div class="jp-question">8. 앞으로 사람이 더 늘어날 것이라고 생각합니다.</div>
+      <div class="jp-question">9. 지금까지 여러 번 실패하면서 노력해 왔습니다.</div>
+      <div class="jp-question">10. 앞으로 조금씩 개선해 나가겠습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+      <p>1. 今まで三年間、日本語を勉強してきました。</p>
+      <p>2. これからも勉強を続けていきます。</p>
+      <p>3. 最近、仕事に慣れてきました。</p>
+      <p>4. これからもっと便利になっていくでしょう。</p>
+      <p>5. 今まで多くの人に会ってきました。</p>
+      <p>6. これから新しいことを試していきたいです。</p>
+      <p>7. 最近、人が増えてきました。</p>
+      <p>8. これからもっと人が増えていくと思います。</p>
+      <p>9. 今まで何度も失敗しながら頑張ってきました。</p>
+      <p>10. これから少しずつ改善していきます。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">말하기</span>
+    <h2 class="jp-section-title">자기 경험으로 말하기</h2>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">① 지금까지 계속해 온 것</h3>
+
+      <p class="jp-sentence">
+        <ruby>今<rt>いま</rt></ruby>まで
+        <ruby>長<rt>なが</rt></ruby>く
+        <ruby>続<rt>つづ</rt></ruby>けてきたことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        いままで ながく つづけて きたことは ありますか？
+      </p>
+
+      <p>
+        지금까지 오랫동안 계속해온 일이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">② 앞으로 계속하고 싶은 것</h3>
+
+      <p class="jp-sentence">
+        これからも
+        <ruby>続<rt>つづ</rt></ruby>けていきたいことは
+        <ruby>何<rt>なん</rt></ruby>ですか？
+      </p>
+
+      <p class="jp-hiragana">
+        これからも つづけて いきたいことは なんですか？
+      </p>
+
+      <p>
+        앞으로도 계속해 나가고 싶은 것은 무엇인가요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">③ 최근 생긴 변화</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>自分<rt>じぶん</rt></ruby>の
+        <ruby>生活<rt>せいかつ</rt></ruby>で
+        <ruby>変<rt>か</rt></ruby>わってきたことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、じぶんの せいかつで
+        かわって きたことは ありますか？
+      </p>
+
+      <p>
+        최근 자신의 생활에서 변해오기 시작한 것이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">④ 앞으로의 변화 예상</h3>
+
+      <p class="jp-sentence">
+        <ruby>社会<rt>しゃかい</rt></ruby>は
+        これからどう
+        <ruby>変<rt>か</rt></ruby>わっていくと
+        <ruby>思<rt>おも</rt></ruby>いますか？
+      </p>
+
+      <p class="jp-hiragana">
+        しゃかいは これから どう
+        かわって いくと おもいますか？
+      </p>
+
+      <p>
+        사회는 앞으로 어떻게 변해갈 것이라고 생각하나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑤ 일본어 실력 변화</h3>
+
+      <p class="jp-sentence">
+        <ruby>日本語<rt>にほんご</rt></ruby>を
+        <ruby>勉強<rt>べんきょう</rt></ruby>して、
+        できるようになってきたことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        にほんごを べんきょうして、
+        できるように なって きたことは ありますか？
+      </p>
+
+      <p>
+        일본어를 공부하면서 점점 할 수 있게 된 것이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑥ 앞으로 발전시키고 싶은 것</h3>
+
+      <p class="jp-sentence">
+        これから
+        <ruby>何<rt>なに</rt></ruby>を
+        <ruby>伸<rt>の</rt></ruby>ばしていきたいですか？
+      </p>
+
+      <p class="jp-hiragana">
+        これから なにを のばして いきたいですか？
+      </p>
+
+      <p>
+        앞으로 무엇을 발전시켜 나가고 싶나요?
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">최종 정리</span>
+    <h2 class="jp-section-title">～てくる・～ていく를 한 번에 정리</h2>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>표현</th>
+            <th>방향</th>
+            <th>대표 의미</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>～てくる</td>
+            <td>밖 → 나</td>
+            <td>~해서 오다</td>
+          </tr>
+          <tr>
+            <td>～ていく</td>
+            <td>나 → 밖</td>
+            <td>~해서 가다</td>
+          </tr>
+          <tr>
+            <td>～てきた</td>
+            <td>과거 → 현재</td>
+            <td>지금까지 ~해왔다</td>
+          </tr>
+          <tr>
+            <td>～ていく</td>
+            <td>현재 → 미래</td>
+            <td>앞으로 ~해나간다</td>
+          </tr>
+          <tr>
+            <td>～てきた</td>
+            <td>변화 → 현재</td>
+            <td>점점 ~해졌다</td>
+          </tr>
+          <tr>
+            <td>～ていく</td>
+            <td>현재 → 앞으로의 변화</td>
+            <td>점점 ~해질 것이다</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">기억법</h3>
+      <p>
+        <strong>くる = 지금 이쪽으로 온다 → 과거부터 지금까지</strong>
+      </p>
+      <p>
+        <strong>いく = 지금 여기서 앞으로 간다 → 지금부터 미래까지</strong>
+      </p>
+    </div>
+  </section>
+
+  <div class="jp-skip">
+    <strong>다음 턴이 마지막입니다.</strong>
+    마지막 파트에서는
+    <strong>～て初めて・～て以来・～てばかりいる</strong> 등
+    N3 응용 표현을 정리하고,
+    지금까지 배운 て형 전체를 섞은 종합 문제와 회화 연습으로 마무리합니다.
+  </div>
+
+</div>
+<div class="jp-lesson">
+
+  <div class="jp-title-box">
+    <div class="jp-title-label">て形 FINAL STEP</div>
+    <h1 class="jp-title">N3 응용 + て형 종합 연습</h1>
+    <p class="jp-title-sub">
+      마지막 파트에서는 N3 수준에서 활용하기 좋은 て형 관련 표현을 익히고,
+      지금까지 배운 기초부터 N3까지의 내용을 한 번에 복습합니다.
+    </p>
+  </div>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3</span>
+    <h2 class="jp-section-title">1. ～て初めて</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">~하고 나서야 비로소</h3>
+      <p>
+        어떤 일을 직접 경험하거나 어떤 상황이 된 뒤에야
+        이전에는 몰랐던 사실을 알게 되었을 때 사용합니다.
+      </p>
+      <p>
+        단순히 “A를 하고 B를 했다”가 아니라,
+        <strong>A라는 경험이 있었기 때문에 비로소 B를 알게 되었다</strong>는 의미가 중요합니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + 初めて</span>
+      <span class="jp-rule-sub">
+        의미: ~하고 나서야 비로소 / ~한 뒤에 처음으로
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">경험 A</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">새로운 이해</div>
+      <div class="jp-flow-arrow">＝</div>
+      <div class="jp-flow-item">～て初めて</div>
+    </div>
+
+    <h3 class="jp-subtitle">기본 예문</h3>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>日本<rt>にほん</rt></ruby>に
+          <ruby>住<rt>す</rt></ruby>んで<ruby>初<rt>はじ</rt></ruby>めて、
+          <ruby>文化<rt>ぶんか</rt></ruby>の
+          <ruby>違<rt>ちが</rt></ruby>いが
+          <ruby>分<rt>わ</rt></ruby>かりました。
+        </p>
+        <p class="jp-hiragana">
+          にほんに すんで はじめて、
+          ぶんかの ちがいが わかりました。
+        </p>
+        <p class="jp-meaning">
+          일본에 살아보고 나서야 비로소 문화의 차이를 알았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>一人暮<rt>ひとりぐ</rt></ruby>らしをして
+          <ruby>初<rt>はじ</rt></ruby>めて、
+          <ruby>家事<rt>かじ</rt></ruby>の
+          <ruby>大変<rt>たいへん</rt></ruby>さが
+          <ruby>分<rt>わ</rt></ruby>かりました。
+        </p>
+        <p class="jp-hiragana">
+          ひとりぐらしを して はじめて、
+          かじの たいへんさが わかりました。
+        </p>
+        <p class="jp-meaning">
+          혼자 살아보고 나서야 집안일이 힘들다는 것을 알았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>病気<rt>びょうき</rt></ruby>になって
+          <ruby>初<rt>はじ</rt></ruby>めて、
+          <ruby>健康<rt>けんこう</rt></ruby>の
+          <ruby>大切<rt>たいせつ</rt></ruby>さに
+          <ruby>気<rt>き</rt></ruby>づきました。
+        </p>
+        <p class="jp-hiragana">
+          びょうきに なって はじめて、
+          けんこうの たいせつさに きづきました。
+        </p>
+        <p class="jp-meaning">
+          병이 나고 나서야 비로소 건강의 중요성을 깨달았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>社会人<rt>しゃかいじん</rt></ruby>になって
+          <ruby>初<rt>はじ</rt></ruby>めて、
+          <ruby>時間<rt>じかん</rt></ruby>の
+          <ruby>大切<rt>たいせつ</rt></ruby>さが
+          <ruby>分<rt>わ</rt></ruby>かりました。
+        </p>
+        <p class="jp-hiragana">
+          しゃかいじんに なって はじめて、
+          じかんの たいせつさが わかりました。
+        </p>
+        <p class="jp-meaning">
+          직장인이 되고 나서야 시간의 중요성을 알았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>自分<rt>じぶん</rt></ruby>で
+          <ruby>作<rt>つく</rt></ruby>ってみて
+          <ruby>初<rt>はじ</rt></ruby>めて、
+          <ruby>難<rt>むずか</rt></ruby>しさが
+          <ruby>分<rt>わ</rt></ruby>かりました。
+        </p>
+        <p class="jp-hiragana">
+          じぶんで つくって みて はじめて、
+          むずかしさが わかりました。
+        </p>
+        <p class="jp-meaning">
+          직접 만들어보고 나서야 어려움을 알았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>外国<rt>がいこく</rt></ruby>で
+          <ruby>生活<rt>せいかつ</rt></ruby>して
+          <ruby>初<rt>はじ</rt></ruby>めて、
+          <ruby>自分<rt>じぶん</rt></ruby>の
+          <ruby>国<rt>くに</rt></ruby>について
+          <ruby>考<rt>かんが</rt></ruby>えるようになりました。
+        </p>
+        <p class="jp-hiragana">
+          がいこくで せいかつして はじめて、
+          じぶんの くにについて かんがえるように なりました。
+        </p>
+        <p class="jp-meaning">
+          외국에서 생활하고 나서야 자신의 나라에 대해 생각하게 되었습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>포인트:</strong>
+      ～て初めて 뒤에는
+      「分かる・気づく・知る・理解する」처럼
+      새롭게 알게 되거나 깨닫는 표현이 자주 옵니다.
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">문장 만들기</h3>
+
+      <div class="jp-question">
+        1. 혼자 살아보고 나서야 부모님의 고마움을 알았습니다.
+      </div>
+
+      <div class="jp-question">
+        2. 직접 일해보고 나서야 돈 버는 것이 힘들다는 것을 알았습니다.
+      </div>
+
+      <div class="jp-question">
+        3. 일본에 가보고 나서야 일본어 공부의 필요성을 느꼈습니다.
+      </div>
+
+      <div class="jp-question">
+        4. 실패하고 나서야 문제를 이해했습니다.
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+
+      <p>
+        1. 一人暮らしをして初めて、両親のありがたさが分かりました。
+      </p>
+
+      <p>
+        2. 自分で働いて初めて、お金を稼ぐ大変さが分かりました。
+      </p>
+
+      <p>
+        3. 日本に行って初めて、日本語を勉強する必要性を感じました。
+      </p>
+
+      <p>
+        4. 失敗して初めて、問題が分かりました。
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3</span>
+    <h2 class="jp-section-title">2. ～て以来</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">~한 이후로 지금까지 계속</h3>
+      <p>
+        어떤 사건을 시작점으로 해서
+        그 이후 현재까지 같은 상태나 행동이 계속되고 있을 때 사용합니다.
+      </p>
+      <p>
+        단순한 과거의 순서를 말하는 것이 아니라
+        <strong>과거의 한 사건 → 현재까지 이어지는 흐름</strong>이 핵심입니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + 以来</span>
+      <span class="jp-rule-sub">
+        의미: ~한 이래로 / ~한 이후 계속
+      </span>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">과거의 사건</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">계속</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">현재</div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>日本<rt>にほん</rt></ruby>を
+          <ruby>旅行<rt>りょこう</rt></ruby>して<ruby>以来<rt>いらい</rt></ruby>、
+          <ruby>日本語<rt>にほんご</rt></ruby>に
+          <ruby>興味<rt>きょうみ</rt></ruby>を
+          <ruby>持<rt>も</rt></ruby>っています。
+        </p>
+        <p class="jp-hiragana">
+          にほんを りょこうして いらい、
+          にほんごに きょうみを もっています。
+        </p>
+        <p class="jp-meaning">
+          일본을 여행한 이후로 일본어에 관심을 가지고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          この<ruby>会社<rt>かいしゃ</rt></ruby>に
+          <ruby>入<rt>はい</rt></ruby>って<ruby>以来<rt>いらい</rt></ruby>、
+          <ruby>毎日<rt>まいにち</rt></ruby>
+          <ruby>忙<rt>いそが</rt></ruby>しいです。
+        </p>
+        <p class="jp-hiragana">
+          この かいしゃに はいって いらい、
+          まいにち いそがしいです。
+        </p>
+        <p class="jp-meaning">
+          이 회사에 들어온 이후로 매일 바쁩니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>して
+          <ruby>以来<rt>いらい</rt></ruby>、
+          <ruby>彼<rt>かれ</rt></ruby>には
+          <ruby>会<rt>あ</rt></ruby>っていません。
+        </p>
+        <p class="jp-hiragana">
+          ひっこして いらい、
+          かれには あっていません。
+        </p>
+        <p class="jp-meaning">
+          이사한 이후로 그를 만나지 않았습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>大学<rt>だいがく</rt></ruby>を
+          <ruby>卒業<rt>そつぎょう</rt></ruby>して
+          <ruby>以来<rt>いらい</rt></ruby>、
+          この<ruby>町<rt>まち</rt></ruby>に
+          <ruby>住<rt>す</rt></ruby>んでいます。
+        </p>
+        <p class="jp-hiragana">
+          だいがくを そつぎょうして いらい、
+          この まちに すんでいます。
+        </p>
+        <p class="jp-meaning">
+          대학을 졸업한 이후로 이 도시에 살고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>彼女<rt>かのじょ</rt></ruby>と
+          <ruby>出会<rt>であ</rt></ruby>って
+          <ruby>以来<rt>いらい</rt></ruby>、
+          <ruby>生活<rt>せいかつ</rt></ruby>が
+          <ruby>大<rt>おお</rt></ruby>きく
+          <ruby>変<rt>か</rt></ruby>わりました。
+        </p>
+        <p class="jp-hiragana">
+          かのじょと であって いらい、
+          せいかつが おおきく かわりました。
+        </p>
+        <p class="jp-meaning">
+          그녀를 만난 이후로 생활이 크게 변했습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          あの<ruby>映画<rt>えいが</rt></ruby>を
+          <ruby>見<rt>み</rt></ruby>て<ruby>以来<rt>いらい</rt></ruby>、
+          その<ruby>監督<rt>かんとく</rt></ruby>の
+          <ruby>作品<rt>さくひん</rt></ruby>を
+          よく<ruby>見<rt>み</rt></ruby>ています。
+        </p>
+        <p class="jp-hiragana">
+          あの えいがを みて いらい、
+          その かんとくの さくひんを よく みています。
+        </p>
+        <p class="jp-meaning">
+          그 영화를 본 이후로 그 감독의 작품을 자주 보고 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="jp-subtitle">～てから와 무엇이 다를까?</h3>
+
+    <div class="jp-compare">
+      <div class="jp-compare-card">
+        <h4>～てから</h4>
+        <p>A를 한 다음 B.</p>
+        <p>단순한 행동 순서에도 사용할 수 있습니다.</p>
+      </div>
+
+      <div class="jp-compare-card">
+        <h4>～て以来</h4>
+        <p>A 이후 현재까지.</p>
+        <p>그 이후의 지속성이 중요합니다.</p>
+      </div>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">단순 순서</span>
+        <p class="jp-sentence">
+          ご<ruby>飯<rt>はん</rt></ruby>を
+          <ruby>食<rt>た</rt></ruby>べてから、
+          <ruby>勉強<rt>べんきょう</rt></ruby>します。
+        </p>
+        <p class="jp-hiragana">
+          ごはんを たべてから、べんきょうします。
+        </p>
+        <p class="jp-meaning">
+          밥을 먹은 뒤 공부합니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">그 이후 계속</span>
+        <p class="jp-sentence">
+          <ruby>日本<rt>にほん</rt></ruby>に
+          <ruby>来<rt>き</rt></ruby>て<ruby>以来<rt>いらい</rt></ruby>、
+          <ruby>毎日<rt>まいにち</rt></ruby>
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>使<rt>つか</rt></ruby>っています。
+        </p>
+        <p class="jp-hiragana">
+          にほんに きて いらい、
+          まいにち にほんごを つかっています。
+        </p>
+        <p class="jp-meaning">
+          일본에 온 이후로 매일 일본어를 사용하고 있습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+
+      <div class="jp-question">
+        1. 일본에 다녀온 이후로 일본 음식을 좋아합니다.
+      </div>
+
+      <div class="jp-question">
+        2. 이 회사에 들어온 이후로 매우 바쁩니다.
+      </div>
+
+      <div class="jp-question">
+        3. 대학을 졸업한 이후로 그 친구를 만나지 않았습니다.
+      </div>
+
+      <div class="jp-question">
+        4. 일본어 공부를 시작한 이후로 일본 영화를 자주 봅니다.
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+
+      <p>
+        1. 日本に行って以来、日本料理が好きです。
+      </p>
+
+      <p>
+        2. この会社に入って以来、とても忙しいです。
+      </p>
+
+      <p>
+        3. 大学を卒業して以来、その友達に会っていません。
+      </p>
+
+      <p>
+        4. 日本語の勉強を始めて以来、日本映画をよく見ています。
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">N3</span>
+    <h2 class="jp-section-title">3. ～てばかりいる</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">계속 ~하기만 한다</h3>
+      <p>
+        특정 행동을 반복해서 하고,
+        다른 행동은 거의 하지 않는다는 느낌을 표현합니다.
+      </p>
+      <p>
+        상황에 따라 불만이나 비판적인 뉘앙스가 들어가는 경우가 많습니다.
+      </p>
+    </div>
+
+    <div class="jp-rule">
+      <span class="jp-rule-main">동사 て형 + ばかりいる</span>
+      <span class="jp-rule-sub">
+        의미: 계속 ~하기만 하다
+      </span>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>弟<rt>おとうと</rt></ruby>は
+          ゲームをしてばかりいます。
+        </p>
+        <p class="jp-hiragana">
+          おとうとは ゲームを してばかり います。
+        </p>
+        <p class="jp-meaning">
+          남동생은 게임만 계속 하고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>は
+          <ruby>寝<rt>ね</rt></ruby>てばかりいます。
+        </p>
+        <p class="jp-hiragana">
+          やすみの ひは ねてばかり います。
+        </p>
+        <p class="jp-meaning">
+          쉬는 날에는 계속 잠만 잡니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>文句<rt>もんく</rt></ruby>を
+          <ruby>言<rt>い</rt></ruby>ってばかりいても、
+          <ruby>問題<rt>もんだい</rt></ruby>は
+          <ruby>解決<rt>かいけつ</rt></ruby>しません。
+        </p>
+        <p class="jp-hiragana">
+          もんくを いってばかり いても、
+          もんだいは かいけつしません。
+        </p>
+        <p class="jp-meaning">
+          불평만 계속해도 문제는 해결되지 않습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          スマホを<ruby>見<rt>み</rt></ruby>てばかりいないで、
+          <ruby>勉強<rt>べんきょう</rt></ruby>してください。
+        </p>
+        <p class="jp-hiragana">
+          スマホを みてばかり いないで、
+          べんきょうして ください。
+        </p>
+        <p class="jp-meaning">
+          스마트폰만 계속 보지 말고 공부해 주세요.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>彼<rt>かれ</rt></ruby>は
+          <ruby>自分<rt>じぶん</rt></ruby>の
+          <ruby>話<rt>はなし</rt></ruby>をしてばかりいます。
+        </p>
+        <p class="jp-hiragana">
+          かれは じぶんの はなしを してばかり います。
+        </p>
+        <p class="jp-meaning">
+          그는 자기 이야기만 계속 합니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>最近<rt>さいきん</rt></ruby>、
+          <ruby>外食<rt>がいしょく</rt></ruby>してばかりいます。
+        </p>
+        <p class="jp-hiragana">
+          さいきん、がいしょくしてばかり います。
+        </p>
+        <p class="jp-meaning">
+          최근 계속 외식만 하고 있습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <p class="jp-sentence">
+          <ruby>失敗<rt>しっぱい</rt></ruby>を
+          <ruby>心配<rt>しんぱい</rt></ruby>してばかりいては、
+          <ruby>何<rt>なに</rt></ruby>も
+          <ruby>始<rt>はじ</rt></ruby>められません。
+        </p>
+        <p class="jp-hiragana">
+          しっぱいを しんぱいしてばかり いては、
+          なにも はじめられません。
+        </p>
+        <p class="jp-meaning">
+          실패만 계속 걱정하고 있어서는 아무것도 시작할 수 없습니다.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="jp-warning">
+      <strong>주의:</strong>
+      ～てばかりいる는 단순히 “자주 한다”보다
+      “그것만 계속한다”라는 느낌이 강합니다.
+    </div>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">연습</h3>
+
+      <div class="jp-question">1. 그는 게임만 하고 있습니다.</div>
+      <div class="jp-question">2. 최근 배달음식만 먹고 있습니다.</div>
+      <div class="jp-question">3. 불평만 하지 마세요.</div>
+      <div class="jp-question">4. 휴일에는 잠만 잡니다.</div>
+      <div class="jp-question">5. 스마트폰만 계속 보고 있습니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+
+      <p>1. 彼はゲームをしてばかりいます。</p>
+      <p>2. 最近、デリバリーの料理を食べてばかりいます。</p>
+      <p>3. 文句を言ってばかりいないでください。</p>
+      <p>4. 休みの日は寝てばかりいます。</p>
+      <p>5. スマホを見てばかりいます。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">비교</span>
+    <h2 class="jp-section-title">～て以来・～てきた・～ていく 비교</h2>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>표현</th>
+            <th>핵심</th>
+            <th>시간 방향</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>～て以来</td>
+            <td>특정 사건 이후 계속</td>
+            <td>과거의 시작점 → 현재</td>
+          </tr>
+          <tr>
+            <td>～てきた</td>
+            <td>지금까지 해왔다</td>
+            <td>과거 → 현재</td>
+          </tr>
+          <tr>
+            <td>～ていく</td>
+            <td>앞으로 해나간다</td>
+            <td>현재 → 미래</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="jp-example-list">
+
+      <div class="jp-example">
+        <span class="jp-example-label">～て以来</span>
+        <p class="jp-sentence">
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>し
+          <ruby>始<rt>はじ</rt></ruby>めて<ruby>以来<rt>いらい</rt></ruby>、
+          <ruby>日本<rt>にほん</rt></ruby>の
+          <ruby>文化<rt>ぶんか</rt></ruby>にも
+          <ruby>興味<rt>きょうみ</rt></ruby>を
+          <ruby>持<rt>も</rt></ruby>つようになりました。
+        </p>
+        <p class="jp-hiragana">
+          にほんごを べんきょうしはじめて いらい、
+          にほんの ぶんかにも きょうみを もつように なりました。
+        </p>
+        <p class="jp-meaning">
+          일본어 공부를 시작한 이후 일본 문화에도 관심을 가지게 되었습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">～てきた</span>
+        <p class="jp-sentence">
+          <ruby>三年間<rt>さんねんかん</rt></ruby>
+          <ruby>日本語<rt>にほんご</rt></ruby>を
+          <ruby>勉強<rt>べんきょう</rt></ruby>してきました。
+        </p>
+        <p class="jp-hiragana">
+          さんねんかん にほんごを べんきょうして きました。
+        </p>
+        <p class="jp-meaning">
+          3년 동안 일본어를 공부해왔습니다.
+        </p>
+      </div>
+
+      <div class="jp-example">
+        <span class="jp-example-label">～ていく</span>
+        <p class="jp-sentence">
+          これからも
+          <ruby>勉強<rt>べんきょう</rt></ruby>していきたいです。
+        </p>
+        <p class="jp-hiragana">
+          これからも べんきょうして いきたいです。
+        </p>
+        <p class="jp-meaning">
+          앞으로도 계속 공부해나가고 싶습니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">종합 복습</span>
+    <h2 class="jp-section-title">지금까지 배운 て형 표현</h2>
+
+    <div class="jp-table-wrap">
+      <table class="jp-table">
+        <thead>
+          <tr>
+            <th>표현</th>
+            <th>의미</th>
+            <th>예시</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>～てください</td>
+            <td>~해 주세요</td>
+            <td>見てください。</td>
+          </tr>
+
+          <tr>
+            <td>～ている</td>
+            <td>~하고 있다 / 상태가 지속되다</td>
+            <td>勉強しています。</td>
+          </tr>
+
+          <tr>
+            <td>～てもいい</td>
+            <td>~해도 된다</td>
+            <td>座ってもいいです。</td>
+          </tr>
+
+          <tr>
+            <td>～てはいけない</td>
+            <td>~하면 안 된다</td>
+            <td>入ってはいけません。</td>
+          </tr>
+
+          <tr>
+            <td>～てあげる</td>
+            <td>상대에게 ~해주다</td>
+            <td>教えてあげます。</td>
+          </tr>
+
+          <tr>
+            <td>～てくれる</td>
+            <td>상대가 나에게 ~해주다</td>
+            <td>教えてくれました。</td>
+          </tr>
+
+          <tr>
+            <td>～てもらう</td>
+            <td>상대에게 ~해 받다</td>
+            <td>教えてもらいました。</td>
+          </tr>
+
+          <tr>
+            <td>～てみる</td>
+            <td>한번 해보다</td>
+            <td>食べてみます。</td>
+          </tr>
+
+          <tr>
+            <td>～ておく</td>
+            <td>미리 해두다</td>
+            <td>予約しておきます。</td>
+          </tr>
+
+          <tr>
+            <td>～てしまう</td>
+            <td>해버리다 / 하고 말다</td>
+            <td>忘れてしまいました。</td>
+          </tr>
+
+          <tr>
+            <td>～てある</td>
+            <td>해놓은 상태다</td>
+            <td>予約してあります。</td>
+          </tr>
+
+          <tr>
+            <td>～てくる</td>
+            <td>해오다 / 변화가 나타나다</td>
+            <td>暑くなってきました。</td>
+          </tr>
+
+          <tr>
+            <td>～ていく</td>
+            <td>앞으로 해나가다</td>
+            <td>勉強していきます。</td>
+          </tr>
+
+          <tr>
+            <td>～て初めて</td>
+            <td>하고 나서야 비로소</td>
+            <td>働いて初めて分かりました。</td>
+          </tr>
+
+          <tr>
+            <td>～て以来</td>
+            <td>한 이후로 계속</td>
+            <td>来日して以来、住んでいます。</td>
+          </tr>
+
+          <tr>
+            <td>～てばかりいる</td>
+            <td>계속 ~하기만 하다</td>
+            <td>ゲームをしてばかりいます。</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">종합 문제 1</span>
+    <h2 class="jp-section-title">알맞은 문법 고르기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">상황에 가장 알맞은 표현을 넣어보세요</h3>
+
+      <div class="jp-question">
+        1. 이 요리를 한번 먹어보겠습니다.<br>
+        この料理を食べて（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        2. 여행 전에 호텔을 예약해두겠습니다.<br>
+        旅行の前にホテルを予約して（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        3. 지갑을 그만 잊어버렸습니다.<br>
+        財布を忘れて（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        4. 친구가 제 숙제를 도와주었습니다.<br>
+        友達が宿題を手伝って（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        5. 친구에게 사진을 찍어 달라고 했습니다.<br>
+        友達に写真を撮って（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        6. 지금까지 일본어를 공부해왔습니다.<br>
+        今まで日本語を勉強して（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        7. 앞으로 일본어를 계속 공부해나가겠습니다.<br>
+        これからも日本語を勉強して（　　　　）。
+      </div>
+
+      <div class="jp-question">
+        8. 일본에 살아보고 나서야 차이를 알았습니다.<br>
+        日本に住んで（　　　　）、違いが分かりました。
+      </div>
+
+      <div class="jp-question">
+        9. 이 회사에 들어온 이후로 계속 바쁩니다.<br>
+        この会社に入って（　　　　）、ずっと忙しいです。
+      </div>
+
+      <div class="jp-question">
+        10. 그는 게임만 하고 있습니다.<br>
+        彼はゲームをして（　　　　）。
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">정답</h3>
+
+      <p>1. みます</p>
+      <p>2. おきます</p>
+      <p>3. しまいました</p>
+      <p>4. くれました</p>
+      <p>5. もらいました</p>
+      <p>6. きました</p>
+      <p>7. いきます</p>
+      <p>8. 初めて</p>
+      <p>9. 以来</p>
+      <p>10. ばかりいます</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">종합 문제 2</span>
+    <h2 class="jp-section-title">한국어 → 일본어</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">직접 일본어로 말해보세요</h3>
+
+      <div class="jp-question">1. 이 앱을 한번 사용해보겠습니다.</div>
+      <div class="jp-question">2. 내일 사용할 자료를 미리 준비해두겠습니다.</div>
+      <div class="jp-question">3. 중요한 파일을 지워버렸습니다.</div>
+      <div class="jp-question">4. 친구가 길을 알려주었습니다.</div>
+      <div class="jp-question">5. 선생님께 작문을 고쳐 받았습니다.</div>
+      <div class="jp-question">6. 저는 동생에게 일본어를 가르쳐주었습니다.</div>
+      <div class="jp-question">7. 최근 일본어가 조금씩 이해되기 시작했습니다.</div>
+      <div class="jp-question">8. 앞으로 경험을 더 쌓아가고 싶습니다.</div>
+      <div class="jp-question">9. 혼자 살아보고 나서야 가족의 고마움을 알았습니다.</div>
+      <div class="jp-question">10. 일본을 여행한 이후로 일본 문화에 관심이 있습니다.</div>
+      <div class="jp-question">11. 최근 스마트폰만 보고 있습니다.</div>
+      <div class="jp-question">12. 이곳에서 사진을 찍으면 안 됩니다.</div>
+      <div class="jp-question">13. 여기에 앉아도 될까요?</div>
+      <div class="jp-question">14. 조금 기다려 주세요.</div>
+      <div class="jp-question">15. 호텔은 이미 예약해둔 상태입니다.</div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">예시 정답</h3>
+
+      <p>1. このアプリを使ってみます。</p>
+      <p>2. 明日使う資料を準備しておきます。</p>
+      <p>3. 大事なファイルを消してしまいました。</p>
+      <p>4. 友達が道を教えてくれました。</p>
+      <p>5. 先生に作文を直してもらいました。</p>
+      <p>6. 弟に日本語を教えてあげました。</p>
+      <p>7. 最近、日本語が少しずつ分かってきました。</p>
+      <p>8. これからもっと経験を積んでいきたいです。</p>
+      <p>9. 一人暮らしをして初めて、家族のありがたさが分かりました。</p>
+      <p>10. 日本を旅行して以来、日本文化に興味があります。</p>
+      <p>11. 最近、スマホを見てばかりいます。</p>
+      <p>12. ここで写真を撮ってはいけません。</p>
+      <p>13. ここに座ってもいいですか？</p>
+      <p>14. 少し待ってください。</p>
+      <p>15. ホテルはもう予約してあります。</p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">종합 문제 3</span>
+    <h2 class="jp-section-title">비슷한 표현 구별하기</h2>
+
+    <div class="jp-practice">
+      <h3 class="jp-practice-title">어떤 차이가 있는지 생각해보세요</h3>
+
+      <div class="jp-question">
+        ① ホテルを予約しておきました。<br>
+        ② ホテルは予約してあります。
+      </div>
+
+      <div class="jp-question">
+        ① 友達が写真を撮ってくれました。<br>
+        ② 友達に写真を撮ってもらいました。
+      </div>
+
+      <div class="jp-question">
+        ① 日本語を勉強してきました。<br>
+        ② 日本語を勉強していきます。
+      </div>
+
+      <div class="jp-question">
+        ① 日本に来てから、日本語を勉強しました。<br>
+        ② 日本に来て以来、日本語を勉強しています。
+      </div>
+
+      <div class="jp-question">
+        ① スマホをよく見ます。<br>
+        ② スマホを見てばかりいます。
+      </div>
+    </div>
+
+    <div class="jp-answer">
+      <h3 class="jp-answer-title">해설</h3>
+
+      <p>
+        1. ～ておく는 미리 하는 행동에 초점,
+        ～てある는 그 행동의 결과가 현재 남아 있다는 점에 초점이 있습니다.
+      </p>
+
+      <p>
+        2. ～てくれる는 “친구가 해주었다”라는 행동자의 관점,
+        ～てもらう는 “내가 친구에게 해 받았다”라는 받는 사람의 관점입니다.
+      </p>
+
+      <p>
+        3. ～てきた는 과거부터 현재까지,
+        ～ていく는 현재부터 미래까지의 방향입니다.
+      </p>
+
+      <p>
+        4. ～てから는 단순한 시간 순서도 표현할 수 있지만,
+        ～て以来는 한 사건 이후 현재까지 이어지는 상태나 행동을 강조합니다.
+      </p>
+
+      <p>
+        5. よく見る는 단순히 “자주 본다”지만,
+        見てばかりいる는 “그것만 계속 보고 있다”라는 느낌이 강합니다.
+      </p>
+    </div>
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">말하기</span>
+    <h2 class="jp-section-title">N3 실전 회화 연습</h2>
+
+    <p class="jp-section-desc">
+      정답을 외우는 문제가 아닙니다.
+      배운 문법을 사용해서 자신의 경험과 생각을 일본어로 설명해보세요.
+    </p>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">① ～て初めて</h3>
+
+      <p class="jp-sentence">
+        <ruby>何<rt>なに</rt></ruby>かを
+        <ruby>経験<rt>けいけん</rt></ruby>して
+        <ruby>初<rt>はじ</rt></ruby>めて
+        <ruby>分<rt>わ</rt></ruby>かったことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        なにかを けいけんして はじめて
+        わかったことは ありますか？
+      </p>
+
+      <p>
+        어떤 일을 경험하고 나서야 비로소 알게 된 것이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">② ～て以来</h3>
+
+      <p class="jp-sentence">
+        <ruby>何<rt>なに</rt></ruby>かを
+        <ruby>始<rt>はじ</rt></ruby>めて<ruby>以来<rt>いらい</rt></ruby>、
+        <ruby>生活<rt>せいかつ</rt></ruby>が
+        <ruby>変<rt>か</rt></ruby>わったことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        なにかを はじめて いらい、
+        せいかつが かわったことは ありますか？
+      </p>
+
+      <p>
+        어떤 것을 시작한 이후로 생활이 변한 적이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">③ ～てきた</h3>
+
+      <p class="jp-sentence">
+        <ruby>今<rt>いま</rt></ruby>まで
+        <ruby>長<rt>なが</rt></ruby>く
+        <ruby>続<rt>つづ</rt></ruby>けてきたことは
+        <ruby>何<rt>なん</rt></ruby>ですか？
+      </p>
+
+      <p class="jp-hiragana">
+        いままで ながく つづけて きたことは
+        なんですか？
+      </p>
+
+      <p>
+        지금까지 오랫동안 계속해온 것은 무엇인가요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">④ ～ていく</h3>
+
+      <p class="jp-sentence">
+        これから
+        <ruby>何<rt>なに</rt></ruby>を
+        <ruby>続<rt>つづ</rt></ruby>けていきたいですか？
+      </p>
+
+      <p class="jp-hiragana">
+        これから なにを つづけて いきたいですか？
+      </p>
+
+      <p>
+        앞으로 무엇을 계속해 나가고 싶나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑤ ～てばかりいる</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        「～てばかりいる」と
+        <ruby>思<rt>おも</rt></ruby>うことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、
+        「～てばかり いる」と おもうことは ありますか？
+      </p>
+
+      <p>
+        최근 “이것만 계속 하고 있네”라고 느끼는 일이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑥ ～てみる</h3>
+
+      <p class="jp-sentence">
+        これから
+        <ruby>新<rt>あたら</rt></ruby>しく
+        やってみたいことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        これから あたらしく
+        やって みたいことは ありますか？
+      </p>
+
+      <p>
+        앞으로 새롭게 한번 해보고 싶은 것은 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑦ ～てしまう</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>失敗<rt>しっぱい</rt></ruby>して
+        「～てしまった」と
+        <ruby>思<rt>おも</rt></ruby>ったことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、しっぱいして
+        「～てしまった」と おもったことは ありますか？
+      </p>
+
+      <p>
+        최근 실수해서 “~해버렸다”라고 생각했던 일이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">⑧ ～てもらう / ～てくれる</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>誰<rt>だれ</rt></ruby>かに
+        <ruby>助<rt>たす</rt></ruby>けてもらったことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、だれかに
+        たすけてもらったことは ありますか？
+      </p>
+
+      <p>
+        최근 누군가에게 도움을 받은 일이 있나요?
+      </p>
+    </div>
+
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">최종 도전</span>
+    <h2 class="jp-section-title">한 답변에 문법 2개 이상 사용하기</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">실제 회화에서는 문법을 하나씩 따로 쓰지 않습니다</h3>
+      <p>
+        아래 질문에서는 가능하면 오늘 배운 표현을
+        <strong>2개 이상 연결해서</strong> 답해보세요.
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">질문 1</h3>
+
+      <p class="jp-sentence">
+        <ruby>日本語<rt>にほんご</rt></ruby>を
+        <ruby>勉強<rt>べんきょう</rt></ruby>し
+        <ruby>始<rt>はじ</rt></ruby>めてから、
+        どんな<ruby>変化<rt>へんか</rt></ruby>がありましたか？
+      </p>
+
+      <p class="jp-hiragana">
+        にほんごを べんきょうしはじめてから、
+        どんな へんかが ありましたか？
+      </p>
+
+      <p>
+        일본어 공부를 시작한 뒤 어떤 변화가 있었나요?
+      </p>
+    </div>
+
+    <div class="jp-example">
+      <span class="jp-example-label">답변 예시</span>
+
+      <p class="jp-sentence">
+        <ruby>日本語<rt>にほんご</rt></ruby>を
+        <ruby>勉強<rt>べんきょう</rt></ruby>し
+        <ruby>始<rt>はじ</rt></ruby>めて<ruby>以来<rt>いらい</rt></ruby>、
+        <ruby>日本<rt>にほん</rt></ruby>の
+        <ruby>文化<rt>ぶんか</rt></ruby>にも
+        <ruby>興味<rt>きょうみ</rt></ruby>を
+        <ruby>持<rt>も</rt></ruby>つようになってきました。
+        これからも
+        <ruby>勉強<rt>べんきょう</rt></ruby>していきたいです。
+      </p>
+
+      <p class="jp-hiragana">
+        にほんごを べんきょうしはじめて いらい、
+        にほんの ぶんかにも きょうみを
+        もつように なって きました。
+        これからも べんきょうして いきたいです。
+      </p>
+
+      <p class="jp-meaning">
+        일본어 공부를 시작한 이후 일본 문화에도 점점 관심을 가지게 되었습니다.
+        앞으로도 계속 공부해 나가고 싶습니다.
+      </p>
+
+      <p class="jp-note">
+        ～て以来 + ～てくる + ～ていく를 한 답변에 사용했습니다.
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">질문 2</h3>
+
+      <p class="jp-sentence">
+        <ruby>最近<rt>さいきん</rt></ruby>、
+        <ruby>新<rt>あたら</rt></ruby>しく
+        <ruby>始<rt>はじ</rt></ruby>めたことはありますか？
+        これからどうしていきたいですか？
+      </p>
+
+      <p class="jp-hiragana">
+        さいきん、あたらしく はじめたことは ありますか？
+        これから どうして いきたいですか？
+      </p>
+
+      <p>
+        최근 새롭게 시작한 것이 있나요?
+        앞으로 어떻게 해나가고 싶나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">질문 3</h3>
+
+      <p class="jp-sentence">
+        <ruby>外国<rt>がいこく</rt></ruby>に
+        <ruby>行<rt>い</rt></ruby>って
+        <ruby>初<rt>はじ</rt></ruby>めて
+        <ruby>分<rt>わ</rt></ruby>かったことはありますか？
+      </p>
+
+      <p class="jp-hiragana">
+        がいこくに いって はじめて
+        わかったことは ありますか？
+      </p>
+
+      <p>
+        외국에 가보고 나서야 비로소 알게 된 것이 있나요?
+      </p>
+    </div>
+
+    <div class="jp-speaking">
+      <h3 class="jp-speaking-title">질문 4</h3>
+
+      <p class="jp-sentence">
+        <ruby>今<rt>いま</rt></ruby>まで
+        <ruby>努力<rt>どりょく</rt></ruby>してきたことと、
+        これから<ruby>努力<rt>どりょく</rt></ruby>していきたいことを
+        <ruby>話<rt>はな</rt></ruby>してください。
+      </p>
+
+      <p class="jp-hiragana">
+        いままで どりょくして きたことと、
+        これから どりょくして いきたいことを
+        はなして ください。
+      </p>
+
+      <p>
+        지금까지 노력해온 것과 앞으로 노력해 나가고 싶은 것을 말해보세요.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="jp-section">
+    <span class="jp-level n3">수업 종료</span>
+    <h2 class="jp-section-title">て형: 기초에서 N3까지</h2>
+
+    <div class="jp-concept">
+      <h3 class="jp-concept-title">처음부터 전부 외울 필요는 없습니다</h3>
+
+      <p>
+        て형의 변환 규칙을 이해한 뒤,
+        실제 문장에서 여러 번 사용하면서 각각의 표현에 익숙해지는 것이 중요합니다.
+      </p>
+
+      <p>
+        이미 알고 있는 표현은 빠르게 넘어가고,
+        헷갈리는 표현이 있다면 해당 부분의 예문을 여러 개 직접 만들어보세요.
+      </p>
+    </div>
+
+    <div class="jp-flow">
+      <div class="jp-flow-item">て형 변환</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">기본 활용</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">授受表現</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">N4 응용</div>
+      <div class="jp-flow-arrow">→</div>
+      <div class="jp-flow-item">N3 응용</div>
+    </div>
+
+    <div class="jp-skip">
+      <strong>완료:</strong>
+      て형 변환부터
+      ～てあげる・～てくれる・～てもらう,
+      ～てみる・～ておく・～てしまう・～てある,
+      ～てくる・～ていく,
+      ～て初めて・～て以来・～てばかりいる까지
+      전체 과정이 끝났습니다.
+    </div>
+  </section>
+
+</div>
