@@ -1,0 +1,3992 @@
+N3 문법
+<style>
+  .n3-wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 20px 16px 48px;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Noto Sans KR",
+      "Noto Sans JP",
+      sans-serif;
+    line-height: 1.75;
+    color: #202124;
+    background: #ffffff;
+    word-break: keep-all;
+  }
+
+  .n3-wrap * {
+    box-sizing: border-box;
+  }
+
+  .n3-title {
+    margin: 8px 0 10px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+  }
+
+  .n3-subtitle {
+    margin: 0 0 28px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #5f6368;
+  }
+
+  .n3-section {
+    margin-top: 38px;
+  }
+
+  .n3-section-title {
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #202124;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  .n3-subhead {
+    margin: 26px 0 12px;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.45;
+  }
+
+  .n3-minor-head {
+    margin: 20px 0 8px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .n3-lead {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .n3-box {
+    margin: 18px 0;
+    padding: 18px;
+    border: 1px solid #dadce0;
+    border-radius: 14px;
+    background: #fafafa;
+  }
+
+  .n3-point {
+    margin: 20px 0;
+    padding: 18px;
+    border-left: 5px solid #202124;
+    border-radius: 4px 12px 12px 4px;
+    background: #f5f5f5;
+  }
+
+  .n3-important {
+    margin: 20px 0;
+    padding: 18px;
+    border: 2px solid #202124;
+    border-radius: 14px;
+    background: #ffffff;
+  }
+
+  .n3-warning {
+    margin: 20px 0;
+    padding: 16px 18px;
+    border-left: 5px solid #8a6d1d;
+    border-radius: 4px 12px 12px 4px;
+    background: #fffaf0;
+  }
+
+  .n3-note {
+    margin: 18px 0;
+    padding: 15px 17px;
+    border-radius: 12px;
+    background: #f3f6f8;
+    color: #3c4043;
+  }
+
+  .n3-formula {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #202124;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.65;
+  }
+
+  .n3-formula .soft {
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  .n3-keyword {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: #eeeeee;
+    font-weight: 700;
+  }
+
+  .n3-highlight {
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  .n3-jp {
+    font-size: 19px;
+    line-height: 2;
+    font-weight: 650;
+  }
+
+  .n3-hira {
+    margin-top: -3px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #777;
+  }
+
+  .n3-ko {
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #333;
+  }
+
+  .n3-explain {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #d6d6d6;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+  }
+
+  ruby {
+    ruby-position: over;
+  }
+
+  rt {
+    font-size: 0.55em;
+    font-weight: 500;
+    color: #666;
+  }
+
+  .n3-example {
+    margin: 14px 0;
+    padding: 15px 17px;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .n3-example + .n3-example {
+    margin-top: 10px;
+  }
+
+  .n3-example-label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    color: #666;
+  }
+
+  .n3-breakdown {
+    margin: 16px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .n3-breakdown li {
+    margin: 9px 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #f7f7f7;
+  }
+
+  .n3-breakdown strong {
+    font-weight: 800;
+  }
+
+  .n3-arrow {
+    padding: 0 5px;
+    font-weight: 800;
+  }
+
+  .n3-compare {
+    width: 100%;
+    margin: 18px 0;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .n3-compare th,
+  .n3-compare td {
+    padding: 12px 10px;
+    border: 1px solid #d9d9d9;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .n3-compare th {
+    background: #f3f3f3;
+    font-weight: 800;
+  }
+
+  .n3-compare td:first-child {
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .n3-vs {
+    margin: 22px 0;
+    border: 1px solid #dcdcdc;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .n3-vs-title {
+    padding: 11px 15px;
+    background: #ededed;
+    font-weight: 800;
+  }
+
+  .n3-vs-body {
+    padding: 16px;
+  }
+
+  .n3-vs-item {
+    padding: 12px 0;
+  }
+
+  .n3-vs-item + .n3-vs-item {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .n3-flow {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f5f5f5;
+  }
+
+  .n3-flow-step {
+    position: relative;
+    margin: 0;
+    padding: 10px 10px 10px 38px;
+  }
+
+  .n3-flow-step::before {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 17px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #202124;
+  }
+
+  .n3-flow-step + .n3-flow-step::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: -10px;
+    width: 1px;
+    height: 21px;
+    background: #b5b5b5;
+  }
+
+  .n3-question {
+    margin: 22px 0;
+    padding: 18px;
+    border: 1px solid #cfcfcf;
+    border-radius: 14px;
+    background: #ffffff;
+  }
+
+  .n3-question-number {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #666;
+  }
+
+  .n3-question-text {
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 700;
+  }
+
+  .n3-options {
+    margin: 0;
+    padding-left: 24px;
+  }
+
+  .n3-options li {
+    margin: 8px 0;
+    padding-left: 3px;
+  }
+
+  .n3-answer {
+    margin-top: 14px;
+    padding: 14px 15px;
+    border-radius: 10px;
+    background: #f3f3f3;
+  }
+
+  .n3-answer-title {
+    margin-bottom: 5px;
+    font-weight: 800;
+  }
+
+  .n3-wrong {
+    margin-top: 7px;
+    color: #555;
+  }
+
+  .n3-speaking {
+    margin: 20px 0;
+    padding: 18px;
+    border: 2px dashed #aaa;
+    border-radius: 14px;
+    background: #fcfcfc;
+  }
+
+  .n3-speaking-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 800;
+  }
+
+  .n3-speaking ul {
+    margin: 8px 0 0;
+    padding-left: 22px;
+  }
+
+  .n3-speaking li {
+    margin: 8px 0;
+  }
+
+  .n3-practice {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+  }
+
+  .n3-blank {
+    display: inline-block;
+    min-width: 110px;
+    margin: 0 3px;
+    border-bottom: 2px solid #555;
+  }
+
+  .n3-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+  }
+
+  .n3-chip {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #cfcfcf;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .n3-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .n3-summary-card {
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .n3-summary-card strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+
+  .n3-divider {
+    height: 1px;
+    margin: 34px 0;
+    border: 0;
+    background: #dadce0;
+  }
+
+  .n3-small {
+    font-size: 13px;
+    color: #6a6a6a;
+  }
+
+  .n3-center {
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .n3-wrap {
+      padding: 15px 12px 40px;
+    }
+
+    .n3-title {
+      font-size: 26px;
+    }
+
+    .n3-section-title {
+      font-size: 21px;
+    }
+
+    .n3-subhead {
+      font-size: 18px;
+    }
+
+    .n3-jp {
+      font-size: 18px;
+    }
+
+    .n3-summary-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .n3-compare {
+      font-size: 13px;
+    }
+
+    .n3-compare th,
+    .n3-compare td {
+      padding: 9px 7px;
+    }
+
+    .n3-box,
+    .n3-point,
+    .n3-important,
+    .n3-question,
+    .n3-speaking,
+    .n3-practice {
+      padding: 15px;
+    }
+  }
+</style>
+<div class="n3-wrap">
+
+  <div class="n3-title">JLPT N3 문법 + 회화<br>결정과 변화의 표현</div>
+
+  <div class="n3-subtitle">
+    이번 학습에서는 문법 표현을 단순히 “뜻”으로 외우지 않습니다.
+    <br>
+    <strong>문장을 구성하는 요소가 왜 그 의미를 만드는지</strong>부터 이해하고,
+    비슷한 표현과의 뉘앙스 차이를 비교한 뒤,
+    충분한 예문과 JLPT N3형 문제, 실제 회화 연습까지 연결합니다.
+  </div>
+
+  <div class="n3-important">
+    <strong>이번 핵심 문법</strong>
+    <div class="n3-chip-row">
+      <span class="n3-chip">～ことにする</span>
+      <span class="n3-chip">～ことになる</span>
+      <span class="n3-chip">～ようにする</span>
+      <span class="n3-chip">～ようになる</span>
+    </div>
+    네 표현은 모두 한국어로 번역하면 비슷해 보일 수 있지만,
+    <strong>결정의 주체</strong>, <strong>의식적인 노력</strong>,
+    <strong>자연스러운 변화</strong>라는 관점에서 의미가 분명하게 나뉩니다.
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 1. ～ことにする
+    </div>
+
+    <p class="n3-lead">
+      먼저 가장 중요한 표현인
+      <span class="n3-highlight">～ことにする</span>부터 살펴봅니다.
+    </p>
+
+    <div class="n3-formula">
+      동사 사전형 / ない형 + ことにする
+      <br>
+      <span class="soft">= ~하기로 하다 / ~하지 않기로 하다</span>
+    </div>
+
+    <div class="n3-subhead">
+      ① 그냥 통째로 외우지 말고 구조부터 보기
+    </div>
+
+    <div class="n3-flow">
+
+      <div class="n3-flow-step">
+        <strong>食べる</strong>
+        <br>
+        먹다
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>食べること</strong>
+        <br>
+        먹는 것 / 먹는다는 일
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>食べることにする</strong>
+        <br>
+        먹는 것을 하나의 선택으로 정하다
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>食べることにした</strong>
+        <br>
+        먹기로 결정했다
+      </div>
+
+    </div>
+
+    <div class="n3-subhead">
+      ② こと는 왜 들어갈까?
+    </div>
+
+    <div class="n3-box">
+      <strong>こと</strong>는 앞의 행동이나 내용을 하나의
+      <strong>“일 / 사항 / 내용”</strong>처럼 만들어 줍니다.
+      <br><br>
+
+      예를 들어,
+
+      <div class="n3-example">
+        <div class="n3-jp">
+          日本へ行く
+        </div>
+        <div class="n3-hira">
+          にほんへ いく
+        </div>
+        <div class="n3-ko">
+          일본에 가다
+        </div>
+      </div>
+
+      여기서 <strong>こと</strong>를 붙이면,
+
+      <div class="n3-example">
+        <div class="n3-jp">
+          日本へ行くこと
+        </div>
+        <div class="n3-hira">
+          にほんへ いく こと
+        </div>
+        <div class="n3-ko">
+          일본에 간다는 것 / 일본에 가는 일
+        </div>
+      </div>
+
+      즉, 앞의 동작 전체를 하나의 내용으로 묶어서
+      뒤의 <strong>にする</strong>와 연결할 수 있게 됩니다.
+    </div>
+
+
+    <div class="n3-subhead">
+      ③ にする의 핵심 이미지
+    </div>
+
+    <div class="n3-point">
+      <strong>A にする</strong>
+      <br>
+      → 여러 가능성 중에서 <strong>A를 선택하다 / A로 정하다</strong>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        コーヒーにします。
+      </div>
+      <div class="n3-hira">
+        こーひーに します。
+      </div>
+      <div class="n3-ko">
+        커피로 할게요.
+      </div>
+      <div class="n3-explain">
+        음료 선택지 중에서 “커피”를 선택해서
+        그 상태로 정한다는 느낌입니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        今日の昼ご飯はラーメンにします。
+      </div>
+      <div class="n3-hira">
+        きょうの ひるごはんは らーめんに します。
+      </div>
+      <div class="n3-ko">
+        오늘 점심은 라면으로 할게요.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        会議は午後三時にします。
+      </div>
+      <div class="n3-hira">
+        かいぎは ごご さんじに します。
+      </div>
+      <div class="n3-ko">
+        회의는 오후 3시로 하겠습니다.
+      </div>
+    </div>
+
+    <div class="n3-note">
+      그래서 <strong>ことにする</strong>도 같은 원리입니다.
+      <br><br>
+      <strong>日本へ行くこと</strong>
+      <br>
+      일본에 간다는 일
+      <br><br>
+      +
+      <br><br>
+      <strong>にする</strong>
+      <br>
+      그것으로 정하다
+      <br><br>
+      ↓
+      <br><br>
+      <strong>日本へ行くことにする</strong>
+      <br>
+      일본에 가기로 정하다
+    </div>
+
+
+    <div class="n3-subhead">
+      ④ 왜 「する」에는 주도성이 느껴질까?
+    </div>
+
+    <p class="n3-lead">
+      <strong>する</strong>는 기본적으로 “하다”라는 동사입니다.
+      그래서 <strong>ことにする</strong>는
+      화자가 어떤 선택을 <strong>스스로 정한다</strong>는 느낌이 강합니다.
+    </p>
+
+    <div class="n3-important">
+      <strong>ことにする의 핵심</strong>
+      <br><br>
+      외부 상황이 저절로 그렇게 된 것이 아니라,
+      <strong>화자 또는 행동의 주체가 의식적으로 선택한다.</strong>
+    </div>
+
+
+    <div class="n3-subhead">
+      ⑤ 기본 예문
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 1</div>
+      <div class="n3-jp">
+        毎日、日本語を勉強することにしました。
+      </div>
+      <div class="n3-hira">
+        まいにち、にほんごを べんきょうする ことに しました。
+      </div>
+      <div class="n3-ko">
+        매일 일본어를 공부하기로 했습니다.
+      </div>
+      <div class="n3-explain">
+        내가 “매일 공부하겠다”라고 하나의 결정을 내린 상황입니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 2</div>
+      <div class="n3-jp">
+        来年、日本に留学することにしました。
+      </div>
+      <div class="n3-hira">
+        らいねん、にほんに りゅうがくする ことに しました。
+      </div>
+      <div class="n3-ko">
+        내년에 일본으로 유학 가기로 했습니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 3</div>
+      <div class="n3-jp">
+        今日はタクシーで帰ることにします。
+      </div>
+      <div class="n3-hira">
+        きょうは たくしーで かえる ことに します。
+      </div>
+      <div class="n3-ko">
+        오늘은 택시를 타고 돌아가기로 할게요.
+      </div>
+      <div class="n3-explain">
+        지금 이 순간 선택을 내리는 느낌도 가능합니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 4</div>
+      <div class="n3-jp">
+        今月はお金をあまり使わないことにしました。
+      </div>
+      <div class="n3-hira">
+        こんげつは おかねを あまり つかわない ことに しました。
+      </div>
+      <div class="n3-ko">
+        이번 달에는 돈을 많이 쓰지 않기로 했습니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 5</div>
+      <div class="n3-jp">
+        夜十二時を過ぎたら、スマホを見ないことにしています。
+      </div>
+      <div class="n3-hira">
+        よる じゅうにじを すぎたら、すまほを みない ことに しています。
+      </div>
+      <div class="n3-ko">
+        밤 12시가 지나면 스마트폰을 보지 않기로 하고 있습니다.
+      </div>
+      <div class="n3-explain">
+        <strong>ことにしている</strong>는 한 번 결정한 것을
+        현재도 규칙이나 방침으로 유지하고 있다는 느낌입니다.
+      </div>
+    </div>
+
+
+    <div class="n3-subhead">
+      ⑥ ことにする와 ことにしている
+    </div>
+
+    <table class="n3-compare">
+      <tr>
+        <th>표현</th>
+        <th>핵심</th>
+        <th>느낌</th>
+      </tr>
+      <tr>
+        <td>ことにする</td>
+        <td>결정하다</td>
+        <td>지금 선택하거나 앞으로 그렇게 하기로 함</td>
+      </tr>
+      <tr>
+        <td>ことにした</td>
+        <td>결정했다</td>
+        <td>이미 결정이 끝남</td>
+      </tr>
+      <tr>
+        <td>ことにしている</td>
+        <td>그렇게 하기로 해 두고 있다</td>
+        <td>자기 규칙이나 방침으로 계속 유지함</td>
+      </tr>
+    </table>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        毎朝七時に起きることにしました。
+      </div>
+      <div class="n3-hira">
+        まいあさ しちじに おきる ことに しました。
+      </div>
+      <div class="n3-ko">
+        매일 아침 7시에 일어나기로 했습니다.
+      </div>
+      <div class="n3-explain">
+        “이제부터 그렇게 하겠다”라는 결정을 내린 순간에 초점.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        毎朝七時に起きることにしています。
+      </div>
+      <div class="n3-hira">
+        まいあさ しちじに おきる ことに しています。
+      </div>
+      <div class="n3-ko">
+        매일 아침 7시에 일어나기로 하고 있습니다.
+      </div>
+      <div class="n3-explain">
+        이미 정해 놓은 자신의 생활 규칙을 현재도 유지한다는 느낌.
+      </div>
+    </div>
+
+
+    <div class="n3-speaking">
+      <div class="n3-speaking-title">
+        💬 말해보기
+      </div>
+
+      다음 질문에 <strong>～ことにしました</strong>를 사용해서 대답해 보세요.
+
+      <ul>
+        <li>最近、新しく始めることにしたことはありますか。</li>
+        <li>今年、やめることにしたことはありますか。</li>
+        <li>健康のために何かすることにしましたか。</li>
+        <li>日本語の勉強について何か決めたことはありますか。</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 2. ～ことになる
+    </div>
+
+    <div class="n3-formula">
+      동사 사전형 / ない형 + ことになる
+      <br>
+      <span class="soft">= ~하게 되다 / ~하기로 정해지다</span>
+    </div>
+
+    <div class="n3-subhead">
+      ① 이번에도 구조부터 보기
+    </div>
+
+    <div class="n3-flow">
+
+      <div class="n3-flow-step">
+        <strong>大阪で働く</strong>
+        <br>
+        오사카에서 일하다
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>大阪で働くこと</strong>
+        <br>
+        오사카에서 일한다는 일
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>大阪で働くことになる</strong>
+        <br>
+        오사카에서 일한다는 상태로 되다
+      </div>
+
+      <div class="n3-flow-step">
+        자연스러운 한국어:
+        <strong>오사카에서 일하게 되다</strong>
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      ② に + なる의 원리
+    </div>
+
+    <p class="n3-lead">
+      여기서 중요한 것은
+      <strong>なる가 수동태라는 뜻은 아니라는 것</strong>입니다.
+      <br>
+      <strong>なる</strong>는 “되다 / 어떤 상태로 변화하다”라는
+      <strong>자동사</strong>입니다.
+    </p>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>医者<rt>いしゃ</rt></ruby>になる。
+      </div>
+      <div class="n3-hira">
+        いしゃに なる。
+      </div>
+      <div class="n3-ko">
+        의사가 되다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>静<rt>しず</rt></ruby>かになる。
+      </div>
+      <div class="n3-hira">
+        しずかに なる。
+      </div>
+      <div class="n3-ko">
+        조용해지다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>元気<rt>げんき</rt></ruby>になる。
+      </div>
+      <div class="n3-hira">
+        げんきに なる。
+      </div>
+      <div class="n3-ko">
+        건강해지다 / 기운이 나다.
+      </div>
+    </div>
+
+    <div class="n3-point">
+      <strong>A に なる</strong>
+      <br>
+      → A라는 상태로 변화하다
+      <br><br>
+
+      따라서
+      <br>
+      <strong>日本へ行くこと + に + なる</strong>
+      <br>
+      → 일본에 간다는 일이 성립한 상태가 되다
+      <br>
+      → <strong>일본에 가게 되다</strong>
+    </div>
+
+
+    <div class="n3-subhead">
+      ③ 그런데 왜 수동적인 느낌이 날까?
+    </div>
+
+    <p class="n3-lead">
+      <strong>ことになる</strong> 자체가 문법적인 수동태는 아닙니다.
+      하지만 화자가 직접 “내가 이렇게 정했다”라고 말하기보다,
+      <strong>상황이나 외부 결정의 결과로 그렇게 된 사실</strong>에
+      초점을 두는 경우가 많습니다.
+    </p>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        来月から東京で働くことになりました。
+      </div>
+      <div class="n3-hira">
+        らいげつから とうきょうで はたらく ことに なりました。
+      </div>
+      <div class="n3-ko">
+        다음 달부터 도쿄에서 일하게 되었습니다.
+      </div>
+      <div class="n3-explain">
+        회사의 인사이동, 취업 결정 등 여러 사정의 결과로
+        “도쿄에서 일하는 상태가 되었다”는 느낌입니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        来月、結婚することになりました。
+      </div>
+      <div class="n3-hira">
+        らいげつ、けっこんする ことに なりました。
+      </div>
+      <div class="n3-ko">
+        다음 달에 결혼하게 되었습니다.
+      </div>
+      <div class="n3-explain">
+        실제로는 본인도 의사결정에 참여했겠지만,
+        문장에서는 “결혼이라는 결정이 성립했다”는 결과를 전달합니다.
+      </div>
+    </div>
+
+    <div class="n3-warning">
+      <strong>주의</strong><br>
+      「ことになる = 내가 원하지 않았는데 억지로 결정되었다」
+      라고 외우면 안 됩니다.
+      <br><br>
+      핵심은 <strong>싫다 / 강제다</strong>가 아니라,
+      문장 안에서 <strong>개인의 직접적인 결정 행위보다 결정된 결과</strong>를
+      앞세운다는 것입니다.
+    </div>
+
+
+    <div class="n3-subhead">
+      ④ ことにする vs ことになる
+    </div>
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        같은 내용으로 비교하기
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            来年、日本へ留学することにしました。
+          </div>
+          <div class="n3-hira">
+            らいねん、にほんへ りゅうがくする ことに しました。
+          </div>
+          <div class="n3-ko">
+            내년에 일본으로 유학 가기로 했습니다.
+          </div>
+          <div class="n3-explain">
+            <strong>する</strong> → 내가 그런 선택을 했다.
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            来年、日本へ留学することになりました。
+          </div>
+          <div class="n3-hira">
+            らいねん、にほんへ りゅうがくする ことに なりました。
+          </div>
+          <div class="n3-ko">
+            내년에 일본으로 유학 가게 되었습니다.
+          </div>
+          <div class="n3-explain">
+            <strong>なる</strong> → 여러 과정의 결과로 그런 상태가 성립했다.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <table class="n3-compare">
+      <tr>
+        <th></th>
+        <th>ことにする</th>
+        <th>ことになる</th>
+      </tr>
+      <tr>
+        <td>핵심 동사</td>
+        <td>する</td>
+        <td>なる</td>
+      </tr>
+      <tr>
+        <td>기본 이미지</td>
+        <td>그렇게 정한다</td>
+        <td>그렇게 된다</td>
+      </tr>
+      <tr>
+        <td>초점</td>
+        <td>주체의 결정</td>
+        <td>결정된 결과</td>
+      </tr>
+      <tr>
+        <td>한국어</td>
+        <td>~하기로 하다</td>
+        <td>~하게 되다</td>
+      </tr>
+    </table>
+
+
+    <div class="n3-subhead">
+      ⑤ 예문을 더 많이 비교해 보기
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        お酒を飲まないことにしました。
+      </div>
+      <div class="n3-hira">
+        おさけを のまない ことに しました。
+      </div>
+      <div class="n3-ko">
+        술을 마시지 않기로 했습니다.
+      </div>
+      <div class="n3-explain">
+        내가 의식적으로 선택.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        この店では、お酒を出さないことになりました。
+      </div>
+      <div class="n3-hira">
+        この みせでは、おさけを ださない ことに なりました。
+      </div>
+      <div class="n3-ko">
+        이 가게에서는 술을 제공하지 않게 되었습니다.
+      </div>
+      <div class="n3-explain">
+        가게의 정책이나 결정 결과를 전달.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        私は会議に参加することにしました。
+      </div>
+      <div class="n3-hira">
+        わたしは かいぎに さんかする ことに しました。
+      </div>
+      <div class="n3-ko">
+        저는 회의에 참가하기로 했습니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        私が会議に参加することになりました。
+      </div>
+      <div class="n3-hira">
+        わたしが かいぎに さんかする ことに なりました。
+      </div>
+      <div class="n3-ko">
+        제가 회의에 참가하게 되었습니다.
+      </div>
+      <div class="n3-explain">
+        업무 배정, 회사 결정 등으로 역할이 정해진 느낌이 자연스럽습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-speaking">
+      <div class="n3-speaking-title">
+        💬 する / なる를 구분해서 말해보기
+      </div>
+
+      아래 상황을 보고
+      <strong>ことにする</strong> 또는 <strong>ことになる</strong> 중
+      자연스러운 표현을 골라 말해 보세요.
+
+      <ul>
+        <li>내가 스스로 일본어 학원을 다니기로 결정했다.</li>
+        <li>회사 결정으로 다음 달부터 오사카 지점에서 근무한다.</li>
+        <li>내가 주말에는 일을 하지 않기로 정했다.</li>
+        <li>회의 결과 다음 행사는 10월에 열리게 되었다.</li>
+        <li>내가 올해 자동차를 사지 않기로 했다.</li>
+      </ul>
+    </div>
+
+
+    <div class="n3-practice">
+      <strong>간단 확인</strong>
+      <br><br>
+
+      다음 두 문장의 뉘앙스 차이를 설명해 보세요.
+      <br><br>
+
+      <div class="n3-jp">
+        ① 来月、会社を辞めることにしました。
+      </div>
+      <div class="n3-hira">
+        らいげつ、かいしゃを やめる ことに しました。
+      </div>
+
+      <br>
+
+      <div class="n3-jp">
+        ② 来月、会社を辞めることになりました。
+      </div>
+      <div class="n3-hira">
+        らいげつ、かいしゃを やめる ことに なりました。
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="n3-wrap">
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 3. ～ようにする
+    </div>
+
+    <div class="n3-formula">
+      동사 사전형 / ない형 + ようにする
+      <br>
+      <span class="soft">= ~하도록 하다 / ~하려고 노력하다</span>
+    </div>
+
+    <p class="n3-lead">
+      <strong>～ことにする</strong>가
+      “무엇을 하기로 결정한다”는 표현이었다면,
+      <strong>～ようにする</strong>는 그 행동이나 상태가 실제로 이루어지도록
+      <strong>의식적으로 신경 쓰고 노력한다</strong>는 느낌이 강합니다.
+    </p>
+
+
+    <div class="n3-subhead">
+      ① よう는 원래 무슨 뜻일까?
+    </div>
+
+    <div class="n3-box">
+      <strong>よう（様）</strong>는 원래
+      <strong>모양, 상태, 방식</strong>이라는 이미지가 있습니다.
+      <br><br>
+
+      그래서
+      <strong>「～ように」</strong>를 문자 그대로 생각하면
+      <br><br>
+
+      <strong>“그러한 상태가 되도록”</strong>
+      <br><br>
+
+      정도의 이미지로 이해할 수 있습니다.
+    </div>
+
+
+    <div class="n3-flow">
+
+      <div class="n3-flow-step">
+        <strong>忘れない</strong>
+        <br>
+        잊지 않는다
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>忘れないように</strong>
+        <br>
+        잊지 않는 상태가 되도록
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>忘れないようにする</strong>
+        <br>
+        잊지 않도록 의식적으로 하다
+      </div>
+
+      <div class="n3-flow-step">
+        자연스러운 한국어
+        <br>
+        <strong>잊지 않도록 하다 / 잊지 않으려고 신경 쓰다</strong>
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      ② 왜 「ようにする」는 노력의 느낌이 날까?
+    </div>
+
+    <div class="n3-point">
+      <strong>ように</strong>
+      <br>
+      → 그러한 상태가 되도록
+      <br><br>
+
+      <strong>する</strong>
+      <br>
+      → 그렇게 하다
+      <br><br>
+
+      따라서
+      <br>
+      <strong>ようにする</strong>
+      <br>
+      → <strong>어떤 상태가 실현되도록 의식적으로 행동하다</strong>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        毎日、日本語を<ruby>話<rt>はな</rt></ruby>すようにします。
+      </div>
+      <div class="n3-hira">
+        まいにち、にほんごを はなす ように します。
+      </div>
+      <div class="n3-ko">
+        매일 일본어를 말하도록 하겠습니다.
+      </div>
+      <div class="n3-explain">
+        단순히 “말하기로 결정했다”보다,
+        실제로 그렇게 행동하도록 신경 쓰겠다는 느낌입니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>野菜<rt>やさい</rt></ruby>をたくさん<ruby>食<rt>た</rt></ruby>べるようにしています。
+      </div>
+      <div class="n3-hira">
+        やさいを たくさん たべる ように しています。
+      </div>
+      <div class="n3-ko">
+        채소를 많이 먹으려고 하고 있습니다.
+      </div>
+      <div class="n3-explain">
+        현재 계속 실천하고 있는 습관이나 노력에 매우 잘 어울립니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>遅<rt>おそ</rt></ruby>くまで<ruby>起<rt>お</rt></ruby>きていないようにしています。
+      </div>
+      <div class="n3-hira">
+        おそくまで おきていない ように しています。
+      </div>
+      <div class="n3-ko">
+        늦게까지 깨어 있지 않으려고 하고 있습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>仕事中<rt>しごとちゅう</rt></ruby>はスマホを<ruby>見<rt>み</rt></ruby>ないようにしています。
+      </div>
+      <div class="n3-hira">
+        しごとちゅうは すまほを みない ように しています。
+      </div>
+      <div class="n3-ko">
+        일하는 동안에는 스마트폰을 보지 않으려고 하고 있습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-subhead">
+      ③ ～ようにする와 ～ようにしている
+    </div>
+
+    <table class="n3-compare">
+      <tr>
+        <th>표현</th>
+        <th>중심 의미</th>
+        <th>느낌</th>
+      </tr>
+      <tr>
+        <td>ようにする</td>
+        <td>앞으로 그렇게 하도록 함</td>
+        <td>의지 / 노력의 시작</td>
+      </tr>
+      <tr>
+        <td>ようにしている</td>
+        <td>계속 그렇게 하려고 함</td>
+        <td>지속적인 노력 / 생활 습관</td>
+      </tr>
+    </table>
+
+
+    <div class="n-example"></div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        これからは<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>朝<rt>あさ</rt></ruby>ご飯を<ruby>食<rt>た</rt></ruby>べるようにします。
+      </div>
+      <div class="n3-hira">
+        これからは まいあさ あさごはんを たべる ように します。
+      </div>
+      <div class="n3-ko">
+        앞으로는 매일 아침 아침밥을 먹도록 하겠습니다.
+      </div>
+      <div class="n3-explain">
+        지금부터 새로운 행동을 의식적으로 시작하려는 표현.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>最近<rt>さいきん</rt></ruby>は<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>朝<rt>あさ</rt></ruby>ご飯を<ruby>食<rt>た</rt></ruby>べるようにしています。
+      </div>
+      <div class="n3-hira">
+        さいきんは まいあさ あさごはんを たべる ように しています。
+      </div>
+      <div class="n3-ko">
+        요즘은 매일 아침 아침밥을 먹으려고 하고 있습니다.
+      </div>
+      <div class="n3-explain">
+        이미 실천을 시작했고 현재도 계속 노력 중입니다.
+      </div>
+    </div>
+
+
+    <div class="n3-subhead">
+      ④ ことにする와 ようにする의 핵심 차이
+    </div>
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        「매일 일본어를 공부하다」로 비교
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>毎日<rt>まいにち</rt></ruby>、日本語を<ruby>勉強<rt>べんきょう</rt></ruby>することにしました。
+          </div>
+          <div class="n3-hira">
+            まいにち、にほんごを べんきょうする ことに しました。
+          </div>
+          <div class="n3-ko">
+            매일 일본어를 공부하기로 했습니다.
+          </div>
+          <div class="n3-explain">
+            <strong>결정 자체</strong>에 초점.
+            “나는 이렇게 하기로 정했다.”
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>毎日<rt>まいにち</rt></ruby>、日本語を<ruby>勉強<rt>べんきょう</rt></ruby>するようにしています。
+          </div>
+          <div class="n3-hira">
+            まいにち、にほんごを べんきょうする ように しています。
+          </div>
+          <div class="n3-ko">
+            매일 일본어를 공부하려고 하고 있습니다.
+          </div>
+          <div class="n3-explain">
+            <strong>실천과 지속적인 노력</strong>에 초점.
+            “실제로 그렇게 하려고 계속 신경 쓰고 있다.”
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="n3-important">
+      <strong>결정 → 실천</strong>의 흐름으로 생각하면 쉽습니다.
+      <br><br>
+
+      <strong>日本語を毎日勉強することにしました。</strong>
+      <br>
+      매일 일본어를 공부하기로 결정했습니다.
+      <br><br>
+
+      ↓ 그 결정을 실제 생활에서 실천
+      <br><br>
+
+      <strong>日本語を毎日勉強するようにしています。</strong>
+      <br>
+      매일 일본어를 공부하려고 하고 있습니다.
+    </div>
+
+
+    <div class="n3-subhead">
+      ⑤ 같은 상황이어도 초점이 달라진다
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>夜<rt>よる</rt></ruby>はコーヒーを<ruby>飲<rt>の</rt></ruby>まないことにしました。
+      </div>
+      <div class="n3-hira">
+        よるは こーひーを のまない ことに しました。
+      </div>
+      <div class="n3-ko">
+        밤에는 커피를 마시지 않기로 했습니다.
+      </div>
+      <div class="n3-explain">
+        “마시지 않겠다”라는 결정.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>夜<rt>よる</rt></ruby>はコーヒーを<ruby>飲<rt>の</rt></ruby>まないようにしています。
+      </div>
+      <div class="n3-hira">
+        よるは こーひーを のまない ように しています。
+      </div>
+      <div class="n3-ko">
+        밤에는 커피를 마시지 않으려고 하고 있습니다.
+      </div>
+      <div class="n3-explain">
+        실제 생활에서 계속 피하려고 노력하고 있다는 뜻.
+      </div>
+    </div>
+
+
+    <div class="n3-warning">
+      <strong>주의할 점</strong><br><br>
+      두 표현이 항상 완전히 반대되는 것은 아닙니다.
+      실제 회화에서는 같은 상황을 두 표현 모두로 말할 수 있는 경우도 있습니다.
+      <br><br>
+      중요한 것은
+      <strong>ことにする는 결정</strong>,
+      <strong>ようにする는 그 상태를 만들기 위한 노력</strong>에
+      상대적으로 더 초점이 있다는 것입니다.
+    </div>
+
+
+    <div class="n3-speaking">
+      <div class="n3-speaking-title">
+        💬 습관 이야기하기
+      </div>
+
+      아래 질문에 <strong>～ようにしています</strong>를 사용해서 대답해 보세요.
+
+      <ul>
+        <li>
+          <ruby>健康<rt>けんこう</rt></ruby>のために、どんなことをするようにしていますか。
+        </li>
+        <li>
+          日本語を<ruby>上達<rt>じょうたつ</rt></ruby>させるために、何をするようにしていますか。
+        </li>
+        <li>
+          お金を<ruby>節約<rt>せつやく</rt></ruby>するために、何かしないようにしていますか。
+        </li>
+        <li>
+          よく<ruby>眠<rt>ねむ</rt></ruby>るために、どんなことに<ruby>気<rt>き</rt></ruby>をつけていますか。
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 4. ～ようになる
+    </div>
+
+    <div class="n3-formula">
+      동사 사전형 / ない형 / 가능형 + ようになる
+      <br>
+      <span class="soft">= ~하게 되다 / ~할 수 있게 되다</span>
+    </div>
+
+
+    <div class="n3-subhead">
+      ① 이번에는 する가 아니라 なる
+    </div>
+
+    <p class="n3-lead">
+      앞에서 <strong>ようにする</strong>는
+      어떤 상태가 실현되도록 <strong>의식적으로 행동하는 것</strong>이었습니다.
+      <br><br>
+      그런데 <strong>する</strong>를 <strong>なる</strong>로 바꾸면
+      초점이 완전히 달라집니다.
+    </p>
+
+
+    <div class="n3-point">
+      <strong>ようにする</strong>
+      <br>
+      → 그러한 상태가 되도록 <strong>내가 행동한다</strong>
+      <br><br>
+
+      <strong>ようになる</strong>
+      <br>
+      → 실제로 <strong>그러한 상태로 변화한다</strong>
+    </div>
+
+
+    <div class="n3-flow">
+
+      <div class="n3-flow-step">
+        <strong>日本語が話せる</strong>
+        <br>
+        일본어를 말할 수 있다
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>日本語が話せるよう</strong>
+        <br>
+        일본어를 말할 수 있는 상태
+      </div>
+
+      <div class="n3-flow-step">
+        <strong>日本語が話せるようになる</strong>
+        <br>
+        일본어를 말할 수 있는 상태로 변하다
+      </div>
+
+      <div class="n3-flow-step">
+        자연스러운 한국어
+        <br>
+        <strong>일본어를 말할 수 있게 되다</strong>
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      ② 능력의 변화
+    </div>
+
+    <p class="n3-lead">
+      <strong>～ようになる</strong>는 특히
+      이전에는 할 수 없었던 것이 가능해지는
+      <strong>능력의 변화</strong>를 말할 때 매우 자주 사용됩니다.
+    </p>
+
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 1</div>
+      <div class="n3-jp">
+        日本語が<ruby>話<rt>はな</rt></ruby>せるようになりました。
+      </div>
+      <div class="n3-hira">
+        にほんごが はなせる ように なりました。
+      </div>
+      <div class="n3-ko">
+        일본어를 말할 수 있게 되었습니다.
+      </div>
+      <div class="n3-explain">
+        과거에는 어려웠지만 지금은 가능한 상태로 변화했습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 2</div>
+      <div class="n3-jp">
+        <ruby>漢字<rt>かんじ</rt></ruby>が<ruby>読<rt>よ</rt></ruby>めるようになりました。
+      </div>
+      <div class="n3-hira">
+        かんじが よめる ように なりました。
+      </div>
+      <div class="n3-ko">
+        한자를 읽을 수 있게 되었습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 3</div>
+      <div class="n3-jp">
+        一人で<ruby>料理<rt>りょうり</rt></ruby>できるようになりました。
+      </div>
+      <div class="n3-hira">
+        ひとりで りょうりできる ように なりました。
+      </div>
+      <div class="n3-ko">
+        혼자서 요리할 수 있게 되었습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-example-label">EXAMPLE 4</div>
+      <div class="n3-jp">
+        日本のドラマを<ruby>字幕<rt>じまく</rt></ruby>なしで<ruby>見<rt>み</rt></ruby>られるようになりました。
+      </div>
+      <div class="n3-hira">
+        にほんの どらまを じまくなしで みられる ように なりました。
+      </div>
+      <div class="n3-ko">
+        일본 드라마를 자막 없이 볼 수 있게 되었습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-subhead">
+      ③ 행동이나 습관의 변화
+    </div>
+
+    <p class="n3-lead">
+      가능형만 사용할 수 있는 것은 아닙니다.
+      예전과 달리 어떤 행동을
+      <strong>하게 되었거나 하지 않게 된 변화</strong>도 표현할 수 있습니다.
+    </p>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>最近<rt>さいきん</rt></ruby>、<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>朝<rt>あさ</rt></ruby>ご飯を<ruby>食<rt>た</rt></ruby>べるようになりました。
+      </div>
+      <div class="n3-hira">
+        さいきん、まいあさ あさごはんを たべる ように なりました。
+      </div>
+      <div class="n3-ko">
+        요즘 매일 아침밥을 먹게 되었습니다.
+      </div>
+      <div class="n3-explain">
+        이전에는 그러지 않았지만 현재는 그런 생활 습관이 생겼습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        日本に<ruby>住<rt>す</rt></ruby>んでから、よく<ruby>魚<rt>さかな</rt></ruby>を<ruby>食<rt>た</rt></ruby>べるようになりました。
+      </div>
+      <div class="n3-hira">
+        にほんに すんでから、よく さかなを たべる ように なりました。
+      </div>
+      <div class="n3-ko">
+        일본에 살게 된 뒤로 생선을 자주 먹게 되었습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>社会人<rt>しゃかいじん</rt></ruby>になってから、テレビをあまり<ruby>見<rt>み</rt></ruby>ないようになりました。
+      </div>
+      <div class="n3-hira">
+        しゃかいじんに なってから、てれびを あまり みない ように なりました。
+      </div>
+      <div class="n3-ko">
+        직장인이 된 뒤로 TV를 별로 보지 않게 되었습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-subhead">
+      ④ 의도적으로 한 노력과 결과를 연결하기
+    </div>
+
+    <div class="n3-important">
+      <strong>ようにする → 노력</strong>
+      <br>
+      <strong>ようになる → 변화된 결과</strong>
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>毎日<rt>まいにち</rt></ruby>、日本語を<ruby>話<rt>はな</rt></ruby>すようにしています。
+      </div>
+      <div class="n3-hira">
+        まいにち、にほんごを はなす ように しています。
+      </div>
+      <div class="n3-ko">
+        매일 일본어를 말하려고 하고 있습니다.
+      </div>
+      <div class="n3-explain">
+        내가 의식적으로 하고 있는 행동.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        そのおかげで、日本語が<ruby>自然<rt>しぜん</rt></ruby>に<ruby>話<rt>はな</rt></ruby>せるようになりました。
+      </div>
+      <div class="n3-hira">
+        その おかげで、にほんごが しぜんに はなせる ように なりました。
+      </div>
+      <div class="n3-ko">
+        그 덕분에 일본어를 자연스럽게 말할 수 있게 되었습니다.
+      </div>
+      <div class="n3-explain">
+        노력의 결과로 실제 능력이 변화.
+      </div>
+    </div>
+
+
+    <div class="n3-flow">
+
+      <div class="n3-flow-step">
+        日本語を毎日話す<strong>ことにする</strong>
+        <br>
+        매일 일본어를 말하기로 결정한다
+      </div>
+
+      <div class="n3-flow-step">
+        日本語を毎日話す<strong>ようにする</strong>
+        <br>
+        실제로 매일 말하려고 노력한다
+      </div>
+
+      <div class="n3-flow-step">
+        日本語が話せる<strong>ようになる</strong>
+        <br>
+        결과적으로 일본어를 말할 수 있게 된다
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      ⑤ ようにする vs ようになる
+    </div>
+
+    <table class="n3-compare">
+      <tr>
+        <th></th>
+        <th>ようにする</th>
+        <th>ようになる</th>
+      </tr>
+      <tr>
+        <td>중심 동사</td>
+        <td>する</td>
+        <td>なる</td>
+      </tr>
+      <tr>
+        <td>초점</td>
+        <td>의식적인 노력</td>
+        <td>변화된 상태</td>
+      </tr>
+      <tr>
+        <td>주체성</td>
+        <td>강함</td>
+        <td>변화 결과에 초점</td>
+      </tr>
+      <tr>
+        <td>대표 번역</td>
+        <td>~하도록 하다</td>
+        <td>~하게 되다</td>
+      </tr>
+      <tr>
+        <td>대표 상황</td>
+        <td>습관 만들기</td>
+        <td>능력·습관의 변화</td>
+      </tr>
+    </table>
+
+
+    <div class="n3-subhead">
+      ⑥ 네 가지 표현을 한꺼번에 비교
+    </div>
+
+    <div class="n3-summary-grid">
+
+      <div class="n3-summary-card">
+        <strong>ことにする</strong>
+        무엇을 할지 <strong>결정한다.</strong>
+        <br><br>
+        日本語を勉強することにした。
+      </div>
+
+      <div class="n3-summary-card">
+        <strong>ことになる</strong>
+        여러 상황의 결과로 <strong>그렇게 결정된다.</strong>
+        <br><br>
+        日本で働くことになった。
+      </div>
+
+      <div class="n3-summary-card">
+        <strong>ようにする</strong>
+        실제로 그렇게 되도록 <strong>노력한다.</strong>
+        <br><br>
+        毎日話すようにしている。
+      </div>
+
+      <div class="n3-summary-card">
+        <strong>ようになる</strong>
+        실제 상태나 능력이 <strong>변화한다.</strong>
+        <br><br>
+        話せるようになった。
+      </div>
+
+    </div>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        한 사람의 일본어 학습 과정으로 이해하기
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            日本語を<ruby>勉強<rt>べんきょう</rt></ruby>することにしました。
+          </div>
+          <div class="n3-hira">
+            にほんごを べんきょうする ことに しました。
+          </div>
+          <div class="n3-ko">
+            일본어를 공부하기로 했습니다.
+          </div>
+          <div class="n3-explain">
+            STEP 1: 결정
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>毎日<rt>まいにち</rt></ruby>日本語を<ruby>話<rt>はな</rt></ruby>すようにしています。
+          </div>
+          <div class="n3-hira">
+            まいにち にほんごを はなす ように しています。
+          </div>
+          <div class="n3-ko">
+            매일 일본어를 말하려고 하고 있습니다.
+          </div>
+          <div class="n3-explain">
+            STEP 2: 실천
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            少しずつ<ruby>会話<rt>かいわ</rt></ruby>ができるようになりました。
+          </div>
+          <div class="n3-hira">
+            すこしずつ かいわが できる ように なりました。
+          </div>
+          <div class="n3-ko">
+            조금씩 회화를 할 수 있게 되었습니다.
+          </div>
+          <div class="n3-explain">
+            STEP 3: 변화된 결과
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="n3-speaking">
+      <div class="n3-speaking-title">
+        💬 과거와 지금 비교하기
+      </div>
+
+      <strong>～ようになりました</strong>를 사용해서 자신의 변화를 말해 보세요.
+
+      <ul>
+        <li>
+          日本語を勉強して、何ができるようになりましたか。
+        </li>
+        <li>
+          <ruby>昔<rt>むかし</rt></ruby>はできなかったけど、今はできることがありますか。
+        </li>
+        <li>
+          <ruby>最近<rt>さいきん</rt></ruby>、するようになったことはありますか。
+        </li>
+        <li>
+          <ruby>最近<rt>さいきん</rt></ruby>、しなくなったことはありますか。
+        </li>
+        <li>
+          日本に<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ってから、何か<ruby>変<rt>か</rt></ruby>わりましたか。
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="n3-practice">
+      <strong>생각해 보기</strong>
+      <br><br>
+
+      다음 네 문장은 모두 자연스러울 수 있습니다.
+      각각 무엇에 초점이 있는지 설명해 보세요.
+      <br><br>
+
+      <div class="n3-jp">
+        ① 毎日運動することにしました。
+      </div>
+      <div class="n3-hira">
+        まいにち うんどうする ことに しました。
+      </div>
+      <div class="n3-ko">
+        매일 운동하기로 했습니다.
+      </div>
+
+      <br>
+
+      <div class="n3-jp">
+        ② 毎日運動することになりました。
+      </div>
+      <div class="n3-hira">
+        まいにち うんどうする ことに なりました。
+      </div>
+      <div class="n3-ko">
+        매일 운동하게 되었습니다.
+      </div>
+
+      <br>
+
+      <div class="n3-jp">
+        ③ 毎日運動するようにしています。
+      </div>
+      <div class="n3-hira">
+        まいにち うんどうする ように しています。
+      </div>
+      <div class="n3-ko">
+        매일 운동하려고 하고 있습니다.
+      </div>
+
+      <br>
+
+      <div class="n3-jp">
+        ④ 毎日運動するようになりました。
+      </div>
+      <div class="n3-hira">
+        まいにち うんどうする ように なりました。
+      </div>
+      <div class="n3-ko">
+        매일 운동하게 되었습니다.
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 5. 네 표현의 핵심 구조 정리
+    </div>
+
+    <div class="n3-important">
+      번역만 보면 비슷하지만,
+      핵심 동사를 보면 의미가 훨씬 명확해집니다.
+    </div>
+
+    <table class="n3-compare">
+      <tr>
+        <th>표현</th>
+        <th>구조 이미지</th>
+        <th>핵심</th>
+      </tr>
+      <tr>
+        <td>ことにする</td>
+        <td>행동을 하나의 사항으로 만들어 그것으로 정함</td>
+        <td>결정</td>
+      </tr>
+      <tr>
+        <td>ことになる</td>
+        <td>그 행동이 하나의 결정된 상태가 됨</td>
+        <td>결정된 결과</td>
+      </tr>
+      <tr>
+        <td>ようにする</td>
+        <td>그러한 상태가 실현되도록 행동함</td>
+        <td>노력·습관</td>
+      </tr>
+      <tr>
+        <td>ようになる</td>
+        <td>실제로 그러한 상태로 변함</td>
+        <td>변화</td>
+      </tr>
+    </table>
+
+
+    <div class="n3-formula">
+      する = 내가 그렇게 한다
+      <br>
+      なる = 그렇게 된다
+    </div>
+
+    <div class="n3-note">
+      물론 실제 일본어 문법은 문맥과 관용적인 사용까지 함께 봐야 합니다.
+      하지만 이 <strong>する ↔ なる</strong>의 대비를 이해해 두면
+      네 문법을 단순 암기하는 것보다 훨씬 쉽게 구별할 수 있습니다.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="n3-wrap">
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 6. JLPT N3형 문법 문제
+    </div>
+
+    <p class="n3-lead">
+      지금까지 배운
+      <strong>～ことにする / ～ことになる / ～ようにする / ～ようになる</strong>를
+      실제 JLPT 문법 문제처럼 구별해 봅니다.
+      <br><br>
+      단순히 한국어 뜻만 보고 고르지 말고,
+      <strong>누가 결정했는지</strong>,
+      <strong>의식적인 노력인지</strong>,
+      <strong>상태의 변화인지</strong>를 확인하세요.
+    </p>
+
+    <div class="n3-important">
+      <strong>문제를 풀 때 먼저 보는 4가지</strong>
+      <br><br>
+      ① 화자가 직접 결정했는가?
+      <br>
+      ② 회사·학교·상황 등에 의해 정해졌는가?
+      <br>
+      ③ 현재 의식적으로 계속 노력하고 있는가?
+      <br>
+      ④ 예전과 비교해 능력이나 습관이 변화했는가?
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 1 — 개인의 결정
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 1
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>最近<rt>さいきん</rt></ruby>、<ruby>運動不足<rt>うんどうぶそく</rt></ruby>なので、
+        <ruby>毎朝<rt>まいあさ</rt></ruby>30分<ruby>歩<rt>ある</rt></ruby>く（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        さいきん、うんどうぶそくなので、
+        まいあさ さんじゅっぷん あるく（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことになりました</li>
+        <li>ことにしました</li>
+        <li>ようになりました</li>
+        <li>ようになっています</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ② ことにしました
+        </div>
+
+        <strong>最近、運動不足なので</strong>
+        <br>
+        “최근 운동 부족이라서”
+        <br><br>
+
+        자신의 상황을 판단한 뒤
+        <strong>매일 30분 걷겠다는 결정을 스스로 내린 것</strong>이므로
+        <strong>ことにしました</strong>가 가장 자연스럽습니다.
+
+        <div class="n3-wrong">
+          ① ことになりました
+          → 외부 결정이나 상황의 결과로 그렇게 되었다는 느낌.
+          <br><br>
+          ③ ようになりました
+          → 예전에는 하지 않았지만 이제는 걷게 되었다는
+          <strong>변화</strong>에 초점.
+          <br><br>
+          ④ ようになっています
+          → 이 문맥에서는 부자연스럽습니다.
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 2 — 외부 결정
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 2
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>決定<rt>けってい</rt></ruby>で、
+        <ruby>来月<rt>らいげつ</rt></ruby>から大阪の<ruby>支店<rt>してん</rt></ruby>で
+        <ruby>働<rt>はたら</rt></ruby>く（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        かいしゃの けっていで、
+        らいげつから おおさかの してんで
+        はたらく（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことにしました</li>
+        <li>ようにしました</li>
+        <li>ことになりました</li>
+        <li>ようになりました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ③ ことになりました
+        </div>
+
+        문제 안에 이미
+        <strong>会社の決定で</strong>
+        “회사의 결정으로”라는 강력한 단서가 있습니다.
+        <br><br>
+
+        화자가 스스로 결정한 것이 아니라
+        회사의 결정 결과
+        <strong>오사카에서 일하게 된 것</strong>이므로
+        <strong>ことになりました</strong>를 사용합니다.
+
+        <div class="n3-wrong">
+          ① ことにしました
+          → 화자가 직접 오사카 근무를 선택했다는 느낌이 됩니다.
+          <br><br>
+          ② ようにしました
+          → 오사카에서 일하도록 의식적으로 노력했다는 의미가 되어 맞지 않습니다.
+          <br><br>
+          ④ ようになりました
+          → 생활 습관이나 능력의 변화처럼 들릴 수 있어
+          “회사의 결정”이라는 문맥과 맞지 않습니다.
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 3 — 지속적인 노력
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 3
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>健康<rt>けんこう</rt></ruby>のために、
+        できるだけエレベーターを<ruby>使<rt>つか</rt></ruby>わず、
+        <ruby>階段<rt>かいだん</rt></ruby>を<ruby>使<rt>つか</rt></ruby>う（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        けんこうの ために、
+        できるだけ えれべーたーを つかわず、
+        かいだんを つかう（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ようにしています</li>
+        <li>ことになっています</li>
+        <li>ようになっています</li>
+        <li>ことになりました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ① ようにしています
+        </div>
+
+        여기서 중요한 단서는
+        <strong>健康のために</strong>와
+        <strong>できるだけ</strong>입니다.
+        <br><br>
+
+        화자가 건강을 위해 가능한 한 계단을 이용하려고
+        <strong>의식적으로 계속 노력</strong>하고 있습니다.
+        따라서 <strong>ようにしています</strong>가 가장 자연스럽습니다.
+
+        <div class="n3-wrong">
+          ② ことになっています
+          → “계단을 사용하도록 규칙으로 정해져 있다”는 의미에 가까워집니다.
+          <br><br>
+          예:
+          <br>
+          このビルでは、非常時には階段を使うことになっています。
+          <br>
+          이 건물에서는 비상시에 계단을 이용하도록 되어 있습니다.
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 4 — 능력의 변화
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 4
+      </div>
+
+      <div class="n3-question-text">
+        日本に<ruby>来<rt>き</rt></ruby>たころは
+        日本語がほとんど<ruby>話<rt>はな</rt></ruby>せなかったが、
+        <ruby>今<rt>いま</rt></ruby>では仕事でも日本語が
+        <ruby>使<rt>つか</rt></ruby>える（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        にほんに きた ころは
+        にほんごが ほとんど はなせなかったが、
+        いまでは しごとでも にほんごが
+        つかえる（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことにした</li>
+        <li>ようにした</li>
+        <li>ことになった</li>
+        <li>ようになった</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ④ ようになった
+        </div>
+
+        <strong>日本に来たころは～できなかった</strong>
+        와
+        <strong>今では～できる</strong>가 대비되고 있습니다.
+        <br><br>
+
+        과거에는 불가능했던 것이
+        지금은 가능해진
+        <strong>능력의 변화</strong>이므로
+        <strong>ようになった</strong>를 사용합니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 5 — ことにしている vs ようにしている
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 5
+      </div>
+
+      <div class="n3-question-text">
+        私は<ruby>無駄遣<rt>むだづか</rt></ruby>いをしないために、
+        <ruby>給料<rt>きゅうりょう</rt></ruby>をもらったら
+        まず3万円<ruby>貯金<rt>ちょきん</rt></ruby>する（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        わたしは むだづかいを しない ために、
+        きゅうりょうを もらったら
+        まず さんまんえん ちょきんする（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことにしています</li>
+        <li>ことになっています</li>
+        <li>ようになりました</li>
+        <li>ことになりました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ① ことにしています
+        </div>
+
+        이 사람은 월급을 받을 때마다
+        3만 엔을 저축한다는
+        <strong>자기만의 규칙을 정해서 유지</strong>하고 있습니다.
+        <br><br>
+
+        따라서
+        <strong>ことにしています</strong>
+        “~하기로 정해 두고 있다”
+        가 자연스럽습니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        여기서 중요한 비교
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>給料<rt>きゅうりょう</rt></ruby>をもらったら、
+            3万円<ruby>貯金<rt>ちょきん</rt></ruby>することにしています。
+          </div>
+
+          <div class="n3-hira">
+            きゅうりょうを もらったら、
+            さんまんえん ちょきんする ことに しています。
+          </div>
+
+          <div class="n3-ko">
+            월급을 받으면 3만 엔을 저축하기로 정해 두고 있습니다.
+          </div>
+
+          <div class="n3-explain">
+            <strong>자신이 정한 명확한 규칙</strong>이라는 느낌이 강합니다.
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            できるだけ<ruby>貯金<rt>ちょきん</rt></ruby>するようにしています。
+          </div>
+
+          <div class="n3-hira">
+            できるだけ ちょきんする ように しています。
+          </div>
+
+          <div class="n3-ko">
+            가능한 한 저축하려고 하고 있습니다.
+          </div>
+
+          <div class="n3-explain">
+            정확한 규칙보다는
+            <strong>그 방향으로 노력하는 습관</strong>에 초점이 있습니다.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 6 — 규칙을 나타내는 ことになっている
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 6
+      </div>
+
+      <div class="n3-question-text">
+        この<ruby>寮<rt>りょう</rt></ruby>では、
+        <ruby>夜<rt>よる</rt></ruby>11時を<ruby>過<rt>す</rt></ruby>ぎたら
+        大きな音を<ruby>出<rt>だ</rt></ruby>さない（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        この りょうでは、
+        よる じゅういちじを すぎたら
+        おおきな おとを ださない（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ようになっています</li>
+        <li>ことにしています</li>
+        <li>ことになっています</li>
+        <li>ようにしました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ③ ことになっています
+        </div>
+
+        여기서는 개인의 습관이 아니라
+        <strong>기숙사의 규칙</strong>입니다.
+        <br><br>
+
+        <strong>ことになっている</strong>는
+        이미 결정되어 현재도 유효한
+        <strong>규칙·제도·일정</strong>을 표현할 때 자주 사용됩니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-important">
+      <strong>ことになる → ことになっている</strong>
+      <br><br>
+
+      <strong>ことになる</strong>
+      <br>
+      어떤 결정이 성립한다.
+      <br><br>
+
+      ↓
+      <br><br>
+
+      <strong>ことになっている</strong>
+      <br>
+      그 결정된 상태가 현재까지 유지되고 있다.
+      <br><br>
+
+      따라서
+      <strong>“~하도록 되어 있다”</strong>라는
+      규칙의 의미로 자연스럽게 발전합니다.
+    </div>
+
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        この<ruby>図書館<rt>としょかん</rt></ruby>では、
+        <ruby>飲食<rt>いんしょく</rt></ruby>してはいけないことになっています。
+      </div>
+      <div class="n3-hira">
+        この としょかんでは、
+        いんしょくしては いけない ことに なっています。
+      </div>
+      <div class="n3-ko">
+        이 도서관에서는 음식물을 먹거나 마시면 안 되도록 되어 있습니다.
+      </div>
+    </div>
+
+    <div class="n3-example">
+      <div class="n3-jp">
+        <ruby>社員<rt>しゃいん</rt></ruby>は
+        <ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>るとき、
+        このカードを<ruby>使<rt>つか</rt></ruby>うことになっています。
+      </div>
+      <div class="n3-hira">
+        しゃいんは かいしゃに はいる とき、
+        この かーどを つかう ことに なっています。
+      </div>
+      <div class="n3-ko">
+        직원은 회사에 들어갈 때 이 카드를 사용하도록 되어 있습니다.
+      </div>
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 7 — 변화인가 노력인가?
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 7
+      </div>
+
+      <div class="n3-question-text">
+        日本に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>してから、
+        <ruby>電車<rt>でんしゃ</rt></ruby>で本を<ruby>読<rt>よ</rt></ruby>む（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        にほんに ひっこしてから、
+        でんしゃで ほんを よむ（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ようになりました</li>
+        <li>ようにしました</li>
+        <li>ことになりました</li>
+        <li>ことにしました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ① ようになりました
+        </div>
+
+        <strong>日本に引っ越してから</strong>
+        “일본으로 이사한 뒤부터”라는 표현이
+        과거와 현재의 변화를 암시합니다.
+        <br><br>
+
+        일본으로 이사한 이후
+        전철에서 책을 읽는
+        <strong>새로운 습관이 생겼다</strong>는 의미이므로
+        <strong>ようになりました</strong>가 적절합니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 8 — 부정형
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 8
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>医者<rt>いしゃ</rt></ruby>に
+        <ruby>注意<rt>ちゅうい</rt></ruby>されたので、
+        <ruby>夜遅<rt>よるおそ</rt></ruby>くラーメンを
+        <ruby>食<rt>た</rt></ruby>べない（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        いしゃに ちゅういされたので、
+        よる おそく らーめんを
+        たべない（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ようにしています</li>
+        <li>ようになっています</li>
+        <li>ことになっています</li>
+        <li>ことになりました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ① ようにしています
+        </div>
+
+        의사의 말을 듣고
+        현재 본인이 의식적으로
+        <strong>늦은 밤 라면을 먹지 않으려고 노력</strong>하고 있습니다.
+        <br><br>
+
+        부정형에서도 원리는 같습니다.
+        <br><br>
+
+        <strong>食べない</strong>
+        <br>
+        먹지 않는다
+        <br><br>
+
+        ↓
+        <br><br>
+
+        <strong>食べないようにする</strong>
+        <br>
+        먹지 않는 상태가 되도록 신경 쓰다
+        <br>
+        → 먹지 않도록 하다
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 9 — 문맥 전체를 읽기
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 9
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>以前<rt>いぜん</rt></ruby>は
+        <ruby>休日<rt>きゅうじつ</rt></ruby>になると
+        <ruby>昼<rt>ひる</rt></ruby>まで<ruby>寝<rt>ね</rt></ruby>ていました。
+        しかし、犬を<ruby>飼<rt>か</rt></ruby>い<ruby>始<rt>はじ</rt></ruby>めてからは、
+        朝早く<ruby>起<rt>お</rt></ruby>きる（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        いぜんは きゅうじつに なると
+        ひるまで ねていました。
+        しかし、いぬを かいはじめてからは、
+        あさ はやく おきる（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことにしました</li>
+        <li>ことになりました</li>
+        <li>ようになりました</li>
+        <li>ようにしました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ③ ようになりました
+        </div>
+
+        핵심은 첫 문장입니다.
+        <br><br>
+
+        <strong>以前は昼まで寝ていました。</strong>
+        <br>
+        예전에는 점심까지 잤다.
+        <br><br>
+
+        그런데 개를 키우기 시작한 뒤
+        <strong>朝早く起きる</strong>
+        생활로 바뀌었습니다.
+        <br><br>
+
+        즉 명확한
+        <strong>과거 → 현재의 생활 습관 변화</strong>이므로
+        <strong>ようになりました</strong>가 정답입니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-subhead">
+      문제 10 — 가장 헷갈리는 비교
+    </div>
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 10
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>日本語<rt>にほんご</rt></ruby>を
+        <ruby>忘<rt>わす</rt></ruby>れないために、
+        <ruby>帰国<rt>きこく</rt></ruby>してからも
+        日本人の友達と日本語で<ruby>話<rt>はな</rt></ruby>す（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        にほんごを わすれない ために、
+        きこくしてからも
+        にほんじんの ともだちと にほんごで はなす（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことになりました</li>
+        <li>ようにしています</li>
+        <li>ようになりました</li>
+        <li>ことになっています</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ② ようにしています
+        </div>
+
+        <strong>日本語を忘れないために</strong>
+        “일본어를 잊지 않기 위해서”라는 목적이 있습니다.
+        <br><br>
+
+        그 목적을 달성하기 위해
+        현재도 일본인 친구들과 일본어로 이야기하려고
+        <strong>계속 노력하고 있는 행동</strong>이므로
+        <strong>ようにしています</strong>가 가장 자연스럽습니다.
+        <br><br>
+
+        ③ <strong>ようになりました</strong>를 쓰면
+        “귀국 후부터 일본인 친구들과 일본어로 이야기하게 되었다”라는
+        <strong>습관의 변화</strong>가 중심이 됩니다.
+        <br><br>
+
+        문법적으로 가능한 상황을 만들 수는 있지만,
+        현재 문장의 <strong>～ために</strong>가 보여 주는
+        의도적인 목적과 가장 잘 연결되는 것은 ②입니다.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 7. 문맥 단서로 빠르게 구별하기
+    </div>
+
+    <p class="n3-lead">
+      JLPT에서는 문법 표현 하나만 보는 것이 아니라
+      앞뒤 문장에서 힌트를 찾는 것이 중요합니다.
+    </p>
+
+    <table class="n3-compare">
+      <tr>
+        <th>문맥에서 자주 보이는 단서</th>
+        <th>생각해 볼 표현</th>
+        <th>이유</th>
+      </tr>
+
+      <tr>
+        <td>
+          自分で決めた<br>
+          決心した<br>
+          今年から
+        </td>
+        <td>ことにする</td>
+        <td>자신이 내린 결정</td>
+      </tr>
+
+      <tr>
+        <td>
+          会社の決定で<br>
+          会議の結果<br>
+          話し合った結果
+        </td>
+        <td>ことになる</td>
+        <td>외부 결정·과정의 결과</td>
+      </tr>
+
+      <tr>
+        <td>
+          規則では<br>
+          この会社では<br>
+          ～なければならない
+        </td>
+        <td>ことになっている</td>
+        <td>이미 정해진 규칙·제도</td>
+      </tr>
+
+      <tr>
+        <td>
+          できるだけ<br>
+          健康のために<br>
+          忘れないために
+        </td>
+        <td>ようにする</td>
+        <td>목표를 위한 의식적인 노력</td>
+      </tr>
+
+      <tr>
+        <td>
+          昔は～なかった<br>
+          最近<br>
+          ～てから
+        </td>
+        <td>ようになる</td>
+        <td>과거와 현재 사이의 변화</td>
+      </tr>
+
+      <tr>
+        <td>
+          ～できなかったが<br>
+          今では～できる
+        </td>
+        <td>ようになる</td>
+        <td>능력의 변화</td>
+      </tr>
+    </table>
+
+
+    <div class="n3-warning">
+      이 표는 <strong>정답 공식</strong>이 아닙니다.
+      <br><br>
+      예를 들어 <strong>最近</strong>이 있다고 해서
+      무조건 <strong>ようになる</strong>가 오는 것은 아닙니다.
+      <br><br>
+      JLPT 문제에서는 결국
+      <strong>문장 전체에서 화자가 무엇을 말하고 있는지</strong>를 판단해야 합니다.
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 8. 번역이 같아도 일본어가 다른 경우
+    </div>
+
+    <p class="n3-lead">
+      한국어 번역만 보면 특히
+      <strong>ことになる</strong>와
+      <strong>ようになる</strong>가 모두
+      “~하게 되다”로 번역될 수 있어서 헷갈립니다.
+      <br><br>
+      하지만 일본어에서는 초점이 다릅니다.
+    </p>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        「東京で働くことになった」와 「東京で働くようになった」
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+
+          <div class="n3-jp">
+            東京で<ruby>働<rt>はたら</rt></ruby>くことになりました。
+          </div>
+
+          <div class="n3-hira">
+            とうきょうで はたらく ことに なりました。
+          </div>
+
+          <div class="n3-ko">
+            도쿄에서 일하게 되었습니다.
+          </div>
+
+          <div class="n3-explain">
+            취업, 전근, 회사 결정 등의 과정을 거쳐
+            <strong>도쿄에서 일한다는 것이 결정됨</strong>.
+          </div>
+
+        </div>
+
+        <div class="n3-vs-item">
+
+          <div class="n3-jp">
+            東京で<ruby>働<rt>はたら</rt></ruby>くようになりました。
+          </div>
+
+          <div class="n3-hira">
+            とうきょうで はたらく ように なりました。
+          </div>
+
+          <div class="n3-ko">
+            도쿄에서 일하게 되었습니다.
+          </div>
+
+          <div class="n3-explain">
+            이전과 비교해서 지금은
+            <strong>도쿄에서 일하는 생활 상태가 되었다</strong>는 변화에 초점.
+            문맥에 따라 사용할 수 있지만,
+            취업·배치 결정 자체를 전달할 때는
+            <strong>ことになりました</strong>가 더 자연스러운 경우가 많습니다.
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        「毎朝走ることにした」와 「毎朝走るようになった」
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+
+          <div class="n3-jp">
+            <ruby>毎朝<rt>まいあさ</rt></ruby><ruby>走<rt>はし</rt></ruby>ることにしました。
+          </div>
+
+          <div class="n3-hira">
+            まいあさ はしる ことに しました。
+          </div>
+
+          <div class="n3-ko">
+            매일 아침 달리기로 했습니다.
+          </div>
+
+          <div class="n3-explain">
+            결정.
+            아직 실제로 습관이 되었는지는 알 수 없습니다.
+          </div>
+
+        </div>
+
+        <div class="n3-vs-item">
+
+          <div class="n3-jp">
+            <ruby>毎朝<rt>まいあさ</rt></ruby><ruby>走<rt>はし</rt></ruby>るようになりました。
+          </div>
+
+          <div class="n3-hira">
+            まいあさ はしる ように なりました。
+          </div>
+
+          <div class="n3-ko">
+            매일 아침 달리게 되었습니다.
+          </div>
+
+          <div class="n3-explain">
+            실제 생활에서 달리는 것이
+            <strong>새로운 습관으로 자리 잡았음</strong>.
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        「食べないことにしている」와 「食べないようにしている」
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+
+          <div class="n3-jp">
+            夜は<ruby>甘<rt>あま</rt></ruby>いものを
+            <ruby>食<rt>た</rt></ruby>べないことにしています。
+          </div>
+
+          <div class="n3-hira">
+            よるは あまい ものを
+            たべない ことに しています。
+          </div>
+
+          <div class="n3-ko">
+            밤에는 단것을 먹지 않기로 정해 두고 있습니다.
+          </div>
+
+          <div class="n3-explain">
+            자기 자신에게 정한
+            <strong>명확한 방침·규칙</strong>의 느낌.
+          </div>
+
+        </div>
+
+        <div class="n3-vs-item">
+
+          <div class="n3-jp">
+            夜は<ruby>甘<rt>あま</rt></ruby>いものを
+            <ruby>食<rt>た</rt></ruby>べないようにしています。
+          </div>
+
+          <div class="n3-hira">
+            よるは あまい ものを
+            たべない ように しています。
+          </div>
+
+          <div class="n3-ko">
+            밤에는 단것을 먹지 않으려고 하고 있습니다.
+          </div>
+
+          <div class="n3-explain">
+            먹고 싶을 수도 있지만
+            <strong>가능한 한 피하려고 노력</strong>하는 느낌이 더 강합니다.
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="n3-important">
+      <strong>번역보다 일본어 내부의 구조를 먼저 본다.</strong>
+      <br><br>
+
+      こと + に + する
+      <br>
+      → 그 일을 하나의 선택으로 정한다.
+      <br><br>
+
+      こと + に + なる
+      <br>
+      → 그 일이 결정된 상태가 된다.
+      <br><br>
+
+      よう + に + する
+      <br>
+      → 그런 상태가 되도록 행동한다.
+      <br><br>
+
+      よう + に + なる
+      <br>
+      → 실제로 그런 상태로 변화한다.
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 9. 직접 문장 만들기
+    </div>
+
+    <div class="n3-practice">
+
+      <strong>A. ～ことにしました</strong>
+      <br><br>
+
+      다음 내용을 일본어로 말해 보세요.
+      <br><br>
+
+      ① 올해 일본에 여행 가기로 했습니다.
+      <br>
+      ② 다음 달부터 운동을 시작하기로 했습니다.
+      <br>
+      ③ 평일에는 술을 마시지 않기로 했습니다.
+      <br>
+      ④ 새로운 노트북을 사지 않기로 했습니다.
+
+    </div>
+
+
+    <div class="n3-practice">
+
+      <strong>B. ～ことになりました</strong>
+      <br><br>
+
+      다음 내용을 일본어로 말해 보세요.
+      <br><br>
+
+      ① 다음 달부터 다른 팀에서 일하게 되었습니다.
+      <br>
+      ② 회의 결과 행사를 취소하게 되었습니다.
+      <br>
+      ③ 회사에서 일본으로 출장을 가게 되었습니다.
+      <br>
+      ④ 이번 주부터 재택근무를 하게 되었습니다.
+
+    </div>
+
+
+    <div class="n3-practice">
+
+      <strong>C. ～ようにしています</strong>
+      <br><br>
+
+      다음 내용을 일본어로 말해 보세요.
+      <br><br>
+
+      ① 매일 물을 많이 마시려고 하고 있습니다.
+      <br>
+      ② 자기 전에는 스마트폰을 보지 않으려고 합니다.
+      <br>
+      ③ 가능한 한 일본어로 생각하려고 합니다.
+      <br>
+      ④ 일주일에 세 번은 운동하려고 합니다.
+
+    </div>
+
+
+    <div class="n3-practice">
+
+      <strong>D. ～ようになりました</strong>
+      <br><br>
+
+      다음 내용을 일본어로 말해 보세요.
+      <br><br>
+
+      ① 한자를 많이 읽을 수 있게 되었습니다.
+      <br>
+      ② 최근에는 일찍 일어나게 되었습니다.
+      <br>
+      ③ 일본 음식을 자주 먹게 되었습니다.
+      <br>
+      ④ 예전보다 일본어를 자연스럽게 말할 수 있게 되었습니다.
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="n3-wrap">
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 10. JLPT N3 실전형 종합 문제
+    </div>
+
+    <p class="n3-lead">
+      이번에는 앞에서처럼 문법 이름이 바로 보이는 문제가 아니라,
+      <strong>문장 전체의 상황과 시간의 흐름</strong>을 읽고
+      가장 자연스러운 표현을 선택해 봅니다.
+    </p>
+
+    <div class="n3-note">
+      실제 JLPT에서는 한국어 번역이 제공되지 않습니다.
+      따라서 이 부분부터는 먼저 일본어만 읽고 답을 생각한 뒤,
+      해설을 확인하는 방식으로 연습해 보세요.
+    </div>
+
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 11
+      </div>
+
+      <div class="n3-question-text">
+        A：最近、ずいぶん<ruby>早<rt>はや</rt></ruby>く
+        <ruby>起<rt>お</rt></ruby>きていますね。
+        <br>
+        B：ええ。<ruby>会社<rt>かいしゃ</rt></ruby>まで
+        <ruby>歩<rt>ある</rt></ruby>いて<ruby>行<rt>い</rt></ruby>くために、
+        6時に起きる（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        A：さいきん、ずいぶん はやく おきていますね。
+        <br>
+        B：ええ。かいしゃまで あるいて いく ために、
+        ろくじに おきる（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことになりました</li>
+        <li>ようにしています</li>
+        <li>ようになっています</li>
+        <li>ことになっています</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ② ようにしています
+        </div>
+
+        회사까지 걸어가기 위해
+        본인이 의식적으로 일찍 일어나는 생활을 실천하고 있습니다.
+        <br><br>
+
+        <strong>～ために</strong>가 목적을 나타내고,
+        그 목적을 위해 현재 계속 행동하고 있으므로
+        <strong>ようにしています</strong>가 자연스럽습니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 12
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>来年度<rt>らいねんど</rt></ruby>から、
+        この<ruby>会社<rt>かいしゃ</rt></ruby>では
+        <ruby>週<rt>しゅう</rt></ruby>に二日、
+        <ruby>自宅<rt>じたく</rt></ruby>で
+        <ruby>仕事<rt>しごと</rt></ruby>をする（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        らいねんどから、
+        この かいしゃでは
+        しゅうに ふつか、
+        じたくで しごとを する（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ようにしました</li>
+        <li>ことにしました</li>
+        <li>ようになりました</li>
+        <li>ことになりました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ④ ことになりました
+        </div>
+
+        화자 개인의 습관이 아니라
+        <strong>회사의 새로운 제도나 결정</strong>입니다.
+        <br><br>
+
+        따라서
+        “내년도부터 주 2일 재택근무를 하게 되었다”라는
+        <strong>결정된 결과</strong>를 나타내는
+        <strong>ことになりました</strong>가 적절합니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 13
+      </div>
+
+      <div class="n3-question-text">
+        日本に<ruby>住<rt>す</rt></ruby>み<ruby>始<rt>はじ</rt></ruby>めたころは
+        <ruby>納豆<rt>なっとう</rt></ruby>が<ruby>苦手<rt>にがて</rt></ruby>だったが、
+        <ruby>最近<rt>さいきん</rt></ruby>は
+        よく<ruby>食<rt>た</rt></ruby>べる（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        にほんに すみはじめた ころは
+        なっとうが にがてだったが、
+        さいきんは よく たべる（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことにした</li>
+        <li>ことになった</li>
+        <li>ようになった</li>
+        <li>ようにした</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ③ ようになった
+        </div>
+
+        <strong>처음에는 싫어했다 → 지금은 자주 먹는다</strong>라는
+        시간에 따른 변화가 명확합니다.
+        <br><br>
+
+        어떤 결정을 말하는 것이 아니라
+        음식에 대한 행동과 습관이 달라졌으므로
+        <strong>ようになった</strong>가 자연스럽습니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 14
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>太<rt>ふと</rt></ruby>ってきたので、
+        <ruby>夜<rt>よる</rt></ruby>9時<ruby>以降<rt>いこう</rt></ruby>は
+        何も<ruby>食<rt>た</rt></ruby>べない（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        ふとって きたので、
+        よる くじ いこうは
+        なにも たべない（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことにしました</li>
+        <li>ことになりました</li>
+        <li>ようになりました</li>
+        <li>ことになっています</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ① ことにしました
+        </div>
+
+        살이 찌기 시작한 것을 계기로
+        <strong>본인이 새로운 규칙을 결정</strong>한 상황입니다.
+        <br><br>
+
+        “밤 9시 이후에는 먹지 않기로 했다”이므로
+        <strong>ことにしました</strong>가 자연스럽습니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 15
+      </div>
+
+      <div class="n3-question-text">
+        <ruby>毎日<rt>まいにち</rt></ruby>
+        日本語のニュースを<ruby>聞<rt>き</rt></ruby>いていたら、
+        <ruby>前<rt>まえ</rt></ruby>より
+        <ruby>速<rt>はや</rt></ruby>い日本語も
+        <ruby>聞<rt>き</rt></ruby>き<ruby>取<rt>と</rt></ruby>れる（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        まいにち
+        にほんごの にゅーすを きいていたら、
+        まえより はやい にほんごも
+        ききとれる（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ことにした</li>
+        <li>ようになった</li>
+        <li>ことになった</li>
+        <li>ようにした</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ② ようになった
+        </div>
+
+        <strong>聞き取れる</strong>는 가능의 의미입니다.
+        <br><br>
+
+        이전보다 빠른 일본어까지 알아들을 수 있게 된
+        <strong>능력의 변화</strong>를 말하므로
+        <strong>聞き取れるようになった</strong>가 됩니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-question">
+
+      <div class="n3-question-number">
+        QUESTION 16
+      </div>
+
+      <div class="n3-question-text">
+        この<ruby>研究室<rt>けんきゅうしつ</rt></ruby>では、
+        <ruby>最後<rt>さいご</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>る人が
+        <ruby>電気<rt>でんき</rt></ruby>を<ruby>消<rt>け</rt></ruby>す（　　　）。
+      </div>
+
+      <div class="n3-hira">
+        この けんきゅうしつでは、
+        さいごに かえる ひとが
+        でんきを けす（　　　）。
+      </div>
+
+      <ol class="n3-options">
+        <li>ようにしています</li>
+        <li>ことにしています</li>
+        <li>ことになっています</li>
+        <li>ようになりました</li>
+      </ol>
+
+      <div class="n3-answer">
+        <div class="n3-answer-title">
+          정답: ③ ことになっています
+        </div>
+
+        특정 개인의 습관이 아니라
+        <strong>연구실 전체의 규칙</strong>입니다.
+        <br><br>
+
+        따라서 이미 정해져 있는 규칙을 나타내는
+        <strong>ことになっています</strong>를 사용합니다.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 11. 같은 문장, 다른 문법
+    </div>
+
+    <p class="n3-lead">
+      N3 문법에서 중요한 것은
+      “이 문장은 맞다 / 틀리다”만 판단하는 것이 아닙니다.
+      <br><br>
+      <strong>문법을 바꾸면 화자가 무엇을 강조하는지가 어떻게 달라지는지</strong>
+      이해해야 실제 회화에서도 사용할 수 있습니다.
+    </p>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        상황 1 — 운동
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>毎日<rt>まいにち</rt></ruby>
+            <ruby>運動<rt>うんどう</rt></ruby>することにしました。
+          </div>
+          <div class="n3-hira">
+            まいにち うんどうする ことに しました。
+          </div>
+          <div class="n3-ko">
+            매일 운동하기로 했습니다.
+          </div>
+          <div class="n3-explain">
+            <strong>결정:</strong>
+            오늘부터 운동하겠다고 정했다.
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>毎日<rt>まいにち</rt></ruby>
+            <ruby>運動<rt>うんどう</rt></ruby>するようにしています。
+          </div>
+          <div class="n3-hira">
+            まいにち うんどうする ように しています。
+          </div>
+          <div class="n3-ko">
+            매일 운동하려고 하고 있습니다.
+          </div>
+          <div class="n3-explain">
+            <strong>노력:</strong>
+            실제로 매일 하려고 신경 쓰고 있다.
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>最近<rt>さいきん</rt></ruby>、
+            <ruby>毎日<rt>まいにち</rt></ruby>
+            <ruby>運動<rt>うんどう</rt></ruby>するようになりました。
+          </div>
+          <div class="n3-hira">
+            さいきん、まいにち
+            うんどうする ように なりました。
+          </div>
+          <div class="n3-ko">
+            최근에는 매일 운동하게 되었습니다.
+          </div>
+          <div class="n3-explain">
+            <strong>변화:</strong>
+            이제 실제 생활 습관이 달라졌다.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        상황 2 — 일본 근무
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            日本で<ruby>働<rt>はたら</rt></ruby>くことにしました。
+          </div>
+          <div class="n3-hira">
+            にほんで はたらく ことに しました。
+          </div>
+          <div class="n3-ko">
+            일본에서 일하기로 했습니다.
+          </div>
+          <div class="n3-explain">
+            여러 선택지 중 본인이 일본 근무를 선택.
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            日本で<ruby>働<rt>はたら</rt></ruby>くことになりました。
+          </div>
+          <div class="n3-hira">
+            にほんで はたらく ことに なりました。
+          </div>
+          <div class="n3-ko">
+            일본에서 일하게 되었습니다.
+          </div>
+          <div class="n3-explain">
+            회사 배치·채용 등 여러 과정의 결과로
+            일본 근무가 결정됨.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="n3-vs">
+
+      <div class="n3-vs-title">
+        상황 3 — 일본어 사용
+      </div>
+
+      <div class="n3-vs-body">
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            できるだけ日本語で
+            <ruby>話<rt>はな</rt></ruby>すようにしています。
+          </div>
+          <div class="n3-hira">
+            できるだけ にほんごで
+            はなす ように しています。
+          </div>
+          <div class="n3-ko">
+            가능한 한 일본어로 말하려고 하고 있습니다.
+          </div>
+          <div class="n3-explain">
+            현재의 의식적인 연습.
+          </div>
+        </div>
+
+        <div class="n3-vs-item">
+          <div class="n3-jp">
+            <ruby>最近<rt>さいきん</rt></ruby>は
+            日本人の友達とも
+            <ruby>自然<rt>しぜん</rt></ruby>に
+            日本語で<ruby>話<rt>はな</rt></ruby>せるようになりました。
+          </div>
+          <div class="n3-hira">
+            さいきんは
+            にほんじんの ともだちとも
+            しぜんに
+            にほんごで はなせる ように なりました。
+          </div>
+          <div class="n3-ko">
+            최근에는 일본인 친구와도 자연스럽게
+            일본어로 이야기할 수 있게 되었습니다.
+          </div>
+          <div class="n3-explain">
+            연습의 결과로 생긴 능력 변화.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 12. 회화에서 네 문법을 모두 사용하기
+    </div>
+
+    <div class="n3-speaking">
+
+      <div class="n3-speaking-title">
+        💬 TOPIC 1 — 최근의 변화
+      </div>
+
+      아래 질문에 일본어로 대답해 보세요.
+
+      <ul>
+        <li>
+          <ruby>最近<rt>さいきん</rt></ruby>、
+          新しくすることにしたことはありますか。
+        </li>
+
+        <li>
+          最近、しないことにしたことはありますか。
+        </li>
+
+        <li>
+          最近、何かするようにしていますか。
+        </li>
+
+        <li>
+          昔と比べて、できるようになったことはありますか。
+        </li>
+
+        <li>
+          最近、しなくなったことはありますか。
+        </li>
+      </ul>
+
+    </div>
+
+
+    <div class="n3-speaking">
+
+      <div class="n3-speaking-title">
+        💬 TOPIC 2 — 일본어 공부
+      </div>
+
+      다음 표현을 최소 한 번씩 사용해서 대화해 보세요.
+
+      <div class="n3-chip-row">
+        <span class="n3-chip">ことにしました</span>
+        <span class="n3-chip">ようにしています</span>
+        <span class="n3-chip">ようになりました</span>
+      </div>
+
+      <ul>
+        <li>
+          日本語を勉強するために、
+          最近どんなことを始めましたか。
+        </li>
+
+        <li>
+          日本語を忘れないために、
+          何をするようにしていますか。
+        </li>
+
+        <li>
+          勉強を始めたころと比べて、
+          何ができるようになりましたか。
+        </li>
+
+        <li>
+          これから何を勉強することにしたいですか。
+        </li>
+      </ul>
+
+    </div>
+
+
+    <div class="n3-speaking">
+
+      <div class="n3-speaking-title">
+        💬 TOPIC 3 — 생활 습관
+      </div>
+
+      <ul>
+        <li>
+          <ruby>健康<rt>けんこう</rt></ruby>のために
+          何かするようにしていますか。
+        </li>
+
+        <li>
+          逆に、しないようにしていることはありますか。
+        </li>
+
+        <li>
+          昔と比べて、生活で変わったことはありますか。
+        </li>
+
+        <li>
+          最近、自分で新しく決めたルールはありますか。
+        </li>
+      </ul>
+
+      <div class="n3-note">
+        대답이 짧게 끝났다면
+        <strong>どうしてですか。</strong>,
+        <strong>いつからですか。</strong>,
+        <strong>それで何か変わりましたか。</strong>
+        등을 사용해 대화를 확장해 보세요.
+      </div>
+
+    </div>
+
+
+    <div class="n3-speaking">
+
+      <div class="n3-speaking-title">
+        💬 TOPIC 4 — 회사·학교의 규칙
+      </div>
+
+      이번에는 개인적인 결정뿐 아니라
+      <strong>ことになっている</strong>도 사용합니다.
+
+      <ul>
+        <li>
+          会社や学校では、
+          どんなルールがありますか。
+        </li>
+
+        <li>
+          何時までに行くことになっていますか。
+        </li>
+
+        <li>
+          服装について何か決まりがありますか。
+        </li>
+
+        <li>
+          最近、新しく決まったことはありますか。
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 13. 상황 카드 회화
+    </div>
+
+    <p class="n3-lead">
+      아래에서는 정답 문장을 읽지 않고
+      <strong>상황만 보고 직접 일본어를 만들어 봅니다.</strong>
+    </p>
+
+
+    <div class="n3-practice">
+      <strong>SCENE A — 건강 관리</strong>
+      <br><br>
+
+      당신은 최근 건강검진을 받았습니다.
+      의사가 운동을 더 하라고 했습니다.
+      그래서 다음과 같이 생활을 바꾸려고 합니다.
+      <br><br>
+
+      ・일주일에 세 번 운동하기로 했다.
+      <br>
+      ・엘리베이터 대신 계단을 이용하려고 한다.
+      <br>
+      ・밤늦게 음식을 먹지 않으려고 한다.
+      <br>
+      ・최근에는 아침에도 자연스럽게 일찍 일어나게 되었다.
+      <br><br>
+
+      <strong>ことにする / ようにする / ようになる</strong>를
+      구분해서 사용해 보세요.
+    </div>
+
+
+    <div class="n3-practice">
+      <strong>SCENE B — 일본 취업</strong>
+      <br><br>
+
+      당신은 한국에서 일하고 있었지만
+      일본 회사에 지원했습니다.
+      <br><br>
+
+      ・스스로 일본 회사에 지원하기로 했다.
+      <br>
+      ・면접에 합격해 다음 달부터 도쿄에서 일하게 되었다.
+      <br>
+      ・일본에서 일하기 위해 매일 일본어 뉴스를 듣고 있다.
+      <br>
+      ・최근에는 비즈니스 일본어도 어느 정도 알아들을 수 있게 되었다.
+      <br><br>
+
+      이 과정을 하나의 이야기로 연결해서 말해 보세요.
+    </div>
+
+
+    <div class="n3-practice">
+      <strong>SCENE C — 회사의 새로운 규칙</strong>
+      <br><br>
+
+      회사에서 회의가 있었습니다.
+      그 결과 새로운 근무 방식이 결정되었습니다.
+      <br><br>
+
+      ・다음 달부터 주 2회 재택근무를 하게 되었다.
+      <br>
+      ・회의는 온라인으로 진행하도록 되어 있다.
+      <br>
+      ・당신은 재택근무하는 날에는 아침에 운동하려고 한다.
+      <br><br>
+
+      <strong>ことになる / ことになっている / ようにする</strong>를
+      각각 사용해 보세요.
+    </div>
+
+  </div>
+
+
+  <div class="n3-section">
+
+    <div class="n3-section-title">
+      STEP 14. 최종 체크
+    </div>
+
+    <div class="n3-summary-grid">
+
+      <div class="n3-summary-card">
+        <strong>～ことにする</strong>
+        자신이 무엇을 할지
+        <strong>선택·결정</strong>한다.
+        <br><br>
+        例：
+        日本へ行くことにした。
+      </div>
+
+      <div class="n3-summary-card">
+        <strong>～ことになる</strong>
+        과정이나 외부 결정에 의해
+        <strong>어떤 결과가 정해진다.</strong>
+        <br><br>
+        例：
+        日本で働くことになった。
+      </div>
+
+      <div class="n3-summary-card">
+        <strong>～ことになっている</strong>
+        이미 정해진 결정이 유지되어
+        <strong>규칙·제도</strong>가 되어 있다.
+        <br><br>
+        例：
+        カードを使うことになっている。
+      </div>
+
+      <div class="n3-summary-card">
+        <strong>～ようにする</strong>
+        원하는 행동이나 상태가 실현되도록
+        <strong>의식적으로 노력</strong>한다.
+        <br><br>
+        例：
+        毎日話すようにしている。
+      </div>
+
+      <div class="n3-summary-card">
+        <strong>～ようになる</strong>
+        이전과 비교하여
+        <strong>능력·습관·상태가 변화</strong>한다.
+        <br><br>
+        例：
+        話せるようになった。
+      </div>
+
+    </div>
+
+
+    <div class="n3-formula">
+      決める
+      <span class="soft">결정</span>
+      →
+      努力する
+      <span class="soft">노력</span>
+      →
+      変わる
+      <span class="soft">변화</span>
+    </div>
+
+
+    <div class="n3-flow">
+
+      <div class="n3-flow-step">
+        日本語を毎日勉強する
+        <strong>ことにしました。</strong>
+        <br>
+        매일 일본어를 공부하기로 결정했습니다.
+      </div>
+
+      <div class="n3-flow-step">
+        毎日日本語を使う
+        <strong>ようにしています。</strong>
+        <br>
+        매일 일본어를 사용하려고 하고 있습니다.
+      </div>
+
+      <div class="n3-flow-step">
+        日本語で長く話せる
+        <strong>ようになりました。</strong>
+        <br>
+        일본어로 길게 이야기할 수 있게 되었습니다.
+      </div>
+
+    </div>
+
+
+    <div class="n3-important">
+      <strong>이번 문법의 핵심은 한국어 번역이 아닙니다.</strong>
+      <br><br>
+
+      「~하기로 하다」
+      「~하게 되다」
+      를 통째로 외우기보다,
+      <br><br>
+
+      <strong>こと</strong>는 행동을 하나의 내용으로 만들고,
+      <br>
+      <strong>よう</strong>는 특정한 상태나 모습을 가리키며,
+      <br>
+      <strong>する</strong>는 주체가 그렇게 만들고,
+      <br>
+      <strong>なる</strong>는 그러한 상태로 변화한다는
+      <br><br>
+
+      기본 구조를 이해하면
+      처음 보는 문장에서도 의미를 훨씬 쉽게 추론할 수 있습니다.
+    </div>
+
+
+    <div class="n3-speaking">
+
+      <div class="n3-speaking-title">
+        🎤 FINAL SPEAKING
+      </div>
+
+      다음 주제로 1~2분 정도 일본어로 이야기해 보세요.
+      <br><br>
+
+      <strong>
+        「この一年で、自分が決めたこと・続けていること・変わったこと」
+      </strong>
+
+      <div class="n3-hira">
+        この いちねんで、
+        じぶんが きめた こと・
+        つづけている こと・
+        かわった こと
+      </div>
+
+      <div class="n3-ko">
+        지난 1년 동안 내가 결정한 것,
+        계속 실천하고 있는 것,
+        그리고 달라진 것
+      </div>
+
+      <br>
+
+      반드시 다음 표현을 사용해 보세요.
+
+      <div class="n3-chip-row">
+        <span class="n3-chip">～ことにしました</span>
+        <span class="n3-chip">～ようにしています</span>
+        <span class="n3-chip">～ようになりました</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

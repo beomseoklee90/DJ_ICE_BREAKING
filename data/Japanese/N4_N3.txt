@@ -1,4 +1,4 @@
-N4~N3 학습
+て형
 <style>
   :root {
     --jp-bg: #f7f8fb;
