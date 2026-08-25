@@ -1,0 +1,3587 @@
+です[초급]
+<style>
+  /*
+    기존 「데스 회화」 자료의 현재 부정·과거 부정 패턴을 확장한 구성
+    0
+    1
+  */
+
+  .desu-title {
+    margin: 8px 0 12px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.35;
+    letter-spacing: -0.7px;
+    color: #202124;
+  }
+
+  .desu-subtitle {
+    margin: 0 0 28px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5f6368;
+  }
+
+  .desu-section {
+    margin-top: 42px;
+  }
+
+  .desu-section-title {
+    margin: 0 0 20px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #202124;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.45;
+    letter-spacing: -0.4px;
+  }
+
+  .desu-subhead {
+    margin: 28px 0 13px;
+    font-size: 19px;
+    font-weight: 850;
+    line-height: 1.5;
+  }
+
+  .desu-small-head {
+    margin: 20px 0 9px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .desu-lead {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #303134;
+  }
+
+  .desu-patterns {
+    margin: 20px 0 28px;
+    padding: 20px;
+    border: 2px solid #202124;
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .desu-pattern-title {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .desu-pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .desu-pattern-card {
+    padding: 14px 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+    background: #fafafa;
+  }
+
+  .desu-pattern-card strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .desu-pattern-card span {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .desu-formula {
+    margin: 20px 0;
+    padding: 19px 18px;
+    border-radius: 14px;
+    background: #202124;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.75;
+    text-align: center;
+  }
+
+  .desu-formula .soft {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.82;
+  }
+
+  .desu-box {
+    margin: 18px 0;
+    padding: 18px;
+    border: 1px solid #dadce0;
+    border-radius: 14px;
+    background: #fafafa;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .desu-point {
+    margin: 20px 0;
+    padding: 18px;
+    border-left: 5px solid #202124;
+    border-radius: 4px 12px 12px 4px;
+    background: #f4f4f4;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .desu-important {
+    margin: 20px 0;
+    padding: 18px;
+    border: 2px solid #202124;
+    border-radius: 14px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .desu-note {
+    margin: 18px 0;
+    padding: 16px 17px;
+    border-radius: 12px;
+    background: #f2f5f7;
+    color: #3c4043;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .desu-warning {
+    margin: 20px 0;
+    padding: 17px 18px;
+    border-left: 5px solid #8a6d1d;
+    border-radius: 4px 12px 12px 4px;
+    background: #fffaf0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .desu-highlight {
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  .desu-key {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: #ececec;
+    font-weight: 800;
+  }
+
+  .desu-flow {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f5f5f5;
+  }
+
+  .desu-flow-step {
+    position: relative;
+    margin: 0;
+    padding: 11px 10px 11px 40px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .desu-flow-step::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 20px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #202124;
+  }
+
+  .desu-flow-step + .desu-flow-step::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: -10px;
+    width: 1px;
+    height: 25px;
+    background: #b8b8b8;
+  }
+
+  .desu-breakdown {
+    margin: 18px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .desu-breakdown li {
+    margin: 9px 0;
+    padding: 13px 15px;
+    border-radius: 11px;
+    background: #f7f7f7;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .desu-breakdown strong {
+    font-weight: 900;
+  }
+
+  .desu-arrow {
+    padding: 0 5px;
+    font-weight: 900;
+  }
+
+  .desu-jp {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 2;
+    color: #202124;
+  }
+
+  .desu-hira {
+    margin-top: -3px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #777;
+  }
+
+  .desu-ko {
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .desu-explain {
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px dashed #d5d5d5;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #555;
+  }
+
+  .desu-example {
+    margin: 13px 0;
+    padding: 16px 17px;
+    border: 1px solid #dedede;
+    border-radius: 13px;
+    background: #fff;
+  }
+
+  .desu-example-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    color: #666;
+  }
+
+  ruby {
+    ruby-position: over;
+  }
+
+  rt {
+    font-size: 0.55em;
+    font-weight: 500;
+    color: #666;
+  }
+
+  .desu-compare {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .desu-compare th,
+  .desu-compare td {
+    padding: 12px 10px;
+    border: 1px solid #d8d8d8;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .desu-compare th {
+    background: #f2f2f2;
+    font-weight: 900;
+  }
+
+  .desu-compare td:first-child {
+    font-weight: 800;
+  }
+
+  .desu-vs {
+    margin: 22px 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .desu-vs-title {
+    padding: 12px 15px;
+    background: #ededed;
+    font-weight: 900;
+    font-size: 15px;
+  }
+
+  .desu-vs-body {
+    padding: 17px;
+  }
+
+  .desu-vs-item {
+    padding: 12px 0;
+  }
+
+  .desu-vs-item + .desu-vs-item {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .desu-word-card {
+    margin: 14px 0;
+    padding: 15px 17px;
+    border-radius: 12px;
+    background: #f7f7f7;
+  }
+
+  .desu-word-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: baseline;
+    margin: 6px 0;
+  }
+
+  .desu-word {
+    min-width: 80px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .desu-word-role {
+    display: inline-block;
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .desu-word-meaning {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .desu-construction {
+    margin: 18px 0;
+    padding: 17px;
+    border-radius: 13px;
+    background: #f5f5f5;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .desu-construction-line {
+    margin: 7px 0;
+  }
+
+  .desu-construction-part {
+    display: inline-block;
+    margin: 2px 3px 2px 0;
+    padding: 4px 7px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: #fff;
+    font-weight: 800;
+  }
+
+  .desu-construction-role {
+    font-size: 13px;
+    color: #666;
+  }
+
+  .desu-practice {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .desu-speaking {
+    margin: 21px 0;
+    padding: 18px;
+    border: 2px dashed #aaa;
+    border-radius: 14px;
+    background: #fcfcfc;
+  }
+
+  .desu-speaking-title {
+    margin-bottom: 11px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .desu-speaking ul {
+    margin: 8px 0 0;
+    padding-left: 22px;
+  }
+
+  .desu-speaking li {
+    margin: 9px 0;
+    line-height: 1.7;
+  }
+
+  .desu-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+  }
+
+  .desu-chip {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .desu-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .desu-summary-card {
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .desu-summary-card strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+
+  .desu-divider {
+    height: 1px;
+    margin: 35px 0;
+    border: 0;
+    background: #dadce0;
+  }
+
+  .desu-question {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px solid #cfcfcf;
+    border-radius: 14px;
+    background: #fff;
+  }
+
+  .desu-question-number {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #666;
+  }
+
+  .desu-question-text {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 750;
+    line-height: 1.85;
+  }
+
+  .desu-answer {
+    margin-top: 14px;
+    padding: 14px 15px;
+    border-radius: 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .desu-answer-title {
+    margin-bottom: 5px;
+    font-weight: 900;
+  }
+
+  .desu-small {
+    font-size: 13px;
+    color: #6a6a6a;
+  }
+
+  @media (max-width: 640px) {
+    .desu-title {
+      font-size: 26px;
+    }
+
+    .desu-section-title {
+      font-size: 21px;
+    }
+
+    .desu-subhead {
+      font-size: 18px;
+    }
+
+    .desu-jp {
+      font-size: 18px;
+    }
+
+    .desu-pattern-grid,
+    .desu-summary-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .desu-compare {
+      font-size: 13px;
+    }
+
+    .desu-compare th,
+    .desu-compare td {
+      padding: 9px 7px;
+    }
+
+    .desu-patterns,
+    .desu-box,
+    .desu-point,
+    .desu-important,
+    .desu-practice,
+    .desu-speaking,
+    .desu-question {
+      padding: 15px;
+    }
+  }
+</style>
+
+<div class="desu-title">
+  초급 일본어 문법 + 회화<br>
+  명사 부정 표현 완전 정리
+</div>
+
+<div class="desu-subtitle">
+  이번 학습에서는
+  <strong>「ではない・じゃない・ではありません・なかった」</strong>를
+  따로따로 외우지 않고,
+  <strong>현재 / 과거, 반말 / 존댓말</strong>의 관계를 한꺼번에 정리합니다.
+  <br><br>
+  특히 <strong>ない → なかった</strong>,
+  <strong>ない + です</strong>,
+  <strong>なかった + です</strong>가 어떻게 연결되는지 이해합니다.
+</div>
+
+
+<div class="desu-patterns">
+
+  <div class="desu-pattern-title">
+    먼저 전체 패턴을 한꺼번에 보기
+  </div>
+
+  <div class="desu-pattern-grid">
+
+    <div class="desu-pattern-card">
+      <strong>① ではない</strong>
+      <span>~이/가 아니다 · 반말 / 보통체</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>② じゃない</strong>
+      <span>~이/가 아니야 · ではない의 회화형</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>③ ではないです</strong>
+      <span>~이/가 아닙니다 · ない + です</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>④ じゃないです</strong>
+      <span>~이/가 아닙니다 · 회화에서 자주 사용</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑤ ではありません</strong>
+      <span>~이/가 아닙니다 · 정중한 부정</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑥ じゃありません</strong>
+      <span>~이/가 아닙니다 · 조금 더 회화적</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑦ ではなかった</strong>
+      <span>~이/가 아니었다 · ない의 과거형</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑧ じゃなかった</strong>
+      <span>~이/가 아니었어 · 회화형 과거 부정</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑨ ではなかったです</strong>
+      <span>~이/가 아니었습니다 · なかった + です</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑩ じゃなかったです</strong>
+      <span>~이/가 아니었습니다 · 일상 회화에서 자연스러움</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑪ ではありませんでした</strong>
+      <span>~이/가 아니었습니다 · 정중한 과거 부정</span>
+    </div>
+
+    <div class="desu-pattern-card">
+      <strong>⑫ じゃありませんでした</strong>
+      <span>~이/가 아니었습니다 · 회화적인 정중체</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-important">
+  <strong>전체 흐름부터 기억하세요.</strong>
+  <br><br>
+
+  현재 반말
+  <br>
+  <strong>ではない</strong>
+  <br><br>
+
+  ↓ 회화에서는
+  <br><br>
+
+  <strong>じゃない</strong>
+  <br><br>
+
+  ↓ 존댓말로 만들면
+  <br><br>
+
+  <strong>ではないです / じゃないです</strong>
+  <br><br>
+
+  또는
+  <br><br>
+
+  <strong>ではありません / じゃありません</strong>
+  <br><br>
+
+  그리고 과거형은
+  <br><br>
+
+  <strong>ない → なかった</strong>
+  <br><br>
+
+  따라서
+  <br><br>
+
+  <strong>ではなかった / じゃなかった</strong>
+  <br><br>
+
+  존댓말은
+  <br><br>
+
+  <strong>ではなかったです / じゃなかったです</strong>
+  <br><br>
+
+  또는
+  <br><br>
+
+  <strong>ではありませんでした / じゃありませんでした</strong>
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 1. 「ではない」 = ~이/가 아니다
+  </div>
+
+  <div class="desu-formula">
+    명사 + ではない
+    <br>
+    <span class="soft">= ~이/가 아니다</span>
+  </div>
+
+  <p class="desu-lead">
+    명사 뒤에 <strong>ではない</strong>를 붙이면
+    <strong>“~이/가 아니다”</strong>라는 뜻이 됩니다.
+    <br><br>
+    여기서는 <strong>では</strong>를 하나의 덩어리로 보고,
+    뒤의 <strong>ない</strong>가 부정을 나타낸다고 이해하면 됩니다.
+  </p>
+
+  <div class="desu-point">
+    <strong>学生ではない</strong>
+    <br>
+    학생이 아니다
+    <br><br>
+
+    <strong>先生ではない</strong>
+    <br>
+    선생님이 아니다
+    <br><br>
+
+    <strong>日本人ではない</strong>
+    <br>
+    일본인이 아니다
+  </div>
+
+
+  <div class="desu-subhead">
+    ① 「ない」는 반말 / 보통체
+  </div>
+
+  <p class="desu-lead">
+    문장이 <strong>ない</strong>로 끝나면
+    기본적으로 <strong>보통체</strong>입니다.
+    <br><br>
+    친구나 가족처럼 가까운 사람과 이야기할 때 많이 사용합니다.
+  </p>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>私<rt>わたし</rt></ruby>は
+      <ruby>学生<rt>がくせい</rt></ruby>ではない。
+    </div>
+
+    <div class="desu-hira">
+      わたしは がくせいでは ない。
+    </div>
+
+    <div class="desu-ko">
+      나는 학생이 아니다.
+    </div>
+
+    <div class="desu-explain">
+      私は = 나는
+      <br>
+      学生 = 학생
+      <br>
+      ではない = ~이/가 아니다
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      あの<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>先生<rt>せんせい</rt></ruby>ではない。
+    </div>
+
+    <div class="desu-hira">
+      あの ひとは せんせいでは ない。
+    </div>
+
+    <div class="desu-ko">
+      저 사람은 선생님이 아니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>日曜日<rt>にちようび</rt></ruby>ではない。
+    </div>
+
+    <div class="desu-hira">
+      きょうは にちようびでは ない。
+    </div>
+
+    <div class="desu-ko">
+      오늘은 일요일이 아니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 4</div>
+
+    <div class="desu-jp">
+      これは
+      <ruby>私<rt>わたし</rt></ruby>の
+      <ruby>本<rt>ほん</rt></ruby>ではない。
+    </div>
+
+    <div class="desu-hira">
+      これは わたしの ほんでは ない。
+    </div>
+
+    <div class="desu-ko">
+      이것은 내 책이 아니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 5</div>
+
+    <div class="desu-jp">
+      この<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>日本人<rt>にほんじん</rt></ruby>ではない。
+    </div>
+
+    <div class="desu-hira">
+      この ひとは にほんじんでは ない。
+    </div>
+
+    <div class="desu-ko">
+      이 사람은 일본인이 아니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 2. 「では」는 회화에서 「じゃ」가 된다
+  </div>
+
+  <div class="desu-formula">
+    では → じゃ
+    <br>
+    <span class="soft">회화에서 줄어든 형태</span>
+  </div>
+
+  <p class="desu-lead">
+    일상 회화에서는
+    <strong>では</strong>가 <strong>じゃ</strong>로 줄어드는 경우가 매우 많습니다.
+    <br><br>
+    따라서
+    <strong>ではない → じゃない</strong>가 됩니다.
+  </p>
+
+  <div class="desu-important">
+    <strong>ではない</strong>
+    <br>
+    ~이/가 아니다
+    <br><br>
+
+    ↓ 회화에서
+    <br><br>
+
+    <strong>じゃない</strong>
+    <br>
+    ~이/가 아니야
+  </div>
+
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      같은 뜻 비교
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>学生<rt>がくせい</rt></ruby>ではない。
+        </div>
+
+        <div class="desu-hira">
+          わたしは がくせいでは ない。
+        </div>
+
+        <div class="desu-ko">
+          나는 학생이 아니다.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>学生<rt>がくせい</rt></ruby>じゃない。
+        </div>
+
+        <div class="desu-hira">
+          わたしは がくせいじゃ ない。
+        </div>
+
+        <div class="desu-ko">
+          나는 학생이 아니야.
+        </div>
+
+        <div class="desu-explain">
+          뜻은 같지만
+          <strong>じゃない</strong>가 실제 회화에서는 더 편하고 자연스럽게 들립니다.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      あの<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>学生<rt>がくせい</rt></ruby>じゃない。
+    </div>
+
+    <div class="desu-hira">
+      あの ひとは がくせいじゃ ない。
+    </div>
+
+    <div class="desu-ko">
+      저 사람은 학생이 아니야.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みじゃない。
+    </div>
+
+    <div class="desu-hira">
+      きょうは やすみじゃ ない。
+    </div>
+
+    <div class="desu-ko">
+      오늘은 쉬는 날이 아니야.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      これは
+      <ruby>私<rt>わたし</rt></ruby>の
+      <ruby>傘<rt>かさ</rt></ruby>じゃない。
+    </div>
+
+    <div class="desu-hira">
+      これは わたしの かさじゃ ない。
+    </div>
+
+    <div class="desu-ko">
+      이것은 내 우산이 아니야.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 4</div>
+
+    <div class="desu-jp">
+      <ruby>田中<rt>たなか</rt></ruby>さんは
+      <ruby>会社員<rt>かいしゃいん</rt></ruby>じゃない。
+    </div>
+
+    <div class="desu-hira">
+      たなかさんは かいしゃいんじゃ ない。
+    </div>
+
+    <div class="desu-ko">
+      다나카 씨는 회사원이 아니야.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 3. 「ないです」 = ない + です
+  </div>
+
+  <div class="desu-formula">
+    ない + です
+    <br>
+    ↓
+    <br>
+    ないです
+    <br>
+    <span class="soft">반말 표현을 정중하게</span>
+  </div>
+
+  <p class="desu-lead">
+    <strong>ない</strong>만 쓰면 보통체이지만,
+    뒤에 <strong>です</strong>를 붙이면
+    상대에게 정중하게 말할 수 있습니다.
+  </p>
+
+  <div class="desu-flow">
+
+    <div class="desu-flow-step">
+      <strong>学生じゃない。</strong>
+      <br>
+      학생이 아니야.
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>学生じゃないです。</strong>
+      <br>
+      학생이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-point">
+    <strong>じゃない</strong>
+    <br>
+    반말
+    <br><br>
+
+    +
+    <br><br>
+
+    <strong>です</strong>
+    <br>
+    정중하게 말하는 요소
+    <br><br>
+
+    ↓
+    <br><br>
+
+    <strong>じゃないです</strong>
+    <br>
+    아닙니다
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>私<rt>わたし</rt></ruby>は
+      <ruby>学生<rt>がくせい</rt></ruby>じゃないです。
+    </div>
+
+    <div class="desu-hira">
+      わたしは がくせいじゃ ないです。
+    </div>
+
+    <div class="desu-ko">
+      저는 학생이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      あの<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>先生<rt>せんせい</rt></ruby>じゃないです。
+    </div>
+
+    <div class="desu-hira">
+      あの ひとは せんせいじゃ ないです。
+    </div>
+
+    <div class="desu-ko">
+      저 사람은 선생님이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>土曜日<rt>どようび</rt></ruby>じゃないです。
+    </div>
+
+    <div class="desu-hira">
+      きょうは どようびじゃ ないです。
+    </div>
+
+    <div class="desu-ko">
+      오늘은 토요일이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 4</div>
+
+    <div class="desu-jp">
+      これは
+      <ruby>私<rt>わたし</rt></ruby>の
+      <ruby>鞄<rt>かばん</rt></ruby>じゃないです。
+    </div>
+
+    <div class="desu-hira">
+      これは わたしの かばんじゃ ないです。
+    </div>
+
+    <div class="desu-ko">
+      이것은 제 가방이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 5</div>
+
+    <div class="desu-jp">
+      <ruby>山田<rt>やまだ</rt></ruby>さんは
+      <ruby>韓国人<rt>かんこくじん</rt></ruby>じゃないです。
+    </div>
+
+    <div class="desu-hira">
+      やまださんは かんこくじんじゃ ないです。
+    </div>
+
+    <div class="desu-ko">
+      야마다 씨는 한국인이 아닙니다.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 4. 「ではありません」 = 정중한 부정
+  </div>
+
+  <div class="desu-formula">
+    명사 + ではありません
+    <br>
+    <span class="soft">= ~이/가 아닙니다</span>
+  </div>
+
+  <p class="desu-lead">
+    <strong>ではありません</strong>도
+    <strong>“~이/가 아닙니다”</strong>라는 뜻입니다.
+    <br><br>
+    앞에서 배운 <strong>ではないです</strong>와 뜻은 거의 같지만,
+    <strong>ではありません</strong> 쪽이 더 정중하고 단정한 느낌입니다.
+  </p>
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      같은 뜻 비교
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>学生<rt>がくせい</rt></ruby>じゃないです。
+        </div>
+
+        <div class="desu-hira">
+          わたしは がくせいじゃ ないです。
+        </div>
+
+        <div class="desu-ko">
+          저는 학생이 아닙니다.
+        </div>
+
+        <div class="desu-explain">
+          일상 회화에서 자연스럽고 자주 사용하는 정중한 표현입니다.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>私<rt>わたし</rt></ruby>は
+          <ruby>学生<rt>がくせい</rt></ruby>ではありません。
+        </div>
+
+        <div class="desu-hira">
+          わたしは がくせいでは ありません。
+        </div>
+
+        <div class="desu-ko">
+          저는 학생이 아닙니다.
+        </div>
+
+        <div class="desu-explain">
+          뜻은 같지만 더 정중하고 공식적인 느낌이 있습니다.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="desu-important">
+    <strong>초급에서는 이렇게 구분하면 충분합니다.</strong>
+    <br><br>
+
+    <strong>じゃない</strong>
+    <br>
+    아니야
+    <br><br>
+
+    <strong>じゃないです</strong>
+    <br>
+    아닙니다 · 일상 회화에서 자연스러움
+    <br><br>
+
+    <strong>ではありません</strong>
+    <br>
+    아닙니다 · 더 정중하고 단정한 표현
+  </div>
+
+
+  <div class="desu-subhead">
+    ① 「ありません」은 무엇일까?
+  </div>
+
+  <p class="desu-lead">
+    <strong>あります</strong>는
+    “있습니다”라는 뜻입니다.
+    <br><br>
+    이것을 부정하면
+    <strong>ありません</strong>,
+    즉 <strong>“없습니다”</strong>가 됩니다.
+    <br><br>
+    명사 부정에서는
+    <strong>では + ありません</strong>이 합쳐져
+    <strong>“~이/가 아닙니다”</strong>라는 정중한 표현이 됩니다.
+  </p>
+
+  <div class="desu-flow">
+
+    <div class="desu-flow-step">
+      <strong>あります</strong>
+      <br>
+      있습니다
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>ありません</strong>
+      <br>
+      없습니다
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>学生ではありません</strong>
+      <br>
+      학생이 아닙니다
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>私<rt>わたし</rt></ruby>は
+      <ruby>学生<rt>がくせい</rt></ruby>ではありません。
+    </div>
+
+    <div class="desu-hira">
+      わたしは がくせいでは ありません。
+    </div>
+
+    <div class="desu-ko">
+      저는 학생이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      <ruby>田中<rt>たなか</rt></ruby>さんは
+      <ruby>先生<rt>せんせい</rt></ruby>ではありません。
+    </div>
+
+    <div class="desu-hira">
+      たなかさんは せんせいでは ありません。
+    </div>
+
+    <div class="desu-ko">
+      다나카 씨는 선생님이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>日曜日<rt>にちようび</rt></ruby>ではありません。
+    </div>
+
+    <div class="desu-hira">
+      きょうは にちようびでは ありません。
+    </div>
+
+    <div class="desu-ko">
+      오늘은 일요일이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 4</div>
+
+    <div class="desu-jp">
+      これは
+      <ruby>私<rt>わたし</rt></ruby>の
+      <ruby>本<rt>ほん</rt></ruby>ではありません。
+    </div>
+
+    <div class="desu-hira">
+      これは わたしの ほんでは ありません。
+    </div>
+
+    <div class="desu-ko">
+      이것은 제 책이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 5</div>
+
+    <div class="desu-jp">
+      あの<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>日本人<rt>にほんじん</rt></ruby>ではありません。
+    </div>
+
+    <div class="desu-hira">
+      あの ひとは にほんじんでは ありません。
+    </div>
+
+    <div class="desu-ko">
+      저 사람은 일본인이 아닙니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 5. 「では」를 「じゃ」로 바꾸면?
+  </div>
+
+  <div class="desu-formula">
+    ではありません
+    <br>
+    ↓
+    <br>
+    じゃありません
+  </div>
+
+  <p class="desu-lead">
+    앞에서 본 것과 마찬가지로
+    <strong>では → じゃ</strong>로 줄일 수 있습니다.
+    <br><br>
+    따라서
+    <strong>ではありません → じゃありません</strong>이 됩니다.
+  </p>
+
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      ではありません vs じゃありません
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>学生<rt>がくせい</rt></ruby>ではありません。
+        </div>
+
+        <div class="desu-hira">
+          がくせいでは ありません。
+        </div>
+
+        <div class="desu-ko">
+          학생이 아닙니다.
+        </div>
+
+        <div class="desu-explain">
+          더 정중하고 단정한 형태.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>学生<rt>がくせい</rt></ruby>じゃありません。
+        </div>
+
+        <div class="desu-hira">
+          がくせいじゃ ありません。
+        </div>
+
+        <div class="desu-ko">
+          학생이 아닙니다.
+        </div>
+
+        <div class="desu-explain">
+          정중함은 유지하면서 조금 더 회화적으로 들릴 수 있습니다.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="desu-note">
+    실제 일상 대화에서는
+    <strong>じゃないです</strong>도 매우 많이 사용합니다.
+    <br><br>
+    그래서 초급 회화에서는
+    <strong>じゃないです</strong>를 먼저 익혀도 좋고,
+    동시에 <strong>ではありません</strong> 형태도 알아 두면 됩니다.
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>明日<rt>あした</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みじゃありません。
+    </div>
+
+    <div class="desu-hira">
+      あしたは やすみじゃ ありません。
+    </div>
+
+    <div class="desu-ko">
+      내일은 쉬는 날이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      <ruby>山田<rt>やまだ</rt></ruby>さんは
+      <ruby>会社員<rt>かいしゃいん</rt></ruby>じゃありません。
+    </div>
+
+    <div class="desu-hira">
+      やまださんは かいしゃいんじゃ ありません。
+    </div>
+
+    <div class="desu-ko">
+      야마다 씨는 회사원이 아닙니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 6. 「ない」의 과거형은 「なかった」
+  </div>
+
+  <div class="desu-formula">
+    ない → なかった
+    <br>
+    <span class="soft">아니다 → 아니었다</span>
+  </div>
+
+  <p class="desu-lead">
+    이제 현재가 아니라
+    <strong>과거의 부정</strong>을 만들어 봅니다.
+    <br><br>
+    가장 중요한 규칙은 하나입니다.
+  </p>
+
+  <div class="desu-important">
+    <strong>ない의 과거형 = なかった</strong>
+    <br><br>
+
+    ない
+    <br>
+    아니다
+    <br><br>
+
+    ↓ 과거
+    <br><br>
+
+    なかった
+    <br>
+    아니었다
+  </div>
+
+
+  <div class="desu-flow">
+
+    <div class="desu-flow-step">
+      <strong>学生ではない</strong>
+      <br>
+      학생이 아니다
+    </div>
+
+    <div class="desu-flow-step">
+      ない를 과거형으로
+      <br>
+      <strong>ない → なかった</strong>
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>学生ではなかった</strong>
+      <br>
+      학생이 아니었다
+    </div>
+
+  </div>
+
+
+  <div class="desu-subhead">
+    ① ではなかった
+  </div>
+
+  <div class="desu-formula">
+    명사 + ではなかった
+    <br>
+    <span class="soft">= ~이/가 아니었다</span>
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>去年<rt>きょねん</rt></ruby>、
+      <ruby>私<rt>わたし</rt></ruby>は
+      <ruby>学生<rt>がくせい</rt></ruby>ではなかった。
+    </div>
+
+    <div class="desu-hira">
+      きょねん、わたしは がくせいでは なかった。
+    </div>
+
+    <div class="desu-ko">
+      작년에 나는 학생이 아니었다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>日曜日<rt>にちようび</rt></ruby>ではなかった。
+    </div>
+
+    <div class="desu-hira">
+      きのうは にちようびでは なかった。
+    </div>
+
+    <div class="desu-ko">
+      어제는 일요일이 아니었다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みではなかった。
+    </div>
+
+    <div class="desu-hira">
+      きのうは やすみでは なかった。
+    </div>
+
+    <div class="desu-ko">
+      어제는 쉬는 날이 아니었다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 4</div>
+
+    <div class="desu-jp">
+      これは
+      <ruby>私<rt>わたし</rt></ruby>の
+      <ruby>本<rt>ほん</rt></ruby>ではなかった。
+    </div>
+
+    <div class="desu-hira">
+      これは わたしの ほんでは なかった。
+    </div>
+
+    <div class="desu-ko">
+      이것은 내 책이 아니었다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-subhead">
+    ② 회화에서는 「じゃなかった」
+  </div>
+
+  <div class="desu-formula">
+    ではなかった
+    <br>
+    ↓
+    <br>
+    じゃなかった
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みじゃなかった。
+    </div>
+
+    <div class="desu-hira">
+      きのうは やすみじゃ なかった。
+    </div>
+
+    <div class="desu-ko">
+      어제는 쉬는 날이 아니었어.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      あの<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>先生<rt>せんせい</rt></ruby>じゃなかった。
+    </div>
+
+    <div class="desu-hira">
+      あの ひとは せんせいじゃ なかった。
+    </div>
+
+    <div class="desu-ko">
+      저 사람은 선생님이 아니었어.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      <ruby>田中<rt>たなか</rt></ruby>さんは
+      <ruby>学生<rt>がくせい</rt></ruby>じゃなかった。
+    </div>
+
+    <div class="desu-hira">
+      たなかさんは がくせいじゃ なかった。
+    </div>
+
+    <div class="desu-ko">
+      다나카 씨는 학생이 아니었어.
+    </div>
+
+  </div>
+
+
+  <div class="desu-important">
+    여기까지의 규칙은 매우 단순합니다.
+    <br><br>
+
+    <strong>ない</strong>
+    <br>
+    아니다
+    <br><br>
+
+    ↓
+    <br><br>
+
+    <strong>なかった</strong>
+    <br>
+    아니었다
+    <br><br>
+
+    따라서
+    <br><br>
+
+    <strong>じゃない → じゃなかった</strong>
+    <br>
+    아니야 → 아니었어
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 7. 「なかったです」 = なかった + です
+  </div>
+
+  <div class="desu-formula">
+    なかった + です
+    <br>
+    ↓
+    <br>
+    なかったです
+    <br>
+    <span class="soft">아니었다 → 아니었습니다</span>
+  </div>
+
+  <p class="desu-lead">
+    앞에서 현재형
+    <strong>ない + です → ないです</strong>를 배웠습니다.
+    <br><br>
+    과거도 같은 방식으로 생각할 수 있습니다.
+  </p>
+
+
+  <div class="desu-flow">
+
+    <div class="desu-flow-step">
+      <strong>じゃない</strong>
+      <br>
+      아니야
+    </div>
+
+    <div class="desu-flow-step">
+      과거형
+      <br>
+      <strong>じゃなかった</strong>
+      <br>
+      아니었어
+    </div>
+
+    <div class="desu-flow-step">
+      です를 붙여 정중하게
+      <br>
+      <strong>じゃなかったです</strong>
+      <br>
+      아니었습니다
+    </div>
+
+  </div>
+
+
+  <div class="desu-point">
+    <strong>じゃなかった</strong>
+    <br>
+    반말 과거 부정
+    <br><br>
+
+    +
+    <br><br>
+
+    <strong>です</strong>
+    <br>
+    정중하게 말하는 요소
+    <br><br>
+
+    ↓
+    <br><br>
+
+    <strong>じゃなかったです</strong>
+    <br>
+    아니었습니다
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みじゃなかったです。
+    </div>
+
+    <div class="desu-hira">
+      きのうは やすみじゃ なかったです。
+    </div>
+
+    <div class="desu-ko">
+      어제는 쉬는 날이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      <ruby>去年<rt>きょねん</rt></ruby>、
+      <ruby>私<rt>わたし</rt></ruby>は
+      <ruby>会社員<rt>かいしゃいん</rt></ruby>じゃなかったです。
+    </div>
+
+    <div class="desu-hira">
+      きょねん、わたしは かいしゃいんじゃ なかったです。
+    </div>
+
+    <div class="desu-ko">
+      작년에 저는 회사원이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      あの<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>先生<rt>せんせい</rt></ruby>じゃなかったです。
+    </div>
+
+    <div class="desu-hira">
+      あの ひとは せんせいじゃ なかったです。
+    </div>
+
+    <div class="desu-ko">
+      저 사람은 선생님이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 4</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>月曜日<rt>げつようび</rt></ruby>じゃなかったです。
+    </div>
+
+    <div class="desu-hira">
+      きのうは げつようびじゃ なかったです。
+    </div>
+
+    <div class="desu-ko">
+      어제는 월요일이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 5</div>
+
+    <div class="desu-jp">
+      これは
+      <ruby>私<rt>わたし</rt></ruby>の
+      <ruby>傘<rt>かさ</rt></ruby>じゃなかったです。
+    </div>
+
+    <div class="desu-hira">
+      これは わたしの かさじゃ なかったです。
+    </div>
+
+    <div class="desu-ko">
+      이것은 제 우산이 아니었습니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 8. 「ではありませんでした」 = 정중한 과거 부정
+  </div>
+
+  <div class="desu-formula">
+    ではありません + でした
+    <br>
+    ↓
+    <br>
+    ではありませんでした
+    <br>
+    <span class="soft">= ~이/가 아니었습니다</span>
+  </div>
+
+  <p class="desu-lead">
+    앞에서 현재의 정중한 부정으로
+    <strong>ではありません</strong>을 배웠습니다.
+    <br><br>
+    이것을 과거로 만들면
+    <strong>ではありませんでした</strong>가 됩니다.
+  </p>
+
+
+  <div class="desu-flow">
+
+    <div class="desu-flow-step">
+      <strong>学生ではありません。</strong>
+      <br>
+      학생이 아닙니다.
+    </div>
+
+    <div class="desu-flow-step">
+      과거의 정중한 표현
+      <br>
+      <strong>学生ではありませんでした。</strong>
+    </div>
+
+    <div class="desu-flow-step">
+      자연스러운 한국어
+      <br>
+      <strong>학생이 아니었습니다.</strong>
+    </div>
+
+  </div>
+
+
+  <div class="desu-subhead">
+    ① 문장을 세부적으로 나누어 보기
+  </div>
+
+  <div class="desu-construction">
+
+    <div class="desu-construction-line">
+      <span class="desu-construction-part">学生</span>
+      <span class="desu-construction-role">학생</span>
+    </div>
+
+    <div class="desu-construction-line">
+      +
+    </div>
+
+    <div class="desu-construction-line">
+      <span class="desu-construction-part">では</span>
+      <span class="desu-construction-role">명사 뒤에서 부정 표현과 연결</span>
+    </div>
+
+    <div class="desu-construction-line">
+      +
+    </div>
+
+    <div class="desu-construction-line">
+      <span class="desu-construction-part">ありません</span>
+      <span class="desu-construction-role">정중한 부정</span>
+    </div>
+
+    <div class="desu-construction-line">
+      +
+    </div>
+
+    <div class="desu-construction-line">
+      <span class="desu-construction-part">でした</span>
+      <span class="desu-construction-role">과거의 정중한 형태</span>
+    </div>
+
+    <div class="desu-construction-line">
+      ↓
+    </div>
+
+    <div class="desu-construction-line">
+      <strong>学生ではありませんでした。</strong>
+      <br>
+      학생이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-note">
+    초급 단계에서는
+    <strong>「ではありません」에 과거의 「でした」가 붙어서
+    「ではありませんでした」가 된다</strong>고 이해하면 충분합니다.
+    <br><br>
+    형태를 하나의 덩어리로도 꼭 기억해 주세요.
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 1</div>
+
+    <div class="desu-jp">
+      <ruby>去年<rt>きょねん</rt></ruby>、
+      <ruby>私<rt>わたし</rt></ruby>は
+      <ruby>学生<rt>がくせい</rt></ruby>ではありませんでした。
+    </div>
+
+    <div class="desu-hira">
+      きょねん、わたしは がくせいでは ありませんでした。
+    </div>
+
+    <div class="desu-ko">
+      작년에 저는 학생이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 2</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>日曜日<rt>にちようび</rt></ruby>ではありませんでした。
+    </div>
+
+    <div class="desu-hira">
+      きのうは にちようびでは ありませんでした。
+    </div>
+
+    <div class="desu-ko">
+      어제는 일요일이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 3</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みではありませんでした。
+    </div>
+
+    <div class="desu-hira">
+      きのうは やすみでは ありませんでした。
+    </div>
+
+    <div class="desu-ko">
+      어제는 쉬는 날이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 4</div>
+
+    <div class="desu-jp">
+      あの<ruby>人<rt>ひと</rt></ruby>は
+      <ruby>先生<rt>せんせい</rt></ruby>ではありませんでした。
+    </div>
+
+    <div class="desu-hira">
+      あの ひとは せんせいでは ありませんでした。
+    </div>
+
+    <div class="desu-ko">
+      저 사람은 선생님이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">EXAMPLE 5</div>
+
+    <div class="desu-jp">
+      これは
+      <ruby>私<rt>わたし</rt></ruby>の
+      <ruby>傘<rt>かさ</rt></ruby>ではありませんでした。
+    </div>
+
+    <div class="desu-hira">
+      これは わたしの かさでは ありませんでした。
+    </div>
+
+    <div class="desu-ko">
+      이것은 제 우산이 아니었습니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 9. 「なかったです」와 「ありませんでした」
+  </div>
+
+  <p class="desu-lead">
+    이제 같은 의미를 만드는 두 가지 방법을 비교합니다.
+    <br><br>
+    둘 다 한국어로는
+    <strong>“~이/가 아니었습니다”</strong>라고 번역할 수 있습니다.
+  </p>
+
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      같은 의미, 다른 형태
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+
+        <div class="desu-jp">
+          <ruby>学生<rt>がくせい</rt></ruby>じゃなかったです。
+        </div>
+
+        <div class="desu-hira">
+          がくせいじゃ なかったです。
+        </div>
+
+        <div class="desu-ko">
+          학생이 아니었습니다.
+        </div>
+
+        <div class="desu-explain">
+          <strong>じゃなかった + です</strong>
+          <br>
+          회화에서 자연스럽고 부드럽게 사용할 수 있습니다.
+        </div>
+
+      </div>
+
+      <div class="desu-vs-item">
+
+        <div class="desu-jp">
+          <ruby>学生<rt>がくせい</rt></ruby>ではありませんでした。
+        </div>
+
+        <div class="desu-hira">
+          がくせいでは ありませんでした。
+        </div>
+
+        <div class="desu-ko">
+          학생이 아니었습니다.
+        </div>
+
+        <div class="desu-explain">
+          보다 정중하고 단정한 형태입니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="desu-important">
+    <strong>두 가지 길이 있습니다.</strong>
+    <br><br>
+
+    ① 「ない」 계열
+    <br><br>
+
+    <strong>ない → なかった → なかったです</strong>
+    <br><br>
+
+    ② 「ありません」 계열
+    <br><br>
+
+    <strong>ありません → ありませんでした</strong>
+  </div>
+
+
+  <div class="desu-flow">
+
+    <div class="desu-flow-step">
+      <strong>学生じゃない。</strong>
+      <br>
+      학생이 아니야.
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>学生じゃないです。</strong>
+      <br>
+      학생이 아닙니다.
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>学生じゃなかった。</strong>
+      <br>
+      학생이 아니었어.
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>学生じゃなかったです。</strong>
+      <br>
+      학생이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-flow">
+
+    <div class="desu-flow-step">
+      <strong>学生ではありません。</strong>
+      <br>
+      학생이 아닙니다.
+    </div>
+
+    <div class="desu-flow-step">
+      <strong>学生ではありませんでした。</strong>
+      <br>
+      학생이 아니었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-subhead">
+    ① 실제 문장으로 비교
+  </div>
+
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      昨日は休みではありませんでした。
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+
+        <div class="desu-jp">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          <ruby>休<rt>やす</rt></ruby>みじゃなかったです。
+        </div>
+
+        <div class="desu-hira">
+          きのうは やすみじゃ なかったです。
+        </div>
+
+        <div class="desu-ko">
+          어제는 쉬는 날이 아니었습니다.
+        </div>
+
+        <div class="desu-explain">
+          일상 대화에서 자연스럽게 사용할 수 있는 표현.
+        </div>
+
+      </div>
+
+      <div class="desu-vs-item">
+
+        <div class="desu-jp">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          <ruby>休<rt>やす</rt></ruby>みではありませんでした。
+        </div>
+
+        <div class="desu-hira">
+          きのうは やすみでは ありませんでした。
+        </div>
+
+        <div class="desu-ko">
+          어제는 쉬는 날이 아니었습니다.
+        </div>
+
+        <div class="desu-explain">
+          더 정중하고 단정한 표현.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="desu-note">
+    초급 단계에서는
+    <strong>둘 중 어느 하나만 정답이라고 생각할 필요는 없습니다.</strong>
+    <br><br>
+    중요한 것은
+    <strong>현재 / 과거</strong>와
+    <strong>보통체 / 정중체</strong>가 어떻게 바뀌는지 이해하는 것입니다.
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 10. 현재·과거 × 반말·존댓말 한 번에 정리
+  </div>
+
+
+  <table class="desu-compare">
+
+    <tr>
+      <th>시간</th>
+      <th>반말 / 보통체</th>
+      <th>존댓말 / 정중체</th>
+    </tr>
+
+    <tr>
+      <td>현재 긍정</td>
+      <td>
+        学生だ
+        <br>
+        학생이다
+      </td>
+      <td>
+        学生です
+        <br>
+        학생입니다
+      </td>
+    </tr>
+
+    <tr>
+      <td>현재 부정</td>
+      <td>
+        学生じゃない
+        <br>
+        학생이 아니다
+      </td>
+      <td>
+        学生じゃないです
+        <br>
+        学生ではありません
+        <br>
+        학생이 아닙니다
+      </td>
+    </tr>
+
+    <tr>
+      <td>과거 긍정</td>
+      <td>
+        学生だった
+        <br>
+        학생이었다
+      </td>
+      <td>
+        学生でした
+        <br>
+        학생이었습니다
+      </td>
+    </tr>
+
+    <tr>
+      <td>과거 부정</td>
+      <td>
+        学生じゃなかった
+        <br>
+        학생이 아니었다
+      </td>
+      <td>
+        学生じゃなかったです
+        <br>
+        学生ではありませんでした
+        <br>
+        학생이 아니었습니다
+      </td>
+    </tr>
+
+  </table>
+
+
+  <div class="desu-important">
+    <strong>가장 중요한 변화만 다시 보기</strong>
+    <br><br>
+
+    ない
+    <br>
+    ↓ 과거
+    <br>
+    <strong>なかった</strong>
+    <br><br>
+
+    ない
+    <br>
+    ↓ 존댓말
+    <br>
+    <strong>ないです</strong>
+    <br><br>
+
+    なかった
+    <br>
+    ↓ 존댓말
+    <br>
+    <strong>なかったです</strong>
+    <br><br>
+
+    ありません
+    <br>
+    ↓ 과거
+    <br>
+    <strong>ありませんでした</strong>
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 11. 같은 내용을 네 가지 형태로 바꾸기
+  </div>
+
+  <p class="desu-lead">
+    이제 하나의 내용을
+    <strong>현재 → 과거</strong>,
+    <strong>반말 → 존댓말</strong>로 직접 바꾸어 봅니다.
+  </p>
+
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      「오늘은 휴일이 아니다」
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>今日<rt>きょう</rt></ruby>は
+          <ruby>休<rt>やす</rt></ruby>みじゃない。
+        </div>
+        <div class="desu-hira">
+          きょうは やすみじゃ ない。
+        </div>
+        <div class="desu-ko">
+          오늘은 쉬는 날이 아니야.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>今日<rt>きょう</rt></ruby>は
+          <ruby>休<rt>やす</rt></ruby>みじゃないです。
+        </div>
+        <div class="desu-hira">
+          きょうは やすみじゃ ないです。
+        </div>
+        <div class="desu-ko">
+          오늘은 쉬는 날이 아닙니다.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          <ruby>休<rt>やす</rt></ruby>みじゃなかった。
+        </div>
+        <div class="desu-hira">
+          きのうは やすみじゃ なかった。
+        </div>
+        <div class="desu-ko">
+          어제는 쉬는 날이 아니었어.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>昨日<rt>きのう</rt></ruby>は
+          <ruby>休<rt>やす</rt></ruby>みじゃなかったです。
+        </div>
+        <div class="desu-hira">
+          きのうは やすみじゃ なかったです。
+        </div>
+        <div class="desu-ko">
+          어제는 쉬는 날이 아니었습니다.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      「다나카 씨는 학생이 아니다」
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>田中<rt>たなか</rt></ruby>さんは
+          <ruby>学生<rt>がくせい</rt></ruby>じゃない。
+        </div>
+        <div class="desu-hira">
+          たなかさんは がくせいじゃ ない。
+        </div>
+        <div class="desu-ko">
+          다나카 씨는 학생이 아니야.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>田中<rt>たなか</rt></ruby>さんは
+          <ruby>学生<rt>がくせい</rt></ruby>じゃないです。
+        </div>
+        <div class="desu-hira">
+          たなかさんは がくせいじゃ ないです。
+        </div>
+        <div class="desu-ko">
+          다나카 씨는 학생이 아닙니다.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>田中<rt>たなか</rt></ruby>さんは
+          <ruby>学生<rt>がくせい</rt></ruby>じゃなかった。
+        </div>
+        <div class="desu-hira">
+          たなかさんは がくせいじゃ なかった。
+        </div>
+        <div class="desu-ko">
+          다나카 씨는 학생이 아니었어.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          <ruby>田中<rt>たなか</rt></ruby>さんは
+          <ruby>学生<rt>がくせい</rt></ruby>ではありませんでした。
+        </div>
+        <div class="desu-hira">
+          たなかさんは がくせいでは ありませんでした。
+        </div>
+        <div class="desu-ko">
+          다나카 씨는 학생이 아니었습니다.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 12. 문장 만들기 연습
+  </div>
+
+  <div class="desu-practice">
+    <strong>A. 「じゃない」를 사용해 말해 보세요.</strong>
+    <br><br>
+
+    ① 저는 선생님이 아니에요. → 반말
+    <br>
+    ② 오늘은 일요일이 아니야.
+    <br>
+    ③ 이것은 내 책이 아니야.
+    <br>
+    ④ 저 사람은 회사원이 아니야.
+    <br>
+    ⑤ 야마다 씨는 한국인이 아니야.
+  </div>
+
+
+  <div class="desu-practice">
+    <strong>B. 「じゃないです」를 사용해 말해 보세요.</strong>
+    <br><br>
+
+    ① 저는 학생이 아닙니다.
+    <br>
+    ② 오늘은 토요일이 아닙니다.
+    <br>
+    ③ 이것은 제 가방이 아닙니다.
+    <br>
+    ④ 저 사람은 선생님이 아닙니다.
+    <br>
+    ⑤ 다나카 씨는 일본인이 아닙니다.
+  </div>
+
+
+  <div class="desu-practice">
+    <strong>C. 「じゃなかった」를 사용해 말해 보세요.</strong>
+    <br><br>
+
+    ① 어제는 휴일이 아니었어.
+    <br>
+    ② 어제는 월요일이 아니었어.
+    <br>
+    ③ 그 사람은 학생이 아니었어.
+    <br>
+    ④ 이것은 내 우산이 아니었어.
+    <br>
+    ⑤ 작년에 나는 회사원이 아니었어.
+  </div>
+
+
+  <div class="desu-practice">
+    <strong>D. 「ではありませんでした」를 사용해 말해 보세요.</strong>
+    <br><br>
+
+    ① 작년에 저는 학생이 아니었습니다.
+    <br>
+    ② 어제는 쉬는 날이 아니었습니다.
+    <br>
+    ③ 그 사람은 선생님이 아니었습니다.
+    <br>
+    ④ 이것은 제 책이 아니었습니다.
+    <br>
+    ⑤ 야마다 씨는 회사원이 아니었습니다.
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 13. 회화 연습
+  </div>
+
+  <div class="desu-speaking">
+
+    <div class="desu-speaking-title">
+      💬 반말과 존댓말 바꾸기
+    </div>
+
+    한 사람이 반말로 말하면,
+    다른 사람은 같은 내용을 존댓말로 바꾸어 말해 보세요.
+    <br><br>
+
+    <div class="desu-jp">
+      A：<ruby>学生<rt>がくせい</rt></ruby>じゃない。
+      <br>
+      B：<ruby>学生<rt>がくせい</rt></ruby>じゃないです。
+    </div>
+
+    <div class="desu-hira">
+      A：がくせいじゃ ない。
+      <br>
+      B：がくせいじゃ ないです。
+    </div>
+
+    <div class="desu-ko">
+      A: 학생이 아니야.
+      <br>
+      B: 학생이 아닙니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-speaking">
+
+    <div class="desu-speaking-title">
+      💬 현재를 과거로 바꾸기
+    </div>
+
+    현재 문장을 들으면
+    과거 문장으로 바꾸어 말해 보세요.
+    <br><br>
+
+    <div class="desu-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みじゃない。
+      <br>
+      ↓
+      <br>
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みじゃなかった。
+    </div>
+
+    <div class="desu-hira">
+      きょうは やすみじゃ ない。
+      <br>
+      ↓
+      <br>
+      きのうは やすみじゃ なかった。
+    </div>
+
+    <div class="desu-ko">
+      오늘은 쉬는 날이 아니야.
+      <br>
+      ↓
+      <br>
+      어제는 쉬는 날이 아니었어.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    FINAL. 오늘 배운 구조
+  </div>
+
+  <div class="desu-summary-grid">
+
+    <div class="desu-summary-card">
+      <strong>ではない / じゃない</strong>
+      현재 부정 · 보통체
+      <br><br>
+      ~이/가 아니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>ではないです / じゃないです</strong>
+      현재 부정 · 정중체
+      <br><br>
+      ~이/가 아닙니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>ではありません</strong>
+      현재 부정 · 정중체
+      <br><br>
+      ~이/가 아닙니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>ではなかった / じゃなかった</strong>
+      과거 부정 · 보통체
+      <br><br>
+      ~이/가 아니었다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>ではなかったです / じゃなかったです</strong>
+      과거 부정 · 정중체
+      <br><br>
+      ~이/가 아니었습니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>ではありませんでした</strong>
+      과거 부정 · 정중체
+      <br><br>
+      ~이/가 아니었습니다
+    </div>
+
+  </div>
+
+
+  <div class="desu-important">
+    <strong>오늘의 핵심은 단순 암기가 아닙니다.</strong>
+    <br><br>
+
+    <strong>では → じゃ</strong>
+    <br>
+    회화에서 줄어든다.
+    <br><br>
+
+    <strong>ない → なかった</strong>
+    <br>
+    현재 부정이 과거 부정으로 변한다.
+    <br><br>
+
+    <strong>ない + です → ないです</strong>
+    <br>
+    정중하게 말한다.
+    <br><br>
+
+    <strong>なかった + です → なかったです</strong>
+    <br>
+    과거 부정을 정중하게 말한다.
+    <br><br>
+
+    <strong>ありません → ありませんでした</strong>
+    <br>
+    정중한 현재 부정이 정중한 과거 부정으로 변한다.
+  </div>
+
+
+  <div class="desu-formula">
+    じゃない
+    <span class="soft">현재·반말</span>
+    →
+    じゃないです
+    <span class="soft">현재·존댓말</span>
+    <br><br>
+
+    じゃなかった
+    <span class="soft">과거·반말</span>
+    →
+    じゃなかったです
+    <span class="soft">과거·존댓말</span>
+  </div>
+
+</div>
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 5. 긍정·부정·현재·과거 한 번에 정리
+  </div>
+
+  <table class="desu-compare">
+    <tr>
+      <th>구분</th>
+      <th>반말 / 보통체</th>
+      <th>존댓말 / 정중체</th>
+    </tr>
+
+    <tr>
+      <td>현재 긍정</td>
+      <td>
+        学生だ
+        <br>
+        학생이다
+      </td>
+      <td>
+        学生です
+        <br>
+        학생입니다
+      </td>
+    </tr>
+
+    <tr>
+      <td>현재 질문</td>
+      <td>
+        学生？
+        <br>
+        학생이야?
+      </td>
+      <td>
+        学生ですか
+        <br>
+        학생입니까?
+      </td>
+    </tr>
+
+    <tr>
+      <td>현재 부정</td>
+      <td>
+        学生じゃない
+        <br>
+        학생이 아니다
+      </td>
+      <td>
+        学生じゃないです
+        <br>
+        学生ではありません
+        <br>
+        학생이 아닙니다
+      </td>
+    </tr>
+
+    <tr>
+      <td>현재 부정 질문</td>
+      <td>
+        学生じゃない？
+        <br>
+        학생 아니야?
+      </td>
+      <td>
+        学生じゃないですか
+        <br>
+        学生ではありませんか
+        <br>
+        학생이 아닙니까?
+      </td>
+    </tr>
+
+    <tr>
+      <td>과거 긍정</td>
+      <td>
+        学生だった
+        <br>
+        학생이었다
+      </td>
+      <td>
+        学生でした
+        <br>
+        학생이었습니다
+      </td>
+    </tr>
+
+    <tr>
+      <td>과거 질문</td>
+      <td>
+        学生だった？
+        <br>
+        학생이었어?
+      </td>
+      <td>
+        学生でしたか
+        <br>
+        학생이었습니까?
+      </td>
+    </tr>
+
+    <tr>
+      <td>과거 부정</td>
+      <td>
+        学生じゃなかった
+        <br>
+        학생이 아니었다
+      </td>
+      <td>
+        学生じゃなかったです
+        <br>
+        学生ではありませんでした
+        <br>
+        학생이 아니었습니다
+      </td>
+    </tr>
+
+    <tr>
+      <td>과거 부정 질문</td>
+      <td>
+        学生じゃなかった？
+        <br>
+        학생 아니었어?
+      </td>
+      <td>
+        学生じゃなかったですか
+        <br>
+        学生ではありませんでしたか
+        <br>
+        학생이 아니었습니까?
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 6. 질문은 「か」를 붙이면 된다
+  </div>
+
+  <div class="desu-important">
+    <strong>정중체 질문의 기본 원리</strong>
+    <br><br>
+
+    です
+    <br>
+    ↓ + か
+    <br>
+    <strong>ですか</strong>
+    <br><br>
+
+    でした
+    <br>
+    ↓ + か
+    <br>
+    <strong>でしたか</strong>
+    <br><br>
+
+    ではありません
+    <br>
+    ↓ + か
+    <br>
+    <strong>ではありませんか</strong>
+    <br><br>
+
+    ではありませんでした
+    <br>
+    ↓ + か
+    <br>
+    <strong>ではありませんでしたか</strong>
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">현재 긍정 질문</div>
+
+    <div class="desu-jp">
+      <ruby>山田<rt>やまだ</rt></ruby>さんは
+      <ruby>会社員<rt>かいしゃいん</rt></ruby>ですか。
+    </div>
+
+    <div class="desu-hira">
+      やまださんは かいしゃいんですか。
+    </div>
+
+    <div class="desu-ko">
+      야마다 씨는 회사원입니까?
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">현재 부정 질문</div>
+
+    <div class="desu-jp">
+      <ruby>山田<rt>やまだ</rt></ruby>さんは
+      <ruby>学生<rt>がくせい</rt></ruby>じゃないですか。
+    </div>
+
+    <div class="desu-hira">
+      やまださんは がくせいじゃ ないですか。
+    </div>
+
+    <div class="desu-ko">
+      야마다 씨는 학생이 아닙니까?
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">과거 긍정 질문</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みでしたか。
+    </div>
+
+    <div class="desu-hira">
+      きのうは やすみでしたか。
+    </div>
+
+    <div class="desu-ko">
+      어제는 쉬는 날이었습니까?
+    </div>
+
+  </div>
+
+
+  <div class="desu-example">
+
+    <div class="desu-example-label">과거 부정 질문</div>
+
+    <div class="desu-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>休<rt>やす</rt></ruby>みじゃなかったですか。
+    </div>
+
+    <div class="desu-hira">
+      きのうは やすみじゃ なかったですか。
+    </div>
+
+    <div class="desu-ko">
+      어제는 쉬는 날이 아니었습니까?
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 7. 질문에 긍정과 부정으로 대답하기
+  </div>
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      현재 질문
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          A：
+          <ruby>田中<rt>たなか</rt></ruby>さんは
+          <ruby>学生<rt>がくせい</rt></ruby>ですか。
+        </div>
+
+        <div class="desu-hira">
+          A：たなかさんは がくせいですか。
+        </div>
+
+        <div class="desu-ko">
+          A: 다나카 씨는 학생입니까?
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          B：はい、<ruby>学生<rt>がくせい</rt></ruby>です。
+        </div>
+
+        <div class="desu-hira">
+          B：はい、がくせいです。
+        </div>
+
+        <div class="desu-ko">
+          B: 네, 학생입니다.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          B：いいえ、<ruby>学生<rt>がくせい</rt></ruby>じゃないです。
+          <ruby>会社員<rt>かいしゃいん</rt></ruby>です。
+        </div>
+
+        <div class="desu-hira">
+          B：いいえ、がくせいじゃ ないです。
+          かいしゃいんです。
+        </div>
+
+        <div class="desu-ko">
+          B: 아니요, 학생이 아닙니다. 회사원입니다.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="desu-vs">
+
+    <div class="desu-vs-title">
+      과거 질문
+    </div>
+
+    <div class="desu-vs-body">
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          A：
+          <ruby>去年<rt>きょねん</rt></ruby>、
+          <ruby>田中<rt>たなか</rt></ruby>さんは
+          <ruby>学生<rt>がくせい</rt></ruby>でしたか。
+        </div>
+
+        <div class="desu-hira">
+          A：きょねん、たなかさんは がくせいでしたか。
+        </div>
+
+        <div class="desu-ko">
+          A: 작년에 다나카 씨는 학생이었습니까?
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          B：はい、<ruby>学生<rt>がくせい</rt></ruby>でした。
+        </div>
+
+        <div class="desu-hira">
+          B：はい、がくせいでした。
+        </div>
+
+        <div class="desu-ko">
+          B: 네, 학생이었습니다.
+        </div>
+      </div>
+
+      <div class="desu-vs-item">
+        <div class="desu-jp">
+          B：いいえ、<ruby>学生<rt>がくせい</rt></ruby>ではありませんでした。
+        </div>
+
+        <div class="desu-hira">
+          B：いいえ、がくせいでは ありませんでした。
+        </div>
+
+        <div class="desu-ko">
+          B: 아니요, 학생이 아니었습니다.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 8. 긍정 → 질문 → 부정으로 바꾸기
+  </div>
+
+  <div class="desu-practice">
+    <strong>A. 다음 문장을 질문으로 바꾸세요.</strong>
+    <br><br>
+
+    ① 田中さんは学生です。
+    <br>
+    → 田中さんは学生ですか。
+    <br><br>
+
+    ② 今日は日曜日です。
+    <br>
+    → __________________________
+    <br><br>
+
+    ③ これは山田さんの本です。
+    <br>
+    → __________________________
+    <br><br>
+
+    ④ 昨日は休みでした。
+    <br>
+    → __________________________
+    <br><br>
+
+    ⑤ 去年、田中さんは会社員でした。
+    <br>
+    → __________________________
+  </div>
+
+
+  <div class="desu-practice">
+    <strong>B. 긍정 문장을 부정으로 바꾸세요.</strong>
+    <br><br>
+
+    ① 私は学生です。
+    <br>
+    → 私は学生じゃないです。
+    <br><br>
+
+    ② 田中さんは先生です。
+    <br>
+    → __________________________
+    <br><br>
+
+    ③ 今日は土曜日です。
+    <br>
+    → __________________________
+    <br><br>
+
+    ④ これは私の傘です。
+    <br>
+    → __________________________
+  </div>
+
+
+  <div class="desu-practice">
+    <strong>C. 현재를 과거로 바꾸세요.</strong>
+    <br><br>
+
+    ① 私は学生です。
+    <br>
+    → 私は学生でした。
+    <br><br>
+
+    ② 今日は休みです。
+    <br>
+    → 昨日は __________________________
+    <br><br>
+
+    ③ 田中さんは会社員じゃないです。
+    <br>
+    → 田中さんは会社員 __________________________
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    STEP 9. 짝을 지어서 회화하기
+  </div>
+
+  <div class="desu-speaking">
+
+    <div class="desu-speaking-title">
+      💬 현재형 질문
+    </div>
+
+    A가 질문하면 B가 긍정 또는 부정으로 대답합니다.
+    그 다음 역할을 바꿉니다.
+    <br><br>
+
+    <div class="desu-jp">
+      A：<ruby>学生<rt>がくせい</rt></ruby>ですか。
+      <br>
+      B：はい、<ruby>学生<rt>がくせい</rt></ruby>です。
+    </div>
+
+    <div class="desu-hira">
+      A：がくせいですか。
+      <br>
+      B：はい、がくせいです。
+    </div>
+
+    <div class="desu-ko">
+      A: 학생입니까?
+      <br>
+      B: 네, 학생입니다.
+    </div>
+
+    <br>
+
+    또는
+
+    <div class="desu-jp">
+      B：いいえ、<ruby>学生<rt>がくせい</rt></ruby>じゃないです。
+      <ruby>会社員<rt>かいしゃいん</rt></ruby>です。
+    </div>
+
+    <div class="desu-hira">
+      B：いいえ、がくせいじゃ ないです。
+      かいしゃいんです。
+    </div>
+
+    <div class="desu-ko">
+      B: 아니요, 학생이 아닙니다. 회사원입니다.
+    </div>
+
+  </div>
+
+
+  <div class="desu-speaking">
+
+    <div class="desu-speaking-title">
+      💬 과거형 질문
+    </div>
+
+    다음 단어를 사용해서 서로 질문하고 대답해 보세요.
+
+    <div class="desu-chip-row">
+      <span class="desu-chip">昨日</span>
+      <span class="desu-chip">去年</span>
+      <span class="desu-chip">学生</span>
+      <span class="desu-chip">会社員</span>
+      <span class="desu-chip">先生</span>
+      <span class="desu-chip">休み</span>
+      <span class="desu-chip">日曜日</span>
+    </div>
+
+    <div class="desu-jp">
+      A：<ruby>去年<rt>きょねん</rt></ruby>、
+      <ruby>学生<rt>がくせい</rt></ruby>でしたか。
+      <br>
+      B：いいえ、<ruby>学生<rt>がくせい</rt></ruby>じゃなかったです。
+    </div>
+
+    <div class="desu-hira">
+      A：きょねん、がくせいでしたか。
+      <br>
+      B：いいえ、がくせいじゃ なかったです。
+    </div>
+
+    <div class="desu-ko">
+      A: 작년에 학생이었습니까?
+      <br>
+      B: 아니요, 학생이 아니었습니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="desu-section">
+
+  <div class="desu-section-title">
+    FINAL. 「です」형 전체 구조
+  </div>
+
+  <div class="desu-summary-grid">
+
+    <div class="desu-summary-card">
+      <strong>です</strong>
+      현재 긍정
+      <br>
+      ~입니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>ですか</strong>
+      현재 질문
+      <br>
+      ~입니까?
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>じゃない / ではない</strong>
+      현재 부정
+      <br>
+      ~이/가 아니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>じゃないです / ではありません</strong>
+      현재 부정 정중체
+      <br>
+      ~이/가 아닙니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>でした</strong>
+      과거 긍정
+      <br>
+      ~이었습니다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>でしたか</strong>
+      과거 질문
+      <br>
+      ~이었습니까?
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>じゃなかった / ではなかった</strong>
+      과거 부정
+      <br>
+      ~이/가 아니었다
+    </div>
+
+    <div class="desu-summary-card">
+      <strong>じゃなかったです / ではありませんでした</strong>
+      과거 부정 정중체
+      <br>
+      ~이/가 아니었습니다
+    </div>
+
+  </div>
+
+
+  <div class="desu-important">
+    <strong>형태가 바뀌는 원리를 다시 확인하세요.</strong>
+    <br><br>
+
+    <strong>です + か → ですか</strong>
+    <br>
+    현재 긍정 → 현재 질문
+    <br><br>
+
+    <strong>です → でした</strong>
+    <br>
+    현재 → 과거
+    <br><br>
+
+    <strong>ない → なかった</strong>
+    <br>
+    현재 부정 → 과거 부정
+    <br><br>
+
+    <strong>ない + です → ないです</strong>
+    <br>
+    보통체 부정 → 정중한 부정
+    <br><br>
+
+    <strong>なかった + です → なかったです</strong>
+    <br>
+    보통체 과거 부정 → 정중한 과거 부정
+    <br><br>
+
+    <strong>ありません → ありませんでした</strong>
+    <br>
+    정중한 현재 부정 → 정중한 과거 부정
+  </div>
+
+</div>

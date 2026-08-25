@@ -561,17 +561,6 @@
     복잡한 문제를 어떻게 여러 단계로 나누어 해결할 수 있는지를
     최대한 쉽게 설명하는 것을 목표로 합니다.
   </p>
-
-  <div class="pe-card-blue">
-    <h3 class="pe-small-heading">강사 소개</h3>
-
-    <ul class="pe-list">
-      <li>연세대학교 컴퓨터과학과 졸업</li>
-      <li>개발자 경력 6년</li>
-      <li>현재 1인 사업 운영</li>
-    </ul>
-  </div>
-
   <div class="pe-card-soft">
     <h3 class="pe-small-heading">이 강의를 만든 이유</h3>
 
