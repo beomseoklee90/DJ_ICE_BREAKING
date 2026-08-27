@@ -1,4 +1,4 @@
-바이브 코딩 - Codex
+바이브 코딩 - Codex 
 <style>
   .codex-guide {
     max-width: 980px;
@@ -591,7 +591,13 @@
   }
 </style>
 <div class="codex-guide">
+  <p>
+    코드를 직접 작성하는 것보다 AI에게 개발을 맡기는 방법을 중심으로 배우며,
+    AI가 만든 코드를 이해하고 검증하는 데 필요한 코딩 이론도 함께 학습할 예정입니다.
+  </p>
 <section class="hero">
+  
+
   <div class="hero-label">VIBE CODING WITH CODEX</div>
 
   <h1>코드를 직접 짜기보다, Codex에게 일을 맡기는 방법을 배웁니다</h1>
