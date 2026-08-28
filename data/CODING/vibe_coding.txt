@@ -763,7 +763,7 @@
       <span class="prompt-target">Codex</span>
     </div>
 
-    <pre class="prompt-body">새로운 웹 애플리케이션 프로젝트를 만들어줘.
+    <pre class="prompt-body">현재 VS Code 디렉터리에 새로운 웹 애플리케이션 프로젝트를 만들어줘.
 
 [만들고 싶은 프로그램]
 → ______________________
