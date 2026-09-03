@@ -1,0 +1,5826 @@
+い형용사
+<style>
+  .iadj-title {
+    margin: 8px 0 12px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.35;
+    letter-spacing: -0.7px;
+    color: #202124;
+  }
+
+  .iadj-subtitle {
+    margin: 0 0 28px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #5f6368;
+  }
+
+  .iadj-section {
+    margin-top: 42px;
+  }
+
+  .iadj-section-title {
+    margin: 0 0 20px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #202124;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.45;
+    letter-spacing: -0.4px;
+  }
+
+  .iadj-subhead {
+    margin: 28px 0 13px;
+    font-size: 19px;
+    font-weight: 850;
+    line-height: 1.5;
+  }
+
+  .iadj-minor-head {
+    margin: 21px 0 9px;
+    font-size: 16px;
+    font-weight: 850;
+    line-height: 1.55;
+  }
+
+  .iadj-lead {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #303134;
+  }
+
+  .iadj-important {
+    margin: 20px 0;
+    padding: 18px;
+    border: 2px solid #202124;
+    border-radius: 14px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .iadj-point {
+    margin: 20px 0;
+    padding: 18px;
+    border-left: 5px solid #202124;
+    border-radius: 4px 12px 12px 4px;
+    background: #f5f5f5;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .iadj-note {
+    margin: 18px 0;
+    padding: 16px 17px;
+    border-radius: 12px;
+    background: #f2f5f7;
+    color: #3c4043;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .iadj-warning {
+    margin: 20px 0;
+    padding: 17px 18px;
+    border-left: 5px solid #8a6d1d;
+    border-radius: 4px 12px 12px 4px;
+    background: #fffaf0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .iadj-formula {
+    margin: 20px 0;
+    padding: 19px 18px;
+    border-radius: 14px;
+    background: #202124;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 850;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  .iadj-formula .soft {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.82;
+  }
+
+  .iadj-patterns {
+    margin: 20px 0 28px;
+    padding: 20px;
+    border: 2px solid #202124;
+    border-radius: 16px;
+    background: #fff;
+  }
+
+  .iadj-pattern-title {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .iadj-pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .iadj-pattern-card {
+    padding: 14px 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+    background: #fafafa;
+  }
+
+  .iadj-pattern-card strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .iadj-pattern-card span {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #555;
+  }
+
+  .iadj-flow {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f5f5f5;
+  }
+
+  .iadj-flow-step {
+    position: relative;
+    margin: 0;
+    padding: 11px 10px 11px 40px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .iadj-flow-step::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 20px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #202124;
+  }
+
+  .iadj-flow-step + .iadj-flow-step::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: -10px;
+    width: 1px;
+    height: 25px;
+    background: #b8b8b8;
+  }
+
+  .iadj-example {
+    margin: 14px 0;
+    padding: 16px 17px;
+    border: 1px solid #dedede;
+    border-radius: 13px;
+    background: #fff;
+  }
+
+  .iadj-example-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    color: #666;
+  }
+
+  .iadj-study-jp {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 2;
+    color: #202124;
+  }
+
+  .iadj-standard-jp {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.9;
+    color: #404347;
+  }
+
+  .iadj-hira {
+    margin-top: 1px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #777;
+  }
+
+  .iadj-ko {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #333;
+  }
+
+  .iadj-explain {
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px dashed #d5d5d5;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .iadj-breakdown {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+  }
+
+  .iadj-breakdown-line {
+    margin: 8px 0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .iadj-part {
+    display: inline-block;
+    margin: 2px 3px 2px 0;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: #fff;
+    font-weight: 850;
+  }
+
+  .iadj-part-meaning {
+    margin-left: 4px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .iadj-change {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f4f4f4;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.9;
+    font-weight: 750;
+  }
+
+  .iadj-change-old {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 7px;
+    background: #fff;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
+
+  .iadj-change-new {
+    display: inline-block;
+    padding: 3px 8px;
+    border: 2px solid #202124;
+    border-radius: 7px;
+    background: #fff;
+    font-weight: 900;
+  }
+
+  .iadj-arrow {
+    display: inline-block;
+    padding: 0 9px;
+    font-weight: 900;
+  }
+
+  .iadj-vs {
+    margin: 22px 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .iadj-vs-title {
+    padding: 12px 15px;
+    background: #ededed;
+    font-weight: 900;
+    font-size: 15px;
+  }
+
+  .iadj-vs-body {
+    padding: 17px;
+  }
+
+  .iadj-vs-item {
+    padding: 12px 0;
+  }
+
+  .iadj-vs-item + .iadj-vs-item {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .iadj-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .iadj-table th,
+  .iadj-table td {
+    padding: 12px 10px;
+    border: 1px solid #d8d8d8;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .iadj-table th {
+    background: #f2f2f2;
+    font-weight: 900;
+  }
+
+  .iadj-table td:first-child {
+    font-weight: 800;
+  }
+
+  .iadj-level-basic {
+    margin: 22px 0;
+    padding: 18px;
+    border: 2px solid #202124;
+    border-radius: 14px;
+    background: #fff;
+  }
+
+  .iadj-level-basic-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .iadj-level-basic-text {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .iadj-level-next {
+    margin: 22px 0;
+    padding: 18px;
+    border: 1px solid #bfc4c8;
+    border-radius: 14px;
+    background: #f3f6f8;
+  }
+
+  .iadj-level-next-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .iadj-level-next-text {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .iadj-level-advanced {
+    margin: 22px 0;
+    padding: 18px;
+    border: 1px dashed #90969b;
+    border-radius: 14px;
+    background: #fafafa;
+  }
+
+  .iadj-level-advanced-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .iadj-level-advanced-text {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .iadj-stop {
+    margin: 15px 0;
+    padding: 13px 15px;
+    border-radius: 10px;
+    background: #eeeeee;
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.75;
+  }
+
+  .iadj-practice {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .iadj-practice-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .iadj-speaking {
+    margin: 22px 0;
+    padding: 18px;
+    border: 2px dashed #999;
+    border-radius: 14px;
+    background: #fcfcfc;
+  }
+
+  .iadj-speaking-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .iadj-speaking ul {
+    margin: 9px 0 0;
+    padding-left: 22px;
+  }
+
+  .iadj-speaking li {
+    margin: 9px 0;
+    line-height: 1.75;
+  }
+
+  .iadj-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+  }
+
+  .iadj-chip {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .iadj-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .iadj-summary-card {
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .iadj-summary-card strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+
+  .iadj-question {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px solid #cfcfcf;
+    border-radius: 14px;
+    background: #fff;
+  }
+
+  .iadj-question-number {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #666;
+  }
+
+  .iadj-question-text {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 750;
+    line-height: 1.85;
+  }
+
+  .iadj-options {
+    margin: 0;
+    padding-left: 24px;
+  }
+
+  .iadj-options li {
+    margin: 8px 0;
+    padding-left: 3px;
+  }
+
+  .iadj-answer {
+    margin-top: 14px;
+    padding: 14px 15px;
+    border-radius: 10px;
+    background: #f3f3f3;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .iadj-answer-title {
+    margin-bottom: 5px;
+    font-weight: 900;
+  }
+
+  .iadj-word-list {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+  }
+
+  .iadj-word-title {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .iadj-word-row {
+    display: grid;
+    grid-template-columns: minmax(85px, 0.8fr) minmax(90px, 0.9fr) minmax(120px, 1.3fr);
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .iadj-word-row:last-child {
+    border-bottom: 0;
+  }
+
+  .iadj-word-jp {
+    font-weight: 850;
+  }
+
+  .iadj-word-hira {
+    color: #666;
+  }
+
+  .iadj-word-ko {
+    color: #333;
+  }
+
+  .iadj-divider {
+    height: 1px;
+    margin: 35px 0;
+    border: 0;
+    background: #dadce0;
+  }
+
+  ruby {
+    ruby-position: over;
+  }
+
+  rt {
+    font-size: 0.55em;
+    font-weight: 500;
+    color: #666;
+  }
+
+  @media (max-width: 640px) {
+    .iadj-title {
+      font-size: 26px;
+    }
+
+    .iadj-section-title {
+      font-size: 21px;
+    }
+
+    .iadj-subhead {
+      font-size: 18px;
+    }
+
+    .iadj-study-jp {
+      font-size: 19px;
+    }
+
+    .iadj-standard-jp {
+      font-size: 16px;
+    }
+
+    .iadj-pattern-grid,
+    .iadj-summary-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .iadj-word-row {
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 12px 0;
+    }
+
+    .iadj-table {
+      font-size: 13px;
+    }
+
+    .iadj-table th,
+    .iadj-table td {
+      padding: 9px 7px;
+    }
+
+    .iadj-patterns,
+    .iadj-important,
+    .iadj-point,
+    .iadj-level-basic,
+    .iadj-level-next,
+    .iadj-level-advanced,
+    .iadj-practice,
+    .iadj-speaking,
+    .iadj-question {
+      padding: 15px;
+    }
+  }
+</style>
+
+<div class="iadj-title">
+  い형용사 활용 완전 정리
+  <br>
+  기본형에서 조건형까지
+</div>
+
+<div class="iadj-subtitle">
+  「たかい・やすい・おいしい・さむい」처럼
+  <strong>기본형이 い로 끝나는 형용사</strong>를 활용하는 방법을 배웁니다.
+  <br><br>
+  단순히 현재형만 배우지 않고,
+  <strong>현재·과거·긍정·부정 → 명사 꾸미기 → 문장 연결 → 변화 → 조건</strong>까지
+  하나의 흐름으로 연결합니다.
+</div>
+
+
+<div class="iadj-important">
+  <strong>📌 이 교재의 표기 방법</strong>
+  <br><br>
+
+  처음 보여주는 문장에서는
+  <strong>초급자가 읽기 어려운 한자를 필요 이상으로 사용하지 않습니다.</strong>
+  <br><br>
+
+  그 아래에는 실제 일본어 표기에 익숙해질 수 있도록
+  <strong>한자를 사용한 정식 문장</strong>과
+  <strong>순수 히라가나 문장</strong>을 함께 표시합니다.
+  <br><br>
+
+  처음부터 모든 한자를 외우려고 하지 않아도 됩니다.
+  문장의 뜻과 い형용사의 변화에 먼저 집중하세요.
+</div>
+
+
+<div class="iadj-patterns">
+
+  <div class="iadj-pattern-title">
+    먼저 전체 활용을 한꺼번에 봅니다
+  </div>
+
+  <div class="iadj-pattern-grid">
+
+    <div class="iadj-pattern-card">
+      <strong>たかい</strong>
+      <span>비싸다 / 높다 · 기본형</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくない</strong>
+      <span>비싸지 않다 · 현재 부정</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかかった</strong>
+      <span>비쌌다 · 과거 긍정</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくなかった</strong>
+      <span>비싸지 않았다 · 과거 부정</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかい ホテル</strong>
+      <span>비싼 호텔 · 명사 수식</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくて</strong>
+      <span>비싸고 / 비싸서 · 연결</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかく なる</strong>
+      <span>비싸지다 · 상태 변화</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかく する</strong>
+      <span>비싸게 하다 · 상태를 변화시킴</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかすぎる</strong>
+      <span>너무 비싸다</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかそう</strong>
+      <span>비싸 보이다</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかければ</strong>
+      <span>비싸면 · 조건</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくても</strong>
+      <span>비싸도 · 양보</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 1. い형용사는 무엇일까?
+  </div>
+
+  <p class="iadj-lead">
+    일본어에서 사람이나 물건의 상태,
+    성질, 느낌 등을 설명하는 말 중
+    기본형이 <strong>「い」로 끝나는 형용사</strong>를
+    い형용사라고 합니다.
+  </p>
+
+
+  <div class="iadj-word-list">
+
+    <div class="iadj-word-title">
+      먼저 알아둘 기본 い형용사
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">たかい</div>
+      <div class="iadj-word-hira">たかい</div>
+      <div class="iadj-word-ko">비싸다 / 높다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">やすい</div>
+      <div class="iadj-word-hira">やすい</div>
+      <div class="iadj-word-ko">싸다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">おおきい</div>
+      <div class="iadj-word-hira">おおきい</div>
+      <div class="iadj-word-ko">크다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">ちいさい</div>
+      <div class="iadj-word-hira">ちいさい</div>
+      <div class="iadj-word-ko">작다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">あつい</div>
+      <div class="iadj-word-hira">あつい</div>
+      <div class="iadj-word-ko">덥다 / 뜨겁다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">さむい</div>
+      <div class="iadj-word-hira">さむい</div>
+      <div class="iadj-word-ko">춥다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">おいしい</div>
+      <div class="iadj-word-hira">おいしい</div>
+      <div class="iadj-word-ko">맛있다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">からい</div>
+      <div class="iadj-word-hira">からい</div>
+      <div class="iadj-word-ko">맵다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">ちかい</div>
+      <div class="iadj-word-hira">ちかい</div>
+      <div class="iadj-word-ko">가깝다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">とおい</div>
+      <div class="iadj-word-hira">とおい</div>
+      <div class="iadj-word-ko">멀다</div>
+    </div>
+
+  </div>
+
+
+  <div class="iadj-warning">
+    <strong>끝이 「い」라고 전부 い형용사는 아닙니다.</strong>
+    <br><br>
+
+    예를 들어
+    <strong>きれい</strong>는 마지막 글자가 「い」이지만
+    い형용사가 아니라 <strong>な형용사</strong>입니다.
+    <br><br>
+
+    처음에는 자주 사용하는 형용사를 하나씩 익히면서
+    어떤 종류인지 함께 기억하면 됩니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 2. 가장 중요한 네 가지 종결형
+  </div>
+
+  <p class="iadj-lead">
+    먼저 문장 끝에서 사용하는 형태부터 익힙니다.
+    <br><br>
+    하나의 い형용사가
+    <strong>현재 긍정 / 현재 부정 / 과거 긍정 / 과거 부정</strong>으로
+    어떻게 바뀌는지 이해하는 것이 가장 중요합니다.
+  </p>
+
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>구분</th>
+      <th>보통체</th>
+      <th>정중체</th>
+      <th>뜻</th>
+    </tr>
+
+    <tr>
+      <td>현재 긍정</td>
+      <td>たかい</td>
+      <td>たかいです</td>
+      <td>비싸다 / 비쌉니다</td>
+    </tr>
+
+    <tr>
+      <td>현재 부정</td>
+      <td>たかくない</td>
+      <td>たかくないです</td>
+      <td>비싸지 않다 / 비싸지 않습니다</td>
+    </tr>
+
+    <tr>
+      <td>과거 긍정</td>
+      <td>たかかった</td>
+      <td>たかかったです</td>
+      <td>비쌌다 / 비쌌습니다</td>
+    </tr>
+
+    <tr>
+      <td>과거 부정</td>
+      <td>たかくなかった</td>
+      <td>たかくなかったです</td>
+      <td>비싸지 않았다 / 비싸지 않았습니다</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-important">
+    <strong>い형용사의 핵심은 마지막 「い」입니다.</strong>
+    <br><br>
+
+    기본형에서는
+    <strong>たかい</strong>
+    <br><br>
+
+    부정으로 만들면
+    <strong>い → くない</strong>
+    <br><br>
+
+    과거로 만들면
+    <strong>い → かった</strong>
+    <br><br>
+
+    과거 부정으로 만들면
+    <strong>い → くなかった</strong>
+  </div>
+
+
+  <div class="iadj-change">
+    たか<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    たか<span class="iadj-change-new">くない</span>
+    <br>
+    비싸다 → 비싸지 않다
+  </div>
+
+  <div class="iadj-change">
+    たか<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    たか<span class="iadj-change-new">かった</span>
+    <br>
+    비싸다 → 비쌌다
+  </div>
+
+  <div class="iadj-change">
+    たか<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    たか<span class="iadj-change-new">くなかった</span>
+    <br>
+    비싸다 → 비싸지 않았다
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 3. 현재 긍정 「～い / ～いです」
+  </div>
+
+  <div class="iadj-formula">
+    い형용사 기본형
+    <br>
+    ～い
+    <br><br>
+    정중하게 말하면
+    <br>
+    ～いです
+  </div>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      보통체와 정중체
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>この ラーメンは おいしい。</strong>
+        <br>
+        이 라멘은 맛있어.
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>この ラーメンは おいしいです。</strong>
+        <br>
+        이 라멘은 맛있습니다.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは さむいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>寒<rt>さむ</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは さむいです。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 춥습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      この ラーメンは ちょっと からいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このラーメンはちょっと
+      <ruby>辛<rt>から</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この らーめんは ちょっと からいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 라멘은 조금 맵습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この ホテルは えきから ちかいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このホテルは
+      <ruby>駅<rt>えき</rt></ruby>から
+      <ruby>近<rt>ちか</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この ほてるは えきから ちかいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 호텔은 역에서 가깝습니다.
+    </div>
+
+    <div class="iadj-explain">
+      「から」는 여기에서 “~에서 / ~로부터”라는 느낌입니다.
+      지금은 조사 문법을 깊게 외우기보다
+      <strong>えきから ちかい = 역에서 가깝다</strong> 정도로 익혀도 됩니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      この かばんは すこし たかいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>鞄<rt>かばん</rt></ruby>は
+      <ruby>少<rt>すこ</rt></ruby>し
+      <ruby>高<rt>たか</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この かばんは すこし たかいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 가방은 조금 비쌉니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 5
+    </div>
+
+    <div class="iadj-study-jp">
+      この へやは おおきいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>部屋<rt>へや</rt></ruby>は
+      <ruby>大<rt>おお</rt></ruby>きいです。
+    </div>
+
+    <div class="iadj-hira">
+      この へやは おおきいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 방은 큽니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 4. 현재 부정 「～くない / ～くないです」
+  </div>
+
+  <div class="iadj-formula">
+    마지막 い를 빼고
+    <br>
+    くない
+    <br><br>
+    たかい → たかくない
+  </div>
+
+
+  <div class="iadj-point">
+    <strong>い → くない</strong>
+    <br><br>
+
+    たかい
+    <br>
+    비싸다
+    <br><br>
+
+    ↓
+    <br><br>
+
+    たかくない
+    <br>
+    비싸지 않다
+    <br><br>
+
+    ↓ 정중하게
+    <br><br>
+
+    たかくないです
+    <br>
+    비싸지 않습니다
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      この かばんは たかくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>鞄<rt>かばん</rt></ruby>は
+      <ruby>高<rt>たか</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      この かばんは たかく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      이 가방은 비싸지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは あまり さむくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      あまり
+      <ruby>寒<rt>さむ</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは あまり さむく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 별로 춥지 않습니다.
+    </div>
+
+    <div class="iadj-explain">
+      <strong>あまり + 부정</strong>은
+      “별로 ~하지 않다”라는 뜻으로 자주 사용합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この りょうりは からくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>料理<rt>りょうり</rt></ruby>は
+      <ruby>辛<rt>から</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      この りょうりは からく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      이 요리는 맵지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      えきは ここから とおくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>駅<rt>えき</rt></ruby>は
+      ここから
+      <ruby>遠<rt>とお</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      えきは ここから とおく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      역은 여기에서 멀지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-note">
+    조금 더 정중한 표현으로
+    <strong>～くありません</strong>도 사용할 수 있습니다.
+    <br><br>
+
+    <strong>たかくないです</strong>
+    <br>
+    비싸지 않습니다
+    <br><br>
+
+    <strong>たかくありません</strong>
+    <br>
+    비싸지 않습니다
+    <br><br>
+
+    둘 다 사용할 수 있습니다.
+    생기초 단계에서는 먼저
+    <strong>～くないです</strong>를 익혀도 충분합니다.
+  </div>
+
+</div>
+
+<div class="iadj-title">
+  い형용사 활용 완전 정리
+  <br>
+  기본형에서 조건형까지
+</div>
+
+<div class="iadj-subtitle">
+  「たかい・やすい・おいしい・さむい」처럼
+  <strong>기본형이 い로 끝나는 형용사</strong>를 활용하는 방법을 배웁니다.
+  <br><br>
+  단순히 현재형만 배우지 않고,
+  <strong>현재·과거·긍정·부정 → 명사 꾸미기 → 문장 연결 → 변화 → 조건</strong>까지
+  하나의 흐름으로 연결합니다.
+</div>
+
+
+<div class="iadj-important">
+  <strong>📌 이 교재의 표기 방법</strong>
+  <br><br>
+
+  처음 보여주는 문장에서는
+  <strong>초급자가 읽기 어려운 한자를 필요 이상으로 사용하지 않습니다.</strong>
+  <br><br>
+
+  그 아래에는 실제 일본어 표기에 익숙해질 수 있도록
+  <strong>한자를 사용한 정식 문장</strong>과
+  <strong>순수 히라가나 문장</strong>을 함께 표시합니다.
+  <br><br>
+
+  처음부터 모든 한자를 외우려고 하지 않아도 됩니다.
+  문장의 뜻과 い형용사의 변화에 먼저 집중하세요.
+</div>
+
+
+<div class="iadj-patterns">
+
+  <div class="iadj-pattern-title">
+    먼저 전체 활용을 한꺼번에 봅니다
+  </div>
+
+  <div class="iadj-pattern-grid">
+
+    <div class="iadj-pattern-card">
+      <strong>たかい</strong>
+      <span>비싸다 / 높다 · 기본형</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくない</strong>
+      <span>비싸지 않다 · 현재 부정</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかかった</strong>
+      <span>비쌌다 · 과거 긍정</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくなかった</strong>
+      <span>비싸지 않았다 · 과거 부정</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかい ホテル</strong>
+      <span>비싼 호텔 · 명사 수식</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくて</strong>
+      <span>비싸고 / 비싸서 · 연결</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかく なる</strong>
+      <span>비싸지다 · 상태 변화</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかく する</strong>
+      <span>비싸게 하다 · 상태를 변화시킴</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかすぎる</strong>
+      <span>너무 비싸다</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかそう</strong>
+      <span>비싸 보이다</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかければ</strong>
+      <span>비싸면 · 조건</span>
+    </div>
+
+    <div class="iadj-pattern-card">
+      <strong>たかくても</strong>
+      <span>비싸도 · 양보</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 1. い형용사는 무엇일까?
+  </div>
+
+  <p class="iadj-lead">
+    일본어에서 사람이나 물건의 상태,
+    성질, 느낌 등을 설명하는 말 중
+    기본형이 <strong>「い」로 끝나는 형용사</strong>를
+    い형용사라고 합니다.
+  </p>
+
+
+  <div class="iadj-word-list">
+
+    <div class="iadj-word-title">
+      먼저 알아둘 기본 い형용사
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">たかい</div>
+      <div class="iadj-word-hira">たかい</div>
+      <div class="iadj-word-ko">비싸다 / 높다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">やすい</div>
+      <div class="iadj-word-hira">やすい</div>
+      <div class="iadj-word-ko">싸다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">おおきい</div>
+      <div class="iadj-word-hira">おおきい</div>
+      <div class="iadj-word-ko">크다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">ちいさい</div>
+      <div class="iadj-word-hira">ちいさい</div>
+      <div class="iadj-word-ko">작다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">あつい</div>
+      <div class="iadj-word-hira">あつい</div>
+      <div class="iadj-word-ko">덥다 / 뜨겁다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">さむい</div>
+      <div class="iadj-word-hira">さむい</div>
+      <div class="iadj-word-ko">춥다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">おいしい</div>
+      <div class="iadj-word-hira">おいしい</div>
+      <div class="iadj-word-ko">맛있다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">からい</div>
+      <div class="iadj-word-hira">からい</div>
+      <div class="iadj-word-ko">맵다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">ちかい</div>
+      <div class="iadj-word-hira">ちかい</div>
+      <div class="iadj-word-ko">가깝다</div>
+    </div>
+
+    <div class="iadj-word-row">
+      <div class="iadj-word-jp">とおい</div>
+      <div class="iadj-word-hira">とおい</div>
+      <div class="iadj-word-ko">멀다</div>
+    </div>
+
+  </div>
+
+
+  <div class="iadj-warning">
+    <strong>끝이 「い」라고 전부 い형용사는 아닙니다.</strong>
+    <br><br>
+
+    예를 들어
+    <strong>きれい</strong>는 마지막 글자가 「い」이지만
+    い형용사가 아니라 <strong>な형용사</strong>입니다.
+    <br><br>
+
+    처음에는 자주 사용하는 형용사를 하나씩 익히면서
+    어떤 종류인지 함께 기억하면 됩니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 2. 가장 중요한 네 가지 종결형
+  </div>
+
+  <p class="iadj-lead">
+    먼저 문장 끝에서 사용하는 형태부터 익힙니다.
+    <br><br>
+    하나의 い형용사가
+    <strong>현재 긍정 / 현재 부정 / 과거 긍정 / 과거 부정</strong>으로
+    어떻게 바뀌는지 이해하는 것이 가장 중요합니다.
+  </p>
+
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>구분</th>
+      <th>보통체</th>
+      <th>정중체</th>
+      <th>뜻</th>
+    </tr>
+
+    <tr>
+      <td>현재 긍정</td>
+      <td>たかい</td>
+      <td>たかいです</td>
+      <td>비싸다 / 비쌉니다</td>
+    </tr>
+
+    <tr>
+      <td>현재 부정</td>
+      <td>たかくない</td>
+      <td>たかくないです</td>
+      <td>비싸지 않다 / 비싸지 않습니다</td>
+    </tr>
+
+    <tr>
+      <td>과거 긍정</td>
+      <td>たかかった</td>
+      <td>たかかったです</td>
+      <td>비쌌다 / 비쌌습니다</td>
+    </tr>
+
+    <tr>
+      <td>과거 부정</td>
+      <td>たかくなかった</td>
+      <td>たかくなかったです</td>
+      <td>비싸지 않았다 / 비싸지 않았습니다</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-important">
+    <strong>い형용사의 핵심은 마지막 「い」입니다.</strong>
+    <br><br>
+
+    기본형에서는
+    <strong>たかい</strong>
+    <br><br>
+
+    부정으로 만들면
+    <strong>い → くない</strong>
+    <br><br>
+
+    과거로 만들면
+    <strong>い → かった</strong>
+    <br><br>
+
+    과거 부정으로 만들면
+    <strong>い → くなかった</strong>
+  </div>
+
+
+  <div class="iadj-change">
+    たか<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    たか<span class="iadj-change-new">くない</span>
+    <br>
+    비싸다 → 비싸지 않다
+  </div>
+
+  <div class="iadj-change">
+    たか<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    たか<span class="iadj-change-new">かった</span>
+    <br>
+    비싸다 → 비쌌다
+  </div>
+
+  <div class="iadj-change">
+    たか<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    たか<span class="iadj-change-new">くなかった</span>
+    <br>
+    비싸다 → 비싸지 않았다
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 3. 현재 긍정 「～い / ～いです」
+  </div>
+
+  <div class="iadj-formula">
+    い형용사 기본형
+    <br>
+    ～い
+    <br><br>
+    정중하게 말하면
+    <br>
+    ～いです
+  </div>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      보통체와 정중체
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>この ラーメンは おいしい。</strong>
+        <br>
+        이 라멘은 맛있어.
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>この ラーメンは おいしいです。</strong>
+        <br>
+        이 라멘은 맛있습니다.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは さむいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>寒<rt>さむ</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは さむいです。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 춥습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      この ラーメンは ちょっと からいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このラーメンはちょっと
+      <ruby>辛<rt>から</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この らーめんは ちょっと からいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 라멘은 조금 맵습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この ホテルは えきから ちかいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このホテルは
+      <ruby>駅<rt>えき</rt></ruby>から
+      <ruby>近<rt>ちか</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この ほてるは えきから ちかいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 호텔은 역에서 가깝습니다.
+    </div>
+
+    <div class="iadj-explain">
+      「から」는 여기에서 “~에서 / ~로부터”라는 느낌입니다.
+      지금은 조사 문법을 깊게 외우기보다
+      <strong>えきから ちかい = 역에서 가깝다</strong> 정도로 익혀도 됩니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      この かばんは すこし たかいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>鞄<rt>かばん</rt></ruby>は
+      <ruby>少<rt>すこ</rt></ruby>し
+      <ruby>高<rt>たか</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この かばんは すこし たかいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 가방은 조금 비쌉니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 5
+    </div>
+
+    <div class="iadj-study-jp">
+      この へやは おおきいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>部屋<rt>へや</rt></ruby>は
+      <ruby>大<rt>おお</rt></ruby>きいです。
+    </div>
+
+    <div class="iadj-hira">
+      この へやは おおきいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 방은 큽니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 4. 현재 부정 「～くない / ～くないです」
+  </div>
+
+  <div class="iadj-formula">
+    마지막 い를 빼고
+    <br>
+    くない
+    <br><br>
+    たかい → たかくない
+  </div>
+
+
+  <div class="iadj-point">
+    <strong>い → くない</strong>
+    <br><br>
+
+    たかい
+    <br>
+    비싸다
+    <br><br>
+
+    ↓
+    <br><br>
+
+    たかくない
+    <br>
+    비싸지 않다
+    <br><br>
+
+    ↓ 정중하게
+    <br><br>
+
+    たかくないです
+    <br>
+    비싸지 않습니다
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      この かばんは たかくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>鞄<rt>かばん</rt></ruby>は
+      <ruby>高<rt>たか</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      この かばんは たかく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      이 가방은 비싸지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは あまり さむくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      あまり
+      <ruby>寒<rt>さむ</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは あまり さむく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 별로 춥지 않습니다.
+    </div>
+
+    <div class="iadj-explain">
+      <strong>あまり + 부정</strong>은
+      “별로 ~하지 않다”라는 뜻으로 자주 사용합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この りょうりは からくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>料理<rt>りょうり</rt></ruby>は
+      <ruby>辛<rt>から</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      この りょうりは からく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      이 요리는 맵지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      えきは ここから とおくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>駅<rt>えき</rt></ruby>は
+      ここから
+      <ruby>遠<rt>とお</rt></ruby>くないです。
+    </div>
+
+    <div class="iadj-hira">
+      えきは ここから とおく ないです。
+    </div>
+
+    <div class="iadj-ko">
+      역은 여기에서 멀지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-note">
+    조금 더 정중한 표현으로
+    <strong>～くありません</strong>도 사용할 수 있습니다.
+    <br><br>
+
+    <strong>たかくないです</strong>
+    <br>
+    비싸지 않습니다
+    <br><br>
+
+    <strong>たかくありません</strong>
+    <br>
+    비싸지 않습니다
+    <br><br>
+
+    둘 다 사용할 수 있습니다.
+    생기초 단계에서는 먼저
+    <strong>～くないです</strong>를 익혀도 충분합니다.
+  </div>
+
+</div>
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 5. 과거 긍정 「～かった / ～かったです」
+  </div>
+
+  <div class="iadj-formula">
+    마지막 い를 빼고
+    <br>
+    かった
+    <br><br>
+    たかい → たかかった
+  </div>
+
+  <div class="iadj-point">
+    <strong>い → かった</strong>
+    <br><br>
+
+    たかい
+    <br>
+    비싸다
+    <br><br>
+
+    ↓ 과거
+    <br><br>
+
+    たかかった
+    <br>
+    비쌌다
+    <br><br>
+
+    ↓ 정중하게
+    <br><br>
+
+    たかかったです
+    <br>
+    비쌌습니다
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      きのうは さむかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>寒<rt>さむ</rt></ruby>かったです。
+    </div>
+
+    <div class="iadj-hira">
+      きのうは さむかったです。
+    </div>
+
+    <div class="iadj-ko">
+      어제는 추웠습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      この ホテルは たかかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このホテルは
+      <ruby>高<rt>たか</rt></ruby>かったです。
+    </div>
+
+    <div class="iadj-hira">
+      この ほてるは たかかったです。
+    </div>
+
+    <div class="iadj-ko">
+      이 호텔은 비쌌습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      きのうの ラーメンは おいしかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>のラーメンは
+      <ruby>美味<rt>おい</rt></ruby>しかったです。
+    </div>
+
+    <div class="iadj-hira">
+      きのうの らーめんは おいしかったです。
+    </div>
+
+    <div class="iadj-ko">
+      어제 먹은 라멘은 맛있었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      あの かばんは すこし おおきかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      あの
+      <ruby>鞄<rt>かばん</rt></ruby>は
+      <ruby>少<rt>すこ</rt></ruby>し
+      <ruby>大<rt>おお</rt></ruby>きかったです。
+    </div>
+
+    <div class="iadj-hira">
+      あの かばんは すこし おおきかったです。
+    </div>
+
+    <div class="iadj-ko">
+      저 가방은 조금 컸습니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 6. 과거 부정 「～くなかった / ～くなかったです」
+  </div>
+
+  <div class="iadj-formula">
+    마지막 い를 빼고
+    <br>
+    くなかった
+    <br><br>
+    たかい → たかくなかった
+  </div>
+
+  <div class="iadj-point">
+    현재 부정
+    <br>
+    <strong>たかくない</strong>
+    <br><br>
+
+    ↓ 과거
+    <br><br>
+
+    <strong>たかくなかった</strong>
+    <br>
+    비싸지 않았다
+    <br><br>
+
+    ↓ 정중하게
+    <br><br>
+
+    <strong>たかくなかったです</strong>
+    <br>
+    비싸지 않았습니다
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      きのうは あまり さむくなかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      あまり
+      <ruby>寒<rt>さむ</rt></ruby>くなかったです。
+    </div>
+
+    <div class="iadj-hira">
+      きのうは あまり さむくなかったです。
+    </div>
+
+    <div class="iadj-ko">
+      어제는 별로 춥지 않았습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      この ホテルは たかくなかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このホテルは
+      <ruby>高<rt>たか</rt></ruby>くなかったです。
+    </div>
+
+    <div class="iadj-hira">
+      この ほてるは たかくなかったです。
+    </div>
+
+    <div class="iadj-ko">
+      이 호텔은 비싸지 않았습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この カレーは からくなかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このカレーは
+      <ruby>辛<rt>から</rt></ruby>くなかったです。
+    </div>
+
+    <div class="iadj-hira">
+      この かれーは からくなかったです。
+    </div>
+
+    <div class="iadj-ko">
+      이 카레는 맵지 않았습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-note">
+    더 정중한 형태로
+    <strong>～くありませんでした</strong>도 사용할 수 있습니다.
+    <br><br>
+
+    たかくなかったです
+    <br>
+    たかくありませんでした
+    <br><br>
+
+    둘 다 “비싸지 않았습니다”라는 뜻입니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 7. 질문형도 같은 원리입니다
+  </div>
+
+  <div class="iadj-formula">
+    정중체 문장 + か
+    <br>
+    = 질문
+  </div>
+
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>구분</th>
+      <th>질문</th>
+      <th>뜻</th>
+    </tr>
+
+    <tr>
+      <td>현재 긍정</td>
+      <td>たかいですか。</td>
+      <td>비쌉니까?</td>
+    </tr>
+
+    <tr>
+      <td>현재 부정</td>
+      <td>たかくないですか。</td>
+      <td>비싸지 않습니까?</td>
+    </tr>
+
+    <tr>
+      <td>과거 긍정</td>
+      <td>たかかったですか。</td>
+      <td>비쌌습니까?</td>
+    </tr>
+
+    <tr>
+      <td>과거 부정</td>
+      <td>たかくなかったですか。</td>
+      <td>비싸지 않았습니까?</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      QUESTION & ANSWER
+    </div>
+
+    <div class="iadj-study-jp">
+      きのうは さむかったですか。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>寒<rt>さむ</rt></ruby>かったですか。
+    </div>
+
+    <div class="iadj-hira">
+      きのうは さむかったですか。
+    </div>
+
+    <div class="iadj-ko">
+      어제는 추웠습니까?
+    </div>
+
+    <div class="iadj-explain">
+      <strong>はい、さむかったです。</strong>
+      <br>
+      네, 추웠습니다.
+      <br><br>
+
+      <strong>いいえ、あまり さむくなかったです。</strong>
+      <br>
+      아니요, 별로 춥지 않았습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      QUESTION & ANSWER
+    </div>
+
+    <div class="iadj-study-jp">
+      この りょうりは からいですか。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>料理<rt>りょうり</rt></ruby>は
+      <ruby>辛<rt>から</rt></ruby>いですか。
+    </div>
+
+    <div class="iadj-hira">
+      この りょうりは からいですか。
+    </div>
+
+    <div class="iadj-ko">
+      이 요리는 맵습니까?
+    </div>
+
+    <div class="iadj-explain">
+      <strong>はい、ちょっと からいです。</strong>
+      <br>
+      네, 조금 맵습니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 8. い형용사로 명사를 꾸미기
+  </div>
+
+  <p class="iadj-lead">
+    い형용사는 명사 앞에 바로 놓아서
+    그 명사가 어떤 상태인지 설명할 수 있습니다.
+  </p>
+
+  <div class="iadj-important">
+    <strong>い형용사 + 명사</strong>
+    <br><br>
+
+    たかい ホテル
+    <br>
+    비싼 호텔
+    <br><br>
+
+    おいしい りょうり
+    <br>
+    맛있는 요리
+    <br><br>
+
+    おおきい かばん
+    <br>
+    큰 가방
+  </div>
+
+
+  <div class="iadj-warning">
+    명사를 꾸밀 때는
+    <strong>です를 넣지 않습니다.</strong>
+    <br><br>
+
+    ❌ たかいです ホテル
+    <br>
+    ⭕ たかい ホテル
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      현재 긍정
+    </div>
+
+    <div class="iadj-study-jp">
+      これは たかい かばんです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      これは
+      <ruby>高<rt>たか</rt></ruby>い
+      <ruby>鞄<rt>かばん</rt></ruby>です。
+    </div>
+
+    <div class="iadj-hira">
+      これは たかい かばんです。
+    </div>
+
+    <div class="iadj-ko">
+      이것은 비싼 가방입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      현재 부정
+    </div>
+
+    <div class="iadj-study-jp">
+      たかくない ホテルを さがしています。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>高<rt>たか</rt></ruby>くないホテルを
+      <ruby>探<rt>さが</rt></ruby>しています。
+    </div>
+
+    <div class="iadj-hira">
+      たかくない ほてるを さがしています。
+    </div>
+
+    <div class="iadj-ko">
+      비싸지 않은 호텔을 찾고 있습니다.
+    </div>
+
+    <div class="iadj-explain">
+      지금은 「さがしています」의 문법을 깊게 분석하지 않아도 됩니다.
+      <strong>たかくない ホテル = 비싸지 않은 호텔</strong>에 집중하세요.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      과거 긍정
+    </div>
+
+    <div class="iadj-study-jp">
+      これは きのう たべた おいしかった ケーキです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      これは
+      <ruby>昨日<rt>きのう</rt></ruby>
+      <ruby>食<rt>た</rt></ruby>べた
+      <ruby>美味<rt>おい</rt></ruby>しかったケーキです。
+    </div>
+
+    <div class="iadj-hira">
+      これは きのう たべた おいしかった けーきです。
+    </div>
+
+    <div class="iadj-ko">
+      이것은 어제 먹었던 맛있었던 케이크입니다.
+    </div>
+
+    <div class="iadj-explain">
+      문법 형태로는 「おいしかった + 명사」가 가능하지만,
+      실제 일본어에서는 문맥에 따라 더 자연스럽게 표현을 바꾸는 경우도 있습니다.
+      지금은 <strong>과거형도 그대로 명사 앞에 올 수 있다</strong>는 구조를 확인하세요.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      과거 부정
+    </div>
+
+    <div class="iadj-study-jp">
+      あまり たかくなかった ホテルです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      あまり
+      <ruby>高<rt>たか</rt></ruby>くなかったホテルです。
+    </div>
+
+    <div class="iadj-hira">
+      あまり たかくなかった ほてるです。
+    </div>
+
+    <div class="iadj-ko">
+      별로 비싸지 않았던 호텔입니다.
+    </div>
+
+  </div>
+
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>형태</th>
+      <th>명사와 연결</th>
+      <th>뜻</th>
+    </tr>
+
+    <tr>
+      <td>현재 긍정</td>
+      <td>たかい ホテル</td>
+      <td>비싼 호텔</td>
+    </tr>
+
+    <tr>
+      <td>현재 부정</td>
+      <td>たかくない ホテル</td>
+      <td>비싸지 않은 호텔</td>
+    </tr>
+
+    <tr>
+      <td>과거 긍정</td>
+      <td>たかかった ホテル</td>
+      <td>비쌌던 호텔</td>
+    </tr>
+
+    <tr>
+      <td>과거 부정</td>
+      <td>たかくなかった ホテル</td>
+      <td>비싸지 않았던 호텔</td>
+    </tr>
+
+  </table>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 9. 같은 형용사를 네 가지로 바꿔보기
+  </div>
+
+  <div class="iadj-practice">
+
+    <div class="iadj-practice-title">
+      「おおきい」를 바꿔 보세요
+    </div>
+
+    현재 긍정
+    <br>
+    <strong>おおきい へや</strong>
+    <br>
+    큰 방
+    <br><br>
+
+    현재 부정
+    <br>
+    <strong>おおきくない へや</strong>
+    <br>
+    크지 않은 방
+    <br><br>
+
+    과거 긍정
+    <br>
+    <strong>おおきかった へや</strong>
+    <br>
+    컸던 방
+    <br><br>
+
+    과거 부정
+    <br>
+    <strong>おおきくなかった へや</strong>
+    <br>
+    크지 않았던 방
+
+  </div>
+
+
+  <div class="iadj-practice">
+
+    <div class="iadj-practice-title">
+      직접 변형해 보세요
+    </div>
+
+    다음 형용사를
+    <strong>현재 긍정 / 현재 부정 / 과거 긍정 / 과거 부정</strong>으로
+    바꾸어 명사 앞에 붙여 보세요.
+    <br><br>
+
+    ① やすい + ホテル
+    <br>
+    ② からい + りょうり
+    <br>
+    ③ ちいさい + かばん
+    <br>
+    ④ ちかい + えき
+    <br>
+    ⑤ おいしい + ケーキ
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 10. 「～くて」로 문장을 연결하기
+  </div>
+
+  <p class="iadj-lead">
+    い형용사는 마지막 <strong>い</strong>를
+    <strong>くて</strong>로 바꾸면
+    뒤의 표현과 연결할 수 있습니다.
+    <br><br>
+    한국어에서는 문맥에 따라
+    <strong>“~하고”, “~해서”</strong>처럼 해석됩니다.
+  </p>
+
+  <div class="iadj-formula">
+    い → くて
+    <br><br>
+    やすい → やすくて
+    <br>
+    おいしい → おいしくて
+    <br>
+    さむい → さむくて
+  </div>
+
+
+  <div class="iadj-change">
+    やす<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    やす<span class="iadj-change-new">くて</span>
+    <br>
+    싸다 → 싸고 / 싸서
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1 · 형용사 + 형용사
+    </div>
+
+    <div class="iadj-study-jp">
+      この ホテルは やすくて ひろいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このホテルは
+      <ruby>安<rt>やす</rt></ruby>くて
+      <ruby>広<rt>ひろ</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この ほてるは やすくて ひろいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 호텔은 싸고 넓습니다.
+    </div>
+
+    <div class="iadj-explain">
+      <strong>やすい</strong>와 <strong>ひろい</strong>,
+      두 개의 특징을 한 문장으로 연결했습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2 · 형용사 + 형용사
+    </div>
+
+    <div class="iadj-study-jp">
+      この ケーキは あまくて おいしいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このケーキは
+      <ruby>甘<rt>あま</rt></ruby>くて
+      <ruby>美味<rt>おい</rt></ruby>しいです。
+    </div>
+
+    <div class="iadj-hira">
+      この けーきは あまくて おいしいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 케이크는 달고 맛있습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3 · 이유의 느낌
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは さむくて、そとに でたくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>寒<rt>さむ</rt></ruby>くて、
+      <ruby>外<rt>そと</rt></ruby>に
+      <ruby>出<rt>で</rt></ruby>たくないです。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは さむくて、そとに でたくないです。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 추워서 밖에 나가고 싶지 않습니다.
+    </div>
+
+    <div class="iadj-explain">
+      여기서는 단순히 두 특징을 나열하는 것이 아니라
+      <strong>“추워서 → 나가고 싶지 않다”</strong>처럼
+      이유와 결과가 연결됩니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      この みちは せまくて、あるきにくいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>道<rt>みち</rt></ruby>は
+      <ruby>狭<rt>せま</rt></ruby>くて、
+      <ruby>歩<rt>ある</rt></ruby>きにくいです。
+    </div>
+
+    <div class="iadj-hira">
+      この みちは せまくて、あるきにくいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 길은 좁아서 걷기 어렵습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-important">
+    <strong>「～くて」의 해석은 문맥으로 정합니다.</strong>
+    <br><br>
+
+    やすくて ひろい
+    <br>
+    → 싸고 넓다
+    <br><br>
+
+    さむくて そとに でたくない
+    <br>
+    → 추워서 밖에 나가고 싶지 않다
+    <br><br>
+
+    일본어에서는 같은 <strong>～くて</strong> 형태를 사용하지만
+    한국어에서는 자연스럽게
+    “~하고”, “~해서” 등으로 바뀔 수 있습니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 11. 「～く + 동사」로 행동을 꾸미기
+  </div>
+
+  <p class="iadj-lead">
+    い형용사의 마지막 <strong>い</strong>를
+    <strong>く</strong>로 바꾸면
+    뒤의 동작을 설명할 수 있습니다.
+    <br><br>
+    한국어의
+    <strong>“크게, 작게, 빠르게, 일찍”</strong>과 비슷한 역할입니다.
+  </p>
+
+
+  <div class="iadj-formula">
+    い → く + 동사
+    <br><br>
+    おおきい → おおきく かく
+    <br>
+    はやい → はやく くる
+  </div>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      「～くて」와 「～く + 동사」는 다릅니다
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>はやくて べんりです。</strong>
+        <br>
+        빠르고 편리합니다.
+        <br><br>
+        → <strong>くて</strong>로 다음 설명과 연결
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>はやく きてください。</strong>
+        <br>
+        빨리 와 주세요.
+        <br><br>
+        → <strong>はやく</strong>가 「오다」라는 동작을 꾸밈
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      もっと おおきく かいてください。
+    </div>
+
+    <div class="iadj-standard-jp">
+      もっと
+      <ruby>大<rt>おお</rt></ruby>きく
+      <ruby>書<rt>か</rt></ruby>いてください。
+    </div>
+
+    <div class="iadj-hira">
+      もっと おおきく かいてください。
+    </div>
+
+    <div class="iadj-ko">
+      더 크게 써 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      もうすこし ゆっくり はなしてください。
+    </div>
+
+    <div class="iadj-standard-jp">
+      もう
+      <ruby>少<rt>すこ</rt></ruby>し
+      ゆっくり
+      <ruby>話<rt>はな</rt></ruby>してください。
+    </div>
+
+    <div class="iadj-hira">
+      もうすこし ゆっくり はなしてください。
+    </div>
+
+    <div class="iadj-ko">
+      조금 더 천천히 말해 주세요.
+    </div>
+
+    <div class="iadj-explain">
+      「ゆっくり」는 い형용사는 아니지만,
+      동사를 꾸미는 표현이 문장에서 어떤 위치에 오는지 함께 볼 수 있습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      あしたは はやく おきます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>明日<rt>あした</rt></ruby>は
+      <ruby>早<rt>はや</rt></ruby>く
+      <ruby>起<rt>お</rt></ruby>きます。
+    </div>
+
+    <div class="iadj-hira">
+      あしたは はやく おきます。
+    </div>
+
+    <div class="iadj-ko">
+      내일은 일찍 일어납니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      おんがくを ちいさく してください。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>音楽<rt>おんがく</rt></ruby>を
+      <ruby>小<rt>ちい</rt></ruby>さくしてください。
+    </div>
+
+    <div class="iadj-hira">
+      おんがくを ちいさく してください。
+    </div>
+
+    <div class="iadj-ko">
+      음악 소리를 작게 해 주세요.
+    </div>
+
+    <div class="iadj-explain">
+      「ちいさい → ちいさく」으로 바뀌어
+      뒤의 <strong>する</strong>와 연결되었습니다.
+      뒤에서 배우는 <strong>～くする</strong>와도 이어지는 표현입니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 12. 부정 상태를 연결하는 「～なくて」
+  </div>
+
+  <p class="iadj-lead">
+    い형용사의 부정형
+    <strong>～くない</strong>를 다른 표현과 연결할 때는
+    <strong>ない → なくて</strong>로 바꿉니다.
+  </p>
+
+
+  <div class="iadj-formula">
+    ～くない → ～くなくて
+    <br><br>
+    たかくない → たかくなくて
+    <br>
+    さむくない → さむくなくて
+  </div>
+
+
+  <div class="iadj-flow">
+
+    <div class="iadj-flow-step">
+      たかい
+      <br>
+      비싸다
+    </div>
+
+    <div class="iadj-flow-step">
+      たかくない
+      <br>
+      비싸지 않다
+    </div>
+
+    <div class="iadj-flow-step">
+      たかくなくて
+      <br>
+      비싸지 않고 / 비싸지 않아서
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      この ホテルは たかくなくて、べんりです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このホテルは
+      <ruby>高<rt>たか</rt></ruby>くなくて、
+      <ruby>便利<rt>べんり</rt></ruby>です。
+    </div>
+
+    <div class="iadj-hira">
+      この ほてるは たかくなくて、べんりです。
+    </div>
+
+    <div class="iadj-ko">
+      이 호텔은 비싸지 않고 편리합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは さむくなくて よかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>寒<rt>さむ</rt></ruby>くなくて
+      よかったです。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは さむくなくて よかったです。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 춥지 않아서 다행이었습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この カレーは からくなくて たべやすいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このカレーは
+      <ruby>辛<rt>から</rt></ruby>くなくて
+      <ruby>食<rt>た</rt></ruby>べやすいです。
+    </div>
+
+    <div class="iadj-hira">
+      この かれーは からくなくて たべやすいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 카레는 맵지 않아서 먹기 쉽습니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 13. 「なくて」와 「ないで」는 어떻게 다를까?
+  </div>
+
+  <p class="iadj-lead">
+    초급 단계에서
+    <strong>なくて</strong>와 <strong>ないで</strong>를
+    헷갈리는 경우가 많습니다.
+    <br><br>
+    특히 い형용사에서는
+    기본적으로 <strong>～くなくて</strong>를 사용합니다.
+  </p>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      가장 먼저 이렇게 구분하세요
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>い형용사의 부정 상태 연결 → ～くなくて</strong>
+        <br><br>
+        さむくなくて よかったです。
+        <br>
+        춥지 않아서 다행이었습니다.
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>동작을 하지 않고 다른 행동 → 동사 ないで</strong>
+        <br><br>
+        あさごはんを たべないで、がっこうに いきました。
+        <br>
+        아침밥을 먹지 않고 학교에 갔습니다.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      なくて · 상태
+    </div>
+
+    <div class="iadj-study-jp">
+      みせは とおくなくて、べんりです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>店<rt>みせ</rt></ruby>は
+      <ruby>遠<rt>とお</rt></ruby>くなくて、
+      <ruby>便利<rt>べんり</rt></ruby>です。
+    </div>
+
+    <div class="iadj-hira">
+      みせは とおくなくて、べんりです。
+    </div>
+
+    <div class="iadj-ko">
+      가게는 멀지 않고 편리합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      ないで · 행동
+    </div>
+
+    <div class="iadj-study-jp">
+      あさごはんを たべないで、がっこうに いきました。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>朝<rt>あさ</rt></ruby>ご
+      <ruby>飯<rt>はん</rt></ruby>を
+      <ruby>食<rt>た</rt></ruby>べないで、
+      <ruby>学校<rt>がっこう</rt></ruby>に
+      <ruby>行<rt>い</rt></ruby>きました。
+    </div>
+
+    <div class="iadj-hira">
+      あさごはんを たべないで、がっこうに いきました。
+    </div>
+
+    <div class="iadj-ko">
+      아침밥을 먹지 않고 학교에 갔습니다.
+    </div>
+
+    <div class="iadj-explain">
+      여기서 「ないで」는
+      <strong>먹지 않은 상태로 학교에 갔다</strong>는 뜻입니다.
+      <br><br>
+      동사 활용은 이후 동사 수업에서 더 자세히 배웁니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-warning">
+    <strong>생기초 단계에서는 이렇게 기억해도 충분합니다.</strong>
+    <br><br>
+
+    い형용사
+    <br>
+    → <strong>さむくなくて</strong>
+    <br>
+    → 춥지 않고 / 춥지 않아서
+    <br><br>
+
+    동사
+    <br>
+    → <strong>たべないで</strong>
+    <br>
+    → 먹지 않고
+    <br><br>
+
+    「なくて」와 「ないで」의 더 세밀한 차이는
+    동사 부정형을 배운 뒤 다시 정리할 수 있습니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 14. 연결 형태를 한 번에 비교하기
+  </div>
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>기본형</th>
+      <th>변형</th>
+      <th>역할</th>
+      <th>예시</th>
+    </tr>
+
+    <tr>
+      <td>やすい</td>
+      <td>やすくて</td>
+      <td>다음 설명과 연결</td>
+      <td>싸고 / 싸서</td>
+    </tr>
+
+    <tr>
+      <td>おおきい</td>
+      <td>おおきく</td>
+      <td>동작을 꾸밈</td>
+      <td>크게</td>
+    </tr>
+
+    <tr>
+      <td>たかくない</td>
+      <td>たかくなくて</td>
+      <td>부정 상태를 연결</td>
+      <td>비싸지 않고 / 비싸지 않아서</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-practice">
+
+    <div class="iadj-practice-title">
+      형태를 바꿔 보세요
+    </div>
+
+    ① おいしい
+    <br>
+    → 맛있고
+    <br><br>
+
+    ② さむい
+    <br>
+    → 춥고 / 추워서
+    <br><br>
+
+    ③ おおきい
+    <br>
+    → 크게
+    <br><br>
+
+    ④ はやい
+    <br>
+    → 빨리 / 일찍
+    <br><br>
+
+    ⑤ からくない
+    <br>
+    → 맵지 않고 / 맵지 않아서
+
+  </div>
+
+
+  <div class="iadj-speaking">
+
+    <div class="iadj-speaking-title">
+      직접 말해보기
+    </div>
+
+    <ul>
+      <li>싸고 맛있는 식당이라고 말해보세요.</li>
+      <li>오늘은 춥지 않아서 좋다고 말해보세요.</li>
+      <li>글씨를 더 크게 써 달라고 말해보세요.</li>
+      <li>내일 일찍 일어난다고 말해보세요.</li>
+      <li>맵지 않고 먹기 쉽다고 말해보세요.</li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 15. 「～くなる」 ~해지다
+  </div>
+
+  <p class="iadj-lead">
+    상태가 이전과 달라졌을 때
+    <strong>い형용사 → ～くなる</strong>를 사용합니다.
+    <br><br>
+    한국어의
+    <strong>“~해지다”</strong>와 비슷합니다.
+  </p>
+
+  <div class="iadj-formula">
+    い → く + なる
+    <br><br>
+    さむい → さむく なる
+    <br>
+    やすい → やすく なる
+    <br>
+    おおきい → おおきく なる
+  </div>
+
+
+  <div class="iadj-change">
+    さむ<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    さむ<span class="iadj-change-new">く なる</span>
+    <br>
+    춥다 → 추워지다
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      さいきん さむく なりました。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>最近<rt>さいきん</rt></ruby>
+      <ruby>寒<rt>さむ</rt></ruby>くなりました。
+    </div>
+
+    <div class="iadj-hira">
+      さいきん さむく なりました。
+    </div>
+
+    <div class="iadj-ko">
+      최근에 추워졌습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      この パソコンは やすく なりました。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このパソコンは
+      <ruby>安<rt>やす</rt></ruby>くなりました。
+    </div>
+
+    <div class="iadj-hira">
+      この ぱそこんは やすく なりました。
+    </div>
+
+    <div class="iadj-ko">
+      이 컴퓨터는 저렴해졌습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      こどもが おおきく なりました。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>子供<rt>こども</rt></ruby>が
+      <ruby>大<rt>おお</rt></ruby>きくなりました。
+    </div>
+
+    <div class="iadj-hira">
+      こどもが おおきく なりました。
+    </div>
+
+    <div class="iadj-ko">
+      아이가 커졌습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      ひるから あつく なりました。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>昼<rt>ひる</rt></ruby>から
+      <ruby>暑<rt>あつ</rt></ruby>くなりました。
+    </div>
+
+    <div class="iadj-hira">
+      ひるから あつく なりました。
+    </div>
+
+    <div class="iadj-ko">
+      낮부터 더워졌습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-important">
+    <strong>「～いです」와 「～くなりました」의 차이</strong>
+    <br><br>
+
+    さむいです。
+    <br>
+    → 춥습니다.
+    <br>
+    → 현재 상태를 설명
+    <br><br>
+
+    さむく なりました。
+    <br>
+    → 추워졌습니다.
+    <br>
+    → 이전과 비교해서 상태가 변함
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 16. 「～くする」 ~하게 하다
+  </div>
+
+  <p class="iadj-lead">
+    <strong>～くなる</strong>가 자연스럽게 상태가 변하는 것을 나타낸다면,
+    <strong>～くする</strong>는 누군가가 의도적으로
+    그 상태로 바꾸는 것을 나타냅니다.
+  </p>
+
+  <div class="iadj-formula">
+    い → く + する
+    <br><br>
+    おおきい → おおきく する
+    <br>
+    ちいさい → ちいさく する
+    <br>
+    やすい → やすく する
+  </div>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      「なる」와 「する」
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>へやが あかるく なりました。</strong>
+        <br>
+        방이 밝아졌습니다.
+        <br><br>
+        → 상태가 변했습니다.
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>へやを あかるく しました。</strong>
+        <br>
+        방을 밝게 했습니다.
+        <br><br>
+        → 누군가가 상태를 바꿨습니다.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      おとを ちいさく してください。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>音<rt>おと</rt></ruby>を
+      <ruby>小<rt>ちい</rt></ruby>さくしてください。
+    </div>
+
+    <div class="iadj-hira">
+      おとを ちいさく してください。
+    </div>
+
+    <div class="iadj-ko">
+      소리를 작게 해 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      もじを もっと おおきく します。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>文字<rt>もじ</rt></ruby>を
+      もっと
+      <ruby>大<rt>おお</rt></ruby>きくします。
+    </div>
+
+    <div class="iadj-hira">
+      もじを もっと おおきく します。
+    </div>
+
+    <div class="iadj-ko">
+      글자를 더 크게 합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      へやを あかるく しました。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>部屋<rt>へや</rt></ruby>を
+      <ruby>明<rt>あか</rt></ruby>るくしました。
+    </div>
+
+    <div class="iadj-hira">
+      へやを あかるく しました。
+    </div>
+
+    <div class="iadj-ko">
+      방을 밝게 했습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      もうすこし やすく できますか。
+    </div>
+
+    <div class="iadj-standard-jp">
+      もう
+      <ruby>少<rt>すこ</rt></ruby>し
+      <ruby>安<rt>やす</rt></ruby>くできますか。
+    </div>
+
+    <div class="iadj-hira">
+      もうすこし やすく できますか。
+    </div>
+
+    <div class="iadj-ko">
+      조금 더 싸게 할 수 있나요?
+    </div>
+
+    <div class="iadj-explain">
+      「できますか」까지 붙이면
+      <strong>“~하게 할 수 있나요?”</strong>라는 질문이 됩니다.
+      <br><br>
+      지금은
+      <strong>やすい → やすく</strong>의 변화에 집중해도 됩니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-important">
+    <strong>한 번에 비교해 봅시다.</strong>
+    <br><br>
+
+    おおきい
+    <br>
+    → 크다
+    <br><br>
+
+    おおきく なる
+    <br>
+    → 커지다
+    <br><br>
+
+    おおきく する
+    <br>
+    → 크게 하다
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 17. 「～すぎる」 너무 ~하다
+  </div>
+
+  <p class="iadj-lead">
+    어떤 상태가 적당한 정도를 넘어서
+    <strong>“너무 ~하다”</strong>고 말할 때는
+    <strong>～すぎる</strong>를 사용합니다.
+  </p>
+
+  <div class="iadj-formula">
+    마지막 い를 빼고 + すぎる
+    <br><br>
+    たかい → たかすぎる
+    <br>
+    あつい → あつすぎる
+    <br>
+    おおきい → おおきすぎる
+  </div>
+
+
+  <div class="iadj-change">
+    たか<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    たか<span class="iadj-change-new">すぎる</span>
+    <br>
+    비싸다 → 너무 비싸다
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      この かばんは たかすぎます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>鞄<rt>かばん</rt></ruby>は
+      <ruby>高<rt>たか</rt></ruby>すぎます。
+    </div>
+
+    <div class="iadj-hira">
+      この かばんは たかすぎます。
+    </div>
+
+    <div class="iadj-ko">
+      이 가방은 너무 비쌉니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは あつすぎます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>暑<rt>あつ</rt></ruby>すぎます。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは あつすぎます。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 너무 덥습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この へやは おおきすぎます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>部屋<rt>へや</rt></ruby>は
+      <ruby>大<rt>おお</rt></ruby>きすぎます。
+    </div>
+
+    <div class="iadj-hira">
+      この へやは おおきすぎます。
+    </div>
+
+    <div class="iadj-ko">
+      이 방은 너무 큽니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      この カレーは からすぎて、たべられません。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このカレーは
+      <ruby>辛<rt>から</rt></ruby>すぎて、
+      <ruby>食<rt>た</rt></ruby>べられません。
+    </div>
+
+    <div class="iadj-hira">
+      この かれーは からすぎて、たべられません。
+    </div>
+
+    <div class="iadj-ko">
+      이 카레는 너무 매워서 먹을 수 없습니다.
+    </div>
+
+    <div class="iadj-explain">
+      「すぎる」도 동사처럼 활용할 수 있기 때문에
+      <strong>すぎる → すぎて</strong>로 바꾸어
+      뒤의 문장과 연결할 수 있습니다.
+      <br><br>
+      「たべられません」의 자세한 활용은
+      동사 수업에서 다시 배웁니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 18. 「～そう」 ~해 보이다
+  </div>
+
+  <p class="iadj-lead">
+    직접 보고 받은 인상으로
+    <strong>“~해 보인다”</strong>고 말할 때
+    <strong>～そう</strong>를 사용할 수 있습니다.
+  </p>
+
+  <div class="iadj-formula">
+    마지막 い를 빼고 + そう
+    <br><br>
+    おいしい → おいしそう
+    <br>
+    たかい → たかそう
+    <br>
+    むずかしい → むずかしそう
+  </div>
+
+
+  <div class="iadj-change">
+    おいし<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    おいし<span class="iadj-change-new">そう</span>
+    <br>
+    맛있다 → 맛있어 보이다
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      この ケーキは おいしそうです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このケーキは
+      <ruby>美味<rt>おい</rt></ruby>しそうです。
+    </div>
+
+    <div class="iadj-hira">
+      この けーきは おいしそうです。
+    </div>
+
+    <div class="iadj-ko">
+      이 케이크는 맛있어 보입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      あの ホテルは たかそうです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      あのホテルは
+      <ruby>高<rt>たか</rt></ruby>そうです。
+    </div>
+
+    <div class="iadj-hira">
+      あの ほてるは たかそうです。
+    </div>
+
+    <div class="iadj-ko">
+      저 호텔은 비싸 보입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この もんだいは むずかしそうです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>問題<rt>もんだい</rt></ruby>は
+      <ruby>難<rt>むずか</rt></ruby>しそうです。
+    </div>
+
+    <div class="iadj-hira">
+      この もんだいは むずかしそうです。
+    </div>
+
+    <div class="iadj-ko">
+      이 문제는 어려워 보입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      あの みちは あぶなそうです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      あの
+      <ruby>道<rt>みち</rt></ruby>は
+      <ruby>危<rt>あぶ</rt></ruby>なそうです。
+    </div>
+
+    <div class="iadj-hira">
+      あの みちは あぶなそうです。
+    </div>
+
+    <div class="iadj-ko">
+      저 길은 위험해 보입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      「おいしい」와 「おいしそう」
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>この ケーキは おいしいです。</strong>
+        <br>
+        이 케이크는 맛있습니다.
+        <br><br>
+        → 실제 맛에 대해 말함
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>この ケーキは おいしそうです。</strong>
+        <br>
+        이 케이크는 맛있어 보입니다.
+        <br><br>
+        → 보고 받은 인상
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-warning">
+    <strong>「～そうです」에는 다른 용법도 있습니다.</strong>
+    <br><br>
+
+    여기에서 배우는
+    <strong>おいしそうです</strong>는
+    직접 보고 판단하는
+    <strong>“맛있어 보입니다”</strong>라는 표현입니다.
+    <br><br>
+
+    이후에는 다른 사람에게 들은 내용을 전달하는
+    「～そうです」도 배우게 됩니다.
+    두 표현은 같은 「そう」가 보이지만
+    문법과 만드는 방법이 다릅니다.
+  </div>
+
+
+  <div class="iadj-warning">
+    <strong>「いい」는 특별합니다.</strong>
+    <br><br>
+
+    いい
+    <br>
+    좋다
+    <br><br>
+
+    ❌ いそう
+    <br>
+    ⭕ <strong>よさそう</strong>
+    <br><br>
+
+    좋다 → 좋아 보이다
+    <br><br>
+
+    「いい」의 다른 특별한 활용은
+    뒤에서 한 번에 정리합니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 19. 변화 표현을 한 번에 비교하기
+  </div>
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>형태</th>
+      <th>변화</th>
+      <th>뜻</th>
+    </tr>
+
+    <tr>
+      <td>～くなる</td>
+      <td>やすい → やすくなる</td>
+      <td>저렴해지다</td>
+    </tr>
+
+    <tr>
+      <td>～くする</td>
+      <td>やすい → やすくする</td>
+      <td>저렴하게 하다</td>
+    </tr>
+
+    <tr>
+      <td>～すぎる</td>
+      <td>やすい → やすすぎる</td>
+      <td>너무 싸다</td>
+    </tr>
+
+    <tr>
+      <td>～そう</td>
+      <td>やすい → やすそう</td>
+      <td>저렴해 보이다</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-practice">
+
+    <div class="iadj-practice-title">
+      「おおきい」를 바꿔 보세요
+    </div>
+
+    <strong>おおきく なる</strong>
+    <br>
+    커지다
+    <br><br>
+
+    <strong>おおきく する</strong>
+    <br>
+    크게 하다
+    <br><br>
+
+    <strong>おおきすぎる</strong>
+    <br>
+    너무 크다
+    <br><br>
+
+    <strong>おおきそう</strong>
+    <br>
+    커 보이다
+
+  </div>
+
+
+  <div class="iadj-speaking">
+
+    <div class="iadj-speaking-title">
+      직접 말해보기
+    </div>
+
+    <ul>
+      <li>날씨가 추워졌다고 말해보세요.</li>
+      <li>글자를 더 크게 해 달라고 말해보세요.</li>
+      <li>이 가방은 너무 비싸다고 말해보세요.</li>
+      <li>케이크가 맛있어 보인다고 말해보세요.</li>
+      <li>이 문제가 어려워 보인다고 말해보세요.</li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 20. 「～ければ」 ~하면 / ~라면
+  </div>
+
+  <p class="iadj-lead">
+    어떤 조건을 말할 때
+    い형용사는 마지막 <strong>い</strong>를
+    <strong>ければ</strong>로 바꿀 수 있습니다.
+    <br><br>
+    한국어의
+    <strong>“~하면”, “~라면”</strong>과 비슷합니다.
+  </p>
+
+
+  <div class="iadj-formula">
+    い → ければ
+    <br><br>
+    やすい → やすければ
+    <br>
+    たかい → たかければ
+    <br>
+    おいしい → おいしければ
+  </div>
+
+
+  <div class="iadj-change">
+    やす<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    やす<span class="iadj-change-new">ければ</span>
+    <br>
+    싸다 → 싸면
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      やすければ、かいます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>安<rt>やす</rt></ruby>ければ、
+      <ruby>買<rt>か</rt></ruby>います。
+    </div>
+
+    <div class="iadj-hira">
+      やすければ、かいます。
+    </div>
+
+    <div class="iadj-ko">
+      싸면 삽니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      おいしければ、また たべたいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>美味<rt>おい</rt></ruby>しければ、
+      また
+      <ruby>食<rt>た</rt></ruby>べたいです。
+    </div>
+
+    <div class="iadj-hira">
+      おいしければ、また たべたいです。
+    </div>
+
+    <div class="iadj-ko">
+      맛있으면 또 먹고 싶습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      えきから ちかければ、べんりです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>駅<rt>えき</rt></ruby>から
+      <ruby>近<rt>ちか</rt></ruby>ければ、
+      <ruby>便利<rt>べんり</rt></ruby>です。
+    </div>
+
+    <div class="iadj-hira">
+      えきから ちかければ、べんりです。
+    </div>
+
+    <div class="iadj-ko">
+      역에서 가까우면 편리합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      てんきが よければ、さんぽします。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>天気<rt>てんき</rt></ruby>が
+      よければ、
+      <ruby>散歩<rt>さんぽ</rt></ruby>します。
+    </div>
+
+    <div class="iadj-hira">
+      てんきが よければ、さんぽします。
+    </div>
+
+    <div class="iadj-ko">
+      날씨가 좋으면 산책합니다.
+    </div>
+
+    <div class="iadj-explain">
+      「いい」는 특별한 い형용사입니다.
+      <br><br>
+      조건형에서는
+      <strong>いい → よければ</strong>가 됩니다.
+      <br><br>
+      뒤에서 「いい」의 활용을 한 번에 다시 정리합니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 21. 부정 조건 「～くなければ」
+  </div>
+
+  <p class="iadj-lead">
+    <strong>“~하지 않으면”</strong>이라고 말할 때는
+    부정형 <strong>～くない</strong>에서
+    <strong>ない → なければ</strong>로 바꿉니다.
+  </p>
+
+
+  <div class="iadj-formula">
+    ～くない → ～くなければ
+    <br><br>
+    たかくない → たかくなければ
+    <br>
+    さむくない → さむくなければ
+  </div>
+
+
+  <div class="iadj-flow">
+
+    <div class="iadj-flow-step">
+      たかい
+      <br>
+      비싸다
+    </div>
+
+    <div class="iadj-flow-step">
+      たかくない
+      <br>
+      비싸지 않다
+    </div>
+
+    <div class="iadj-flow-step">
+      たかくなければ
+      <br>
+      비싸지 않으면
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      たかくなければ、かいたいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>高<rt>たか</rt></ruby>くなければ、
+      <ruby>買<rt>か</rt></ruby>いたいです。
+    </div>
+
+    <div class="iadj-hira">
+      たかくなければ、かいたいです。
+    </div>
+
+    <div class="iadj-ko">
+      비싸지 않으면 사고 싶습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      さむくなければ、そとで たべます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>寒<rt>さむ</rt></ruby>くなければ、
+      <ruby>外<rt>そと</rt></ruby>で
+      <ruby>食<rt>た</rt></ruby>べます。
+    </div>
+
+    <div class="iadj-hira">
+      さむくなければ、そとで たべます。
+    </div>
+
+    <div class="iadj-ko">
+      춥지 않으면 밖에서 먹습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-important">
+    <strong>조건형을 한 번에 비교해 봅시다.</strong>
+    <br><br>
+
+    たかい
+    <br>
+    비싸다
+    <br><br>
+
+    たかければ
+    <br>
+    비싸면
+    <br><br>
+
+    たかくない
+    <br>
+    비싸지 않다
+    <br><br>
+
+    たかくなければ
+    <br>
+    비싸지 않으면
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 22. 「～い + と」 ~하면
+  </div>
+
+  <p class="iadj-lead">
+    い형용사의 기본형 뒤에
+    <strong>と</strong>를 붙여
+    조건이나 그에 따른 결과를 나타낼 수도 있습니다.
+  </p>
+
+
+  <div class="iadj-formula">
+    い형용사 기본형 + と
+    <br><br>
+    たかい + と
+    <br>
+    さむい + と
+    <br>
+    あつい + と
+  </div>
+
+
+  <div class="iadj-important">
+    <strong>여기서는 형용사의 모양이 변하지 않습니다.</strong>
+    <br><br>
+
+    たかい
+    <br>
+    ↓
+    <br>
+    <strong>たかい + と</strong>
+    <br><br>
+
+    「たかければ」처럼
+    い형용사의 활용형으로 바뀌는 것이 아니라,
+    <strong>기본형 뒤에 と가 붙는 구조</strong>입니다.
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      たかいと、かいません。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>高<rt>たか</rt></ruby>いと、
+      <ruby>買<rt>か</rt></ruby>いません。
+    </div>
+
+    <div class="iadj-hira">
+      たかいと、かいません。
+    </div>
+
+    <div class="iadj-ko">
+      비싸면 사지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      さむいと、そとに でたくないです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>寒<rt>さむ</rt></ruby>いと、
+      <ruby>外<rt>そと</rt></ruby>に
+      <ruby>出<rt>で</rt></ruby>たくないです。
+    </div>
+
+    <div class="iadj-hira">
+      さむいと、そとに でたくないです。
+    </div>
+
+    <div class="iadj-ko">
+      추우면 밖에 나가고 싶지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この へやは あついと、ねにくいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>部屋<rt>へや</rt></ruby>は
+      <ruby>暑<rt>あつ</rt></ruby>いと、
+      <ruby>寝<rt>ね</rt></ruby>にくいです。
+    </div>
+
+    <div class="iadj-hira">
+      この へやは あついと、ねにくいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 방은 더우면 자기 어렵습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      「～ければ」와 「～と」
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>やすければ、かいます。</strong>
+        <br>
+        싸면 삽니다.
+        <br><br>
+        → 어떤 조건을 두고 판단하거나 선택하는 느낌으로
+        사용할 수 있습니다.
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>たかいと、かいません。</strong>
+        <br>
+        비싸면 사지 않습니다.
+        <br><br>
+        → 그 조건에서 일반적으로 나타나는 결과나
+        자신의 경향을 말할 때 자연스럽습니다.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-note">
+    「～と」는 조건 표현 전체를 공부하면
+    더 세밀한 사용법을 배우게 됩니다.
+    <br><br>
+    지금은
+    <strong>い형용사는 기본형 그대로 + と</strong>
+    라는 구조를 먼저 익히면 됩니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 23. 「～くても」 ~해도
+  </div>
+
+  <p class="iadj-lead">
+    앞의 조건과 상관없이
+    뒤의 결과가 성립한다고 말할 때
+    <strong>～くても</strong>를 사용합니다.
+    <br><br>
+    한국어의
+    <strong>“~해도”</strong>와 비슷합니다.
+  </p>
+
+
+  <div class="iadj-formula">
+    い → くても
+    <br><br>
+    たかい → たかくても
+    <br>
+    さむい → さむくても
+    <br>
+    とおい → とおくても
+  </div>
+
+
+  <div class="iadj-flow">
+
+    <div class="iadj-flow-step">
+      たかい
+      <br>
+      비싸다
+    </div>
+
+    <div class="iadj-flow-step">
+      たかくて
+      <br>
+      비싸고 / 비싸서
+    </div>
+
+    <div class="iadj-flow-step">
+      たかくても
+      <br>
+      비싸도
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      すこし たかくても、かいたいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>少<rt>すこ</rt></ruby>し
+      <ruby>高<rt>たか</rt></ruby>くても、
+      <ruby>買<rt>か</rt></ruby>いたいです。
+    </div>
+
+    <div class="iadj-hira">
+      すこし たかくても、かいたいです。
+    </div>
+
+    <div class="iadj-ko">
+      조금 비싸도 사고 싶습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      さむくても、まいにち さんぽします。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>寒<rt>さむ</rt></ruby>くても、
+      <ruby>毎日<rt>まいにち</rt></ruby>
+      <ruby>散歩<rt>さんぽ</rt></ruby>します。
+    </div>
+
+    <div class="iadj-hira">
+      さむくても、まいにち さんぽします。
+    </div>
+
+    <div class="iadj-ko">
+      추워도 매일 산책합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      えきから とおくても、だいじょうぶです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>駅<rt>えき</rt></ruby>から
+      <ruby>遠<rt>とお</rt></ruby>くても、
+      <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です。
+    </div>
+
+    <div class="iadj-hira">
+      えきから とおくても、だいじょうぶです。
+    </div>
+
+    <div class="iadj-ko">
+      역에서 멀어도 괜찮습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      むずかしくても、やってみます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>難<rt>むずか</rt></ruby>しくても、
+      やってみます。
+    </div>
+
+    <div class="iadj-hira">
+      むずかしくても、やってみます。
+    </div>
+
+    <div class="iadj-ko">
+      어려워도 해보겠습니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 24. 「～くなくても」 ~하지 않아도
+  </div>
+
+  <p class="iadj-lead">
+    부정형에 「ても」를 연결하면
+    <strong>“~하지 않아도”</strong>라는 표현을 만들 수 있습니다.
+  </p>
+
+
+  <div class="iadj-formula">
+    ～くない → ～くなくても
+    <br><br>
+    たかくない → たかくなくても
+    <br>
+    おおきくない → おおきくなくても
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      おおきくなくても だいじょうぶです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>大<rt>おお</rt></ruby>きくなくても
+      <ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です。
+    </div>
+
+    <div class="iadj-hira">
+      おおきくなくても だいじょうぶです。
+    </div>
+
+    <div class="iadj-ko">
+      크지 않아도 괜찮습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      やすくなくても、これが ほしいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>安<rt>やす</rt></ruby>くなくても、
+      これが
+      <ruby>欲<rt>ほ</rt></ruby>しいです。
+    </div>
+
+    <div class="iadj-hira">
+      やすくなくても、これが ほしいです。
+    </div>
+
+    <div class="iadj-ko">
+      싸지 않아도 이것을 갖고 싶습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-important">
+    <strong>「くて」 계열을 연결해서 보면 쉽습니다.</strong>
+    <br><br>
+
+    たかくて
+    <br>
+    → 비싸고 / 비싸서
+    <br><br>
+
+    たかくても
+    <br>
+    → 비싸도
+    <br><br>
+
+    たかくなくて
+    <br>
+    → 비싸지 않고 / 비싸지 않아서
+    <br><br>
+
+    たかくなくても
+    <br>
+    → 비싸지 않아도
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 25. 조건 표현 한 번에 정리하기
+  </div>
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>형태</th>
+      <th>예시</th>
+      <th>뜻</th>
+    </tr>
+
+    <tr>
+      <td>～ければ</td>
+      <td>やすければ</td>
+      <td>싸면</td>
+    </tr>
+
+    <tr>
+      <td>～くなければ</td>
+      <td>たかくなければ</td>
+      <td>비싸지 않으면</td>
+    </tr>
+
+    <tr>
+      <td>～い + と</td>
+      <td>たかいと</td>
+      <td>비싸면</td>
+    </tr>
+
+    <tr>
+      <td>～くても</td>
+      <td>たかくても</td>
+      <td>비싸도</td>
+    </tr>
+
+    <tr>
+      <td>～くなくても</td>
+      <td>たかくなくても</td>
+      <td>비싸지 않아도</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-practice">
+
+    <div class="iadj-practice-title">
+      「たかい」를 조건 표현으로 바꿔보세요
+    </div>
+
+    <strong>たかければ</strong>
+    <br>
+    비싸면
+    <br><br>
+
+    <strong>たかくなければ</strong>
+    <br>
+    비싸지 않으면
+    <br><br>
+
+    <strong>たかいと</strong>
+    <br>
+    비싸면
+    <br><br>
+
+    <strong>たかくても</strong>
+    <br>
+    비싸도
+    <br><br>
+
+    <strong>たかくなくても</strong>
+    <br>
+    비싸지 않아도
+
+  </div>
+
+
+  <div class="iadj-speaking">
+
+    <div class="iadj-speaking-title">
+      직접 말해보기
+    </div>
+
+    <ul>
+      <li>싸면 산다고 말해보세요.</li>
+      <li>비싸지 않으면 사고 싶다고 말해보세요.</li>
+      <li>추우면 밖에 나가고 싶지 않다고 말해보세요.</li>
+      <li>조금 비싸도 괜찮다고 말해보세요.</li>
+      <li>크지 않아도 괜찮다고 말해보세요.</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 26. 「～さ」 형용사를 명사로 바꾸기
+  </div>
+
+  <p class="iadj-lead">
+    い형용사의 마지막 <strong>い</strong>를 빼고
+    <strong>さ</strong>를 붙이면
+    형용사가 나타내는 성질이나 정도를
+    <strong>명사</strong>처럼 표현할 수 있습니다.
+  </p>
+
+  <div class="iadj-formula">
+    い → さ
+    <br><br>
+    たかい → たかさ
+    <br>
+    おおきい → おおきさ
+    <br>
+    ながい → ながさ
+    <br>
+    あつい → あつさ
+  </div>
+
+
+  <div class="iadj-change">
+    おおき<span class="iadj-change-old">い</span>
+    <span class="iadj-arrow">→</span>
+    おおき<span class="iadj-change-new">さ</span>
+    <br>
+    크다 → 크기
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      この かばんの おおきさは ちょうど いいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>鞄<rt>かばん</rt></ruby>の
+      <ruby>大<rt>おお</rt></ruby>きさは
+      ちょうどいいです。
+    </div>
+
+    <div class="iadj-hira">
+      この かばんの おおきさは ちょうど いいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 가방의 크기는 딱 좋습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      この つくえの たかさは 80センチです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>机<rt>つくえ</rt></ruby>の
+      <ruby>高<rt>たか</rt></ruby>さは
+      80センチです。
+    </div>
+
+    <div class="iadj-hira">
+      この つくえの たかさは はちじゅっせんちです。
+    </div>
+
+    <div class="iadj-ko">
+      이 책상의 높이는 80cm입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      この みちの ながさは 3キロぐらいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>道<rt>みち</rt></ruby>の
+      <ruby>長<rt>なが</rt></ruby>さは
+      3キロぐらいです。
+    </div>
+
+    <div class="iadj-hira">
+      この みちの ながさは さんきろぐらいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 길의 길이는 약 3km입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      なつの あつさが にがてです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>夏<rt>なつ</rt></ruby>の
+      <ruby>暑<rt>あつ</rt></ruby>さが
+      <ruby>苦手<rt>にがて</rt></ruby>です。
+    </div>
+
+    <div class="iadj-hira">
+      なつの あつさが にがてです。
+    </div>
+
+    <div class="iadj-ko">
+      여름의 더위를 힘들어합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-important">
+    <strong>형용사와 명사를 구분해 봅시다.</strong>
+    <br><br>
+
+    おおきい
+    <br>
+    → 크다
+    <br><br>
+
+    おおきさ
+    <br>
+    → 크기
+    <br><br>
+
+    ながい
+    <br>
+    → 길다
+    <br><br>
+
+    ながさ
+    <br>
+    → 길이
+  </div>
+
+
+  <div class="iadj-note">
+    「～さ」는 다양한 い형용사에 넓게 사용할 수 있습니다.
+    <br><br>
+
+    <strong>はやさ</strong> → 빠르기 / 속도
+    <br>
+    <strong>つよさ</strong> → 강함 / 강도
+    <br>
+    <strong>むずかしさ</strong> → 어려움 / 난이도
+    <br>
+    <strong>おもしろさ</strong> → 재미 / 흥미로운 정도
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 27. 「～み」도 보이지만 「～さ」와는 다릅니다
+  </div>
+
+  <p class="iadj-lead">
+    일부 い형용사는
+    <strong>～み</strong>를 붙여 명사처럼 사용하는 경우도 있습니다.
+    <br><br>
+    하지만 「～さ」처럼
+    모든 형용사에 자유롭게 붙일 수 있는 형태는 아닙니다.
+  </p>
+
+
+  <div class="iadj-vs">
+
+    <div class="iadj-vs-title">
+      「～さ」와 「～み」
+    </div>
+
+    <div class="iadj-vs-body">
+
+      <div class="iadj-vs-item">
+        <strong>あまさ</strong>
+        <br>
+        단 정도, 당도
+        <br><br>
+        → 정도를 객관적으로 표현하기 쉬움
+      </div>
+
+      <div class="iadj-vs-item">
+        <strong>あまみ</strong>
+        <br>
+        단맛
+        <br><br>
+        → 실제로 느껴지는 맛이나 성질을 나타내는 단어로 사용
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE
+    </div>
+
+    <div class="iadj-study-jp">
+      この くだものは あまみが つよいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      この
+      <ruby>果物<rt>くだもの</rt></ruby>は
+      <ruby>甘味<rt>あまみ</rt></ruby>が
+      <ruby>強<rt>つよ</rt></ruby>いです。
+    </div>
+
+    <div class="iadj-hira">
+      この くだものは あまみが つよいです。
+    </div>
+
+    <div class="iadj-ko">
+      이 과일은 단맛이 강합니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-warning">
+    생기초 단계에서는
+    <strong>「い → さ」를 기본적인 명사화 방법</strong>으로 먼저 익히면 충분합니다.
+    <br><br>
+    「～み」는
+    <strong>あまみ・いたみ・つよみ・よわみ</strong>처럼
+    실제로 자주 사용하는 단어를 만날 때 하나씩 익히는 편이 좋습니다.
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 28. 가장 중요한 예외 「いい」
+  </div>
+
+  <p class="iadj-lead">
+    <strong>いい</strong>는 “좋다”라는 뜻으로
+    매우 자주 사용하는 い형용사입니다.
+    <br><br>
+    하지만 활용할 때는 대부분
+    원래 형태인 <strong>よい</strong>를 기준으로 변화합니다.
+  </p>
+
+
+  <div class="iadj-important">
+    <strong>기본형에서는 「いい」를 매우 자주 사용합니다.</strong>
+    <br><br>
+
+    いいです。
+    <br>
+    좋습니다.
+    <br><br>
+
+    いい てんきです。
+    <br>
+    좋은 날씨입니다.
+    <br><br>
+
+    하지만 형태가 바뀌기 시작하면
+    <strong>よ～</strong>가 나타납니다.
+  </div>
+
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>의미</th>
+      <th>형태</th>
+    </tr>
+
+    <tr>
+      <td>좋다</td>
+      <td>いい / よい</td>
+    </tr>
+
+    <tr>
+      <td>좋지 않다</td>
+      <td>よくない</td>
+    </tr>
+
+    <tr>
+      <td>좋았다</td>
+      <td>よかった</td>
+    </tr>
+
+    <tr>
+      <td>좋지 않았다</td>
+      <td>よくなかった</td>
+    </tr>
+
+    <tr>
+      <td>좋고 / 좋아서</td>
+      <td>よくて</td>
+    </tr>
+
+    <tr>
+      <td>좋아지다</td>
+      <td>よくなる</td>
+    </tr>
+
+    <tr>
+      <td>좋게 하다</td>
+      <td>よくする</td>
+    </tr>
+
+    <tr>
+      <td>좋으면</td>
+      <td>よければ</td>
+    </tr>
+
+    <tr>
+      <td>좋아도</td>
+      <td>よくても</td>
+    </tr>
+
+    <tr>
+      <td>좋아 보이다</td>
+      <td>よさそう</td>
+    </tr>
+
+    <tr>
+      <td>좋음 / 장점</td>
+      <td>よさ</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-warning">
+    <strong>자주 하는 실수</strong>
+    <br><br>
+
+    ❌ いくない
+    <br>
+    ⭕ <strong>よくない</strong>
+    <br><br>
+
+    ❌ いかった
+    <br>
+    ⭕ <strong>よかった</strong>
+    <br><br>
+
+    ❌ いければ
+    <br>
+    ⭕ <strong>よければ</strong>
+    <br><br>
+
+    ❌ いそう
+    <br>
+    ⭕ <strong>よさそう</strong>
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="iadj-study-jp">
+      きょうは てんきが いいです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>今日<rt>きょう</rt></ruby>は
+      <ruby>天気<rt>てんき</rt></ruby>がいいです。
+    </div>
+
+    <div class="iadj-hira">
+      きょうは てんきが いいです。
+    </div>
+
+    <div class="iadj-ko">
+      오늘은 날씨가 좋습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="iadj-study-jp">
+      きのうは てんきが よくなかったです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>昨日<rt>きのう</rt></ruby>は
+      <ruby>天気<rt>てんき</rt></ruby>が
+      <ruby>良<rt>よ</rt></ruby>くなかったです。
+    </div>
+
+    <div class="iadj-hira">
+      きのうは てんきが よくなかったです。
+    </div>
+
+    <div class="iadj-ko">
+      어제는 날씨가 좋지 않았습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="iadj-study-jp">
+      てんきが よければ、こうえんに いきます。
+    </div>
+
+    <div class="iadj-standard-jp">
+      <ruby>天気<rt>てんき</rt></ruby>が
+      <ruby>良<rt>よ</rt></ruby>ければ、
+      <ruby>公園<rt>こうえん</rt></ruby>に
+      <ruby>行<rt>い</rt></ruby>きます。
+    </div>
+
+    <div class="iadj-hira">
+      てんきが よければ、こうえんに いきます。
+    </div>
+
+    <div class="iadj-ko">
+      날씨가 좋으면 공원에 갑니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-example">
+
+    <div class="iadj-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="iadj-study-jp">
+      この ホテルは よさそうです。
+    </div>
+
+    <div class="iadj-standard-jp">
+      このホテルは
+      <ruby>良<rt>よ</rt></ruby>さそうです。
+    </div>
+
+    <div class="iadj-hira">
+      この ほてるは よさそうです。
+    </div>
+
+    <div class="iadj-ko">
+      이 호텔은 좋아 보입니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 29. 자주 틀리는 い형용사 활용
+  </div>
+
+
+  <div class="iadj-question">
+
+    <div class="iadj-question-number">
+      CHECK 1
+    </div>
+
+    <div class="iadj-question-text">
+      「비싸지 않습니다」를 일본어로 바르게 말한 것은?
+    </div>
+
+    <ol class="iadj-options">
+      <li>たかいないです。</li>
+      <li>たかくないです。</li>
+      <li>たかかったです。</li>
+    </ol>
+
+    <div class="iadj-answer">
+      <div class="iadj-answer-title">
+        정답: ② たかくないです。
+      </div>
+
+      い형용사의 현재 부정은
+      <strong>い → くない</strong>입니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-question">
+
+    <div class="iadj-question-number">
+      CHECK 2
+    </div>
+
+    <div class="iadj-question-text">
+      「어제는 추웠습니다」에 맞는 문장은?
+    </div>
+
+    <ol class="iadj-options">
+      <li>きのうは さむいでした。</li>
+      <li>きのうは さむかったです。</li>
+      <li>きのうは さむくです。</li>
+    </ol>
+
+    <div class="iadj-answer">
+      <div class="iadj-answer-title">
+        정답: ② きのうは さむかったです。
+      </div>
+
+      い형용사의 과거는
+      <strong>い → かった</strong>입니다.
+      <br><br>
+
+      <strong>さむいでした</strong>라고 하지 않습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-question">
+
+    <div class="iadj-question-number">
+      CHECK 3
+    </div>
+
+    <div class="iadj-question-text">
+      「비싼 호텔」에 맞는 표현은?
+    </div>
+
+    <ol class="iadj-options">
+      <li>たかいです ホテル</li>
+      <li>たかく ホテル</li>
+      <li>たかい ホテル</li>
+    </ol>
+
+    <div class="iadj-answer">
+      <div class="iadj-answer-title">
+        정답: ③ たかい ホテル
+      </div>
+
+      い형용사는 기본형 그대로
+      명사 앞에 놓을 수 있습니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-question">
+
+    <div class="iadj-question-number">
+      CHECK 4
+    </div>
+
+    <div class="iadj-question-text">
+      「싸고 맛있습니다」에 맞는 표현은?
+    </div>
+
+    <ol class="iadj-options">
+      <li>やすいで おいしいです。</li>
+      <li>やすくて おいしいです。</li>
+      <li>やすく おいしいです。</li>
+    </ol>
+
+    <div class="iadj-answer">
+      <div class="iadj-answer-title">
+        정답: ② やすくて おいしいです。
+      </div>
+
+      い형용사를 다음 설명과 연결할 때
+      <strong>い → くて</strong>로 바꿉니다.
+    </div>
+
+  </div>
+
+
+  <div class="iadj-question">
+
+    <div class="iadj-question-number">
+      CHECK 5
+    </div>
+
+    <div class="iadj-question-text">
+      「좋으면」에 맞는 표현은?
+    </div>
+
+    <ol class="iadj-options">
+      <li>いければ</li>
+      <li>よければ</li>
+      <li>よくれば</li>
+    </ol>
+
+    <div class="iadj-answer">
+      <div class="iadj-answer-title">
+        정답: ② よければ
+      </div>
+
+      「いい」는 활용할 때
+      대부분 <strong>よい</strong>를 기준으로 변화합니다.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="iadj-section">
+
+  <div class="iadj-section-title">
+    STEP 30. 「たかい」 하나로 전체 활용 다시 보기
+  </div>
+
+  <p class="iadj-lead">
+    지금까지 배운 내용을
+    하나의 형용사 <strong>たかい</strong>로 연결해 봅니다.
+    <br><br>
+    각각을 별개의 문법으로 외우기보다
+    <strong>마지막 「い」가 어떻게 바뀌는지</strong> 확인하세요.
+  </p>
+
+
+  <table class="iadj-table">
+
+    <tr>
+      <th>기능</th>
+      <th>형태</th>
+      <th>뜻</th>
+    </tr>
+
+    <tr>
+      <td>기본형</td>
+      <td>たかい</td>
+      <td>비싸다 / 높다</td>
+    </tr>
+
+    <tr>
+      <td>정중형</td>
+      <td>たかいです</td>
+      <td>비쌉니다</td>
+    </tr>
+
+    <tr>
+      <td>현재 부정</td>
+      <td>たかくない</td>
+      <td>비싸지 않다</td>
+    </tr>
+
+    <tr>
+      <td>현재 부정 정중형</td>
+      <td>たかくないです</td>
+      <td>비싸지 않습니다</td>
+    </tr>
+
+    <tr>
+      <td>과거</td>
+      <td>たかかった</td>
+      <td>비쌌다</td>
+    </tr>
+
+    <tr>
+      <td>과거 정중형</td>
+      <td>たかかったです</td>
+      <td>비쌌습니다</td>
+    </tr>
+
+    <tr>
+      <td>과거 부정</td>
+      <td>たかくなかった</td>
+      <td>비싸지 않았다</td>
+    </tr>
+
+    <tr>
+      <td>과거 부정 정중형</td>
+      <td>たかくなかったです</td>
+      <td>비싸지 않았습니다</td>
+    </tr>
+
+    <tr>
+      <td>명사 수식</td>
+      <td>たかい ホテル</td>
+      <td>비싼 호텔</td>
+    </tr>
+
+    <tr>
+      <td>부정 명사 수식</td>
+      <td>たかくない ホテル</td>
+      <td>비싸지 않은 호텔</td>
+    </tr>
+
+    <tr>
+      <td>과거 명사 수식</td>
+      <td>たかかった ホテル</td>
+      <td>비쌌던 호텔</td>
+    </tr>
+
+    <tr>
+      <td>과거 부정 명사 수식</td>
+      <td>たかくなかった ホテル</td>
+      <td>비싸지 않았던 호텔</td>
+    </tr>
+
+    <tr>
+      <td>연결</td>
+      <td>たかくて</td>
+      <td>비싸고 / 비싸서</td>
+    </tr>
+
+    <tr>
+      <td>부정 연결</td>
+      <td>たかくなくて</td>
+      <td>비싸지 않고 / 비싸지 않아서</td>
+    </tr>
+
+    <tr>
+      <td>부사형</td>
+      <td>たかく</td>
+      <td>비싸게 / 높게</td>
+    </tr>
+
+    <tr>
+      <td>상태 변화</td>
+      <td>たかくなる</td>
+      <td>비싸지다 / 높아지다</td>
+    </tr>
+
+    <tr>
+      <td>상태를 바꿈</td>
+      <td>たかくする</td>
+      <td>비싸게 하다 / 높게 하다</td>
+    </tr>
+
+    <tr>
+      <td>과도함</td>
+      <td>たかすぎる</td>
+      <td>너무 비싸다 / 너무 높다</td>
+    </tr>
+
+    <tr>
+      <td>겉으로 보이는 판단</td>
+      <td>たかそう</td>
+      <td>비싸 보이다 / 높아 보이다</td>
+    </tr>
+
+    <tr>
+      <td>조건</td>
+      <td>たかければ</td>
+      <td>비싸면</td>
+    </tr>
+
+    <tr>
+      <td>부정 조건</td>
+      <td>たかくなければ</td>
+      <td>비싸지 않으면</td>
+    </tr>
+
+    <tr>
+      <td>조건 と</td>
+      <td>たかいと</td>
+      <td>비싸면</td>
+    </tr>
+
+    <tr>
+      <td>양보</td>
+      <td>たかくても</td>
+      <td>비싸도</td>
+    </tr>
+
+    <tr>
+      <td>부정 양보</td>
+      <td>たかくなくても</td>
+      <td>비싸지 않아도</td>
+    </tr>
+
+    <tr>
+      <td>명사화</td>
+      <td>たかさ</td>
+      <td>높이 / 높은 정도</td>
+    </tr>
+
+  </table>
+
+
+  <div class="iadj-important">
+    <strong>핵심은 형태를 통째로 외우는 것이 아닙니다.</strong>
+    <br><br>
+
+    たか<strong>い</strong>
+    <br>
+    ↓
+    <br>
+    たか<strong>くない</strong>
+    <br>
+    たか<strong>かった</strong>
+    <br>
+    たか<strong>くて</strong>
+    <br>
+    たか<strong>くなる</strong>
+    <br>
+    たか<strong>すぎる</strong>
+    <br>
+    たか<strong>そう</strong>
+    <br>
+    たか<strong>ければ</strong>
+    <br>
+    たか<strong>くても</strong>
+    <br>
+    たか<strong>さ</strong>
+    <br><br>
+
+    마지막 부분이 어떻게 변하는지 이해하면
+    다른 い형용사에도 같은 원리를 적용할 수 있습니다.
+  </div>
+
+</div>

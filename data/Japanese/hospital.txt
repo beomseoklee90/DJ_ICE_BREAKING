@@ -1,0 +1,4729 @@
+피부과 일본어
+<style>
+  .clinic-title {
+    margin: 8px 0 12px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.35;
+    letter-spacing: -0.7px;
+    color: #202124;
+  }
+
+  .clinic-subtitle {
+    margin: 0 0 28px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #5f6368;
+  }
+
+  .clinic-section {
+    margin-top: 42px;
+  }
+
+  .clinic-section-title {
+    margin: 0 0 20px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #202124;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.45;
+    letter-spacing: -0.4px;
+  }
+
+  .clinic-subhead {
+    margin: 28px 0 13px;
+    font-size: 19px;
+    font-weight: 850;
+    line-height: 1.5;
+  }
+
+  .clinic-minor-head {
+    margin: 21px 0 9px;
+    font-size: 16px;
+    font-weight: 850;
+    line-height: 1.55;
+  }
+
+  .clinic-lead {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #303134;
+  }
+
+  /* 핵심 문장 */
+  .clinic-main-phrase {
+    margin: 20px 0;
+    padding: 21px 18px;
+    border: 2px solid #202124;
+    border-radius: 15px;
+    background: #ffffff;
+  }
+
+  .clinic-main-label {
+    margin-bottom: 9px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: #666;
+  }
+
+  .clinic-main-jp {
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 1.9;
+    color: #202124;
+  }
+
+  .clinic-main-hira {
+    margin-top: 2px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #777;
+  }
+
+  .clinic-main-ko {
+    margin-top: 7px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  /* 일반 예문 */
+  .clinic-example {
+    margin: 14px 0;
+    padding: 16px 17px;
+    border: 1px solid #dedede;
+    border-radius: 13px;
+    background: #fff;
+  }
+
+  .clinic-example-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    color: #666;
+  }
+
+  .clinic-jp {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 2;
+    color: #202124;
+  }
+
+  .clinic-hira {
+    margin-top: -2px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #777;
+  }
+
+  .clinic-ko {
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .clinic-explain {
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px dashed #d5d5d5;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  /* 실제 현장에서의 사용 설명 */
+  .clinic-real {
+    margin: 20px 0;
+    padding: 18px;
+    border-left: 5px solid #202124;
+    border-radius: 4px 12px 12px 4px;
+    background: #f5f5f5;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .clinic-real-title {
+    margin-bottom: 7px;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  /* 문장 구조 분석 */
+  .clinic-breakdown {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+  }
+
+  .clinic-breakdown-line {
+    margin: 8px 0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .clinic-part {
+    display: inline-block;
+    margin: 2px 3px 2px 0;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: #fff;
+    font-weight: 850;
+  }
+
+  .clinic-part-meaning {
+    margin-left: 4px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* 레벨별 설명 */
+  .clinic-level-basic {
+    margin: 22px 0;
+    padding: 18px;
+    border: 2px solid #202124;
+    border-radius: 14px;
+    background: #ffffff;
+  }
+
+  .clinic-level-basic-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .clinic-level-basic-text {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .clinic-level-next {
+    margin: 22px 0;
+    padding: 18px;
+    border: 1px solid #bfc4c8;
+    border-radius: 14px;
+    background: #f3f6f8;
+  }
+
+  .clinic-level-next-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .clinic-level-next-text {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .clinic-level-advanced {
+    margin: 22px 0;
+    padding: 18px;
+    border: 1px dashed #90969b;
+    border-radius: 14px;
+    background: #fafafa;
+  }
+
+  .clinic-level-advanced-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .clinic-level-advanced-text {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .clinic-stop {
+    margin: 15px 0;
+    padding: 13px 15px;
+    border-radius: 10px;
+    background: #eeeeee;
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.75;
+  }
+
+  /* 공식 / 핵심 */
+  .clinic-formula {
+    margin: 20px 0;
+    padding: 19px 18px;
+    border-radius: 14px;
+    background: #202124;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 850;
+    line-height: 1.75;
+    text-align: center;
+  }
+
+  .clinic-formula .soft {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.82;
+  }
+
+  .clinic-important {
+    margin: 20px 0;
+    padding: 18px;
+    border: 2px solid #202124;
+    border-radius: 14px;
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .clinic-note {
+    margin: 18px 0;
+    padding: 16px 17px;
+    border-radius: 12px;
+    background: #f2f5f7;
+    color: #3c4043;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .clinic-warning {
+    margin: 20px 0;
+    padding: 17px 18px;
+    border-left: 5px solid #8a6d1d;
+    border-radius: 4px 12px 12px 4px;
+    background: #fffaf0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* 직원 / 고객 대화 */
+  .clinic-dialogue {
+    margin: 20px 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .clinic-dialogue-title {
+    padding: 12px 15px;
+    background: #ededed;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .clinic-dialogue-body {
+    padding: 17px;
+  }
+
+  .clinic-dialogue-row {
+    padding: 13px 0;
+  }
+
+  .clinic-dialogue-row + .clinic-dialogue-row {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .clinic-role {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 3px 8px;
+    border: 1px solid #c8c8c8;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  /* 시나리오 */
+  .clinic-scene {
+    margin: 24px 0;
+    padding: 19px;
+    border: 1px solid #cacaca;
+    border-radius: 15px;
+    background: #fcfcfc;
+  }
+
+  .clinic-scene-number {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #777;
+  }
+
+  .clinic-scene-title {
+    margin-bottom: 9px;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.5;
+  }
+
+  .clinic-scene-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  /* 단어 */
+  .clinic-vocab {
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+  }
+
+  .clinic-vocab-title {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .clinic-vocab-row {
+    display: grid;
+    grid-template-columns: minmax(90px, 0.9fr) minmax(100px, 0.9fr) minmax(120px, 1.2fr);
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .clinic-vocab-row:last-child {
+    border-bottom: 0;
+  }
+
+  .clinic-vocab-jp {
+    font-weight: 850;
+  }
+
+  .clinic-vocab-hira {
+    color: #666;
+  }
+
+  .clinic-vocab-ko {
+    color: #333;
+  }
+
+  /* 표현 비교 */
+  .clinic-vs {
+    margin: 22px 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .clinic-vs-title {
+    padding: 12px 15px;
+    background: #ededed;
+    font-weight: 900;
+    font-size: 15px;
+  }
+
+  .clinic-vs-body {
+    padding: 17px;
+  }
+
+  .clinic-vs-item {
+    padding: 12px 0;
+  }
+
+  .clinic-vs-item + .clinic-vs-item {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  /* 표 */
+  .clinic-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .clinic-table th,
+  .clinic-table td {
+    padding: 12px 10px;
+    border: 1px solid #d8d8d8;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .clinic-table th {
+    background: #f2f2f2;
+    font-weight: 900;
+  }
+
+  /* 학습 순서 */
+  .clinic-flow {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f5f5f5;
+  }
+
+  .clinic-flow-step {
+    position: relative;
+    margin: 0;
+    padding: 11px 10px 11px 40px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .clinic-flow-step::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 20px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #202124;
+  }
+
+  .clinic-flow-step + .clinic-flow-step::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: -10px;
+    width: 1px;
+    height: 25px;
+    background: #b8b8b8;
+  }
+
+  /* 연습 */
+  .clinic-practice {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 14px;
+    background: #f7f7f7;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .clinic-practice-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .clinic-speaking {
+    margin: 22px 0;
+    padding: 18px;
+    border: 2px dashed #999;
+    border-radius: 14px;
+    background: #fcfcfc;
+  }
+
+  .clinic-speaking-title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .clinic-speaking ul {
+    margin: 9px 0 0;
+    padding-left: 22px;
+  }
+
+  .clinic-speaking li {
+    margin: 9px 0;
+    line-height: 1.75;
+  }
+
+  /* 역할 카드 */
+  .clinic-role-card {
+    margin: 18px 0;
+    padding: 17px;
+    border: 1px solid #d2d2d2;
+    border-radius: 13px;
+    background: #fff;
+  }
+
+  .clinic-role-card-title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .clinic-role-card ul {
+    margin: 8px 0 0;
+    padding-left: 21px;
+  }
+
+  .clinic-role-card li {
+    margin: 7px 0;
+    line-height: 1.7;
+  }
+
+  /* 칩 */
+  .clinic-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+  }
+
+  .clinic-chip {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .clinic-divider {
+    height: 1px;
+    margin: 35px 0;
+    border: 0;
+    background: #dadce0;
+  }
+
+  .clinic-small {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #6a6a6a;
+  }
+
+  ruby {
+    ruby-position: over;
+  }
+
+  rt {
+    font-size: 0.55em;
+    font-weight: 500;
+    color: #666;
+  }
+
+  @media (max-width: 640px) {
+    .clinic-title {
+      font-size: 26px;
+    }
+
+    .clinic-section-title {
+      font-size: 21px;
+    }
+
+    .clinic-subhead {
+      font-size: 18px;
+    }
+
+    .clinic-main-jp {
+      font-size: 21px;
+    }
+
+    .clinic-jp {
+      font-size: 18px;
+    }
+
+    .clinic-vocab-row {
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 12px 0;
+    }
+
+    .clinic-vocab-hira {
+      font-size: 13px;
+    }
+
+    .clinic-table {
+      font-size: 13px;
+    }
+
+    .clinic-table th,
+    .clinic-table td {
+      padding: 9px 7px;
+    }
+
+    .clinic-main-phrase,
+    .clinic-level-basic,
+    .clinic-level-next,
+    .clinic-level-advanced,
+    .clinic-important,
+    .clinic-real,
+    .clinic-practice,
+    .clinic-speaking,
+    .clinic-scene {
+      padding: 15px;
+    }
+  }
+</style>
+
+
+<div class="clinic-important">
+  <strong>📌 표현 난이도 안내</strong>
+  <br><br>
+
+  실제 병원·피부과 현장에서는 상황에 따라
+  <strong>더욱 정중한 접객 표현이나 경어</strong>가 사용될 수 있습니다.
+  <br><br>
+
+  이 교재에서는
+  <strong>초급자도 바로 이해하고 말할 수 있도록 쉽고 실제 의사소통이 가능한 표현</strong>을
+  중심으로 구성했습니다.
+  <br><br>
+
+  교재에 제시된 표현도 실제 상황에서 사용할 수 있으며,
+  일본어 레벨이 올라가면 같은 의미의
+  <strong>더욱 자연스럽고 정중한 표현</strong>도 함께 학습할 수 있습니다.
+</div>
+
+<div class="clinic-title">
+  병원 일본어 · 피부과편
+  <br>
+  접수부터 상담까지 실제 현장에서 사용하는 표현
+</div>
+
+<div class="clinic-subtitle">
+  한국의 피부과·미용클리닉에서 일본인 고객을 응대하는 상황을 기준으로 공부합니다.
+  <br>
+  처음부터 어려운 경어나 전문 문법을 모두 이해할 필요는 없습니다.
+  <strong>실제 현장에서 쓰는 문장은 그대로 익히고, 문법 설명은 자신의 레벨까지만 이해</strong>하면 됩니다.
+</div>
+
+
+<div class="clinic-important">
+  <strong>이 교재를 공부하는 방법</strong>
+  <br><br>
+
+  🌱 <strong>생기초</strong>
+  <br>
+  히라가나를 약 80% 읽을 수 있고
+  「です・ます・い형용사・な형용사」 정도를 공부하는 단계라면
+  <strong>첫 번째 설명까지만 이해하면 됩니다.</strong>
+  <br><br>
+
+  🌿 <strong>기초</strong>
+  <br>
+  「ます형・て형・ない형・あげる・くれる・みたい・そうだ」 등을
+  공부하고 있다면 <strong>두 번째 설명까지 이해해 보세요.</strong>
+  <br><br>
+
+  아직 배우지 않은 문법은 외우려고 하지 않아도 됩니다.
+  실제 문장을 먼저 익히고, 일본어 실력이 올라가면
+  같은 문장을 다시 보면서 더 깊게 이해할 수 있습니다.
+</div>
+
+
+<div class="clinic-flow">
+  <div class="clinic-flow-step">
+    <strong>SCENE 1</strong><br>
+    예약 확인 · 이름 확인
+  </div>
+
+  <div class="clinic-flow-step">
+    <strong>SCENE 2</strong><br>
+    첫 방문인지 확인
+  </div>
+
+  <div class="clinic-flow-step">
+    <strong>SCENE 3</strong><br>
+    문진표 작성 안내
+  </div>
+
+  <div class="clinic-flow-step">
+    <strong>SCENE 4</strong><br>
+    피부 고민과 원하는 시술 확인
+  </div>
+
+  <div class="clinic-flow-step">
+    <strong>SCENE 5</strong><br>
+    상담 · 시술 전 안내
+  </div>
+
+  <div class="clinic-flow-step">
+    <strong>SCENE 6</strong><br>
+    시술 중 응대
+  </div>
+
+  <div class="clinic-flow-step">
+    <strong>SCENE 7</strong><br>
+    시술 후 주의사항
+  </div>
+
+  <div class="clinic-flow-step">
+    <strong>SCENE 8</strong><br>
+    결제 · 다음 예약
+  </div>
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 1. 예약한 일본인 고객이 방문했습니다
+  </div>
+
+  <div class="clinic-scene">
+    <div class="clinic-scene-number">
+      SITUATION
+    </div>
+
+    <div class="clinic-scene-title">
+      예약자 이름 확인하기
+    </div>
+
+    <div class="clinic-scene-desc">
+      고객이 병원에 들어오면 먼저 예약 여부와 예약자 이름을 확인해야 합니다.
+      피부과나 미용클리닉에서는 이후 상담과 시술 내용 확인이 이어질 수 있습니다.
+    </div>
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원이 먼저 익힐 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      ごよやくの お<ruby>名前<rt>なまえ</rt></ruby>を おねがいします。
+    </div>
+
+    <div class="clinic-main-hira">
+      ごよやくの おなまえを おねがいします。
+    </div>
+
+    <div class="clinic-main-ko">
+      예약하신 성함 부탁드립니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-real">
+    <div class="clinic-real-title">
+      🏥 현장에서는 이렇게 이해하세요
+    </div>
+
+    일본인 고객의 예약 정보를 확인하기 위해
+    <strong>예약한 사람의 이름을 물어보는 표현</strong>입니다.
+    <br><br>
+
+    한국어로 직역해서
+    “예약의 이름을 부탁합니다”라고 이해할 필요는 없습니다.
+    실제 상황에서는 자연스럽게
+    <strong>“예약하신 성함 부탁드립니다.”</strong>라고 이해하면 됩니다.
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>ごよやく</strong>
+      <br>
+      예약
+      <br><br>
+
+      <strong>の</strong>
+      <br>
+      ~의
+      <br><br>
+
+      <strong>おなまえ</strong>
+      <br>
+      이름 · 성함
+      <br><br>
+
+      <strong>を</strong>
+      <br>
+      뒤에 행동이 이어지는 대상을 표시합니다.
+      초급에서는 한국어의 “~을/를” 정도로 이해하면 됩니다.
+      <br><br>
+
+      <strong>おねがいします</strong>
+      <br>
+      부탁드립니다
+      <br><br>
+
+      따라서 전체적으로
+      <br><br>
+
+      <strong>
+        ごよやくの おなまえを おねがいします。
+      </strong>
+      <br>
+      → 예약하신 성함 부탁드립니다.
+
+    </div>
+
+    <div class="clinic-stop">
+      🌱 생기초 단계라면 여기까지만 이해해도 충분합니다.
+      아래 내용은 지금 외우지 않아도 됩니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 여기까지 이해해 보세요!
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      여기서 <strong>お</strong>는 말을 정중하게 만드는 데 사용됩니다.
+      <br><br>
+
+      <strong>名前（なまえ）</strong>
+      <br>
+      이름
+      <br><br>
+
+      ↓
+      <br><br>
+
+      <strong>お名前（おなまえ）</strong>
+      <br>
+      성함
+      <br><br>
+
+      고객을 상대하는 상황에서는
+      단순히 「なまえ」라고 하기보다
+      <strong>「おなまえ」</strong>라고 말하는 것이 자연스럽습니다.
+      <br><br>
+
+      또한 「おねがいします」는
+      병원뿐 아니라 호텔, 가게, 회사 등에서도 매우 넓게 사용할 수 있는 표현입니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객의 대답
+    </div>
+
+    <div class="clinic-jp">
+      はい、<ruby>田中<rt>たなか</rt></ruby>です。
+    </div>
+
+    <div class="clinic-hira">
+      はい、たなかです。
+    </div>
+
+    <div class="clinic-ko">
+      네, 다나카입니다.
+    </div>
+
+    <div class="clinic-explain">
+      고객은 자신의 이름을 말한 뒤
+      「です」를 붙이는 것만으로도 자연스럽게 대답할 수 있습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      실제 대화
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          こんにちは。ごよやくの お<ruby>名前<rt>なまえ</rt></ruby>を おねがいします。
+        </div>
+
+        <div class="clinic-hira">
+          こんにちは。ごよやくの おなまえを おねがいします。
+        </div>
+
+        <div class="clinic-ko">
+          안녕하세요. 예약하신 성함 부탁드립니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、<ruby>田中<rt>たなか</rt></ruby>です。
+        </div>
+
+        <div class="clinic-hira">
+          はい、たなか です。
+        </div>
+
+        <div class="clinic-ko">
+          네, 다나카입니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          はい、かくにんします。しょうしょう おまちください。
+        </div>
+
+        <div class="clinic-hira">
+          はい、かくにんします。しょうしょう おまちください。
+        </div>
+
+        <div class="clinic-ko">
+          네, 확인하겠습니다. 잠시 기다려 주세요.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      같이 익혀둘 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      しょうしょう おまちください。
+    </div>
+
+    <div class="clinic-main-hira">
+      しょうしょう おまちください。
+    </div>
+
+    <div class="clinic-main-ko">
+      잠시 기다려 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>しょうしょう</strong>
+      <br>
+      조금 / 잠시
+      <br><br>
+
+      <strong>おまちください</strong>
+      <br>
+      기다려 주세요
+      <br><br>
+
+      병원에서 잠깐 확인이 필요한 경우
+      <strong>문장 전체를 하나의 표현으로 외워서 바로 사용</strong>해도 됩니다.
+
+    </div>
+
+    <div class="clinic-stop">
+      「おまちください」가 왜 이런 형태가 되는지는
+      아직 몰라도 괜찮습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 여기까지 이해해 보세요!
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      기본 동사는
+      <strong>まつ</strong>, “기다리다”입니다.
+      <br><br>
+
+      <strong>まつ</strong>
+      <br>
+      기다리다
+      <br><br>
+
+      ↓
+      <br><br>
+
+      <strong>まちます</strong>
+      <br>
+      기다립니다
+      <br><br>
+
+      고객에게 정중하게
+      “기다려 주세요”라고 안내할 때는
+      <strong>おまちください</strong>라는 표현을 사용할 수 있습니다.
+      <br><br>
+
+      서비스 현장에서는 매우 자주 들을 수 있기 때문에
+      일단 <strong>「おまちください = 기다려 주세요」</strong>를
+      통째로 익혀 두는 것도 좋습니다.
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 2. 처음 방문한 고객인지 확인합니다
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      こちらは はじめてですか。
+    </div>
+
+    <div class="clinic-main-hira">
+      こちらは はじめてですか。
+    </div>
+
+    <div class="clinic-main-ko">
+      저희 병원은 처음이신가요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-real">
+
+    <div class="clinic-real-title">
+      🏥 왜 「こちら」라고 할까?
+    </div>
+
+    여기서 「こちら」를 단순히
+    <strong>“이쪽”</strong>이라고 직역하면 조금 이상하게 느껴질 수 있습니다.
+    <br><br>
+
+    병원이나 가게에서 자신의 병원·가게를 가리키면서
+    <strong>“저희 쪽은 처음이신가요?”</strong>라는 느낌으로 사용할 수 있습니다.
+    <br><br>
+
+    자연스러운 한국어로는
+    <strong>“저희 병원은 처음이신가요?”</strong>라고 이해하면 됩니다.
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>こちら</strong>
+      <br>
+      이쪽 / 여기 / 저희 쪽
+      <br><br>
+
+      <strong>は</strong>
+      <br>
+      ~은/는
+      <br><br>
+
+      <strong>はじめて</strong>
+      <br>
+      처음
+      <br><br>
+
+      <strong>です</strong>
+      <br>
+      ~입니다
+      <br><br>
+
+      <strong>か</strong>
+      <br>
+      질문
+      <br><br>
+
+      따라서
+      <br><br>
+
+      <strong>こちらは はじめてですか。</strong>
+      <br>
+      → 여기는 처음입니까?
+      <br>
+      → 자연스럽게: <strong>저희 병원은 처음이신가요?</strong>
+
+    </div>
+
+    <div class="clinic-stop">
+      🌱 「です + か = 정중한 질문」만 이해하면 충분합니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 여기까지 이해해 보세요!
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      「こちら」는 단순한 장소 표현으로도 쓰이지만,
+      사람이나 조직을 정중하게 가리킬 때도 사용할 수 있습니다.
+      <br><br>
+
+      그래서 서비스 현장에서
+      <strong>こちら</strong>라는 표현이 자주 등장합니다.
+      <br><br>
+
+      이 문장은 특별히 복잡한 문법을 사용하지 않았지만,
+      <strong>직역과 실제 상황에서의 자연스러운 번역이 다를 수 있다는 점</strong>을
+      기억해 두면 좋습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      처음 방문한 고객
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          こちらは はじめてですか。
+        </div>
+
+        <div class="clinic-hira">
+          こちらは はじめてですか。
+        </div>
+
+        <div class="clinic-ko">
+          저희 병원은 처음이신가요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、はじめてです。
+        </div>
+
+        <div class="clinic-hira">
+          はい、はじめてです。
+        </div>
+
+        <div class="clinic-ko">
+          네, 처음입니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      전에 방문한 적이 있는 고객
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          こちらは はじめてですか。
+        </div>
+
+        <div class="clinic-hira">
+          こちらは はじめてですか。
+        </div>
+
+        <div class="clinic-ko">
+          저희 병원은 처음이신가요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          いいえ、はじめてじゃないです。
+        </div>
+
+        <div class="clinic-hira">
+          いいえ、はじめてじゃ ないです。
+        </div>
+
+        <div class="clinic-ko">
+          아니요, 처음이 아닙니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-note">
+    「こちらは初めてですか」는 일본 문부과학성의 생활 일본어 병원 장면에서도
+    접수 단계의 실제 표현으로 제시되는 문장입니다.
+    한국 피부과 상황에서는 보험증 확인 대신
+    <strong>예약 확인 → 첫 방문 확인 → 문진·상담</strong>의 흐름으로 응용합니다.
+  </div>
+
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 3. 상담 전에 문진 내용을 작성해 달라고 안내합니다
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      こちらの <ruby>問診票<rt>もんしんひょう</rt></ruby>に
+      ごきにゅうを おねがいします。
+    </div>
+
+    <div class="clinic-main-hira">
+      こちらの もんしんひょうに
+      ごきにゅうを おねがいします。
+    </div>
+
+    <div class="clinic-main-ko">
+      이 문진표를 작성해 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-real">
+    <div class="clinic-real-title">
+      🏥 어려운 단어는 한자로 같이 익힙니다
+    </div>
+
+    「もんしんひょう」처럼 히라가나만 길게 쓰면
+    어디까지가 하나의 단어인지 처음 보는 사람은 구분하기 어려울 수 있습니다.
+    <br><br>
+
+    이런 직무 어휘는
+    <strong>
+      <ruby>問診票<rt>もんしんひょう</rt></ruby>
+    </strong>
+    처럼 한자와 읽는 법을 함께 제시합니다.
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>こちらの</strong>
+      <br>
+      이 / 이쪽의
+      <br><br>
+
+      <strong>もんしんひょう</strong>
+      <br>
+      문진표
+      <br><br>
+
+      <strong>に</strong>
+      <br>
+      여기에서는 “~에”
+      <br><br>
+
+      <strong>ごきにゅう</strong>
+      <br>
+      기입 / 작성
+      <br><br>
+
+      <strong>おねがいします</strong>
+      <br>
+      부탁드립니다
+      <br><br>
+
+      전체적으로
+      <br><br>
+
+      <strong>
+        こちらの もんしんひょうに
+        ごきにゅうを おねがいします。
+      </strong>
+      <br>
+      → 이 문진표 작성을 부탁드립니다.
+      <br>
+      → 자연스럽게:
+      <strong>이 문진표를 작성해 주세요.</strong>
+
+    </div>
+
+    <div class="clinic-stop">
+      🌱 생기초라면 이 문장은 현장 표현으로 통째로 익혀도 좋습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 여기까지 이해해 보세요!
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      <strong>きにゅうする</strong>
+      <br>
+      기입하다 / 작성하다
+      <br><br>
+
+      서비스 현장에서는 앞에 「ご」를 붙여
+      <strong>ごきにゅう</strong>라는 정중한 표현을 사용할 수 있습니다.
+      <br><br>
+
+      따라서
+      <br><br>
+
+      <strong>ごきにゅう + おねがいします</strong>
+      <br>
+      → 작성을 부탁드립니다
+      <br><br>
+
+      라는 구조가 됩니다.
+      <br><br>
+
+      나중에 경어를 더 배우면
+      「ご～」가 붙는 여러 서비스 표현과 함께 다시 이해할 수 있습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      함께 알아둘 표현
+    </div>
+
+    <div class="clinic-jp">
+      わからない ところは ありますか。
+    </div>
+
+    <div class="clinic-hira">
+      わからない ところは ありますか。
+    </div>
+
+    <div class="clinic-ko">
+      잘 모르겠는 부분이 있나요?
+    </div>
+
+    <div class="clinic-explain">
+      일본인 고객이 한국어 문진표나 안내 내용을 작성해야 하는 상황이라면
+      이해하기 어려운 부분이 있는지 확인할 때 사용할 수 있습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객이 질문할 수 있는 표현
+    </div>
+
+    <div class="clinic-jp">
+      ここは なにを かけば いいですか。
+    </div>
+
+    <div class="clinic-hira">
+      ここは なにを かけば いいですか。
+    </div>
+
+    <div class="clinic-ko">
+      여기는 무엇을 쓰면 되나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 이 문장을 듣고 뜻만 알아도 됩니다
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      일본인 고객이
+      <strong>“여기에 뭘 써야 하나요?”</strong>라고 물어보는 표현입니다.
+      <br><br>
+
+      아직 「～ばいいですか」 문법을 배우지 않았다면
+      문법 구조까지 분석하지 않아도 됩니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 문장 구조까지 살펴봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      <strong>かく</strong>
+      <br>
+      쓰다
+      <br><br>
+
+      <strong>かけば</strong>
+      <br>
+      쓰면
+      <br><br>
+
+      <strong>いいですか</strong>
+      <br>
+      좋습니까?
+      <br><br>
+
+      따라서
+      <br><br>
+
+      <strong>なにを かけば いいですか。</strong>
+      <br>
+      무엇을 쓰면 좋습니까?
+      <br>
+      → 자연스럽게:
+      <strong>무엇을 쓰면 되나요?</strong>
+      <br><br>
+
+      「～ばいいですか」는
+      <strong>“어떻게 하면 되나요?”</strong>처럼
+      방법을 물을 때 사용할 수 있는 매우 유용한 표현입니다.
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 4. 어떤 피부 고민이 있는지 확인합니다
+  </div>
+
+  <div class="clinic-scene">
+    <div class="clinic-scene-number">
+      SITUATION
+    </div>
+
+    <div class="clinic-scene-title">
+      방문 목적과 가장 신경 쓰이는 부분 물어보기
+    </div>
+
+    <div class="clinic-scene-desc">
+      접수가 끝난 뒤에는 고객이 어떤 피부 고민 때문에 방문했는지 확인합니다.
+      피부과에서는 한 가지 증상만 있는 것이 아니라
+      여드름, 잡티, 모공, 붉은기 등 여러 고민을 함께 이야기할 수 있습니다.
+    </div>
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      きょうは どうなさいましたか。
+    </div>
+
+    <div class="clinic-main-hira">
+      きょうは どうなさいましたか。
+    </div>
+
+    <div class="clinic-main-ko">
+      오늘은 어디가 불편하신가요?
+      <br>
+      오늘은 어떤 고민으로 오셨나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-real">
+
+    <div class="clinic-real-title">
+      🏥 병원에서 매우 자주 사용할 수 있는 표현
+    </div>
+
+    「どうなさいましたか」를 글자 그대로만 보면
+    <strong>“어떻게 하셨습니까?”</strong>에 가깝습니다.
+    <br><br>
+
+    하지만 병원이나 클리닉에서는
+    고객이 어떤 문제 때문에 왔는지 확인하는 상황이므로
+    <strong>“어디가 불편하세요?”</strong>,
+    <strong>“어떤 고민으로 오셨어요?”</strong>
+    정도로 이해하면 자연스럽습니다.
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>きょう</strong>
+      <br>
+      오늘
+      <br><br>
+
+      <strong>は</strong>
+      <br>
+      ~은/는
+      <br><br>
+
+      <strong>どう</strong>
+      <br>
+      어떻게 / 어떤 상태
+      <br><br>
+
+      <strong>なさいました</strong>
+      <br>
+      하셨습니다
+      <br><br>
+
+      <strong>か</strong>
+      <br>
+      질문
+      <br><br>
+
+      따라서 글자 그대로 보면
+      <br><br>
+
+      <strong>
+        きょうは + どう + なさいました + か
+      </strong>
+      <br>
+      → 오늘은 어떻게 하셨습니까?
+      <br><br>
+
+      병원에서는 자연스럽게
+      <br>
+      <strong>“오늘은 어디가 불편하신가요?”</strong>
+      정도로 이해합니다.
+
+    </div>
+
+    <div class="clinic-stop">
+      🌱 생기초라면 「どうなさいましたか」를
+      병원에서 사용하는 하나의 표현으로 익혀도 충분합니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 여기까지 이해해 보세요!
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      기본 동사는
+      <strong>する</strong>, “하다”입니다.
+      <br><br>
+
+      <strong>する</strong>
+      <br>
+      하다
+      <br><br>
+
+      ↓ 상대방의 행동을 높이면
+      <br><br>
+
+      <strong>なさる</strong>
+      <br>
+      하시다
+      <br><br>
+
+      ↓ 정중한 과거형
+      <br><br>
+
+      <strong>なさいました</strong>
+      <br>
+      하셨습니다
+      <br><br>
+
+      따라서
+      <strong>どうなさいましたか</strong>는
+      상대방에게 정중하게 상황을 묻는 표현입니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-advanced">
+
+    <div class="clinic-level-advanced-title">
+      🌳 조금 더 알고 싶은 분들을 위한 설명
+    </div>
+
+    <div class="clinic-level-advanced-text">
+
+      <strong>なさる</strong>는
+      「する」의 존경어입니다.
+      <br><br>
+
+      따라서
+      <strong>する → しました → なさいました</strong>
+      라고 단순히 바뀌는 것이 아니라,
+      <br><br>
+
+      <strong>
+        する → なさる → なさいます → なさいました
+      </strong>
+      <br><br>
+
+      라는 관계로 이해하는 것이 정확합니다.
+      <br><br>
+
+      또한 「どうなさいましたか」 자체가
+      언제나 “어디가 불편하세요?”라는 뜻인 것은 아닙니다.
+      <strong>병원이라는 상황</strong> 때문에
+      그렇게 해석되는 것입니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      피부 고민을 이야기하는 기본 대화
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          きょうは どうなさいましたか。
+        </div>
+
+        <div class="clinic-hira">
+          きょうは どうなさいましたか。
+        </div>
+
+        <div class="clinic-ko">
+          오늘은 어떤 고민으로 오셨나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          さいきん、ニキビが きになります。
+        </div>
+
+        <div class="clinic-hira">
+          さいきん、にきびが きに なります。
+        </div>
+
+        <div class="clinic-ko">
+          요즘 여드름이 신경 쓰여요.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      고객의 매우 유용한 표현
+    </div>
+
+    <div class="clinic-main-jp">
+      ～が きになります。
+    </div>
+
+    <div class="clinic-main-hira">
+      ～が きに なります。
+    </div>
+
+    <div class="clinic-main-ko">
+      ~이 신경 쓰입니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 패턴으로 사용하세요
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      피부 고민을 말하고 싶을 때
+      앞부분만 바꾸면 됩니다.
+      <br><br>
+
+      <strong>ニキビが きになります。</strong>
+      <br>
+      여드름이 신경 쓰여요.
+      <br><br>
+
+      <strong>シミが きになります。</strong>
+      <br>
+      잡티·기미가 신경 쓰여요.
+      <br><br>
+
+      <strong>けあなが きになります。</strong>
+      <br>
+      모공이 신경 쓰여요.
+      <br><br>
+
+      지금은 「きになる」의 문법을 자세히 분석하지 않고
+      <strong>“~이 신경 쓰이다”</strong>라는 표현으로 익혀도 됩니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「気になる」까지 이해해 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      <strong>
+        <ruby>気<rt>き</rt></ruby>になる
+      </strong>
+      <br>
+      신경 쓰이다 / 마음에 걸리다
+      <br><br>
+
+      일본어에서는 피부 고민뿐 아니라
+      어떤 것이 계속 마음에 걸리거나 관심이 갈 때
+      매우 넓게 사용할 수 있습니다.
+      <br><br>
+
+      피부과에서는 특히
+      <strong>“어떤 부분이 신경 쓰이는가”</strong>를 표현하기 좋습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-vocab">
+
+    <div class="clinic-vocab-title">
+      피부과에서 자주 나오는 고민
+    </div>
+
+    <div class="clinic-vocab-row">
+      <div class="clinic-vocab-jp">ニキビ</div>
+      <div class="clinic-vocab-hira">にきび</div>
+      <div class="clinic-vocab-ko">여드름</div>
+    </div>
+
+    <div class="clinic-vocab-row">
+      <div class="clinic-vocab-jp">シミ</div>
+      <div class="clinic-vocab-hira">しみ</div>
+      <div class="clinic-vocab-ko">기미·잡티·색소침착 계열의 얼룩</div>
+    </div>
+
+    <div class="clinic-vocab-row">
+      <div class="clinic-vocab-jp">けあな</div>
+      <div class="clinic-vocab-hira">けあな</div>
+      <div class="clinic-vocab-ko">모공</div>
+    </div>
+
+    <div class="clinic-vocab-row">
+      <div class="clinic-vocab-jp">
+        <ruby>赤<rt>あか</rt></ruby>み
+      </div>
+      <div class="clinic-vocab-hira">あかみ</div>
+      <div class="clinic-vocab-ko">붉은기</div>
+    </div>
+
+    <div class="clinic-vocab-row">
+      <div class="clinic-vocab-jp">ニキビあと</div>
+      <div class="clinic-vocab-hira">にきびあと</div>
+      <div class="clinic-vocab-ko">여드름 자국</div>
+    </div>
+
+    <div class="clinic-vocab-row">
+      <div class="clinic-vocab-jp">しわ</div>
+      <div class="clinic-vocab-hira">しわ</div>
+      <div class="clinic-vocab-ko">주름</div>
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      EXAMPLE 1
+    </div>
+
+    <div class="clinic-jp">
+      ほほの シミが きになります。
+    </div>
+
+    <div class="clinic-hira">
+      ほほの しみが きに なります。
+    </div>
+
+    <div class="clinic-ko">
+      볼의 잡티가 신경 쓰여요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      EXAMPLE 2
+    </div>
+
+    <div class="clinic-jp">
+      はなの けあなが きになります。
+    </div>
+
+    <div class="clinic-hira">
+      はなの けあなが きに なります。
+    </div>
+
+    <div class="clinic-ko">
+      코의 모공이 신경 쓰여요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      EXAMPLE 3
+    </div>
+
+    <div class="clinic-jp">
+      ほほの <ruby>赤<rt>あか</rt></ruby>みが きになります。
+    </div>
+
+    <div class="clinic-hira">
+      ほほの あかみが きに なります。
+    </div>
+
+    <div class="clinic-ko">
+      볼의 붉은기가 신경 쓰여요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      EXAMPLE 4
+    </div>
+
+    <div class="clinic-jp">
+      ニキビあとが きになります。
+    </div>
+
+    <div class="clinic-hira">
+      にきびあとが きに なります。
+    </div>
+
+    <div class="clinic-ko">
+      여드름 자국이 신경 쓰여요.
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 5. 가장 신경 쓰이는 부위를 확인합니다
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      いちばん きになる ところは どこですか。
+    </div>
+
+    <div class="clinic-main-hira">
+      いちばん きに なる ところは どこですか。
+    </div>
+
+    <div class="clinic-main-ko">
+      가장 신경 쓰이는 부분은 어디인가요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>いちばん</strong>
+      <br>
+      가장 / 제일
+      <br><br>
+
+      <strong>きになる</strong>
+      <br>
+      신경 쓰이다
+      <br><br>
+
+      <strong>ところ</strong>
+      <br>
+      곳 / 부분
+      <br><br>
+
+      <strong>は</strong>
+      <br>
+      ~은/는
+      <br><br>
+
+      <strong>どこ</strong>
+      <br>
+      어디
+      <br><br>
+
+      <strong>ですか</strong>
+      <br>
+      ~입니까?
+      <br><br>
+
+      전체적으로
+      <br><br>
+
+      <strong>
+        いちばん きになる ところは どこですか。
+      </strong>
+      <br>
+      → 가장 신경 쓰이는 부분은 어디인가요?
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 문장 구조도 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      여기서는
+      <strong>きになる</strong>가
+      뒤의 <strong>ところ</strong>를 설명합니다.
+      <br><br>
+
+      <strong>ところ</strong>
+      <br>
+      부분
+      <br><br>
+
+      <strong>きになる ところ</strong>
+      <br>
+      신경 쓰이는 부분
+      <br><br>
+
+      <strong>いちばん きになる ところ</strong>
+      <br>
+      가장 신경 쓰이는 부분
+      <br><br>
+
+      이렇게 앞의 표현이 뒤의 명사를 꾸미는 구조는
+      일본어에서 매우 자주 사용합니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      여러 피부 고민이 있는 고객
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          シミと けあなが きになります。
+        </div>
+
+        <div class="clinic-hira">
+          しみと けあなが きに なります。
+        </div>
+
+        <div class="clinic-ko">
+          잡티와 모공이 신경 쓰여요.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          いちばん きになる ところは どこですか。
+        </div>
+
+        <div class="clinic-hira">
+          いちばん きに なる ところは どこですか。
+        </div>
+
+        <div class="clinic-ko">
+          가장 신경 쓰이는 부분은 어디인가요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          ほほの シミです。
+        </div>
+
+        <div class="clinic-hira">
+          ほほの しみです。
+        </div>
+
+        <div class="clinic-ko">
+          볼의 잡티입니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원이 이어서 물어볼 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      いつごろから きになりますか。
+    </div>
+
+    <div class="clinic-main-hira">
+      いつごろから きに なりますか。
+    </div>
+
+    <div class="clinic-main-ko">
+      언제쯤부터 신경 쓰이셨나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 핵심 단어만 봅니다
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>いつ</strong>
+      <br>
+      언제
+      <br><br>
+
+      <strong>ごろ</strong>
+      <br>
+      ~쯤
+      <br><br>
+
+      <strong>から</strong>
+      <br>
+      ~부터
+      <br><br>
+
+      <strong>きになりますか</strong>
+      <br>
+      신경 쓰이나요?
+      <br><br>
+
+      따라서
+      <strong>“언제쯤부터 신경 쓰이셨나요?”</strong>
+      라는 의미입니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객의 대답
+    </div>
+
+    <div class="clinic-jp">
+      はんとしぐらい まえからです。
+    </div>
+
+    <div class="clinic-hira">
+      はんとしぐらい まえからです。
+    </div>
+
+    <div class="clinic-ko">
+      반년 정도 전부터예요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객의 대답
+    </div>
+
+    <div class="clinic-jp">
+      さいきんです。
+    </div>
+
+    <div class="clinic-hira">
+      さいきんです。
+    </div>
+
+    <div class="clinic-ko">
+      최근이에요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객의 대답
+    </div>
+
+    <div class="clinic-jp">
+      いっかげつぐらい まえからです。
+    </div>
+
+    <div class="clinic-hira">
+      いっかげつぐらい まえからです。
+    </div>
+
+    <div class="clinic-ko">
+      한 달 정도 전부터예요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원이 추가로 확인할 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      ほかに きになる ところは ありますか。
+    </div>
+
+    <div class="clinic-main-hira">
+      ほかに きに なる ところは ありますか。
+    </div>
+
+    <div class="clinic-main-ko">
+      그 밖에 신경 쓰이는 부분이 있나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>ほかに</strong>
+      <br>
+      그 밖에 / 또
+      <br><br>
+
+      <strong>きになる ところ</strong>
+      <br>
+      신경 쓰이는 부분
+      <br><br>
+
+      <strong>ありますか</strong>
+      <br>
+      있습니까?
+      <br><br>
+
+      따라서
+      <br>
+      <strong>“또 신경 쓰이는 부분이 있나요?”</strong>
+      라는 뜻입니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      상담 전 기본 질문을 연결해 보기
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          きょうは どうなさいましたか。
+        </div>
+
+        <div class="clinic-hira">
+          きょうは どうなさいましたか。
+        </div>
+
+        <div class="clinic-ko">
+          오늘은 어떤 고민으로 오셨나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          シミと けあなが きになります。
+        </div>
+
+        <div class="clinic-hira">
+          しみと けあなが きに なります。
+        </div>
+
+        <div class="clinic-ko">
+          잡티와 모공이 신경 쓰여요.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          いちばん きになる ところは どこですか。
+        </div>
+
+        <div class="clinic-hira">
+          いちばん きに なる ところは どこですか。
+        </div>
+
+        <div class="clinic-ko">
+          가장 신경 쓰이는 부분은 어디인가요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          ほほの シミです。
+        </div>
+
+        <div class="clinic-hira">
+          ほほの しみです。
+        </div>
+
+        <div class="clinic-ko">
+          볼의 잡티예요.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          いつごろから きになりますか。
+        </div>
+
+        <div class="clinic-hira">
+          いつごろから きに なりますか。
+        </div>
+
+        <div class="clinic-ko">
+          언제쯤부터 신경 쓰이셨나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はんとしぐらい まえからです。
+        </div>
+
+        <div class="clinic-hira">
+          はんとしぐらい まえからです。
+        </div>
+
+        <div class="clinic-ko">
+          반년 정도 전부터예요.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          ほかに きになる ところは ありますか。
+        </div>
+
+        <div class="clinic-hira">
+          ほかに きに なる ところは ありますか。
+        </div>
+
+        <div class="clinic-ko">
+          또 신경 쓰이는 부분이 있나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、はなの けあなも きになります。
+        </div>
+
+        <div class="clinic-hira">
+          はい、はなの けあなも きに なります。
+        </div>
+
+        <div class="clinic-ko">
+          네, 코의 모공도 신경 쓰여요.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-speaking">
+
+    <div class="clinic-speaking-title">
+      💬 역할을 바꿔서 말해 보세요
+    </div>
+
+    <strong>직원 역할</strong>
+    <ul>
+      <li>오늘 어떤 고민으로 왔는지 묻습니다.</li>
+      <li>가장 신경 쓰이는 부분을 묻습니다.</li>
+      <li>언제부터 신경 쓰였는지 묻습니다.</li>
+      <li>다른 고민도 있는지 확인합니다.</li>
+    </ul>
+
+    <br>
+
+    <strong>고객 역할</strong>
+    <ul>
+      <li>여드름 / 잡티 / 모공 / 붉은기 중 두 가지를 선택합니다.</li>
+      <li>가장 신경 쓰이는 부위를 하나 선택합니다.</li>
+      <li>언제부터 고민이 있었는지 말합니다.</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 6. 이전에 비슷한 시술을 받은 적이 있는지 확인합니다
+  </div>
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      いままでに おなじような
+      <ruby>施術<rt>せじゅつ</rt></ruby>を
+      うけたことは ありますか。
+    </div>
+
+    <div class="clinic-main-hira">
+      いままでに おなじような
+      せじゅつを うけたことは ありますか。
+    </div>
+
+    <div class="clinic-main-ko">
+      지금까지 비슷한 시술을 받아본 적이 있나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-real">
+
+    <div class="clinic-real-title">
+      🏥 과거 시술 경험 확인하기
+    </div>
+
+    피부과나 미용클리닉에서는
+    고객이 이전에 비슷한 시술을 받아본 적이 있는지
+    확인해야 하는 상황이 있을 수 있습니다.
+    <br><br>
+
+    여기서
+    <strong>「～たことがありますか」</strong>는
+    <strong>“~해본 적이 있나요?”</strong>라고 경험을 묻는 표현입니다.
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>いままでに</strong>
+      <br>
+      지금까지
+      <br><br>
+
+      <strong>おなじような</strong>
+      <br>
+      비슷한
+      <br><br>
+
+      <strong>せじゅつ</strong>
+      <br>
+      시술
+      <br><br>
+
+      <strong>うける</strong>
+      <br>
+      받다
+      <br><br>
+
+      문장 전체는
+      <br><br>
+
+      <strong>
+        いままでに おなじような
+        せじゅつを うけたことは ありますか。
+      </strong>
+      <br>
+      → 지금까지 비슷한 시술을 받아본 적이 있나요?
+      <br><br>
+
+      지금은
+      <strong>「うけたことは ありますか」를
+      “받아본 적이 있나요?”라는 하나의 패턴</strong>으로
+      이해해도 충분합니다.
+
+    </div>
+
+    <div class="clinic-stop">
+      🌱 「うけた」가 어떻게 만들어지는지는
+      아직 몰라도 괜찮습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「～たことがある」까지 이해해 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      기본 동사는
+      <strong>うける</strong>,
+      “받다”입니다.
+      <br><br>
+
+      <strong>うける</strong>
+      <br>
+      받다
+      <br><br>
+
+      ↓ 과거형
+      <br><br>
+
+      <strong>うけた</strong>
+      <br>
+      받았다
+      <br><br>
+
+      ↓ 경험
+      <br><br>
+
+      <strong>うけたことが ある</strong>
+      <br>
+      받아본 적이 있다
+      <br><br>
+
+      ↓ 질문
+      <br><br>
+
+      <strong>うけたことは ありますか。</strong>
+      <br>
+      받아본 적이 있나요?
+      <br><br>
+
+      「～たことがある」는
+      여행, 음식, 일, 취미 등
+      다양한 경험을 말할 때 사용할 수 있습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      이전 시술 경험이 있는 고객
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          いままでに おなじような
+          <ruby>施術<rt>せじゅつ</rt></ruby>を
+          うけたことは ありますか。
+        </div>
+
+        <div class="clinic-hira">
+          いままでに おなじような
+          せじゅつを うけたことは ありますか。
+        </div>
+
+        <div class="clinic-ko">
+          지금까지 비슷한 시술을 받아본 적이 있나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、あります。
+        </div>
+
+        <div class="clinic-hira">
+          はい、あります。
+        </div>
+
+        <div class="clinic-ko">
+          네, 있습니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          いつごろ うけましたか。
+        </div>
+
+        <div class="clinic-hira">
+          いつごろ うけましたか。
+        </div>
+
+        <div class="clinic-ko">
+          언제쯤 받으셨나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はんとしぐらい まえです。
+        </div>
+
+        <div class="clinic-hira">
+          はんとしぐらい まえです。
+        </div>
+
+        <div class="clinic-ko">
+          반년 정도 전입니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      처음 시술을 받는 고객
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          いままでに おなじような
+          <ruby>施術<rt>せじゅつ</rt></ruby>を
+          うけたことは ありますか。
+        </div>
+
+        <div class="clinic-hira">
+          いままでに おなじような
+          せじゅつを うけたことは ありますか。
+        </div>
+
+        <div class="clinic-ko">
+          지금까지 비슷한 시술을 받아본 적이 있나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          いいえ、はじめてです。
+        </div>
+
+        <div class="clinic-hira">
+          いいえ、はじめてです。
+        </div>
+
+        <div class="clinic-ko">
+          아니요, 처음입니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 7. 원하는 시술이 있는지 확인합니다
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      ごきぼうの
+      <ruby>施術<rt>せじゅつ</rt></ruby>は ありますか。
+    </div>
+
+    <div class="clinic-main-hira">
+      ごきぼうの せじゅつは ありますか。
+    </div>
+
+    <div class="clinic-main-ko">
+      원하시는 시술이 있나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>ごきぼう</strong>
+      <br>
+      희망 / 원하는 것
+      <br><br>
+
+      <strong>の</strong>
+      <br>
+      ~의
+      <br><br>
+
+      <strong>せじゅつ</strong>
+      <br>
+      시술
+      <br><br>
+
+      <strong>は</strong>
+      <br>
+      ~은/는
+      <br><br>
+
+      <strong>ありますか</strong>
+      <br>
+      있습니까?
+      <br><br>
+
+      따라서
+      <br><br>
+
+      <strong>
+        ごきぼうの せじゅつは ありますか。
+      </strong>
+      <br>
+      → 원하시는 시술이 있나요?
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「希望」의 사용까지 이해해 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      <strong>
+        <ruby>希望<rt>きぼう</rt></ruby>
+      </strong>
+      <br>
+      희망 / 원하는 것
+      <br><br>
+
+      고객이 원하는 내용을 정중하게 말할 때
+      앞에 「ご」가 붙어
+      <strong>ごきぼう</strong>가 됩니다.
+      <br><br>
+
+      <strong>ごきぼうの せじゅつ</strong>
+      <br>
+      원하시는 시술
+      <br><br>
+
+      병원뿐 아니라 호텔, 미용실 등에서도
+      고객의 희망사항을 확인할 때
+      「ごきぼう」라는 표현을 볼 수 있습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      원하는 시술이 정해져 있는 고객
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          ごきぼうの
+          <ruby>施術<rt>せじゅつ</rt></ruby>は ありますか。
+        </div>
+
+        <div class="clinic-hira">
+          ごきぼうの せじゅつは ありますか。
+        </div>
+
+        <div class="clinic-ko">
+          원하시는 시술이 있나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、シミの レーザーを
+          かんがえています。
+        </div>
+
+        <div class="clinic-hira">
+          はい、しみの れーざーを
+          かんがえています。
+        </div>
+
+        <div class="clinic-ko">
+          네, 잡티 레이저 시술을 생각하고 있습니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 이 표현을 통째로 이해하세요
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>～を かんがえています。</strong>
+      <br>
+      ~을 생각하고 있습니다.
+      <br><br>
+
+      지금은
+      <strong>원하는 시술 후보가 있을 때 말하는 표현</strong>으로
+      이해하면 됩니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「～ています」까지 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      <strong>かんがえる</strong>
+      <br>
+      생각하다
+      <br><br>
+
+      ↓ て형
+      <br><br>
+
+      <strong>かんがえて</strong>
+      <br><br>
+
+      ↓ ～ている
+      <br><br>
+
+      <strong>かんがえている</strong>
+      <br>
+      생각하고 있다
+      <br><br>
+
+      ↓ 정중체
+      <br><br>
+
+      <strong>かんがえています</strong>
+      <br>
+      생각하고 있습니다
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      어떤 시술을 받을지 아직 정하지 않은 고객
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          ごきぼうの
+          <ruby>施術<rt>せじゅつ</rt></ruby>は ありますか。
+        </div>
+
+        <div class="clinic-hira">
+          ごきぼうの せじゅつは ありますか。
+        </div>
+
+        <div class="clinic-ko">
+          원하시는 시술이 있나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          まだ よく わからないです。
+          そうだんしたいです。
+        </div>
+
+        <div class="clinic-hira">
+          まだ よく わからないです。
+          そうだんしたいです。
+        </div>
+
+        <div class="clinic-ko">
+          아직 잘 모르겠어요. 상담하고 싶어요.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원이 자연스럽게 이어갈 표현
+    </div>
+
+    <div class="clinic-main-jp">
+      わかりました。
+      まず せんせいと そうだんしましょう。
+    </div>
+
+    <div class="clinic-main-hira">
+      わかりました。
+      まず せんせいと そうだんしましょう。
+    </div>
+
+    <div class="clinic-main-ko">
+      알겠습니다. 우선 선생님과 상담해 보겠습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 뜻만 이해해도 됩니다
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>わかりました</strong>
+      <br>
+      알겠습니다
+      <br><br>
+
+      <strong>まず</strong>
+      <br>
+      우선 / 먼저
+      <br><br>
+
+      <strong>せんせい</strong>
+      <br>
+      선생님 / 의사 선생님
+      <br><br>
+
+      <strong>そうだん</strong>
+      <br>
+      상담
+      <br><br>
+
+      전체적으로
+      <strong>“우선 의사 선생님과 상담해 보겠습니다.”</strong>
+      라는 의미입니다.
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 8. 알레르기와 복용 중인 약을 확인합니다
+  </div>
+
+  <div class="clinic-warning">
+    이 부분은 실제 의료 판단을 가르치는 내용이 아니라,
+    <strong>직원이 고객에게 확인 질문을 하는 데 필요한 일본어 표현</strong>을
+    학습하기 위한 내용입니다.
+    실제 확인 항목과 시술 가능 여부 판단은 병원 내부 절차와 의료진의 지시에 따릅니다.
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      アレルギーは ありますか。
+    </div>
+
+    <div class="clinic-main-hira">
+      あれるぎーは ありますか。
+    </div>
+
+    <div class="clinic-main-ko">
+      알레르기가 있나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 바로 사용할 수 있습니다
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>アレルギー</strong>
+      <br>
+      알레르기
+      <br><br>
+
+      <strong>は</strong>
+      <br>
+      ~은/는
+      <br><br>
+
+      <strong>ありますか</strong>
+      <br>
+      있습니까?
+      <br><br>
+
+      문장 구조가 단순하기 때문에
+      그대로 사용할 수 있습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객의 대답
+    </div>
+
+    <div class="clinic-jp">
+      いいえ、ありません。
+    </div>
+
+    <div class="clinic-hira">
+      いいえ、ありません。
+    </div>
+
+    <div class="clinic-ko">
+      아니요, 없습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객의 대답
+    </div>
+
+    <div class="clinic-jp">
+      はい、あります。
+    </div>
+
+    <div class="clinic-hira">
+      はい、あります。
+    </div>
+
+    <div class="clinic-ko">
+      네, 있습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      いま のんでいる
+      <ruby>薬<rt>くすり</rt></ruby>は ありますか。
+    </div>
+
+    <div class="clinic-main-hira">
+      いま のんでいる くすりは ありますか。
+    </div>
+
+    <div class="clinic-main-ko">
+      현재 복용하고 있는 약이 있나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>いま</strong>
+      <br>
+      지금 / 현재
+      <br><br>
+
+      <strong>のんでいる</strong>
+      <br>
+      먹고 있는 / 복용하고 있는
+      <br><br>
+
+      <strong>くすり</strong>
+      <br>
+      약
+      <br><br>
+
+      <strong>ありますか</strong>
+      <br>
+      있습니까?
+      <br><br>
+
+      전체적으로
+      <br>
+      <strong>“현재 복용 중인 약이 있나요?”</strong>
+      라는 뜻입니다.
+      <br><br>
+
+      아직 「のんでいる」의 문법 구조를 몰라도
+      의미만 알아두면 됩니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「飲んでいる」의 구조를 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      기본 동사는
+      <strong>
+        <ruby>飲<rt>の</rt></ruby>む
+      </strong>
+      입니다.
+      <br><br>
+
+      <strong>のむ</strong>
+      <br>
+      마시다 / 약을 먹다
+      <br><br>
+
+      ↓ て형
+      <br><br>
+
+      <strong>のんで</strong>
+      <br><br>
+
+      ↓ ～ている
+      <br><br>
+
+      <strong>のんでいる</strong>
+      <br>
+      먹고 있다 / 복용하고 있다
+      <br><br>
+
+      그런데 여기서는
+      <br><br>
+
+      <strong>のんでいる + くすり</strong>
+      <br>
+      복용하고 있는 + 약
+      <br><br>
+
+      처럼 앞의 표현이 뒤의 명사
+      <strong>くすり</strong>를 꾸밉니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      상담 전 기본 확인
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          アレルギーは ありますか。
+        </div>
+
+        <div class="clinic-hira">
+          あれるぎーは ありますか。
+        </div>
+
+        <div class="clinic-ko">
+          알레르기가 있나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          いいえ、ありません。
+        </div>
+
+        <div class="clinic-hira">
+          いいえ、ありません。
+        </div>
+
+        <div class="clinic-ko">
+          아니요, 없습니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          いま のんでいる
+          <ruby>薬<rt>くすり</rt></ruby>は ありますか。
+        </div>
+
+        <div class="clinic-hira">
+          いま のんでいる くすりは ありますか。
+        </div>
+
+        <div class="clinic-ko">
+          현재 복용 중인 약이 있나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          いいえ、ありません。
+        </div>
+
+        <div class="clinic-hira">
+          いいえ、ありません。
+        </div>
+
+        <div class="clinic-ko">
+          아니요, 없습니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-speaking">
+
+    <div class="clinic-speaking-title">
+      💬 상담 전 질문을 연결해 보세요
+    </div>
+
+    직원 역할은 다음 내용을 순서대로 확인합니다.
+
+    <ul>
+      <li>비슷한 시술 경험이 있는지</li>
+      <li>언제 시술을 받았는지</li>
+      <li>원하는 시술이 있는지</li>
+      <li>알레르기가 있는지</li>
+      <li>현재 복용 중인 약이 있는지</li>
+    </ul>
+
+    고객 역할은 자신의 상황을 임의로 정해 대답합니다.
+
+  </div>
+
+</div>
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 11. 시술 후 상태와 주의사항을 안내합니다
+  </div>
+
+  <div class="clinic-warning">
+    시술 후 세안·화장·운동·음주·자외선 관리 등의 안내는
+    <strong>시술 종류와 병원 지침에 따라 달라집니다.</strong>
+    <br><br>
+    아래 문장은 일본어 학습용 예시입니다.
+    실제 현장에서는 병원에서 정한 안내 내용과 시간을 넣어서 사용하세요.
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      직원 핵심 문장
+    </div>
+
+    <div class="clinic-main-jp">
+      <ruby>施術後<rt>せじゅつご</rt></ruby>は、
+      <ruby>赤<rt>あか</rt></ruby>みや はれが
+      でることが あります。
+    </div>
+
+    <div class="clinic-main-hira">
+      せじゅつごは、
+      あかみや はれが でることが あります。
+    </div>
+
+    <div class="clinic-main-ko">
+      시술 후에는 붉은기나 붓기가 생길 수 있습니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>せじゅつご</strong>
+      <br>
+      시술 후
+      <br><br>
+
+      <strong>あかみ</strong>
+      <br>
+      붉은기
+      <br><br>
+
+      <strong>はれ</strong>
+      <br>
+      붓기
+      <br><br>
+
+      <strong>でる</strong>
+      <br>
+      나오다 / 생기다
+      <br><br>
+
+      문장 전체는
+      <br>
+      <strong>“시술 후 붉은기나 붓기가 생길 수 있습니다.”</strong>
+      정도로 이해하면 됩니다.
+
+    </div>
+
+    <div class="clinic-stop">
+      🌱 「～ことが あります」의 문법은 아직 몰라도 괜찮습니다.
+      현장에서 자주 쓰는 안내 표현으로 익혀 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「や」와 「ことがある」까지 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      <strong>A や B</strong>
+      <br>
+      A나 B 등
+      <br><br>
+
+      따라서
+      <br>
+      <strong>あかみや はれ</strong>
+      <br>
+      붉은기나 붓기 등
+      <br><br>
+
+      그리고
+      <strong>～ことが あります</strong>는
+      여기에서는
+      <strong>“그런 경우가 있습니다 / 그럴 수 있습니다”</strong>
+      라는 의미입니다.
+      <br><br>
+
+      <strong>はれが でることが あります。</strong>
+      <br>
+      붓기가 생기는 경우가 있습니다.
+      <br>
+      → 붓기가 생길 수 있습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      피부를 문지르지 말라고 안내할 때
+    </div>
+
+    <div class="clinic-main-jp">
+      おかおを つよく こすらないでください。
+    </div>
+
+    <div class="clinic-main-hira">
+      おかおを つよく こすらないでください。
+    </div>
+
+    <div class="clinic-main-ko">
+      얼굴을 세게 문지르지 말아 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 표현 전체를 익혀 주세요
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>おかお</strong>
+      <br>
+      얼굴
+      <br><br>
+
+      <strong>つよく</strong>
+      <br>
+      세게
+      <br><br>
+
+      <strong>こすらないでください</strong>
+      <br>
+      문지르지 말아 주세요
+      <br><br>
+
+      지금은
+      <strong>「～ないでください = ~하지 말아 주세요」</strong>
+      정도로만 이해해도 충분합니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 ない형까지 연결합니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      기본 동사는
+      <strong>こする</strong>
+      <br>
+      문지르다
+      <br><br>
+
+      ↓ ない형
+      <br><br>
+
+      <strong>こすらない</strong>
+      <br>
+      문지르지 않는다
+      <br><br>
+
+      ↓ ～ないでください
+      <br><br>
+
+      <strong>こすらないでください</strong>
+      <br>
+      문지르지 말아 주세요
+      <br><br>
+
+      병원에서 금지하거나 피해야 하는 행동을
+      정중하게 안내할 때 매우 유용합니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      병원 지침에 따라 사용할 수 있는 표현
+    </div>
+
+    <div class="clinic-jp">
+      きょうは おさけを のまないでください。
+    </div>
+
+    <div class="clinic-hira">
+      きょうは おさけを のまないでください。
+    </div>
+
+    <div class="clinic-ko">
+      오늘은 술을 마시지 말아 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      병원 지침에 따라 사용할 수 있는 표현
+    </div>
+
+    <div class="clinic-jp">
+      きょうは はげしい うんどうを
+      しないでください。
+    </div>
+
+    <div class="clinic-hira">
+      きょうは はげしい うんどうを
+      しないでください。
+    </div>
+
+    <div class="clinic-ko">
+      오늘은 격한 운동을 하지 말아 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      자외선 차단 안내
+    </div>
+
+    <div class="clinic-main-jp">
+      <ruby>日焼<rt>ひや</rt></ruby>けどめを
+      しっかり ぬってください。
+    </div>
+
+    <div class="clinic-main-hira">
+      ひやけどめを しっかり ぬってください。
+    </div>
+
+    <div class="clinic-main-ko">
+      자외선 차단제를 꼼꼼히 발라 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 핵심 표현만 봅니다
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>ひやけどめ</strong>
+      <br>
+      자외선 차단제 / 선크림
+      <br><br>
+
+      <strong>しっかり</strong>
+      <br>
+      제대로 / 꼼꼼하게
+      <br><br>
+
+      <strong>ぬってください</strong>
+      <br>
+      발라 주세요
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 앞에서 배운 동사와 연결하세요
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      앞에서
+      <strong>ぬる → ぬります</strong>를 배웠습니다.
+      <br><br>
+
+      이번에는 て형입니다.
+      <br><br>
+
+      <strong>ぬる</strong>
+      <br>
+      바르다
+      <br><br>
+
+      ↓ て형
+      <br><br>
+
+      <strong>ぬって</strong>
+      <br><br>
+
+      ↓ ～てください
+      <br><br>
+
+      <strong>ぬってください</strong>
+      <br>
+      발라 주세요
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      세안·화장 가능 시간을 안내할 때 사용하는 틀
+    </div>
+
+    <div class="clinic-main-jp">
+      せんがんは 〇じかんごから できます。
+    </div>
+
+    <div class="clinic-main-hira">
+      せんがんは 〇じかんごから できます。
+    </div>
+
+    <div class="clinic-main-ko">
+      세안은 ○시간 후부터 가능합니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-jp">
+      メイクは 〇じかんごから できます。
+    </div>
+
+    <div class="clinic-hira">
+      めいくは 〇じかんごから できます。
+    </div>
+
+    <div class="clinic-ko">
+      메이크업은 ○시간 후부터 가능합니다.
+    </div>
+
+    <div class="clinic-explain">
+      ○ 부분에는 실제 시술에 맞는 병원 안내 시간을 넣어서 사용합니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 이 구조만 기억하세요
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>〇じかんご</strong>
+      <br>
+      ○시간 후
+      <br><br>
+
+      <strong>から</strong>
+      <br>
+      ~부터
+      <br><br>
+
+      <strong>できます</strong>
+      <br>
+      할 수 있습니다 / 가능합니다
+      <br><br>
+
+      <strong>〇じかんごから できます。</strong>
+      <br>
+      → ○시간 후부터 가능합니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      이상이 있을 때 연락하도록 안내
+    </div>
+
+    <div class="clinic-main-jp">
+      もし なにか もんだいが あったら、
+      びょういんに ごれんらくください。
+    </div>
+
+    <div class="clinic-main-hira">
+      もし なにか もんだいが あったら、
+      びょういんに ごれんらくください。
+    </div>
+
+    <div class="clinic-main-ko">
+      혹시 문제가 있으면 병원으로 연락해 주세요.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 문장 뜻만 이해해도 됩니다
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>もし</strong>
+      <br>
+      만약 / 혹시
+      <br><br>
+
+      <strong>なにか</strong>
+      <br>
+      무언가
+      <br><br>
+
+      <strong>もんだい</strong>
+      <br>
+      문제
+      <br><br>
+
+      <strong>ごれんらくください</strong>
+      <br>
+      연락해 주세요
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「～たら」와 연결해 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      <strong>ある</strong>
+      <br>
+      있다
+      <br><br>
+
+      ↓ 과거형
+      <br><br>
+
+      <strong>あった</strong>
+      <br>
+      있었다
+      <br><br>
+
+      ↓ ～たら
+      <br><br>
+
+      <strong>あったら</strong>
+      <br>
+      있으면
+      <br><br>
+
+      따라서
+      <br><br>
+
+      <strong>もんだいが あったら</strong>
+      <br>
+      문제가 있으면
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      시술 후 안내 예시
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          <ruby>施術後<rt>せじゅつご</rt></ruby>は、
+          <ruby>赤<rt>あか</rt></ruby>みや はれが
+          でることが あります。
+        </div>
+
+        <div class="clinic-hira">
+          せじゅつごは、
+          あかみや はれが でることが あります。
+        </div>
+
+        <div class="clinic-ko">
+          시술 후에는 붉은기나 붓기가 생길 수 있습니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          おかおを つよく
+          こすらないでください。
+        </div>
+
+        <div class="clinic-hira">
+          おかおを つよく
+          こすらないでください。
+        </div>
+
+        <div class="clinic-ko">
+          얼굴을 세게 문지르지 말아 주세요.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          <ruby>日焼<rt>ひや</rt></ruby>けどめも
+          しっかり ぬってください。
+        </div>
+
+        <div class="clinic-hira">
+          ひやけどめも
+          しっかり ぬってください。
+        </div>
+
+        <div class="clinic-ko">
+          자외선 차단제도 꼼꼼히 발라 주세요.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          きょう、メイクしても いいですか。
+        </div>
+
+        <div class="clinic-hira">
+          きょう、めいくしても いいですか。
+        </div>
+
+        <div class="clinic-ko">
+          오늘 화장해도 되나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          メイクは 〇じかんごから できます。
+        </div>
+
+        <div class="clinic-hira">
+          めいくは 〇じかんごから できます。
+        </div>
+
+        <div class="clinic-ko">
+          메이크업은 ○시간 후부터 가능합니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          もし なにか もんだいが あったら、
+          びょういんに ごれんらくください。
+        </div>
+
+        <div class="clinic-hira">
+          もし なにか もんだいが あったら、
+          びょういんに ごれんらくください。
+        </div>
+
+        <div class="clinic-ko">
+          혹시 문제가 있으면 병원으로 연락해 주세요.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、わかりました。
+          ありがとうございます。
+        </div>
+
+        <div class="clinic-hira">
+          はい、わかりました。
+          ありがとうございます。
+        </div>
+
+        <div class="clinic-ko">
+          네, 알겠습니다. 감사합니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    SCENE 12. 결제하고 다음 예약을 확인합니다
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      결제 금액 안내
+    </div>
+
+    <div class="clinic-main-jp">
+      きょうの おかいけいは
+      〇〇ウォンです。
+    </div>
+
+    <div class="clinic-main-hira">
+      きょうの おかいけいは
+      〇〇うぉんです。
+    </div>
+
+    <div class="clinic-main-ko">
+      오늘 결제 금액은 ○○원입니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 여기까지만 이해하시면 됩니다!
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>きょう</strong>
+      <br>
+      오늘
+      <br><br>
+
+      <strong>おかいけい</strong>
+      <br>
+      계산 / 결제
+      <br><br>
+
+      <strong>〇〇ウォン</strong>
+      <br>
+      ○○원
+      <br><br>
+
+      <strong>です</strong>
+      <br>
+      ~입니다
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      결제 방법 확인
+    </div>
+
+    <div class="clinic-main-jp">
+      カードで おしはらいですか。
+    </div>
+
+    <div class="clinic-main-hira">
+      かーどで おしはらいですか。
+    </div>
+
+    <div class="clinic-main-ko">
+      카드로 결제하시나요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 단어를 연결해서 이해하세요
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>カード</strong>
+      <br>
+      카드
+      <br><br>
+
+      <strong>で</strong>
+      <br>
+      여기서는 “~로”
+      <br><br>
+
+      <strong>おしはらい</strong>
+      <br>
+      지불 / 결제
+      <br><br>
+
+      <strong>ですか</strong>
+      <br>
+      ~입니까?
+      <br><br>
+
+      따라서
+      <strong>“카드로 결제하시나요?”</strong>
+      라는 뜻입니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-example">
+
+    <div class="clinic-example-label">
+      고객
+    </div>
+
+    <div class="clinic-jp">
+      はい、カードで おねがいします。
+    </div>
+
+    <div class="clinic-hira">
+      はい、かーどで おねがいします。
+    </div>
+
+    <div class="clinic-ko">
+      네, 카드로 부탁드립니다.
+    </div>
+
+  </div>
+
+
+  <div class="clinic-main-phrase">
+
+    <div class="clinic-main-label">
+      다음 예약 확인
+    </div>
+
+    <div class="clinic-main-jp">
+      つぎの ごよやくも
+      おとりしますか。
+    </div>
+
+    <div class="clinic-main-hira">
+      つぎの ごよやくも
+      おとりしますか。
+    </div>
+
+    <div class="clinic-main-ko">
+      다음 예약도 잡아드릴까요?
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-basic">
+
+    <div class="clinic-level-basic-title">
+      🌱 생기초는 뜻만 이해해도 됩니다
+    </div>
+
+    <div class="clinic-level-basic-text">
+
+      <strong>つぎ</strong>
+      <br>
+      다음
+      <br><br>
+
+      <strong>ごよやく</strong>
+      <br>
+      예약
+      <br><br>
+
+      <strong>も</strong>
+      <br>
+      ~도
+      <br><br>
+
+      <strong>おとりしますか</strong>
+      <br>
+      잡아드릴까요? / 예약해 드릴까요?
+      <br><br>
+
+      문장 전체는
+      <strong>“다음 예약도 잡아드릴까요?”</strong>
+      로 이해하면 됩니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-level-next">
+
+    <div class="clinic-level-next-title">
+      🌿 기초는 「予約を取る」를 익혀 봅니다
+    </div>
+
+    <div class="clinic-level-next-text">
+
+      일본어에서는 예약을 잡는 것을
+      <br><br>
+
+      <strong>よやくを とる</strong>
+      <br>
+      예약을 잡다
+      <br><br>
+
+      라고 표현할 수 있습니다.
+      <br><br>
+
+      고객을 대상으로 정중하게 말하면
+      <strong>おとりします</strong> 같은 표현이 사용될 수 있습니다.
+
+    </div>
+
+  </div>
+
+
+  <div class="clinic-dialogue">
+
+    <div class="clinic-dialogue-title">
+      결제부터 다음 예약까지
+    </div>
+
+    <div class="clinic-dialogue-body">
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          きょうの おかいけいは
+          15まんウォンです。
+        </div>
+
+        <div class="clinic-hira">
+          きょうの おかいけいは
+          じゅうごまんうぉんです。
+        </div>
+
+        <div class="clinic-ko">
+          오늘 결제 금액은 15만 원입니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          カードで おしはらいですか。
+        </div>
+
+        <div class="clinic-hira">
+          かーどで おしはらいですか。
+        </div>
+
+        <div class="clinic-ko">
+          카드로 결제하시나요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、カードで おねがいします。
+        </div>
+
+        <div class="clinic-hira">
+          はい、かーどで おねがいします。
+        </div>
+
+        <div class="clinic-ko">
+          네, 카드로 부탁드립니다.
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">직원</span>
+
+        <div class="clinic-jp">
+          つぎの ごよやくも
+          おとりしますか。
+        </div>
+
+        <div class="clinic-hira">
+          つぎの ごよやくも
+          おとりしますか。
+        </div>
+
+        <div class="clinic-ko">
+          다음 예약도 잡아드릴까요?
+        </div>
+
+      </div>
+
+
+      <div class="clinic-dialogue-row">
+
+        <span class="clinic-role">고객</span>
+
+        <div class="clinic-jp">
+          はい、おねがいします。
+        </div>
+
+        <div class="clinic-hira">
+          はい、おねがいします。
+        </div>
+
+        <div class="clinic-ko">
+          네, 부탁드립니다.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="clinic-section">
+
+  <div class="clinic-section-title">
+    FINAL. 접수부터 결제까지 종합 롤플레이
+  </div>
+
+  <div class="clinic-important">
+    이제 일본어 대본을 그대로 읽지 말고
+    <strong>역할과 상황만 보고 직접 일본어를 만들어 보세요.</strong>
+    <br><br>
+    모든 문장을 완벽하게 사용할 필요는 없습니다.
+    자신의 레벨에서 사용할 수 있는 표현을 최대한 조합해 보는 것이 목표입니다.
+  </div>
+
+
+  <div class="clinic-role-card">
+
+    <div class="clinic-role-card-title">
+      🏥 직원 역할
+    </div>
+
+    일본인 고객이 예약하고 피부과에 방문했습니다.
+
+    <ul>
+      <li>예약한 이름을 확인합니다.</li>
+      <li>첫 방문인지 묻습니다.</li>
+      <li>문진표 작성을 부탁합니다.</li>
+      <li>오늘 어떤 고민으로 왔는지 묻습니다.</li>
+      <li>가장 신경 쓰이는 부분을 확인합니다.</li>
+      <li>언제부터 고민이 있었는지 묻습니다.</li>
+      <li>비슷한 시술 경험이 있는지 확인합니다.</li>
+      <li>원하는 시술이 있는지 묻습니다.</li>
+      <li>알레르기와 현재 복용 중인 약을 확인합니다.</li>
+      <li>시술 준비 방법을 안내합니다.</li>
+      <li>시술 중 통증이 있는지 확인합니다.</li>
+      <li>시술 후 병원에서 정한 주의사항을 설명합니다.</li>
+      <li>결제 금액을 안내합니다.</li>
+      <li>다음 예약 여부를 확인합니다.</li>
+    </ul>
+
+  </div>
+
+
+  <div class="clinic-role-card">
+
+    <div class="clinic-role-card-title">
+      👤 고객 역할
+    </div>
+
+    다음 정보를 기준으로 직원과 대화해 보세요.
+
+    <ul>
+      <li>이름: 田中</li>
+      <li>첫 방문</li>
+      <li>볼의 잡티와 코 모공이 고민</li>
+      <li>가장 신경 쓰이는 것은 볼의 잡티</li>
+      <li>약 6개월 전부터 신경 쓰이기 시작함</li>
+      <li>비슷한 시술 경험은 없음</li>
+      <li>잡티 레이저에 관심이 있지만 정확히 어떤 시술인지는 모름</li>
+      <li>알레르기 없음</li>
+      <li>현재 복용하는 약 없음</li>
+      <li>시술 중 조금 아프다고 말하기</li>
+      <li>시술 후 오늘 화장이 가능한지 질문하기</li>
+      <li>카드 결제</li>
+      <li>다음 예약도 잡기</li>
+    </ul>
+
+  </div>
+
+
+  <div class="clinic-speaking">
+
+    <div class="clinic-speaking-title">
+      💬 처음에는 힌트를 보고 말해 보세요
+    </div>
+
+    <div class="clinic-chip-row">
+      <span class="clinic-chip">おなまえを おねがいします</span>
+      <span class="clinic-chip">はじめてですか</span>
+      <span class="clinic-chip">どうなさいましたか</span>
+      <span class="clinic-chip">きになります</span>
+      <span class="clinic-chip">いつごろから</span>
+      <span class="clinic-chip">うけたことは ありますか</span>
+      <span class="clinic-chip">ごきぼうの せじゅつ</span>
+      <span class="clinic-chip">アレルギーは ありますか</span>
+      <span class="clinic-chip">のんでいる くすり</span>
+      <span class="clinic-chip">～てください</span>
+      <span class="clinic-chip">いたくないですか</span>
+      <span class="clinic-chip">～ないでください</span>
+      <span class="clinic-chip">おかいけい</span>
+      <span class="clinic-chip">つぎの ごよやく</span>
+    </div>
+
+  </div>
+
+
+  <div class="clinic-speaking">
+
+    <div class="clinic-speaking-title">
+      🎤 마지막에는 힌트 없이 말해 보세요
+    </div>
+
+    <strong>1회차</strong>
+    <br>
+    일본어 문장을 보면서 직원과 고객 역할을 나누어 읽습니다.
+    <br><br>
+
+    <strong>2회차</strong>
+    <br>
+    한국어 상황과 핵심 단어만 보고 일본어로 말합니다.
+    <br><br>
+
+    <strong>3회차</strong>
+    <br>
+    역할 카드만 보고 처음부터 끝까지 실제 접객처럼 대화합니다.
+    <br><br>
+
+    <strong>4회차</strong>
+    <br>
+    직원과 고객의 역할을 서로 바꿔서 다시 진행합니다.
+
+  </div>
+
+
+  <div class="clinic-important">
+    <strong>이 교재의 핵심</strong>
+    <br><br>
+
+    🌱 생기초
+    <br>
+    실제 현장 문장의 뜻과 필요한 단어를 먼저 익힙니다.
+    <br><br>
+
+    🌿 기초
+    <br>
+    같은 문장을 다시 보면서 て형, ない형, ～たことがある,
+    ～たら, ～てください 등의 구조까지 이해합니다.
+    <br><br>
+
+    🌳 레벨이 올라간 뒤
+    <br>
+    경어와 표현의 뉘앙스까지 다시 살펴봅니다.
+    <br><br>
+
+    <strong>
+      처음부터 모든 문법을 이해하는 것이 아니라,
+      실제로 필요한 일본어를 먼저 사용하고
+      실력이 올라갈수록 같은 문장을 더 깊게 이해하는 것이 목표입니다.
+    </strong>
+  </div>
+
+</div>
