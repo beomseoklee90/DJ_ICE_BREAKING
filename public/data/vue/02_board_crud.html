@@ -1,0 +1,162 @@
+2강. 게시판 화면 (검색 + 모달 CRUD)
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>목록 렌더링(v-for)</strong>: 게시글 배열을 테이블로 출력합니다.</li>
+    <li><strong>검색 &amp; 카테고리 필터(computed)</strong>: 검색어와 카테고리 선택값에 따라 실시간으로 게시글을 필터링합니다.</li>
+    <li><strong>모달 제어(v-show)</strong>: 글쓰기 모달과 상세보기 모달을 <code>v-show</code>로 열고 닫으며, 게시글 추가 및 삭제를 구현합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const posts = ref([
+  { id: 1, category: '공지', title: 'Vue 3 스터디 안내', content: '매주 실습을 진행합니다.' },
+  { id: 2, category: '질문', title: 'v-if와 v-show 차이?', content: '언제 무엇을 쓰나요?' }
+])
+const search = ref('')
+const selectedCategory = ref('전체')
+
+const filteredPosts = computed(() =&gt; posts.value)
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="board"&gt;
+    &lt;h2&gt;📋 미니 게시판&lt;/h2&gt;
+    &lt;input v-model="search" placeholder="제목 검색..." /&gt;
+    &lt;ul&gt;
+      &lt;li v-for="p in filteredPosts" :key="p.id"&gt;[{{ p.category }}] {{ p.title }}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const posts = ref([
+  { id: 1, category: '공지', title: 'Vue 3 실전 커리큘럼 오픈', content: '1강부터 10강까지 직접 만들어보세요!' },
+  { id: 2, category: '질문', title: 'computed는 언제 쓰나요?', content: '파생 데이터를 캐싱할 때 사용합니다.' },
+  { id: 3, category: '자유', title: '오늘의 커피 추천', content: '아이스 아메리카노 최고!' }
+])
+
+const search = ref('')
+const selectedCategory = ref('전체')
+const showWriteModal = ref(false)
+const detailPost = ref(null)
+
+const newTitle = ref('')
+const newCategory = ref('자유')
+const newContent = ref('')
+
+const filteredPosts = computed(() =&gt; {
+  return posts.value.filter(p =&gt; {
+    const matchCat = selectedCategory.value === '전체' || p.category === selectedCategory.value
+    const matchText = p.title.toLowerCase().includes(search.value.toLowerCase())
+    return matchCat &amp;&amp; matchText
+  })
+})
+
+const addPost = () =&gt; {
+  if (!newTitle.value.trim()) return
+  posts.value.unshift({
+    id: Date.now(),
+    category: newCategory.value,
+    title: newTitle.value,
+    content: newContent.value || '내용 없음'
+  })
+  newTitle.value = ''
+  newContent.value = ''
+  showWriteModal.value = false
+}
+
+const deletePost = (id) =&gt; {
+  posts.value = posts.value.filter(p =&gt; p.id !== id)
+  if (detailPost.value?.id === id) detailPost.value = null
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="board"&gt;
+    &lt;div class="top-bar"&gt;
+      &lt;h2&gt;📋 미니 게시판&lt;/h2&gt;
+      &lt;button class="btn-primary" @click="showWriteModal = true"&gt;+ 글쓰기&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="filters"&gt;
+      &lt;select v-model="selectedCategory"&gt;
+        &lt;option&gt;전체&lt;/option&gt;&lt;option&gt;공지&lt;/option&gt;&lt;option&gt;질문&lt;/option&gt;&lt;option&gt;자유&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input v-model="search" placeholder="제목 검색..." /&gt;
+    &lt;/div&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;분류&lt;/th&gt;&lt;th&gt;제목&lt;/th&gt;&lt;th&gt;관리&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="p in filteredPosts" :key="p.id"&gt;
+          &lt;td&gt;&lt;span class="badge"&gt;{{ p.category }}&lt;/span&gt;&lt;/td&gt;
+          &lt;td class="title-cell" @click="detailPost = p"&gt;{{ p.title }}&lt;/td&gt;
+          &lt;td&gt;&lt;button class="btn-del" @click="deletePost(p.id)"&gt;삭제&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;div v-show="showWriteModal" class="modal-backdrop"&gt;
+      &lt;div class="modal"&gt;
+        &lt;h3&gt;새 글 작성&lt;/h3&gt;
+        &lt;select v-model="newCategory"&gt;&lt;option&gt;공지&lt;/option&gt;&lt;option&gt;질문&lt;/option&gt;&lt;option&gt;자유&lt;/option&gt;&lt;/select&gt;
+        &lt;input v-model="newTitle" placeholder="제목" /&gt;
+        &lt;textarea v-model="newContent" placeholder="내용"&gt;&lt;/textarea&gt;
+        &lt;div class="modal-actions"&gt;
+          &lt;button class="btn-primary" @click="addPost"&gt;등록&lt;/button&gt;
+          &lt;button @click="showWriteModal = false"&gt;취소&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div v-show="detailPost" class="modal-backdrop"&gt;
+      &lt;div class="modal" v-if="detailPost"&gt;
+        &lt;h3&gt;[{{ detailPost.category }}] {{ detailPost.title }}&lt;/h3&gt;
+        &lt;p&gt;{{ detailPost.content }}&lt;/p&gt;
+        &lt;button @click="detailPost = null"&gt;닫기&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.board { font-family: sans-serif; max-width: 600px; margin: 0 auto; }
+.top-bar, .filters { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 12px; align-items: center; }
+.filters input { flex: 1; padding: 7px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.filters select { padding: 7px; border: 1px solid #cbd5e1; border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border-bottom: 1px solid #e2e8f0; padding: 10px 8px; text-align: left; }
+.title-cell { cursor: pointer; color: #2563eb; font-weight: 600; }
+.badge { background: #e2e8f0; padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+.btn-primary { background: #42b883; color: #fff; border: none; padding: 7px 14px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+.btn-del { background: #ef4444; color: #fff; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; }
+.modal { background: #fff; padding: 20px; border-radius: 10px; width: 320px; display: flex; flex-direction: column; gap: 8px; }
+.modal input, .modal textarea, .modal select { padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

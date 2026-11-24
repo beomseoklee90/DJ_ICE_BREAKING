@@ -1,0 +1,119 @@
+6강. 실시간 투표 &amp; 결과 막대 그래프
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>득표율 계산(computed)</strong>: 총 투표수 대비 각 항목의 퍼센트(%)를 계산합니다.</li>
+    <li><strong>동적 스타일(:style)</strong>: 막대 그래프의 <code>width</code>를 득표율에 맞춰 실시간으로 늘립니다.</li>
+    <li><strong>중복 투표 방지</strong>: <code>hasVoted</code> 상태로 이미 투표한 경우 다시 투표하지 못하게 막고, 재투표(초기화) 버튼을 제공합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const options = ref([
+  { id: 1, label: 'Vue 3', votes: 5 },
+  { id: 2, label: 'React', votes: 3 },
+  { id: 3, label: 'Svelte', votes: 2 }
+])
+const hasVoted = ref(false)
+const totalVotes = computed(() =&gt; options.value.reduce((s, o) =&gt; s + o.votes, 0))
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;📊 선호 프레임워크 투표&lt;/h2&gt;
+    &lt;p&gt;총 {{ totalVotes }}표&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const options = ref([
+  { id: 1, label: 'Vue 3 (Composition API)', votes: 12 },
+  { id: 2, label: 'React 19', votes: 9 },
+  { id: 3, label: 'Svelte 5', votes: 4 }
+])
+const hasVoted = ref(false)
+const votedId = ref(null)
+
+const totalVotes = computed(() =&gt; options.value.reduce((sum, o) =&gt; sum + o.votes, 0))
+
+const getPercent = (votes) =&gt; {
+  if (totalVotes.value === 0) return 0
+  return Math.round((votes / totalVotes.value) * 100)
+}
+
+const vote = (opt) =&gt; {
+  if (hasVoted.value) return
+  opt.votes++
+  hasVoted.value = true
+  votedId.value = opt.id
+}
+
+const resetVote = () =&gt; {
+  if (votedId.value) {
+    const target = options.value.find(o =&gt; o.id === votedId.value)
+    if (target &amp;&amp; target.votes &gt; 0) target.votes--
+  }
+  hasVoted.value = false
+  votedId.value = null
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="poll-box"&gt;
+    &lt;h2&gt;📊 가장 좋아하는 프론트엔드 프레임워크는?&lt;/h2&gt;
+    &lt;p class="sub"&gt;총 참여자: {{ totalVotes }}명&lt;/p&gt;
+
+    &lt;div v-for="opt in options" :key="opt.id" class="opt-item"&gt;
+      &lt;button
+        class="opt-btn"
+        :class="{ selected: votedId === opt.id }"
+        :disabled="hasVoted"
+        @click="vote(opt)"
+      &gt;
+        &lt;span&gt;{{ opt.label }}&lt;/span&gt;
+        &lt;span&gt;{{ opt.votes }}표 ({{ getPercent(opt.votes) }}%)&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div class="bar-bg"&gt;
+        &lt;div class="bar-fill" :style="{ width: getPercent(opt.votes) + '%' }"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button v-if="hasVoted" class="reset-btn" @click="resetVote"&gt;투표 취소 / 다시 선택&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.poll-box { max-width: 440px; margin: 0 auto; font-family: sans-serif; }
+.sub { color: #64748b; font-size: 13px; margin-bottom: 14px; }
+.opt-item { margin-bottom: 12px; }
+.opt-btn { width: 100%; display: flex; justify-content: space-between; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; cursor: pointer; font-weight: bold; margin-bottom: 5px; }
+.opt-btn.selected { border-color: #42b883; background: #ecfdf5; color: #047857; }
+.opt-btn:disabled { cursor: default; }
+.bar-bg { height: 10px; background: #e2e8f0; border-radius: 99px; overflow: hidden; }
+.bar-fill { height: 100%; background: #42b883; transition: width 0.35s ease; }
+.reset-btn { margin-top: 10px; padding: 8px 14px; border: none; border-radius: 6px; background: #475569; color: #fff; cursor: pointer; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

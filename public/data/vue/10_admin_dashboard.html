@@ -1,0 +1,136 @@
+10강. 종합 미니 관리자 페이지 (Admin Dashboard)
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>상단 요약 카드(computed)</strong>: 전체 주문 수, 처리 대기, 배송 완료 건수를 실시간 집계합니다.</li>
+    <li><strong>검색 조건 폼</strong>: 주문자명 검색 + 상태 필터 드롭다운을 조합합니다.</li>
+    <li><strong>상태 변경 &amp; 상세 수정 팝업</strong>: 테이블 내 드롭다운으로 상태를 즉시 변경하고, [상세] 버튼 클릭 시 모달에서 메모를 수정합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const orders = ref([
+  { id: 'ORD-01', customer: '김철수', status: '대기', amount: 45000, memo: '' },
+  { id: 'ORD-02', customer: '이영희', status: '완료', amount: 89000, memo: '문 앞 배송' }
+])
+const search = ref('')
+const filtered = computed(() =&gt; orders.value.filter(o =&gt; o.customer.includes(search.value)))
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;🛠️ 미니 관리자 대시보드&lt;/h2&gt;
+    &lt;input v-model="search" placeholder="주문자 검색" /&gt;
+    &lt;ul&gt;&lt;li v-for="o in filtered" :key="o.id"&gt;{{ o.customer }} ({{ o.status }})&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const orders = ref([
+  { id: 'ORD-101', customer: '김철수', status: '대기', amount: 45000, memo: '빠른 배송 요청' },
+  { id: 'ORD-102', customer: '이영희', status: '배송중', amount: 89000, memo: '경비실 보관' },
+  { id: 'ORD-103', customer: '박민수', status: '완료', amount: 32000, memo: '' }
+])
+
+const search = ref('')
+const statusFilter = ref('전체')
+const editingOrder = ref(null)
+
+const pendingCount = computed(() =&gt; orders.value.filter(o =&gt; o.status === '대기').length)
+const doneCount = computed(() =&gt; orders.value.filter(o =&gt; o.status === '완료').length)
+
+const filteredOrders = computed(() =&gt; {
+  return orders.value.filter(o =&gt; {
+    const matchName = o.customer.includes(search.value) || o.id.includes(search.value)
+    const matchStatus = statusFilter.value === '전체' || o.status === statusFilter.value
+    return matchName &amp;&amp; matchStatus
+  })
+})
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="admin"&gt;
+    &lt;h2&gt;🛠️ 종합 미니 관리자 대시보드&lt;/h2&gt;
+    &lt;div class="kpi-grid"&gt;
+      &lt;div class="kpi"&gt;전체 주문&lt;strong&gt;{{ orders.length }}건&lt;/strong&gt;&lt;/div&gt;
+      &lt;div class="kpi warn"&gt;처리 대기&lt;strong&gt;{{ pendingCount }}건&lt;/strong&gt;&lt;/div&gt;
+      &lt;div class="kpi ok"&gt;배송 완료&lt;strong&gt;{{ doneCount }}건&lt;/strong&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="search-bar"&gt;
+      &lt;input v-model="search" placeholder="주문번호 또는 고객명..." /&gt;
+      &lt;select v-model="statusFilter"&gt;
+        &lt;option&gt;전체&lt;/option&gt;&lt;option&gt;대기&lt;/option&gt;&lt;option&gt;배송중&lt;/option&gt;&lt;option&gt;완료&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;주문번호&lt;/th&gt;&lt;th&gt;고객명&lt;/th&gt;&lt;th&gt;금액&lt;/th&gt;&lt;th&gt;상태&lt;/th&gt;&lt;th&gt;상세&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="o in filteredOrders" :key="o.id"&gt;
+          &lt;td&gt;{{ o.id }}&lt;/td&gt;
+          &lt;td&gt;{{ o.customer }}&lt;/td&gt;
+          &lt;td&gt;{{ o.amount.toLocaleString() }}원&lt;/td&gt;
+          &lt;td&gt;
+            &lt;select v-model="o.status"&gt;
+              &lt;option&gt;대기&lt;/option&gt;&lt;option&gt;배송중&lt;/option&gt;&lt;option&gt;완료&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;button class="btn-edit" @click="editingOrder = o"&gt;수정&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;div v-show="editingOrder" class="modal-bg"&gt;
+      &lt;div class="modal" v-if="editingOrder"&gt;
+        &lt;h3&gt;주문 상세 ({{ editingOrder.id }})&lt;/h3&gt;
+        &lt;p&gt;고객명: {{ editingOrder.customer }}&lt;/p&gt;
+        &lt;label&gt;관리자 메모:&lt;/label&gt;
+        &lt;textarea v-model="editingOrder.memo" rows="3"&gt;&lt;/textarea&gt;
+        &lt;button class="btn-close" @click="editingOrder = null"&gt;저장 및 닫기&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.admin { max-width: 600px; margin: 0 auto; font-family: sans-serif; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.kpi { background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; font-size: 12px; display: flex; flex-direction: column; }
+.kpi strong { font-size: 18px; margin-top: 4px; }
+.kpi.warn strong { color: #d97706; }
+.kpi.ok strong { color: #16a34a; }
+.search-bar { display: flex; gap: 8px; margin-bottom: 12px; }
+.search-bar input { flex: 1; padding: 7px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.search-bar select { padding: 7px; border: 1px solid #cbd5e1; border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { border-bottom: 1px solid #e2e8f0; padding: 8px 6px; text-align: left; }
+.btn-edit { background: #3b82f6; color: #fff; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; }
+.modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; }
+.modal { background: #fff; padding: 20px; border-radius: 10px; width: 300px; display: flex; flex-direction: column; gap: 8px; }
+.btn-close { background: #42b883; color: #fff; border: none; padding: 8px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

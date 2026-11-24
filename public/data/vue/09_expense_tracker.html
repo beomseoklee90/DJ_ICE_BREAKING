@@ -1,0 +1,135 @@
+9강. 미니 가계부 &amp; 카테고리별 지출 분석
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>수입/지출 내역 등록</strong>: 구분(수입/지출), 카테고리(식비, 교통, 급여 등), 금액, 메모를 입력받아 목록에 추가합니다.</li>
+    <li><strong>잔액 및 합계 계산(computed)</strong>: 총 수입, 총 지출, 현재 잔액을 실시간으로 계산합니다.</li>
+    <li><strong>카테고리 필터링</strong>: 선택한 카테고리의 내역만 필터링해 볼 수 있습니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const records = ref([
+  { id: 1, type: '수입', category: '급여', title: '월급', amount: 3000000 },
+  { id: 2, type: '지출', category: '식비', title: '점심 식사', amount: 12000 }
+])
+const balance = computed(() =&gt; records.value.reduce((acc, r) =&gt; r.type === '수입' ? acc + r.amount : acc - r.amount, 0))
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;💰 잔액: {{ balance.toLocaleString() }}원&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const records = ref([
+  { id: 1, type: '수입', category: '급여', title: '프리랜서 정산', amount: 1500000 },
+  { id: 2, type: '지출', category: '식비', title: '아이스 아메리카노', amount: 4500 },
+  { id: 3, type: '지출', category: '교통', title: '지하철 정기권', amount: 65000 }
+])
+
+const type = ref('지출')
+const category = ref('식비')
+const title = ref('')
+const amount = ref('')
+const filterCat = ref('전체')
+
+const totalIncome = computed(() =&gt; records.value.filter(r =&gt; r.type === '수입').reduce((s, r) =&gt; s + r.amount, 0))
+const totalExpense = computed(() =&gt; records.value.filter(r =&gt; r.type === '지출').reduce((s, r) =&gt; s + r.amount, 0))
+const balance = computed(() =&gt; totalIncome.value - totalExpense.value)
+
+const filteredRecords = computed(() =&gt;
+  filterCat.value === '전체' ? records.value : records.value.filter(r =&gt; r.category === filterCat.value)
+)
+
+const addRecord = () =&gt; {
+  const num = Number(amount.value)
+  if (!title.value.trim() || !num || num &lt;= 0) return
+  records.value.unshift({
+    id: Date.now(),
+    type: type.value,
+    category: category.value,
+    title: title.value,
+    amount: num
+  })
+  title.value = ''
+  amount.value = ''
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="ledger"&gt;
+    &lt;h2&gt;💰 미니 가계부&lt;/h2&gt;
+    &lt;div class="cards"&gt;
+      &lt;div class="c inc"&gt;수입&lt;strong&gt;+{{ totalIncome.toLocaleString() }}&lt;/strong&gt;&lt;/div&gt;
+      &lt;div class="c exp"&gt;지출&lt;strong&gt;-{{ totalExpense.toLocaleString() }}&lt;/strong&gt;&lt;/div&gt;
+      &lt;div class="c bal"&gt;잔액&lt;strong&gt;{{ balance.toLocaleString() }}원&lt;/strong&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="form-row"&gt;
+      &lt;select v-model="type"&gt;&lt;option&gt;지출&lt;/option&gt;&lt;option&gt;수입&lt;/option&gt;&lt;/select&gt;
+      &lt;select v-model="category"&gt;&lt;option&gt;식비&lt;/option&gt;&lt;option&gt;교통&lt;/option&gt;&lt;option&gt;쇼핑&lt;/option&gt;&lt;option&gt;급여&lt;/option&gt;&lt;/select&gt;
+      &lt;input v-model="title" placeholder="내용" /&gt;
+      &lt;input v-model="amount" type="number" placeholder="금액" /&gt;
+      &lt;button @click="addRecord"&gt;등록&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="filter-bar"&gt;
+      &lt;span&gt;카테고리 필터:&lt;/span&gt;
+      &lt;select v-model="filterCat"&gt;
+        &lt;option&gt;전체&lt;/option&gt;&lt;option&gt;식비&lt;/option&gt;&lt;option&gt;교통&lt;/option&gt;&lt;option&gt;쇼핑&lt;/option&gt;&lt;option&gt;급여&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;ul class="rec-list"&gt;
+      &lt;li v-for="r in filteredRecords" :key="r.id"&gt;
+        &lt;span&gt;[{{ r.category }}] {{ r.title }}&lt;/span&gt;
+        &lt;strong :class="r.type === '수입' ? 'plus' : 'minus'"&gt;
+          {{ r.type === '수입' ? '+' : '-' }}{{ r.amount.toLocaleString() }}원
+        &lt;/strong&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.ledger { max-width: 520px; margin: 0 auto; font-family: sans-serif; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.c { padding: 10px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; display: flex; flex-direction: column; font-size: 12px; }
+.c strong { font-size: 15px; margin-top: 4px; }
+.inc strong { color: #16a34a; }
+.exp strong { color: #dc2626; }
+.form-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.form-row input, .form-row select { padding: 7px; border: 1px solid #cbd5e1; border-radius: 6px; flex: 1; min-width: 80px; }
+.form-row button { padding: 7px 14px; background: #42b883; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+.filter-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 13px; }
+.rec-list { list-style: none; padding: 0; margin: 0; }
+.rec-list li { display: flex; justify-content: space-between; padding: 9px 4px; border-bottom: 1px solid #e2e8f0; }
+.plus { color: #16a34a; }
+.minus { color: #dc2626; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

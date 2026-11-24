@@ -1,0 +1,123 @@
+1강. 회원 정보 제출 화면
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>양방향 입력(v-model)</strong>: 이름, 이메일, 비밀번호, 비밀번호 확인 입력창을 <code>ref</code>와 연결합니다.</li>
+    <li><strong>실시간 유효성 검사(computed)</strong>: 이메일 형식(<code>@</code> 포함), 비밀번호 6자 이상, 비밀번호 일치 여부를 실시간으로 계산합니다.</li>
+    <li><strong>조건부 분기(v-if / v-else)</strong>: 모든 조건이 충족되면 <code>제출하기</code> 버튼이 활성화되고, 제출 완료 시 환영 화면으로 전환됩니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (직접 구현해보세요)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const name = ref('')
+const email = ref('')
+const password = ref('')
+const passwordConfirm = ref('')
+const isSubmitted = ref(false)
+
+// TODO: isPasswordMatch, isFormValid 를 computed로 작성하세요
+const handleSubmit = () =&gt; {
+  isSubmitted.value = true
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="card"&gt;
+    &lt;h2&gt;회원가입&lt;/h2&gt;
+    &lt;!-- TODO: v-if="!isSubmitted" 로 폼과 완료 화면을 분기하세요 --&gt;
+    &lt;input v-model="name" placeholder="이름" /&gt;
+    &lt;input v-model="email" placeholder="이메일" /&gt;
+    &lt;input v-model="password" type="password" placeholder="비밀번호 (6자 이상)" /&gt;
+    &lt;input v-model="passwordConfirm" type="password" placeholder="비밀번호 확인" /&gt;
+    &lt;button @click="handleSubmit"&gt;가입하기&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.card { max-width: 360px; margin: 16px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: sans-serif; }
+input { display: block; width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
+button { width: 100%; padding: 10px; border: none; border-radius: 6px; background: #42b883; color: #fff; font-weight: bold; cursor: pointer; }
+&lt;/style&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const name = ref('')
+const email = ref('')
+const password = ref('')
+const passwordConfirm = ref('')
+const isSubmitted = ref(false)
+
+const isEmailValid = computed(() =&gt; email.value.includes('@') &amp;&amp; email.value.includes('.'))
+const isPasswordValid = computed(() =&gt; password.value.length &gt;= 6)
+const isPasswordMatch = computed(() =&gt; password.value !== '' &amp;&amp; password.value === passwordConfirm.value)
+const isFormValid = computed(() =&gt; name.value.trim() !== '' &amp;&amp; isEmailValid.value &amp;&amp; isPasswordValid.value &amp;&amp; isPasswordMatch.value)
+
+const handleSubmit = () =&gt; {
+  if (isFormValid.value) isSubmitted.value = true
+}
+
+const resetForm = () =&gt; {
+  name.value = ''
+  email.value = ''
+  password.value = ''
+  passwordConfirm.value = ''
+  isSubmitted.value = false
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="card"&gt;
+    &lt;div v-if="!isSubmitted"&gt;
+      &lt;h2&gt;📝 회원 정보 입력&lt;/h2&gt;
+      &lt;input v-model="name" placeholder="이름 입력" /&gt;
+      &lt;input v-model="email" placeholder="이메일 (example@mail.com)" /&gt;
+      &lt;p v-if="email &amp;&amp; !isEmailValid" class="err"&gt;올바른 이메일 형식이 아닙니다.&lt;/p&gt;
+
+      &lt;input v-model="password" type="password" placeholder="비밀번호 (6자 이상)" /&gt;
+      &lt;p v-if="password &amp;&amp; !isPasswordValid" class="err"&gt;비밀번호는 6자 이상이어야 합니다.&lt;/p&gt;
+
+      &lt;input v-model="passwordConfirm" type="password" placeholder="비밀번호 확인" /&gt;
+      &lt;p v-if="passwordConfirm &amp;&amp; !isPasswordMatch" class="err"&gt;비밀번호가 일치하지 않습니다.&lt;/p&gt;
+
+      &lt;button :disabled="!isFormValid" @click="handleSubmit"&gt;가입 완료&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div v-else class="success"&gt;
+      &lt;h2&gt;🎉 가입을 환영합니다!&lt;/h2&gt;
+      &lt;p&gt;&lt;strong&gt;{{ name }}&lt;/strong&gt; ({{ email }}) 님, 등록이 완료되었습니다.&lt;/p&gt;
+      &lt;button @click="resetForm"&gt;다시 작성하기&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.card { max-width: 360px; margin: 16px auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: sans-serif; background: #fff; }
+input { display: block; width: 100%; margin-top: 10px; padding: 9px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
+.err { color: #ef4444; font-size: 12px; margin: 4px 0 0; }
+button { width: 100%; margin-top: 14px; padding: 10px; border: none; border-radius: 6px; background: #42b883; color: #fff; font-weight: bold; cursor: pointer; }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+.success { text-align: center; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

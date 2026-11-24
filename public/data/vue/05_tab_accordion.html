@@ -1,0 +1,115 @@
+5강. FAQ 아코디언 &amp; 다중 탭 UI
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>다중 탭 전환</strong>: 현재 선택된 탭 인덱스(<code>activeTab</code>)에 따라 동적 클래스 <code>:class</code>를 적용합니다.</li>
+    <li><strong>아코디언 토글</strong>: 질문을 클릭하면 해당 인덱스가 열리고, 같은 질문을 다시 클릭하면 닫히도록 제어합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref } from 'vue'
+
+const activeTab = ref(0)
+const openIndex = ref(null)
+const toggle = (idx) =&gt; {
+  openIndex.value = openIndex.value === idx ? null : idx
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;❓ FAQ 아코디언&lt;/h2&gt;
+    &lt;button @click="toggle(0)"&gt;질문 1&lt;/button&gt;
+    &lt;p v-show="openIndex === 0"&gt;답변 1입니다.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const tabs = ['일반', '결제/환불', '기술지원']
+const activeTab = ref(0)
+const openIndex = ref(0)
+
+const faqData = [
+  [
+    { q: '회원가입은 무료인가요?', a: '네, 모든 기본 기능은 무료로 제공됩니다.' },
+    { q: '모바일에서도 사용할 수 있나요?', a: '네, 반응형 웹으로 모바일을 완벽 지원합니다.' }
+  ],
+  [
+    { q: '환불 규정이 어떻게 되나요?', a: '결제 후 7일 이내 미사용 시 100% 환불됩니다.' },
+    { q: '영수증 발급이 가능한가요?', a: '마이페이지에서 즉시 출력 가능합니다.' }
+  ],
+  [
+    { q: 'Vue 3 문법만 지원하나요?', a: '네, Composition API(&lt;script setup&gt;) 기준으로 동작합니다.' }
+  ]
+]
+
+const currentFaqs = computed(() =&gt; faqData[activeTab.value])
+
+const selectTab = (idx) =&gt; {
+  activeTab.value = idx
+  openIndex.value = 0
+}
+
+const toggleFaq = (idx) =&gt; {
+  openIndex.value = openIndex.value === idx ? null : idx
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="faq-wrap"&gt;
+    &lt;h2&gt;❓ 자주 묻는 질문 (FAQ)&lt;/h2&gt;
+    &lt;div class="tab-bar"&gt;
+      &lt;button
+        v-for="(tab, idx) in tabs"
+        :key="tab"
+        :class="['tab-btn', { active: activeTab === idx }]"
+        @click="selectTab(idx)"
+      &gt;
+        {{ tab }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="accordion"&gt;
+      &lt;div v-for="(item, idx) in currentFaqs" :key="item.q" class="acc-item"&gt;
+        &lt;button class="acc-q" @click="toggleFaq(idx)"&gt;
+          &lt;span&gt;Q. {{ item.q }}&lt;/span&gt;
+          &lt;span&gt;{{ openIndex === idx ? '▲' : '▼' }}&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div v-show="openIndex === idx" class="acc-a"&gt;{{ item.a }}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.faq-wrap { max-width: 480px; margin: 0 auto; font-family: sans-serif; }
+.tab-bar { display: flex; gap: 6px; margin-bottom: 14px; }
+.tab-btn { flex: 1; padding: 8px; border: 1px solid #cbd5e1; background: #f8fafc; border-radius: 6px; cursor: pointer; font-weight: bold; }
+.tab-btn.active { background: #42b883; color: #fff; border-color: #42b883; }
+.acc-item { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+.acc-q { width: 100%; display: flex; justify-content: space-between; padding: 12px; background: #fff; border: none; font-weight: bold; cursor: pointer; text-align: left; }
+.acc-a { padding: 12px; background: #f8fafc; border-top: 1px solid #e2e8f0; color: #475569; font-size: 14px; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

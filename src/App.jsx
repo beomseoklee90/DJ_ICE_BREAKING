@@ -1,97 +1,78 @@
 import { useState, useEffect, useRef } from "react";
+import VueSandbox, { DEFAULT_VUE_CODE } from "./VueSandbox";
 import "./App.css";
 
-/* 🛠️ 설정 1: 카테고리 및 파일 목록 관리 
-  - files 배열에 public/data/폴더/ 안에 있는 파일명만 적으면 됨
+/* 🛠️ 설정 1: 카테고리 및 파일 목록 관리
+  - files 배열에 public/data/폴더/ 안에 있는 파일명(.txt / .html)을 적으면 됨
 */
 const categoryConfig = {
-  // ai: {
-  //   path: "AI",
-  //   label: "AI",
-  //   mobileLabel: "AI",
-  //   files: [
-  //     //      "car.txt",
-  //     //  "semiconductor4.txt",
-  //     "semiconductor3.txt",
-  //     "semiconductor2.txt",
-  //     "semiconductor.txt",
-
-  //     "ai_004.txt",
-  //     "ai_003.txt",
-  //     "ai_001.txt",
-  //     "ai_002.txt",
-
-  //     //"ai_001_digest.txt",
-  //   ],
-  // },
-  // Japanese: {
-  //   path: "Japanese",
-  //   label: "Japanese",
-  //   mobileLabel: "Japanese",
-  //   files: [
-  //     "intro.txt",
-  //     "basic.txt",
-  //     "basic2.txt",
-  //     "basic3.txt",
-  //     "intermediate2.txt",
-  //     "japanese002.txt",
-  //     "tango.txt",
-  //     "intermediate.txt",
-  //   ],
-  // },
-  ENGLISH: {
-    path: "ENGLISH",
-    label: "ENGLISH",
-    mobileLabel: "ENGLISH",
-    files: ["intro.txt", "lecture1.txt", "intermediate_lecture1.txt"],
+  vue: {
+    path: "vue",
+    label: "💻 Vue 3 실전",
+    mobileLabel: "Vue 3",
+    files: [
+      "00_reference.html",
+      "01_signup_form.html",
+      "02_board_crud.html",
+      "03_todo_priority.html",
+      "04_shopping_cart.html",
+      "05_tab_accordion.html",
+      "06_poll_survey.html",
+      "07_stopwatch_timer.html",
+      "08_quiz_flashcard.html",
+      "09_expense_tracker.html",
+      "10_admin_dashboard.html",
+    ],
   },
 };
 
-/* 🎵 설정 2: 배경음악 및 유튜브 홍보 
-  - playlist: public/data/songs/ 폴더 안에 있는 mp3 파일명
-*/
+/* 🎵 설정 2: 배경음악 및 유튜브 홍보 */
 const musicConfig = {
   playlist: ["track2.mp3", "track1.mp3", "track3.mp3", "track4.mp3"],
   youtubeLink: "https://www.youtube.com/@DJ_ICE_BREAKING",
 };
 
 function App() {
-  // 상태 관리
-  const [currentCategory, setCurrentCategory] = useState("ENGLISH");
+  const [currentCategory, setCurrentCategory] = useState("vue");
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
+
+  // 상단 자동 숨김 네비게이션 상태
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  // 모바일 3단 세그먼트 탭 상태: 'doc' | 'editor' | 'preview'
+  const [mobileTab, setMobileTab] = useState("doc");
+
+  // Vue 에디터 코드 상태
+  const [editorCode, setEditorCode] = useState(DEFAULT_VUE_CODE);
+  const [toastMsg, setToastMsg] = useState("");
 
   // 음악 플레이어 상태
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const audioRef = useRef(null);
+  const paperContentRef = useRef(null);
 
-  // 1. 데이터 불러오기 (카테고리 변경 시 실행)
+  // 1. 데이터 불러오기 (.txt 및 .html 모두 지원)
   useEffect(() => {
     const loadFiles = async () => {
       const config = categoryConfig[currentCategory];
 
-      // 파일 목록 없으면 초기화
-      if (!config.files || config.files.length === 0) {
+      if (!config || !config.files || config.files.length === 0) {
         setPosts([]);
         setSelectedPost(null);
         return;
       }
 
-      // 파일 내용 비동기로 싹 긁어오기
       const loadedPosts = await Promise.all(
         config.files.map(async (filename) => {
           try {
-            // ★ 중요: 배포 환경을 위해 BASE_URL 사용
             const response = await fetch(
-              `${import.meta.env.BASE_URL}data/${config.path}/${filename}`,
+              `${import.meta.env.BASE_URL}data/${config.path}/${filename}`
             );
-
             if (!response.ok) throw new Error("File not found");
 
             const text = await response.text();
-
-            // 첫 줄(제목)과 나머지(HTML) 분리
             const splitIndex = text.indexOf("\n");
             const dateTitle =
               splitIndex !== -1
@@ -101,14 +82,13 @@ function App() {
               splitIndex !== -1 ? text.substring(splitIndex + 1) : text;
 
             return { id: filename, title: dateTitle, content: contentHtml };
-          } catch (error) {
+          } catch {
             return { id: filename, title: "Error", content: "File not found" };
           }
-        }),
+        })
       );
 
       setPosts(loadedPosts);
-      // 데이터가 있으면 첫 번째 글 자동 선택
       if (loadedPosts.length > 0) {
         setSelectedPost(loadedPosts[0]);
       } else {
@@ -119,18 +99,55 @@ function App() {
     loadFiles();
   }, [currentCategory]);
 
-  // 2. 음악 재생 로직 (곡이 끝나면 다음 곡으로)
+  // 2. 교재 내 [우측 에디터로 보내기 ➔] 버튼 클릭 이벤트 위임
+  useEffect(() => {
+    const container = paperContentRef.current;
+    if (!container) return;
+
+    const handleClick = (e) => {
+      const btn = e.target.closest(".send-to-editor-btn");
+      if (!btn) return;
+
+      const targetId = btn.getAttribute("data-code-target");
+      let codeText = "";
+
+      if (targetId) {
+        const targetEl = container.querySelector(`#${targetId}`);
+        if (targetEl) {
+          codeText = targetEl.textContent || "";
+        }
+      } else {
+        const wrapper = btn.closest(".code-block-wrapper");
+        const preEl = wrapper ? wrapper.querySelector("pre") : null;
+        if (preEl) {
+          codeText = preEl.textContent || "";
+        }
+      }
+
+      if (codeText.trim()) {
+        setEditorCode(codeText.trim());
+        setToastMsg("에디터에 코드가 적용되었습니다!");
+        setTimeout(() => setToastMsg(""), 2000);
+        if (window.innerWidth <= 768) {
+          setMobileTab("editor");
+        }
+      }
+    };
+
+    container.addEventListener("click", handleClick);
+    return () => container.removeEventListener("click", handleClick);
+  }, [selectedPost]);
+
+  // 3. 음악 재생 로직
   const handleSongEnd = () => {
     const nextIndex = (currentSongIndex + 1) % musicConfig.playlist.length;
     setCurrentSongIndex(nextIndex);
   };
 
-  // 3. Play/Pause 상태 동기화
   useEffect(() => {
     if (audioRef.current) {
       if (isPlaying) {
-        audioRef.current.play().catch((e) => {
-          console.log("자동 재생 막힘(사용자 클릭 필요):", e);
+        audioRef.current.play().catch(() => {
           setIsPlaying(false);
         });
       } else {
@@ -139,102 +156,169 @@ function App() {
     }
   }, [isPlaying, currentSongIndex]);
 
-  // 로딩 화면
-  if (!selectedPost && posts.length > 0 && posts[0].title !== "Error")
-    return <div className="loading">Loading...</div>;
-
   return (
-    <div className="container">
-      {/* 사이드바 (모바일: 상단 네비게이션) */}
-      <nav className="sidebar">
-        {/* 카테고리 3등분 탭 */}
-        <div className="category-selector">
-          {Object.keys(categoryConfig).map((key) => (
-            <div
-              key={key}
-              className={`logo-item ${currentCategory === key ? "active" : ""}`}
-              onClick={() => setCurrentCategory(key)}
-            >
-              <span className="desktop-text">{categoryConfig[key].label}</span>
-              <span className="mobile-text">
-                {categoryConfig[key].mobileLabel}
-              </span>
-            </div>
-          ))}
-        </div>
+    <div className="app-shell">
+      {/* 상단 4px 마우스 트리거 영역 */}
+      <div
+        className="top-hover-trigger"
+        onMouseEnter={() => setIsNavOpen(true)}
+      />
 
-        {/* 파일 목록 (모바일: 가로 스크롤) */}
-        <ul className="menu-list">
-          {posts.map((post) => (
-            <li
-              key={post.id}
-              className={
-                selectedPost && selectedPost.id === post.id ? "active" : ""
-              }
-              onClick={() => setSelectedPost(post)}
-            >
-              {post.title}
-            </li>
-          ))}
-        </ul>
+      {/* 상단 중앙 핸들/인디케이터 */}
+      <button
+        type="button"
+        className={`top-nav-handle ${isNavOpen ? "hidden" : ""}`}
+        onClick={() => setIsNavOpen(true)}
+        onMouseEnter={() => setIsNavOpen(true)}
+        title="메뉴 열기"
+      >
+        <span className="handle-bar" />
+        <span className="handle-label">☰ 메뉴 / 강의 목차 / BGM</span>
+      </button>
 
-        {/* 뮤직 플레이어 (사이드바 하단 고정) */}
-        <div className="music-player-box">
-          <p className="music-title">
-            🎧 BGM (Ballad)
-            <br />
-            <span style={{ fontSize: "0.8rem", color: "#ffeb3b" }}>
-              {musicConfig.playlist[currentSongIndex]}
-            </span>
-          </p>
-
-          <audio
-            ref={audioRef}
-            src={`${import.meta.env.BASE_URL}data/songs/${
-              musicConfig.playlist[currentSongIndex]
-            }`}
-            onEnded={handleSongEnd}
-          />
-
-          <div className="music-controls">
-            <button onClick={() => setIsPlaying(!isPlaying)}>
-              {isPlaying ? "⏸ Pause" : "▶ Play"}
-            </button>
-            <button onClick={handleSongEnd}>⏭ Next</button>
+      {/* 상단 자동 숨김 네비게이션 바 */}
+      <header
+        className={`top-navbar ${isNavOpen ? "open" : ""}`}
+        onMouseLeave={() => setIsNavOpen(false)}
+      >
+        <div className="navbar-left">
+          <div className="category-tabs">
+            {Object.keys(categoryConfig).map((key) => (
+              <button
+                key={key}
+                type="button"
+                className={`cat-tab ${currentCategory === key ? "active" : ""}`}
+                onClick={() => setCurrentCategory(key)}
+              >
+                {categoryConfig[key].label}
+              </button>
+            ))}
           </div>
 
-          <a
-            href={musicConfig.youtubeLink}
-            target="_blank"
-            className="youtube-link"
-            rel="noreferrer"
+          <select
+            className="lesson-select"
+            value={selectedPost ? selectedPost.id : ""}
+            onChange={(e) => {
+              const found = posts.find((p) => p.id === e.target.value);
+              if (found) setSelectedPost(found);
+            }}
           >
-            📺 유튜브에서 더 듣기
-          </a>
+            {posts.map((post) => (
+              <option key={post.id} value={post.id}>
+                {post.title}
+              </option>
+            ))}
+          </select>
         </div>
-      </nav>
 
-      {/* 메인 뷰어 (A4 용지) */}
-      <main className="main-viewer">
-        <div className="paper">
-          {selectedPost ? (
-            <>
-              <h1 className="paper-title">{selectedPost.title}</h1>
-              <div
-                className="paper-content"
-                dangerouslySetInnerHTML={{ __html: selectedPost.content }}
-              />
-            </>
-          ) : (
-            <div
-              style={{ textAlign: "center", marginTop: "100px", color: "#888" }}
+        <div className="navbar-right">
+          <div className="bgm-compact">
+            <span className="bgm-track" title={musicConfig.playlist[currentSongIndex]}>
+              🎧 {musicConfig.playlist[currentSongIndex]}
+            </span>
+            <button
+              type="button"
+              className="bgm-btn"
+              onClick={() => setIsPlaying(!isPlaying)}
             >
-              <p>등록된 모임 일정이 없습니다.</p>
-              <p>No meeting schedule yet.</p>
-            </div>
-          )}
+              {isPlaying ? "⏸" : "▶"}
+            </button>
+            <button
+              type="button"
+              className="bgm-btn"
+              onClick={handleSongEnd}
+              title="다음 곡"
+            >
+              ⏭
+            </button>
+            <a
+              href={musicConfig.youtubeLink}
+              target="_blank"
+              rel="noreferrer"
+              className="bgm-yt"
+              title="유튜브에서 더 듣기"
+            >
+              📺
+            </a>
+          </div>
+
+          <button
+            type="button"
+            className="nav-close-btn"
+            onClick={() => setIsNavOpen(false)}
+            title="네비게이션 닫기"
+          >
+            ✕
+          </button>
         </div>
+
+        <audio
+          ref={audioRef}
+          src={`${import.meta.env.BASE_URL}data/songs/${
+            musicConfig.playlist[currentSongIndex]
+          }`}
+          onEnded={handleSongEnd}
+        />
+      </header>
+
+      {/* 모바일 전용 3단 세그먼트 탭 (768px 이하) */}
+      <div className="mobile-segment-bar">
+        <button
+          type="button"
+          className={`segment-btn ${mobileTab === "doc" ? "active" : ""}`}
+          onClick={() => setMobileTab("doc")}
+        >
+          📖 교재 보기
+        </button>
+        <button
+          type="button"
+          className={`segment-btn ${mobileTab === "editor" ? "active" : ""}`}
+          onClick={() => setMobileTab("editor")}
+        >
+          💻 코드 입력
+        </button>
+        <button
+          type="button"
+          className={`segment-btn ${mobileTab === "preview" ? "active" : ""}`}
+          onClick={() => setMobileTab("preview")}
+        >
+          📱 실행 결과
+        </button>
+      </div>
+
+      {/* 메인 50:50 분할 워크스페이스 */}
+      <main className={`workspace mobile-tab-${mobileTab}`}>
+        {/* 좌측 50%: 교재 뷰어 */}
+        <section className="pane-left">
+          <div className="paper">
+            {selectedPost ? (
+              <>
+                <h1 className="paper-title">{selectedPost.title}</h1>
+                <div
+                  ref={paperContentRef}
+                  className="paper-content"
+                  dangerouslySetInnerHTML={{ __html: selectedPost.content }}
+                />
+              </>
+            ) : (
+              <div className="empty-state">
+                <p>등록된 교재가 없습니다.</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* 우측 50%: Vue 3 실시간 실습 샌드박스 */}
+        <section className="pane-right">
+          <VueSandbox
+            code={editorCode}
+            onChangeCode={setEditorCode}
+            onResetCode={() => setEditorCode(DEFAULT_VUE_CODE)}
+          />
+        </section>
       </main>
+
+      {toastMsg && <div className="toast-banner">{toastMsg}</div>}
     </div>
   );
 }

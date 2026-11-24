@@ -1,0 +1,116 @@
+4강. 장바구니 &amp; 수량/쿠폰 계산기
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>상품 추가 &amp; 수량 증감</strong>: <code>+</code> / <code>-</code> 버튼으로 수량을 조절하고 0 이하로 내려가지 않게 제어합니다.</li>
+    <li><strong>할인 쿠폰 적용</strong>: 10% 할인 쿠폰 체크박스 또는 선택에 따라 할인 금액을 계산합니다.</li>
+    <li><strong>무료배송 조건(computed)</strong>: 상품 합계가 30,000원 이상이면 배송비 0원, 미만이면 3,000원을 자동 합산합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const cart = ref([
+  { id: 1, name: '무선 키보드', price: 25000, qty: 1 },
+  { id: 2, name: '게이밍 마우스', price: 18000, qty: 1 }
+])
+const useCoupon = ref(false)
+const subtotal = computed(() =&gt; cart.value.reduce((sum, item) =&gt; sum + item.price * item.qty, 0))
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;🛒 장바구니&lt;/h2&gt;
+    &lt;div v-for="item in cart" :key="item.id"&gt;
+      {{ item.name }} - {{ item.price.toLocaleString() }}원 x {{ item.qty }}
+    &lt;/div&gt;
+    &lt;p&gt;합계: {{ subtotal.toLocaleString() }}원&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const cart = ref([
+  { id: 1, name: '기계식 키보드', price: 29000, qty: 1 },
+  { id: 2, name: '장패드', price: 9000, qty: 1 }
+])
+const useCoupon = ref(false)
+
+const subtotal = computed(() =&gt; cart.value.reduce((sum, i) =&gt; sum + i.price * i.qty, 0))
+const discount = computed(() =&gt; (useCoupon.value ? Math.round(subtotal.value * 0.1) : 0))
+const shippingFee = computed(() =&gt; (subtotal.value - discount.value &gt;= 30000 || subtotal.value === 0 ? 0 : 3000))
+const finalTotal = computed(() =&gt; subtotal.value - discount.value + shippingFee.value)
+
+const changeQty = (item, delta) =&gt; {
+  item.qty = Math.max(1, item.qty + delta)
+}
+const removeItem = (id) =&gt; {
+  cart.value = cart.value.filter(i =&gt; i.id !== id)
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="cart-box"&gt;
+    &lt;h2&gt;🛒 장바구니 &amp; 결제 계산기&lt;/h2&gt;
+    &lt;div v-for="item in cart" :key="item.id" class="cart-item"&gt;
+      &lt;div&gt;
+        &lt;strong&gt;{{ item.name }}&lt;/strong&gt;
+        &lt;div class="price"&gt;{{ item.price.toLocaleString() }}원&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="qty-ctrl"&gt;
+        &lt;button @click="changeQty(item, -1)"&gt;-&lt;/button&gt;
+        &lt;span&gt;{{ item.qty }}&lt;/span&gt;
+        &lt;button @click="changeQty(item, 1)"&gt;+&lt;/button&gt;
+        &lt;button class="del" @click="removeItem(item.id)"&gt;삭제&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;label class="coupon"&gt;
+      &lt;input type="checkbox" v-model="useCoupon" /&gt;
+      10% 할인 쿠폰 적용
+    &lt;/label&gt;
+
+    &lt;div class="summary"&gt;
+      &lt;div&gt;&lt;span&gt;상품 금액&lt;/span&gt;&lt;span&gt;{{ subtotal.toLocaleString() }}원&lt;/span&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;span&gt;쿠폰 할인&lt;/span&gt;&lt;span class="red"&gt;-{{ discount.toLocaleString() }}원&lt;/span&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;span&gt;배송비 (3만원 이상 무료)&lt;/span&gt;&lt;span&gt;{{ shippingFee === 0 ? '무료' : shippingFee.toLocaleString() + '원' }}&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="total"&gt;&lt;span&gt;총 결제금액&lt;/span&gt;&lt;span&gt;{{ finalTotal.toLocaleString() }}원&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.cart-box { max-width: 420px; margin: 0 auto; font-family: sans-serif; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e2e8f0; }
+.price { font-size: 13px; color: #64748b; }
+.qty-ctrl { display: flex; align-items: center; gap: 6px; }
+.qty-ctrl button { padding: 4px 10px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px; cursor: pointer; }
+.qty-ctrl .del { background: #fee2e2; color: #dc2626; border-color: #fecaca; }
+.coupon { display: block; margin: 14px 0; font-weight: bold; cursor: pointer; }
+.summary { background: #f8fafc; padding: 14px; border-radius: 10px; display: flex; flex-direction: column; gap: 6px; }
+.summary div { display: flex; justify-content: space-between; font-size: 14px; }
+.summary .red { color: #ef4444; }
+.summary .total { border-top: 1px solid #cbd5e1; padding-top: 8px; margin-top: 4px; font-size: 17px; font-weight: bold; color: #0f172a; }
+&lt;/style&gt;</pre>
+  </div>
+</div>
