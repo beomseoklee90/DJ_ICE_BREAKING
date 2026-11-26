@@ -1,0 +1,174 @@
+11강. 한국 SI &lt;table&gt; vs 현대적 데이터 그리드
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+  .compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .compare-card { padding: 12px; border-radius: 8px; font-size: 13.5px; }
+  .legacy { background: #fef2f2; border: 1px solid #fecaca; }
+  .modern { background: #ecfdf5; border: 1px solid #a7f3d0; }
+  .compare-card h3 { margin: 0 0 6px; font-size: 14px; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 한국 SI 방식 vs 현대적 Vue 3 방식</h2>
+  <div class="compare-box">
+    <div class="compare-card legacy">
+      <h3>🏢 기존 한국 SI 방식</h3>
+      <ul>
+        <li><code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;&lt;td&gt;</code>에 JSP/jQuery로 HTML 문자열을 직접 조립 (<code>html += '&lt;tr&gt;...'</code>)</li>
+        <li>컬럼이 늘어나면 <code>&lt;td&gt;</code>를 일일이 복사·붙여넣기</li>
+        <li>체크박스 전체 선택, 정렬 시 DOM을 직접 순회하며 <code>$(this).prop('checked')</code></li>
+      </ul>
+    </div>
+    <div class="compare-card modern">
+      <h3>🚀 현대적(근대화된) 방식</h3>
+      <ul>
+        <li><strong>선언적 컬럼 정의(Schema)</strong>: <code>columns</code> 배열로 헤더와 데이터 키를 관리</li>
+        <li><strong>데이터 중심 상태</strong>: <code>selectedIds</code> 배열과 <code>computed</code>로 전체 선택/정렬 처리</li>
+        <li>모바일에서는 <code>overflow-x: auto</code> 또는 카드형 전환 지원</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref } from 'vue'
+
+const columns = [
+  { key: 'id', label: '사번' },
+  { key: 'name', label: '이름' },
+  { key: 'dept', label: '부서' },
+  { key: 'status', label: '상태' }
+]
+
+const rows = ref([
+  { id: 'EMP-01', name: '김대리', dept: '개발1팀', status: '재직' },
+  { id: 'EMP-02', name: '이과장', dept: '기획팀', status: '휴가' }
+])
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;📊 현대적 사원 목록 그리드&lt;/h2&gt;
+    &lt;table border="1" style="width:100%; border-collapse:collapse;"&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;&lt;th v-for="col in columns" :key="col.key"&gt;{{ col.label }}&lt;/th&gt;&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr v-for="row in rows" :key="row.id"&gt;
+          &lt;td v-for="col in columns" :key="col.key"&gt;{{ row[col.key] }}&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const columns = [
+  { key: 'id', label: '사번' },
+  { key: 'name', label: '이름' },
+  { key: 'dept', label: '부서' },
+  { key: 'salary', label: '연봉(만원)' },
+  { key: 'status', label: '상태' }
+]
+
+const rows = ref([
+  { id: 'EMP-101', name: '김철수', dept: '플랫폼팀', salary: 5200, status: '재직' },
+  { id: 'EMP-102', name: '이영희', dept: 'AI연구팀', salary: 6400, status: '재직' },
+  { id: 'EMP-103', name: '박민수', dept: '보안팀', salary: 4800, status: '휴직' },
+  { id: 'EMP-104', name: '정수진', dept: '플랫폼팀', salary: 5800, status: '재직' }
+])
+
+const selectedIds = ref([])
+const sortKey = ref('id')
+const sortAsc = ref(true)
+
+const sortedRows = computed(() =&gt; {
+  return [...rows.value].sort((a, b) =&gt; {
+    const v1 = a[sortKey.value]
+    const v2 = b[sortKey.value]
+    if (v1 === v2) return 0
+    return (v1 &gt; v2 ? 1 : -1) * (sortAsc.value ? 1 : -1)
+  })
+})
+
+const isAllSelected = computed(() =&gt;
+  rows.value.length &gt; 0 &amp;&amp; selectedIds.value.length === rows.value.length
+)
+
+const toggleAll = () =&gt; {
+  selectedIds.value = isAllSelected.value ? [] : rows.value.map(r =&gt; r.id)
+}
+
+const sortBy = (key) =&gt; {
+  if (sortKey.value === key) sortAsc.value = !sortAsc.value
+  else { sortKey.value = key; sortAsc.value = true }
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="grid-wrap"&gt;
+    &lt;div class="grid-header"&gt;
+      &lt;h2&gt;📊 현대적 데이터 그리드&lt;/h2&gt;
+      &lt;span class="sel-info"&gt;선택됨: {{ selectedIds.length }}건&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="table-scroll"&gt;
+      &lt;table class="modern-table"&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th style="width: 36px"&gt;&lt;input type="checkbox" :checked="isAllSelected" @change="toggleAll" /&gt;&lt;/th&gt;
+            &lt;th v-for="col in columns" :key="col.key" @click="sortBy(col.key)" class="sortable"&gt;
+              {{ col.label }}
+              &lt;span v-if="sortKey === col.key"&gt;{{ sortAsc ? '▲' : '▼' }}&lt;/span&gt;
+            &lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr v-for="row in sortedRows" :key="row.id" :class="{ selected: selectedIds.includes(row.id) }"&gt;
+            &lt;td&gt;&lt;input type="checkbox" :value="row.id" v-model="selectedIds" /&gt;&lt;/td&gt;
+            &lt;td v-for="col in columns" :key="col.key"&gt;
+              &lt;span v-if="col.key === 'status'" :class="['badge', row.status === '재직' ? 'ok' : 'off']"&gt;
+                {{ row.status }}
+              &lt;/span&gt;
+              &lt;span v-else-if="col.key === 'salary'"&gt;{{ row.salary.toLocaleString() }}&lt;/span&gt;
+              &lt;span v-else&gt;{{ row[col.key] }}&lt;/span&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.grid-wrap { font-family: sans-serif; }
+.grid-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.sel-info { font-size: 13px; font-weight: bold; color: #059669; }
+.table-scroll { overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 10px; }
+.modern-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.modern-table th { background: #f8fafc; padding: 10px; text-align: left; border-bottom: 2px solid #e2e8f0; color: #475569; }
+.modern-table th.sortable { cursor: pointer; user-select: none; }
+.modern-table td { padding: 10px; border-bottom: 1px solid #f1f5f9; }
+.modern-table tr.selected { background: #ecfdf5; }
+.badge { padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+.badge.ok { background: #dcfce7; color: #166534; }
+.badge.off { background: #fee2e2; color: #991b1b; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

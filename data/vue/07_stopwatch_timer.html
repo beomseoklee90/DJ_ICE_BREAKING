@@ -1,0 +1,127 @@
+7강. 스터디 타이머 &amp; 랩타임 기록기
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>타이머 제어(setInterval)</strong>: 시작 / 일시정지 / 초기화 기능을 구현합니다.</li>
+    <li><strong>랩타임 누적(v-for)</strong>: 현재 경과 시간을 포맷팅(<code>MM:SS</code>)하여 랩타임 배열에 기록합니다.</li>
+    <li><strong>메모리 누수 방지(onUnmounted)</strong>: 컴포넌트가 사라질 때 <code>clearInterval</code>로 타이머를 반드시 정리합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, onUnmounted } from 'vue'
+
+const seconds = ref(0)
+const isRunning = ref(false)
+let timerId = null
+
+const start = () =&gt; {
+  if (isRunning.value) return
+  isRunning.value = true
+  timerId = setInterval(() =&gt; seconds.value++, 1000)
+}
+onUnmounted(() =&gt; clearInterval(timerId))
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;⏱️ {{ seconds }}초&lt;/h2&gt;
+    &lt;button @click="start"&gt;시작&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed, onUnmounted } from 'vue'
+
+const elapsed = ref(0)
+const isRunning = ref(false)
+const laps = ref([])
+let timerId = null
+
+const formattedTime = computed(() =&gt; {
+  const mins = String(Math.floor(elapsed.value / 60)).padStart(2, '0')
+  const secs = String(elapsed.value % 60).padStart(2, '0')
+  return `${mins}:${secs}`
+})
+
+const start = () =&gt; {
+  if (isRunning.value) return
+  isRunning.value = true
+  timerId = setInterval(() =&gt; {
+    elapsed.value++
+  }, 1000)
+}
+
+const pause = () =&gt; {
+  isRunning.value = false
+  clearInterval(timerId)
+}
+
+const reset = () =&gt; {
+  pause()
+  elapsed.value = 0
+  laps.value = []
+}
+
+const recordLap = () =&gt; {
+  laps.value.unshift({ id: Date.now(), time: formattedTime.value })
+}
+
+onUnmounted(() =&gt; {
+  clearInterval(timerId)
+})
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="timer-box"&gt;
+    &lt;h2&gt;⏱️ 스터디 타이머&lt;/h2&gt;
+    &lt;div class="clock"&gt;{{ formattedTime }}&lt;/div&gt;
+    &lt;div class="btns"&gt;
+      &lt;button v-if="!isRunning" class="start" @click="start"&gt;▶ 시작&lt;/button&gt;
+      &lt;button v-else class="pause" @click="pause"&gt;⏸ 일시정지&lt;/button&gt;
+      &lt;button class="lap" @click="recordLap" :disabled="elapsed === 0"&gt;🏁 랩 기록&lt;/button&gt;
+      &lt;button class="reset" @click="reset"&gt;↺ 초기화&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;ul class="laps" v-if="laps.length &gt; 0"&gt;
+      &lt;li v-for="(lap, idx) in laps" :key="lap.id"&gt;
+        &lt;span&gt;Lap {{ laps.length - idx }}&lt;/span&gt;
+        &lt;strong&gt;{{ lap.time }}&lt;/strong&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.timer-box { max-width: 360px; margin: 0 auto; text-align: center; font-family: sans-serif; }
+.clock { font-size: 3rem; font-weight: 800; font-family: monospace; margin: 16px 0; color: #0f172a; }
+.btns { display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; }
+.btns button { padding: 8px 14px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; color: #fff; }
+.start { background: #42b883; }
+.pause { background: #f59e0b; }
+.lap { background: #3b82f6; }
+.lap:disabled { background: #94a3b8; cursor: not-allowed; }
+.reset { background: #64748b; }
+.laps { list-style: none; padding: 0; border-top: 1px solid #e2e8f0; text-align: left; }
+.laps li { display: flex; justify-content: space-between; padding: 8px 4px; border-bottom: 1px solid #f1f5f9; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

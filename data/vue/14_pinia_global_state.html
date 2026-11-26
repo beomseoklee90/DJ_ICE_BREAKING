@@ -1,0 +1,164 @@
+14강. Vue 3 전역 상태 관리 (Pinia &amp; Setup Store)
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+  .pinia-box { background: #fefce8; border: 1px solid #fde047; border-radius: 10px; padding: 14px; margin: 12px 0; font-size: 14px; }
+  .pinia-box code { background: #fef08a; padding: 2px 5px; border-radius: 4px; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 왜 Pinia인가? (가장 모던한 Vue 3 공식 전역 상태 관리)</h2>
+  <div class="pinia-box">
+    <strong>🍍 Pinia</strong>는 Vuex를 대체하는 Vue 3 공식 전역 상태 관리 라이브러리입니다.
+    <ul>
+      <li><strong>Setup Store 문법</strong>: <code>ref()</code>가 State, <code>computed()</code>가 Getters, 일반 함수가 Actions가 되어 <code>&lt;script setup&gt;</code>과 100% 동일한 문법으로 작성합니다.</li>
+      <li><strong>TypeScript 완벽 지원</strong> 및 가벼운 번들 크기(~1KB), DevTools 타임트래블 디버깅을 지원합니다.</li>
+    </ul>
+  </div>
+
+  <h2>2. 실무 Pinia 코드 구조 (<code>stores/useUserStore.js</code>)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>실무 Pinia Setup Store 예시 (참고용)</span>
+    </div>
+    <pre>// stores/useUserStore.js
+import { defineStore } from 'pinia'
+import { ref, computed } from 'vue'
+
+export const useUserStore = defineStore('user', () =&gt; {
+  const userName = ref('게스트')
+  const cartCount = ref(0)
+  const isLoggedIn = computed(() =&gt; userName.value !== '게스트')
+
+  function login(name) { userName.value = name }
+  function addCart() { cartCount.value++ }
+
+  return { userName, cartCount, isLoggedIn, login, addCart }
+})</pre>
+  </div>
+
+  <h2>3. 기본 뼈대 코드 (Starter Code - 샌드박스 즉시 실행)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+// Pinia Setup Store 패턴을 단일 파일에서 체험
+function createGlobalStore() {
+  const userName = ref('게스트')
+  const cartCount = ref(0)
+  const isLoggedIn = computed(() =&gt; userName.value !== '게스트')
+  const login = (name) =&gt; { userName.value = name }
+  const addCart = () =&gt; { cartCount.value++ }
+  return { userName, cartCount, isLoggedIn, login, addCart }
+}
+
+const store = createGlobalStore()
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;🍍 {{ store.userName }} (장바구니: {{ store.cartCount }})&lt;/h2&gt;
+    &lt;button @click="store.login('김개발')"&gt;로그인&lt;/button&gt;
+    &lt;button @click="store.addCart()"&gt;상품 담기&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>4. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+// Pinia defineStore('app', () =&gt; { ... }) 와 동일한 Setup Store 패턴
+const useAppStore = (() =&gt; {
+  let instance = null
+  return () =&gt; {
+    if (instance) return instance
+    const user = ref({ name: '게스트', role: 'visitor' })
+    const notifications = ref(['Pinia 스토어에 오신 것을 환영합니다!'])
+    const theme = ref('light')
+
+    const isLoggedIn = computed(() =&gt; user.value.name !== '게스트')
+    const unreadCount = computed(() =&gt; notifications.value.length)
+
+    const login = (name) =&gt; {
+      if (!name.trim()) return
+      user.value = { name, role: 'admin' }
+      notifications.value.unshift(`${name}님이 로그인했습니다.`)
+    }
+    const logout = () =&gt; {
+      user.value = { name: '게스트', role: 'visitor' }
+      notifications.value.unshift('로그아웃 되었습니다.')
+    }
+    const toggleTheme = () =&gt; {
+      theme.value = theme.value === 'light' ? 'dark' : 'light'
+    }
+
+    instance = { user, notifications, theme, isLoggedIn, unreadCount, login, logout, toggleTheme }
+    return instance
+  }
+})()
+
+// 여러 영역(헤더, 본문, 알림창)이 동일한 전역 스토어를 공유
+const headerStore = useAppStore()
+const bodyStore = useAppStore()
+const inputName = ref('')
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div :class="['app-wrap', headerStore.theme]"&gt;
+    &lt;header class="top-bar"&gt;
+      &lt;strong&gt;🍍 Pinia 전역 상태 데모&lt;/strong&gt;
+      &lt;div class="top-right"&gt;
+        &lt;span&gt;🔔 {{ headerStore.unreadCount }}&lt;/span&gt;
+        &lt;span&gt;👤 {{ headerStore.user.value.name }}&lt;/span&gt;
+        &lt;button @click="headerStore.toggleTheme()"&gt;
+          {{ headerStore.theme === 'light' ? '🌙 다크' : '☀️ 라이트' }}
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;section class="panel"&gt;
+      &lt;div v-if="!bodyStore.isLoggedIn.value" class="login-row"&gt;
+        &lt;input v-model="inputName" placeholder="이름 입력 후 로그인" @keyup.enter="bodyStore.login(inputName)" /&gt;
+        &lt;button class="btn-primary" @click="bodyStore.login(inputName)"&gt;전역 로그인&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div v-else class="login-row"&gt;
+        &lt;span&gt;현재 &lt;strong&gt;{{ bodyStore.user.value.name }}&lt;/strong&gt; ({{ bodyStore.user.value.role }}) 로 로그인됨&lt;/span&gt;
+        &lt;button class="btn-out" @click="bodyStore.logout()"&gt;로그아웃&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="panel"&gt;
+      &lt;h3&gt;전역 알림 로그&lt;/h3&gt;
+      &lt;ul class="noti-list"&gt;
+        &lt;li v-for="(msg, i) in bodyStore.notifications.value" :key="i"&gt;{{ msg }}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.app-wrap { padding: 16px; border-radius: 12px; font-family: sans-serif; transition: all 0.2s; }
+.app-wrap.light { background: #f8fafc; color: #0f172a; }
+.app-wrap.dark { background: #0f172a; color: #f8fafc; }
+.top-bar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid #cbd5e1; margin-bottom: 14px; }
+.top-right { display: flex; gap: 10px; align-items: center; font-size: 13px; }
+.panel { background: rgba(148, 163, 184, 0.12); padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+.login-row { display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+.login-row input { flex: 1; padding: 8px; border-radius: 6px; border: 1px solid #cbd5e1; }
+.btn-primary { background: #42b883; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+.btn-out { background: #ef4444; color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.noti-list { margin: 8px 0 0; padding-left: 18px; font-size: 13.5px; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

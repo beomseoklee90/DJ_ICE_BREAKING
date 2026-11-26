@@ -1,0 +1,104 @@
+0강. Vue 3 핵심 문법 & 디렉티브 실전 사전
+<style>
+  .vue-doc { font-family: inherit; color: #1e293b; }
+  .vue-doc h2 { font-size: 1.2rem; color: #0f172a; margin: 24px 0 10px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc p { margin: 8px 0; line-height: 1.65; }
+  .vue-doc ul { padding-left: 20px; margin: 8px 0; }
+  .vue-doc li { margin: 6px 0; }
+  .ref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+  .ref-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; }
+  .ref-card h3 { margin: 0 0 6px; font-size: 1rem; color: #059669; }
+  .ref-card code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; }
+</style>
+
+<div class="vue-doc">
+  <p>이 문서는 1강~10강 실전 프로젝트를 만들 때 계속 참고하는 <strong>Vue 3 Composition API (<code>&lt;script setup&gt;</code>) 핵심 사전</strong>입니다.</p>
+
+  <h2>1. 반응형 상태 &amp; 양방향 바인딩</h2>
+  <div class="ref-grid">
+    <div class="ref-card">
+      <h3>ref() / reactive()</h3>
+      <p>화면과 연결되는 데이터를 만듭니다. <code>ref(초기값)</code>은 JS에서 <code>.value</code>로 접근하고, 템플릿에서는 자동으로 풀립니다.</p>
+    </div>
+    <div class="ref-card">
+      <h3>v-model</h3>
+      <p><code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>의 입력값을 <code>ref</code> 변수와 실시간 양방향 연결합니다.</p>
+    </div>
+  </div>
+
+  <h2>2. 조건부 렌더링 &amp; 반복문</h2>
+  <div class="ref-grid">
+    <div class="ref-card">
+      <h3>v-if / v-else-if / v-else</h3>
+      <p>조건이 참일 때만 DOM을 생성합니다. 로그인/제출 완료 화면 분기 등에 사용합니다.</p>
+    </div>
+    <div class="ref-card">
+      <h3>v-show</h3>
+      <p>DOM은 유지한 채 CSS <code>display: none</code>만 토글합니다. 모달이나 자주 여닫는 UI에 적합합니다.</p>
+    </div>
+    <div class="ref-card">
+      <h3>v-for &amp; :key</h3>
+      <p>배열을 순회하며 목록을 그립니다. 각 항목을 구분하기 위해 반드시 고유한 <code>:key="item.id"</code>를 지정하세요.</p>
+    </div>
+  </div>
+
+  <h2>3. 속성 바인딩, 이벤트, 파생 상태 &amp; 생명주기</h2>
+  <div class="ref-grid">
+    <div class="ref-card">
+      <h3>:bind (v-bind) &amp; @click (v-on)</h3>
+      <p><code>:class</code>, <code>:style</code>, <code>:disabled</code>처럼 속성에 JS 값을 연결하고, <code>@click</code>, <code>@submit.prevent</code>로 이벤트를 처리합니다.</p>
+    </div>
+    <div class="ref-card">
+      <h3>computed()</h3>
+      <p>기존 상태로부터 자동 계산되는 값(총합, 필터링된 목록, 완료율 등)을 캐싱하여 반환합니다.</p>
+    </div>
+    <div class="ref-card">
+      <h3>watch() &amp; onMounted()</h3>
+      <p><code>watch</code>는 특정 값 변경 시 부수 효과(localStorage 저장 등)를 실행하고, <code>onMounted</code>는 컴포넌트가 화면에 붙은 직후 실행됩니다.</p>
+    </div>
+  </div>
+
+  <h2>4. 한눈에 보는 종합 예제</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Vue 3 핵심 문법 종합 샘플</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed, watch, onMounted } from 'vue'
+
+const keyword = ref('')
+const items = ref([
+  { id: 1, name: 'Vue 3 기초', done: true },
+  { id: 2, name: '실전 프로젝트', done: false }
+])
+
+const filteredItems = computed(() =&gt;
+  items.value.filter(item =&gt; item.name.includes(keyword.value))
+)
+
+watch(items, (newVal) =&gt; {
+  console.log('목록 변경됨:', newVal.length)
+}, { deep: true })
+
+onMounted(() =&gt; {
+  console.log('컴포넌트 마운트 완료!')
+})
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div style="padding: 16px; font-family: sans-serif;"&gt;
+    &lt;h3&gt;핵심 문법 테스트&lt;/h3&gt;
+    &lt;input v-model="keyword" placeholder="검색어 입력..." style="padding: 6px; margin-bottom: 10px;" /&gt;
+    &lt;ul&gt;
+      &lt;li v-for="item in filteredItems" :key="item.id"&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox" v-model="item.done" /&gt;
+          &lt;span :style="{ textDecoration: item.done ? 'line-through' : 'none' }"&gt;{{ item.name }}&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+</div>

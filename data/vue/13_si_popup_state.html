@@ -1,0 +1,124 @@
+13강. 한국 SI 팝업/전역변수 vs 현대적 모달 &amp; 상태 관리
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+  .compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .compare-card { padding: 12px; border-radius: 8px; font-size: 13.5px; }
+  .legacy { background: #fef2f2; border: 1px solid #fecaca; }
+  .modern { background: #ecfdf5; border: 1px solid #a7f3d0; }
+  .compare-card h3 { margin: 0 0 6px; font-size: 14px; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 한국 SI 팝업/전역변수 vs 현대적 상태 관리</h2>
+  <div class="compare-box">
+    <div class="compare-card legacy">
+      <h3>🏢 기존 한국 SI 방식</h3>
+      <ul>
+        <li><code>window.open()</code>으로 새 창 팝업을 띄우고 <code>opener.document.getElementById()</code>로 부모 창 DOM 조작</li>
+        <li>브라우저 팝업 차단에 걸리거나, 데이터 흐름 추적이 불가능</li>
+      </ul>
+    </div>
+    <div class="compare-card modern">
+      <h3>🚀 현대적(근대화된) 방식</h3>
+      <ul>
+        <li><strong>인앱 모달(Modal)</strong>: <code>v-if</code> / <code>v-show</code>로 같은 화면 내에서 부드럽게 띄움</li>
+        <li><strong>단방향 데이터 흐름</strong>: 모달에서 선택한 값을 반응형 상태(<code>selectedUser</code>)에 즉시 반영</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref } from 'vue'
+
+const showModal = ref(false)
+const selectedDept = ref('미선택')
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;선택된 부서: {{ selectedDept }}&lt;/p&gt;
+    &lt;button @click="showModal = true"&gt;부서 찾기 (모달)&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const showModal = ref(false)
+const search = ref('')
+const selectedDept = ref(null)
+
+const departments = [
+  { code: 'D01', name: '클라우드플랫폼팀', lead: '김팀장' },
+  { code: 'D02', name: '프론트엔드아키텍처팀', lead: '이팀장' },
+  { code: 'D03', name: '데이터엔지니어링팀', lead: '박팀장' }
+]
+
+const filteredDepts = computed(() =&gt;
+  departments.filter(d =&gt; d.name.includes(search.value) || d.code.includes(search.value))
+)
+
+const selectDept = (dept) =&gt; {
+  selectedDept.value = dept
+  showModal.value = false
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="page"&gt;
+    &lt;h2&gt;🔍 인앱 검색 모달 (window.open 대체)&lt;/h2&gt;
+    &lt;div class="picker-row"&gt;
+      &lt;input :value="selectedDept ? `${selectedDept.name} (${selectedDept.code})` : ''" readonly placeholder="부서를 선택하세요" /&gt;
+      &lt;button class="btn-open" @click="showModal = true"&gt;부서 검색&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div v-if="showModal" class="backdrop" @click.self="showModal = false"&gt;
+      &lt;div class="modal"&gt;
+        &lt;div class="modal-head"&gt;
+          &lt;strong&gt;부서 선택&lt;/strong&gt;
+          &lt;button @click="showModal = false"&gt;✕&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;input v-model="search" placeholder="부서명 또는 코드 검색..." class="search-inp" /&gt;
+        &lt;ul class="dept-list"&gt;
+          &lt;li v-for="d in filteredDepts" :key="d.code" @click="selectDept(d)"&gt;
+            &lt;span&gt;&lt;strong&gt;[{{ d.code }}]&lt;/strong&gt; {{ d.name }}&lt;/span&gt;
+            &lt;span class="lead"&gt;{{ d.lead }}&lt;/span&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.page { max-width: 460px; margin: 0 auto; font-family: sans-serif; }
+.picker-row { display: flex; gap: 8px; }
+.picker-row input { flex: 1; padding: 9px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; }
+.btn-open { padding: 9px 16px; background: #42b883; color: #fff; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+.backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.5); display: flex; align-items: center; justify-content: center; }
+.modal { background: #fff; width: 340px; border-radius: 12px; padding: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+.modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.modal-head button { border: none; background: transparent; font-size: 16px; cursor: pointer; }
+.search-inp { width: 100%; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; margin-bottom: 10px; }
+.dept-list { list-style: none; padding: 0; margin: 0; }
+.dept-list li { display: flex; justify-content: space-between; padding: 10px 8px; border-bottom: 1px solid #f1f5f9; cursor: pointer; border-radius: 6px; }
+.dept-list li:hover { background: #ecfdf5; }
+.lead { color: #64748b; font-size: 13px; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

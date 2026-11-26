@@ -1,0 +1,133 @@
+12강. 한국 SI 입력폼(&lt;table&gt;) vs 현대적 Flex/Grid 폼
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+  .compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .compare-card { padding: 12px; border-radius: 8px; font-size: 13.5px; }
+  .legacy { background: #fef2f2; border: 1px solid #fecaca; }
+  .modern { background: #ecfdf5; border: 1px solid #a7f3d0; }
+  .compare-card h3 { margin: 0 0 6px; font-size: 14px; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 한국 SI 입력폼 vs 현대적 폼 설계</h2>
+  <div class="compare-box">
+    <div class="compare-card legacy">
+      <h3>🏢 기존 한국 SI 방식</h3>
+      <ul>
+        <li>레이아웃을 잡기 위해 <code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;라벨&lt;/th&gt;&lt;td&gt;&lt;input&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code> 남용</li>
+        <li>저장 시 <code>$('#userName').val()</code>로 수십 개 입력값을 일일이 긁어모음</li>
+        <li>모바일 화면에서 테이블이 찌그러짐</li>
+      </ul>
+    </div>
+    <div class="compare-card modern">
+      <h3>🚀 현대적(근대화된) 방식</h3>
+      <ul>
+        <li><strong>CSS Grid / Flex 레이아웃</strong>: 화면 크기에 따라 2열 ↔ 1열 자동 전환</li>
+        <li><strong>단일 반응형 객체(reactive)</strong>: <code>form</code> 객체 하나에 <code>v-model</code>로 깔끔하게 바인딩</li>
+        <li>JSON 페이로드 그대로 API 전송 가능</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { reactive } from 'vue'
+
+const form = reactive({
+  projectName: '',
+  manager: '',
+  budget: 0,
+  priority: '보통'
+})
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;📝 프로젝트 등록 폼&lt;/h2&gt;
+    &lt;input v-model="form.projectName" placeholder="프로젝트명" /&gt;
+    &lt;pre&gt;{{ form }}&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { reactive, ref } from 'vue'
+
+const form = reactive({
+  projectName: '',
+  manager: '',
+  startDate: '2026-12-01',
+  budget: 5000,
+  isPublic: true
+})
+
+const submittedJson = ref('')
+
+const submitForm = () =&gt; {
+  if (!form.projectName.trim() || !form.manager.trim()) {
+    alert('프로젝트명과 담당자를 입력해주세요.')
+    return
+  }
+  submittedJson.value = JSON.stringify(form, null, 2)
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="modern-form"&gt;
+    &lt;h2&gt;📝 현대적 Grid 입력 폼&lt;/h2&gt;
+    &lt;div class="form-grid"&gt;
+      &lt;div class="field full"&gt;
+        &lt;label&gt;프로젝트명 *&lt;/label&gt;
+        &lt;input v-model="form.projectName" placeholder="예: 차세대 ERP 구축" /&gt;
+      &lt;/div&gt;
+      &lt;div class="field"&gt;
+        &lt;label&gt;담당자 *&lt;/label&gt;
+        &lt;input v-model="form.manager" placeholder="홍길동" /&gt;
+      &lt;/div&gt;
+      &lt;div class="field"&gt;
+        &lt;label&gt;시작일&lt;/label&gt;
+        &lt;input type="date" v-model="form.startDate" /&gt;
+      &lt;/div&gt;
+      &lt;div class="field"&gt;
+        &lt;label&gt;예산 (만원)&lt;/label&gt;
+        &lt;input type="number" v-model.number="form.budget" /&gt;
+      &lt;/div&gt;
+      &lt;div class="field checkbox-field"&gt;
+        &lt;label&gt;&lt;input type="checkbox" v-model="form.isPublic" /&gt; 사내 전체 공개&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;button class="submit-btn" @click="submitForm"&gt;API 전송 데이터 생성&lt;/button&gt;
+
+    &lt;pre v-if="submittedJson" class="json-out"&gt;{{ submittedJson }}&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.modern-form { max-width: 500px; margin: 0 auto; font-family: sans-serif; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 12.5px; font-weight: bold; color: #475569; }
+.field input[type="text"], .field input[type="date"], .field input[type="number"], .field input:not([type]) {
+  padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px;
+}
+.checkbox-field { justify-content: flex-end; padding-bottom: 6px; }
+.submit-btn { width: 100%; margin-top: 14px; padding: 10px; background: #42b883; color: #fff; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.json-out { margin-top: 14px; background: #0f172a; color: #a7f3d0; padding: 12px; border-radius: 8px; font-size: 12.5px; overflow-x: auto; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

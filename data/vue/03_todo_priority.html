@@ -1,0 +1,162 @@
+3강. 우선순위 할 일 &amp; 필터링 대시보드
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>완료율 계산(computed)</strong>: 전체 할 일 중 완료된 비율(%)을 계산해 진행률 바를 표시합니다.</li>
+    <li><strong>상태별 탭 전환</strong>: 전체 / 진행중 / 완료 탭으로 필터링합니다.</li>
+    <li><strong>로컬 스토리지 연동(watch &amp; onMounted)</strong>: 할 일 목록이 바뀔 때마다 <code>localStorage</code>에 자동 저장하고, 새로고침 시 복원합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed, watch, onMounted } from 'vue'
+
+const todos = ref([])
+const newText = ref('')
+const priority = ref('보통')
+
+const addTodo = () =&gt; {
+  if (!newText.value.trim()) return
+  todos.value.push({ id: Date.now(), text: newText.value, priority: priority.value, done: false })
+  newText.value = ''
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;✅ 우선순위 할 일&lt;/h2&gt;
+    &lt;input v-model="newText" placeholder="할 일 입력" @keyup.enter="addTodo" /&gt;
+    &lt;button @click="addTodo"&gt;추가&lt;/button&gt;
+    &lt;ul&gt;
+      &lt;li v-for="t in todos" :key="t.id"&gt;{{ t.text }} ({{ t.priority }})&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed, watch, onMounted } from 'vue'
+
+const STORAGE_KEY = 'vue3_todo_dashboard'
+const todos = ref([])
+const newText = ref('')
+const priority = ref('보통')
+const filterTab = ref('all')
+
+onMounted(() =&gt; {
+  const saved = localStorage.getItem(STORAGE_KEY)
+  if (saved) {
+    todos.value = JSON.parse(saved)
+  } else {
+    todos.value = [
+      { id: 1, text: 'Vue 3 computed 복습하기', priority: '높음', done: true },
+      { id: 2, text: '미니 프로젝트 완성하기', priority: '보통', done: false }
+    ]
+  }
+})
+
+watch(todos, (val) =&gt; {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(val))
+}, { deep: true })
+
+const completionRate = computed(() =&gt; {
+  if (todos.value.length === 0) return 0
+  const doneCount = todos.value.filter(t =&gt; t.done).length
+  return Math.round((doneCount / todos.value.length) * 100)
+})
+
+const filteredTodos = computed(() =&gt; {
+  if (filterTab.value === 'active') return todos.value.filter(t =&gt; !t.done)
+  if (filterTab.value === 'done') return todos.value.filter(t =&gt; t.done)
+  return todos.value
+})
+
+const addTodo = () =&gt; {
+  if (!newText.value.trim()) return
+  todos.value.unshift({ id: Date.now(), text: newText.value, priority: priority.value, done: false })
+  newText.value = ''
+}
+
+const removeTodo = (id) =&gt; {
+  todos.value = todos.value.filter(t =&gt; t.id !== id)
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="todo-app"&gt;
+    &lt;h2&gt;✅ 우선순위 할 일 대시보드&lt;/h2&gt;
+    &lt;div class="progress-box"&gt;
+      &lt;div class="progress-label"&gt;완료율: {{ completionRate }}%&lt;/div&gt;
+      &lt;div class="progress-bar"&gt;
+        &lt;div class="progress-fill" :style="{ width: completionRate + '%' }"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="input-row"&gt;
+      &lt;select v-model="priority"&gt;
+        &lt;option&gt;높음&lt;/option&gt;&lt;option&gt;보통&lt;/option&gt;&lt;option&gt;낮음&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input v-model="newText" placeholder="할 일을 입력하세요..." @keyup.enter="addTodo" /&gt;
+      &lt;button @click="addTodo"&gt;추가&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tabs"&gt;
+      &lt;button :class="{ active: filterTab === 'all' }" @click="filterTab = 'all'"&gt;전체&lt;/button&gt;
+      &lt;button :class="{ active: filterTab === 'active' }" @click="filterTab = 'active'"&gt;진행중&lt;/button&gt;
+      &lt;button :class="{ active: filterTab === 'done' }" @click="filterTab = 'done'"&gt;완료&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;ul class="list"&gt;
+      &lt;li v-for="t in filteredTodos" :key="t.id" :class="{ done: t.done }"&gt;
+        &lt;label&gt;
+          &lt;input type="checkbox" v-model="t.done" /&gt;
+          &lt;span class="tag" :class="t.priority"&gt;{{ t.priority }}&lt;/span&gt;
+          &lt;span&gt;{{ t.text }}&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;button class="del" @click="removeTodo(t.id)"&gt;✕&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.todo-app { max-width: 480px; margin: 0 auto; font-family: sans-serif; }
+.progress-box { margin-bottom: 14px; }
+.progress-label { font-size: 13px; font-weight: bold; margin-bottom: 4px; }
+.progress-bar { height: 10px; background: #e2e8f0; border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; background: #42b883; transition: width 0.25s; }
+.input-row { display: flex; gap: 6px; margin-bottom: 12px; }
+.input-row input { flex: 1; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.input-row select, .input-row button { padding: 8px 12px; border-radius: 6px; border: 1px solid #cbd5e1; }
+.input-row button { background: #42b883; color: #fff; border: none; font-weight: bold; cursor: pointer; }
+.tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.tabs button { flex: 1; padding: 6px; border: 1px solid #cbd5e1; background: #f8fafc; border-radius: 6px; cursor: pointer; }
+.tabs button.active { background: #0f172a; color: #fff; border-color: #0f172a; }
+.list { list-style: none; padding: 0; margin: 0; }
+.list li { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; border-bottom: 1px solid #e2e8f0; }
+.list li.done span:last-child { text-decoration: line-through; color: #94a3b8; }
+.tag { font-size: 11px; padding: 2px 6px; border-radius: 4px; margin: 0 6px; font-weight: bold; }
+.tag.높음 { background: #fee2e2; color: #dc2626; }
+.tag.보통 { background: #fef3c7; color: #d97706; }
+.tag.낮음 { background: #e0f2fe; color: #0284c7; }
+.del { background: transparent; border: none; color: #94a3b8; cursor: pointer; font-weight: bold; }
+&lt;/style&gt;</pre>
+  </div>
+</div>

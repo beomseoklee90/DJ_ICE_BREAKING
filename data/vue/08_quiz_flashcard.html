@@ -1,0 +1,106 @@
+8강. 일본어/영단어 암기 플래시카드 퀴즈
+<style>
+  .vue-doc h2 { font-size: 1.15rem; color: #0f172a; margin: 22px 0 8px; border-left: 4px solid #42b883; padding-left: 10px; }
+  .vue-doc ul { padding-left: 20px; }
+  .vue-doc li { margin: 5px 0; }
+</style>
+
+<div class="vue-doc">
+  <h2>1. 완성 화면 요구사항 &amp; 핵심 포인트</h2>
+  <ul>
+    <li><strong>카드 뒤집기</strong>: <code>isFlipped</code> 불리언 상태를 토글하여 앞면(단어)과 뒷면(뜻/발음)을 전환합니다.</li>
+    <li><strong>정답/오답 카운트</strong>: "알아요" / "몰라요" 버튼 클릭 시 점수를 누적하고 다음 문제 인덱스로 순환합니다.</li>
+  </ul>
+
+  <h2>2. 기본 뼈대 코드 (Starter Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Starter Code (기본 뼈대)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const cards = ref([
+  { word: 'ありがとう', meaning: '고맙습니다 (아리가토우)' },
+  { word: 'Resilience', meaning: '회복탄력성' }
+])
+const idx = ref(0)
+const isFlipped = ref(false)
+const current = computed(() =&gt; cards.value[idx.value])
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div @click="isFlipped = !isFlipped"&gt;
+    &lt;h2&gt;{{ isFlipped ? current.meaning : current.word }}&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+  </div>
+
+  <h2>3. 완성 정답 코드 (Solution Code)</h2>
+  <div class="code-block-wrapper">
+    <div class="code-block-header">
+      <span>Solution Code (완성 정답)</span>
+      <button type="button" class="send-to-editor-btn">우측 에디터로 보내기 ➔</button>
+    </div>
+    <pre>&lt;script setup&gt;
+import { ref, computed } from 'vue'
+
+const cards = ref([
+  { word: '一期一会 (いちごいちえ)', meaning: '일생에 단 한 번뿐인 만남' },
+  { word: '木漏れ日 (こもれび)', meaning: '나뭇잎 사이로 비치는 햇살' },
+  { word: 'Serendipity', meaning: '뜻밖의 행운, 우연한 발견' },
+  { word: 'Ephemeral', meaning: '수명이 짧은, 덧없는' }
+])
+
+const idx = ref(0)
+const isFlipped = ref(false)
+const knowCount = ref(0)
+const unknownCount = ref(0)
+
+const current = computed(() =&gt; cards.value[idx.value])
+
+const nextCard = (known) =&gt; {
+  if (known) knowCount.value++
+  else unknownCount.value++
+  isFlipped.value = false
+  idx.value = (idx.value + 1) % cards.value.length
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="quiz-box"&gt;
+    &lt;div class="score-bar"&gt;
+      &lt;span class="ok"&gt;⭕ 알아요: {{ knowCount }}&lt;/span&gt;
+      &lt;span&gt;{{ idx + 1 }} / {{ cards.length }}&lt;/span&gt;
+      &lt;span class="no"&gt;❌ 몰라요: {{ unknownCount }}&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="flashcard" :class="{ flipped: isFlipped }" @click="isFlipped = !isFlipped"&gt;
+      &lt;div class="hint"&gt;{{ isFlipped ? '뜻 (클릭하여 앞면)' : '단어 (클릭하여 뒤집기)' }}&lt;/div&gt;
+      &lt;div class="word"&gt;{{ isFlipped ? current.meaning : current.word }}&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="actions"&gt;
+      &lt;button class="btn-no" @click="nextCard(false)"&gt;😅 몰라요&lt;/button&gt;
+      &lt;button class="btn-ok" @click="nextCard(true)"&gt;😎 알아요&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+.quiz-box { max-width: 400px; margin: 0 auto; font-family: sans-serif; text-align: center; }
+.score-bar { display: flex; justify-content: space-between; margin-bottom: 12px; font-weight: bold; font-size: 14px; }
+.ok { color: #16a34a; }
+.no { color: #dc2626; }
+.flashcard { padding: 40px 20px; border-radius: 14px; background: #0f172a; color: #fff; cursor: pointer; min-height: 140px; display: flex; flex-direction: column; justify-content: center; transition: background 0.2s; }
+.flashcard.flipped { background: #42b883; color: #0f172a; }
+.hint { font-size: 12px; opacity: 0.75; margin-bottom: 8px; }
+.word { font-size: 1.35rem; font-weight: bold; }
+.actions { display: flex; gap: 10px; margin-top: 14px; }
+.actions button { flex: 1; padding: 10px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; color: #fff; }
+.btn-no { background: #ef4444; }
+.btn-ok { background: #22c55e; }
+&lt;/style&gt;</pre>
+  </div>
+</div>
